@@ -1,0 +1,31 @@
+"DOTAHeroes"
+{
+	"npc_dota_hero_razor"
+	{
+		"override_hero"		"npc_dota_hero_razor"
+		"BotImplemented"	"0"
+	}
+
+	"npc_dota_hero_tidehunter"
+	{
+		"override_hero"		"npc_dota_hero_tidehunter"
+		"BotImplemented"	"0"
+	}
+	
+	"npc_dota_hero_zuus"
+	{
+		"override_hero"		"npc_dota_hero_zuus"
+		"BotImplemented"	"0"
+	}
+	"npc_dota_hero_lina"
+	{
+		"AttackRange"		"600"
+	}
+	"npc_dota_hero_silencer"
+	{
+		"override_hero"		"npc_dota_hero_silencer"
+		"Ability2"			"silencer_glaives_of_wisdom_datadriven"
+		"Ability13"			"special_bonus_movement_speed_25"
+		"AttackRange"		"550"
+	}
+}

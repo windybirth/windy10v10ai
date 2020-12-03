@@ -1,0 +1,297 @@
+"DOTAAbilities"
+{
+	// Rewrite of the Silencer Glaives of Wisdom
+	// Author: chrislotix
+	// Date: 10.01.2015.
+	//=================================================================================================================
+	// Silencer Glaives of Wisdom
+	//=================================================================================================================
+	"silencer_glaives_of_wisdom_datadriven"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"AbilityTextureName"			"silencer_glaives_of_wisdom"
+
+		// Precache
+		//-------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"				
+		}
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDuration"				"0.0"
+		"AbilityCastRange"				"600"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"15"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"intellect_damage_pct"	"20 25 30 35"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_3"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"int_steal"			"1 1 2 3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"int_steal_duration"	"10 20 30 40"
+			}
+		}
+
+		"OnUpgrade"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_silencer/glaives_of_wisdom.lua"
+				"Function"		"LevelTime"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_silencer_glaives_of_wisdom_datadriven"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+
+				"Orb"
+				{
+					"Priority"	"DOTA_ORB_PRIORITY_ABILITY"
+					"ProjectileName"	"particles/units/heroes/hero_silencer/silencer_glaives_of_wisdom.vpcf"
+					"CastAttack"	"1"
+				}
+
+				"OnOrbFire"
+				{
+					"SpendMana"
+					{
+						"Mana"	"%AbilityManaCost"
+					}
+
+					"FireSound"
+					{
+						"EffectName"	"Hero_Silencer.GlaivesOfWisdom"
+						"Target"		"CASTER"
+					}
+				}
+
+				"OnOrbImpact"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Silencer.GlaivesOfWisdom.Damage"
+						"Target"		"TARGET"
+					}
+
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_silencer/glaives_of_wisdom.lua"
+						"Function"		"IntToDamage"
+						"Target"		"TARGET"
+					}
+
+					"ApplyModifier"
+					{
+						"Target"		"CASTER"
+						"ModifierName"	"modifier_glaives_of_wisdom_int_steal_datadriven"
+					}
+				}	
+			}
+			"modifier_glaives_of_wisdom_int_steal_datadriven"
+			{
+				"Duration"		"%int_steal_duration"
+				"IsPurgable"	"0"
+				"IsHidden"		"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_silencer/glaives_of_wisdom.lua"
+						"Function"		"AddStacks"
+					}
+				}
+
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_silencer/glaives_of_wisdom.lua"
+						"Function"		"RemoveStacks"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%int_steal"
+				}
+			}
+			"modifier_glaives_of_wisdom_status"
+			{
+				"IsBuff"	"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Sniper Scepter Assassinate
+	//=================================================================================================================
+	"sniper_assassinate_upgrade"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"ability_datadriven"
+		"AbilityTextureName"			"sniper_assassinate_muh_keen_gun"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NORMAL_WHEN_STOLEN"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilityCastPoint"				"2.0 2.0 2.0"
+		"AbilityCooldown"				"20.0 15.0 10.0"
+		"AbilityManaCost"				"175 275 375"
+		"HasScepterUpgrade"				"1"
+
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2000 2500 3000"
+		"AbilityCastRangeBuffer"		"600"
+		"AoERadius"						"%scepter_radius"
+
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		// Modifier just does damage
+		"AbilityModifierSupportValue"		"0.0"
+
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectile_speed"	"2500 2500 2500"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"tooltip_range"	"2000 2500 3000"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"total_cast_time_tooltip"	"2"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"scepter_radius"	"400"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"scepter_crit_bonus"	"280 290 300"
+			}
+		}
+		
+		// Data driven
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"			"particles/units/heroes/hero_sniper/sniper_assassinate.vpcf"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+			"soundfile"			"soundevents/game_sounds_heroes/game_sounds_sniper.vsndevts"
+		}
+		"OnAbilityPhaseStart"
+		{
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"Ability.AssassinateLoad"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_sniper/sniper.lua"
+				"Function"	"AssassinateAcquireTargets"
+				"Target"
+				{
+					"Center"	"POINT"
+					"Radius"	"%scepter_radius"
+					"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE | DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+					"Types"	"DOTA_UNIT_TARGET_HERO"
+					"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				}
+			}
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"Ability.Assassinate"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_sniper/sniper.lua"
+				"Function"	"AssassinateStart"
+			}
+		}
+		"OnProjectileHitUnit"
+		{
+			"FireSound"
+			{
+				"Target"	"TARGET"
+				"EffectName"	"Hero_Sniper.AssassinateDamage"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"heroes/hero_sniper/sniper.lua"
+				"Function"	"AssassinateHit"
+			}
+			"DeleteOnHit"	"0"
+		}
+		"Modifiers"
+		{
+			"modifier_assassinate_caster_datadriven"
+			{
+				"OnOrder"
+				{
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_assassinate_caster_datadriven"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"heroes/hero_sniper/sniper.lua"
+						"Function"	"AssassinateRemoveTarget"
+					}
+				}
+			}
+		}
+	}
+}

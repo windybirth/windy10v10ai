@@ -1,0 +1,12 @@
+"AddonInfo"
+{
+	"maps"					"dota"
+	"IsPlayable"			"1"
+	"HeroGuidesSupported"	"1"
+	"ForceDefaultGuide"		"0"
+
+	"dota"
+	{
+		"MaxPlayers"	"20"
+	}
+}
