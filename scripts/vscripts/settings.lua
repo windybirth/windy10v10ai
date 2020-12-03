@@ -3,7 +3,7 @@
 SKIP_TEAM_SETUP = false                 -- Should we skip the team setup entirely?
 ENABLE_AUTO_LAUNCH = true               -- Should we automatically have the game complete team setup after AUTO_LAUNCH_DELAY seconds?
 AUTO_LAUNCH_DELAY = 150                -- How long should the default team selection launch timer be?  The default for custom games is 30.  Setting to 0 will skip team selection.
-LOCK_TEAM_SETUP = false                 -- Should we lock the teams initially?  Note that the host can still unlock the teams 
+LOCK_TEAM_SETUP = false                 -- Should we lock the teams initially?  Note that the host can still unlock the teams
 HERO_SELECTION_TIME = 120.0              -- How long should we let people select their hero?
 PRE_GAME_TIME = 75.0                     -- How long after people select their heroes should the horn blow and the game start?
 
@@ -15,9 +15,9 @@ GOLD_PER_TICK = 3                     -- How much gold should players get per ti
 GOLD_TICK_TIME = 2                      -- How long should we wait in seconds between gold ticks?
 RADIANT_XP_MULTIPLIER = 1
 RADIANT_GOLD_MULTIPLIER = 1
-DIRE_XP_MULTIPLIER = 1
-DIRE_GOLD_MULTIPLIER = 1
---RESPAWN_TIME_PERCENTAGE = 100
+DIRE_XP_MULTIPLIER = 1.5
+DIRE_GOLD_MULTIPLIER = 1.5
+--RESPAWN_TIME_PERCENTAGE = 50
 MAX_LEVEL = 30                         -- What level should we let heroes get to?
 
 -- The above are enabled ones
@@ -44,7 +44,7 @@ CUSTOM_BUYBACK_COOLDOWN_ENABLED = true  -- Should we use a custom buyback time?
 BUYBACK_ENABLED = false                 -- Should we allow people to buyback when they die?
 
 DISABLE_FOG_OF_WAR_ENTIRELY = false     -- Should we disable fog of war entirely for both teams?
-USE_UNSEEN_FOG_OF_WAR = false           -- Should we make unseen and fogged areas of the map completely black until uncovered by each team? 
+USE_UNSEEN_FOG_OF_WAR = false           -- Should we make unseen and fogged areas of the map completely black until uncovered by each team?
                                             -- Note: DISABLE_FOG_OF_WAR_ENTIRELY must be false for USE_UNSEEN_FOG_OF_WAR to work
 USE_STANDARD_HERO_GOLD_BOUNTY = true    -- Should we give gold for hero kills the same as in Dota, or allow those values to be changed?
 
@@ -84,7 +84,7 @@ MAXIMUM_ATTACK_SPEED = 600              -- What should we use for the maximum at
 MINIMUM_ATTACK_SPEED = 20               -- What should we use for the minimum attack speed?
 
 GAME_END_DELAY = -1                     -- How long should we wait after the game winner is set to display the victory banner and End Screen?  Use -1 to keep the default (about 10 seconds)
-VICTORY_MESSAGE_DURATION = 3            -- How long should we wait after the victory message displays to show the End Screen?  Use 
+VICTORY_MESSAGE_DURATION = 3            -- How long should we wait after the victory message displays to show the End Screen?  Use
 STARTING_GOLD = 625                     -- How much starting gold should we give to each player?
 DISABLE_DAY_NIGHT_CYCLE = false         -- Should we disable the day night cycle from naturally occurring? (Manual adjustment still possible)
 DISABLE_KILLING_SPREE_ANNOUNCER = false -- Shuold we disable the killing spree announcer?

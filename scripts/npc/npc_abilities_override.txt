@@ -840,6 +840,39 @@
 	}
 
 	//=================================================================================================================
+	// Custom hero 英雄
+	//=================================================================================================================
+
+	//=================================================================================================================
+	// Zuus: Arc Lightning
+	//=================================================================================================================
+	"zuus_arc_lightning"
+	{
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"50 60 70 80"
+	}
+
+	//=================================================================================================================
+	// Zuus: Lightning Bolt
+	//=================================================================================================================
+	"zuus_lightning_bolt"
+	{
+		// Cost
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityManaCost"				"75 80 85 90"
+
+        // Damage.
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityDamage"					"150 225 325 400"
+	}
+
+	//=================================================================================================================
+	// Custom item 物品
+	//=================================================================================================================
+
+
+	//=================================================================================================================
 	// Magic Stick 魔棒
 	//=================================================================================================================
 	"item_magic_stick"
@@ -922,7 +955,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Recipe: Bracer
+	// Recipe: Bracer 护腕
 	//=================================================================================================================
 	"item_recipe_bracer"
 	{
@@ -932,7 +965,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"210"
+		"ItemCost"						"250"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -957,7 +990,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"510"
+		"ItemCost"						"550"
 		"ItemShopTags"					"damage;int;agi;str"
 		"ItemQuality"					"common"
 		"ItemAliases"					"bracer"
@@ -971,34 +1004,34 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"5"
+				"bonus_strength"		"6"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"2"
+				"bonus_agility"			"3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"2"
+				"bonus_intellect"		"3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"3"
+				"bonus_damage"			"5"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"0.75"
+				"bonus_health_regen"	"1.75"
 			}
 		}
 	}
 
 
 	//=================================================================================================================
-	// Recipe: Wraith Band
+	// Recipe: Wraith Band 系带
 	//=================================================================================================================
 	"item_recipe_wraith_band"
 	{
@@ -1008,7 +1041,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"210"
+		"ItemCost"						"250"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1033,7 +1066,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"510"
+		"ItemCost"						"550"
 		"ItemShopTags"					"damage;int;agi;str"
 		"ItemQuality"					"common"
 		"ItemAliases"					"wraith band"
@@ -1047,33 +1080,33 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"5"
+				"bonus_agility"			"6"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"2"
+				"bonus_strength"		"3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"2"
+				"bonus_intellect"		"3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"			"5"
+				"bonus_attack_speed"			"9"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_armor"			"1.5"
+				"bonus_armor"			"2.5"
 			}
 		}
 	}
 
 	//=================================================================================================================
-	// Recipe: Null Talisman
+	// Recipe: Null Talisman 挂件
 	//=================================================================================================================
 	"item_recipe_null_talisman"
 	{
@@ -1083,7 +1116,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"210"
+		"ItemCost"						"250"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1108,7 +1141,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"510"
+		"ItemCost"						"550"
 		"ItemShopTags"					"damage;int;agi;str"
 		"ItemQuality"					"common"
 		"ItemAliases"					"null talisman"
@@ -1122,27 +1155,137 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"5"
+				"bonus_intellect"		"6"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"2"
+				"bonus_strength"		"3"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"2"
+				"bonus_agility"			"3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_spell_amp"		"3"
+				"bonus_spell_amp"		"5"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"0.6"
+				"bonus_mana_regen"		"1.8"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Bloodstone 血精石
+	//=================================================================================================================
+	"item_bloodstone"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"121"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"85.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"5250"
+		"ItemShopTags"					"regen_health;regen_mana;mana_pool;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"bs;bloodstone"
+		"ItemInitialCharges"			"14"
+		"ItemDisplayCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"				"0"
+		"ShouldBeSuggested"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"425"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"			"16"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"		"100"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"			"30"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.2"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"amp_per_charge"		"0.35"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"3"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1600"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"initial_charges_tooltip" "14"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_cost_percentage" "30"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"restore_duration" "2.0"
 			}
 		}
 	}
