@@ -131,5 +131,16 @@
 		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_scepter_crit_bonus"		"%SCEPTER CRITICAL DAMAGE:"
 		"DOTA_Tooltip_modifier_sniper_assassinate_target"								"Assassinate"
 		"DOTA_Tooltip_modifier_sniper_assassinate_target_Description"				"Sniper's taking aim at your head!"
+
+		//            茶神
+		"npc_dota_hero_techies"					"茶神(hechaehcha)"
+		"npc_dota_techies_land_mine"					"杰哥地雷"
+		"npc_dota_techies_stasis_trap"					"杰哥の陷♂阱"
+		"npc_dota_techies_remote_mine"				"肛王炸弹"
+
+		"DOTA_Tooltip_ability_techies_land_mines"						"杰哥地雷"
+		"DOTA_Tooltip_ability_techies_stasis_trap"						"杰哥の陷♂阱"
+		"DOTA_Tooltip_ability_techies_suicide"							"飞翔吧！杰杰"
+		"DOTA_Tooltip_ability_techies_remote_mines"						"肛王炸弹"
 	}
 }
