@@ -1,0 +1,135 @@
+"lang"
+{
+	"Language"		"English"
+	"Tokens"
+	{
+		"addon_game_name"		"Dota 10v10 AI Wars"
+		"DOTA_GameMode_15"		"Dota 10v10 AI Wars"
+
+		// /////////////////////////////////////////////////////////////////////////////
+		//
+		// 					              Options
+		//
+		// /////////////////////////////////////////////////////////////////////////////
+		"addon_option_title"	"Game Options"
+		"radiant_gold_multiplier"	"Radiant Gold Multiplier"
+		"dire_gold_multiplier"	"Dire Gold Multiplier"
+		"radiant_xp_multiplier"	"Radiant XP Multiplier"
+		"dire_xp_multiplier"	"Dire XP Multiplier"
+		"radiant_player_number"	"Radiant Player Number"
+		"dire_player_number"	"Dire Player Number"
+		"confirm_game_options"	"Confirm and Hide Game Options"
+		"show_game_options"  "Show Game Options"
+		"respawn_time_percentage"	"Respawn Time Percentage"
+		"max_level"	"Max Level"
+		"radiant_tower_power"	"Radiant Tower Power Level"
+		"dire_tower_power"	"Dire Tower Power Level"
+		"radiant_tower_endure"	"Radiant Buildings Endurance Level"
+		"dire_tower_endure"	"Dire Buildings Endurance Level"
+		"radiant_tower_heal"	"Radiant Building Health Regen"
+		"dire_tower_heal"	"Dire Building Health Regen"
+		"same_hero_selection"  "Allow Same Hero Selection"
+		"fast_courier"  "Fast Invulnerable Courier"
+		"hide_chat_team"  "Hide Chat and Team"
+		"show_chat_team"  "Show Chat and Team"
+
+		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
+		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, splash radius is %dMODIFIER_PROPERTY_TOOLTIP%."
+
+		"DOTA_Tooltip_modifier_tower_endure"						"Buildings Endurance"
+		"DOTA_Tooltip_modifier_tower_endure_Description"		"The building's armor is changed by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, max health is set to %dMODIFIER_PROPERTY_TOOLTIP%%%."
+
+		"DOTA_Tooltip_modifier_melee_resistance"					"Bulldozer"
+		"DOTA_Tooltip_modifier_melee_resistance_Description"	"Melee heroes have %dMODIFIER_PROPERTY_STATUS_RESISTANCE%%% base status resist."
+		// /////////////////////////////////////////////////////////////////////////////
+		//
+		// 					              Items
+		//
+		// /////////////////////////////////////////////////////////////////////////////
+		"DOTA_Tooltip_Ability_item_boots_of_travel"										"Boots of Travel"
+		"DOTA_Tooltip_Ability_item_boots_of_travel_Description"						"<h1>Active: Teleport</h1> Teleports you to any point on the map.\nCooldown will be halved if your teleport is interrupted."
+		"DOTA_Tooltip_Ability_item_boots_of_travel_Lore"							"Winged Boots that grant omnipresence."
+		"DOTA_Tooltip_Ability_item_boots_of_travel_bonus_movement_speed"			"+$move_speed"
+
+		"DOTA_Tooltip_Ability_item_boots_of_travel_2"									"Boots of Travel"
+		"DOTA_Tooltip_Ability_item_boots_of_travel_2_Description"					"<h1>Active: Teleport</h1> Teleports you to any point on the map. If a teleport is successful, grants you %buff_move_speed%%% bonus movement speed and unobstructed, uncapped movement for %buff_duration%s.\nCooldown will be halved if your teleport is interrupted."
+		"DOTA_Tooltip_Ability_item_boots_of_travel_2_Lore"							"Winged Boots that grant omnipresence."
+		"DOTA_Tooltip_Ability_item_boots_of_travel_2_bonus_movement_speed"			"+$move_speed"
+		"DOTA_Tooltip_modifier_item_boots_of_travel_2_buff"								"Boots of Travel Movement"
+		"DOTA_Tooltip_modifier_item_boots_of_travel_2_buff_Description"				"Unobstructed, uncapped movement. Movement increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
+
+		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed"						"Moon Shard"
+		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed_Description"		"Permanently granted %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed, %dMODIFIER_PROPERTY_BONUS_DAY_VISION% day vision and %dMODIFIER_PROPERTY_BONUS_NIGHT_VISION% night vision."
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven"								"Moon Shard"
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Description"				"Use: Consume the Moon Shard to permanently gain %consumed_bonus% attack speed, %consumed_bonus_day_vision% day vision and %consumed_bonus_night_vision% night vision. Consumed shards stack.\nPassive: Shade Sight - Grants %bonus_night_vision% bonus night vision."
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven_bonus_attack_speed"		"+$attack"
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Note0"						"The bonus night vision works during Night Stalker's Darkness ability."
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Lore"						"Said to be a tear from the lunar goddess Selemene."
+
+		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed"						"Aghanim's Regalia Synth"
+		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"Permanently granted all benefits from Aghanim's Regalia: Ultimate Upgrade, +30 to all attributes, +350 health, +350 mana."
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2"									"Aghanim's Regalia"
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"Use: Consume the Aghanim's Regalia to permanently gain Ultimate Upgrade, +30 to all attributes, +350 health, +350 mana.\nPassive: Ultimate Upgrade - Upgrades the ultimate, and some abilities, of certain heroes."
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Lore"							"The regalia of a wizard with demigod-like powers."
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_all_stats"				"+$all"
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_health"					"+$health"
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_mana"					"+$mana"
+
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"急速之翼"
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度."
+		"DOTA_Tooltip_ability_item_wings_of_haste"										"急速之翼"
+		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"Use: Consume the Wings of Haste to permanently gain %bonus_movement_speed% movement speed."
+		"DOTA_Tooltip_ability_item_wings_of_haste_Lore"								"Wings that grant swift retribution in battle."
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_movement_speed"				"+$move_speed"
+
+		"DOTA_Tooltip_Ability_item_royal_jelly_custom"									"Royal Jelly"
+		"DOTA_Tooltip_Ability_item_royal_jelly_custom_Description"					"<h1>Use: Consume</h1> Grants a target allied unit a permanent buff that provides +%health_regen% Health Regen and +%mana_regen% Mana Regen.<br><br>Does not stack on the same unit."
+		"DOTA_Tooltip_modifier_royal_jelly_custom"										"Royal Jelly"
+		"DOTA_Tooltip_modifier_royal_jelly_custom_Description"						"Provides %fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regen and %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% mana regen."
+		"DOTA_Tooltip_Ability_item_pirate_hat_custom"									"Pirate Hat"
+		"DOTA_Tooltip_Ability_item_pirate_hat_custom_Description"					"<h1>Passive: Agile Thief</h1> Reduces your Base Attack Time by %bat_reduction%."
+		"DOTA_Tooltip_Ability_item_pirate_hat_custom_bonus_attack_speed"			"+$attack"
+		"DOTA_Tooltip_Ability_item_pirate_hat_custom_Note0"							"Does not stack with other BAT reducing modifiers."
+
+		"DOTA_Tooltip_Ability_item_blade_mail2"	"刃甲2"
+		"DOTA_Tooltip_Ability_item_recipe_blade_mail2"				"图纸（刃甲2）"
+		"DOTA_Tooltip_ability_item_blade_mail2_Description"						"<h1>主动：伤害反弹</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"
+		"DOTA_Tooltip_ability_item_blade_mail2_Lore"								"覆盖着尖锐剃刀的盔甲，战斗中可以用来做出不顾自身安危的烈士行为。"
+		"DOTA_Tooltip_ability_item_blade_mail2_Note0"							"反弹的均为减免前的伤害。"
+		"DOTA_Tooltip_ability_item_blade_mail2_Note1"							"伤害反弹不会反弹来自其他刃甲的伤害。"
+		"DOTA_Tooltip_ability_item_blade_mail2_Note2"							"反弹伤害的类型与受到时相同。"
+		"DOTA_Tooltip_ability_item_blade_mail2_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_item_blade_mail2_bonus_armor"						"+$armor"
+		//"DOTA_Tooltip_ability_item_blade_mail2_bonus_intellect"					"+$int"
+		//"DOTA_Tooltip_ability_item_blade_mail2_duration"						"DAMAGE RETURN DURATION:"
+
+		"DOTA_Tooltip_modifier_item_blade_mail2_reflect"					"刃甲反射"
+		"DOTA_Tooltip_modifier_item_blade_mail2_reflect_Description"		"正在将伤害反弹给攻击单位"
+		///////////////////////////////////////////////////
+		//
+		//            Heroes
+		//
+		///////////////////////////////////////////////////
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven"					"Glaives of Wisdom"
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven_Lore"			"Although lacking in traditional incantations, Nortrom's pedigree of the Aeol Drias gives him uncanny wisdom, which he applies to physical combat."
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven_Description"	"Silencer enchants his glaives with his wisdom, dealing additional damage based on his Intelligence. Silencer temporarily increases his Intelligence with each hit."
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven_intellect_damage_pct"	"%INT TO DAMAGE:"
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven_int_steal"				"INT INCREASE:"
+		"DOTA_Tooltip_ability_silencer_glaives_of_wisdom_datadriven_int_steal_duration"		"INT INCREASE DURATION:"
+		"DOTA_Tooltip_modifier_glaives_of_wisdom_status"								"Glaives of Wisdom"
+		"DOTA_Tooltip_modifier_glaives_of_wisdom_status_Description"				"Temporarily increasing Intelligence"
+
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade"								"Assassinate"
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_Description"				"Sniper locks onto a target enemy unit and, after %total_cast_time_tooltip% seconds, fires a devastating shot that deals damage at long range, and mini-stuns the target.\n\nUpgradable by Aghanim's Scepter."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_aghanim_description"		"Turns Assassinate into a ground target AoE ability, that after the channel period launches a critical strike on units in the AoE. Only affects visible heroes."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_Lore"						"In order to fulfill the prophecy and return to his home town, Kardel must make another shot as perfect as the one on the day of his ancient test."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_Note0"						"Crosshair effect is only visible to allies."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_Note1"						"Invisibility doesn't disjoint the projectile."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_Note2"						"Interrupts channeling spell, including on Spell Immune units."
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_tooltip_range"				"RANGE:"
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_scepter_radius"			"SCEPTER RADIUS:"
+		"DOTA_Tooltip_ability_sniper_assassinate_upgrade_scepter_crit_bonus"		"%SCEPTER CRITICAL DAMAGE:"
+		"DOTA_Tooltip_modifier_sniper_assassinate_target"								"Assassinate"
+		"DOTA_Tooltip_modifier_sniper_assassinate_target_Description"				"Sniper's taking aim at your head!"
+	}
+}
