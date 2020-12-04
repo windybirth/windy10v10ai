@@ -696,7 +696,84 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Recipe: Radiance2 辉耀2
+	//=================================================================================================================
+	"item_recipe_radiance_2"
+	{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"item_datadriven"
+			"ID"							"99136"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+			"Model"							"models/props_gameplay/recipe.mdl"
 
+			// Item Info
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemCost"						""
+			"ItemShopTags"					""
+
+			// Recipe
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemRecipe"					"1"
+			"ItemResult"					"item_radiance_2"
+			"ItemRequirements"
+			{
+					"01"						"item_radiance;item_talisman_of_evasion;item_recipe_radiance"
+			}
+	}
+
+
+	//=================================================================================================================
+	// Radiance2
+	//=================================================================================================================
+	"item_radiance_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_radiance"
+		"ID"							"99137"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
+		"AbilityTextureName"			"item_radiance_2"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"8450"
+		"ItemShopTags"					"damage"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"radiance"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"120"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_damage"			"120"
+			}
+			"03"
+						{
+								"var_type"				"FIELD_INTEGER"
+								"aura_damage_illusions"	"100"
+						}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"blind_pct"				"30"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"700"
+			}
+		}
+	}
 
 
 
@@ -712,7 +789,16 @@
 	// Custom item Override 物品
 	//=================================================================================================================
 
-
+	//=================================================================================================================
+	// Tome of Knowledge 知识之书
+	//=================================================================================================================
+	"item_tome_of_knowledge"
+	{
+		"ItemStockMax"					"5"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"300.0"
+		"ItemInitialStockTime"			"390.0"
+	}
 	//=================================================================================================================
 	// Magic Stick 魔棒
 	//=================================================================================================================
@@ -1042,12 +1128,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"		"24"
+				"mana_regen_multiplier"		"36"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"			"24"
+				"spell_lifesteal_amp"			"36"
 			}
 		}
 	}

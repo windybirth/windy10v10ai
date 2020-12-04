@@ -105,6 +105,13 @@
 
 		"DOTA_Tooltip_modifier_item_blade_mail2_reflect"					"刃甲反射"
 		"DOTA_Tooltip_modifier_item_blade_mail2_reflect_Description"		"正在将伤害反弹给攻击单位"
+
+		"DOTA_Tooltip_Ability_item_radiance_2"				"辉耀2"
+		"DOTA_Tooltip_ability_item_radiance_2_Description"						"<h1>开关：辉耀灼烧</h1>开启后，辉耀灼烧每秒对敌军造成%aura_damage%点魔法伤害，并且物理攻击有%blind_pct%%%几率不会命中。幻象每秒造成%aura_damage_illusions%点魔法伤害。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"一把神圣的武器，剑身的耀眼光芒能将敌人化为灰烬。"
+		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_modifier_item_radiance_2_debuff"				"灼烧伤害"
+		"DOTA_Tooltip_modifier_item_radiance_2_debuff_Description"	"每秒受到180点伤害，而且攻击有%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%几率不会命中。"
 		///////////////////////////////////////////////////
 		//
 		//            Heroes
@@ -133,7 +140,7 @@
 		"DOTA_Tooltip_modifier_sniper_assassinate_target_Description"				"Sniper's taking aim at your head!"
 
 		//            茶神
-		"npc_dota_hero_techies"					"茶神(hechaehcha)"
+		"npc_dota_hero_techies"					"茶神(hecha)"
 		"npc_dota_techies_land_mine"					"杰哥地雷"
 		"npc_dota_techies_stasis_trap"					"杰哥の陷♂阱"
 		"npc_dota_techies_remote_mine"				"肛王炸弹"
@@ -142,5 +149,10 @@
 		"DOTA_Tooltip_ability_techies_stasis_trap"						"杰哥の陷♂阱"
 		"DOTA_Tooltip_ability_techies_suicide"							"飞翔吧！杰杰"
 		"DOTA_Tooltip_ability_techies_remote_mines"						"肛王炸弹"
+
+		//            wpp
+		"npc_dota_hero_slark"					"弟弟(wpp)"
+		"DOTA_Tooltip_ability_slark_dark_pact"									"噗~"
+		"DOTA_Tooltip_ability_slark_pounce"										"跳水冠军"
 	}
 }

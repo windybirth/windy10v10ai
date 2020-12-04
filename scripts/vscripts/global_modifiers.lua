@@ -59,7 +59,7 @@ function modifier_melee_resistance:RemoveOnDeath() return false end
 function modifier_melee_resistance:GetTexture() return "bulldozer" end
 
 function modifier_melee_resistance:OnCreated()
-	self.iStatusResist = 70
+	self.iStatusResist = 15
 	if self:GetParent():GetName() == "npc_dota_hero_troll_warlord" or self:GetParent():GetName() == "npc_dota_hero_lone_druid" or self:GetParent():GetName() == "npc_dota_hero_dragon_knight" or self:GetParent():GetName() == "npc_dota_hero_terrorblade" then
 		self:StartIntervalThink(0.1)
 	end
@@ -69,7 +69,7 @@ function modifier_melee_resistance:OnIntervalThink()
 	if self:GetParent():IsRangedAttacker() then
 		self.iStatusResist = 0
 	else
-		self.iStatusResist = 70
+		self.iStatusResist = 15
 	end
 end
 
@@ -168,7 +168,7 @@ end
 function modifier_tower_endure:GetModifierPhysicalArmorBonus()
 	local sName = self:GetParent():GetName()
 	local fPercent = StackToPercentage(self:GetStackCount())
-	
+
 	if string.match(sName, "healer") then
 		return math.floor(10*(fPercent-1))
 	end
@@ -217,7 +217,7 @@ function modifier_tower_power:OnAttackLanded(keys)
 	local fPower = StackToPercentage(self:GetStackCount())
 	if fPower <= 1.0 then return end
 	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, math.floor((fPower-1)*75), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
-	
+
 	for i, v in ipairs(tTargets) do
 		if v ~= keys.target then
 			ApplyDamage({
@@ -269,7 +269,7 @@ local function ThinkForAxeAbilities(hAxe)
 	local iThreshold = hAbility6:GetSpecialValueFor("kill_threshold")
 	if hAbility6:IsFullyCastable() then
 		local tAllHeroes = FindUnitsInRadius(hAxe:GetTeam(), hAxe:GetOrigin(), nil, hAbility6:GetCastRange()+150, DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_NO_INVIS, FIND_ANY_ORDER, false)
-		
+
 		for i, v in ipairs(tAllHeroes) do
 			if v:GetHealth() < iThreshold then
 				hAxe:CastAbilityOnTarget(v, hAbility6, hAxe:GetPlayerOwnerID())
@@ -285,7 +285,7 @@ local function ThinkForAxeAbilities(hAxe)
 		for i = 1, iCount do
 			if tAllHeroes[iCount+1-i]:IsStunned() or tAllHeroes[iCount+1-i]:IsHexed() or tAllHeroes[iCount+1-i]:IsInvisible() then table.remove(tAllHeroes, iCount+1-i) end
 		end
-		
+
 		if #tAllHeroes > 0 then
 			hAxe:CastAbilityNoTarget(hAbility1, hAxe:GetPlayerOwnerID())
 			return
@@ -319,13 +319,13 @@ end
 function modifier_sniper_assassinate_thinker:OnIntervalThink()
 	if IsClient() then return end
 	local hParent = self:GetParent()
-	
+
 	if hParent:HasScepter() and hParent:HasAbility("sniper_assassinate") then
 		local iLevel = hParent:FindAbilityByName("sniper_assassinate"):GetLevel()
 		hParent:RemoveAbility("sniper_assassinate")
 		hParent:AddAbility("sniper_assassinate_upgrade"):SetLevel(iLevel)
 	end
-	
+
 	if not hParent:HasScepter() and hParent:HasAbility("sniper_assassinate_upgrade") then
 		local iLevel = hParent:FindAbilityByName("sniper_assassinate_upgrade"):GetLevel()
 		hParent:RemoveAbility("sniper_assassinate_upgrade")
