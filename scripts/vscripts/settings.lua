@@ -15,9 +15,9 @@ GOLD_PER_TICK = 3                     -- How much gold should players get per ti
 GOLD_TICK_TIME = 2                      -- How long should we wait in seconds between gold ticks?
 RADIANT_XP_MULTIPLIER = 1
 RADIANT_GOLD_MULTIPLIER = 1
-DIRE_XP_MULTIPLIER = 1.5
-DIRE_GOLD_MULTIPLIER = 1.5
---RESPAWN_TIME_PERCENTAGE = 50
+DIRE_XP_MULTIPLIER = 1
+DIRE_GOLD_MULTIPLIER = 1
+--RESPAWN_TIME_PERCENTAGE = 100
 MAX_LEVEL = 30                         -- What level should we let heroes get to?
 
 -- The above are enabled ones
