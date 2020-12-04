@@ -154,4 +154,200 @@
 	{
 		"AttackRate"				"0.5"
 	}
+
+	//=================================================================================
+	// Neutral: Ancient - Black Drake 中立生物
+	//=================================================================================
+	"npc_dota_neutral_black_drake"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"0"			// Physical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"60"		// Damage range min.
+		"AttackDamageMax"			"90"		// Damage range max.
+		"AttackRate"				"1.6"		// Speed of attack.
+
+		// Bounds
+		//----------------------------------------------------------------
+		"RingRadius"				"70"
+		"HealthBarOffset"			"300"
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"150"		// Experience earn.
+		"BountyGoldMin"				"90"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+
+	}
+	//===============================================================================
+	// Neutral: Ancient - Black Dragon
+	//===============================================================================
+	"npc_dota_neutral_black_dragon"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// Physical protection.
+		"MagicalResistance"				"70"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"100"		// Damage range min.
+		"AttackDamageMax"			"150"		// Damage range max.
+		"AttackRate"				"1.4"		// Speed of attack.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"400"		// Experience earn.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"400"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"4000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
+		"StatusMana"				"1000"			// Base mana.
+		"StatusManaRegen"			"5"			// Mana regeneration rate.
+	}
+
+	//=================================================================================
+	// Neutral: Ancient - Rock Golem
+	//=================================================================================
+	"npc_dota_neutral_rock_golem"
+	{
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"60"		// Damage range min.
+		"AttackDamageMax"			"68"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"		// Experience earn.
+		"BountyGoldMin"				"120"		// Gold earned min.
+		"BountyGoldMax"				"140"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1600"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"800"		// Base mana.
+		"StatusManaRegen"			"3"			// Mana regeneration rate.
+	}
+
+	//=================================================================================
+	// Neutral: Ancient - Granite Golem
+	//=================================================================================
+	"npc_dota_neutral_granite_golem"
+	{
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"150"		// Damage range min.
+		"AttackDamageMax"			"170"		// Damage range max.
+		"AttackRate"				"1.3"		// Speed of attack.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"400"		// Experience earn.
+		"BountyGoldMin"				"240"		// Gold earned min.
+		"BountyGoldMax"				"250"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"7"		// Health regeneration rate.
+		"StatusMana"				"1200"		// Base mana.
+		"StatusManaRegen"			"5"		// Mana regeneration rate.
+	}
+	//=================================================================================
+	// Neutral: Ancient - Big Thunder Lizard
+	//=================================================================================
+	"npc_dota_neutral_big_thunder_lizard"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"				"70"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"120"		// Damage range min.
+		"AttackDamageMax"			"130"		// Damage range max.
+		"AttackRate"				"1.7"		// Speed of attack.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"400"		// Experience earn.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"210"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2800"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"800"		// Base mana.
+		"StatusManaRegen"			"3"		// Mana regeneration rate.
+	}
+
+	//=================================================================================
+	// Neutral: Ancient - Small Thunder Lizard
+	//=================================================================================
+	"npc_dota_neutral_small_thunder_lizard"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// Physical protection.
+		"MagicalResistance"				"70"		// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"80"		// Damage range min.
+		"AttackDamageMax"			"90"		// Damage range max.
+		"AttackRate"				"1.7"		// Speed of attack.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"300"		// Experience earn.
+		"BountyGoldMin"				"90"		// Gold earned min.
+		"BountyGoldMax"				"100"		// Gold earned max.
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"290"		// Speed.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1600"		// Base health.
+		"StatusHealthRegen"			"5"		// Health regeneration rate.
+		"StatusMana"				"800"		// Base mana.
+		"StatusManaRegen"			"3"		// Mana regeneration rate.
+	}
 }

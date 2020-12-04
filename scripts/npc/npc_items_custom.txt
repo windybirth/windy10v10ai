@@ -670,7 +670,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"10"
+				"bonus_intellect"		"0"
 			}
 			"04"
 			{
