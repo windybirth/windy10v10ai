@@ -718,7 +718,7 @@
 			"ItemResult"					"item_radiance_2"
 			"ItemRequirements"
 			{
-					"01"						"item_radiance;item_talisman_of_evasion;item_recipe_radiance"
+					"01"						"item_radiance;item_talisman_of_evasion;item_relic;item_recipe_radiance"
 			}
 	}
 

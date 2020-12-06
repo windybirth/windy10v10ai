@@ -76,7 +76,7 @@ function AIGameMode:BotCourierTransfer()
 							local hAbility = args.hCourier:FindAbilityByName("courier_take_stash_and_transfer_items")
 							args.hCourier:CastAbilityNoTarget(hAbility, args.hCourier:GetPlayerOwnerID())
 						end
-						
+
 						args.hHero.sTransferTimer = nil
 					end
 				})
@@ -196,11 +196,11 @@ function AIGameMode:OnEntityKilled(keys)
 
 	local fRespawnTime = 0
 	local iLevel = hHero:GetLevel()
-	local tDOTARespawnTime = {5, 7, 9, 13, 16, 26, 28, 30, 32, 34, 36, 44, 46, 48, 50, 52, 54, 65, 70, 75, 80, 85, 90, 95, 100}
+	local tDOTARespawnTime = {5, 7, 9, 13, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 28, 30, 32, 34, 36, 37, 40, 42, 46, 48, 50}
 	if iLevel <= 25 then
 		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100)
 	else
-		fRespawnTime = 120*self.iRespawnTimePercentage/100
+		fRespawnTime = 60*self.iRespawnTimePercentage/100
 	end
 
 	if hHero:FindModifierByName('modifier_necrolyte_reapers_scythe') then
@@ -254,7 +254,7 @@ end
 
 function AIGameMode:OnPlayerLevelUp(keys)
 	local iEntIndex=PlayerResource:GetPlayer(keys.player-1):GetAssignedHero():entindex()
-	Timers:CreateTimer(0.5, function () 
+	Timers:CreateTimer(0.5, function ()
 		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.14)
 	end)
 end
