@@ -604,7 +604,7 @@
 	//=================================================================================================================
 	// Recipe: Blade Mail2 刃甲2
 	//=================================================================================================================
-	"item_recipe_blade_mail2"
+	"item_recipe_blade_mail_2"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -621,7 +621,7 @@
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
-		"ItemResult"					"item_blade_mail2"
+		"ItemResult"					"item_blade_mail_2"
 		"ItemRequirements"
 		{
 			"01"						"item_blade_mail"
@@ -631,13 +631,13 @@
 	//=================================================================================================================
 	// Blade Mail2
 	//=================================================================================================================
-	"item_blade_mail2"
+	"item_blade_mail_2"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"9032"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"BaseClass"					"item_blade_mail"
-		"AbilityTextureName"		"item_blade_mail2"
+		"AbilityTextureName"		"item_blade_mail_2"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 
 		// Stats
@@ -811,7 +811,7 @@
 
 			// Stats
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCooldown"				"35.0"
+			"AbilityCooldown"				"25.0"
 			"AbilityCastPoint"				"0.0"
 			"AbilityManaCost"				"0"
 
@@ -850,7 +850,7 @@
 					"05"
 					{
 							"var_type"						"FIELD_FLOAT"
-							"duration"						"8"
+							"duration"						"4"
 					}
 					"06"
 					{
