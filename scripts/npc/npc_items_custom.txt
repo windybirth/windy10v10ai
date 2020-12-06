@@ -765,7 +765,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"blind_pct"				"30"
+				"blind_pct"				"25"
 			}
 			"05"
 			{
@@ -835,7 +835,7 @@
 					"02"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_damage"					"123"
+							"bonus_damage"					"125"
 					}
 					"03"
 					{
@@ -845,7 +845,7 @@
 					"04"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_attack_speed"			"45"
+							"bonus_attack_speed"			"60"
 					}
 					"05"
 					{
@@ -865,7 +865,7 @@
 					"08"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"crit_multiplier"		"250"
+							"crit_multiplier"		"280"
 					}
 			}
 

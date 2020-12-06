@@ -21,7 +21,7 @@
 		"confirm_game_options"	"Confirm and Hide Game Options"
 		"show_game_options"  "Show Game Options"
 		"respawn_time_percentage"	"Respawn Time Percentage"
-		"max_level"	"Max Level"
+		"max_level"	"等级上限"
 		"radiant_tower_power"	"Radiant Tower Power Level"
 		"dire_tower_power"	"Dire Tower Power Level"
 		"radiant_tower_endure"	"Radiant Buildings Endurance Level"
