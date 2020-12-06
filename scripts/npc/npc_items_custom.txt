@@ -704,7 +704,7 @@
 			// General
 			//-------------------------------------------------------------------------------------------------------------
 			"BaseClass"						"item_datadriven"
-			"ID"							"99136"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+			"ID"							"9033"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 			"Model"							"models/props_gameplay/recipe.mdl"
 
 			// Item Info
@@ -731,7 +731,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"item_radiance"
-		"ID"							"99137"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"9034"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
 		"AbilityTextureName"			"item_radiance_2"
 
@@ -758,10 +758,10 @@
 				"aura_damage"			"120"
 			}
 			"03"
-						{
-								"var_type"				"FIELD_INTEGER"
-								"aura_damage_illusions"	"100"
-						}
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_damage_illusions"	"100"
+			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
@@ -775,7 +775,190 @@
 		}
 	}
 
+	"item_recipe_wasp"
+	{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"item_datadriven"
+			"ID"							"9035"  //Valve's version of this item uses the ID "138".
+			"Model"							"models/props_gameplay/recipe.mdl"
+			"AbilityTextureName"			"item_recipe"
 
+			// Item Info
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemCost"						"1000"
+			"ItemShopTags"					""
+
+			// Recipe
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemRecipe"					"1"
+			"ItemResult"					"item_wasp"
+			"ItemRequirements"
+			{
+					"01"						"item_butterfly;item_eagle;item_greater_crit"
+			}
+	}
+	"item_wasp"
+	{
+			// General
+			//-------------------------------------------------------------------------------------------------------------
+			"BaseClass"						"item_datadriven"
+			"ID"							"9036"  //Valve's version of this item uses the ID "139".
+			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+			"Model"							"models/props_gameplay/red_box.vmdl"
+			"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+			"AbilityTextureName"			"item_wasp"
+
+			// Stats
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilityCooldown"				"35.0"
+			"AbilityCastPoint"				"0.0"
+			"AbilityManaCost"				"0"
+
+			// Item Info
+			//-------------------------------------------------------------------------------------------------------------
+			"ItemCost"						"8895"
+			"ItemShopTags"					"agi;damage;evasion;attack_speed;crit"
+			"ItemQuality"					"artifact"
+			"ItemAliases"					"wasp"
+			"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+			// Special
+			//-------------------------------------------------------------------------------------------------------------
+			"AbilitySpecial"
+			{
+					"01"
+					{
+							"var_type"						"FIELD_INTEGER"
+							"bonus_agility"					"65"
+					}
+					"02"
+					{
+							"var_type"						"FIELD_INTEGER"
+							"bonus_damage"					"123"
+					}
+					"03"
+					{
+							"var_type"						"FIELD_INTEGER"
+							"bonus_evasion"					"40"
+					}
+					"04"
+					{
+							"var_type"						"FIELD_INTEGER"
+							"bonus_attack_speed"			"45"
+					}
+					"05"
+					{
+							"var_type"						"FIELD_FLOAT"
+							"duration"						"8"
+					}
+					"06"
+					{
+							"var_type"						"FIELD_INTEGER"
+							"bonus_move_speed"		"20"
+					}
+					"07"
+					{
+							"var_type"				"FIELD_INTEGER"
+							"crit_chance"			"35"
+					}
+					"08"
+					{
+							"var_type"				"FIELD_INTEGER"
+							"crit_multiplier"		"250"
+					}
+			}
+
+	"OnSpellStart"
+	{
+		"ApplyModifier"
+					{
+							"Target"					"CASTER"
+							"ModifierName"				"modifier_item_butterfly_datadriven_movespeed"
+							"Duration"					"%duration"
+					}
+		"FireSound"
+		{
+			"EffectName"				"DOTA_Item.Armlet.Activate"
+			"Target"					"CASTER"
+		}
+	}
+
+			"Modifiers"
+			{
+					"modifier_item_butterfly_datadriven"
+					{
+							"Passive"			"1"
+							"IsHidden"			"1"
+							"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+							"Properties"
+							{
+									"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"				"%bonus_agility"
+									"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
+									"MODIFIER_PROPERTY_EVASION_CONSTANT"				"%bonus_evasion"
+							}
+
+							"OnAttackStart"
+							{
+									"RemoveModifier"
+									{
+											"ModifierName" 	"modifier_wasp_crit"
+											"Target" 		"CASTER"
+									}
+
+									"Random"
+									{
+											"Chance" "%crit_chance"
+											"OnSuccess"
+											{
+													"ApplyModifier"
+													{
+															"ModifierName" 	"modifier_wasp_crit"
+															"Target"    	"CASTER"
+													}
+											}
+									}
+							}
+					}
+
+					"modifier_item_butterfly_datadriven_movespeed"
+					{
+							"Passive"			"0"
+							"IsHidden"			"0"
+
+							"Properties"
+							{
+									"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"		"%bonus_move_speed"
+							}
+
+							"States"
+							{
+									"MODIFIER_STATE_NO_UNIT_COLLISION"				"MODIFIER_STATE_VALUE_ENABLED"
+									"MODIFIER_STATE_FLYING"							"MODIFIER_STATE_VALUE_ENABLED"
+							}
+					}
+
+					"modifier_wasp_crit"
+					{
+							"IsHidden"  "1"
+							"Properties"
+							{
+									"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE" "%crit_multiplier"
+							}
+
+							"OnAttackLanded"
+							{
+									"RemoveModifier"
+									{
+											"ModifierName"  "modifier_wasp_crit"
+											"Target"   		"CASTER"
+									}
+							}
+					}
+			}
+	}
 
 
 
@@ -1143,6 +1326,7 @@
 	//=================================================================================================================
 	"item_bloodstone"
 	{
+		"AbilityCooldown"				"45.0"
 		"ItemInitialCharges"			"16"
 
 		// Special
@@ -1182,7 +1366,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"			"30"
+				"spell_lifesteal_amp"			"35"
 			}
 			"08"
 			{
@@ -1197,7 +1381,7 @@
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"death_charges"				"3"
+				"death_charges"				"6"
 			}
 			"11"
 			{
@@ -1212,7 +1396,7 @@
 			"13"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"initial_charges_tooltip" "2"
+				"initial_charges_tooltip" "20"
 			}
 			"14"
 			{

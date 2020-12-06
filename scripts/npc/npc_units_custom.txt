@@ -121,7 +121,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -130,7 +130,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -139,7 +139,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -148,7 +148,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -157,7 +157,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -166,7 +166,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -178,17 +178,77 @@
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.8" // 0.95
+		"AttackRate"				"0.75" // 0.95
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealthRegen"			"20"
 	}
 	"npc_dota_badguys_tower4"
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.8" // 0.95
+		"AttackRate"				"0.75" // 0.95
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealthRegen"			"20"
+	}
+	//=================================================================================
+	// Creeps: Good Guys Fort 基地
+	//=================================================================================
+	"npc_dota_goodguys_fort"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"180"			// Damage range min.
+		"AttackDamageMax"			"210"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.65"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"			// Range within a target can be acquired.
+		"AttackRange"				"600"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"650"			// Speed of projectile.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"9000"		// Base health.
+		"StatusHealthRegen"			"30"			// Health regeneration rate.
+	}
+	//=================================================================================
+	// Creeps: Bad Guys Fort
+	//=================================================================================
+	"npc_dota_badguys_fort"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"250"			// Damage range min.
+		"AttackDamageMax"			"360"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"0.65"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"600"			// Range within a target can be acquired.
+		"AttackRange"				"600"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"650"			// Speed of projectile.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"9000"		// Base health.
+		"StatusHealthRegen"			"30"			// Health regeneration rate.
 	}
 	"dota_fountain"
 	{

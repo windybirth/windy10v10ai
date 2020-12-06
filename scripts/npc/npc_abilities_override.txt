@@ -1050,17 +1050,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"agi_gain"				"2"
+				"agi_gain"				"3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1 1 1 1"
+				"stat_loss"				"1 1 2 2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"15 20 25 30"
+				"duration"				"14 16 18 20"
 				"LinkedSpecialBonus"	"special_bonus_unique_slark_4"
 			}
 		}
