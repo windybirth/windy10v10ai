@@ -451,13 +451,13 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"split_count_scepter"			"1"
+				"split_count_scepter"			"2"
 				"RequiresScepter"		"1"
 			}
 			"06"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"scepter_range"					"200"
+				"scepter_range"					"300"
 				"RequiresScepter"		"1"
 			}
 			"07"
@@ -547,12 +547,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_modifier"		"-95 -90 -85 -80"
+				"damage_modifier"		"-50 -45 -40 -35"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage_modifier_tooltip"		"5 10 15 20"
+				"damage_modifier_tooltip"		"50 55 60 65"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"arrow_count"				"4 5 6 7"
+				"LinkedSpecialBonus"			"special_bonus_unique_medusa_2"
 			}
 		}
 	}
@@ -1080,6 +1086,101 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"20"
 				"ad_linked_ability"			"slark_essence_shift"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: 大牛
+	//=================================================================================================================
+	"elder_titan_echo_stomp_spirit"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 2.5 3.0 3.5"
+			}
+		}
+	}
+
+	"elder_titan_ancestral_spirit"
+	{
+			// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"radius"						"275"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"pass_damage"					"50"
+			}
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"spirit_duration"				"8.0"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"buff_duration"					"10.0"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"speed"							"900"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_creeps"				"1"
+			}
+			"07"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_heroes"				"7"
+			}
+			"08"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_creeps"					"3 7 11 15"
+				"CalculateSpellDamageTooltip"				"0"
+			}
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_heroes"					"10 20 30 40"
+				"LinkedSpecialBonus"			"special_bonus_unique_elder_titan"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"10"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"armor_creeps"					"0.5"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"armor_heroes"					"1 2 3 4"
+			}
+			"12"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"move_pct_cap"					"40"
+			}
+			"13"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"scepter_magic_immune_per_hero"	"1"
+				"RequiresScepter"				"1"
 			}
 		}
 	}

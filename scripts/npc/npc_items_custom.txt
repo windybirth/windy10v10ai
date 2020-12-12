@@ -718,7 +718,7 @@
 			"ItemResult"					"item_radiance_2"
 			"ItemRequirements"
 			{
-					"01"						"item_radiance;item_talisman_of_evasion;item_relic;item_recipe_radiance"
+					"01"						"item_radiance;item_talisman_of_evasion;item_eagle;item_eagle;item_recipe_radiance"
 			}
 	}
 
@@ -980,7 +980,7 @@
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"300.0"
-		"ItemInitialStockTime"			"390.0"
+		"ItemInitialStockTime"			"375.0"
 	}
 	//=================================================================================================================
 	// Magic Stick 魔棒
