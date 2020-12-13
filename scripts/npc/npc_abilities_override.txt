@@ -16,7 +16,7 @@
 	//=================================================================================================================
 	"item_tpscroll"
 	{
-		"AbilityCooldown"		"10.0"
+		"AbilityCooldown"		"15.0"
 		"ItemPermanent"			"1"
 		"ItemPurchasable"		"1"
 		"ItemStockMax"			"1"
@@ -24,7 +24,7 @@
 	}
 	"item_refresher"
 	{
-		"AbilityCooldown"				"60.0"
+		"AbilityCooldown"				"90.0"
 	}
 	"item_cloak"
 	{
@@ -33,12 +33,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"25"
+				"bonus_magical_armor"	"20"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"	"25"
+				"tooltip_resist"	"20"
 			}
 		}
 	}

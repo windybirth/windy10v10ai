@@ -128,7 +128,7 @@ function AIGameMode:PreGameOptions()
 		} -- value in 7.23
 		local iRequireLevel = tLevelRequire[25]
 		for i = 26, self.iMaxLevel do
-			iRequireLevel = iRequireLevel+i*1000
+			iRequireLevel = iRequireLevel+i*300
 			table.insert(tLevelRequire, iRequireLevel)
 		end
 		GameRules:GetGameModeEntity():SetUseCustomHeroLevels( true )
@@ -145,7 +145,7 @@ function AIGameMode:FilterGold(tGoldFilter)
 	local iPlayerID = tGoldFilter["player_id_const"]
 	local iReason = tGoldFilter["reason_const"]
 	local bReliable = tGoldFilter["reliable"] == 1
-	
+
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
 		tGoldFilter["gold"] = math.floor(iGold*self.fRadiantGoldMultiplier)
 	else
