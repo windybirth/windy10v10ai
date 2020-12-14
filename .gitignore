@@ -1,2 +1,4 @@
 
 *.bin
+panorama/layout/custom_game/custom_loading_screen.vxml_c
+panorama/scripts/custom_game/game_mode.vjs_c
