@@ -12,31 +12,31 @@
 		//
 		// /////////////////////////////////////////////////////////////////////////////
 		"addon_option_title"	"Game Options"
-		"radiant_gold_multiplier"	"Radiant Gold Multiplier"
-		"dire_gold_multiplier"	"Dire Gold Multiplier"
-		"radiant_xp_multiplier"	"Radiant XP Multiplier"
-		"dire_xp_multiplier"	"Dire XP Multiplier"
-		"radiant_player_number"	"Radiant Player Number"
-		"dire_player_number"	"Dire Player Number"
+		"radiant_gold_multiplier"	"天辉金钱倍率"
+		"dire_gold_multiplier"	"夜魇金钱倍率"
+		"radiant_xp_multiplier"	"天辉经验倍率"
+		"dire_xp_multiplier"	"夜魇经验倍率"
+		"radiant_player_number"	"天辉玩家人数"
+		"dire_player_number"	"夜魇玩家人数"
 		"confirm_game_options"	"Confirm and Hide Game Options"
 		"show_game_options"  "Show Game Options"
-		"respawn_time_percentage"	"Respawn Time Percentage"
+		"respawn_time_percentage"	"复活时间百分比"
 		"max_level"	"等级上限"
-		"radiant_tower_power"	"Radiant Tower Power Level"
-		"dire_tower_power"	"Dire Tower Power Level"
-		"radiant_tower_endure"	"Radiant Buildings Endurance Level"
-		"dire_tower_endure"	"Dire Buildings Endurance Level"
-		"radiant_tower_heal"	"Radiant Building Health Regen"
-		"dire_tower_heal"	"Dire Building Health Regen"
+		"radiant_tower_power"	"天辉建筑攻击加成等级"
+		"dire_tower_power"	"夜魇建筑攻击加成等级"
+		"radiant_tower_endure"	"天辉建筑防御加成等级"
+		"dire_tower_endure"	"夜魇建筑防御加成等级"
+		"radiant_tower_heal"	"天辉建筑生命回复加成"
+		"dire_tower_heal"	"夜魇建筑生命回复加成"
 		"same_hero_selection"  "Allow Same Hero Selection"
 		"fast_courier"  "Fast Invulnerable Courier"
 		"hide_chat_team"  "Hide Chat and Team"
 		"show_chat_team"  "Show Chat and Team"
 
-		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
+		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"防御塔的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."
 
-		"DOTA_Tooltip_modifier_tower_endure"						"Buildings Endurance"
+		"DOTA_Tooltip_modifier_tower_endure"						"建筑防御加成"
 		"DOTA_Tooltip_modifier_tower_endure_Description"		"The building's armor is changed by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, max health is set to %dMODIFIER_PROPERTY_TOOLTIP%%%."
 
 		"DOTA_Tooltip_modifier_melee_resistance"					"威压"
@@ -133,6 +133,22 @@
 		"DOTA_Tooltip_ability_item_aether_lens_3_Note0"                           "被动效果不会叠加。"
 		"DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana"                      "+$mana"
 		"DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana_regen"                "+$mana_regen"
+
+		"DOTA_Tooltip_ability_item_vladmir_2"                               "强袭祭品"
+		"DOTA_Tooltip_ability_item_vladmir_2_Description"							"<h1>被动：强袭祭品光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲，削弱附近敌军%aura_negative_armor%点护甲。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_vladmir_2_Lore"								"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_all_stats"					"+$all"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_armor"							"+$armor"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得20%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura_Description"	"护甲被降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
 		///////////////////////////////////////////////////
 		//
 		//            Heroes

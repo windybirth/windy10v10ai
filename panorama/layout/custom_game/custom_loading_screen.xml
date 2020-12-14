@@ -1,0 +1,234 @@
+<root>
+	<styles>
+		<include src="s2r://panorama/styles/dotastyles.vcss_c" />
+		<include src="s2r://panorama/styles/custom_game/custom_loading_screen.vcss_c" />
+	</styles>
+	<scripts>
+	<include src="s2r://panorama/scripts/custom_game/game_mode.js"/>
+	</scripts>
+	<Panel class="AddonLoadingRoot">
+		<Panel id="CustomBg" >
+			<Panel id="game_options_container" >
+				<Panel id = "GameOptionsPanel">
+					<Label id="GameOptionsPanelTitle" text="#addon_option_title" />
+					<Panel id="RadiantGoldMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantGoldMultiplierTitle" class="GameOptionsLabel" text="#radiant_gold_multiplier" />
+						<DropDown id="radiant_gold_multiplier_dropdown" class="GameOptionsDropdown">
+							<Label text="1" id="1"/>
+							<Label text="1.5" id="1.5"/>
+							<Label text="2" id="2"/>
+							<Label text="2.5" id="2.5"/>
+							<Label text="3" id="3"/>
+							<Label text="3.5" id="3.5"/>
+							<Label text="4" id="4"/>
+							<Label text="4.5" id="4.5"/>
+							<Label text="5" id="5"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DireGoldMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="DireGoldMultiplierTitle" class="GameOptionsLabel" text="#dire_gold_multiplier" />
+						<DropDown id="dire_gold_multiplier_dropdown" class="GameOptionsDropdown">
+							<Label text="1" id="1"/>
+							<Label text="1.5" id="1.5"/>
+							<Label text="2" id="2"/>
+							<Label text="2.5" id="2.5"/>
+							<Label text="3" id="3"/>
+							<Label text="3.5" id="3.5"/>
+							<Label text="4" id="4"/>
+							<Label text="4.5" id="4.5"/>
+							<Label text="5" id="5"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RadiantXPMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantXPMultiplierTitle" class="GameOptionsLabel" text="#radiant_xp_multiplier" />
+						<DropDown id="radiant_xp_multiplier_dropdown" class="GameOptionsDropdown">
+							<Label text="1" id="1"/>
+							<Label text="1.5" id="1.5"/>
+							<Label text="2" id="2"/>
+							<Label text="2.5" id="2.5"/>
+							<Label text="3" id="3"/>
+							<Label text="3.5" id="3.5"/>
+							<Label text="4" id="4"/>
+							<Label text="4.5" id="4.5"/>
+							<Label text="5" id="5"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DireXPMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="DireXPMultiplierTitle" class="GameOptionsLabel" text="#dire_xp_multiplier" />
+						<DropDown id="dire_xp_multiplier_dropdown" class="GameOptionsDropdown">
+							<Label text="1" id="1"/>
+							<Label text="1.5" id="1.5"/>
+							<Label text="2" id="2"/>
+							<Label text="2.5" id="2.5"/>
+							<Label text="3" id="3"/>
+							<Label text="3.5" id="3.5"/>
+							<Label text="4" id="4"/>
+							<Label text="4.5" id="4.5"/>
+							<Label text="5" id="5"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RadiantPlayerNumberMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantPlayerNumberMultiplierTitle" class="GameOptionsLabel" text="#radiant_player_number" />
+						<DropDown id="radiant_player_number_dropdown" class="GameOptionsDropdown">
+							<Label text="10" id="10"/>
+							<Label text="9" id="9"/>
+							<Label text="8" id="8"/>
+							<Label text="7" id="7"/>
+							<Label text="6" id="6"/>
+							<Label text="5" id="5"/>
+							<Label text="4" id="4"/>
+							<Label text="3" id="3"/>
+							<Label text="2" id="2"/>
+							<Label text="1" id="1"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DirePlayerNumberMultiplierPanel"	class="GameOptionsSubPanel">
+						<Label id="DirePlayerNumberMultiplierTitle" class="GameOptionsLabel" text="#dire_player_number" />
+						<DropDown id="dire_player_number_dropdown" class="GameOptionsDropdown">
+							<Label text="10" id="10"/>
+							<Label text="9" id="9"/>
+							<Label text="8" id="8"/>
+							<Label text="7" id="7"/>
+							<Label text="6" id="6"/>
+							<Label text="5" id="5"/>
+							<Label text="4" id="4"/>
+							<Label text="3" id="3"/>
+							<Label text="2" id="2"/>
+							<Label text="1" id="1"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RespawnTimePercentagePanel"	class="GameOptionsSubPanel">
+						<Label id="RespawnTimePercentagePanelTitle" class="GameOptionsLabel" text="#respawn_time_percentage" />
+						<DropDown id="respawn_time_percentage_dropdown" class="GameOptionsDropdown">
+							<Label text="100%" id="100"/>
+							<Label text="75%" id="75"/>
+							<Label text="50%" id="50"/>
+							<Label text="30%" id="30"/>
+							<Label text="10%" id="10"/>
+							<Label text="5%" id="5"/>
+							<Label text="0%" id="0"/>
+						</DropDown>
+					</Panel>
+					<Panel id="MaxLevelPanel"	class="GameOptionsSubPanel">
+						<Label id="MaxLevelTitle" class="GameOptionsLabel" text="#max_level" />
+						<DropDown id="max_level_dropdown" class="GameOptionsDropdown">
+							<Label text="30" id="30"/>
+							<Label text="40" id="40"/>
+							<Label text="50" id="50"/>
+							<Label text="75" id="75"/>
+							<Label text="100" id="100"/>
+							<Label text="150" id="150"/>
+							<Label text="200" id="200"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RadiantTowerPowerPanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantTowerPowerTitle" class="GameOptionsLabel" text="#radiant_tower_power" />
+						<DropDown id="radiant_tower_power_dropdown" class="GameOptionsDropdown">
+							<Label text="50%" id="1"/>
+							<Label text="75%" id="2"/>
+							<Label text="100%" id="3"/>
+							<Label text="125%" id="4"/>
+							<Label text="150%" id="5"/>
+							<Label text="175%" id="6"/>
+							<Label text="200%" id="7"/>
+							<Label text="300%" id="8"/>
+							<Label text="400%" id="9"/>
+							<Label text="500%" id="10"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DireTowerPowerPanel"	class="GameOptionsSubPanel">
+						<Label id="DireTowerPowerTitle" class="GameOptionsLabel" text="#dire_tower_power" />
+						<DropDown id="dire_tower_power_dropdown" class="GameOptionsDropdown">
+							<Label text="50%" id="1"/>
+							<Label text="75%" id="2"/>
+							<Label text="100%" id="3"/>
+							<Label text="125%" id="4"/>
+							<Label text="150%" id="5"/>
+							<Label text="175%" id="6"/>
+							<Label text="200%" id="7"/>
+							<Label text="300%" id="8"/>
+							<Label text="400%" id="9"/>
+							<Label text="500%" id="10"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RadiantTowerEndurePanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantTowerEndureTitle" class="GameOptionsLabel" text="#radiant_tower_endure" />
+						<DropDown id="radiant_tower_endure_dropdown" class="GameOptionsDropdown">
+							<Label text="50%" id="1"/>
+							<Label text="75%" id="2"/>
+							<Label text="100%" id="3"/>
+							<Label text="125%" id="4"/>
+							<Label text="150%" id="5"/>
+							<Label text="175%" id="6"/>
+							<Label text="200%" id="7"/>
+							<Label text="300%" id="8"/>
+							<Label text="400%" id="9"/>
+							<Label text="500%" id="10"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DireTowerEndurePanel"	class="GameOptionsSubPanel">
+						<Label id="DireTowerEndureTitle" class="GameOptionsLabel" text="#dire_tower_endure" />
+						<DropDown id="dire_tower_endure_dropdown" class="GameOptionsDropdown">
+							<Label text="50%" id="1"/>
+							<Label text="75%" id="2"/>
+							<Label text="100%" id="3"/>
+							<Label text="125%" id="4"/>
+							<Label text="150%" id="5"/>
+							<Label text="175%" id="6"/>
+							<Label text="200%" id="7"/>
+							<Label text="300%" id="8"/>
+							<Label text="400%" id="9"/>
+							<Label text="500%" id="10"/>
+						</DropDown>
+					</Panel>
+					<Panel id="RadiantTowerHealPanel"	class="GameOptionsSubPanel">
+						<Label id="RadiantTowerHealTitle" class="GameOptionsLabel" text="#radiant_tower_heal" />
+						<DropDown id="radiant_tower_heal_dropdown" class="GameOptionsDropdown">
+							<Label text="0" id="0"/>
+							<Label text="1" id="1"/>
+							<Label text="5" id="5"/>
+							<Label text="10" id="10"/>
+							<Label text="20" id="20"/>
+							<Label text="50" id="50"/>
+							<Label text="100" id="100"/>
+							<Label text="250" id="250"/>
+							<Label text="500" id="500"/>
+							<Label text="1000" id="1000"/>
+						</DropDown>
+					</Panel>
+					<Panel id="DireTowerHealPanel"	class="GameOptionsSubPanel">
+						<Label id="DireTowerHealTitle" class="GameOptionsLabel" text="#dire_tower_heal" />
+						<DropDown id="dire_tower_heal_dropdown" class="GameOptionsDropdown">
+							<Label text="0" id="0"/>
+							<Label text="1" id="1"/>
+							<Label text="5" id="5"/>
+							<Label text="10" id="10"/>
+							<Label text="20" id="20"/>
+							<Label text="50" id="50"/>
+							<Label text="100" id="100"/>
+							<Label text="250" id="250"/>
+							<Label text="500" id="500"/>
+							<Label text="1000" id="1000"/>
+						</DropDown>
+					</Panel>
+					<Panel id="SameHeroSelectionPanel"	class="GameOptionsSubPanel">
+						<Label id="SameHeroSelectionTitle" class="GameOptionsLabel" text="#same_hero_selection" />
+						<ToggleButton checked="true" class="GameOptionsToggle" id="same_hero_selection"/>
+					</Panel>
+					<Panel id="FastCourierPanel"	class="GameOptionsSubPanel">
+						<Label id="FastCourierTitle" class="GameOptionsLabel" text="#fast_courier" />
+						<ToggleButton checked="true" class="GameOptionsToggle" id="fast_courier"/>
+					</Panel>
+				</Panel>
+			</Panel>
+			<Panel id="ChatHideButtonContainer" hittest="false">
+				<Button id="ChatHideButtonHide" class="ChatHideButton" onactivate="HideChatTeamActivate()">
+					<Label id="ChatHideButtonLabelHide" class="ChatHideButtonLabel" text="#hide_chat_team" />
+				</Button>
+				<Button id="ChatHideButtonShow" class="ChatHideButton" onactivate="ShowChatTeamActivate()">
+					<Label id="ChatHideButtonLabelShow" class="ChatHideButtonLabel" text="#show_chat_team" />
+				</Button>
+			</Panel>
+		</Panel>
+	</Panel>
+</root>
