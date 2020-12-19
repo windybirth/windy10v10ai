@@ -56,6 +56,8 @@ function ShowChatTeamActivate() {
 	GameEvents.SendCustomGameEventToAllClients("LoadingScreenTeamShow", {iPlayerID:Players.GetLocalPlayer()});
 }
 
+$("#dire_gold_multiplier_dropdown").SetSelected("2");
+$("#dire_xp_multiplier_dropdown").SetSelected("2");
 $("#radiant_player_number_dropdown").SetSelected("5");
 $("#dire_player_number_dropdown").SetSelected("10");
 $("#radiant_tower_power_dropdown").SetSelected("4");

@@ -119,7 +119,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"crit_multiplier"	"200"
+				"crit_multiplier"	"160"
 			}
 		}
 	}
@@ -238,17 +238,48 @@
 	}
 	"item_fallen_sky"
 	{
+		"AbilityCooldown"				"12.0"
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"30"
+			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"50.0"
+				"bonus_health_regen"	"30.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"bonus_mana_regen"		"15.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_dps_buildings"		"80"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"burn_dps_units"		"130"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"impact_radius"		"375"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"blink_damage_cooldown"	"2.5"
 			}
 		}
 	}
@@ -259,7 +290,174 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_range_bonus"		"75"
+				"attack_range_bonus"		"200"
+			}
+		}
+	}
+	"item_desolator_2"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"95"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"corruption_armor"		"-12"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Keen Optic 基恩镜片
+	//=================================================================================================================
+	"item_keen_optic"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_bonus"			"175"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Poor Man's Shield 穷鬼盾
+	//=================================================================================================================
+	"item_poor_mans_shield"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_melee"	"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_ranged"	"30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_chance"			"100"
+			}
+		}
+	}
+	"item_vampire_fangs"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_lifesteal"			"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal"			"15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"night_vision"			"400"
+			}
+		}
+	}
+	"item_orb_of_destruction"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_reduction"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_melee"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_range"			"20"
+			}
+		}
+	}
+
+	"item_trident"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"66"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"66"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"			"66"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"status_resistance"				"33"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"66"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"movement_speed_percent_bonus"	"33"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_amp"			"44"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"		"44"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"44"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"			"44"
 			}
 		}
 	}
@@ -737,12 +935,13 @@
 	}
 	"lion_finger_of_death"
 	{
+		"AbilityCooldown"				"80.0 60.0 40.0"
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_per_kill"			"5"
+				"damage_per_kill"			"25"
 				"LinkedSpecialBonus"			"special_bonus_unique_lion_8"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -755,7 +954,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"5"
+				"value"				"15"
 				"ad_linked_ability"			"lion_finger_of_death"
 			}
 		}
@@ -1061,7 +1260,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1 1 2 2"
+				"stat_loss"				"1 2 3 4"
 			}
 			"03"
 			{

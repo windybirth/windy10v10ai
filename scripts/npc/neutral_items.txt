@@ -4,18 +4,19 @@
 	{
 		"drop_rates"
 		{
-			"6:00"
+			"1:00"
 			{
-				"0" "5"
-				"1" "4"
-				"2" "2"
-				"3" "2"
+				"0" "10"
+				"1" "8"
+				"2" "6"
+				"3" "4"
 			}
 		}
-		
+
 		"items"
 		{
 			"item_spider_legs"				  "1"
+			"item_poor_mans_shield"		"1"
 			"item_mango_tree"				  "1"
 			"item_imp_claw"					  "1"
 			"item_philosophers_stone"		  "1"
@@ -25,17 +26,18 @@
 	{
 		"drop_rates"
 		{
-			"11:00"
+			"10:00"
 			{
-				"0" "5"
-				"1" "4"
-				"2" "2"
+				"0" "10"
+				"1" "6"
+				"2" "4"
 				"3" "2"
 			}
 		}
 
 		"items"
 		{
+			"item_keen_optic"				  "1"
 			"item_royal_jelly_custom"		  "1"
 			"item_vampire_fangs"			  "1"
 			"item_orb_of_destruction"		  "1"
@@ -64,7 +66,7 @@
 		}
 	}
 	"4"
-	{	
+	{
 		"drop_rates"
 		{
 			"23:00"
@@ -80,8 +82,8 @@
 		{
 			"item_timeless_relic"			  "1"
 			"item_ninja_gear"				  "1"
-			"item_mirror_shield"			  "1"
 			"item_seer_stone"				  "1"
+			"item_spell_prism"				  "1"
 		}
 	}
 	"5"
@@ -99,7 +101,7 @@
 
 		"items"
 		{
-			"item_spell_prism"				  "1"
+			"item_mirror_shield"			  "1"
 			"item_fallen_sky"			  	  "1"
 			"item_woodland_striders"		  "1"
 			"item_apex"						  "1"

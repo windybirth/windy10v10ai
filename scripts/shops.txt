@@ -3,7 +3,7 @@
 	"consumables"
 	{
 		"item"		"item_tpscroll"
-		"item"		"item_clarity"	
+		"item"		"item_clarity"
 		"item"		"item_faerie_fire"
 		"item"		"item_smoke_of_deceit"
 		"item"		"item_ward_observer"
@@ -143,7 +143,7 @@
 		"item"		"item_octarine_core"
 	}
 
-	// Level 3 - Purple Recipes	
+	// Level 3 - Purple Recipes
 	"defense"
 	{
 		"item"		"item_hood_of_defiance"
@@ -158,7 +158,7 @@
 		"item"		"item_shivas_guard"
 		"item"		"item_manta"
 		"item"		"item_bloodstone"
-		"item"		"item_sphere"
+		"item"		"item_sphere_2"
 		"item"		"item_heart"
 		"item"		"item_assault"
 	}
@@ -198,7 +198,7 @@
  		"item"		"item_sange_and_yasha"
  		"item"		"item_yasha_and_kaya"
  		"item"		"item_satanic"
- 		"item"		"item_skadi" 
+ 		"item"		"item_skadi"
  		"item"		"item_mjollnir"
 	}
 
