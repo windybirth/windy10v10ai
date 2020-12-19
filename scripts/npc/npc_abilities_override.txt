@@ -22,6 +22,10 @@
 		"ItemStockMax"			"1"
 		"ItemCost"				"0"
 	}
+	"item_aghanims_shard"
+	{
+		"ItemInitialStockTime"			"675.0"
+	}
 	"item_refresher"
 	{
 		"AbilityCooldown"				"90.0"
@@ -110,19 +114,7 @@
 			}
 		}
 	}
-	"item_imp_claw"
-	{
-		"AbilityCooldown"				"4.0"
-
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"crit_multiplier"	"160"
-			}
-		}
-	}
+	// level 1
 	"item_philosophers_stone"
 	{
 		"AbilitySpecial"
@@ -136,6 +128,91 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"bonus_mana"		"350"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Keen Optic 基恩镜片
+	//=================================================================================================================
+	"item_keen_optic"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_bonus"			"150"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"3"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Poor Man's Shield 穷鬼盾
+	//=================================================================================================================
+	"item_poor_mans_shield"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"12"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_melee"	"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_block_ranged"	"30"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"block_chance"			"100"
+			}
+		}
+	}
+	"item_chipped_vest"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hp_regen"			"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_return_hero"			"35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_return_creep"			"20"
+			}
+		}
+	}
+	// level 2
+	"item_imp_claw"
+	{
+		"AbilityCooldown"				"4.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"crit_multiplier"	"160"
 			}
 		}
 	}
@@ -155,6 +232,65 @@
 			}
 		}
 	}
+	"item_orb_of_destruction"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"armor_reduction"			"5"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_melee"			"30"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_range"			"20"
+			}
+		}
+	}
+	// level 4
+	"item_penta_edged_sword"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"60"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"melee_attack_range"	"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"maim_chance"			"25"
+			}
+		}
+	}
+	"item_minotaur_horn"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"			"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"			"3.5"
+			}
+		}
+	}
 	"item_ninja_gear"
 	{
 		"AbilityCooldown"				"35.0"
@@ -169,7 +305,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"passive_movement_bonus"	"80"
+				"passive_movement_bonus"	"60"
 			}
 			"04"
 			{
@@ -180,6 +316,29 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement_speed"	"20"
+			}
+		}
+	}
+	// level 5
+	"item_seer_stone"
+	{
+		"AbilityCooldown"				"60"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_bonus"			"400"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vision_bonus"			"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen"			"25"
 			}
 		}
 	}
@@ -206,33 +365,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"primary_stat"			"100"
-			}
-		}
-	}
-	"item_woodland_striders"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"200"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_hp_regen"		"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"active_duration"		"5"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tree_duration"			"5"
+				"primary_stat"			"125"
 			}
 		}
 	}
@@ -283,6 +416,25 @@
 			}
 		}
 	}
+	"item_book_of_shadows"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"			"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"night_vision"			"600"
+			}
+		}
+	}
+	// level 6
 	"item_ballista"
 	{
 		"AbilitySpecial"
@@ -290,7 +442,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_range_bonus"		"200"
+				"attack_range_bonus"		"300"
 			}
 		}
 	}
@@ -301,166 +453,45 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"95"
+				"bonus_damage"			"105"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"corruption_armor"		"-12"
+				"corruption_armor"		"-15"
 			}
 		}
 	}
-	//=================================================================================================================
-	// Keen Optic 基恩镜片
-	//=================================================================================================================
-	"item_keen_optic"
-	{
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"175"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"3"
-			}
-		}
-	}
-	//=================================================================================================================
-	// Poor Man's Shield 穷鬼盾
-	//=================================================================================================================
-	"item_poor_mans_shield"
+	"item_ex_machina"
 	{
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"12"
+				"bonus_armor"			"40"
 			}
-			"02"
+		}
+	}
+	"item_giants_ring"
+	{
+		"AbilitySpecial"
+		{
+			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_block_melee"	"40"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_block_ranged"	"30"
+				"bonus_strength"			"60"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_chance"			"100"
-			}
-		}
-	}
-	"item_vampire_fangs"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"attack_lifesteal"			"20"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal"			"15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"night_vision"			"400"
-			}
-		}
-	}
-	"item_orb_of_destruction"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"armor_reduction"			"5"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_melee"			"30"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_range"			"20"
+				"pct_str_damage_per_second"			"120"
 			}
 		}
 	}
 
-	"item_trident"
-	{
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"66"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"66"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"			"66"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"status_resistance"				"33"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"66"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"movement_speed_percent_bonus"	"33"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"hp_regen_amp"			"44"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"		"44"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"spell_amp"			"44"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"			"44"
-			}
-		}
-	}
+
+
 	//=================================================================================================================
 	// HERO ABILITIES
 	//=================================================================================================================

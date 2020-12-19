@@ -60,13 +60,13 @@ $("#dire_gold_multiplier_dropdown").SetSelected("2");
 $("#dire_xp_multiplier_dropdown").SetSelected("2");
 $("#radiant_player_number_dropdown").SetSelected("5");
 $("#dire_player_number_dropdown").SetSelected("10");
-$("#radiant_tower_power_dropdown").SetSelected("4");
-$("#dire_tower_power_dropdown").SetSelected("6");
-$("#radiant_tower_endure_dropdown").SetSelected("4");
+$("#radiant_tower_power_dropdown").SetSelected("5");
+$("#dire_tower_power_dropdown").SetSelected("5");
+$("#radiant_tower_endure_dropdown").SetSelected("5");
 $("#dire_tower_endure_dropdown").SetSelected("5");
 $("#max_level_dropdown").SetSelected("50");
-$("#radiant_tower_heal_dropdown").SetSelected("10");
-$("#dire_tower_heal_dropdown").SetSelected("10");
+$("#radiant_tower_heal_dropdown").SetSelected("1");
+$("#dire_tower_heal_dropdown").SetSelected("1");
 $("#same_hero_selection").checked=true;
 $("#fast_courier").checked=true;
 

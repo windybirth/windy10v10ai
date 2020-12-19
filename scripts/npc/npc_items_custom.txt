@@ -615,7 +615,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"950"
+		"ItemCost"						"1675"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -646,7 +646,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"0"
+		"AbilityManaCost"				"1"
 		"ItemCost"						"3000"
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
@@ -686,12 +686,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"passive_reflection_pct"			"25"
+				"passive_reflection_pct"			"30"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"active_reflection_pct"			"75"
+				"active_reflection_pct"			"100"
 			}
 		}
 	}
@@ -1388,7 +1388,54 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// Recipe: Excalibur EX咖喱棒
+	//=================================================================================================================
+	"item_recipe_excalibur"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9047"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe"
 
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"8888"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_excalibur"
+		"ItemRequirements"
+		{
+			"01"						"item_rapier;item_rapier"
+		}
+	}
+
+	//=================================================================================================================
+	// Excalibur
+	//=================================================================================================================
+	"item_excalibur"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_rapier"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"							"9048"
+		"AbilityTextureName"			"item_excalibur"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"888"
+			}
+		}
+	}
 
 
 	//=================================================================================================================
@@ -1838,12 +1885,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"10"
+				"bonus_intellect"			"20"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"			"20"
+				"mana_regen_multiplier"		"150"
 			}
 			"05"
 			{
@@ -1853,52 +1900,57 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"		"150"
+				"spell_lifesteal_amp"			"36"
 			}
 			"07"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"			"35"
+				"var_type"				"FIELD_FLOAT"
+				"hero_lifesteal"		"15"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"regen_per_charge"		"0.3"
+				"creep_lifesteal"		"5"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"amp_per_charge"		"0.5"
+				"regen_per_charge"		"0.25"
 			}
 			"10"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"death_charges"				"6"
+				"var_type"				"FIELD_FLOAT"
+				"amp_per_charge"		"0.4"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"kill_charges"			"1"
+				"death_charges"				"6"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"charge_range"			"1800"
+				"kill_charges"			"1"
 			}
 			"13"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"initial_charges_tooltip" "20"
+				"charge_range"			"1800"
 			}
 			"14"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_cost_percentage" "30"
+				"initial_charges_tooltip" "16"
 			}
 			"15"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"restore_duration" "2.0"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_cost_percentage" "30"
 			}
 		}
 	}
@@ -1918,15 +1970,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"10 15 20 25 30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"500 650 800 950 1100"
+				"damage"				"600 750 900 1050 1200"
 			}
 		}
 	}
@@ -1936,15 +1983,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"10 15 20 25 30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"500 650 800 950 1100"
+				"damage"				"600 750 900 1050 1200"
 			}
 		}
 	}
@@ -1954,15 +1996,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"10 15 20 25 30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"500 650 800 950 1100"
+				"damage"				"600 750 900 1050 1200"
 			}
 		}
 	}
@@ -1972,15 +2009,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"10 15 20 25 30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"500 650 800 950 1100"
+				"damage"				"600 750 900 1050 1200"
 			}
 		}
 	}
@@ -1990,15 +2022,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
+			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"10 15 20 25 30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage"				"500 650 800 950 1100"
+				"damage"				"600 750 900 1050 1200"
 			}
 		}
 	}

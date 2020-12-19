@@ -156,6 +156,12 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_health_regen"					"+$hp_regen"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
+
+		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：永恒</h1> <font color='#e03e2e'>死亡后掉落，而且无法被摧毁。</font> <br><br>当拥有者的队友拾取后，仅在返还给拥有者后才会有效。一旦被敌人拾取，圣剑将不再受此限制，信使无法拾取掉落的圣剑。\n\n<h1>被动：克敌机先</h1>普通攻击不会落空。"
+		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"如果EX咖喱棒掉落后被拥有者的敌人拾取，那么只有在敌人死亡后才会再次掉落。"
+		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"它强横无匹，并不满足于侍奉唯一的主人。"
+		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
 		///////////////////////////////////////////////////
 		//
 		//            Heroes
