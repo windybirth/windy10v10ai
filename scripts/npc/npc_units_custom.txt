@@ -207,8 +207,8 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"180"			// Damage range min.
-		"AttackDamageMax"			"210"			// Damage range max.
+		"AttackDamageMin"			"350"			// Damage range min.
+		"AttackDamageMax"			"360"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.55"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
@@ -235,7 +235,7 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"250"			// Damage range min.
+		"AttackDamageMin"			"350"			// Damage range min.
 		"AttackDamageMax"			"360"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.55"			// Speed of attack.
@@ -252,7 +252,7 @@
 	}
 	"dota_fountain"
 	{
-		"AttackRate"				"0.05"
+		"AttackRate"				"0.06"
 		"AttackAcquisitionRange"	"1800"		// Range within a target can be acquired.
 		"AttackRange"				"1800"		// Range within a target can be attacked. (was 690)
 	}

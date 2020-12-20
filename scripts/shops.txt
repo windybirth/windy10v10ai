@@ -49,6 +49,7 @@
 	"weapons_armor"
 	{
 		"item"		"item_quelling_blade"
+		"item"		"item_quelling_blade_2_datadriven"
 		"item"		"item_ring_of_protection"
 		"item"		"item_stout_shield"
 		"item"		"item_infused_raindrop"
@@ -134,7 +135,7 @@
 		"item"		"item_veil_of_discord"
 		"item"		"item_glimmer_cape"
 		"item"		"item_necronomicon"
-		"item"		"item_force_staff"
+		"item"		"item_force_staff_3"
 		"item"		"item_aether_lens"
 		"item"		"item_witch_blade"
 		"item"		"item_cyclone"

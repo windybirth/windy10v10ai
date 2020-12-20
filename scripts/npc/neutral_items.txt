@@ -60,13 +60,12 @@
 
 		"items"
 		{
-			"item_paladin_sword"			  "1"
 			"item_titan_sliver"				  "1"
-			"item_the_leveller"				  "1"
 			"item_elven_tunic"				  "1"
 			"item_cloak_of_flames"				  "1"
 			"item_ceremonial_robe"				  "1"
 			"item_psychic_headband"				  "1"
+			"item_stormcrafter"				  "1"
 		}
 	}
 	"4"
@@ -89,7 +88,6 @@
 			"item_ninja_gear"				  "1"
 			"item_minotaur_horn"			  "1"
 			"item_trickster_cloak"			  "1"
-			"item_stormcrafter"				  "1"
 			"item_penta_edged_sword"		  "1"
 		}
 	}
@@ -112,7 +110,6 @@
 			"item_fallen_sky"			  	  "1"
 			"item_seer_stone"				  "1"
 			"item_apex"						  "1"
-
 			"item_book_of_shadows"			  "1"
 		}
 	}

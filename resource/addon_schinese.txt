@@ -158,10 +158,40 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：永恒</h1> <font color='#e03e2e'>死亡后掉落，而且无法被摧毁。</font> <br><br>当拥有者的队友拾取后，仅在返还给拥有者后才会有效。一旦被敌人拾取，圣剑将不再受此限制，信使无法拾取掉落的圣剑。\n\n<h1>被动：克敌机先</h1>普通攻击不会落空。"
-		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"如果EX咖喱棒掉落后被拥有者的敌人拾取，那么只有在敌人死亡后才会再次掉落。"
-		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"它强横无匹，并不满足于侍奉唯一的主人。"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：永恒</h1> <font color='#e03e2e'>死亡后不会掉落，而且无法被摧毁。</font> <h1>被动：克敌机先</h1>普通攻击不会落空。"
+		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"咖喱棒效忠于被选中的王者，不会掉落。"
+		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"咖喱棒效忠于被选中的王者。"
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
+
+		"DOTA_Tooltip_Ability_item_quelling_blade_2_datadriven"			"毒瘤之刃"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Description"					"<h1>主动：砍伐</h1> 砍伐一根指定树木。<br><br>砍伐施法距离：%abilitycastrange%\n<h1>被动：压制</h1>对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%damage_bonus%点，远程英雄为%damage_bonus_ranged%点。"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Lore"							"堕落打野毒瘤的斧头，能让你更快的在野区Farm。"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"多个毒瘤之刃效果不会叠加。"
+
+		"DOTA_Tooltip_Ability_item_undying_heart"				"不朽之心"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>被动：恢复增强</h1>所有被动生命恢复效果提升%hp_regen_amp%%%。<br><br>如果近战英雄最近%cooldown_melee%秒（远程英雄为%cooldown_ranged_tooltip%秒）内受到敌方英雄或肉山的攻击，此增强效果将失效。"
+		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+最大生命恢复"
+
+		"DOTA_Tooltip_Ability_item_force_staff_2"			"风力法杖"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>主动：风力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Lore"						"让你可以操纵他人，不论出于善或恶。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note0"							"快速点击两次可以对自身施放原力。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note1"							"风力法杖不会打断目标的动作。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_health_regen"					"+$hp_regen"
+
+		"DOTA_Tooltip_Ability_item_force_staff_3"			"黄金法杖"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Description"						"<h1>主动：黄金之力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Lore"						"让你可以操纵他人，不论出于善或恶。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note0"							"快速点击两次可以对自身施放原力。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note1"							"黄金法杖不会打断目标的动作。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_health_regen"					"+$hp_regen"
 		///////////////////////////////////////////////////
 		//
 		//            Heroes

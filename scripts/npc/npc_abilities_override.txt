@@ -69,17 +69,55 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_spell_resist"	"40"
+				"bonus_spell_resist"	"30"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"	"40"
+				"tooltip_resist"	"30"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"barrier_block"			"600"
+			}
+		}
+	}
+	"item_eternal_shroud"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_spell_resist"	"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"8.5"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"barrier_block"			"600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"barrier_duration"		"12.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_lifesteal"		"20"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creep_lifesteal"		"8"
 			}
 		}
 	}
@@ -90,17 +128,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"		"60"
+				"magic_resistance"		"40"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"			"60"
+				"tooltip_resist"			"40"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance_aura"		"30"
+				"magic_resistance_aura"		"20"
 			}
 			"08"
 			{
@@ -253,6 +291,49 @@
 			}
 		}
 	}
+	"item_stormcrafter"
+	{
+		"AbilityCooldown"				"20.0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"range"			"900"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"			"350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"interval"			"2.5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"			"6"
+			}
+		}
+	}
+	"item_titan_sliver"
+	{
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resistance"			"20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"status_resistance"			"16"
+			}
+		}
+	}
 	// level 4
 	"item_penta_edged_sword"
 	{
@@ -319,6 +400,24 @@
 			}
 		}
 	}
+	"item_trickster_cloak"
+	{
+		"AbilityCooldown"				"20.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"evasion"			"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"magic_resistance"			"25"
+			}
+		}
+	}
 	// level 5
 	"item_seer_stone"
 	{
@@ -338,7 +437,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen"			"25"
+				"mana_regen"			"20"
 			}
 		}
 	}
@@ -491,6 +590,607 @@
 	}
 
 
+	//=================================================================================================================
+	// Custom item Override 物品
+	//=================================================================================================================
+
+	//=================================================================================================================
+	// Tome of Knowledge 知识之书
+	//=================================================================================================================
+	"item_tome_of_knowledge"
+	{
+		"ItemStockMax"					"5"
+		"ItemStockInitial"				"0"
+		"ItemStockTime"					"300.0"
+		"ItemInitialStockTime"			"375.0"
+	}
+	//=================================================================================================================
+	// Magic Stick 魔棒
+	//=================================================================================================================
+	"item_magic_stick"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"34"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/magic_wand.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+		"AbilitySharedCooldown"			"magicwand"
+		"AbilityCastRange"				"1800"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"15"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_radius"			"1800"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"restore_per_charge"	"25"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Magic Wand
+	//=================================================================================================================
+	"item_magic_wand"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"36"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"							"models/props_gameplay/magic_wand.vmdl"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+		"AbilitySharedCooldown"			"magicwand"
+		"AbilityCastRange"				"1800"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"30"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_radius"			"1800"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"restore_per_charge"	"25"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Holy Locket 圣洁吊坠
+	//=================================================================================================================
+	"item_holy_locket"
+	{
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"10.0"
+		"AbilitySharedCooldown"			"magicwand"
+
+
+		// Sound
+		//-------------------------------------------------------------------------------------------------------------
+		"UIPickupSound"					"Item.PickUpRingShop"
+		"UIDropSound"					"Item.DropRingShop"
+		"WorldDropSound"				"Item.DropRingWorld"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"350"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"475"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"aura_health_regen"	"6.5"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"	"1800"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_increase"		"30"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"max_charges"			"30"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_radius"			"1800"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"8"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"restore_per_charge"	"30"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_gain_timer"		"10"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Bracer 护腕
+	//=================================================================================================================
+	"item_recipe_bracer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"72"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"250"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_bracer"
+		"ItemRequirements"
+		{
+			"01"						"item_circlet;item_gauntlets"
+		}
+	}
+
+	//=================================================================================================================
+	// Bracer
+	//=================================================================================================================
+	"item_bracer"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"73"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"550"
+		"ItemShopTags"					"damage;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"bracer"
+		"ShouldBeInitiallySuggested"	"1"
+		"ShouldBeSuggested"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"1.75"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Recipe: Wraith Band 系带
+	//=================================================================================================================
+	"item_recipe_wraith_band"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"74"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"250"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_wraith_band"
+		"ItemRequirements"
+		{
+			"01"						"item_circlet;item_slippers"
+		}
+	}
+
+	//=================================================================================================================
+	// Wraith Band
+	//=================================================================================================================
+	"item_wraith_band"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"75"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"550"
+		"ItemShopTags"					"damage;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"wraith band"
+		"ShouldBeInitiallySuggested"	"1"
+		"ShouldBeSuggested"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"			"9"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_armor"			"2.5"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Null Talisman 挂件
+	//=================================================================================================================
+	"item_recipe_null_talisman"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"76"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"250"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_null_talisman"
+		"ItemRequirements"
+		{
+			"01"						"item_circlet;item_mantle"
+		}
+	}
+
+	//=================================================================================================================
+	// Null Talisman
+	//=================================================================================================================
+	"item_null_talisman"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"77"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"550"
+		"ItemShopTags"					"damage;int;agi;str"
+		"ItemQuality"					"common"
+		"ItemAliases"					"null talisman"
+		"ShouldBeInitiallySuggested"	"1"
+		"ShouldBeSuggested"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"6"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"3"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"3"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_spell_amp"		"5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"1.8"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Kaya 慧光
+	//=================================================================================================================
+	"item_kaya"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"			"20"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"12"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"		"36"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"			"36"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Bloodstone 血精石
+	//=================================================================================================================
+	"item_bloodstone"
+	{
+		"AbilityCooldown"				"45.0"
+		"ItemInitialCharges"			"16"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"425"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"425"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"			"20"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"		"150"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"12"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"			"36"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"hero_lifesteal"		"15"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"creep_lifesteal"		"5"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"regen_per_charge"		"0.25"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"amp_per_charge"		"0.4"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"death_charges"				"6"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"kill_charges"			"1"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"charge_range"			"1800"
+			}
+			"14"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"initial_charges_tooltip" "16"
+			}
+			"15"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"restore_duration" "2.0"
+			}
+			"16"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_cost_percentage" "30"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Dagon
+	//=================================================================================================================
+	"item_recipe_dagon"
+	{
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1500"
+		"ItemShopTags"					""
+	}
+	"item_dagon"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"600 750 900 1050 1200"
+			}
+		}
+	}
+	"item_dagon_2"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"600 750 900 1050 1200"
+			}
+		}
+	}
+	"item_dagon_3"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"600 750 900 1050 1200"
+			}
+		}
+	}
+	"item_dagon_4"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"600 750 900 1050 1200"
+			}
+		}
+	}
+	"item_dagon_5"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"600 750 900 1050 1200"
+			}
+		}
+	}
 
 	//=================================================================================================================
 	// HERO ABILITIES
