@@ -76,15 +76,14 @@
 			{
 				"0" "5"
 				"1" "4"
-				"2" "3"
-				"3" "2"
+				"2" "4"
+				"3" "3"
 			}
 		}
 
 		"items"
 		{
 			"item_timeless_relic"			  "1"
-			"item_spell_prism"				  "1"
 			"item_ninja_gear"				  "1"
 			"item_minotaur_horn"			  "1"
 			"item_trickster_cloak"			  "1"
@@ -100,7 +99,7 @@
 				"0" "5"
 				"1" "4"
 				"2" "3"
-				"3" "2"
+				"3" "3"
 			}
 		}
 
@@ -108,9 +107,9 @@
 		{
 			"item_mirror_shield"			  "1"
 			"item_fallen_sky"			  	  "1"
-			"item_seer_stone"				  "1"
-			"item_apex"						  "1"
+			"item_spell_prism"				  "1"
 			"item_book_of_shadows"			  "1"
+			"item_ballista"					  "1"
 		}
 	}
 	"6"
@@ -128,11 +127,11 @@
 
 		"items"
 		{
+			"item_seer_stone"				  "1"
 			"item_desolator_2"				  "1"
 			"item_pirate_hat_custom"		  "1"
-			"item_ballista"					  "1"
-			"item_ex_machina"				  "1"
 			"item_giants_ring"				  "1"
+			"item_apex"						  "1"
 		}
 	}
 }

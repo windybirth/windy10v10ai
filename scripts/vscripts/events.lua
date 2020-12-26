@@ -198,8 +198,8 @@ function AIGameMode:OnEntityKilled(keys)
 
 	local fRespawnTime = 0
 	local iLevel = hHero:GetLevel()
-	local tDOTARespawnTime = {5, 7, 9, 13, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 28, 30, 32, 34, 36, 37, 40, 42, 46, 48, 50}
-	if iLevel <= 25 then
+	local tDOTARespawnTime = {3, 5, 7, 9, 13, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 28, 30, 32, 34, 36, 37, 40, 42, 46, 48, 50, 52, 54, 56, 58}
+	if iLevel <= 30 then
 		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100)
 	else
 		fRespawnTime = 60*self.iRespawnTimePercentage/100

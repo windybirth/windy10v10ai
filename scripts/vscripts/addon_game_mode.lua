@@ -126,9 +126,9 @@ function AIGameMode:PreGameOptions()
 			47895,
 			55395,
 		} -- value in 7.23
-		local iRequireLevel = tLevelRequire[25]
-		for i = 26, self.iMaxLevel do
-			iRequireLevel = iRequireLevel+i*300
+		local iRequireLevel = tLevelRequire[30]
+		for i = 31, self.iMaxLevel do
+			iRequireLevel = iRequireLevel+i*200
 			table.insert(tLevelRequire, iRequireLevel)
 		end
 		GameRules:GetGameModeEntity():SetUseCustomHeroLevels( true )
