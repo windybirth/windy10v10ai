@@ -151,7 +151,7 @@
 		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura_Description"	"护甲被降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
 
 		"DOTA_Tooltip_Ability_item_sphere_2"				"真·林肯法球"
-		"DOTA_Tooltip_ability_item_sphere_2_Description"							"<h1>被动：法术抵抗</h1>每4秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续3秒。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_ability_item_sphere_2_Description"							"<h1>被动：法术抵抗</h1>每4秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续4秒。<br><br>施法距离：%abilitycastrange%"
 		"DOTA_Tooltip_ability_item_sphere_2_Lore"									"这个有魔力的球体曾经保护了一位历史上最有名的英雄。"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_health_regen"					"+$hp_regen"
