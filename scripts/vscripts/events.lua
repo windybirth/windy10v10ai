@@ -210,7 +210,18 @@ function AIGameMode:OnEntityKilled(keys)
 	end
 
 	if hHero:HasItemInInventory('item_bloodstone') then
-		fRespawnTime = math.ceil(fRespawnTime*0.2)
+		for i = 1, 6 do
+			local item = hHero:GetItemInSlot(i)
+			local item_name = item:GetName()
+			if item_name == 'item_bloodstone' then
+				fRespawnTime = fRespawnTime - item:GetCurrentCharges()
+				if fRespawnTime < 1 then
+					fRespawnTime = 1
+				end
+				break
+			end
+		end
+
 	end
 
 	hHero:SetTimeUntilRespawn(fRespawnTime)

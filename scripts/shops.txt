@@ -167,7 +167,7 @@
 		"item"		"item_manta"
 		"item"		"item_sphere_2"
 		"item"		"item_shivas_guard"
-		"item"		"item_heart"
+		"item"		"item_undying_heart"
 		"item"		"item_assault"
 		"item"		"item_bloodstone"
 	}

@@ -1360,7 +1360,7 @@
 		"AbilityTextureName"			"item_sphere_2"
 
 		"AbilityCastRange"				"900"
-		"AbilityCooldown"				"3.0"
+		"AbilityCooldown"				"4.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1489,7 +1489,7 @@
 		"ItemResult"					"item_undying_heart"
 		"ItemRequirements"
 		{
-			"01"						"item_heart;item_vitality_booster;item_recipe_heart"
+			"01"						"item_heart;item_reaver;item_recipe_heart"
 		}
 	}
 
@@ -1517,12 +1517,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"400"
+				"bonus_health"			"500"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_pct"		"2.0"
+				"health_regen_pct"		"2.2"
 			}
 		}
 	}
