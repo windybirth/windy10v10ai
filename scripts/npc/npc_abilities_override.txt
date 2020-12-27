@@ -449,10 +449,15 @@
 				"var_type"				"FIELD_INTEGER"
 				"reflect_chance"		"100"
 			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"all_stats"			"20"
+			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"block_cooldown"		"4.0"
+				"block_cooldown"		"5.0"
 			}
 		}
 	}
@@ -2132,6 +2137,34 @@
 				"var_type"						"FIELD_INTEGER"
 				"scepter_magic_immune_per_hero"	"1"
 				"RequiresScepter"				"1"
+			}
+		}
+	}
+	// 蓝猫
+	"storm_spirit_ball_lightning"
+	{
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"30"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"8 12 16"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_percentage"		"9"
+			}
+			"06"
+			{
+				"var_type"								"FIELD_FLOAT"
+				"ball_lightning_travel_cost_percent"	"0.7"
 			}
 		}
 	}

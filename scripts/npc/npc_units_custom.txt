@@ -70,7 +70,7 @@
 	{
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.95" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -79,7 +79,7 @@
 	{
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.95" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -88,7 +88,7 @@
 	{
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.95" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -97,7 +97,7 @@
 	{
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.95" // 0.95
+		"AttackRate"				"0.85" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -106,7 +106,7 @@
 	{
 		"AttackDamageMin"		"162" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -115,7 +115,7 @@
 	{
 		"AttackDamageMin"		"162" // 142
 		"AttackDamageMax"		"172" // 162
-		"AttackRate"				"0.9" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -127,7 +127,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -136,7 +136,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -145,7 +145,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -154,7 +154,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.85" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -163,7 +163,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.8" // 0.95
+		"AttackRate"				"0.75" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -172,7 +172,7 @@
 	{
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.8" // 0.95
+		"AttackRate"				"0.75" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
 		"AttackRange"				"1000"		// Range within a target can be attacked.
@@ -184,7 +184,7 @@
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.7" // 0.95
 		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
 		"AttackRange"				"800"		// Range within a target can be attacked.
 
@@ -197,7 +197,7 @@
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.7" // 0.95
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
@@ -222,7 +222,7 @@
 		"AttackDamageMin"			"250"			// Damage range min.
 		"AttackDamageMax"			"260"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.55"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"600"			// Range within a target can be acquired.
 		"AttackRange"				"600"			// Range within a target can be attacked.
@@ -250,7 +250,7 @@
 		"AttackDamageMin"			"350"			// Damage range min.
 		"AttackDamageMax"			"360"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.45"			// Speed of attack.
+		"AttackRate"				"0.4"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"900"			// Range within a target can be acquired.
 		"AttackRange"				"900"			// Range within a target can be attacked.

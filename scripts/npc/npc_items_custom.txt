@@ -691,7 +691,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"active_reflection_pct"			"100"
+				"active_reflection_pct"			"80"
 			}
 		}
 	}
