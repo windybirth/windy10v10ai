@@ -14,54 +14,54 @@
 		"AttackDamageMin"		"110" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"1" // 1
-		"ArmorPhysical"			"13" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"17" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	"npc_dota_badguys_tower1_top"
 	{
 		"AttackDamageMin"		"110" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"1" // 1
-		"ArmorPhysical"			"13" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"17" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	"npc_dota_goodguys_tower1_bot"
 	{
 		"AttackDamageMin"		"110" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"1" // 1
-		"ArmorPhysical"			"13" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"17" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	"npc_dota_badguys_tower1_bot"
 	{
 		"AttackDamageMin"		"110" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"1" // 1
-		"ArmorPhysical"			"13" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"17" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	"npc_dota_goodguys_tower1_mid"
 	{
 		"AttackDamageMin"		"120" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"0.95" // 1
-		"ArmorPhysical"			"14" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"20" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	"npc_dota_badguys_tower1_mid"
 	{
 		"AttackDamageMin"		"120" // 100
 		"AttackDamageMax"		"130" // 120
 		"AttackRate"				"0.95" // 1
-		"ArmorPhysical"			"14" // 17
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"ArmorPhysical"			"20" // 17
+		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
+		"AttackRange"				"700"		// Range within a target can be attacked.
 	}
 	//=========================================================
 	// TIER 2
@@ -71,6 +71,7 @@
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.95" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}
@@ -79,6 +80,7 @@
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.95" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}
@@ -87,6 +89,7 @@
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.95" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}
@@ -95,6 +98,7 @@
 		"AttackDamageMin"		"152" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.95" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}
@@ -103,6 +107,7 @@
 		"AttackDamageMin"		"162" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.9" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}
@@ -111,6 +116,7 @@
 		"AttackDamageMin"		"162" // 142
 		"AttackDamageMax"		"172" // 162
 		"AttackRate"				"0.9" // 0.95
+		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 	}

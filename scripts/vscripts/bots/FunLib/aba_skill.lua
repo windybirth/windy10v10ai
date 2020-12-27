@@ -86,6 +86,7 @@ end
 
 
 function X.GetAbilityList( bot )
+--- TODO fix abilitys
   print("GetAbilityList "..bot )
 	local sAbilityList = {}
 	for slot = 0, 5
