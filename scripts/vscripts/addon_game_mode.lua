@@ -37,6 +37,8 @@ function AIGameMode:InitGameOptions()
 	GameRules:SetStrategyTime(30)
 	GameRules:SetShowcaseTime(0)
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
+	
+	GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops.kv")
 end
 
 

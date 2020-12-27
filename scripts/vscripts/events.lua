@@ -209,22 +209,52 @@ function AIGameMode:OnEntityKilled(keys)
 		fRespawnTime = fRespawnTime+hHero:FindModifierByName('modifier_necrolyte_reapers_scythe'):GetAbility():GetLevel()*10
 	end
 
+	-- 血精石复活时间
 	if hHero:HasItemInInventory('item_bloodstone') then
-		for i = 1, 6 do
+		for i = 0, 5 do
 			local item = hHero:GetItemInSlot(i)
-			local item_name = item:GetName()
-			if item_name == 'item_bloodstone' then
-				fRespawnTime = fRespawnTime - item:GetCurrentCharges()
-				if fRespawnTime < 1 then
-					fRespawnTime = 1
+			if item then
+				local item_name = item:GetName()
+				if item_name == 'item_bloodstone' then
+					fRespawnTime = fRespawnTime - item:GetCurrentCharges()
+					if fRespawnTime < 1 then
+						fRespawnTime = 1
+					end
+					break
 				end
-				break
 			end
 		end
-
 	end
-
 	hHero:SetTimeUntilRespawn(fRespawnTime)
+
+	-- drop items
+  RollDrops(hHero)
+end
+
+function RollDrops(hHero)
+    local DropInfo = GameRules.DropTable
+    if DropInfo then
+        for item_name,chance in pairs(DropInfo) do
+						for i = 0, 8 do
+								local hItem = hHero:GetItemInSlot(i)
+								if hItem then
+										local hItem_name = hItem:GetName()
+										if item_name == hItem_name then
+												if RollPercentage(chance) then
+														-- Remove the item
+														hHero:RemoveItem(hItem)
+														-- Create the item
+														local item = CreateItem(item_name, nil, nil)
+														local pos = hHero:GetAbsOrigin()
+														local drop = CreateItemOnPositionSync( pos, item )
+														local pos_launch = pos+RandomVector(RandomFloat(150,200))
+														item:LaunchLoot(false, 200, 0.75, pos_launch)
+												end
+										end
+								end
+						end
+        end
+    end
 end
 
 
