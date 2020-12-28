@@ -34,10 +34,10 @@ function AIGameMode:InitGameOptions()
 	GameRules:SetPreGameTime( PRE_GAME_TIME )
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, RADIANT_PLAYER_COUNT)
 	GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, DIRE_PLAYER_COUNT)
-	GameRules:SetStrategyTime(30)
+	GameRules:SetStrategyTime(10)
 	GameRules:SetShowcaseTime(0)
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
-	
+
 	GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops.kv")
 end
 
