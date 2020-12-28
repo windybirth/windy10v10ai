@@ -1686,4 +1686,205 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// 洞察盔甲
+	//=================================================================================================================
+	"item_recipe_insight_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"                            "9056"
+		"Model"                         "models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"            "item_recipe"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"                      "1600"
+		"ItemShopTags"                  ""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_insight_armor"
+		"ItemRequirements"
+		{
+			"01"                        "item_crimson_guard;item_pipe;item_platemail"
+		}
+	}
+
+	"item_insight_armor"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"                     "item_datadriven"
+		"ID"                            "9057"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Model"                         "models/props_gameplay/red_box.vmdl"
+		"Effect"                        "particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"            "item_insight_armor"
+		"AbilityCastRange"              "1200"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"                      "8500"
+		"ItemShopTags"                  "armor;resist"
+		"ItemQuality"                   "epic"
+		"ItemAliases"                   "armor of insight"
+		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"AbilityCooldown"               "60.0"
+		"AbilityManaCost"               "200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_health"          "450"
+			}
+			"02"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_health_regen"    "20"
+			}
+			"03"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"bonus_all_stats"       "10"
+			}
+			"04"
+			{
+				"var_type"              "FIELD_INTEGER"
+				"damage_reduction"      "-10"
+			}
+			"05"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"radius"                        "1200"
+			}
+			"06"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"aura_regen_base"               "10"
+			}
+			"07"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"aura_damage_reduction_base"    "-10"
+			}
+			"08"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"aura_regen_buff"               "20"
+			}
+			"11"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"aura_damage_reduction_buff"    "-20"
+			}
+			"13"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"duration"                      "12"
+			}
+			"14"
+			{
+				"var_type"                      "FIELD_INTEGER"
+				"bonus_armor"                      "20"
+			}
+		}
+
+		"Precache"
+		{
+			"particle"              "particles/units/heroes/hero_medusa/medusa_mana_shield_oldbase.vpcf"
+		}
+
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"                    "CASTER"
+				"ModifierName"              "modifier_insight_armor_aura_buff_caster"
+				"Duration"                  "%duration"
+			}
+			"FireSound"
+			{
+				"EffectName"                "DOTA_Item.Armlet.Activate"
+				"Target"                    "CASTER"
+			}
+		}
+
+		"Modifiers"
+		{
+			"modifier_item_insight_armor"
+			{
+				"Passive"           "1"
+				"IsHidden"          "1"
+				"Attributes"        "MODIFIER_ATTRIBUTE_MULTIPLE"
+
+				"Aura"                  "modifier_insight_armor_aura"
+				"Aura_Radius"           "%radius"
+				"Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"            "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags"            "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster"    "1"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"             "%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"            "%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"           "%bonus_all_stats"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"                    "%bonus_health"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"           "%bonus_health_regen"
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"      "%damage_reduction"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"						"%bonus_armor"
+				}
+			}
+
+			"modifier_insight_armor_aura"
+			{
+				"IsBuff"        "1"
+				"IsPurgable"    "0"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"        "%aura_regen_base"
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"   "%aura_damage_reduction_base"
+				}
+			}
+
+			"modifier_insight_armor_aura_buff_caster"
+			{
+				"Passive"           "0"
+				"IsHidden"          "1"
+				"IsDebuff"          "0"
+				"IsPurgable"        "0"
+
+				"Aura"                  "modifier_insight_armor_aura_buff"
+				"Aura_Radius"           "%radius"
+				"Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"            "DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags"            "DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster"    "1"
+			}
+
+			"modifier_insight_armor_aura_buff"
+			{
+				"IsBuff"        "1"
+				"IsPurgable"    "0"
+
+				"EffectName"                "particles/units/heroes/hero_medusa/medusa_mana_shield_oldbase.vpcf"
+				"EffectAttachType"          "PATTACH_ABSORIGIN"
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"        "%aura_regen_buff"
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"   "%aura_damage_reduction_buff"
+				}
+			}
+		}
+	}
 }

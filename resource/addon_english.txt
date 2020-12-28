@@ -5,7 +5,7 @@
 	{
 		"addon_game_name"		"Dota 10v10 AI Wars"
 		"DOTA_GameMode_15"		"Dota 10v10 AI Wars"
-		
+
 		// /////////////////////////////////////////////////////////////////////////////
 		//
 		// 					              Options
@@ -90,6 +90,24 @@
 		"DOTA_Tooltip_Ability_item_pirate_hat_custom_Description"					"<h1>Passive: Agile Thief</h1> Reduces your Base Attack Time by %bat_reduction%."
 		"DOTA_Tooltip_Ability_item_pirate_hat_custom_bonus_attack_speed"			"+$attack"
 		"DOTA_Tooltip_Ability_item_pirate_hat_custom_Note0"							"Does not stack with other BAT reducing modifiers."
+
+
+		"DOTA_Tooltip_ability_item_insight_armor"                               "Armor of Insight"
+		"DOTA_Tooltip_ability_item_insight_armor_Description"					"<h1>Active: A Stroke of Insight</h1>Significantly boosts the strength of the Aura of Insight for %duration% seconds.<br><br>Additional HP Regen: %aura_regen_buff%<br>Additional Damage Reduction: %aura_damage_reduction_buff%%%<br><br>Radius: %radius%\n<h1>Passive: Aura of Insight</h1>Gives allied units %aura_regen_base% health regeneration and %aura_damage_reduction_base%%% incoming damage reduction.<br><br>Radius: %radius%"
+		"DOTA_Tooltip_ability_item_insight_armor_Lore"							"An exquisitely crafted suit of armor that bestows secret wisdom upon the wearer."
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_all_stats"				"+$all"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_health"					"+$health"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_health_regen"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_insight_armor_damage_reduction"				"%+Damage Reduction"
+		"DOTA_Tooltip_Ability_item_recipe_insight_armor"						"Armor of Insight Recipe"
+
+		"DOTA_Tooltip_modifier_insight_armor_aura"								"Aura of Insight"
+		"DOTA_Tooltip_modifier_insight_armor_aura_Description"					"Gaining <font color='#49bf57'>%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%</font> health regeneration and <font color='#49bf57'>%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%</font> incoming damage reduction."
+
+		"DOTA_Tooltip_modifier_insight_armor_aura_buff"							"Greater Aura of Insight"
+		"DOTA_Tooltip_modifier_insight_armor_aura_buff_Description"				"Gaining <font color='#49bf57'>%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%</font> additional health regeneration and <font color='#49bf57'>%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%</font> additional incoming damage reduction."
+
+
 		///////////////////////////////////////////////////
 		//
 		//            Heroes
