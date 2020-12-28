@@ -136,17 +136,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"		"40"
+				"magic_resistance"		"35"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"			"40"
+				"tooltip_resist"			"35"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance_aura"		"20"
+				"magic_resistance_aura"		"15"
 			}
 			"08"
 			{
@@ -1274,7 +1274,18 @@
 	}
 
 	//=================================================================================================================
-	// HERO ABILITIES
+	// Recipe: Octarine Core 玲珑心
+	//=================================================================================================================
+	"item_recipe_octarine_core"
+	{
+		"ItemRequirements"
+		{
+			"01"						"item_aether_lens;item_soul_booster"
+		}
+	}
+
+	//=================================================================================================================
+	// HERO ABILITIES 英雄技能
 	//=================================================================================================================
 	// ---------------------------------
 	// -------- Strength Heroes --------
@@ -2209,10 +2220,6 @@
 	}
 	"storm_spirit_ball_lightning"
 	{
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90"
-
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityDamage"					"8 12 16"
@@ -2224,12 +2231,22 @@
 			"01"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"ball_lightning_initial_mana_percentage"		"9"
+				"ball_lightning_initial_mana_percentage"		"8"
+			}
+			"02"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_base"				"60 120 180"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"ball_lightning_travel_cost_base"	"10 15 20"
 			}
 			"06"
 			{
 				"var_type"								"FIELD_FLOAT"
-				"ball_lightning_travel_cost_percent"	"0.7"
+				"ball_lightning_travel_cost_percent"	"0.8"
 			}
 		}
 	}
