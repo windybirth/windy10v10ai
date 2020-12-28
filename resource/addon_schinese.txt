@@ -115,7 +115,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有5%概率随机掉落。</font>"
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
