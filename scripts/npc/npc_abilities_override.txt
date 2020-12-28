@@ -1280,7 +1280,40 @@
 	{
 		"ItemRequirements"
 		{
-			"01"						"item_aether_lens;item_soul_booster"
+			"01"						"item_aether_lens_3;item_veil_of_discord"
+		}
+	}
+	"item_octarine_core"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_cooldown"		"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_bonus"			"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"450"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"1000"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"12.0"
+			}
 		}
 	}
 
