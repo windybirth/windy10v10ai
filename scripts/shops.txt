@@ -156,7 +156,7 @@
 	{
 		"item"		"item_insight_armor"
 		"item"		"item_blade_mail_2"
-		"item"		"item_aeon_disk"
+		"item"		"item_aeon_pendant"
 		"item"		"item_eternal_shroud"
 		"item"		"item_vanguard"
 		"item"		"item_crimson_guard"
