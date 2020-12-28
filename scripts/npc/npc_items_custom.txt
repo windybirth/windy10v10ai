@@ -718,7 +718,7 @@
 			"ItemResult"					"item_radiance_2"
 			"ItemRequirements"
 			{
-					"01"						"item_radiance;item_talisman_of_evasion;item_demon_edge;item_recipe_radiance"
+					"01"						"item_radiance;item_demon_edge;item_recipe_radiance"
 			}
 	}
 
@@ -750,7 +750,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"120"
+				"bonus_damage"			"100"
 			}
 			"02"
 			{
@@ -760,12 +760,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage_illusions"	"100"
+				"aura_damage_illusions"	"80"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"blind_pct"				"25"
+				"blind_pct"				"20"
 			}
 			"05"
 			{
@@ -789,7 +789,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"1900"
+			"ItemCost"						"2600"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -1888,7 +1888,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Recipe: Octarine Core 大玲珑心
+	// Recipe: Octarine Core 奥术之心
 	//=================================================================================================================
 	"item_recipe_arcane_octarine_core"
 	{
@@ -1952,7 +1952,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"600"
+				"bonus_health"			"900"
 			}
 			"04"
 			{
