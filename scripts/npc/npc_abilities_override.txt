@@ -48,17 +48,25 @@
 	}
 	"item_glimmer_cape"
 	{
+		"AbilityCastRange"				"700"
+		"AbilityCooldown"				"16.0"
+		"AbilityManaCost"				"50"
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"20"
+			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"25"
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"				"0.4"
 			}
-			"04"
+			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"active_magical_armor"	"65"
+				"active_magical_armor"	"60"
 			}
 		}
 	}
