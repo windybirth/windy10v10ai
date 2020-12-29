@@ -185,8 +185,8 @@
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
 		"AttackRate"				"0.7" // 0.95
-		"AttackAcquisitionRange"	"800"		// Range within a target can be acquired.
-		"AttackRange"				"800"		// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
+		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		// Status
 		//----------------------------------------------------------------
@@ -219,19 +219,19 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"250"			// Damage range min.
-		"AttackDamageMax"			"260"			// Damage range max.
+		"AttackDamageMin"			"350"			// Damage range min.
+		"AttackDamageMax"			"360"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"600"			// Range within a target can be acquired.
-		"AttackRange"				"600"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"800"			// Range within a target can be acquired.
+		"AttackRange"				"800"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"12000"		// Base health.
+		"StatusHealth"				"15000"		// Base health.
 		"StatusHealthRegen"			"30"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -247,26 +247,26 @@
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"			"350"			// Damage range min.
-		"AttackDamageMax"			"360"			// Damage range max.
+		"AttackDamageMin"			"380"			// Damage range min.
+		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.4"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"900"			// Range within a target can be acquired.
-		"AttackRange"				"900"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"800"			// Range within a target can be acquired.
+		"AttackRange"				"800"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"12000"		// Base health.
+		"StatusHealth"				"15000"		// Base health.
 		"StatusHealthRegen"			"30"			// Health regeneration rate.
 	}
 	"dota_fountain"
 	{
 		"AttackRate"				"0.06"
-		"AttackAcquisitionRange"	"1600"		// Range within a target can be acquired.
-		"AttackRange"				"1600"		// Range within a target can be attacked. (was 690)
+		"AttackAcquisitionRange"	"1800"		// Range within a target can be acquired.
+		"AttackRange"				"1800"		// Range within a target can be attacked. (was 690)
 	}
 
 	//=================================================================================
