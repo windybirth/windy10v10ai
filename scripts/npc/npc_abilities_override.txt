@@ -1691,6 +1691,10 @@
 	{
 		"AbilityCooldown"				"90.0"
 	}
+	"luna_eclipse"
+	{
+		"AbilityCooldown"				"90.0"
+	}
 	"venomancer_poison_nova"
 	{
 		"AbilityCooldown"				"100 90 80"
