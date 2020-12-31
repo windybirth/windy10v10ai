@@ -92,6 +92,109 @@
 		"DOTA_Tooltip_Ability_item_pirate_hat_custom_Note0"							"Does not stack with other BAT reducing modifiers."
 
 
+
+		"DOTA_Tooltip_Ability_item_blade_mail_2"	"刃甲2"
+		"DOTA_Tooltip_Ability_item_recipe_blade_mail_2"				"图纸（刃甲2）"
+		"DOTA_Tooltip_ability_item_blade_mail_2_Description"						"<h1>主动：伤害反弹</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"
+		"DOTA_Tooltip_ability_item_blade_mail_2_Lore"								"覆盖着尖锐剃刀的盔甲，战斗中可以用来做出不顾自身安危的烈士行为。"
+		"DOTA_Tooltip_ability_item_blade_mail_2_Note0"							"反弹的均为减免前的伤害。"
+		"DOTA_Tooltip_ability_item_blade_mail_2_Note1"							"伤害反弹不会反弹来自其他刃甲的伤害。"
+		"DOTA_Tooltip_ability_item_blade_mail_2_Note2"							"反弹伤害的类型与受到时相同。"
+		"DOTA_Tooltip_ability_item_blade_mail_2_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_item_blade_mail_2_bonus_armor"						"+$armor"
+		//"DOTA_Tooltip_ability_item_blade_mail_2_bonus_intellect"					"+$int"
+		//"DOTA_Tooltip_ability_item_blade_mail_2_duration"						"DAMAGE RETURN DURATION:"
+
+		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect"					"刃甲反射"
+		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect_Description"		"正在将伤害反弹给攻击单位"
+
+		"DOTA_Tooltip_Ability_item_radiance_2"				"辉耀2"
+		"DOTA_Tooltip_ability_item_radiance_2_Description"						"<h1>开关：辉耀灼烧</h1>开启后，辉耀灼烧每秒对敌军造成%aura_damage%点魔法伤害，并且物理攻击有%blind_pct%%%几率不会命中。幻象每秒造成%aura_damage_illusions%点魔法伤害。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"一把神圣的武器，剑身的耀眼光芒能将敌人化为灰烬。"
+		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_modifier_item_radiance_2_debuff"				"灼烧伤害"
+		"DOTA_Tooltip_modifier_item_radiance_2_debuff_Description"	"每秒受到180点伤害，而且攻击有%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%几率不会命中。"
+
+		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
+		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有5%概率随机掉落。</font>"
+		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_wasp_bonus_attack_speed"						"+$attack"
+		"DOTA_Tooltip_ability_item_wasp_crit_chance"						"%致命一击概率:"
+		"DOTA_Tooltip_ability_item_wasp_crit_multiplier"					"%致命一击伤害:"
+
+		"DOTA_Tooltip_Ability_item_aether_lens_2"				"以太透镜2"
+		"DOTA_Tooltip_ability_item_aether_lens_2_Description"                     "<h1>被动：以太焦点2</h1> 指向性技能和物品的施法距离增加%cast_range_bonus%。"
+		"DOTA_Tooltip_ability_item_aether_lens_2_Note0"                           "被动效果不会叠加。"
+		"DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana"                      "+$mana"
+		"DOTA_Tooltip_ability_item_aether_lens_2_bonus_mana_regen"                "+$mana_regen"
+		"DOTA_Tooltip_Ability_item_aether_lens_3"				"以太透镜3"
+		"DOTA_Tooltip_ability_item_aether_lens_3_Description"                     "<h1>被动：以太焦点3</h1> 指向性技能和物品的施法距离增加%cast_range_bonus%。"
+		"DOTA_Tooltip_ability_item_aether_lens_3_Note0"                           "被动效果不会叠加。"
+		"DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana"                      "+$mana"
+		"DOTA_Tooltip_ability_item_aether_lens_3_bonus_mana_regen"                "+$mana_regen"
+
+		"DOTA_Tooltip_ability_item_vladmir_2"                               "强袭祭品"
+		"DOTA_Tooltip_ability_item_vladmir_2_Description"							"<h1>被动：强袭祭品光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲，削弱附近敌军%aura_negative_armor%点护甲。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_vladmir_2_Lore"								"在幽冥地带的深渊锻造，这件地狱盔甲提高整支军队的护甲和攻击速度。"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_all_stats"					"+$all"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_vladmir_2_bonus_armor"							"+$armor"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得20%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+
+		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura"				"强袭祭品"
+		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura_Description"	"护甲被降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
+
+		"DOTA_Tooltip_Ability_item_sphere_2"				"真·林肯法球"
+		"DOTA_Tooltip_ability_item_sphere_2_Description"							"<h1>被动：法术抵抗</h1>每4秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续4秒。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_ability_item_sphere_2_Lore"									"这个有魔力的球体曾经保护了一位历史上最有名的英雄。"
+		"DOTA_Tooltip_ability_item_sphere_2_bonus_all_stats"						"+$all"
+		"DOTA_Tooltip_ability_item_sphere_2_bonus_health_regen"					"+$hp_regen"
+		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
+
+		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有50%概率随机掉落。</font> <h1>被动：克敌机先</h1>普通攻击不会落空。"
+		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"咖喱棒效忠于被选中的王者，随机掉落。"
+		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"咖喱棒效忠于被选中的王者。"
+		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
+
+		"DOTA_Tooltip_Ability_item_quelling_blade_2_datadriven"			"毒瘤之刃"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Description"					"<h1>主动：砍伐</h1> 砍伐一根指定树木。<br><br>砍伐施法距离：%abilitycastrange%\n<h1>被动：压制</h1>对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%damage_bonus%点，远程英雄为%damage_bonus_ranged%点。"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Lore"							"堕落打野毒瘤的斧头，能让你更快的在野区Farm。"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"多个毒瘤之刃效果不会叠加。"
+
+		"DOTA_Tooltip_Ability_item_undying_heart"				"不朽之心"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>被动：恢复增强</h1>所有被动生命恢复效果提升%hp_regen_amp%%%。<br><br>如果近战英雄最近%cooldown_melee%秒（远程英雄为%cooldown_ranged_tooltip%秒）内受到敌方英雄或肉山的攻击，此增强效果将失效。"
+		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+最大生命恢复"
+
+		"DOTA_Tooltip_Ability_item_force_staff_2"			"风力法杖"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>主动：风力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Lore"						"让你可以操纵他人，不论出于善或恶。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note0"							"快速点击两次可以对自身施放原力。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note1"							"风力法杖不会打断目标的动作。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
+		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_health_regen"					"+$hp_regen"
+
+		"DOTA_Tooltip_Ability_item_force_staff_3"			"黄金法杖"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Description"						"<h1>主动：黄金之力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Lore"						"让你可以操纵他人，不论出于善或恶。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note0"							"快速点击两次可以对自身施放原力。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note1"							"黄金法杖不会打断目标的动作。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
+		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_health_regen"					"+$hp_regen"
+
 		"DOTA_Tooltip_ability_item_insight_armor"                               "Armor of Insight"
 		"DOTA_Tooltip_ability_item_insight_armor_Description"					"<h1>Active: A Stroke of Insight</h1>Significantly boosts the strength of the Aura of Insight for %duration% seconds.<br><br>Additional HP Regen: %aura_regen_buff%<br>Additional Damage Reduction: %aura_damage_reduction_buff%%%<br><br>Radius: %radius%\n<h1>Passive: Aura of Insight</h1>Gives allied units %aura_regen_base% health regeneration and %aura_damage_reduction_base%%% incoming damage reduction.<br><br>Radius: %radius%"
 		"DOTA_Tooltip_ability_item_insight_armor_Lore"							"An exquisitely crafted suit of armor that bestows secret wisdom upon the wearer."
@@ -106,6 +209,26 @@
 
 		"DOTA_Tooltip_modifier_insight_armor_aura_buff"							"Greater Aura of Insight"
 		"DOTA_Tooltip_modifier_insight_armor_aura_buff_Description"				"Gaining <font color='#49bf57'>%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%</font> additional health regeneration and <font color='#49bf57'>%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%</font> additional incoming damage reduction."
+
+		"DOTA_Tooltip_Ability_item_arcane_octarine_core"			"奥术之心"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_Description"				"<h1>被动：冷却时间减少</h1>所有技能和物品的冷却时间减少%bonus_cooldown%%%。"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_cast_range_bonus"             "+$cast_range"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_mana_regen"                "+$mana_regen"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_health"				"+$health"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_Lore"						"位于法术技艺核心的，是只有身负异能之人才能感知的光带。"
+
+		"DOTA_Tooltip_Ability_item_aeon_pendant"				"永恒吊坠"
+		"DOTA_Tooltip_ability_item_aeon_pendant_Description"					"<h1>被动：强断连招</h1>当受到伤害并且生命值低于%health_threshold_pct%%%时，会对英雄施加一个强驱散效果，%buff_duration%秒内+%status_resistance%%%状态抗性，并且所有受到和造成的伤害全部归零。来自玩家的伤害才会触发。"
+		"DOTA_Tooltip_ability_item_aeon_pendant_lore"					"一件多年以前被偷偷运出象牙孵巢的强力宝物。很多人都信以为真了。"
+		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_health"					"+$health"
+		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_mana"					"+$mana"
+
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"金箍棒·改"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"一位大师级战士使用的强力棍棒。"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"
 
 
 		///////////////////////////////////////////////////
