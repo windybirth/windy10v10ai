@@ -833,12 +833,12 @@
 					"01"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_agility"					"60"
+							"bonus_agility"					"55"
 					}
 					"02"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_damage"					"115"
+							"bonus_damage"					"100"
 					}
 					"03"
 					{
@@ -858,7 +858,7 @@
 					"06"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_move_speed"		"20"
+							"bonus_move_speed"		"25"
 					}
 					"07"
 					{
@@ -868,7 +868,7 @@
 					"08"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"crit_multiplier"		"255"
+							"crit_multiplier"		"250"
 					}
 			}
 
@@ -1700,7 +1700,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"                      "1600"
+		"ItemCost"                      "600"
 		"ItemShopTags"                  ""
 
 		// Recipe
@@ -1758,7 +1758,7 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"damage_reduction"      "-10"
+				"damage_reduction"      "-8"
 			}
 			"05"
 			{
@@ -1773,7 +1773,7 @@
 			"07"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_base"    "-10"
+				"aura_damage_reduction_base"    "-8"
 			}
 			"08"
 			{
@@ -1783,7 +1783,7 @@
 			"11"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_buff"    "-20"
+				"aura_damage_reduction_buff"    "-12"
 			}
 			"13"
 			{
@@ -2046,6 +2046,78 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"buff_duration"		"3"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Recipe: Monkey King Bar 金箍棒
+	//=================================================================================================================
+	"item_recipe_monkey_king_bar_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9062"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_monkey_king_bar"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1875"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_monkey_king_bar_2"
+		"ItemRequirements"
+		{
+			"01"						"item_monkey_king_bar;item_javelin;item_javelin"
+		}
+	}
+
+	//=================================================================================================================
+	// Monkey King Bar
+	//=================================================================================================================
+	"item_monkey_king_bar_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9063"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_monkey_king_bar"
+		"AbilityTextureName" 			"item_monkey_king_bar_2"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"8975"
+		"ItemShopTags"					"damage;attack_speed;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"mkb;monkey king bar"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"40"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_chance"			"85"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_chance_damage"			"210"
 			}
 		}
 	}
