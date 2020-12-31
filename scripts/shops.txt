@@ -122,7 +122,7 @@
 		"item"		"item_ancient_janggo"
 		"item"		"item_mekansm"
 		"item"		"item_holy_locket"
-		"item"		"item_vladmir_2"
+		"item"		"item_vladmir"
 		"item"		"item_spirit_vessel"
 		"item"		"item_pipe"
 		"item"		"item_guardian_greaves"
@@ -167,7 +167,7 @@
 		"item"		"item_shivas_guard"
 		"item"		"item_solar_crest"
 		"item"		"item_undying_heart"
-		"item"		"item_assault"
+		"item"		"item_vladmir_2"
 		"item"		"item_sphere_2"
 	}
 

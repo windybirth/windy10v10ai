@@ -229,6 +229,42 @@ function AIGameMode:OnEntityKilled(keys)
 
 	-- drop items
   RollDrops(hHero)
+
+	-- set streak end bounty
+	local attckerUnit = EntIndexToHScript( keys.entindex_attacker )
+	if attckerUnit:IsControllableByAnyPlayer() then
+		KillBounty(hHero, attckerUnit)
+	end
+
+end
+
+function KillBounty(hHero, attckerUnit)
+
+	local streak = hHero:GetStreak()
+	local killedPlayerId = hHero:GetPlayerID()
+	local killedName = PlayerResource:GetPlayerName(killedPlayerId)
+
+	local attackerPlayer = attckerUnit
+	if not attckerUnit:IsRealHero() then
+		print("event not realhero")
+		attackerPlayer = attckerUnit:GetOwner()
+	end
+	local attackerPlayerId = attackerPlayer:GetPlayerID()
+	local attackName = PlayerResource:GetPlayerName(attackerPlayerId)
+
+	-- bounty
+	local hLevel = hHero:GetLevel()
+	local killBounty = hLevel * 10 + 100
+	local msgKill = "<font color='#045ceb'> "..attackName.." </font>击杀了 "..killedName.." 获得赏金(bounty)<font color='#fef02e'>"..killBounty.."</font>！"
+	PlayerResource:ModifyGold(attackerPlayerId, killBounty, true, 0)
+	GameRules:SendCustomMessage(msgKill, attackerPlayer:GetTeamNumber(), 1)
+
+	if streak > 5 then
+		local streakBounty = 10 * streak * streak + 200
+		local msgStreak = "<font color='#045ceb'> "..attackName.." </font>终结了 "..killedName.." 的 <font color='#cc0000'>"..streak.."</font> 连杀。获得额外赏金(bounty)<font color='#fef02e'>"..streakBounty.."</font>！"
+		attackerPlayer:ModifyGold(streakBounty, true, 0)
+		GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
+	end
 end
 
 function RollDrops(hHero)
