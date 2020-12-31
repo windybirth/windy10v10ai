@@ -95,11 +95,11 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	if IsClient() then return end
 
 	local GameTime = GameRules:GetDOTATime(false, false)	-- LATEGAME
-	if (GameTime >= (20 * 60)) then
+	if (GameTime >= (30 * 60)) then
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
-	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
+	elseif (GameTime >= (15 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)

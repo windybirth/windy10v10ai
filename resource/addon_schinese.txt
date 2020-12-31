@@ -115,7 +115,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有5%概率随机掉落。</font>"
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -192,6 +192,42 @@
 		"DOTA_Tooltip_Ability_item_force_staff_3_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
 		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_health_regen"					"+$hp_regen"
+
+		"DOTA_Tooltip_ability_item_insight_armor"                               "洞察盔甲"
+		"DOTA_Tooltip_ability_item_insight_armor_Description"					"<h1>主动: <font color='#f15b47'>高阶洞察盔甲光环</font></h1>强化洞察光环的力量持续 %duration% 秒。<br><br>生命回复: %aura_regen_buff%<br>伤害减免: %aura_damage_reduction_buff%%%<br><br>作用范围: %radius%\n<h1>被动: 洞察盔甲光环</h1>附近友军单位获得 %aura_regen_base% 生命回复和 %aura_damage_reduction_base%%% 伤害减免。<br><br>作用范围: %radius%"
+		"DOTA_Tooltip_ability_item_insight_armor_Lore"							"精心制作的盔甲，可为穿戴者带来神秘的智慧。"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_all_stats"				"+$all"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_health"					"+$health"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_health_regen"			"+$hp_regen"
+		"DOTA_Tooltip_ability_item_insight_armor_bonus_armor"							"+$armor"
+		"DOTA_Tooltip_ability_item_insight_armor_damage_reduction"				"%+伤害减免"
+		"DOTA_Tooltip_Ability_item_recipe_insight_armor"						"洞察盔甲卷轴"
+
+		"DOTA_Tooltip_modifier_insight_armor_aura"								"洞察盔甲光环"
+		"DOTA_Tooltip_modifier_insight_armor_aura_Description"					"获得 <font color='#49bf57'>%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%</font> 生命回复，和 <font color='#49bf57'>%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%</font> 伤害减免。"
+
+		"DOTA_Tooltip_modifier_insight_armor_aura_buff"							"<font color='#f15b47'>高阶洞察盔甲光环</font>"
+		"DOTA_Tooltip_modifier_insight_armor_aura_buff_Description"				"获得 <font color='#49bf57'>%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%</font> 生命回复，和 <font color='#49bf57'>%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%</font> 伤害减免。"
+
+		"DOTA_Tooltip_Ability_item_arcane_octarine_core"			"奥术之心"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_Description"				"<h1>被动：冷却时间减少</h1>所有技能和物品的冷却时间减少%bonus_cooldown%%%。"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_cast_range_bonus"             "+$cast_range"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_mana_regen"                "+$mana_regen"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_health"				"+$health"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_ability_item_arcane_octarine_core_Lore"						"位于法术技艺核心的，是只有身负异能之人才能感知的光带。"
+
+		"DOTA_Tooltip_Ability_item_aeon_pendant"				"永恒吊坠"
+		"DOTA_Tooltip_ability_item_aeon_pendant_Description"					"<h1>被动：强断连招</h1>当受到伤害并且生命值低于%health_threshold_pct%%%时，会对英雄施加一个强驱散效果，%buff_duration%秒内+%status_resistance%%%状态抗性，并且所有受到和造成的伤害全部归零。来自玩家的伤害才会触发。"
+		"DOTA_Tooltip_ability_item_aeon_pendant_lore"					"一件多年以前被偷偷运出象牙孵巢的强力宝物。很多人都信以为真了。"
+		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_health"					"+$health"
+		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_mana"					"+$mana"
+
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"金箍棒·改"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"一位大师级战士使用的强力棍棒。"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"	
 		///////////////////////////////////////////////////
 		//
 		//            Heroes
