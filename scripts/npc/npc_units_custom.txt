@@ -233,7 +233,7 @@
 	{
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"50"		// Physical protection.
+		"ArmorPhysical"				"40"		// Physical protection.
 		"MagicalResistance"				"0"			// Magical protection.
 
 		// Attack
@@ -251,8 +251,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
-		"StatusHealthRegen"			"50"			// Health regeneration rate.
+		"StatusHealth"				"18000"		// Base health.
+		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
 	// Creeps: Bad Guys Fort
@@ -261,7 +261,7 @@
 	{
 		// Armor
 		//----------------------------------------------------------------
-		"ArmorPhysical"				"50"		// Physical protection.
+		"ArmorPhysical"				"40"		// Physical protection.
 		"MagicalResistance"				"0"			// Magical protection.
 
 		// Attack
@@ -279,8 +279,8 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
-		"StatusHealthRegen"			"50"			// Health regeneration rate.
+		"StatusHealth"				"18000"		// Base health.
+		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"
 	{

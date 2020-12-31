@@ -2328,7 +2328,7 @@
 			"02"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"ball_lightning_initial_mana_base"				"60 120 180"
+				"ball_lightning_initial_mana_base"				"30 60 90"
 			}
 			"05"
 			{
@@ -2338,7 +2338,7 @@
 			"06"
 			{
 				"var_type"								"FIELD_FLOAT"
-				"ball_lightning_travel_cost_percent"	"0.8"
+				"ball_lightning_travel_cost_percent"	"0.75"
 			}
 		}
 	}
