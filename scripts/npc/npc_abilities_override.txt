@@ -16,7 +16,7 @@
 	//=================================================================================================================
 	"item_tpscroll"
 	{
-		"AbilityCooldown"		"15.0"
+		"AbilityCooldown"		"30.0"
 		"ItemPermanent"			"1"
 		"ItemPurchasable"		"1"
 		"ItemStockMax"			"1"
@@ -24,7 +24,7 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"675.0"
+		"ItemInitialStockTime"			"630.0"
 	}
 	"item_refresher"
 	{
@@ -48,17 +48,25 @@
 	}
 	"item_glimmer_cape"
 	{
+		"AbilityCastRange"				"700"
+		"AbilityCooldown"				"16.0"
+		"AbilityManaCost"				"50"
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"20"
+			}
 			"02"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_magical_armor"	"25"
+				"var_type"				"FIELD_FLOAT"
+				"fade_delay"				"0.4"
 			}
-			"04"
+			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"active_magical_armor"	"65"
+				"active_magical_armor"	"60"
 			}
 		}
 	}
@@ -128,17 +136,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"		"40"
+				"magic_resistance"		"35"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_resist"			"40"
+				"tooltip_resist"			"35"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"magic_resistance_aura"		"20"
+				"magic_resistance_aura"		"15"
 			}
 			"08"
 			{
@@ -610,6 +618,53 @@
 	//=================================================================================================================
 
 	//=================================================================================================================
+	// Observer Wards 假眼
+	//=================================================================================================================
+	"item_ward_observer"
+	{
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+
+		"ItemStockTime"					"105.0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime"				"600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_minutes_tooltip"				"10"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Sentry Ward
+	//=================================================================================================================
+	"item_ward_sentry"
+	{
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"1.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"40"
+		"ItemStockMax"					"10"
+		"ItemStockInitial"				"3"
+		"ItemStockTime"					"45"
+	}
+
+	//=================================================================================================================
 	// Tome of Knowledge 知识之书
 	//=================================================================================================================
 	"item_tome_of_knowledge"
@@ -617,7 +672,7 @@
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"300.0"
-		"ItemInitialStockTime"			"375.0"
+		"ItemInitialStockTime"			"330.0"
 	}
 	//=================================================================================================================
 	// Magic Stick 魔棒
@@ -1051,6 +1106,12 @@
 	//=================================================================================================================
 	// Bloodstone 血精石
 	//=================================================================================================================
+	"item_recipe_bloodstone"
+	{
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1000"
+	}
 	"item_bloodstone"
 	{
 		"AbilityCooldown"				"45.0"
@@ -1149,7 +1210,7 @@
 	{
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"
+		"ItemCost"						"1800"
 		"ItemShopTags"					""
 	}
 	"item_dagon"
@@ -1161,7 +1222,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"600 750 900 1050 1200"
+				"damage"				"500 750 1000 1250 1500"
 			}
 		}
 	}
@@ -1174,7 +1235,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"600 750 900 1050 1200"
+				"damage"				"500 750 1000 1250 1500"
 			}
 		}
 	}
@@ -1187,7 +1248,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"600 750 900 1050 1200"
+				"damage"				"500 750 1000 1250 1500"
 			}
 		}
 	}
@@ -1200,7 +1261,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"600 750 900 1050 1200"
+				"damage"				"500 750 1000 1250 1500"
 			}
 		}
 	}
@@ -1213,20 +1274,72 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"600 750 900 1050 1200"
+				"damage"				"500 750 1000 1250 1500"
 			}
 		}
 	}
 
 	//=================================================================================================================
-	// HERO ABILITIES
+	// Recipe: Octarine Core 玲珑心
+	//=================================================================================================================
+	"item_recipe_octarine_core"
+	{
+		"ItemRequirements"
+		{
+			"01"						"item_aether_lens_3;item_veil_of_discord"
+		}
+	}
+	"item_octarine_core"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_cooldown"		"25"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cast_range_bonus"			"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"450"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"1000"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"12.0"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// HERO ABILITIES 英雄技能
 	//=================================================================================================================
 	// ---------------------------------
 	// -------- Strength Heroes --------
 	// ---------------------------------
+	"alchemist_chemical_rage"
+	{
+		"AbilityCooldown"				"55.0 50.0 45.0"
+	}
+	"brewmaster_primal_split"
+	{
+		"AbilityCooldown"				"100.0 90.0 80.0"
+	}
 	"beastmaster_primal_roar"
 	{
-		"AbilityCooldown"				"60.0 50.0 40.0"
+		"AbilityCooldown"				"60.0 55.0 50.0"
 	}
 	"bristleback_quill_spray"
 	{
@@ -1254,11 +1367,11 @@
 	}
 	"centaur_stampede"
 	{
-		"AbilityCooldown"				"55 45 35"
+		"AbilityCooldown"				"80 70 60"
 	}
 	"chaos_knight_phantasm"
 	{
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"60"
 	}
 	"doom_bringer_doom"
 	{
@@ -1318,32 +1431,27 @@
 	}
 	"omniknight_guardian_angel"
 	{
-		"AbilityCooldown"				"120"
+		"AbilityCooldown"				"110 100 90"
 	}
 	"phoenix_supernova"
 	{
 		"AbilityCooldown"				"110.0 95.0 80.0"
 	}
-	"pudge_flesh_heap"
+	"sandking_epicenter"
 	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"magic_resistance"				"8 14 24 32"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"flesh_heap_strength_buff_amount"	"0.5 0.5 0.5 0.5"
-				"LinkedSpecialBonus"			"special_bonus_unique_pudge_1"
-			}
-		}
+		"AbilityCooldown"				"80 70 60"
 	}
 	"snapfire_mortimer_kisses"
 	{
-		"AbilityCooldown"				"60"
+		"AbilityCooldown"				"80 70 60"
+	}
+	"spirit_breaker_nether_strike"
+	{
+		"AbilityCooldown"				"60 50 40"
+	}
+	"abyssal_underlord_dark_rift"
+	{
+		"AbilityCooldown"				"90 75 60"
 	}
 	"snapfire_gobble_up"
 	{
@@ -1377,7 +1485,11 @@
 	}
 	"skeleton_king_reincarnation"
 	{
-		"AbilityCooldown"				"120 60 30"
+		"AbilityCooldown"				"120 80 40"
+	}
+	"wisp_relocate"
+	{
+		"AbilityCooldown"				"80 70 60"
 	}
 	// --------------------------------
 	// -------- Agility Heroes --------
@@ -1389,19 +1501,19 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"chance"	"14 16 18"
+				"chance"	"15 20 25"
 				"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_3"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"	"30 40 50"
+				"bonus_damage"	"40 60 80"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"agility_multiplier"		"8 16 24"
+				"agility_multiplier"		"20 30 40"
 			}
 			"05"
 			{
@@ -1453,7 +1565,7 @@
 	}
 	"faceless_void_chronosphere"
 	{
-		"AbilityCooldown"				"100 80 60"
+		"AbilityCooldown"				"100 90 80"
 	}
 	"juggernaut_omni_slash"
 	{
@@ -1461,10 +1573,16 @@
 
 		"AbilitySpecial"
 		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"40 60 80"
+				"CalculateSpellDamageTooltip"	"0"
+			}
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"2 2.25 2.5"
+				"duration"					"2.5 2.75 3"
 				"LinkedSpecialBonus"		"special_bonus_unique_juggernaut_2"
 			}
 		}
@@ -1476,21 +1594,21 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"duration"			"0.5"
+				"duration"			"0.6"
 				"RequiresScepter"	"1"
 			}
 		}
 	}
 	"lone_druid_spirit_bear"
 	{
-		"AbilityCooldown"				"60.0"
+		"AbilityCooldown"				"90.0"
 
 		"AbilitySpecial"
 		{
 			"06"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"cooldown_scepter"			"60.0"
+				"cooldown_scepter"			"90.0"
 				"RequiresScepter"			"1"
 			}
 		}
@@ -1517,6 +1635,18 @@
 			}
 		}
 	}
+	"monkey_king_wukongs_command"
+	{
+		"AbilityCooldown"				"100 90 80"
+	}
+	"naga_siren_song_of_the_siren"
+	{
+		"AbilityCooldown"				"100 80 60"
+	}
+	"spectre_haunt"
+	{
+		"AbilityCooldown"				"110 100 90"
+	}
 	"phantom_assassin_stifling_dagger"
 	{
 		"AbilitySpecial"
@@ -1530,6 +1660,18 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"attack_factor_tooltip"	"25 30 35 40"
+			}
+		}
+	}
+	"nevermore_necromastery"
+	{
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"necromastery_max_souls_scepter" "30"
+				"RequiresScepter"			"1"
 			}
 		}
 	}
@@ -1549,6 +1691,14 @@
 	{
 		"AbilityCooldown"				"90.0"
 	}
+	"luna_eclipse"
+	{
+		"AbilityCooldown"				"90.0"
+	}
+	"venomancer_poison_nova"
+	{
+		"AbilityCooldown"				"100 90 80"
+	}
 	"viper_nethertoxin"
 	{
 		"AbilitySpecial"
@@ -1565,9 +1715,17 @@
 			}
 		}
 	}
+	"hoodwink_sharpshooter"
+	{
+		"AbilityCooldown"				"30"
+	}
 	// -------------------------------------
 	// -------- Intelligence Heroes --------
 	// -------------------------------------
+	"bane_fiends_grip"
+	{
+		"AbilityCooldown"				"80 70 60"
+	}
 	"batrider_firefly"
 	{
 		"AbilitySpecial"
@@ -1586,7 +1744,7 @@
 	}
 	"batrider_flaming_lasso"
 	{
-		"AbilityCooldown"				"40 30 20"
+		"AbilityCooldown"				"80 70 60"
 	}
 	"chen_hand_of_god"
 	{
@@ -1641,11 +1799,11 @@
 	}
 	"enigma_black_hole"
 	{
-		"AbilityCooldown"				"100.0 80.0 60.0"
+		"AbilityCooldown"				"100.0 90.0 80.0"
 	}
 	"grimstroke_soul_chain"
 	{
-		"AbilityCooldown"				"60 40 20"
+		"AbilityCooldown"				"60 45 30"
 	}
 	"jakiro_macropyre"
 	{
@@ -1718,11 +1876,11 @@
 	}
 	"necrolyte_reapers_scythe"
 	{
-		"AbilityCooldown"				"90 60 30"
+		"AbilityCooldown"				"90 75 60"
 	}
 	"obsidian_destroyer_sanity_eclipse"
 	{
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"90 80 70"
 	}
 	"puck_dream_coil"
 	{
@@ -1785,6 +1943,10 @@
 			}
 		}
 	}
+	"warlock_rain_of_chaos"
+	{
+		"AbilityCooldown"				"120 110 100"
+	}
 	"winter_wyvern_arctic_burn"
 	{
 		"AbilitySpecial"
@@ -1798,7 +1960,7 @@
 	}
 	"winter_wyvern_winters_curse"
 	{
-		"AbilityCooldown"				"40"
+		"AbilityCooldown"				"60 55 50"
 	}
 
 	//=================================================================================================================
@@ -1815,20 +1977,16 @@
 		"AbilityManaCost"				"50 60 70 80"
 	}
 
-	//=================================================================================================================
-	// Zuus: Lightning Bolt
-	//=================================================================================================================
 	"zuus_lightning_bolt"
 	{
-		// Cost
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityManaCost"				"75 80 85 90"
+    "AbilityManaCost"				"75 80 85 90"
 
-        // Damage.
-        //-------------------------------------------------------------------------------------------------------------
-        "AbilityDamage"					"150 225 325 400"
+    "AbilityDamage"					"150 225 325 400"
 	}
-
+	"zuus_thundergods_wrath"
+	{
+		"AbilityCooldown"				"100 90 80"
+	}
 	//=================================================================================================================
 	// Spectre: Desolate 幽鬼 荒芜
 	//=================================================================================================================
@@ -2154,10 +2312,6 @@
 	}
 	"storm_spirit_ball_lightning"
 	{
-		// Cost
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"90"
-
 		// Damage.
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityDamage"					"8 12 16"
@@ -2169,12 +2323,22 @@
 			"01"
 			{
 				"var_type"										"FIELD_INTEGER"
-				"ball_lightning_initial_mana_percentage"		"9"
+				"ball_lightning_initial_mana_percentage"		"8"
+			}
+			"02"
+			{
+				"var_type"										"FIELD_INTEGER"
+				"ball_lightning_initial_mana_base"				"60 120 180"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"ball_lightning_travel_cost_base"	"10 15 20"
 			}
 			"06"
 			{
 				"var_type"								"FIELD_FLOAT"
-				"ball_lightning_travel_cost_percent"	"0.7"
+				"ball_lightning_travel_cost_percent"	"0.8"
 			}
 		}
 	}

@@ -24,7 +24,6 @@
 	"npc_dota_hero_silencer"
 	{
 		"override_hero"		"npc_dota_hero_silencer"
-		"Ability2"			"silencer_glaives_of_wisdom_datadriven"
 		"Ability13"			"special_bonus_movement_speed_25"
 		"AttackRange"		"550"
 	}
