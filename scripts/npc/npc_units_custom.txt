@@ -74,6 +74,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_top"
 	{
@@ -83,6 +86,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"1200"		// Range within a target can be acquired.
 		"AttackRange"				"1200"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	"npc_dota_goodguys_tower2_bot"
 	{
@@ -92,6 +98,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"1200"		// Range within a target can be acquired.
 		"AttackRange"				"1200"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_bot"
 	{
@@ -101,6 +110,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	"npc_dota_goodguys_tower2_mid"
 	{
@@ -110,6 +122,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_mid"
 	{
@@ -119,6 +134,9 @@
 		"ArmorPhysical"			"20" // 16
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		"StatusHealth"				"3000"		// Base health.
+		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
 	//=========================================================
 	// TIER 3
@@ -251,7 +269,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"18000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -279,7 +297,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"18000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"
@@ -288,6 +306,267 @@
 		"AttackAcquisitionRange"	"2000"		// Range within a target can be acquired.
 		"AttackRange"				"1800"		// Range within a target can be attacked. (was 690)
 	}
+
+
+	//=================================================================================
+	// Creeps: 小兵
+	//=================================================================================
+	"npc_dota_creep_badguys_ranged_upgraded"
+	{
+		// General
+		"ModelScale"				"1.2" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// 1
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"51"		// 41
+		"AttackDamageMax"			"56"		// 46
+		"AttackRate"				"1"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"45"		// 22
+		"BountyGoldMin"				"39"		// 19
+		"BountyGoldMax"				"45"		// 25
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"675"		// 475
+		"StatusHealthRegen"			"5"			// 2
+	}
+
+	"npc_dota_creep_badguys_ranged_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.5" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 1
+		"MagicalResistance"				"10"			// 0
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"80"		// 41
+		"AttackDamageMax"			"90"		// 46
+		"AttackRate"				"0.9"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"22"		// 22
+		"BountyGoldMin"				"19"		// 19
+		"BountyGoldMax"				"25"		// 25
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"875"		// 475
+		"StatusHealthRegen"			"5"			// 2
+	}
+
+	"npc_dota_creep_goodguys_ranged_upgraded"
+	{
+		// General
+		"ModelScale"				"1.2" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"3"			// 1
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"51"		// 41
+		"AttackDamageMax"			"56"		// 46
+		"AttackRate"				"1"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"45"		// 22
+		"BountyGoldMin"				"39"		// 19
+		"BountyGoldMax"				"45"		// 25
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"675"		// 475
+		"StatusHealthRegen"			"5"			// 2
+	}
+
+	"npc_dota_creep_goodguys_ranged_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.5" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 1
+		"MagicalResistance"				"10"			// 0
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackDamageMin"			"80"		// 41
+		"AttackDamageMax"			"90"		// 46
+		"AttackRate"				"0.9"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"22"		// 22
+		"BountyGoldMin"				"19"		// 19
+		"BountyGoldMax"				"25"		// 25
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"875"		// 475
+		"StatusHealthRegen"			"5"			// 2
+	}
+
+
+	"npc_dota_creep_badguys_melee_upgraded"
+	{
+		// General
+		"ModelScale"				"1.2" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 3
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"46"		// 36
+		"AttackDamageMax"			"54"		// 44
+		"AttackRate"				"1"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"45"		// 25
+		"BountyGoldMin"				"39"		// 20
+		"BountyGoldMax"				"45"		// 26
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"		// 700
+		"StatusHealthRegen"			"5"			// 0.5
+	}
+
+	"npc_dota_creep_badguys_melee_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.5" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 3
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"56"		// 36
+		"AttackDamageMax"			"64"		// 44
+		"AttackRate"				"0.9"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"22"		// 25
+		"BountyGoldMin"				"19"		// 20
+		"BountyGoldMax"				"25"		// 26
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1200"		// 700
+		"StatusHealthRegen"			"5"			// 0.5
+	}
+
+	"npc_dota_creep_goodguys_melee_upgraded"
+	{
+		// General
+		"ModelScale"				"1.2" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 3
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"46"		// 36
+		"AttackDamageMax"			"54"		// 44
+		"AttackRate"				"1"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"45"		// 25
+		"BountyGoldMin"				"39"		// 20
+		"BountyGoldMax"				"45"		// 26
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"900"		// 700
+		"StatusHealthRegen"			"5"			// 0.5
+	}
+
+	"npc_dota_creep_goodguys_melee_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.5" // 1.12
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"5"			// 3
+		"MagicalResistance"				"5"			// 0
+
+		// Attack
+		"AttackDamageMin"			"56"		// 36
+		"AttackDamageMax"			"64"		// 44
+		"AttackRate"				"0.9"			// 1
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyXP"					"22"		// 25
+		"BountyGoldMin"				"19"		// 20
+		"BountyGoldMax"				"25"		// 26
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1200"		// 700
+		"StatusHealthRegen"			"5"			// 0.5
+	}
+
+
+
+
+
+
 
 	//=================================================================================
 	// Neutral: Ancient - Black Drake 中立生物

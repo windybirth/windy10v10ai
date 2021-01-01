@@ -1115,7 +1115,7 @@
 	"item_bloodstone"
 	{
 		"AbilityCooldown"				"45.0"
-		"ItemInitialCharges"			"16"
+		"ItemInitialCharges"			"20"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1139,7 +1139,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"		"150"
+				"mana_regen_multiplier"		"120"
 			}
 			"05"
 			{
@@ -1189,7 +1189,7 @@
 			"14"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"initial_charges_tooltip" "16"
+				"initial_charges_tooltip" "20"
 			}
 			"15"
 			{
