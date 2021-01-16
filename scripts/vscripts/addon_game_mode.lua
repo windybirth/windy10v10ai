@@ -93,6 +93,7 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetModifyExperienceFilter( Dynamic_Wrap( AIGameMode, "FilterXP" ), self )
 	GameRules:GetGameModeEntity():SetRuneSpawnFilter( Dynamic_Wrap( AIGameMode, "FilterRune" ), self )
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
+	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )

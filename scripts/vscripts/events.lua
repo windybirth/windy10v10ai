@@ -254,13 +254,13 @@ function KillBounty(hHero, attckerUnit)
 
 	-- bounty
 	local hLevel = hHero:GetLevel()
-	local killBounty = hLevel * 10 + 100
+	local killBounty = hLevel * 5 + 150
 	local msgKill = "<font color='#045ceb'> "..attackName.." </font>击杀了 "..killedName.." 获得赏金(bounty)<font color='#fef02e'>"..killBounty.."</font>！"
 	PlayerResource:ModifyGold(attackerPlayerId, killBounty, true, 0)
 	GameRules:SendCustomMessage(msgKill, attackerPlayer:GetTeamNumber(), 1)
 
 	if streak > 4 then
-		local streakBounty = 10 * streak * streak + 300
+		local streakBounty = 10 * streak * streak + 400
 		local msgStreak = "<font color='#045ceb'> "..attackName.." </font>终结了 "..killedName.." 的 <font color='#cc0000'>"..streak.."</font> 连杀。获得额外赏金(bounty)<font color='#fef02e'>"..streakBounty.."</font>！"
 		attackerPlayer:ModifyGold(streakBounty, true, 0)
 		GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)

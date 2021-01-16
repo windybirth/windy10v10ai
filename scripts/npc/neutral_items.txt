@@ -6,10 +6,10 @@
 		{
 			"1:00"
 			{
-				"0" "10"
-				"1" "8"
-				"2" "8"
-				"3" "6"
+				"0" "20"
+				"1" "16"
+				"2" "12"
+				"3" "8"
 			}
 		}
 
@@ -17,16 +17,16 @@
 		{
 			"item_keen_optic"				  "1"
 			"item_poor_mans_shield"		"1"
-			"item_philosophers_stone"		  "1"
 			"item_chipped_vest"				  "1"
-			"item_mysterious_hat"				  "1"
+			"item_royal_jelly_custom"		  "1"
+			"item_ring_of_aquila"		  "1"
 		}
 	}
 	"2"
 	{
 		"drop_rates"
 		{
-			"9:00"
+			"8:00"
 			{
 				"0" "10"
 				"1" "8"
@@ -37,19 +37,19 @@
 
 		"items"
 		{
-			"item_ring_of_aquila"			  "1"
 			"item_imp_claw"					  "1"
-			"item_royal_jelly_custom"		  "1"
 			"item_orb_of_destruction"		  "1"
 			"item_grove_bow"				  "1"
 			"item_quicksilver_amulet"				  "1"
+			"item_mysterious_hat"				  "1"
+			"item_quickening_charm"				  "1"
 		}
 	}
 	"3"
 	{
 		"drop_rates"
 		{
-			"17:00"
+			"16:00"
 			{
 				"0" "8"
 				"1" "6"
@@ -72,7 +72,7 @@
 	{
 		"drop_rates"
 		{
-			"25:00"
+			"24:00"
 			{
 				"0" "5"
 				"1" "4"

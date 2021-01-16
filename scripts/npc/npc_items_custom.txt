@@ -480,6 +480,21 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_movement_speed"		"130"
 			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"40"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"40"
+			}
+			"04"
+			{
+					"var_type"				"FIELD_INTEGER"
+					"bonus_all_stats"		"10"
+			}
 		}
 
 		// Data driven
@@ -500,10 +515,16 @@
 			{
 				"Passive"			"1"
 				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_MULTIPLE"
 
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
 				}
 			}
 			"modifier_item_wings_of_haste_consumed"
@@ -518,6 +539,11 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
 				}
 			}
 		}
@@ -527,7 +553,7 @@
 	//=================================================================================================================
 	"item_royal_jelly_custom"
 	{
-		"ID"						"9031"
+		"ID"						"9029"
 		"BaseClass"					"item_lua"
 		"ScriptFile"				"items/item_royal_jelly_custom.lua"
 		"AbilityTextureName"		"royal_jelly"
@@ -789,7 +815,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"2600"
+			"ItemCost"						"3600"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -814,7 +840,7 @@
 
 			// Stats
 			//-------------------------------------------------------------------------------------------------------------
-			"AbilityCooldown"				"25.0"
+			"AbilityCooldown"				"20.0"
 			"AbilityCastPoint"				"0.0"
 			"AbilityManaCost"				"0"
 
@@ -833,7 +859,7 @@
 					"01"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_agility"					"55"
+							"bonus_agility"					"60"
 					}
 					"02"
 					{
@@ -1909,7 +1935,7 @@
 		"ItemResult"					"item_arcane_octarine_core"
 		"ItemRequirements"
 		{
-			"01"						"item_octarine_core;item_soul_booster"
+			"01"						"item_octarine_core;item_veil_of_discord"
 		}
 	}
 

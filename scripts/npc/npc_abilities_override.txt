@@ -249,6 +249,30 @@
 		}
 	}
 	// level 2
+	//=================================================================================================================
+	// Fairy's Trinket
+	//=================================================================================================================
+	"item_mysterious_hat"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"8"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"manacost_reduction"			"8"
+			}
+		}
+	}
 	"item_imp_claw"
 	{
 		"AbilityCooldown"				"4.0"
@@ -1286,7 +1310,7 @@
 	{
 		"ItemRequirements"
 		{
-			"01"						"item_aether_lens_3;item_veil_of_discord"
+			"01"						"item_aether_lens_3;item_soul_booster"
 		}
 	}
 	"item_octarine_core"
@@ -1432,6 +1456,18 @@
 	"omniknight_guardian_angel"
 	{
 		"AbilityCooldown"				"110 100 90"
+	}
+	"special_bonus_unique_omniknight_7"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"40"
+				"ad_linked_ability"			"omniknight_guardian_angel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
 	}
 	"phoenix_supernova"
 	{
