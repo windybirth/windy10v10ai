@@ -177,6 +177,7 @@
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
 		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+最大生命恢复"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"						"%+$evasion"
 
 		"DOTA_Tooltip_Ability_item_force_staff_2"			"风力法杖"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>主动：风力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"

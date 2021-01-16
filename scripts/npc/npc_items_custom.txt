@@ -1426,7 +1426,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8888"
+		"ItemCost"						"3333"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1435,7 +1435,7 @@
 		"ItemResult"					"item_excalibur"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier"
+			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier"
 		}
 	}
 
@@ -1458,7 +1458,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"666"
+				"bonus_damage"			"999"
 			}
 		}
 	}
@@ -1515,7 +1515,7 @@
 		"ItemResult"					"item_undying_heart"
 		"ItemRequirements"
 		{
-			"01"						"item_heart;item_reaver;item_recipe_heart"
+			"01"						"item_heart;item_reaver;item_talisman_of_evasion;item_recipe_heart"
 		}
 	}
 
@@ -1526,10 +1526,16 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_heart"
+		"BaseClass"						"item_datadriven"
 		"ID"							"9051"
 		"AbilityTextureName"			"item_undying_heart"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemShopTags"					"str;regen_health;health_pool"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"hot;heart of tarrasque"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1543,13 +1549,34 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"500"
+				"bonus_health"			"600"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
 				"health_regen_pct"		"2.2"
 			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_evasion"			"20"
+			}
+		}
+		"Modifiers"
+		{
+		    "item_custom_modifier"
+		    {
+		        "Passive" "1"
+		        "IsHidden" "1"
+		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
+		        "Properties"
+		        {
+		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
+								"MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_health"
+								"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%health_regen_pct"
+								"MODIFIER_PROPERTY_EVASION_CONSTANT"				"%bonus_evasion"
+		        }
+		    }
 		}
 	}
 
@@ -1978,7 +2005,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"900"
+				"bonus_health"			"1000"
 			}
 			"04"
 			{
