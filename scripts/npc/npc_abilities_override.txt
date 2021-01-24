@@ -787,7 +787,7 @@
 	{
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"75"
+		"ItemCost"						"375"
 
 		"ItemRequirements"
 		{
@@ -1163,7 +1163,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"		"120"
+				"mana_regen_multiplier"		"100"
 			}
 			"05"
 			{
@@ -1188,7 +1188,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"regen_per_charge"		"0.25"
+				"regen_per_charge"		"0.24"
 			}
 			"10"
 			{
@@ -1941,11 +1941,11 @@
 	}
 	"obsidian_destroyer_sanity_eclipse"
 	{
-		"AbilityCooldown"				"90 80 70"
+		"AbilityCooldown"				"110 95 80"
 	}
 	"puck_dream_coil"
 	{
-		"AbilityCooldown"				"50 40 30"
+		"AbilityCooldown"				"60 50 40"
 	}
 	"queenofpain_sonic_wave"
 	{
@@ -2040,9 +2040,10 @@
 
 	"zuus_lightning_bolt"
 	{
-    "AbilityManaCost"				"75 80 85 90"
+		"MaxLevel" "6"
+    "AbilityManaCost"				"70 85 100 115 135 150"
 
-    "AbilityDamage"					"150 225 325 400"
+    "AbilityDamage"					"150 225 300 350 400 450"
 	}
 	"zuus_thundergods_wrath"
 	{

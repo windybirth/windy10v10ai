@@ -37,6 +37,19 @@ local tBotNameList = {
 	"npc_dota_hero_skeleton_king"
 }
 
+local tSkillCustomNameList = {
+	"npc_dota_hero_zuus"
+}
+
+local tAPLevelList = {
+	16,
+	17,
+	19,
+	21,
+	22,
+	23,
+	24
+}
 
 function AIGameMode:ArrayShuffle(array)
 	local size = #array
@@ -336,6 +349,28 @@ function AIGameMode:OnPlayerLevelUp(keys)
 	Timers:CreateTimer(0.5, function ()
 		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.14)
 	end)
+
+
+	-- Set Ability Points
+	local hero = EntIndexToHScript(keys.player):GetAssignedHero()
+	local level = keys.level
+
+	for i,v in ipairs(tSkillCustomNameList) do
+	  if v == hero:GetName() then
+			for _,lv in ipairs(tAPLevelList) do
+			  if lv == level then
+					print("-----------------debug-----------------", hero:GetName().."level:"..level.." Add AP")
+					
+						-- Save current unspend AP
+					local unspendAP = hero:GetAbilityPoints()
+					hero:SetAbilityPoints(1 + unspendAP)
+					break
+			  end
+			end
+
+	    break
+	  end
+	end
 end
 
 
