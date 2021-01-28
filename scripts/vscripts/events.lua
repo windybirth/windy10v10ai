@@ -38,7 +38,10 @@ local tBotNameList = {
 }
 
 local tSkillCustomNameList = {
-	"npc_dota_hero_zuus"
+	"npc_dota_hero_zuus",
+	"npc_dota_hero_crystal_maiden",
+	"npc_dota_hero_techies",
+	"npc_dota_hero_nevermore"
 }
 
 local tAPLevelList = {
@@ -360,7 +363,7 @@ function AIGameMode:OnPlayerLevelUp(keys)
 			for _,lv in ipairs(tAPLevelList) do
 			  if lv == level then
 					print("-----------------debug-----------------", hero:GetName().."level:"..level.." Add AP")
-					
+
 						-- Save current unspend AP
 					local unspendAP = hero:GetAbilityPoints()
 					hero:SetAbilityPoints(1 + unspendAP)

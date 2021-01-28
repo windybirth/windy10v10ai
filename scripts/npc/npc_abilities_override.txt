@@ -367,6 +367,16 @@
 		}
 	}
 	// level 4
+	"item_timeless_relic"{
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"35"
+			}
+		}
+	}
 	"item_penta_edged_sword"
 	{
 		"AbilitySpecial"
@@ -1781,17 +1791,113 @@
 			}
 		}
 	}
-	"nevermore_necromastery"
+
+	"nevermore_shadowraze1"
 	{
+		"MaxLevel" "6"
+		"AbilityManaCost"				"60 70 80 95 110 130"
+
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 290 350 400"
+				"LinkedSpecialBonus" "special_bonus_unique_nevermore_2"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "50 60 70 80 90 100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
+	"nevermore_shadowraze2"
+	{
+		"MaxLevel" "6"
+		"AbilityManaCost"				"60 70 80 95 110 130"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 290 350 400"
+				"LinkedSpecialBonus" "special_bonus_unique_nevermore_2"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "50 60 70 80 90 100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
+	"nevermore_shadowraze3"
+	{
+		"MaxLevel" "6"
+		"AbilityManaCost"				"60 70 80 95 110 130"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"shadowraze_damage"	"90 160 230 290 350 400"
+				"LinkedSpecialBonus" "special_bonus_unique_nevermore_2"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"stack_bonus_damage" "50 60 70 80 90 100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
+	"nevermore_necromastery"
+	{
+		"MaxLevel" "6"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"necromastery_damage_per_soul"	"1 2 2 3 3 4"
+				"CalculateSpellDamageTooltip"	"0"
+				"LinkedSpecialBonus"			"special_bonus_unique_nevermore_1"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"necromastery_max_souls"	"11 14 17 20 23 26"
+				"LinkedSpecialBonus"			"special_bonus_unique_nevermore_4"
+			}
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"necromastery_max_souls_scepter" "30"
+				"necromastery_max_souls_scepter" "15 20 25 30 35 40"
 				"RequiresScepter"			"1"
 			}
 		}
+	}
+	"nevermore_dark_lord"
+	{
+		"MaxLevel" "6"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"presence_armor_reduction"		"-4 -5 -6 -7 -8 -9"
+				"LinkedSpecialBonus"			"special_bonus_unique_nevermore_5"
+			}
+		}
+	}
+	"nevermore_requiem"
+	{
+		"AbilityCooldown"				"100 95 90"
+		"AbilityManaCost"				"150 250 350"
 	}
 	"sniper_take_aim"
 	{
