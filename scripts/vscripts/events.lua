@@ -41,17 +41,25 @@ local tSkillCustomNameList = {
 	"npc_dota_hero_zuus",
 	"npc_dota_hero_crystal_maiden",
 	"npc_dota_hero_techies",
+	"npc_dota_hero_necrolyte",
+	"npc_dota_hero_skywrath_mage",
+	"npc_dota_hero_phantom_assassin",
+	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_nevermore"
 }
 
 local tAPLevelList = {
-	16,
 	17,
 	19,
 	21,
 	22,
 	23,
-	24
+	24,
+	26,
+	27,
+	28,
+	29,
+	30
 }
 
 function AIGameMode:ArrayShuffle(array)

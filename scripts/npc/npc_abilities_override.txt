@@ -1777,17 +1777,67 @@
 	}
 	"phantom_assassin_stifling_dagger"
 	{
+		"MaxLevel" "6"
+		"AbilityManaCost"				"20 25 30 35 40 50"
 		"AbilitySpecial"
 		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"base_damage"			"65 80 95 110 125 140"
+			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_factor"			"-75 -70 -65 -60"
+				"attack_factor"			"-75 -60 -45 -30 -15 -0"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_factor_tooltip"	"25 30 35 40"
+				"attack_factor_tooltip"	"25 40 55 70 85 100"
+			}
+		}
+	}
+	"phantom_assassin_phantom_strike"
+	{
+		"MaxLevel" "6"
+		"AbilityCastRange"				"500 600 700 800 900 1000 1100"
+		"AbilityCooldown"				"10 9 8 7 6 5"
+		"AbilityManaCost"				"25 30 35 40 45 50"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"75 100 125 150 175 200"
+			}
+		}
+	}
+	"phantom_assassin_blur"
+	{
+		"MaxLevel" "6"
+		"AbilityCooldown"				"60 55 50 45 40 35"
+		"AbilityManaCost"				"25 30 35 40 45 50"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_evasion"				"15 25 35 45 55 65"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
+			}
+		}
+	}
+	"phantom_assassin_coup_de_grace"
+	{
+		"MaxLevel" "4"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_bonus"				"200 325 450 575"
+				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
 			}
 		}
 	}
@@ -2168,9 +2218,63 @@
 			}
 		}
 	}
+	"necrolyte_death_pulse"
+	{
+		"MaxLevel" "6"
+		"AbilityCooldown"				"9 8 7 6 5 4"
+		"AbilityDamage"					"100 150 200 250 300 350"
+		"AbilityManaCost"				"70 100 130 160 190 210"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"60 90 120 150 180 210"
+				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_4"
+			}
+		}
+	}
+	"necrolyte_heartstopper_aura"
+	{
+		"MaxLevel" "6"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"aura_damage"		"0.6 1.2 1.8 2.4 3.0 3.6"
+				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
+			}
+			"03"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"health_regen"	"3.5 4.5 5.5 6.5 7.5 8.5"
+			}
+			"04"
+			{
+				"var_type"		"FIELD_FLOAT"
+				"mana_regen"	"3.5 4.5 5.5 6.5 7.5 8.5"
+			}
+		}
+	}
 	"necrolyte_reapers_scythe"
 	{
-		"AbilityCooldown"				"90 75 60"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"90 80 70 60"
+		"AbilityManaCost"				"200 350 500 650"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_per_health"			"0.7 0.8 0.9 1.0"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"respawn_constant"		"15 25 35 45"
+			}
+		}
 	}
 	"obsidian_destroyer_sanity_eclipse"
 	{
@@ -2180,12 +2284,67 @@
 	{
 		"AbilityCooldown"				"60 50 40"
 	}
-	"queenofpain_sonic_wave"
+	"queenofpain_shadow_strike"
 	{
-		"AbilityCooldown"				"40"
+		"MaxLevel" "7"
+		"AbilityCastRange"				"450 500 550 600 650 700 750"
+
+		"AbilityCooldown"				"16.0 15.0 12.0 10.0 8.0 6.0 4.0"
+		"AbilityManaCost"				"110 120 130 140 150 160 170"
 
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"strike_damage"			"30 60 90 120 150 180 210"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"duration_damage"		"30 50 70 90 110 130 150"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_slow"			"-20 -30 -40 -50 -60 -70 -80"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Blink
+	//=================================================================================================================
+	"queenofpain_blink"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"15.0 12.0 10.0 8.0 6.0 5.0 4.0"
+		"AbilityManaCost"				"30 40 50 60 70 80 90"
+	}
+
+	//=================================================================================================================
+	// Queen of Pain: Scream of Pain
+	//=================================================================================================================
+	"queenofpain_scream_of_pain"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"11 10 9 8 7 6 5"
+		"AbilityDamage"					"75 150 225 300 375 450 525"
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
+	}
+	"queenofpain_sonic_wave"
+	{
+		"MaxLevel" "4"
+		"AbilityCooldown"				"80 70 60 50"
+
+		"AbilitySpecial"
+		{
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"340 450 560 670"
+				"LinkedSpecialBonus"		"special_bonus_unique_queen_of_pain_4"
+			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
@@ -2255,6 +2414,43 @@
 	"winter_wyvern_winters_curse"
 	{
 		"AbilityCooldown"				"60 55 50"
+	}
+	"skywrath_mage_arcane_bolt"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
+		"AbilityManaCost"				"60 70 80 90 100 110 120"
+
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bolt_damage"			"60 80 100 120 140 160 180"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"int_multiplier"		"1.4 1.5 1.6 1.7 1.8 1.9 2.0"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+		}
+	}
+	"skywrath_mage_mystic_flare"
+	{
+		"MaxLevel" "5"
+		"AbilityCooldown"				"60.0 50.0 40.0 30.0 20.0"
+		"AbilityManaCost"				"300 550 800 1050 1300"
+
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"750 1175 1600 2025 2450"
+				"LinkedSpecialBonus"	"special_bonus_unique_skywrath_5"
+			}
+		}
 	}
 
 	//=================================================================================================================

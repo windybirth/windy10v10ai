@@ -213,37 +213,6 @@
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
 	}
-	//=========================================================
-	// TIER 4
-	//=========================================================
-	"npc_dota_goodguys_tower4"
-	{
-		"AttackDamageMin"		"232" // 142
-		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.7" // 0.95
-		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
-		"AttackRange"				"1000"		// Range within a target can be attacked.
-
-		// Status
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"5000"		// Base health.
-		"StatusHealthRegen"			"15"			// Health regeneration rate.
-	}
-	"npc_dota_badguys_tower4"
-	{
-		"AttackDamageMin"		"232" // 142
-		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.7" // 0.95
-		"AttackAcquisitionRange"	"1000"		// Range within a target can be acquired.
-		"AttackRange"				"1000"		// Range within a target can be attacked.
-
-		// Status
-		//----------------------------------------------------------------
-		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"5000"		// Base health.
-		"StatusHealthRegen"			"15"			// Health regeneration rate.
-	}
 	//=================================================================================
 	// 兵营
 	//=================================================================================
@@ -262,8 +231,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -287,8 +256,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -312,8 +281,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -338,8 +307,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -363,8 +332,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -388,8 +357,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.9"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"200"			// Range within a target can be acquired.
-		"AttackRange"				"200"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
+		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -397,6 +366,37 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"4400"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
+	}
+	//=========================================================
+	// TIER 4
+	//=========================================================
+	"npc_dota_goodguys_tower4"
+	{
+		"AttackDamageMin"		"232" // 142
+		"AttackDamageMax"		"252" // 162
+		"AttackRate"				"0.75" // 0.95
+		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
+		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		// Status
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"		// Physical protection.
+		"StatusHealth"				"6000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
+	}
+	"npc_dota_badguys_tower4"
+	{
+		"AttackDamageMin"		"232" // 142
+		"AttackDamageMax"		"252" // 162
+		"AttackRate"				"0.75" // 0.95
+		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
+		"AttackRange"				"900"		// Range within a target can be attacked.
+
+		// Status
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"30"		// Physical protection.
+		"StatusHealth"				"6000"		// Base health.
+		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
 	//=================================================================================
 	// Creeps: Good Guys Fort 基地
@@ -414,10 +414,10 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.4"			// Speed of attack.
+		"AttackRate"				"0.35"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"			// Range within a target can be acquired.
-		"AttackRange"				"800"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
+		"AttackRange"				"700"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
@@ -442,10 +442,10 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.4"			// Speed of attack.
+		"AttackRate"				"0.35"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"800"			// Range within a target can be acquired.
-		"AttackRange"				"800"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
+		"AttackRange"				"700"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
