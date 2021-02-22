@@ -95,7 +95,16 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
 	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
-	GameRules:SetStartingGold( self.iStartingGold )
+
+	GameRules:SpawnNeutralCreeps()
+
+	print("DOTA_MAX_TEAM_PLAYERS"..DOTA_MAX_TEAM_PLAYERS..self.iStartingGold)
+	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+		if PlayerResource:IsValidPlayer(i) then
+			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
+		end
+	end
+
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )
 	end
