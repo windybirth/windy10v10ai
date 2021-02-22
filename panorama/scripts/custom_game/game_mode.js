@@ -89,6 +89,7 @@ function StateChange() {
 				"dire_tower_endure": $("#dire_tower_endure_dropdown").GetSelected().id,
 				"radiant_tower_heal": $("#radiant_tower_heal_dropdown").GetSelected().id,
 				"dire_tower_heal": $("#dire_tower_heal_dropdown").GetSelected().id,
+				"starting_gold": $("#starting_gold_dropdown").GetSelected().id,
 				"max_level": $("#max_level_dropdown").GetSelected().id,
 				"same_hero_selection": $("#same_hero_selection").checked,
 				"fast_courier": $("#fast_courier").checked
