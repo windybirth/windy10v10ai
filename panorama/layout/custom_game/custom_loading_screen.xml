@@ -211,6 +211,15 @@
 							<Label text="1000" id="1000"/>
 						</DropDown>
 					</Panel>
+					<Panel id="StartingGoldPanel"	class="GameOptionsSubPanel">
+						<Label id="StartingGoldTitle" class="GameOptionsLabel" text="#starting_gold" />
+						<DropDown id="starting_gold_dropdown" class="GameOptionsDropdown">
+							<Label text="600" id="600"/>
+							<Label text="999" id="999"/>
+							<Label text="1500" id="1500"/>
+							<Label text="2000" id="2000"/>
+						</DropDown>
+					</Panel>
 					<Panel id="SameHeroSelectionPanel"	class="GameOptionsSubPanel">
 						<Label id="SameHeroSelectionTitle" class="GameOptionsLabel" text="#same_hero_selection" />
 						<ToggleButton checked="true" class="GameOptionsToggle" id="same_hero_selection"/>

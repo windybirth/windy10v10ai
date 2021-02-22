@@ -28,6 +28,7 @@
 		"dire_tower_endure"	"Dire Buildings Endurance Level"
 		"radiant_tower_heal"	"Radiant Building Health Regen"
 		"dire_tower_heal"	"Dire Building Health Regen"
+		"starting_gold"	"Starting Gold"
 		"same_hero_selection"  "Allow Same Hero Selection"
 		"fast_courier"  "Fast Invulnerable Courier"
 		"hide_chat_team"  "Hide Chat and Team"

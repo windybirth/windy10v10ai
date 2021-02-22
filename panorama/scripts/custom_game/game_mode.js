@@ -67,6 +67,7 @@ $("#dire_tower_endure_dropdown").SetSelected("5");
 $("#max_level_dropdown").SetSelected("50");
 $("#radiant_tower_heal_dropdown").SetSelected("1");
 $("#dire_tower_heal_dropdown").SetSelected("1");
+$("#starting_gold_dropdown").SetSelected("999");
 $("#same_hero_selection").checked=true;
 $("#fast_courier").checked=true;
 

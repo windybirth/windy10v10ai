@@ -401,6 +401,7 @@ function AIGameMode:OnGetLoadingSetOptions(eventSourceIndex, args)
 	self.iDireTowerEndure = tonumber(args.game_options.dire_tower_endure)
 	self.iRadiantTowerHeal = tonumber(args.game_options.radiant_tower_heal)
 	self.iDireTowerHeal = tonumber(args.game_options.dire_tower_heal)
+	self.iStartingGold = tonumber(args.game_options.starting_gold)
 	self.bSameHeroSelection = args.game_options.same_hero_selection
 	self.bFastCourier = args.game_options.fast_courier
 	self:PreGameOptions()

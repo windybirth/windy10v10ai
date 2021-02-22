@@ -28,6 +28,7 @@
 		"dire_tower_endure"	"夜魇建筑防御加成等级"
 		"radiant_tower_heal"	"天辉建筑生命回复加成"
 		"dire_tower_heal"	"夜魇建筑生命回复加成"
+		"starting_gold"	"初始金钱"
 		"same_hero_selection"  "Allow Same Hero Selection"
 		"fast_courier"  "Fast Invulnerable Courier"
 		"hide_chat_team"  "Hide Chat and Team"

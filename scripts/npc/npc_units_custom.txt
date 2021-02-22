@@ -11,8 +11,8 @@
 	//=========================================================
 	"npc_dota_goodguys_tower1_top"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"1" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -20,8 +20,8 @@
 	}
 	"npc_dota_badguys_tower1_top"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"1" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -29,8 +29,8 @@
 	}
 	"npc_dota_goodguys_tower1_bot"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"1" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -38,8 +38,8 @@
 	}
 	"npc_dota_badguys_tower1_bot"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"1" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -47,8 +47,8 @@
 	}
 	"npc_dota_goodguys_tower1_mid"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"0.9" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -56,8 +56,8 @@
 	}
 	"npc_dota_badguys_tower1_mid"
 	{
-		"AttackDamageMin"		"100" // 100
-		"AttackDamageMax"		"110" // 120
+		"AttackDamageMin"		"90" // 100
+		"AttackDamageMax"		"100" // 120
 		"AttackRate"				"0.9" // 1
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
@@ -476,8 +476,8 @@
 		"MagicalResistance"				"5"			// 0
 
 		// Attack
-		"AttackDamageMin"			"51"		// 41
-		"AttackDamageMax"			"56"		// 46
+		"AttackDamageMin"			"61"		// 41
+		"AttackDamageMax"			"66"		// 46
 		"AttackRate"				"1"			// 1
 
 		// Bounty
@@ -508,8 +508,8 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"80"		// 41
-		"AttackDamageMax"			"90"		// 46
+		"AttackDamageMin"			"90"		// 41
+		"AttackDamageMax"			"100"		// 46
 		"AttackRate"				"0.9"			// 1
 
 		// Bounty
@@ -539,8 +539,8 @@
 		"MagicalResistance"				"5"			// 0
 
 		// Attack
-		"AttackDamageMin"			"51"		// 41
-		"AttackDamageMax"			"56"		// 46
+		"AttackDamageMin"			"61"		// 41
+		"AttackDamageMax"			"66"		// 46
 		"AttackRate"				"1"			// 1
 
 		// Bounty
@@ -571,8 +571,8 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"80"		// 41
-		"AttackDamageMax"			"90"		// 46
+		"AttackDamageMin"			"90"		// 41
+		"AttackDamageMax"			"100"		// 46
 		"AttackRate"				"0.9"			// 1
 
 		// Bounty
@@ -619,7 +619,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"900"		// 700
+		"StatusHealth"				"1000"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -650,7 +650,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1200"		// 700
+		"StatusHealth"				"1400"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -681,7 +681,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"900"		// 700
+		"StatusHealth"				"1000"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -712,7 +712,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1200"		// 700
+		"StatusHealth"				"1400"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 

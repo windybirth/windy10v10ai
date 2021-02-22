@@ -39,7 +39,6 @@ function AIGameMode:InitGameOptions()
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
 
 	GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops.kv")
-	GameRules:SetStartingGold( 999 )
 	GameRules:SetUseBaseGoldBountyOnHeroes( true )
 end
 
@@ -84,6 +83,7 @@ function AIGameMode:PreGameOptions()
 	self.iDireTowerEndure = self.iDireTowerEndure or 3
 	self.iRadiantTowerHeal = self.iRadiantTowerHeal or 0
 	self.iDireTowerHeal = self.iDireTowerHeal or 0
+	self.iStartingGold = self.iStartingGold or 999
 	self.bSameHeroSelection = self.bSameHeroSelection or 1
 	self.bFastCourier = self.bFastCourier or 1
 	self.fGameStartTime = 0
@@ -95,6 +95,7 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
 	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
+	GameRules:SetStartingGold( self.iStartingGold )
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )
 	end

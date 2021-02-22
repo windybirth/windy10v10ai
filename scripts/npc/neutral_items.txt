@@ -83,7 +83,7 @@
 
 		"items"
 		{
-			"item_timeless_relic"			  "1"
+			"item_seer_stone"				  "1"
 			"item_ninja_gear"				  "1"
 			"item_minotaur_horn"			  "1"
 			"item_trickster_cloak"			  "1"
@@ -127,7 +127,7 @@
 
 		"items"
 		{
-			"item_seer_stone"				  "1"
+			"item_timeless_relic"			  "1"
 			"item_desolator_2"				  "1"
 			"item_pirate_hat_custom"		  "1"
 			"item_giants_ring"				  "1"

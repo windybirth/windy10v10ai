@@ -660,7 +660,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"600"
 
-		"ItemStockTime"					"105.0"
+		"ItemStockTime"					"60.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1777,53 +1777,53 @@
 	}
 	"phantom_assassin_stifling_dagger"
 	{
-		"MaxLevel" "6"
-		"AbilityManaCost"				"20 25 30 35 40 50"
+		"MaxLevel" "7"
+		"AbilityManaCost"				"20 25 30 35 40 50 65"
 		"AbilitySpecial"
 		{
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"base_damage"			"65 80 95 110 125 140"
+				"base_damage"			"65 80 95 110 125 140 160"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_factor"			"-75 -60 -45 -30 -15 -0"
+				"attack_factor"			"-75 -60 -45 -30 -15 -0 15"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_factor_tooltip"	"25 40 55 70 85 100"
+				"attack_factor_tooltip"	"25 40 55 70 85 100 115"
 			}
 		}
 	}
 	"phantom_assassin_phantom_strike"
 	{
-		"MaxLevel" "6"
-		"AbilityCastRange"				"500 600 700 800 900 1000 1100"
-		"AbilityCooldown"				"10 9 8 7 6 5"
-		"AbilityManaCost"				"25 30 35 40 45 50"
+		"MaxLevel" "7"
+		"AbilityCastRange"				"500 600 700 800 900 1000 1100 1200"
+		"AbilityCooldown"				"10 9 8 7 6 5.5 5"
+		"AbilityManaCost"				"25 30 35 40 45 50 60"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"75 100 125 150 175 200"
+				"bonus_attack_speed"	"75 100 125 150 175 200 225"
 			}
 		}
 	}
 	"phantom_assassin_blur"
 	{
-		"MaxLevel" "6"
-		"AbilityCooldown"				"60 55 50 45 40 35"
-		"AbilityManaCost"				"25 30 35 40 45 50"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"60 55 50 45 40"
+		"AbilityManaCost"				"25 30 35 40 50"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_evasion"				"15 25 35 45 55 65"
+				"bonus_evasion"				"15 25 35 45 55"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
 			}
 		}
@@ -1840,6 +1840,25 @@
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
 			}
 		}
+	}
+
+	"mirana_arrow"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"19 18 17 16 15 14 13"
+		
+		"AbilityDamage"					"60 150 240 330 400 450 500"
+	}
+	"mirana_starfall"
+	{
+		"MaxLevel" "7"
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"75 150 225 300 350 400 450"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 105 130 155 180 205 230"
 	}
 
 	"nevermore_shadowraze1"
@@ -2156,7 +2175,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"duration"					"5"
+				"duration"					"7"
 			}
 			"06"
 			{
@@ -2164,10 +2183,10 @@
 				"damage_scepter"			"100 140 180"
 				"RequiresScepter"		"1"
 			}
-			"08"
+			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"duration_scepter"			"10"
+				"duration_scepter"			"15"
 				"RequiresScepter"		"1"
 			}
 		}
