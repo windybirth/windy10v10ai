@@ -45,6 +45,8 @@ local tSkillCustomNameList = {
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_phantom_assassin",
 	"npc_dota_hero_queenofpain",
+	"npc_dota_hero_mirana",
+	"npc_dota_hero_earthshaker",
 	"npc_dota_hero_nevermore"
 }
 

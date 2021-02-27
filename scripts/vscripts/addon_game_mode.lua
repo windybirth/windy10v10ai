@@ -98,7 +98,6 @@ function AIGameMode:PreGameOptions()
 
 	GameRules:SpawnNeutralCreeps()
 
-	print("DOTA_MAX_TEAM_PLAYERS"..DOTA_MAX_TEAM_PLAYERS..self.iStartingGold)
 	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
 		if PlayerResource:IsValidPlayer(i) then
 			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
