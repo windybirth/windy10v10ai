@@ -73,7 +73,7 @@ function modifier_melee_resistance:OnIntervalThink()
 	end
 end
 
-function modifier_melee_resistance:DeclareFunctions() return {MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING} end
+function modifier_melee_resistance:DeclareFunctions() return {MODIFIER_PROPERTY_STATUS_RESISTANCE} end
 
 function modifier_melee_resistance:GetModifierStatusResistance()
 	return self.iStatusResist

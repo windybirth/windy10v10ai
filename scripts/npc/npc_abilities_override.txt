@@ -697,7 +697,22 @@
 		"ItemStockInitial"				"3"
 		"ItemStockTime"					"45"
 	}
-
+	"item_ward_dispenser"
+	{
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"lifetime_observer"				"600"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"observer_duration_minutes_tooltip"		"10"
+			}
+		}
+	}
 	//=================================================================================================================
 	// Tome of Knowledge 知识之书
 	//=================================================================================================================
@@ -1144,7 +1159,7 @@
 	{
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1000"
+		"ItemCost"						"500"
 	}
 	"item_bloodstone"
 	{
@@ -1198,12 +1213,12 @@
 			"09"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"regen_per_charge"		"0.24"
+				"regen_per_charge"		"0.21"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"amp_per_charge"		"0.4"
+				"amp_per_charge"		"0.35"
 			}
 			"11"
 			{
@@ -1362,7 +1377,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"400"
+				"cast_range_bonus"			"350"
 			}
 			"03"
 			{
@@ -1372,12 +1387,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"1000"
+				"bonus_mana"			"725"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"12.0"
+				"bonus_mana_regen"		"6.0"
 			}
 		}
 	}
@@ -1472,13 +1487,13 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"echo_slam_echo_damage"		"70 90 110 130 150"
+				"echo_slam_echo_damage"		"50 70 90 110 130"
 				"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_2"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"echo_slam_initial_damage"		"100 140 180 220 260"
+				"echo_slam_initial_damage"		"160 200 240 280 320"
 			}
 		}
 	}
@@ -2095,52 +2110,52 @@
 	}
 	"crystal_maiden_crystal_nova"
 	{
-		"MaxLevel" "6"
-		"AbilityManaCost"				"100 115 130 145 160 175"
+		"MaxLevel" "7"
+		"AbilityManaCost"				"100 115 130 145 160 175 190"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"movespeed_slow"	"-20 -30 -40 -50 -60 -70"
+				"movespeed_slow"	"-20 -30 -40 -50 -60 -70 -80"
 			}
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"attackspeed_slow"	"-20 -30 -40 -50 -60 -70"
+				"attackspeed_slow"	"-20 -30 -40 -50 -60 -70 -80"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"nova_damage"			"130 170 210 260 300 340"
+				"nova_damage"			"130 170 210 260 300 340 380"
 				"LinkedSpecialBonus"	"special_bonus_unique_crystal_maiden_2"
 			}
 		}
 	}
 	"crystal_maiden_frostbite"
 	{
-		"MaxLevel" "6"
-		"AbilityCooldown"				"10 9 8 7 6 5"
-		"AbilityManaCost"				"100 120 140 160 180"
+		"MaxLevel" "7"
+		"AbilityCooldown"				"10 9 8 7 6 5.5 5"
+		"AbilityManaCost"				"100 120 140 160 180 200"
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.5 2.0 2.5 3.0 3.5 4.0"
+				"duration"				"1.5 2.0 2.5 3.0 3.5 4.0 4.5"
 				"LinkedSpecialBonus"	"special_bonus_unique_crystal_maiden_1"
 			}
 		}
 	}
 	"crystal_maiden_brilliance_aura"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "7"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"mana_regen"		"1 2 3 4 5 6"
+				"mana_regen"		"1 2 3 4 5 6 7"
 			}
 		}
 	}
@@ -2401,6 +2416,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"80 70 60 50"
+		"AbilityManaCost"				"250 400 550 700"
 
 		"AbilitySpecial"
 		{
@@ -2414,6 +2430,12 @@
 			{
 				"var_type"				"FIELD_FLOAT"
 				"cooldown_scepter"		"30"
+				"RequiresScepter"		"1"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_scepter"	"390 500 610 720"
 				"RequiresScepter"		"1"
 			}
 		}

@@ -1003,7 +1003,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"
+		"ItemCost"						""
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1012,7 +1012,7 @@
 		"ItemResult"					"item_aether_lens_2"
 		"ItemRequirements"
 		{
-			"01"						"item_aether_lens"
+			"01"						"item_aether_lens;item_recipe_aether_lens"
 		}
 	}
 	"item_aether_lens_2"
@@ -1038,17 +1038,17 @@
 					"01"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"bonus_mana"            "600"
+							"bonus_mana"            "300"
 					}
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "6"
+							"bonus_mana_regen"      "4"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "325"
+							"cast_range_bonus"      "300"
 					}
 			}
 	}
@@ -1066,7 +1066,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1500"
+		"ItemCost"						""
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1075,7 +1075,7 @@
 		"ItemResult"					"item_aether_lens_3"
 		"ItemRequirements"
 		{
-			"01"						"item_aether_lens_2"
+			"01"						"item_aether_lens_2;item_recipe_aether_lens"
 		}
 	}
 	"item_aether_lens_3"
@@ -1101,17 +1101,17 @@
 					"01"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"bonus_mana"            "850"
+							"bonus_mana"            "300"
 					}
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "9"
+							"bonus_mana_regen"      "5"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "400"
+							"cast_range_bonus"      "350"
 					}
 			}
 	}
@@ -1953,7 +1953,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
+		"ItemCost"						"3200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2000,22 +2000,22 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"500"
+				"cast_range_bonus"			"400"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"1000"
+				"bonus_health"			"800"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"1500"
+				"bonus_mana"			"1200"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"16.0"
+				"bonus_mana_regen"		"12.0"
 			}
 		}
 	}
@@ -2174,4 +2174,178 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Recipe: Magic Scepter
+	//=================================================================================================================
+	"item_recipe_magic_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3033"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"2500"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_magic_scepter"
+		"ItemRequirements"
+		{
+			"01"						"item_kaya;item_mystic_staff;"
+		}
+	}
+
+	//=================================================================================================================
+	// Magic Scepter
+	//=================================================================================================================
+	"item_magic_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3034"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 			"magic_scepter"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ScriptFile"                    "items/item_magic_scepter.lua"
+
+		"AbilityCooldown"				"60.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+
+		"ItemCost"						"6700"
+		"ItemShopTags"					"int;mana"
+		"ItemQuality"					"arcane"
+		"ItemAliases"					"magic scepter"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemRequiresCharges"			"0"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+
+
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intelligence"		"45"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"spell_amp_per_int"			"0.15"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost"				"50"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost_duration"		"3"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Arcane Scepter
+	//=================================================================================================================
+	"item_recipe_hallowed_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3023"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3500"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_hallowed_scepter"
+		"ItemRequirements"
+		{
+			"01"						"item_magic_scepter;item_mystic_staff;item_mystic_staff"
+		}
+	}
+
+
+	//=================================================================================================================
+	// Arcane Scepter
+	//=================================================================================================================
+	"item_hallowed_scepter"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3024"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 			"arcane_scepter"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ScriptFile"                    "items/item_hallowed_scepter.lua"
+
+		"AbilityCooldown"				"45.0"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+
+		"ItemCost"						"12350"
+		"ItemShopTags"					"int;mana"
+		"ItemQuality"					"hallowed"
+		"ItemAliases"					"hallowed scepter"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemRequiresCharges"			"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+
+
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_intelligence"		"100"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"spell_amp_per_int"			"0.25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost"				"125"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost_duration"		"6"
+			}
+		}
+	}
+
 }
