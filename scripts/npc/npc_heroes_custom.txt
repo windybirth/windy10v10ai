@@ -178,4 +178,362 @@
 		"MovementSpeed"		"300"
 		"MovementTurnRate"		"0.700000"
 	}
+
+	//=================================================================================================================
+	// HERO: Axe
+	//=================================================================================================================
+	"npc_dota_hero_axe"
+	{
+		"Bot"
+		{
+			"SupportsEasyMode"	"1"
+			"Loadout"
+			{
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_flask"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_branches"		"ITEM_CORE | ITEM_SELLABLE"
+				"item_branches"		"ITEM_CORE | ITEM_SELLABLE"
+				"item_magic_stick"		"ITEM_CORE | ITEM_SELLABLE"
+				"item_recipe_magic_wand"		"ITEM_CORE | ITEM_SELLABLE"
+				"item_magic_wand"	"ITEM_DERIVED | ITEM_SELLABLE"
+
+				"item_boots"					"ITEM_CORE"
+				"item_wind_lace" 		"ITEM_CORE"
+				"item_ring_of_regen" 			"ITEM_CORE"
+				"item_recipe_tranquil_boots" 	"ITEM_DERIVED"
+				"item_tranquil_boots"			"ITEM_DERIVED"
+
+				"item_blink"	"ITEM_CORE"
+
+
+				"item_chainmail"			"ITEM_CORE"
+				"item_broadsword"			"ITEM_CORE"
+				"item_recipe_blade_mail"					"ITEM_CORE"
+				"item_blade_mail" 			"ITEM_CORE | ITEM_DERIVED"
+
+				"item_mithril_hammer"		"ITEM_LUXURY"
+				"item_ogre_axe"		"ITEM_LUXURY"
+				"item_recipe_black_king_bar"		"ITEM_LUXURY"
+				"item_black_king_bar"		"ITEM_LUXURY | ITEM_DERIVED"
+
+				"item_reaver"		"ITEM_LUXURY"
+				"item_vitality_booster"		"ITEM_LUXURY"
+				"item_recipe_heart"		"ITEM_LUXURY"
+				"item_heart"		"ITEM_DERIVED"
+
+				"item_platemail"		"ITEM_LUXURY"
+				"item_mystic_staff"		"ITEM_LUXURY"
+				"item_recipe_shivas_guard"		"ITEM_LUXURY"
+				"item_shivas_guard"		"ITEM_LUXURY | ITEM_DERIVED"
+
+				"item_aghanims_shard"			"ITEM_CONSUMABLE"
+
+
+			}
+			"Build"
+			{
+				"1"			"axe_counter_helix"
+				"2"			"axe_battle_hunger"
+				"3"			"axe_battle_hunger"
+				"4"			"axe_berserkers_call"
+				"5"			"axe_battle_hunger"
+				"6"			"axe_culling_blade"
+				"7"			"axe_battle_hunger"
+				"8"			"axe_counter_helix"
+				"9"			"axe_counter_helix"
+				"10"		"special_bonus_movement_speed_20"
+				"11"		"axe_counter_helix"
+				"12"		"axe_culling_blade"
+				"13"		"axe_berserkers_call"
+				"14"		"axe_berserkers_call"
+				"15"		"special_bonus_mp_regen_2"
+				"16"		"axe_berserkers_call"
+				"17"		""
+				"18"		"axe_culling_blade"
+				"19"		""
+				"20"		"special_bonus_hp_regen_20"
+				"21"		""
+				"22"		""
+				"23"		""
+				"24"		""
+				"25"		"special_bonus_unique_axe"
+			}
+			"HeroType"		"DOTA_BOT_TANK | DOTA_BOT_STUN_SUPPORT"
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"	"0"
+				"ProvidesBabysit"	"1"
+				"SurvivalRating"	"2"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// HERO: Crystal Maiden
+	//=================================================================================================================
+	"npc_dota_hero_crystal_maiden"
+	{
+		"Bot"
+		{
+			"Loadout"
+			{
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_flask"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+
+				"item_boots"			"ITEM_CORE"
+
+				"item_chainmail"		"ITEM_EXTENSION"
+				"item_blades_of_attack"	"ITEM_EXTENSION"
+				"item_phase_boots"		"ITEM_DERIVED"
+
+				"item_shadow_amulet"		"ITEM_EXTENSION"
+				"item_cloak"	"ITEM_EXTENSION"
+				"item_recipe_glimmer_cape"	"ITEM_EXTENSION"
+				"item_glimmer_cape"		"ITEM_DERIVED"
+
+				"item_point_booster"		"ITEM_EXTENSION"
+				"item_staff_of_wizardry"		"ITEM_EXTENSION"
+				"item_ogre_axe"		"ITEM_EXTENSION"
+				"item_blade_of_alacrity"		"ITEM_EXTENSION"
+				"item_ultimate_scepter"		"ITEM_DERIVED"
+				"item_ogre_axe"		"ITEM_LUXURY"
+				"item_mithril_hammer"		"ITEM_LUXURY"
+				"item_recipe_black_king_bar"		"ITEM_LUXURY"
+				"item_black_king_bar"		"ITEM_DERIVED"
+
+				"item_aghanims_shard"			"ITEM_CONSUMABLE"
+			}
+			"Build"
+			{
+				"1"		"crystal_maiden_crystal_nova"
+				"2"		"crystal_maiden_brilliance_aura"
+				"3"		"crystal_maiden_brilliance_aura"
+				"4"		"crystal_maiden_frostbite"
+				"5"		"crystal_maiden_brilliance_aura"
+				"6"		"crystal_maiden_freezing_field"
+				"7"		"crystal_maiden_frostbite"
+				"8"		"crystal_maiden_frostbite"
+				"9"		"crystal_maiden_frostbite"
+				"10"		"special_bonus_cast_range_75"
+				"11"		"crystal_maiden_brilliance_aura"
+				"12"		"crystal_maiden_freezing_field"
+				"13"		"crystal_maiden_crystal_nova"
+				"14"		"crystal_maiden_crystal_nova"
+				"15"		"special_bonus_unique_crystal_maiden_4"
+				"16"		"crystal_maiden_crystal_nova"
+				"17"		"crystal_maiden_crystal_nova"
+				"18"		"crystal_maiden_freezing_field"
+				"19"		"crystal_maiden_crystal_nova"
+				"20"		"special_bonus_unique_crystal_maiden_3"
+				"21"		"crystal_maiden_crystal_nova"
+				"22"		"crystal_maiden_frostbite"
+				"23"		"crystal_maiden_frostbite"
+				"24"		"crystal_maiden_frostbite"
+				"25"		"special_bonus_unique_crystal_maiden_1"
+			}
+			"HeroType"		"DOTA_BOT_PURE_SUPPORT"
+			"AggressionFactor"		"0.800000"
+			"LaningInfo"
+			{
+				"SoloDesire"		"0"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"2"
+				"SurvivalRating"		"1"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"1"
+				"RequiresSetup"		"0"
+			}
+		}
+	}
+	"npc_dota_hero_phantom_assassin"
+	{
+		"Bot"
+		{
+
+			"Loadout"
+			{
+				"item_tango"			"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_flask"			"ITEM_CONSUMABLE | ITEM_SELLABLE"
+
+				"item_branches"			"ITEM_CORE"
+				"item_branches"			"ITEM_CORE"
+				"item_magic_stick"		"ITEM_CORE"
+
+				"item_recipe_magic_wand"		"ITEM_CORE"
+				"item_magic_wand"	"ITEM_DERIVED | ITEM_SELLABLE"
+				"item_slippers"		"ITEM_CORE"
+				"item_circlet"		"ITEM_CORE"
+				"item_recipe_wraith_band"		"ITEM_CORE"
+				"item_wraith_band"			"ITEM_DERIVED | ITEM_SELLABLE"
+
+				"item_boots"			"ITEM_CORE"
+				"item_gloves"			"ITEM_CORE"
+				"item_boots_of_elves"	"ITEM_CORE"
+				"item_power_treads"		"ITEM_DERIVED"
+
+				"item_ogre_axe"					"ITEM_LUXURY"
+				"item_mithril_hammer"			"ITEM_LUXURY"
+				"item_recipe_black_king_bar"	"ITEM_EXTENSION"
+				"item_black_king_bar"			"ITEM_DERIVED"
+
+				"item_mithril_hammer"		"ITEM_LUXURY"
+				"item_belt_of_strength"		"ITEM_LUXURY"
+				"item_recipe_basher"		"ITEM_LUXURY"
+				"item_basher"				"ITEM_DERIVED"
+
+				"item_ring_of_health"		"ITEM_LUXURY"
+				"item_vitality_booster"		"ITEM_LUXURY"
+				"item_vanguard"				"ITEM_DERIVED"
+
+				"item_recipe_abyssal_blade"	"ITEM_LUXURY"
+				"item_abyssal_blade"		"ITEM_DERIVED"
+
+				"item_lifesteal"		"ITEM_LUXURY"
+				"item_reaver"			"ITEM_LUXURY"
+				"item_claymore"			"ITEM_LUXURY"
+				"item_recipe_satanic"	"ITEM_LUXURY"
+				"item_satanic"			"ITEM_DERIVED"
+
+				"item_ring_of_protection"   "ITEM_LUXURY"
+				"item_recipe_buckler"	"ITEM_LUXURY"
+				"item_buckler"		    "ITEM_DERIVED"
+				"item_platemail"		"ITEM_LUXURY"
+				"item_hyperstone"		"ITEM_LUXURY"
+				"item_recipe_assault"	"ITEM_LUXURY"
+				"item_assault"			"ITEM_DERIVED"
+
+				"item_demon_edge"		"ITEM_LUXURY"
+				"item_javelin"			"ITEM_LUXURY"
+                "item_blitz_knuckles"         "ITEM_LUXURY"
+                "item_recipe_monkey_king_bar"         "ITEM_LUXURY"
+                "item_monkey_king_bar"      "ITEM_DERIVED"
+
+				                "item_recipe_vanguard"      "ITEM_LUXURY"
+			}
+			"Build"
+			{
+				"1"		"phantom_assassin_stifling_dagger"
+				"2"		"phantom_assassin_phantom_strike"
+				"3"		"phantom_assassin_stifling_dagger"
+				"4"		"phantom_assassin_blur"
+				"5"		"phantom_assassin_stifling_dagger"
+				"6"		"phantom_assassin_coup_de_grace"
+				"7"		"phantom_assassin_stifling_dagger"
+				"8"		"phantom_assassin_phantom_strike"
+				"9"		"phantom_assassin_phantom_strike"
+				"10"		"special_bonus_unique_phantom_assassin_7"
+				"11"		"phantom_assassin_phantom_strike"
+				"12"		"phantom_assassin_coup_de_grace"
+				"13"		"phantom_assassin_blur"
+				"14"		"phantom_assassin_blur"
+				"15"		"special_bonus_unique_phantom_assassin_6"
+				"16"		"phantom_assassin_blur"
+				"17"		"phantom_assassin_stifling_dagger"
+				"18"		"phantom_assassin_coup_de_grace"
+				"19"		"phantom_assassin_stifling_dagger"
+				"20"		"special_bonus_unique_phantom_assassin_3"
+				"21"		"phantom_assassin_stifling_dagger"
+				"22"		"phantom_assassin_phantom_strike"
+				"23"		"phantom_assassin_phantom_strike"
+				"24"		"phantom_assassin_coup_de_grace"
+				"25"		"special_bonus_unique_phantom_assassin"
+			}
+			"HeroType"		"DOTA_BOT_HARD_CARRY"
+			"LaningInfo"
+			{
+				"SoloDesire"		"0"
+				"RequiresBabysit"		"2"
+				"ProvidesBabysit"		"0"
+				"SurvivalRating"		"1"
+				"RequiresFarm"		"2"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"2"
+			}
+		}
+	}
+
+	"npc_dota_hero_lina"
+	{
+		"Bot"
+		{
+			"Loadout"
+			{
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_clarity"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_clarity"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
+				"item_branches"		"ITEM_CORE"
+				"item_branches"		"ITEM_CORE"
+				"item_magic_stick"		"ITEM_CORE"
+				"item_recipe_magic_wand"		"ITEM_CORE"
+				"item_magic_wand"		"ITEM_DERIVED | ITEM_SELLABLE"
+				"item_boots"		"ITEM_CORE"
+				"item_energy_booster"		"ITEM_CORE"
+				"item_arcane_boots"		"ITEM_DERIVED"
+				"item_staff_of_wizardry"		"ITEM_EXTENSION"
+				"item_ring_of_regen"		"ITEM_EXTENSION"
+				"item_recipe_force_staff"		"ITEM_EXTENSION"
+				"item_force_staff"		"ITEM_DERIVED"
+				"item_force_staff_3"		"ITEM_DERIVED"
+				"item_point_booster"		"ITEM_EXTENSION"
+				"item_staff_of_wizardry"		"ITEM_EXTENSION"
+				"item_ogre_axe"		"ITEM_EXTENSION"
+				"item_blade_of_alacrity"		"ITEM_EXTENSION"
+				"item_recipe_ultimate_scepter"		"ITEM_EXTENSION"
+                "item_ultimate_scepter" "ITEM_DERIVED"
+				"item_mystic_staff"		"ITEM_LUXURY"
+				"item_ultimate_orb"		"ITEM_LUXURY"
+				"item_void_stone"		"ITEM_LUXURY"
+				"item_sheepstick"		"ITEM_DERIVED"
+				"item_staff_of_wizardry"		"ITEM_LUXURY"
+				"item_wind_lace"		"ITEM_LUXURY"
+				"item_void_stone"		"ITEM_LUXURY"
+				"item_recipe_cyclone"		"ITEM_LUXURY"
+				"item_cyclone"		"ITEM_DERIVED"
+			}
+			"Build"
+			{
+				"1"		"lina_light_strike_array"
+				"2"		"lina_dragon_slave"
+				"3"		"lina_dragon_slave"
+				"4"		"lina_fiery_soul"
+				"5"		"lina_dragon_slave"
+				"6"		"lina_laguna_blade"
+				"7"		"lina_dragon_slave"
+				"8"		"lina_light_strike_array"
+				"9"		"lina_light_strike_array"
+				"10"		"special_bonus_cast_range_75"
+				"11"		"lina_light_strike_array"
+				"12"		"lina_laguna_blade"
+				"13"		"lina_fiery_soul"
+				"14"		"lina_fiery_soul"
+				"15"		"special_bonus_unique_lina_3"
+				"16"		"lina_fiery_soul"
+				"17"		""
+				"18"		"lina_laguna_blade"
+				"19"		""
+				"20"		"special_bonus_spell_amplify_11"
+				"21"		""
+				"22"		""
+				"23"		""
+				"24"		""
+				"25"		"special_bonus_unique_lina_1"
+			}
+			"LaningInfo"
+			{
+				"SoloDesire"		"1"
+				"RequiresBabysit"		"0"
+				"ProvidesBabysit"		"1"
+				"SurvivalRating"		"0"
+				"RequiresFarm"		"1"
+				"ProvidesSetup"		"0"
+				"RequiresSetup"		"2"
+			}
+			"HeroType"		"DOTA_BOT_GANKER | DOTA_BOT_NUKER"
+		}
+	}
+
 }

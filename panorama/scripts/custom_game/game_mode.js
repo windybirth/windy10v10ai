@@ -56,6 +56,8 @@ function ShowChatTeamActivate() {
 	GameEvents.SendCustomGameEventToAllClients("LoadingScreenTeamShow", {iPlayerID:Players.GetLocalPlayer()});
 }
 
+$("#radiant_gold_multiplier_dropdown").SetSelected("1");
+$("#radiant_xp_multiplier_dropdown").SetSelected("1");
 $("#dire_gold_multiplier_dropdown").SetSelected("1.5");
 $("#dire_xp_multiplier_dropdown").SetSelected("1.5");
 $("#radiant_player_number_dropdown").SetSelected("5");
@@ -64,7 +66,7 @@ $("#radiant_tower_power_dropdown").SetSelected("5");
 $("#dire_tower_power_dropdown").SetSelected("5");
 $("#radiant_tower_endure_dropdown").SetSelected("5");
 $("#dire_tower_endure_dropdown").SetSelected("5");
-$("#max_level_dropdown").SetSelected("50");
+$("#max_level_dropdown").SetSelected("100");
 $("#radiant_tower_heal_dropdown").SetSelected("1");
 $("#dire_tower_heal_dropdown").SetSelected("1");
 $("#starting_gold_dropdown").SetSelected("2000");
