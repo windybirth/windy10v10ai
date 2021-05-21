@@ -757,7 +757,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"restore_per_charge"	"25"
+				"restore_per_charge"	"15"
 			}
 		}
 	}
@@ -801,7 +801,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"restore_per_charge"	"25"
+				"restore_per_charge"	"20"
 			}
 		}
 	}
