@@ -76,7 +76,7 @@
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_top"
 	{
@@ -88,7 +88,7 @@
 		"AttackRange"				"1100"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	"npc_dota_goodguys_tower2_bot"
 	{
@@ -100,7 +100,7 @@
 		"AttackRange"				"1100"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_bot"
 	{
@@ -112,7 +112,7 @@
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	"npc_dota_goodguys_tower2_mid"
 	{
@@ -124,7 +124,7 @@
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower2_mid"
 	{
@@ -136,7 +136,7 @@
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		"StatusHealth"				"3000"		// Base health.
-		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"StatusHealthRegen"			"3"			// Health regeneration rate.
 	}
 	//=========================================================
 	// TIER 3
