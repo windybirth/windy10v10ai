@@ -37,6 +37,32 @@ local tBotNameList = {
 	"npc_dota_hero_skeleton_king"
 }
 
+local tSkillCustomNameList = {
+	"npc_dota_hero_zuus",
+	"npc_dota_hero_crystal_maiden",
+	"npc_dota_hero_techies",
+	"npc_dota_hero_necrolyte",
+	"npc_dota_hero_skywrath_mage",
+	"npc_dota_hero_phantom_assassin",
+	"npc_dota_hero_queenofpain",
+	"npc_dota_hero_mirana",
+	"npc_dota_hero_earthshaker",
+	"npc_dota_hero_nevermore"
+}
+
+local tAPLevelList = {
+	17,
+	19,
+	21,
+	22,
+	23,
+	24,
+	26,
+	27,
+	28,
+	29,
+	30
+}
 
 function AIGameMode:ArrayShuffle(array)
 	local size = #array
@@ -254,13 +280,13 @@ function KillBounty(hHero, attckerUnit)
 
 	-- bounty
 	local hLevel = hHero:GetLevel()
-	local killBounty = hLevel * 10 + 100
+	local killBounty = hLevel * 5 + 150
 	local msgKill = "<font color='#045ceb'> "..attackName.." </font>击杀了 "..killedName.." 获得赏金(bounty)<font color='#fef02e'>"..killBounty.."</font>！"
-	PlayerResource:ModifyGold(attackerPlayerId, killBounty, true, 0)
-	GameRules:SendCustomMessage(msgKill, attackerPlayer:GetTeamNumber(), 1)
+	--PlayerResource:ModifyGold(attackerPlayerId, killBounty, true, 0)
+	--GameRules:SendCustomMessage(msgKill, attackerPlayer:GetTeamNumber(), 1)
 
-	if streak > 5 then
-		local streakBounty = 10 * streak * streak + 200
+	if streak > 4 then
+		local streakBounty = 10 * streak * streak + 400
 		local msgStreak = "<font color='#045ceb'> "..attackName.." </font>终结了 "..killedName.." 的 <font color='#cc0000'>"..streak.."</font> 连杀。获得额外赏金(bounty)<font color='#fef02e'>"..streakBounty.."</font>！"
 		attackerPlayer:ModifyGold(streakBounty, true, 0)
 		GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
@@ -336,6 +362,28 @@ function AIGameMode:OnPlayerLevelUp(keys)
 	Timers:CreateTimer(0.5, function ()
 		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.14)
 	end)
+
+
+	-- Set Ability Points
+	local hero = EntIndexToHScript(keys.player):GetAssignedHero()
+	local level = keys.level
+
+	for i,v in ipairs(tSkillCustomNameList) do
+	  if v == hero:GetName() then
+			for _,lv in ipairs(tAPLevelList) do
+			  if lv == level then
+					print("-----------------debug-----------------", hero:GetName().."level:"..level.." Add AP")
+
+						-- Save current unspend AP
+					local unspendAP = hero:GetAbilityPoints()
+					hero:SetAbilityPoints(1 + unspendAP)
+					break
+			  end
+			end
+
+	    break
+	  end
+	end
 end
 
 
@@ -355,6 +403,7 @@ function AIGameMode:OnGetLoadingSetOptions(eventSourceIndex, args)
 	self.iDireTowerEndure = tonumber(args.game_options.dire_tower_endure)
 	self.iRadiantTowerHeal = tonumber(args.game_options.radiant_tower_heal)
 	self.iDireTowerHeal = tonumber(args.game_options.dire_tower_heal)
+	self.iStartingGold = tonumber(args.game_options.starting_gold)
 	self.bSameHeroSelection = args.game_options.same_hero_selection
 	self.bFastCourier = args.game_options.fast_courier
 	self:PreGameOptions()

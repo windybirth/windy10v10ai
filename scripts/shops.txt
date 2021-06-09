@@ -139,7 +139,6 @@
 		"item"		"item_arcane_octarine_core"
 		"item"		"item_necronomicon"
 		"item"		"item_witch_blade"
-		"item"		"item_cyclone"
 		"item"		"item_rod_of_atos"
 		"item"		"item_dagon"
 		"item"		"item_orchid"
@@ -149,6 +148,7 @@
 		"item"		"item_gungir"
 		"item"		"item_wind_waker"
 		"item"		"item_bloodstone"
+		"item"		"item_hallowed_scepter"
 	}
 
 	// Level 3 - Purple Recipes

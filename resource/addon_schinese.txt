@@ -28,6 +28,7 @@
 		"dire_tower_endure"	"夜魇建筑防御加成等级"
 		"radiant_tower_heal"	"天辉建筑生命回复加成"
 		"dire_tower_heal"	"夜魇建筑生命回复加成"
+		"starting_gold"	"初始金钱"
 		"same_hero_selection"  "Allow Same Hero Selection"
 		"fast_courier"  "Fast Invulnerable Courier"
 		"hide_chat_team"  "Hide Chat and Team"
@@ -69,18 +70,21 @@
 		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed"						"Aghanim's Regalia Synth"
 		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"Permanently granted all benefits from Aghanim's Regalia: Ultimate Upgrade, +30 to all attributes, +350 health, +350 mana."
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2"									"Aghanim's Regalia"
-		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"Use: Consume the Aghanim's Regalia to permanently gain Ultimate Upgrade, +30 to all attributes, +350 health, +350 mana.\nPassive: Ultimate Upgrade - Upgrades the ultimate, and some abilities, of certain heroes."
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"<h1>使用</h1>消耗阿哈利姆法杖永久获得神杖加成, +30 全属性, +350 生命, +350 魔法。\n<h1>被动：技能升级</h1>提升所有英雄的终极技能或基础技能效果。"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Lore"							"The regalia of a wizard with demigod-like powers."
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_all_stats"				"+$all"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_mana"					"+$mana"
 
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"急速之翼"
-		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度."
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度。"
 		"DOTA_Tooltip_ability_item_wings_of_haste"										"急速之翼"
-		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"Use: Consume the Wings of Haste to permanently gain %bonus_movement_speed% movement speed."
+		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"使用: 消耗急速之翼永久获得 %bonus_movement_speed% 移动速度。"
 		"DOTA_Tooltip_ability_item_wings_of_haste_Lore"								"Wings that grant swift retribution in battle."
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_movement_speed"				"+$move_speed"
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_attack_speed"			"+$attack"
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_all_stats"					"+$all"
 
 		"DOTA_Tooltip_Ability_item_royal_jelly_custom"									"Royal Jelly"
 		"DOTA_Tooltip_Ability_item_royal_jelly_custom_Description"					"<h1>Use: Consume</h1> Grants a target allied unit a permanent buff that provides +%health_regen% Health Regen and +%mana_regen% Mana Regen.<br><br>Does not stack on the same unit."
@@ -174,6 +178,7 @@
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
 		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+最大生命恢复"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"						"%+$evasion"
 
 		"DOTA_Tooltip_Ability_item_force_staff_2"			"风力法杖"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>主动：风力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
@@ -227,7 +232,28 @@
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"一位大师级战士使用的强力棍棒。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
-		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"	
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"
+
+		"DOTA_Tooltip_Ability_item_magic_scepter"								"Magic Scepter"
+		"DOTA_Tooltip_Ability_item_magic_scepter_Description"					"<h1>Active: Spell Boost</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续 %active_boost_duration% 秒.\n<h1>Passive: Arcane Refinement</h1>每点智力获得 %spell_amp_per_int% 法术增强."
+		"DOTA_Tooltip_Ability_item_magic_scepter_Lore"							"An ancient relic from the War Wizards, mildly deteriorated.."
+		"DOTA_Tooltip_Ability_item_magic_scepter_bonus_intelligence"			"+$int"
+		"DOTA_Tooltip_Ability_item_recipe_magic_scepter"						"Magic Scepter Recipe"
+
+		"DOTA_Tooltip_modifier_item_magic_scepter_active"	                	"Spell Boost"
+		"DOTA_Tooltip_modifier_item_magic_scepter_active_Description"	        "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
+
+		//Hallowed
+		"DOTA_Tooltip_Ability_item_hallowed_scepter"							"Hallowed Scepter"
+		"DOTA_Tooltip_Ability_item_hallowed_scepter_Description"				"<h1>Active: Hallowed Spell Boost</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续  %active_boost_duration% 秒.\n<h1>Passive: Arcane Refinement</h1>每点智力获得 %spell_amp_per_int% 法术增强.\n\n<h1>Passive: <font color='#a74abd'>Hallowed</font></h1>受到古老的光明与黑暗精神的祝福。不能出售或销毁."
+		"DOTA_Tooltip_Ability_item_hallowed_scepter_Lore"						"An ancient relic, mysteriously restored to its prime by unknown entities."
+		"DOTA_Tooltip_Ability_item_hallowed_scepter_bonus_intelligence"			"+$int"
+		"DOTA_Tooltip_Ability_item_recipe_hallowed_scepter"						"Hallowed Scepter Recipe"
+
+		"DOTA_Tooltip_modifier_item_hallowed_scepter_active"	                "Hallowed Spell Boost"
+		"DOTA_Tooltip_modifier_item_hallowed_scepter_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
+
+
 		///////////////////////////////////////////////////
 		//
 		//            Heroes

@@ -4,12 +4,12 @@
 	{
 		"drop_rates"
 		{
-			"1:00"
+			"0:00"
 			{
-				"0" "10"
-				"1" "8"
-				"2" "8"
-				"3" "6"
+				"0" "20"
+				"1" "16"
+				"2" "12"
+				"3" "8"
 			}
 		}
 
@@ -17,16 +17,16 @@
 		{
 			"item_keen_optic"				  "1"
 			"item_poor_mans_shield"		"1"
-			"item_philosophers_stone"		  "1"
 			"item_chipped_vest"				  "1"
-			"item_mysterious_hat"				  "1"
+			"item_royal_jelly_custom"		  "1"
+			"item_ring_of_aquila"		  "1"
 		}
 	}
 	"2"
 	{
 		"drop_rates"
 		{
-			"9:00"
+			"8:00"
 			{
 				"0" "10"
 				"1" "8"
@@ -37,19 +37,18 @@
 
 		"items"
 		{
-			"item_ring_of_aquila"			  "1"
 			"item_imp_claw"					  "1"
-			"item_royal_jelly_custom"		  "1"
-			"item_orb_of_destruction"		  "1"
 			"item_grove_bow"				  "1"
 			"item_quicksilver_amulet"				  "1"
+			"item_mysterious_hat"				  "1"
+			"item_quickening_charm"				  "1"
 		}
 	}
 	"3"
 	{
 		"drop_rates"
 		{
-			"17:00"
+			"16:00"
 			{
 				"0" "8"
 				"1" "6"
@@ -60,7 +59,7 @@
 
 		"items"
 		{
-			"item_titan_sliver"				  "1"
+			"item_orb_of_destruction"		  "1"
 			"item_elven_tunic"				  "1"
 			"item_cloak_of_flames"				  "1"
 			"item_ceremonial_robe"				  "1"
@@ -72,7 +71,7 @@
 	{
 		"drop_rates"
 		{
-			"25:00"
+			"24:00"
 			{
 				"0" "5"
 				"1" "4"
@@ -83,7 +82,8 @@
 
 		"items"
 		{
-			"item_timeless_relic"			  "1"
+			"item_titan_sliver"				  "1"
+			"item_seer_stone"				  "1"
 			"item_ninja_gear"				  "1"
 			"item_minotaur_horn"			  "1"
 			"item_trickster_cloak"			  "1"
@@ -108,8 +108,8 @@
 			"item_mirror_shield"			  "1"
 			"item_fallen_sky"			  	  "1"
 			"item_spell_prism"				  "1"
-			"item_book_of_shadows"			  "1"
-			"item_ballista"					  "1"
+			"item_apex"						  "1"
+			"item_demonicon"				  "1"
 		}
 	}
 	"6"
@@ -127,11 +127,11 @@
 
 		"items"
 		{
-			"item_seer_stone"				  "1"
 			"item_desolator_2"				  "1"
 			"item_pirate_hat_custom"		  "1"
 			"item_giants_ring"				  "1"
-			"item_apex"						  "1"
+			"item_timeless_relic"			  "1"
+			"item_ballista"					  "1"
 		}
 	}
 }
