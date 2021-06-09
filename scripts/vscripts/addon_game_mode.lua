@@ -39,7 +39,6 @@ function AIGameMode:InitGameOptions()
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
 
 	GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops.kv")
-	GameRules:SetStartingGold( 999 )
 	GameRules:SetUseBaseGoldBountyOnHeroes( true )
 end
 
@@ -84,6 +83,7 @@ function AIGameMode:PreGameOptions()
 	self.iDireTowerEndure = self.iDireTowerEndure or 3
 	self.iRadiantTowerHeal = self.iRadiantTowerHeal or 0
 	self.iDireTowerHeal = self.iDireTowerHeal or 0
+	self.iStartingGold = self.iStartingGold or 999
 	self.bSameHeroSelection = self.bSameHeroSelection or 1
 	self.bFastCourier = self.bFastCourier or 1
 	self.fGameStartTime = 0
@@ -93,7 +93,17 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetModifyExperienceFilter( Dynamic_Wrap( AIGameMode, "FilterXP" ), self )
 	GameRules:GetGameModeEntity():SetRuneSpawnFilter( Dynamic_Wrap( AIGameMode, "FilterRune" ), self )
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
+	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
+
+	GameRules:SpawnNeutralCreeps()
+
+	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+		if PlayerResource:IsValidPlayer(i) then
+			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
+		end
+	end
+
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )
 	end
@@ -132,7 +142,7 @@ function AIGameMode:PreGameOptions()
 		} -- value in 7.23
 		local iRequireLevel = tLevelRequire[30]
 		for i = 31, self.iMaxLevel do
-			iRequireLevel = iRequireLevel+i*200
+			iRequireLevel = iRequireLevel+i*150
 			table.insert(tLevelRequire, iRequireLevel)
 		end
 		GameRules:GetGameModeEntity():SetUseCustomHeroLevels( true )
