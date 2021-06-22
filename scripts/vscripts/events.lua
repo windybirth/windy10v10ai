@@ -288,8 +288,8 @@ function KillBounty(hHero, attckerUnit)
 	if streak > 4 then
 		local streakBounty = 10 * streak * streak + 400
 		local msgStreak = "<font color='#045ceb'> "..attackName.." </font>终结了 "..killedName.." 的 <font color='#cc0000'>"..streak.."</font> 连杀。获得额外赏金(bounty)<font color='#fef02e'>"..streakBounty.."</font>！"
-		attackerPlayer:ModifyGold(streakBounty, true, 0)
-		GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
+		--attackerPlayer:ModifyGold(streakBounty, true, 0)
+		--GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
 	end
 end
 
