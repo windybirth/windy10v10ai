@@ -483,17 +483,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"40"
+				"bonus_damage"			"60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"40"
+				"bonus_attack_speed"	"60"
 			}
 			"04"
 			{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_all_stats"		"10"
+					"bonus_all_stats"		"20"
 			}
 		}
 
@@ -2217,6 +2217,7 @@
 		"ScriptFile"                    "items/item_magic_scepter.lua"
 
 		"AbilityCooldown"				"60.0"
+		"AbilityManaCost"			"300"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2302,7 +2303,8 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"50.0"
+		"AbilityManaCost"			"600"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------

@@ -2159,7 +2159,67 @@
 			}
 		}
 	}
+	"tinker_laser"
+	{
+		"MaxLevel" "7"
 
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 16 14"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 130 150 170 190 210 230"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_hero"			"3 3.5 4 4.5 5.0 5.5 6.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_tinker_4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"laser_damage"			"80 160 240 320 400 450 500"
+				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
+			}
+		}
+	}
+
+	"tinker_heat_seeking_missile"
+	{
+		"MaxLevel" "7"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"125 200 275 350 400 450 500"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets"			"2 2 2 3 3 4 4"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets_scepter"	"4 4 4 5 5 6 6"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
 	"witch_doctor_voodoo_restoration"
 	{
 		"MaxLevel" "6"
