@@ -1190,7 +1190,7 @@
 					"06"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"vampiric_aura"			"20"
+							"vampiric_aura"			"17"
 					}
 					"07"
 					{

@@ -158,7 +158,6 @@ function AIGameMode:PreGameOptions()
 end
 
 function AIGameMode:SpawnNeutralCreeps30sec()
-	GameRules:SendCustomMessage("SpawnNeutralCreeps30sec", 1, 1)
 	GameRules:SpawnNeutralCreeps()
 	Timers:CreateTimer(60, function ()
 		AIGameMode:SpawnNeutralCreeps30sec()
@@ -166,8 +165,7 @@ function AIGameMode:SpawnNeutralCreeps30sec()
 end
 
 function AIGameMode:StartAddItemToNPC()
-	Timers:CreateTimer(30, function ()
-		GameRules:SendCustomMessage("StartAddItemToNPC!", 1, 1)
+	Timers:CreateTimer(1500, function ()
 		AIGameMode:AddItemToNPC()
 	end)
 end

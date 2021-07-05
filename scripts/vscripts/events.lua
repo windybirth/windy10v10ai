@@ -228,7 +228,7 @@ function AIGameMode:OnEntityKilled(keys)
 	if iLevel <= 30 then
 		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100)
 	else
-		fRespawnTime = 60*self.iRespawnTimePercentage/100
+		fRespawnTime = (iLevel + 30)*self.iRespawnTimePercentage/100
 	end
 
 	if hHero:FindModifierByName('modifier_necrolyte_reapers_scythe') then
