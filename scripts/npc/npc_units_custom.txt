@@ -17,6 +17,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_top"
 	{
@@ -26,6 +28,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower1_bot"
 	{
@@ -35,6 +39,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_bot"
 	{
@@ -44,6 +50,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower1_mid"
 	{
@@ -53,6 +61,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_mid"
 	{
@@ -62,6 +72,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	//=========================================================
 	// TIER 2
@@ -77,6 +89,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_top"
 	{
@@ -89,6 +103,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower2_bot"
 	{
@@ -101,6 +117,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_bot"
 	{
@@ -113,6 +131,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower2_mid"
 	{
@@ -125,6 +145,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_mid"
 	{
@@ -137,6 +159,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	//=========================================================
 	// TIER 3
@@ -152,6 +176,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_top"
 	{
@@ -164,6 +190,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower3_bot"
 	{
@@ -176,6 +204,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_bot"
 	{
@@ -188,6 +218,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower3_mid"
 	{
@@ -200,6 +232,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_mid"
 	{
@@ -381,7 +415,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"6000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower4"
@@ -395,7 +429,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"6000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -414,7 +448,7 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.35"			// Speed of attack.
+		"AttackRate"				"0.32"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -423,7 +457,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
+		"StatusHealth"				"24000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================

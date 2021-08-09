@@ -20,6 +20,7 @@
 			"item_chipped_vest"				  "1"
 			"item_royal_jelly_custom"		  "1"
 			"item_ring_of_aquila"		  "1"
+			"item_philosophers_stone"		  "1"
 		}
 	}
 	"2"

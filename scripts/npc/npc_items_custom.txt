@@ -580,12 +580,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen"			"6.0"
+				"health_regen"			"5.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"4.0"
+				"mana_regen"			"3.5"
 			}
 		}
 	}

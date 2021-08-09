@@ -189,7 +189,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"150"
+				"cast_range_bonus"			"100"
 			}
 			"02"
 			{
@@ -208,7 +208,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"12"
+				"bonus_agility"			"10"
 			}
 			"02"
 			{
@@ -223,7 +223,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_chance"			"100"
+				"block_chance"			"80"
 			}
 		}
 	}
@@ -1542,9 +1542,51 @@
 	{
 		"AbilityCooldown"				"110"
 	}
+	"omniknight_purification"
+	{
+		"MaxLevel" "7"
+		"AbilityCastRange"				"550 580 610 640 670 700 730"
+		"AbilityCooldown"				"18 16 14 12 11 10 9"
+		"AbilityManaCost"				"80 95 110 125 140 155 170"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"90 160 230 300 370 440 510"
+				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_1"
+			}
+		}
+	}
 	"omniknight_guardian_angel"
 	{
-		"AbilityCooldown"				"110 100 90"
+		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilityManaCost"				"125 175 250 325 400"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5.0 6.5 8.0 9.0 10.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"1200 1300 1400 1500 1600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration_scepter"			"8.0 9.0 10.0 11.0 12.0"
+				"RequiresScepter"		"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_regen"					"20 40 60 80 100"
+				"RequiresScepter"		"1"
+			}
+		}
 	}
 	"special_bonus_unique_omniknight_7"
 	{
@@ -1678,10 +1720,8 @@
 
 
 
-
-
 	// --------------------------------
-	// -------- Agility Heroes --------
+	// -------- Agility Heroes 敏捷英雄--------
 	// --------------------------------
 	"drow_ranger_marksmanship"
 	{
@@ -1884,20 +1924,20 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_evasion"				"15 25 35 45 55"
+				"bonus_evasion"				"15 25 35 45 50"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
 			}
 		}
 	}
 	"phantom_assassin_coup_de_grace"
 	{
-		"MaxLevel" "4"
+		"MaxLevel" "5"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_bonus"				"200 325 450 575"
+				"crit_bonus"				"200 325 450 525 600"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
 			}
 		}
@@ -2222,19 +2262,19 @@
 	}
 	"witch_doctor_voodoo_restoration"
 	{
-		"MaxLevel" "6"
-		"AbilityManaCost"				"35 40 45 50 60 80"
+		"MaxLevel" "7"
+		"AbilityManaCost"				"35 40 45 50 60 80 100"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"mana_per_second"			"8 12 16 20 25 30"
+				"mana_per_second"			"8 12 16 20 25 30 40"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"heal"						"16 24 32 40 50 60"
+				"heal"						"16 24 32 40 50 60 80"
 			}
 		}
 	}
@@ -2547,13 +2587,66 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage"			"10 30 50"
+				"aura_damage"			"10 30 50 70 90"
 			}
 		}
 	}
 	"warlock_rain_of_chaos"
 	{
-		"AbilityCooldown"				"120 110 100"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"golem_duration"			"60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.0 1.1 1.2 1.3 1.4"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip"			"1000 2000 3000 4000 5000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip"			"100 150 200 250 300"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_armor_tooltip"		"6 9 12 16 20"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_2"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_regen_tooltip"		"25 50 75 100 125"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip_scepter"	"750 1500 2250 3000 4000"
+				"RequiresScepter"		"1"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip_scepter"	"75 110 150 205 270"
+				"RequiresScepter"		"1"
+			}
+			"11"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hp_dmg_reduction_scepter"	"25 15 5 -5 -15"
+				"RequiresScepter"		"1"
+			}
+		}
 	}
 	"winter_wyvern_arctic_burn"
 	{
