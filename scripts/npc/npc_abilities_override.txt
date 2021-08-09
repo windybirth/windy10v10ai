@@ -722,6 +722,19 @@
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"300.0"
 		"ItemInitialStockTime"			"330.0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_bonus"				"700"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_per_use"			"350"
+			}
+		}
 	}
 	//=================================================================================================================
 	// Magic Stick 魔棒
@@ -1560,6 +1573,7 @@
 	}
 	"omniknight_guardian_angel"
 	{
+		"MaxLevel" "5"
 		"AbilityCooldown"				"120 110 100 90 80"
 		"AbilityManaCost"				"125 175 250 325 400"
 		"AbilitySpecial"
@@ -2383,6 +2397,12 @@
 				"damage_per_kill"			"25"
 				"LinkedSpecialBonus"			"special_bonus_unique_lion_8"
 				"CalculateSpellDamageTooltip"	"0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown_scepter"			"60.0 40.0 20.0"
+				"RequiresScepter"			"1"
 			}
 		}
 	}

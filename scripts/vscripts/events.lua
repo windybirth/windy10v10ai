@@ -1,5 +1,6 @@
 local tBotNameList = {
 	"npc_dota_hero_axe",
+	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
 	"npc_dota_hero_bounty_hunter",
 	"npc_dota_hero_bloodseeker",
@@ -24,7 +25,6 @@ local tBotNameList = {
 	"npc_dota_hero_phantom_assassin",
 	"npc_dota_hero_pudge",
 	"npc_dota_hero_sand_king",
-	"npc_dota_hero_nevermore",
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_sniper",
 	"npc_dota_hero_sven",
@@ -137,6 +137,7 @@ function AIGameMode:OnGameStateChanged(keys)
 			local iPlayerNumRadiant = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
 			local iPlayerNumDire = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
 			math.randomseed(math.floor(Time()*1000000))
+			-- 随机英雄列表
 			self:ArrayShuffle(tBotNameList)
 			local sDifficulty = "unfair"
 			--Timers:CreateTimer(function()
