@@ -361,7 +361,7 @@ end
 function AIGameMode:OnPlayerLevelUp(keys)
 	local iEntIndex=PlayerResource:GetPlayer(keys.player-1):GetAssignedHero():entindex()
 	Timers:CreateTimer(0.5, function ()
-		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.14)
+		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.1)
 	end)
 
 

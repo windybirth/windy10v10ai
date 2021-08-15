@@ -2590,7 +2590,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"count"						"5 6 7 8 9 10 11 12"
+				"count"						"5 6 7 8 9 10 11"
 			}
 			"02"
 			{
@@ -2613,8 +2613,7 @@
 	}
 	"warlock_rain_of_chaos"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilityCooldown"				"120 100 80"
 		"AbilitySpecial"
 		{
 			"01"
@@ -2625,45 +2624,33 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.0 1.1 1.2 1.3 1.4"
+				"stun_duration"				"1.0 1.2 1.4"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"golem_hp_tooltip"			"1000 2000 3000 4000 5000"
+				"golem_hp_tooltip"			"1000 2000 3000"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"golem_dmg_tooltip"			"100 150 200 250 300"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"golem_armor_tooltip"		"6 9 12 16 20"
-				"LinkedSpecialBonus"		"special_bonus_unique_warlock_2"
+				"golem_dmg_tooltip"			"100 150 200"
 			}
 			"07"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"golem_regen_tooltip"		"25 50 75 100 125"
+				"golem_regen_tooltip"		"25 50 75"
 			}
 			"09"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"golem_hp_tooltip_scepter"	"750 1500 2250 3000 4000"
+				"golem_hp_tooltip_scepter"	"1000 2000 3000"
 				"RequiresScepter"		"1"
 			}
 			"10"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"golem_dmg_tooltip_scepter"	"75 110 150 205 270"
-				"RequiresScepter"		"1"
-			}
-			"11"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"hp_dmg_reduction_scepter"	"25 15 5 -5 -15"
+				"golem_dmg_tooltip_scepter"	"100 150 200"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -3068,6 +3055,60 @@
 			{
 				"var_type"								"FIELD_FLOAT"
 				"ball_lightning_travel_cost_percent"	"0.75"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Roshan: Slam
+	//=================================================================================================================
+	"roshan_slam"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"450"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration_hero"	"3.0"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_amount"		"80"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"100"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_growth"		"30"
+			}
+		}
+	}
+	"giant_wolf_critical_strike"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_mult"					"300"
 			}
 		}
 	}
