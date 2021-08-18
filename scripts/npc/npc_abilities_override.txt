@@ -189,7 +189,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"150"
+				"cast_range_bonus"			"100"
 			}
 			"02"
 			{
@@ -208,7 +208,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"12"
+				"bonus_agility"			"10"
 			}
 			"02"
 			{
@@ -223,7 +223,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"block_chance"			"100"
+				"block_chance"			"80"
 			}
 		}
 	}
@@ -722,6 +722,19 @@
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"300.0"
 		"ItemInitialStockTime"			"330.0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_bonus"				"700"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"xp_per_use"			"350"
+			}
+		}
 	}
 	//=================================================================================================================
 	// Magic Stick 魔棒
@@ -1377,7 +1390,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"350"
+				"cast_range_bonus"			"300"
 			}
 			"03"
 			{
@@ -1392,7 +1405,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"6.0"
+				"bonus_mana_regen"		"5.0"
 			}
 		}
 	}
@@ -1542,9 +1555,52 @@
 	{
 		"AbilityCooldown"				"110"
 	}
+	"omniknight_purification"
+	{
+		"MaxLevel" "7"
+		"AbilityCastRange"				"550 580 610 640 670 700 730"
+		"AbilityCooldown"				"18 16 14 12 11 10 9"
+		"AbilityManaCost"				"80 95 110 125 140 155 170"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"90 160 230 300 370 440 510"
+				"LinkedSpecialBonus"	"special_bonus_unique_omniknight_1"
+			}
+		}
+	}
 	"omniknight_guardian_angel"
 	{
-		"AbilityCooldown"				"110 100 90"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilityManaCost"				"125 175 250 325 400"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"5.0 6.5 8.0 9.0 10.0"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"1200 1300 1400 1500 1600"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration_scepter"			"8.0 9.0 10.0 11.0 12.0"
+				"RequiresScepter"		"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_regen"					"20 40 60 80 100"
+				"RequiresScepter"		"1"
+			}
+		}
 	}
 	"special_bonus_unique_omniknight_7"
 	{
@@ -1678,10 +1734,8 @@
 
 
 
-
-
 	// --------------------------------
-	// -------- Agility Heroes --------
+	// -------- Agility Heroes 敏捷英雄--------
 	// --------------------------------
 	"drow_ranger_marksmanship"
 	{
@@ -1884,20 +1938,20 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_evasion"				"15 25 35 45 55"
+				"bonus_evasion"				"15 25 35 45 50"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
 			}
 		}
 	}
 	"phantom_assassin_coup_de_grace"
 	{
-		"MaxLevel" "4"
+		"MaxLevel" "5"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_bonus"				"200 325 450 575"
+				"crit_bonus"				"200 325 450 525 600"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_4"
 			}
 		}
@@ -2159,22 +2213,82 @@
 			}
 		}
 	}
+	"tinker_laser"
+	{
+		"MaxLevel" "7"
 
+		// Time
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20 18 16 14"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"110 130 150 170 190 210 230"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration_hero"			"3 3.5 4 4.5 5.0 5.5 6.0"
+				"LinkedSpecialBonus"	"special_bonus_unique_tinker_4"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"laser_damage"			"80 160 240 320 380 440 500"
+				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
+			}
+		}
+	}
+
+	"tinker_heat_seeking_missile"
+	{
+		"MaxLevel" "7"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"125 200 275 350 400 450 500"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets"			"2 2 2 3 3 4 4"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"targets_scepter"	"4 4 4 5 5 6 6"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
 	"witch_doctor_voodoo_restoration"
 	{
-		"MaxLevel" "6"
-		"AbilityManaCost"				"35 40 45 50 60 80"
+		"MaxLevel" "7"
+		"AbilityManaCost"				"35 40 45 50 60 80 100"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"mana_per_second"			"8 12 16 20 25 30"
+				"mana_per_second"			"8 12 16 20 25 30 40"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"heal"						"16 24 32 40 50 60"
+				"heal"						"16 24 32 40 50 60 80"
 			}
 		}
 	}
@@ -2283,6 +2397,12 @@
 				"damage_per_kill"			"25"
 				"LinkedSpecialBonus"			"special_bonus_unique_lion_8"
 				"CalculateSpellDamageTooltip"	"0"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"cooldown_scepter"			"60.0 40.0 20.0"
+				"RequiresScepter"			"1"
 			}
 		}
 	}
@@ -2463,12 +2583,20 @@
 	}
 	"warlock_fatal_bonds"
 	{
+		"MaxLevel" "7"
+		"AbilityManaCost"				"100 110 120 130 140 150 160"
 		"AbilitySpecial"
 		{
-			"03"
+			"01"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"7.0"
+				"var_type"					"FIELD_INTEGER"
+				"count"						"5 6 7 8 9 10 11"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_share_percentage"	"12 14 16 18 20 22 24"
+				"LinkedSpecialBonus"		"special_bonus_unique_warlock_5"
 			}
 		}
 	}
@@ -2479,13 +2607,53 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage"			"10 30 50"
+				"aura_damage"			"10 30 50 70 90"
 			}
 		}
 	}
 	"warlock_rain_of_chaos"
 	{
-		"AbilityCooldown"				"120 110 100"
+		"AbilityCooldown"				"120 100 80"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"golem_duration"			"60"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"stun_duration"				"1.0 1.2 1.4"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip"			"1000 2000 3000"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip"			"100 150 200"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_regen_tooltip"		"25 50 75"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_hp_tooltip_scepter"	"1000 2000 3000"
+				"RequiresScepter"		"1"
+			}
+			"10"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"golem_dmg_tooltip_scepter"	"100 150 200"
+				"RequiresScepter"		"1"
+			}
+		}
 	}
 	"winter_wyvern_arctic_burn"
 	{
@@ -2887,6 +3055,60 @@
 			{
 				"var_type"								"FIELD_FLOAT"
 				"ball_lightning_travel_cost_percent"	"0.75"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Roshan: Slam
+	//=================================================================================================================
+	"roshan_slam"
+	{
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"450"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"slow_duration_hero"	"3.0"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"slow_amount"		"80"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"100"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_growth"		"30"
+			}
+		}
+	}
+	"giant_wolf_critical_strike"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_chance"				"25"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"crit_mult"					"300"
 			}
 		}
 	}

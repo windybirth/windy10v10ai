@@ -1,5 +1,6 @@
 local tBotNameList = {
 	"npc_dota_hero_axe",
+	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
 	"npc_dota_hero_bounty_hunter",
 	"npc_dota_hero_bloodseeker",
@@ -24,7 +25,6 @@ local tBotNameList = {
 	"npc_dota_hero_phantom_assassin",
 	"npc_dota_hero_pudge",
 	"npc_dota_hero_sand_king",
-	"npc_dota_hero_nevermore",
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_sniper",
 	"npc_dota_hero_sven",
@@ -47,7 +47,8 @@ local tSkillCustomNameList = {
 	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_mirana",
 	"npc_dota_hero_earthshaker",
-	"npc_dota_hero_nevermore"
+	"npc_dota_hero_nevermore",
+	"npc_dota_hero_tinker"
 }
 
 local tAPLevelList = {
@@ -137,6 +138,7 @@ function AIGameMode:OnGameStateChanged(keys)
 			local iPlayerNumRadiant = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
 			local iPlayerNumDire = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
 			math.randomseed(math.floor(Time()*1000000))
+			-- 随机英雄列表
 			self:ArrayShuffle(tBotNameList)
 			local sDifficulty = "unfair"
 			--Timers:CreateTimer(function()
@@ -228,7 +230,7 @@ function AIGameMode:OnEntityKilled(keys)
 	if iLevel <= 30 then
 		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100)
 	else
-		fRespawnTime = 60*self.iRespawnTimePercentage/100
+		fRespawnTime = (iLevel + 30)*self.iRespawnTimePercentage/100
 	end
 
 	if hHero:FindModifierByName('modifier_necrolyte_reapers_scythe') then
@@ -288,8 +290,8 @@ function KillBounty(hHero, attckerUnit)
 	if streak > 4 then
 		local streakBounty = 10 * streak * streak + 400
 		local msgStreak = "<font color='#045ceb'> "..attackName.." </font>终结了 "..killedName.." 的 <font color='#cc0000'>"..streak.."</font> 连杀。获得额外赏金(bounty)<font color='#fef02e'>"..streakBounty.."</font>！"
-		attackerPlayer:ModifyGold(streakBounty, true, 0)
-		GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
+		--attackerPlayer:ModifyGold(streakBounty, true, 0)
+		--GameRules:SendCustomMessage(msgStreak, attackerPlayer:GetTeamNumber(), 1)
 	end
 end
 
@@ -360,7 +362,7 @@ end
 function AIGameMode:OnPlayerLevelUp(keys)
 	local iEntIndex=PlayerResource:GetPlayer(keys.player-1):GetAssignedHero():entindex()
 	Timers:CreateTimer(0.5, function ()
-		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.14)
+		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.1)
 	end)
 
 
