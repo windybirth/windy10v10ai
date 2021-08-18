@@ -6,6 +6,46 @@
 		"VisionDaytimeRange"		"50" // 350
 		"VisionNighttimeRange"		"50" // 350
 	}
+	"npc_dota_roshan"
+	{
+		// Abilities
+		//----------------------------------------------------------------
+		"Ability1"					"roshan_spell_block"	// Ability 1.
+		"Ability2"					"roshan_bash"			// Ability 2.
+		"Ability3"					"roshan_slam"			// Ability 3.
+		"Ability4"					"roshan_inherent_buffs"	// Ability 4.
+		"Ability5"					"roshan_devotion"		// Ability 5.
+		"Ability6"					"giant_wolf_critical_strike"						// Ability 6 - Extra.
+		"Ability7"					""						// Ability 7 - Extra.
+		"Ability8"					""						// Ability 8 - Extra.
+
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"50"			// Physical protection.
+		"MagicalResistance"				"75"									// Magical protection (percentage).
+
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
+		"AttackDamageMin"			"100"		// Damage range min.
+		"AttackDamageMax"			"100"		// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.4"			// Speed of attack.
+		"AttackAnimationPoint"		"0.6"		// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"150"		// Range within a target can be acquired.
+		"AttackRange"				"150"		// Range within a target can be attacked.
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"310"		// Speed
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"6000"		// Base health.
+		"StatusHealthRegen"			"50"		// Health regeneration rate.
+		"StatusMana"				"0"		// Base mana.
+		"StatusManaRegen"			"0"		// Mana regeneration rate.
+
+	}
+
 	//=========================================================
 	// TIER 1
 	//=========================================================
@@ -17,6 +57,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_top"
 	{
@@ -26,6 +68,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower1_bot"
 	{
@@ -35,6 +79,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_bot"
 	{
@@ -44,6 +90,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower1_mid"
 	{
@@ -53,6 +101,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower1_mid"
 	{
@@ -62,6 +112,8 @@
 		"ArmorPhysical"			"20" // 17
 		"AttackAcquisitionRange"	"700"		// Range within a target can be acquired.
 		"AttackRange"				"700"		// Range within a target can be attacked.
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
 	}
 	//=========================================================
 	// TIER 2
@@ -77,6 +129,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_top"
 	{
@@ -89,6 +143,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower2_bot"
 	{
@@ -101,6 +157,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_bot"
 	{
@@ -113,6 +171,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower2_mid"
 	{
@@ -125,6 +185,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower2_mid"
 	{
@@ -137,6 +199,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"3"			// Health regeneration rate.
+		"BountyGoldMin"				"300"		// Gold earned min.
+		"BountyGoldMax"				"450"		// Gold earned max.
 	}
 	//=========================================================
 	// TIER 3
@@ -152,6 +216,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_top"
 	{
@@ -164,6 +230,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower3_bot"
 	{
@@ -176,6 +244,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_bot"
 	{
@@ -188,6 +258,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_goodguys_tower3_mid"
 	{
@@ -200,6 +272,8 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	"npc_dota_badguys_tower3_mid"
 	{
@@ -381,7 +455,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"6000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
 	"npc_dota_badguys_tower4"
@@ -395,7 +469,7 @@
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
-		"StatusHealth"				"6000"		// Base health.
+		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -414,7 +488,7 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.35"			// Speed of attack.
+		"AttackRate"				"0.32"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -423,7 +497,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
+		"StatusHealth"				"24000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -442,7 +516,7 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.35"			// Speed of attack.
+		"AttackRate"				"0.32"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -451,7 +525,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
+		"StatusHealth"				"24000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"

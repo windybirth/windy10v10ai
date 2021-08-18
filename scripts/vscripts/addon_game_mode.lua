@@ -96,7 +96,11 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
 
-	GameRules:SpawnNeutralCreeps()
+	-------------------------
+	AIGameMode:SpawnNeutralCreeps30sec()
+
+	-- TODO
+	-- AIGameMode:StartAddItemToNPC()
 
 	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
 		if PlayerResource:IsValidPlayer(i) then
@@ -110,39 +114,39 @@ function AIGameMode:PreGameOptions()
 	if self.iMaxLevel ~= 30 then
 		local tLevelRequire = {
 			0,
-			230,
-			600,
-			1080,
-			1660,
-			2260,
-			2980,
-			3730,
-			4510,
-			5320,
-			6160,
-			7030,
-			7930,
-			9155,
-			10405,
-			11680,
-			12980,
-			14305,
-			15805,
-			17395,
-			18995,
-			20845,
-			22945,
-			25295,
-			27895,
-			31395,
-			35895,
-			41395,
-			47895,
-			55395,
-		} -- value in 7.23
+			180,
+			510,
+			960,
+			1520,
+			2110,
+			2850,
+			3640,
+			4480,
+			5370,
+			6310,
+			7380,
+			8580,
+			10005,
+			11555,
+			13230,
+			15030,
+			16955,
+			18955,
+			21045,
+			23145,
+			25495,
+			28095,
+			30945,
+			34045,
+			37545,
+			42045,
+			47545,
+			54045,
+			61545,
+		} -- value fixed
 		local iRequireLevel = tLevelRequire[30]
 		for i = 31, self.iMaxLevel do
-			iRequireLevel = iRequireLevel+i*150
+			iRequireLevel = iRequireLevel+i*100
 			table.insert(tLevelRequire, iRequireLevel)
 		end
 		GameRules:GetGameModeEntity():SetUseCustomHeroLevels( true )
@@ -153,6 +157,30 @@ function AIGameMode:PreGameOptions()
 	self.PreGameOptionsSet = true
 end
 
+function AIGameMode:SpawnNeutralCreeps30sec()
+	GameRules:SpawnNeutralCreeps()
+	Timers:CreateTimer(60, function ()
+		AIGameMode:SpawnNeutralCreeps30sec()
+	end)
+end
+
+function AIGameMode:StartAddItemToNPC()
+	Timers:CreateTimer(1500, function ()
+		AIGameMode:AddItemToNPC()
+	end)
+end
+
+function AIGameMode:AddItemToNPC(itemName)
+-- TODO
+	GameRules:SendCustomMessage("AddItemToNPC!", 1, 1)
+	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+		if PlayerResource:IsValidPlayer(i) then
+			if PlayerResource:GetPlayer(i) and PlayerResource:HasSelectedHero(i) then
+				PlayerResource:GetPlayer(i):AddItemByName(itemName)
+			end
+		end
+	end
+end
 
 function AIGameMode:FilterGold(tGoldFilter)
 	local iGold = tGoldFilter["gold"]

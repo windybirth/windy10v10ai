@@ -119,6 +119,7 @@
 							<Label text="100" id="100"/>
 							<Label text="150" id="150"/>
 							<Label text="200" id="200"/>
+							<Label text="500" id="500"/>
 						</DropDown>
 					</Panel>
 					<Panel id="RadiantTowerPowerPanel"	class="GameOptionsSubPanel">
@@ -218,6 +219,7 @@
 							<Label text="999" id="999"/>
 							<Label text="1500" id="1500"/>
 							<Label text="2000" id="2000"/>
+							<Label text="5000" id="5000"/>
 						</DropDown>
 					</Panel>
 					<Panel id="SameHeroSelectionPanel"	class="GameOptionsSubPanel">

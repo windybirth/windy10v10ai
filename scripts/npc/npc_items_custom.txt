@@ -483,17 +483,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"40"
+				"bonus_damage"			"60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"40"
+				"bonus_attack_speed"	"60"
 			}
 			"04"
 			{
 					"var_type"				"FIELD_INTEGER"
-					"bonus_all_stats"		"10"
+					"bonus_all_stats"		"20"
 			}
 		}
 
@@ -580,12 +580,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen"			"6.0"
+				"health_regen"			"5.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"4.0"
+				"mana_regen"			"3.5"
 			}
 		}
 	}
@@ -1043,12 +1043,12 @@
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "4"
+							"bonus_mana_regen"      "3"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "300"
+							"cast_range_bonus"      "250"
 					}
 			}
 	}
@@ -1106,12 +1106,12 @@
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "5"
+							"bonus_mana_regen"      "3.5"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "350"
+							"cast_range_bonus"      "275"
 					}
 			}
 	}
@@ -1190,7 +1190,7 @@
 					"06"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"vampiric_aura"			"20"
+							"vampiric_aura"			"17"
 					}
 					"07"
 					{
@@ -2000,7 +2000,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"400"
+				"cast_range_bonus"			"350"
 			}
 			"03"
 			{
@@ -2015,7 +2015,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"12.0"
+				"bonus_mana_regen"		"8.0"
 			}
 		}
 	}
@@ -2217,6 +2217,7 @@
 		"ScriptFile"                    "items/item_magic_scepter.lua"
 
 		"AbilityCooldown"				"60.0"
+		"AbilityManaCost"			"300"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2302,7 +2303,8 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"50.0"
+		"AbilityManaCost"			"600"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
