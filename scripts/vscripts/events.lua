@@ -47,7 +47,8 @@ local tSkillCustomNameList = {
 	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_mirana",
 	"npc_dota_hero_earthshaker",
-	"npc_dota_hero_nevermore"
+	"npc_dota_hero_nevermore",
+	"npc_dota_hero_tinker"
 }
 
 local tAPLevelList = {

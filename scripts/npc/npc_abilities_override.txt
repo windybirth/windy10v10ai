@@ -1390,7 +1390,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"350"
+				"cast_range_bonus"			"300"
 			}
 			"03"
 			{
@@ -1405,7 +1405,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"6.0"
+				"bonus_mana_regen"		"5.0"
 			}
 		}
 	}
@@ -2238,7 +2238,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"laser_damage"			"80 160 240 320 400 450 500"
+				"laser_damage"			"80 160 240 320 380 440 500"
 				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
 			}
 		}

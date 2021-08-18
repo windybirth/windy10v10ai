@@ -1043,12 +1043,12 @@
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "4"
+							"bonus_mana_regen"      "3"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "300"
+							"cast_range_bonus"      "250"
 					}
 			}
 	}
@@ -1106,12 +1106,12 @@
 					"02"
 					{
 							"var_type"              "FIELD_FLOAT"
-							"bonus_mana_regen"      "5"
+							"bonus_mana_regen"      "3.5"
 					}
 					"03"
 					{
 							"var_type"              "FIELD_INTEGER"
-							"cast_range_bonus"      "350"
+							"cast_range_bonus"      "275"
 					}
 			}
 	}
@@ -2000,7 +2000,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"400"
+				"cast_range_bonus"			"350"
 			}
 			"03"
 			{
@@ -2015,7 +2015,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"12.0"
+				"bonus_mana_regen"		"8.0"
 			}
 		}
 	}
