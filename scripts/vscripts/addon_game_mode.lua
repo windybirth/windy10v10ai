@@ -39,7 +39,7 @@ function AIGameMode:InitGameOptions()
 	GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
 
 	GameRules.DropTable = LoadKeyValues("scripts/kv/item_drops.kv")
-	GameRules:SetUseBaseGoldBountyOnHeroes( true )
+	-- GameRules:SetUseBaseGoldBountyOnHeroes( true )
 end
 
 
@@ -182,17 +182,27 @@ function AIGameMode:AddItemToNPC(itemName)
 	end
 end
 
+------------------------------------------------------------------
+--                          Gold Filter                         --
+------------------------------------------------------------------
 function AIGameMode:FilterGold(tGoldFilter)
 	local iGold = tGoldFilter["gold"]
 	local iPlayerID = tGoldFilter["player_id_const"]
 	local iReason = tGoldFilter["reason_const"]
 	local bReliable = tGoldFilter["reliable"] == 1
 
+	if iReason == DOTA_ModifyGold_HeroKill then
+	print("FilterGold iPlayerID:"..iPlayerID)
+	print("FilterGold iGold:"..iGold)
+			if iGold > 500 then
+					iGold = 500
+			end
+	end
+
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
 		tGoldFilter["gold"] = math.floor(iGold*self.fRadiantGoldMultiplier)
 	else
 		tGoldFilter["gold"] = math.floor(iGold*self.fDireGoldMultiplier)
-		--print("Dire Gold", tGoldFilter["gold"], iGold)
 	end
 	return true
 end
