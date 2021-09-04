@@ -189,7 +189,8 @@
 		"DOTA_Tooltip_Ability_item_force_staff_2_Note1"							"风力法杖不会打断目标的动作。"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
 		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_intellect"					"+$int"
-		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_health_regen"					"+$hp_regen"
+		"DOTA_Tooltip_Ability_item_force_staff_2_bonus_mana_regen"					"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_force_staff_2_spell_amp"			"%+$spell_amp"
 
 		"DOTA_Tooltip_Ability_item_force_staff_3"			"黄金法杖"
 		"DOTA_Tooltip_Ability_item_force_staff_3_Description"						"<h1>主动：黄金之力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
@@ -198,7 +199,8 @@
 		"DOTA_Tooltip_Ability_item_force_staff_3_Note1"							"黄金法杖不会打断目标的动作。"
 		"DOTA_Tooltip_Ability_item_force_staff_3_Note2"							"对时间结界，决斗或黑洞内的单位无效。"
 		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_intellect"					"+$int"
-		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_health_regen"					"+$hp_regen"
+		"DOTA_Tooltip_Ability_item_force_staff_3_bonus_mana_regen"					"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_force_staff_3_spell_amp"			"%+$spell_amp"
 
 		"DOTA_Tooltip_ability_item_insight_armor"                               "Armor of Insight"
 		"DOTA_Tooltip_ability_item_insight_armor_Description"					"<h1>Active: A Stroke of Insight</h1>Significantly boosts the strength of the Aura of Insight for %duration% seconds.<br><br>Additional HP Regen: %aura_regen_buff%<br>Additional Damage Reduction: %aura_damage_reduction_buff%%%<br><br>Radius: %radius%\n<h1>Passive: Aura of Insight</h1>Gives allied units %aura_regen_base% health regeneration and %aura_damage_reduction_base%%% incoming damage reduction.<br><br>Radius: %radius%"

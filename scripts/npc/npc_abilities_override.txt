@@ -1581,7 +1581,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"5.0 6.5 8.0 9.0 10.0"
+				"duration"					"5.0 6.0 7.0 8.0 9.0"
 			}
 			"02"
 			{
@@ -1591,7 +1591,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_scepter"			"8.0 9.0 10.0 11.0 12.0"
+				"duration_scepter"			"8.0 9.0 10.0 10.5 11.0"
 				"RequiresScepter"		"1"
 			}
 			"04"
@@ -1609,7 +1609,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"40"
+				"value"				"35"
 				"ad_linked_ability"			"omniknight_guardian_angel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
