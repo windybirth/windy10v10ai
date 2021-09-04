@@ -815,7 +815,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"3600"
+			"ItemCost"						"5000"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -824,7 +824,7 @@
 			"ItemResult"					"item_wasp"
 			"ItemRequirements"
 			{
-					"01"						"item_butterfly;item_eagle;item_greater_crit"
+					"01"						"item_butterfly;item_greater_crit"
 			}
 	}
 	"item_wasp"
@@ -859,7 +859,7 @@
 					"01"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_agility"					"60"
+							"bonus_agility"					"30"
 					}
 					"02"
 					{
@@ -869,7 +869,7 @@
 					"03"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_evasion"					"35"
+							"bonus_evasion"					"30"
 					}
 					"04"
 					{
@@ -1129,7 +1129,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"2550"
+			"ItemCost"						"3800"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -1170,7 +1170,7 @@
 					"01"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"bonus_all_stats"		"20"
+							"bonus_all_stats"		"10"
 					}
 					"03"
 					{
@@ -1549,17 +1549,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"600"
+				"bonus_health"			"500"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_pct"		"2.2"
+				"health_regen_pct"		"2.1"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_evasion"			"20"
+				"bonus_evasion"			"15"
 			}
 		}
 		"Modifiers"
@@ -1603,7 +1603,7 @@
 		"ItemResult"					"item_force_staff_2"
 		"ItemRequirements"
 		{
-			"01"						"item_force_staff;item_staff_of_wizardry"
+			"01"						"item_force_staff;item_null_talisman;item_null_talisman"
 		}
 	}
 
@@ -1614,9 +1614,13 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_force_staff"
+		"BaseClass"						"item_datadriven"
 		"ID"							"9053"
 		"AbilityTextureName"			"item_force_staff_2"
+		"Model"        "models/props_gameplay/red_box.vmdl"
+		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+
+		"AbilityCastAnimation"  "ACT_DOTA_IDLE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
@@ -1624,15 +1628,40 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"700"
+		"AbilityCastRange"				"900"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"20.0"
 		"AbilitySharedCooldown"			"force"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"75"
+		"AbilityManaCost"				"150"
+		"ItemCost"            "2225"
 
+		"ItemKillable" "0"
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+
+		"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
+		"ItemQuality"         "rare"
+		"ItemAliases"         "fs;force staff"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"SideShop"     "0"
+		"SecretShop"   "0"
+
+		"ItemStackable" "0"
+		"ItemPermanent" "1"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+
+		"precache"
+		{
+			"soundfile" "soundevents/game_sounds_items.vsndevts"
+			"particle"  "particles/items_fx/force_staff.vpcf"
+			"particle"  "particles/status_fx/status_effect_forcestaff.vpcf"
+		}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1640,12 +1669,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"20"
+				"bonus_intellect"		"25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"5"
+				"bonus_mana_regen"	"4"
 			}
 			"03"
 			{
@@ -1654,9 +1683,99 @@
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"enemy_cast_range"			"950"
+				"var_type"      "FIELD_INTEGER"
+				"push_speed"    "1500"
 			}
+			"05"
+			{
+				"var_type"      "FIELD_FLOAT"
+				"push_duration" "0.4"
+			}
+			"06"
+			{
+				"var_type"    "FIELD_INTEGER"
+				"tree_radius" "100"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"10"
+			}
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"  "DOTA_Item.ForceStaff.Activate"
+				"Target"  "TARGET"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"  "modifier_item_force_staff_effect"
+				"Target"  "TARGET"
+			}
+			"RunScript"
+			{
+				"ScriptFile"  "items/item_force_staff.lua"
+				"Function"  "ForceStaff"
+				"Target"  "TARGET"
+			}
+			"ApplyMotionController"
+			// For this: gfycat.com/BraveHideousGiantschnauzer -> check: bit.ly/1KWulqA
+			{
+					"Target"    "TARGET"
+					"ScriptFile"    "items/item_force_staff.lua"
+					"HorizontalControlFunction" "ForceHorizontal"
+			}
+		}
+		"Modifiers"
+		{
+
+				"modifier_item_force_staff_passive"
+				{
+						"Passive"  "1"
+						"IsHidden" "1"
+
+						"Attributes" "MODIFIER_ATTRIBUTE_NONE"
+						"Properties"
+						{
+								"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+								"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+								"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"             "%spell_amp"
+						}
+				}
+				"modifier_item_force_staff_effect"
+				{
+
+					"Duration"  "%push_duration"
+
+					"OverrideAnimation" "ACT_DOTA_FLAIL"
+
+					"StatusEffectName"     "particles/status_fx/status_effect_forcestaff.vpcf"
+					"StatusEffectPriority"  "10"
+
+					"OnCreated"
+					{
+						"AttachEffect"
+						{
+							"EffectName"  "particles/items_fx/force_staff.vpcf"
+							"EffectAttachType" "follow_origin"
+							"Target"  "TARGET"
+						}
+					}
+
+					"ThinkInterval"  "0.03"
+					"OnIntervalThink"
+					{
+						"DestroyTrees"
+						{
+							"Target"  "TARGET"
+							"Radius"  "%tree_radius"
+						}
+
+					}
+
+				}
 		}
 	}
 
@@ -1683,20 +1802,25 @@
 		"ItemResult"					"item_force_staff_3"
 		"ItemRequirements"
 		{
-			"01"						"item_force_staff_2;item_staff_of_wizardry"
+			"01"						"item_force_staff_2;item_null_talisman;item_null_talisman"
 		}
 	}
 
 	//=================================================================================================================
 	// Force Staff
 	//=================================================================================================================
+
 	"item_force_staff_3"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_force_staff"
+		"BaseClass"						"item_datadriven"
 		"ID"							"9055"
 		"AbilityTextureName"			"item_force_staff_3"
+		"Model"        "models/props_gameplay/red_box.vmdl"
+		"Effect"       "particles/generic_gameplay/dropped_item.vpcf"
+
+		"AbilityCastAnimation"  "ACT_DOTA_IDLE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH | DOTA_UNIT_TARGET_TEAM_CUSTOM"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_CUSTOM"
@@ -1704,15 +1828,40 @@
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"850"
+		"AbilityCastRange"				"1200"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"17.0"
 		"AbilitySharedCooldown"			"force"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50"
+		"AbilityManaCost"				"200"
+		"ItemCost"            "2225"
 
+		"ItemKillable" "0"
+		"ItemSellable" "1"
+		"ItemPurchasable" "1"
+		"ItemDroppable" "1"
+		"ItemShareability" "ITEM_NOT_SHAREABLE"
+
+		"ItemShopTags"          "int;damage;attack_speed;hard_to_tag"
+		"ItemQuality"         "rare"
+		"ItemAliases"         "fs;force staff"
+		"ItemDeclarations"        "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+
+		"SideShop"     "0"
+		"SecretShop"   "0"
+
+		"ItemStackable" "0"
+		"ItemPermanent" "1"
+		"ItemDisassembleRule" "DOTA_ITEM_DISASSEMBLE_NEVER"
+
+		"precache"
+		{
+			"soundfile" "soundevents/game_sounds_items.vsndevts"
+			"particle"  "particles/items_fx/force_staff.vpcf"
+			"particle"  "particles/status_fx/status_effect_forcestaff.vpcf"
+		}
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1720,12 +1869,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"30"
+				"bonus_intellect"		"40"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"8"
+				"bonus_mana_regen"	"8"
 			}
 			"03"
 			{
@@ -1734,9 +1883,99 @@
 			}
 			"04"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"enemy_cast_range"			"1050"
+				"var_type"      "FIELD_INTEGER"
+				"push_speed"    "1500"
 			}
+			"05"
+			{
+				"var_type"      "FIELD_FLOAT"
+				"push_duration" "0.4"
+			}
+			"06"
+			{
+				"var_type"    "FIELD_INTEGER"
+				"tree_radius" "100"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"20"
+			}
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"  "DOTA_Item.ForceStaff.Activate"
+				"Target"  "TARGET"
+			}
+			"ApplyModifier"
+			{
+				"ModifierName"  "modifier_item_force_staff_effect"
+				"Target"  "TARGET"
+			}
+			"RunScript"
+			{
+				"ScriptFile"  "items/item_force_staff.lua"
+				"Function"  "ForceStaff"
+				"Target"  "TARGET"
+			}
+			"ApplyMotionController"
+			// For this: gfycat.com/BraveHideousGiantschnauzer -> check: bit.ly/1KWulqA
+			{
+					"Target"    "TARGET"
+					"ScriptFile"    "items/item_force_staff.lua"
+					"HorizontalControlFunction" "ForceHorizontal"
+			}
+		}
+		"Modifiers"
+		{
+
+				"modifier_item_force_staff_passive"
+				{
+						"Passive"  "1"
+						"IsHidden" "1"
+
+						"Attributes" "MODIFIER_ATTRIBUTE_NONE"
+						"Properties"
+						{
+								"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS" "%bonus_intellect"
+								"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT" "%bonus_mana_regen"
+								"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"             "%spell_amp"
+						}
+				}
+				"modifier_item_force_staff_effect"
+				{
+
+					"Duration"  "%push_duration"
+
+					"OverrideAnimation" "ACT_DOTA_FLAIL"
+
+					"StatusEffectName"     "particles/status_fx/status_effect_forcestaff.vpcf"
+					"StatusEffectPriority"  "10"
+
+					"OnCreated"
+					{
+						"AttachEffect"
+						{
+							"EffectName"  "particles/items_fx/force_staff.vpcf"
+							"EffectAttachType" "follow_origin"
+							"Target"  "TARGET"
+						}
+					}
+
+					"ThinkInterval"  "0.03"
+					"OnIntervalThink"
+					{
+						"DestroyTrees"
+						{
+							"Target"  "TARGET"
+							"Radius"  "%tree_radius"
+						}
+
+					}
+
+				}
 		}
 	}
 	//=================================================================================================================
@@ -1811,7 +2050,7 @@
 			"04"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"damage_reduction"      "-8"
+				"damage_reduction"      "-5"
 			}
 			"05"
 			{
@@ -1826,7 +2065,7 @@
 			"07"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_base"    "-8"
+				"aura_damage_reduction_base"    "-6"
 			}
 			"08"
 			{
@@ -1836,7 +2075,7 @@
 			"11"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_buff"    "-12"
+				"aura_damage_reduction_buff"    "-9"
 			}
 			"13"
 			{
@@ -2217,7 +2456,7 @@
 		"ScriptFile"                    "items/item_magic_scepter.lua"
 
 		"AbilityCooldown"				"60.0"
-		"AbilityManaCost"			"300"
+		"AbilityManaCost"			"500"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2232,8 +2471,6 @@
 		"ItemSellable"					"1"
 
 
-
-
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -2246,7 +2483,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.15"
+				"spell_amp_per_int"			"0.1"
 			}
 			"03"
 			{
@@ -2256,7 +2493,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"active_boost_duration"		"3"
+				"active_boost_duration"		"4"
 			}
 		}
 	}
@@ -2303,8 +2540,8 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
-		"AbilityCooldown"				"50.0"
-		"AbilityManaCost"			"600"
+		"AbilityCooldown"				"60.0"
+		"AbilityManaCost"			"900"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2335,7 +2572,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.25"
+				"spell_amp_per_int"			"0.2"
 			}
 			"03"
 			{
@@ -2345,7 +2582,7 @@
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"active_boost_duration"		"6"
+				"active_boost_duration"		"5"
 			}
 		}
 	}
