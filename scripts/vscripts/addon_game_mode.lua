@@ -192,8 +192,6 @@ function AIGameMode:FilterGold(tGoldFilter)
 	local bReliable = tGoldFilter["reliable"] == 1
 
 	if iReason == DOTA_ModifyGold_HeroKill then
-	print("FilterGold iPlayerID:"..iPlayerID)
-	print("FilterGold iGold:"..iGold)
 			if iGold > 500 then
 					iGold = 500
 			end

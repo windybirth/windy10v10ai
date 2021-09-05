@@ -91,6 +91,8 @@ function modifier_bot_attack_tower_pick_rune:OnCreated()
 	self:StartIntervalThink(0.5)
 end
 
+-- bot strategy
+-- 机器人策略
 function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	if IsClient() then return end
 
@@ -99,14 +101,26 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
+	elseif (GameTime >= (25 * 60)) then						-- LATEGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(6)
+	elseif (GameTime >= (20 * 60)) then						-- MIDGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
 	elseif (GameTime >= (15 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
+	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(2)
 	else													-- EARLYGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(false)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(1)
 	end
 
 	local hParent = self:GetParent()
