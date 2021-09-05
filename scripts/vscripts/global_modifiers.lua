@@ -125,7 +125,7 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 
 	local hParent = self:GetParent()
 	local hRune = Entities:FindByClassnameWithin(nil, "dota_item_rune", hParent:GetOrigin(), 1000)
-	if hParent:GetHealth()/hParent:GetMaxHealth() > 0.4 and hRune then
+	if hParent:GetHealth()/hParent:GetMaxHealth() > 0.5 and hRune then
 		local tOrder = {
 			UnitIndex = hParent:entindex(),
 			OrderType = DOTA_UNIT_ORDER_PICKUP_RUNE,
@@ -133,6 +133,8 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 		}
 		ExecuteOrderFromTable(tOrder)
 	end
+
+	BotThink:ThinkPurchase(hParent)
 end
 
 
@@ -230,7 +232,7 @@ function modifier_tower_power:OnAttackLanded(keys)
 	if keys.attacker ~= self:GetParent() then return end
 	local fPower = StackToPercentage(self:GetStackCount())
 	if fPower <= 1.0 then return end
-	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, math.floor((fPower-1)*75), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, self:OnTooltip(), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
 
 	for i, v in ipairs(tTargets) do
 		if v ~= keys.target then
@@ -239,7 +241,7 @@ function modifier_tower_power:OnAttackLanded(keys)
 				victim = v,
 				damage = keys.damage,
 				damage_type = DAMAGE_TYPE_PHYSICAL,
-				damage_flag = DOTA_DAMAGE_FLAG_IGNORES_PHYSICAL_ARMOR
+				damage_flag = DOTA_DAMAGE_FLAG_NONE
 			})
 		end
 	end
@@ -258,7 +260,7 @@ end
 function modifier_tower_power:OnTooltip()
 	local fPower = StackToPercentage(self:GetStackCount())
 	if fPower <= 1.0 then return 0 end
-	return math.floor((fPower-1)*75)
+	return math.floor((fPower-1)*50+24)
 end
 
 
