@@ -70,7 +70,6 @@ function BotThink:ThinkSell(hero)
   local iCost = math.floor(GetItemCost(item_sell_name)/2)
 
   for i = 0, 14 do
-    if hero:HasItemInInventory(vName) then
       local iItem = hero:GetItemInSlot(i)
       if iItem then
         local iItem_name = iItem:GetName()
@@ -82,6 +81,5 @@ function BotThink:ThinkSell(hero)
           return
         end
       end
-    end
   end
 end

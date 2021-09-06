@@ -186,50 +186,6 @@
 	{
 		"Bot"
 		{
-			"SupportsEasyMode"	"1"
-			"Loadout"
-			{
-				"item_tango"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
-				"item_flask"		"ITEM_CONSUMABLE | ITEM_SELLABLE"
-				"item_branches"		"ITEM_CORE | ITEM_SELLABLE"
-				"item_branches"		"ITEM_CORE | ITEM_SELLABLE"
-				"item_magic_stick"		"ITEM_CORE | ITEM_SELLABLE"
-				"item_recipe_magic_wand"		"ITEM_CORE | ITEM_SELLABLE"
-				"item_magic_wand"	"ITEM_DERIVED | ITEM_SELLABLE"
-
-				"item_boots"					"ITEM_CORE"
-				"item_wind_lace" 		"ITEM_CORE"
-				"item_ring_of_regen" 			"ITEM_CORE"
-				"item_recipe_tranquil_boots" 	"ITEM_DERIVED"
-				"item_tranquil_boots"			"ITEM_DERIVED"
-
-				"item_blink"	"ITEM_CORE"
-
-
-				"item_chainmail"			"ITEM_CORE"
-				"item_broadsword"			"ITEM_CORE"
-				"item_recipe_blade_mail"					"ITEM_CORE"
-				"item_blade_mail" 			"ITEM_CORE | ITEM_DERIVED"
-
-				"item_mithril_hammer"		"ITEM_LUXURY"
-				"item_ogre_axe"		"ITEM_LUXURY"
-				"item_recipe_black_king_bar"		"ITEM_LUXURY"
-				"item_black_king_bar"		"ITEM_LUXURY | ITEM_DERIVED"
-
-				"item_reaver"		"ITEM_LUXURY"
-				"item_vitality_booster"		"ITEM_LUXURY"
-				"item_recipe_heart"		"ITEM_LUXURY"
-				"item_heart"		"ITEM_DERIVED"
-
-				"item_platemail"		"ITEM_LUXURY"
-				"item_mystic_staff"		"ITEM_LUXURY"
-				"item_recipe_shivas_guard"		"ITEM_LUXURY"
-				"item_shivas_guard"		"ITEM_LUXURY | ITEM_DERIVED"
-
-				"item_aghanims_shard"			"ITEM_CONSUMABLE"
-
-
-			}
 			"Build"
 			{
 				"1"			"axe_counter_helix"
@@ -241,33 +197,67 @@
 				"7"			"axe_battle_hunger"
 				"8"			"axe_counter_helix"
 				"9"			"axe_counter_helix"
-				"10"		"special_bonus_movement_speed_20"
+				"10"		"special_bonus_mp_regen_150"
 				"11"		"axe_counter_helix"
 				"12"		"axe_culling_blade"
 				"13"		"axe_berserkers_call"
 				"14"		"axe_berserkers_call"
-				"15"		"special_bonus_mp_regen_2"
+				"15"		"special_bonus_unique_axe_4"
 				"16"		"axe_berserkers_call"
 				"17"		""
 				"18"		"axe_culling_blade"
 				"19"		""
-				"20"		"special_bonus_hp_regen_20"
+				"20"		"special_bonus_unique_axe_5"
 				"21"		""
 				"22"		""
 				"23"		""
 				"24"		""
-				"25"		"special_bonus_unique_axe"
+				"25"		"special_bonus_unique_axe_2"
+				"26"		""
+				"27"		"special_bonus_magic_resistance_12"
+				"28"		"special_bonus_movement_speed_25"
+				"29"		"special_bonus_hp_regen_20"
+				"30"		"special_bonus_unique_axe"
 			}
-			"HeroType"		"DOTA_BOT_TANK | DOTA_BOT_STUN_SUPPORT"
-			"LaningInfo"
+		}
+	}
+
+	"npc_dota_hero_nevermore"
+	{
+		"Bot"
+		{
+			"Build"
 			{
-				"SoloDesire"		"1"
-				"RequiresBabysit"	"0"
-				"ProvidesBabysit"	"1"
-				"SurvivalRating"	"2"
-				"RequiresFarm"		"1"
-				"ProvidesSetup"		"0"
-				"RequiresSetup"		"1"
+				"1"		"nevermore_necromastery"
+				"2"		"nevermore_shadowraze1"
+				"3"		"nevermore_shadowraze1"
+				"4"		"nevermore_necromastery"
+				"5"		"nevermore_shadowraze1"
+				"6"		"nevermore_necromastery"
+				"7"		"nevermore_shadowraze1"
+				"8"		"nevermore_necromastery"
+				"9"		"nevermore_requiem"
+				"10"		"special_bonus_spell_amplify_6"
+				"11"		"nevermore_dark_lord"
+				"12"		"nevermore_requiem"
+				"13"		"nevermore_shadowraze1"
+				"14"		"nevermore_shadowraze1"
+				"15"		"special_bonus_unique_nevermore_3"
+				"16"		"nevermore_necromastery"
+				"17"		"nevermore_necromastery"
+				"18"		"nevermore_requiem"
+				"19"		"nevermore_dark_lord"
+				"20"		"special_bonus_unique_nevermore_2"
+				"21"		"nevermore_dark_lord"
+				"22"		"nevermore_dark_lord"
+				"23"		"nevermore_dark_lord"
+				"24"		""
+				"25"		"special_bonus_unique_nevermore_5"
+				"26"		"special_bonus_attack_speed_20"
+				"27"		"special_bonus_movement_speed_25"
+				"28"		"special_bonus_unique_nevermore_1"
+				"29"		"special_bonus_cooldown_reduction_30"
+				"30"		""
 			}
 		}
 	}
@@ -371,46 +361,6 @@
 				"RequiresSetup"		"2"
 			}
 			"HeroType"		"DOTA_BOT_GANKER | DOTA_BOT_NUKER"
-		}
-	}
-
-	"npc_dota_hero_nevermore"
-	{
-		"Bot"
-		{
-			"Build"
-			{
-				"1"		"nevermore_necromastery"
-				"2"		"nevermore_shadowraze1"
-				"3"		"nevermore_shadowraze1"
-				"4"		"nevermore_necromastery"
-				"5"		"nevermore_shadowraze1"
-				"6"		"nevermore_necromastery"
-				"7"		"nevermore_shadowraze1"
-				"8"		"nevermore_necromastery"
-				"9"		"nevermore_requiem"
-				"10"		"special_bonus_spell_amplify_6"
-				"11"		"nevermore_dark_lord"
-				"12"		"nevermore_requiem"
-				"13"		"nevermore_shadowraze1"
-				"14"		"nevermore_shadowraze1"
-				"15"		"special_bonus_unique_nevermore_3"
-				"16"		"nevermore_necromastery"
-				"17"		"nevermore_necromastery"
-				"18"		"nevermore_requiem"
-				"19"		"nevermore_dark_lord"
-				"20"		"special_bonus_unique_nevermore_2"
-				"21"		"nevermore_dark_lord"
-				"22"		"nevermore_dark_lord"
-				"23"		"nevermore_dark_lord"
-				"24"		""
-				"25"		"special_bonus_unique_nevermore_5"
-				"26"		"special_bonus_attack_speed_20"
-				"27"		"special_bonus_movement_speed_25"
-				"28"		"special_bonus_unique_nevermore_1"
-				"29"		"special_bonus_cooldown_reduction_30"
-				"30"		""
-			}
 		}
 	}
 

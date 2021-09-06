@@ -88,7 +88,7 @@ function modifier_bot_attack_tower_pick_rune:RemoveOnDeath() return false end
 
 function modifier_bot_attack_tower_pick_rune:OnCreated()
 	if IsClient() then return end
-	self:StartIntervalThink(0.5)
+	self:StartIntervalThink(1)
 end
 
 -- bot strategy
@@ -124,15 +124,6 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	end
 
 	local hParent = self:GetParent()
-	local hRune = Entities:FindByClassnameWithin(nil, "dota_item_rune", hParent:GetOrigin(), 1000)
-	if hParent:GetHealth()/hParent:GetMaxHealth() > 0.5 and hRune then
-		local tOrder = {
-			UnitIndex = hParent:entindex(),
-			OrderType = DOTA_UNIT_ORDER_PICKUP_RUNE,
-			TargetIndex = hRune:entindex()
-		}
-		ExecuteOrderFromTable(tOrder)
-	end
 
 	BotThink:ThinkPurchase(hParent)
 	BotThink:ThinkSell(hParent)
@@ -272,7 +263,7 @@ function modifier_axe_thinker:IsHidden() return true end
 function modifier_axe_thinker:RemoveOnDeath() return false end
 function modifier_axe_thinker:OnCreated()
 	if IsClient() then return end
-	self:StartIntervalThink(0.04)
+	self:StartIntervalThink(0.06)
 end
 
 function modifier_axe_thinker:DeclareFunctions() return {MODIFIER_EVENT_ON_ABILITY_EXECUTED} end

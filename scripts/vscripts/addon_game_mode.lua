@@ -99,9 +99,6 @@ function AIGameMode:PreGameOptions()
 	-------------------------
 	AIGameMode:SpawnNeutralCreeps30sec()
 
-	-- TODO
-	-- AIGameMode:StartAddItemToNPC()
-
 	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
 		if PlayerResource:IsValidPlayer(i) then
 			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
@@ -159,27 +156,9 @@ end
 
 function AIGameMode:SpawnNeutralCreeps30sec()
 	GameRules:SpawnNeutralCreeps()
-	Timers:CreateTimer(60, function ()
+	Timers:CreateTimer(30, function ()
 		AIGameMode:SpawnNeutralCreeps30sec()
 	end)
-end
-
-function AIGameMode:StartAddItemToNPC()
-	Timers:CreateTimer(1500, function ()
-		AIGameMode:AddItemToNPC()
-	end)
-end
-
-function AIGameMode:AddItemToNPC(itemName)
--- TODO
-	GameRules:SendCustomMessage("AddItemToNPC!", 1, 1)
-	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-		if PlayerResource:IsValidPlayer(i) then
-			if PlayerResource:GetPlayer(i) and PlayerResource:HasSelectedHero(i) then
-				PlayerResource:GetPlayer(i):AddItemByName(itemName)
-			end
-		end
-	end
 end
 
 ------------------------------------------------------------------

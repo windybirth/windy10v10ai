@@ -323,7 +323,12 @@ end
 
 
 function AIGameMode:OnNPCSpawned(keys)
-	if GameRules:State_Get() < DOTA_GAMERULES_STATE_PRE_GAME then return end
+	if GameRules:State_Get() < DOTA_GAMERULES_STATE_PRE_GAME then
+		Timers:CreateTimer(1, function ()
+			AIGameMode:OnNPCSpawned(keys)
+		end)
+		return
+	end
 	local hHero = EntIndexToHScript(keys.entindex)
 	if hHero:IsNull() then return end
 
