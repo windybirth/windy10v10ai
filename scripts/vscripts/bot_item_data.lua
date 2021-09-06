@@ -41,6 +41,8 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter',
 	},
 	npc_dota_hero_bloodseeker = {
+		'item_wraith_band',
+		'item_wraith_band',
 		'item_ultimate_scepter',
 	},
 	npc_dota_hero_bristleback = {
@@ -48,11 +50,13 @@ tBotItemData.purchaseItemList = {
 	},
 	npc_dota_hero_chaos_knight = {
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_crystal_maiden = {
 		'item_branches',
 		'item_branches',
 		'item_recipe_magic_wand',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_omniknight = {
 		'item_ultimate_scepter',
@@ -62,5 +66,7 @@ tBotItemData.purchaseItemList = {
 tBotItemData.sellItemList = {
 	npc_dota_hero_bloodseeker = {
 		'item_quelling_blade',
+		'item_wraith_band',
+		'item_wraith_band',
 	},
 }
