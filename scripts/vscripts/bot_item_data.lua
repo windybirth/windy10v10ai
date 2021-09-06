@@ -3,12 +3,14 @@ tBotItemData = {}
 tBotItemData.purchaseItemList = {
 	npc_dota_hero_axe = {
 		'item_bracer',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_nevermore = {
 		'item_wraith_band',
 		'item_phase_boots',
 		'item_arcane_boots',
 		'item_tranquil_boots',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_juggernaut = {
 		'item_branches',
@@ -19,9 +21,11 @@ tBotItemData.purchaseItemList = {
 		'item_void_stone',
 		'item_broadsword',
 		'item_claymore',
+
 		'item_power_treads',
 		'item_arcane_boots',
 		'item_tranquil_boots',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_bane = {
 		'item_branches',
@@ -34,22 +38,32 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_aether_lens',
 		'item_recipe_aether_lens',
 		'item_void_stone',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_bounty_hunter = {
 		'item_magic_stick',
 		'item_recipe_magic_wand',
+
+		'item_power_treads',
+		'item_arcane_boots',
+		'item_tranquil_boots',
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_bloodseeker = {
 		'item_wraith_band',
 		'item_wraith_band',
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_bristleback = {
+		'item_eternal_shroud',
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 	},
 	npc_dota_hero_chaos_knight = {
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 		'item_aghanims_shard',
 	},
 	npc_dota_hero_crystal_maiden = {
@@ -59,14 +73,50 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 	},
 	npc_dota_hero_omniknight = {
+		'item_headdress','item_fluffy_hat','item_energy_booster','item_magic_wand',
 		'item_ultimate_scepter',
+		'item_aghanims_shard',
 	},
 }
 
+
+tBotItemData.itemConsumableList = {
+	'item_tango_single',
+	'item_tango',
+	'item_clarity',
+	'item_enchanted_mango',
+	'item_flask',
+}
 tBotItemData.sellItemList = {
+	npc_dota_hero_axe = {
+		'item_bracer',
+	},
+	npc_dota_hero_nevermore = {
+		'item_magic_wand',
+		'item_wraith_band',
+		'item_bottle',
+	},
+	npc_dota_hero_juggernaut = {
+		'item_wraith_band',
+		'item_wraith_band',
+	},
+	npc_dota_hero_bane = {
+	},
+	npc_dota_hero_bounty_hunter = {
+		'item_magic_wand',
+	},
 	npc_dota_hero_bloodseeker = {
 		'item_quelling_blade',
 		'item_wraith_band',
 		'item_wraith_band',
+	},
+	npc_dota_hero_bristleback = {
+		'item_magic_wand',
+	},
+	npc_dota_hero_chaos_knight = {
+	},
+	npc_dota_hero_crystal_maiden = {
+	},
+	npc_dota_hero_omniknight = {
 	},
 }

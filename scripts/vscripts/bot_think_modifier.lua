@@ -39,6 +39,23 @@ function BotThink:ThinkSell(hero)
     return
   end
 
+  local itemConsumableList = tBotItemData.itemConsumableList
+  for x,vName in ipairs(itemConsumableList) do
+    if hero:HasItemInInventory(vName) then
+      for i = 0, 14 do
+          local iItem = hero:GetItemInSlot(i)
+          if iItem then
+            local iItem_name = iItem:GetName()
+            if vName == iItem_name then
+              print("Think sell "..hero:GetName().." try to remove "..vName)
+              hero:RemoveItem(iItem)
+              return
+            end
+          end
+      end
+    end
+  end
+
   local iSellTable = tBotItemData.sellItemList[iHeroName]
   if not iSellTable then
     -- hero not has purchase table
@@ -53,6 +70,7 @@ function BotThink:ThinkSell(hero)
   local iCost = math.floor(GetItemCost(item_sell_name)/2)
 
   for i = 0, 14 do
+    if hero:HasItemInInventory(vName) then
       local iItem = hero:GetItemInSlot(i)
       if iItem then
         local iItem_name = iItem:GetName()
@@ -61,7 +79,9 @@ function BotThink:ThinkSell(hero)
           hero:RemoveItem(iItem)
           PlayerResource:ModifyGold(iPlayerId, iCost, true, DOTA_ModifyGold_SellItem)
           table.remove(iSellTable,1)
+          return
         end
       end
+    end
   end
 end
