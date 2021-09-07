@@ -83,7 +83,8 @@ function AIGameMode:PreGameOptions()
 	self.iDireTowerEndure = self.iDireTowerEndure or 3
 	self.iRadiantTowerHeal = self.iRadiantTowerHeal or 0
 	self.iDireTowerHeal = self.iDireTowerHeal or 0
-	self.iStartingGold = self.iStartingGold or 999
+	self.iStartingGoldPlayer = self.iStartingGoldPlayer or 600
+	self.iStartingGoldBot = self.iStartingGoldBot or 600
 	self.bSameHeroSelection = self.bSameHeroSelection or 1
 	self.bFastCourier = self.bFastCourier or 1
 	self.fGameStartTime = 0
@@ -101,7 +102,9 @@ function AIGameMode:PreGameOptions()
 
 	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
 		if PlayerResource:IsValidPlayer(i) then
-			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
+			PlayerResource:SetGold(i, (self.iStartingGoldPlayer-600),true)
+		else
+			PlayerResource:SetGold(i, (self.iStartingGoldBot-600),true)
 		end
 	end
 

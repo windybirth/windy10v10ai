@@ -1,11 +1,34 @@
 require('bot_item_data')
 
 if BotThink == nil then
-
   print("Bot Think initialize!")
 	_G.BotThink = class({}) -- put in the global scope
   BotThink.itemPrice = LoadKeyValues("scripts/kv/item_price.kv")
 end
+
+
+local function FindItemByNameNotIncludeBackpack(hHero, sName)
+	for i = 0, 5 do
+		if hHero:GetItemInSlot(i) and hHero:GetItemInSlot(i):GetName() == sName then return hHero:GetItemInSlot(i) end
+	end
+	return nil
+end
+
+local function FindItemByName(hHero, sName)
+	for i = 0, 8 do
+		if hHero:GetItemInSlot(i) and hHero:GetItemInSlot(i):GetName() == sName then return hHero:GetItemInSlot(i) end
+	end
+	return nil
+end
+
+local function FindItemByNameIncludeStash(hHero, sName)
+	for i = 0, 15 do
+		if hHero:GetItemInSlot(i) and hHero:GetItemInSlot(i):GetName() == sName then return hHero:GetItemInSlot(i) end
+	end
+	return nil
+end
+
+
 
 function BotThink:ThinkPurchase(hero)
   local iHeroName = hero:GetName()
@@ -81,5 +104,20 @@ function BotThink:ThinkSell(hero)
           return
         end
       end
+  end
+end
+
+
+function BotThink:ThinkConsumeItem(hHero)
+  local hHeroName = hHero:GetName()
+  local hPlayerId = hHero:GetPlayerID()
+
+  local itemConsumeList = tBotItemData.itemConsumeList
+  for i,vItemUseName in ipairs(itemConsumeList) do
+    local hItem = FindItemByNameNotIncludeBackpack(hHero, vItemUseName)
+    if hItem then
+        print("Think use "..hHeroName.." try to use item "..vItemUseName)
+				hHero:CastAbilityOnTarget(hHero, hItem, hHero:GetPlayerOwnerID())
+		end
   end
 end

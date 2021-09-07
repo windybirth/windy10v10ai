@@ -116,7 +116,7 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(2)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(3)
 	else													-- EARLYGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(false)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
@@ -127,6 +127,7 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 
 	BotThink:ThinkPurchase(hParent)
 	BotThink:ThinkSell(hParent)
+	BotThink:ThinkConsumeItem(hParent)
 end
 
 
