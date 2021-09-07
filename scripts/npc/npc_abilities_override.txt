@@ -2891,7 +2891,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1 1 1 2 2 3"
+				"stat_loss"				"1 1 1 2 2 2"
 			}
 			"03"
 			{

@@ -155,6 +155,8 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter_2',
 		'item_aghanims_shard',
 		'item_vladmir_2',
+		'item_undying_heart',
+		'item_wasp',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_ultimate_scepter_2',
@@ -163,21 +165,35 @@ tBotItemData.purchaseItemList = {
 
 	npc_dota_hero_earthshaker = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_undying_heart',
 	},
 	npc_dota_hero_jakiro = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
 	},
 	npc_dota_hero_kunkka = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_undying_heart',
 	},
 	npc_dota_hero_lich = {
 		'item_aghanims_shard',
+		'item_hallowed_scepter',
 	},
 	npc_dota_hero_lina = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_hallowed_scepter',
 	},
 	npc_dota_hero_lion = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_hallowed_scepter',
 	},
 	npc_dota_hero_luna = {
 		'item_phase_boots',
@@ -185,11 +201,15 @@ tBotItemData.purchaseItemList = {
 		'item_tranquil_boots',
 
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
 		'item_greater_crit',
 		'item_recipe_wasp',
 	},
 	npc_dota_hero_necrolyte = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_hallowed_scepter',
 	},
 	npc_dota_hero_omniknight = {
 		'item_magic_wand',
@@ -203,9 +223,16 @@ tBotItemData.purchaseItemList = {
 	},
 	npc_dota_hero_oracle = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
 	},
 	npc_dota_hero_phantom_assassin = {
+		'item_phase_boots',
+		'item_arcane_boots',
+		'item_tranquil_boots',
 		'item_aghanims_shard',
+		'item_recipe_abyssal_blade',
+		'item_wasp',
+		'item_ultimate_scepter_2',
 	},
 	npc_dota_hero_pudge = {
 		'item_aghanims_shard',
@@ -217,41 +244,77 @@ tBotItemData.purchaseItemList = {
 		'item_arcane_boots',
 
 		'item_undying_heart',
+		'item_ultimate_scepter_2',
 	},
 	npc_dota_hero_sand_king = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_undying_heart',
 	},
 	npc_dota_hero_skywrath_mage = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_hallowed_scepter',
 	},
 	npc_dota_hero_sniper = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_wasp',
 	},
 	npc_dota_hero_sven = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_undying_heart',
+		'item_wasp',
 	},
 	npc_dota_hero_tiny = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_undying_heart',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_wasp',
 	},
 	npc_dota_hero_viper = {
 		'item_aghanims_shard',
-	},
-	npc_dota_hero_warlock = {
-		'item_aghanims_shard',
+		'item_phase_boots',
+		'item_arcane_boots',
+		'item_tranquil_boots',
+		'item_javelin',
+		'item_javelin',
+		'item_recipe_monkey_king_bar_2',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+		'item_wasp',
 	},
 	npc_dota_hero_windrunner = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_monkey_king_bar_2',
+		'item_wasp',
 	},
 	npc_dota_hero_witch_doctor = {
 		'item_aghanims_shard',
+		'item_ultimate_orb',
+		'item_ultimate_orb',
+
+		'item_hallowed_scepter',
+		'item_arcane_octarine_core',
+		'item_sphere_2',
 	},
 	npc_dota_hero_skeleton_king = {
 		'item_aghanims_shard',
+		'item_ultimate_scepter_2',
+		'item_undying_heart',
+		'item_wasp',
 	},
-
+	npc_dota_hero_zuus = {
+		'item_aghanims_shard',
+	},
 }
 
 
@@ -323,6 +386,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_oracle = {
 	},
 	npc_dota_hero_phantom_assassin = {
+		'item_magic_wand',
 	},
 	npc_dota_hero_pudge = {
 	},
@@ -339,14 +403,16 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_vengefulspirit = {
 	},
 	npc_dota_hero_viper = {
-	},
-	npc_dota_hero_warlock = {
+		'item_wraith_band',
 	},
 	npc_dota_hero_windrunner = {
 	},
 	npc_dota_hero_witch_doctor = {
+		'item_magic_wand',
 	},
 	npc_dota_hero_skeleton_king = {
+	},
+	npc_dota_hero_zuus = {
 	},
 }
 
