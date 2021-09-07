@@ -133,6 +133,7 @@ function AIGameMode:OnGameStateChanged(keys)
 				end
 			end
 		end
+
 		-- Eanble bots and fill empty slots
 		if IsServer() == true then
 			local iPlayerNumRadiant = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
@@ -160,7 +161,19 @@ function AIGameMode:OnGameStateChanged(keys)
 			end
 			GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
 			Tutorial:StartTutorialMode()
-			--Tutorial:SetItemGuide("String") -- Set the current item guide
+
+			-- set start gold
+				for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+					if PlayerResource:IsValidPlayer(i) then
+						if self.tHumanPlayerList[i] then
+							print("Set start gold player")
+							PlayerResource:SetGold(i, (self.iStartingGoldPlayer-600),true)
+						else
+							print("Set start gold bot")
+							PlayerResource:SetGold(i, (self.iStartingGoldBot-600),true)
+						end
+					end
+				end
 		end
 
 	elseif state == DOTA_GAMERULES_STATE_PRE_GAME then

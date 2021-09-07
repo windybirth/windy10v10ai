@@ -84,6 +84,7 @@ tBotItemData.purchaseItemList = {
 		'item_wasp',
 		'item_ultimate_scepter_2',
 		'item_aghanims_shard',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_bristleback = {
 		'item_eternal_shroud',
@@ -128,6 +129,12 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_orb',
 		'item_ultimate_orb',
 		'item_recipe_arcane_octarine_core',
+
+		'item_magic_scepter',
+		'item_mystic_staff',
+		'item_mystic_staff',
+		'item_recipe_hallowed_scepter',
+		'item_sphere_2',
 	},
 	npc_dota_hero_dazzle = {
 		'item_headdress',
@@ -135,6 +142,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_holy_locket',
 		'item_ultimate_scepter_2',
 		'item_aghanims_shard',
+		'item_sphere_2',
 	},
 	npc_dota_hero_death_prophet = {
 		'item_ultimate_scepter_2',

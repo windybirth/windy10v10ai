@@ -100,13 +100,6 @@ function AIGameMode:PreGameOptions()
 	-------------------------
 	AIGameMode:SpawnNeutralCreeps30sec()
 
-	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-		if PlayerResource:IsValidPlayer(i) then
-			PlayerResource:SetGold(i, (self.iStartingGoldPlayer-600),true)
-		else
-			PlayerResource:SetGold(i, (self.iStartingGoldBot-600),true)
-		end
-	end
 
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )
