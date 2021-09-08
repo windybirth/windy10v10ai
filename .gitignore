@@ -5,3 +5,4 @@ panorama/scripts/custom_game/*.vjs_c
 /scripts/vscripts/bots
 /panorama/images/items/*.vtex_c
 /panorama/images/items/*.vxml_c
+/tool/reference

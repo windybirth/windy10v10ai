@@ -1,12 +1,17 @@
 require('bot_item_data')
 
+--------------------
+-- Initial
+--------------------
 if BotThink == nil then
   print("Bot Think initialize!")
 	_G.BotThink = class({}) -- put in the global scope
   BotThink.itemPrice = LoadKeyValues("scripts/kv/item_price.kv")
 end
 
-
+--------------------
+-- local function
+--------------------
 local function FindItemByNameNotIncludeBackpack(hHero, sName)
 	for i = 0, 5 do
 		if hHero:GetItemInSlot(i) and hHero:GetItemInSlot(i):GetName() == sName then return hHero:GetItemInSlot(i) end
@@ -28,30 +33,41 @@ local function FindItemByNameIncludeStash(hHero, sName)
 	return nil
 end
 
+local function BuyItemIfGoldEnough(hHero, iItemName, iPurchaseTable)
+  local iCost = GetItemCost(iItemName)
+  
+  if(hHero:GetGold() >= iCost) then
+    if hHero:GetNumItemsInInventory() > 8 then
+      -- TODO print
+      print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." fail with item count "..hHero:GetNumItemsInInventory())
+    else
+      print("Think purchase "..hHero:GetName().." try to buy "..iItemName.." cost "..iCost)
+      hHero:AddItemByName(iItemName)
+      PlayerResource:SpendGold(hHero:GetPlayerID(), iCost, DOTA_ModifyGold_PurchaseItem)
+      table.remove(iPurchaseTable,1)
+    end
+  end
+end
 
-
-function BotThink:ThinkPurchase(hero)
-  local iHeroName = hero:GetName()
-  local iPlayerId = hero:GetPlayerID()
+--------------------
+-- Item Think
+--------------------
+function BotThink:ThinkPurchase(hHero)
+  local iHeroName = hHero:GetName()
+  
   local iPurchaseTable = tBotItemData.purchaseItemList[iHeroName]
   if not iPurchaseTable then
     -- hero not has purchase table
     return
   end
 
-  local item_purchase_name = iPurchaseTable[1]
-  if not item_purchase_name then
+  local iItemName = iPurchaseTable[1]
+  if not iItemName then
     -- no items to buy
     return
   end
-  local iCost = GetItemCost(item_purchase_name)
 
-  if(hero:GetGold() >= iCost) then
-    print("Think purchase "..hero:GetName().." try to buy "..item_purchase_name.."cost "..iCost)
-    hero:AddItemByName(item_purchase_name)
-    PlayerResource:SpendGold(iPlayerId, iCost, DOTA_ModifyGold_PurchaseItem)
-    table.remove(iPurchaseTable,1)
-  end
+  BuyItemIfGoldEnough(hHero, iItemName, iPurchaseTable)
 end
 
 function BotThink:ThinkSell(hero)
