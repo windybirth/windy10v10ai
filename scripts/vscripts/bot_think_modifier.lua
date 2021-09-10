@@ -39,14 +39,32 @@ local function BuyItemIfGoldEnough(hHero, iItemName, iPurchaseTable)
   if(hHero:GetGold() >= iCost) then
     if hHero:GetNumItemsInInventory() > 8 then
       -- TODO print
-      print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." fail with item count "..hHero:GetNumItemsInInventory())
+      print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." stop with item count "..hHero:GetNumItemsInInventory())
     else
       print("Think purchase "..hHero:GetName().." try to buy "..iItemName.." cost "..iCost)
-      hHero:AddItemByName(iItemName)
-      PlayerResource:SpendGold(hHero:GetPlayerID(), iCost, DOTA_ModifyGold_PurchaseItem)
-      table.remove(iPurchaseTable,1)
+      if hHero:AddItemByName(iItemName) then
+        PlayerResource:SpendGold(hHero:GetPlayerID(), iCost, DOTA_ModifyGold_PurchaseItem)
+        table.remove(iPurchaseTable,1)
+      else
+        print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." fail with item count "..hHero:GetNumItemsInInventory())
+      end
     end
   end
+end
+
+-- return true if sell
+local function SellItemFromTable(hHero, iPurchaseTable)
+  for k,vName in ipairs(iPurchaseTable) do
+    local iCost = math.floor(GetItemCost(vName)/2)
+    local sellItem = FindItemByNameIncludeStash(hHero, vName)
+    if sellItem then
+      print("Think sell "..hHero:GetName().." try to sell "..vName.." with gold "..iCost)
+      hHero:RemoveItem(sellItem)
+      PlayerResource:ModifyGold(hHero:GetPlayerID(), iCost, true, DOTA_ModifyGold_SellItem)
+      return true
+    end
+  end
+  return false
 end
 
 --------------------
@@ -79,20 +97,8 @@ function BotThink:ThinkSell(hero)
   end
 
   local itemConsumableList = tBotItemData.itemConsumableList
-  for x,vName in ipairs(itemConsumableList) do
-    if hero:HasItemInInventory(vName) then
-      for i = 0, 14 do
-          local iItem = hero:GetItemInSlot(i)
-          if iItem then
-            local iItem_name = iItem:GetName()
-            if vName == iItem_name then
-              print("Think sell "..hero:GetName().." try to remove "..vName)
-              hero:RemoveItem(iItem)
-              return
-            end
-          end
-      end
-    end
+  if SellItemFromTable(hero, itemConsumableList) then
+    return
   end
 
   local iSellTable = tBotItemData.sellItemList[iHeroName]
@@ -101,25 +107,8 @@ function BotThink:ThinkSell(hero)
     return
   end
 
-  local item_sell_name = iSellTable[1]
-  if not item_sell_name then
-    -- no items to buy
+  if SellItemFromTable(hero, iSellTable) then
     return
-  end
-  local iCost = math.floor(GetItemCost(item_sell_name)/2)
-
-  for i = 0, 14 do
-      local iItem = hero:GetItemInSlot(i)
-      if iItem then
-        local iItem_name = iItem:GetName()
-        if item_sell_name == iItem_name then
-          print("Think sell "..hero:GetName().." try to sell "..item_sell_name.."cost "..iCost)
-          hero:RemoveItem(iItem)
-          PlayerResource:ModifyGold(iPlayerId, iCost, true, DOTA_ModifyGold_SellItem)
-          table.remove(iSellTable,1)
-          return
-        end
-      end
   end
 end
 
