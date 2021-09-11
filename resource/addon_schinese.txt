@@ -298,10 +298,5 @@
 		"DOTA_Tooltip_ability_techies_stasis_trap"						"杰哥の陷♂阱"
 		"DOTA_Tooltip_ability_techies_suicide"							"飞翔吧！杰杰"
 		"DOTA_Tooltip_ability_techies_remote_mines"						"肛王炸弹"
-
-		//            wpp
-		"npc_dota_hero_slark"					"弟弟(wpp)"
-		"DOTA_Tooltip_ability_slark_dark_pact"									"噗~"
-		"DOTA_Tooltip_ability_slark_pounce"										"跳水冠军"
 	}
 }

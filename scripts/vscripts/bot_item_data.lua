@@ -16,8 +16,9 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_heart',
 		'item_ultimate_scepter_2',
 
-		'item_moon_shard_datadriven',
 		'item_vladmir_2',
+		'item_moon_shard_datadriven',
+		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_nevermore = {
 		'item_wraith_band',
@@ -52,9 +53,7 @@ tBotItemData.purchaseItemList = {
 		'item_dagon_5',
 		'item_ultimate_scepter_2',
 
-		'item_power_treads',
-		'item_arcane_boots',
-		'item_tranquil_boots',
+		'item_wings_of_haste',
 
 		'item_hallowed_scepter',
 		'item_sphere_2',
@@ -101,6 +100,8 @@ tBotItemData.purchaseItemList = {
 		'item_radiance_2',
 		'item_undying_heart',
 		'item_ultimate_scepter_2',
+		'item_insight_armor',
+		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_chaos_knight = {
 		'item_wings_of_haste',
@@ -124,9 +125,15 @@ tBotItemData.purchaseItemList = {
 		'item_aether_lens_3',
 		'item_glimmer_cape',
 		'item_soul_booster',
+		'item_force_staff',
 		'item_ultimate_orb',
 		'item_ultimate_orb',
 		'item_recipe_arcane_octarine_core',
+		'item_magic_scepter',
+		'item_wings_of_haste',
+		'item_mystic_staff',
+		'item_mystic_staff',
+		'item_recipe_hallowed_scepter',
 
 		'item_aeon_disk',
 		'item_recipe_aeon_pendant',
@@ -162,6 +169,9 @@ tBotItemData.purchaseItemList = {
 		'item_vladmir_2',
 		'item_undying_heart',
 		'item_wasp',
+		'item_moon_shard_datadriven',
+		'item_moon_shard_datadriven',
+		'item_overwhelming_blink',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_phase_boots',
@@ -199,6 +209,8 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_orb',
 		'item_aeon_disk',
 		'item_recipe_aeon_pendant',
+		'item_force_staff',
+		'item_wings_of_haste',
 		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_juggernaut = {
@@ -229,9 +241,16 @@ tBotItemData.purchaseItemList = {
 	},
 	npc_dota_hero_lina = {
 		'item_aghanims_shard',
+		'item_glimmer_cape',
+		'item_bloodstone',
 		'item_ultimate_orb',
 		'item_ultimate_orb',
 		'item_hallowed_scepter',
+		'item_dagon_5',
+		'item_arcane_octarine_core',
+
+		'item_aeon_disk',
+		'item_recipe_aeon_pendant',
 	},
 	npc_dota_hero_lion = {
 		'item_null_talisman',
@@ -253,9 +272,19 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_wasp',
 	},
 	npc_dota_hero_necrolyte = {
+		'item_glimmer_cape',
+		'item_holy_locket',
+		'item_chainmail',
+		'item_buckler',
+		'item_recipe_guardian_greaves',
 		'item_aghanims_shard',
+		'item_radiance_2',
 		'item_ultimate_orb',
 		'item_ultimate_orb',
+		'item_dagon_5',
+		'item_aeon_disk',
+		'item_recipe_aeon_pendant',
+		'item_arcane_octarine_core',
 		'item_hallowed_scepter',
 	},
 	npc_dota_hero_omniknight = {
@@ -271,20 +300,28 @@ tBotItemData.purchaseItemList = {
 		'item_aeon_disk',
 		'item_recipe_aeon_pendant',
 
-		'item_arcane_octarine_core',
 		'item_aghanims_shard',
 		'item_wings_of_haste',
+		'item_undying_heart',
+		'item_insight_armor',
+		'item_arcane_octarine_core',
 		'item_sphere_2',
 	},
 	npc_dota_hero_oracle = {
+		'item_headdress',
+		'item_fluffy_hat',
+		'item_recipe_holy_locket',
 		'item_aghanims_shard',
 		'item_ultimate_scepter_2',
+		'item_wings_of_haste',
+		'item_arcane_octarine_core',
 	},
 	npc_dota_hero_phantom_assassin = {
 		'item_phase_boots',
 		'item_arcane_boots',
 		'item_tranquil_boots',
 		'item_aghanims_shard',
+		'item_desolator',
 		'item_recipe_abyssal_blade',
 		'item_wasp',
 		'item_ultimate_scepter_2',
@@ -346,6 +383,9 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_orb',
 		'item_ultimate_orb',
 		'item_wasp',
+
+		'item_skadi',
+		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_windrunner = {
 		'item_aghanims_shard',
@@ -392,9 +432,7 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter_2',
 		'item_hallowed_scepter',
 
-		'item_phase_boots',
-		'item_power_treads',
-		'item_tranquil_boots',
+		'item_wings_of_haste',
 	},
 }
 
@@ -413,6 +451,9 @@ tBotItemData.sellItemList = {
 		'item_power_treads',
 	},
 	npc_dota_hero_bane = {
+		'item_magic_wand',
+		'item_null_talisman',
+		'item_phase_boots',
 	},
 	npc_dota_hero_bounty_hunter = {
 		'item_magic_wand',
@@ -428,6 +469,7 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_bristleback = {
 		'item_magic_wand',
+		'item_vanguard',
 	},
 	npc_dota_hero_chaos_knight = {
 		'item_magic_wand',
@@ -437,8 +479,11 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_crystal_maiden = {
 		'item_magic_wand',
+		'item_phase_boots',
 	},
 	npc_dota_hero_dazzle = {
+		'item_arcane_boots',
+		'item_urn_of_shadows',
 	},
 	npc_dota_hero_death_prophet = {
 	},
@@ -454,6 +499,9 @@ tBotItemData.sellItemList = {
 		'item_wraith_band',
 	},
 	npc_dota_hero_jakiro = {
+		'item_magic_wand',
+		'item_ring_of_basilius',
+		'item_arcane_boots',
 	},
 	npc_dota_hero_juggernaut = {
 		'item_wraith_band',
@@ -466,6 +514,7 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_lina = {
 		'item_magic_wand',
+		'item_arcane_boots',
 	},
 	npc_dota_hero_lion = {
 		'item_null_talisman',
@@ -479,8 +528,11 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_necrolyte = {
 	},
 	npc_dota_hero_omniknight = {
+		'item_ring_of_basilius',
+		'item_arcane_boots',
 	},
 	npc_dota_hero_oracle = {
+		'item_arcane_boots',
 	},
 	npc_dota_hero_phantom_assassin = {
 		'item_magic_wand',
@@ -505,6 +557,7 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_viper = {
 		'item_wraith_band',
+		'item_ring_of_basilius',
 		'item_power_treads',
 	},
 	npc_dota_hero_windrunner = {
@@ -523,6 +576,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_zuus = {
 		'item_null_talisman',
 		'item_null_talisman',
+		'item_arcane_boots',
 	},
 }
 
