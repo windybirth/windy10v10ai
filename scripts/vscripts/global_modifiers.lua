@@ -88,7 +88,7 @@ function modifier_bot_attack_tower_pick_rune:RemoveOnDeath() return false end
 
 function modifier_bot_attack_tower_pick_rune:OnCreated()
 	if IsClient() then return end
-	self:StartIntervalThink(1)
+	self:StartIntervalThink(2)
 end
 
 -- bot strategy

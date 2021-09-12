@@ -33,10 +33,19 @@ local function FindItemByNameIncludeStash(hHero, sName)
 	return nil
 end
 
-local function BuyItemIfGoldEnough(hHero, iItemName, iPurchaseTable)
+local function BuyItemIfGoldEnough(hHero, iPurchaseTable)
+  if ( #iPurchaseTable == 0 ) then
+      -- no items to buy
+      return;
+  end
+  local iItemName = iPurchaseTable[1]
+  if not iItemName then
+    -- no items to buy
+    return
+  end
   local iCost = GetItemCost(iItemName)
   
-  if(hHero:GetGold() >= iCost) then
+  if(hHero:GetGold() > iCost) then
     if hHero:GetNumItemsInInventory() > 8 then
       -- TODO print
       print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." stop with item count "..hHero:GetNumItemsInInventory())
@@ -79,13 +88,7 @@ function BotThink:ThinkPurchase(hHero)
     return
   end
 
-  local iItemName = iPurchaseTable[1]
-  if not iItemName then
-    -- no items to buy
-    return
-  end
-
-  BuyItemIfGoldEnough(hHero, iItemName, iPurchaseTable)
+  BuyItemIfGoldEnough(hHero, iPurchaseTable)
 end
 
 function BotThink:ThinkSell(hero)
@@ -121,20 +124,23 @@ function BotThink:ThinkConsumeItem(hHero)
   for i,vItemUseName in ipairs(itemConsumeList) do
     local hItem = FindItemByNameNotIncludeBackpack(hHero, vItemUseName)
     if hItem then
+      if hItem:GetCooldownTimeRemaining() > 0 then
+        print("Warn! Think use item in cooldown"..hHeroName.." item "..vItemUseName)
+      else
         print("Think use "..hHeroName.." try to use item "..vItemUseName)
-				hHero:CastAbilityOnTarget(hHero, hItem, hHero:GetPlayerOwnerID())
+        hHero:CastAbilityOnTarget(hHero, hItem, hHero:GetPlayerOwnerID())
+      end
 		end
   end
 end
 
 function BotThink:AddMoney(hHero)
-  local iAddMoney = 2
+  local iAddMoney = 3
   local GameTime = GameRules:GetDOTATime(false, false)
   local totalGold = PlayerResource:GetTotalEarnedGold(hHero:GetPlayerID())
   local goldPerSec = totalGold/GameTime
-  print("AddMoney "..hHero:GetName().." game time "..GameTime.." total gold "..totalGold.." goldPerSec "..goldPerSec)
   if goldPerSec > 20 then
-    iAddMoney = 1
+    iAddMoney = 2
   end
   if PlayerResource:GetTeam(hHero:GetPlayerID()) == DOTA_TEAM_GOODGUYS then
 		iAddMoney = math.floor(iAddMoney*(AIGameMode.fRadiantGoldMultiplier))
@@ -142,10 +148,8 @@ function BotThink:AddMoney(hHero)
 		iAddMoney = math.floor(iAddMoney*(AIGameMode.fDireGoldMultiplier))
   end
   if iAddMoney > 0 then
-    print("AddMoney "..hHero:GetName().." gold "..iAddMoney)
+    -- print("AddMoney "..hHero:GetName().." gold "..iAddMoney)
     PlayerResource:ModifyGold(hHero:GetPlayerID(), iAddMoney, true, DOTA_ModifyGold_GameTick)
-    -- TEST
-    -- PlayerResource:IncrementTotalEarnedXP(hHero:GetPlayerID(), iAddMoney, true, DOTA_ModifyXP_Unspecified)
     return true
   end
 	return false

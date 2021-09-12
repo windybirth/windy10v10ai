@@ -98,8 +98,8 @@
 
 
 
-		"DOTA_Tooltip_Ability_item_blade_mail_2"	"刃甲2"
-		"DOTA_Tooltip_Ability_item_recipe_blade_mail_2"				"图纸（刃甲2）"
+		"DOTA_Tooltip_Ability_item_blade_mail_2"	"Blade Mail 2"
+		"DOTA_Tooltip_Ability_item_recipe_blade_mail_2"				"Blade Mail 2 Recipe"
 		"DOTA_Tooltip_ability_item_blade_mail_2_Description"						"<h1>主动：伤害反弹</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"
 		"DOTA_Tooltip_ability_item_blade_mail_2_Lore"								"覆盖着尖锐剃刀的盔甲，战斗中可以用来做出不顾自身安危的烈士行为。"
 		"DOTA_Tooltip_ability_item_blade_mail_2_Note0"							"反弹的均为减免前的伤害。"
@@ -120,15 +120,15 @@
 		"DOTA_Tooltip_modifier_item_radiance_2_debuff"				"灼烧伤害"
 		"DOTA_Tooltip_modifier_item_radiance_2_debuff_Description"	"每秒受到180点伤害，而且攻击有%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%几率不会命中。"
 
-		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
+		"DOTA_Tooltip_ability_item_wasp"						"WASP"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
 		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有5%概率随机掉落。</font>"
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
 		"DOTA_Tooltip_ability_item_wasp_bonus_attack_speed"						"+$attack"
-		"DOTA_Tooltip_ability_item_wasp_crit_chance"						"%致命一击概率:"
-		"DOTA_Tooltip_ability_item_wasp_crit_multiplier"					"%致命一击伤害:"
+		"DOTA_Tooltip_ability_item_wasp_crit_chance"						"%CHANCE:"
+		"DOTA_Tooltip_ability_item_wasp_crit_multiplier"					"%CHANCE DAMAGE:"
 
 		"DOTA_Tooltip_Ability_item_aether_lens_2"				"以太透镜2"
 		"DOTA_Tooltip_ability_item_aether_lens_2_Description"                     "<h1>被动：以太焦点2</h1> 指向性技能和物品的施法距离增加%cast_range_bonus%。"
