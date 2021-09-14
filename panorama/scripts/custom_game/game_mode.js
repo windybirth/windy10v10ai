@@ -57,7 +57,7 @@ function ShowChatTeamActivate() {
 }
 
 $("#radiant_gold_xp_multiplier_dropdown").SetSelected("1");
-$("#dire_gold_xp_multiplier_dropdown").SetSelected("1.5");
+$("#dire_gold_xp_multiplier_dropdown").SetSelected("2");
 $("#radiant_player_number_dropdown").SetSelected("5");
 $("#dire_player_number_dropdown").SetSelected("10");
 $("#radiant_tower_power_dropdown").SetSelected("5");

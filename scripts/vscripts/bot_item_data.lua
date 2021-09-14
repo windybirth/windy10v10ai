@@ -1,3 +1,7 @@
+--[[ ============================================================================================================
+	Author: Windy
+	Date: September 14, 2021
+================================================================================================================= ]]
 tBotItemData = {}
 
 tBotItemData.purchaseItemList = {
@@ -195,9 +199,7 @@ tBotItemData.purchaseItemList = {
 
 	npc_dota_hero_earthshaker = {
 		'item_aghanims_shard',
-		'item_phase_boots',
-		'item_power_treads',
-		'item_tranquil_boots',
+		'item_wings_of_haste',
 
 		'item_ultimate_orb',
 		'item_ultimate_orb',
@@ -564,6 +566,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_earthshaker = {
 		'item_magic_wand',
 		'item_wraith_band',
+		'item_arcane_boots',
 		'item_cyclone',
 	},
 	npc_dota_hero_jakiro = {
