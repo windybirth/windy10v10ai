@@ -16,6 +16,10 @@
 		"dire_gold_multiplier"	"夜魇金钱倍率"
 		"radiant_xp_multiplier"	"天辉经验倍率"
 		"dire_xp_multiplier"	"夜魇经验倍率"
+
+		"radiant_gold_xp_multiplier"	"天辉金钱/经验倍率"
+		"dire_gold_xp_multiplier"	"夜魇金钱/经验倍率"
+
 		"radiant_player_number"	"天辉玩家人数"
 		"dire_player_number"	"夜魇玩家人数"
 		"confirm_game_options"	"Confirm and Hide Game Options"
@@ -28,17 +32,18 @@
 		"dire_tower_endure"	"夜魇建筑防御加成等级"
 		"radiant_tower_heal"	"天辉建筑生命回复加成"
 		"dire_tower_heal"	"夜魇建筑生命回复加成"
-		"starting_gold"	"初始金钱"
+		"starting_gold_player"	"玩家初始金钱"
+		"starting_gold_bot"	"机器人初始金钱"
 		"same_hero_selection"  "Allow Same Hero Selection"
 		"fast_courier"  "Fast Invulnerable Courier"
 		"hide_chat_team"  "Hide Chat and Team"
 		"show_chat_team"  "Show Chat and Team"
 
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
-		"DOTA_Tooltip_modifier_tower_power_Description"			"防御塔的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."
+		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."
 
 		"DOTA_Tooltip_modifier_tower_endure"						"建筑防御加成"
-		"DOTA_Tooltip_modifier_tower_endure_Description"		"The building's armor is changed by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, max health is set to %dMODIFIER_PROPERTY_TOOLTIP%%%."
+		"DOTA_Tooltip_modifier_tower_endure_Description"		"建筑物的护甲增加 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, 最大生命值设为 %dMODIFIER_PROPERTY_TOOLTIP%%%."
 
 		"DOTA_Tooltip_modifier_melee_resistance"					"威压"
 		"DOTA_Tooltip_modifier_melee_resistance_Description"	"近战英雄拥有 %dMODIFIER_PROPERTY_STATUS_RESISTANCE%%% 基础状态抗性."
@@ -77,14 +82,16 @@
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_mana"					"+$mana"
 
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"急速之翼"
-		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度。"
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度, %MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% 攻击力, %MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 攻击速度, %MODIFIER_PROPERTY_STATS_INTELLECT_BONUS% 全属性, %MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复, %MODIFIER_PROPERTY_MANA_REGEN_CONSTANT% 魔法回复。"
 		"DOTA_Tooltip_ability_item_wings_of_haste"										"急速之翼"
-		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"使用: 消耗急速之翼永久获得 %bonus_movement_speed% 移动速度。"
+		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"使用: 消耗急速之翼永久获得 %bonus_movement_speed% 移动速度, %bonus_damage% 攻击力, %bonus_attack_speed% 攻击速度, %bonus_all_stats% 全属性, %bonus_health_regen% 生命恢复, %bonus_mana_regen% 魔法回复。"
 		"DOTA_Tooltip_ability_item_wings_of_haste_Lore"								"Wings that grant swift retribution in battle."
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_movement_speed"				"+$move_speed"
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_attack_speed"			"+$attack"
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_all_stats"					"+$all"
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_health_regen"					"+$hp_regen"
+		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_mana_regen"					"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_royal_jelly_custom"									"Royal Jelly"
 		"DOTA_Tooltip_Ability_item_royal_jelly_custom_Description"					"<h1>Use: Consume</h1> Grants a target allied unit a permanent buff that provides +%health_regen% Health Regen and +%mana_regen% Mana Regen.<br><br>Does not stack on the same unit."
@@ -107,7 +114,7 @@
 		//"DOTA_Tooltip_ability_item_blade_mail_2_bonus_intellect"					"+$int"
 		//"DOTA_Tooltip_ability_item_blade_mail_2_duration"						"DAMAGE RETURN DURATION:"
 
-		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect"					"刃甲反射"
+		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect"					"刃甲反射2"
 		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect_Description"		"正在将伤害反弹给攻击单位"
 
 		"DOTA_Tooltip_Ability_item_radiance_2"				"辉耀2"
@@ -115,7 +122,7 @@
 		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"一把神圣的武器，剑身的耀眼光芒能将敌人化为灰烬。"
 		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_modifier_item_radiance_2_debuff"				"灼烧伤害"
-		"DOTA_Tooltip_modifier_item_radiance_2_debuff_Description"	"每秒受到180点伤害，而且攻击有%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%几率不会命中。"
+		"DOTA_Tooltip_modifier_item_radiance_2_debuff_Description"	"每秒受到120点伤害，而且攻击有%dMODIFIER_PROPERTY_MISS_PERCENTAGE%%%几率不会命中。"
 
 		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
@@ -123,7 +130,8 @@
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
-		"DOTA_Tooltip_ability_item_wasp_bonus_attack_speed"						"+$attack"
+		"DOTA_Tooltip_ability_item_wasp_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_wasp_bonus_move_speed"					"+$move_speed"
 		"DOTA_Tooltip_ability_item_wasp_crit_chance"						"%致命一击概率:"
 		"DOTA_Tooltip_ability_item_wasp_crit_multiplier"					"%致命一击伤害:"
 
@@ -146,7 +154,7 @@
 		"DOTA_Tooltip_ability_item_vladmir_2_bonus_armor"							"+$armor"
 
 		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"强袭祭品"
-		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得20%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得15%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 
 		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"强袭祭品"
 		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
@@ -155,25 +163,25 @@
 		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura_Description"	"护甲被降低%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
 
 		"DOTA_Tooltip_Ability_item_sphere_2"				"真·林肯法球"
-		"DOTA_Tooltip_ability_item_sphere_2_Description"							"<h1>被动：法术抵抗</h1>每4秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续4秒。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_ability_item_sphere_2_Description"							"<h1>被动：法术抵抗</h1>每%block_cooldown%秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续%block_cooldown%秒。<br><br>施法距离：%abilitycastrange%"
 		"DOTA_Tooltip_ability_item_sphere_2_Lore"									"这个有魔力的球体曾经保护了一位历史上最有名的英雄。"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_health_regen"					"+$hp_regen"
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有50%概率随机掉落。</font> <h1>被动：克敌机先</h1>普通攻击不会落空。"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有30%概率随机掉落。</font>"
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"咖喱棒效忠于被选中的王者，随机掉落。"
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"咖喱棒效忠于被选中的王者。"
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
 
 		"DOTA_Tooltip_Ability_item_quelling_blade_2_datadriven"			"毒瘤之刃"
-		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Description"					"<h1>主动：砍伐</h1> 砍伐一根指定树木。<br><br>砍伐施法距离：%abilitycastrange%\n<h1>被动：压制</h1>对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%damage_bonus%点，远程英雄为%damage_bonus_ranged%点。"
+		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Description"					"<h1>主动：砍伐</h1> 砍伐一根指定树木。\n<h1>被动：压制</h1>对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%damage_bonus%点，远程英雄为%damage_bonus_ranged%点。"
 		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Lore"							"堕落打野毒瘤的斧头，能让你更快的在野区Farm。"
 		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"多个毒瘤之刃效果不会叠加。"
 
 		"DOTA_Tooltip_Ability_item_undying_heart"				"不朽之心"
-		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>被动：恢复增强</h1>所有被动生命恢复效果提升%hp_regen_amp%%%。<br><br>如果近战英雄最近%cooldown_melee%秒（远程英雄为%cooldown_ranged_tooltip%秒）内受到敌方英雄或肉山的攻击，此增强效果将失效。"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>被动：恢复增强</h1>所有被动生命恢复效果提升。"
 		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
@@ -293,10 +301,5 @@
 		"DOTA_Tooltip_ability_techies_stasis_trap"						"杰哥の陷♂阱"
 		"DOTA_Tooltip_ability_techies_suicide"							"飞翔吧！杰杰"
 		"DOTA_Tooltip_ability_techies_remote_mines"						"肛王炸弹"
-
-		//            wpp
-		"npc_dota_hero_slark"					"弟弟(wpp)"
-		"DOTA_Tooltip_ability_slark_dark_pact"									"噗~"
-		"DOTA_Tooltip_ability_slark_pounce"										"跳水冠军"
 	}
 }

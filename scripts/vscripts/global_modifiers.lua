@@ -88,9 +88,11 @@ function modifier_bot_attack_tower_pick_rune:RemoveOnDeath() return false end
 
 function modifier_bot_attack_tower_pick_rune:OnCreated()
 	if IsClient() then return end
-	self:StartIntervalThink(0.5)
+	self:StartIntervalThink(2)
 end
 
+-- bot strategy
+-- 机器人策略
 function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	if IsClient() then return end
 
@@ -99,26 +101,34 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
+	elseif (GameTime >= (25 * 60)) then						-- LATEGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(6)
+	elseif (GameTime >= (20 * 60)) then						-- MIDGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
 	elseif (GameTime >= (15 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
+	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(3)
 	else													-- EARLYGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(false)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(1)
 	end
 
 	local hParent = self:GetParent()
-	local hRune = Entities:FindByClassnameWithin(nil, "dota_item_rune", hParent:GetOrigin(), 1000)
-	if hParent:GetHealth()/hParent:GetMaxHealth() > 0.4 and hRune then
-		local tOrder = {
-			UnitIndex = hParent:entindex(),
-			OrderType = DOTA_UNIT_ORDER_PICKUP_RUNE,
-			TargetIndex = hRune:entindex()
-		}
-		ExecuteOrderFromTable(tOrder)
-	end
+
+	BotThink:ThinkSell(hParent)
+	BotThink:ThinkPurchase(hParent)
+	BotThink:ThinkConsumeItem(hParent)
+	BotThink:AddMoney(hParent)
 end
 
 
@@ -216,7 +226,7 @@ function modifier_tower_power:OnAttackLanded(keys)
 	if keys.attacker ~= self:GetParent() then return end
 	local fPower = StackToPercentage(self:GetStackCount())
 	if fPower <= 1.0 then return end
-	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, math.floor((fPower-1)*75), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
+	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, self:OnTooltip(), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
 
 	for i, v in ipairs(tTargets) do
 		if v ~= keys.target then
@@ -225,7 +235,7 @@ function modifier_tower_power:OnAttackLanded(keys)
 				victim = v,
 				damage = keys.damage,
 				damage_type = DAMAGE_TYPE_PHYSICAL,
-				damage_flag = DOTA_DAMAGE_FLAG_IGNORES_PHYSICAL_ARMOR
+				damage_flag = DOTA_DAMAGE_FLAG_NONE
 			})
 		end
 	end
@@ -244,7 +254,7 @@ end
 function modifier_tower_power:OnTooltip()
 	local fPower = StackToPercentage(self:GetStackCount())
 	if fPower <= 1.0 then return 0 end
-	return math.floor((fPower-1)*75)
+	return math.floor((fPower-1)*50+24)
 end
 
 
@@ -255,7 +265,7 @@ function modifier_axe_thinker:IsHidden() return true end
 function modifier_axe_thinker:RemoveOnDeath() return false end
 function modifier_axe_thinker:OnCreated()
 	if IsClient() then return end
-	self:StartIntervalThink(0.04)
+	self:StartIntervalThink(0.06)
 end
 
 function modifier_axe_thinker:DeclareFunctions() return {MODIFIER_EVENT_ON_ABILITY_EXECUTED} end

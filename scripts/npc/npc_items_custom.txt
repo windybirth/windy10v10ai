@@ -22,7 +22,7 @@
 		"ItemResult"				"item_moon_shard_datadriven"
 		"ItemRequirements"
 		{
-			"01"					"item_hyperstone;item_hyperstone"
+			"01"					"item_hyperstone;item_hyperstone;item_hyperstone;item_hyperstone"
 		}
 	}
 	//=================================================================================================================
@@ -43,7 +43,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"					"4000"
+		"ItemCost"					"8000"
 		"ItemShopTags"				"attack_speed"
 		"ItemQuality"				"common"
 		"ItemAliases"				"moon shard"
@@ -56,7 +56,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_speed"			"130"
+				"bonus_attack_speed"			"240"
 			}
 			"02"
 			{
@@ -66,7 +66,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"consumed_bonus"				"60"
+				"consumed_bonus"				"130"
 			}
 			"04"
 			{
@@ -478,22 +478,32 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"130"
+				"bonus_movement_speed"		"120"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"60"
+				"bonus_damage"			"45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"60"
+				"bonus_attack_speed"	"45"
 			}
 			"04"
 			{
-					"var_type"				"FIELD_INTEGER"
-					"bonus_all_stats"		"20"
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"20"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_health_regen"	"8"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bonus_mana_regen"		"5"
 			}
 		}
 
@@ -520,11 +530,13 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
 					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
 				}
 			}
 			"modifier_item_wings_of_haste_consumed"
@@ -539,11 +551,13 @@
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
 					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
 				}
 			}
 		}
@@ -874,7 +888,7 @@
 					"04"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_attack_speed"			"60"
+							"bonus_attack_speed"			"30"
 					}
 					"05"
 					{
@@ -884,7 +898,7 @@
 					"06"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_move_speed"		"25"
+							"bonus_move_speed"		"20"
 					}
 					"07"
 					{
@@ -894,24 +908,24 @@
 					"08"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"crit_multiplier"		"250"
+							"crit_multiplier"		"280"
 					}
 			}
 
-	"OnSpellStart"
-	{
-		"ApplyModifier"
-					{
-							"Target"					"CASTER"
-							"ModifierName"				"modifier_item_butterfly_datadriven_movespeed"
-							"Duration"					"%duration"
-					}
-		"FireSound"
-		{
-			"EffectName"				"DOTA_Item.Armlet.Activate"
-			"Target"					"CASTER"
-		}
-	}
+			"OnSpellStart"
+			{
+				"ApplyModifier"
+							{
+									"Target"					"CASTER"
+									"ModifierName"				"modifier_item_butterfly_datadriven_movespeed"
+									"Duration"					"%duration"
+							}
+				"FireSound"
+				{
+					"EffectName"				"DOTA_Item.Armlet.Activate"
+					"Target"					"CASTER"
+				}
+			}
 
 			"Modifiers"
 			{
@@ -927,6 +941,7 @@
 									"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"			"%bonus_damage"
 									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
 									"MODIFIER_PROPERTY_EVASION_CONSTANT"				"%bonus_evasion"
+									"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"		"%bonus_move_speed"
 							}
 
 							"OnAttackStart"
@@ -1190,7 +1205,7 @@
 					"06"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"vampiric_aura"			"17"
+							"vampiric_aura"			"15"
 					}
 					"07"
 					{
@@ -1426,7 +1441,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3333"
+		"ItemCost"						"6200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1435,7 +1450,7 @@
 		"ItemResult"					"item_excalibur"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier"
+			"01"						"item_rapier;item_rapier;item_rapier;item_rapier"
 		}
 	}
 
@@ -1571,10 +1586,10 @@
 		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
 		        "Properties"
 		        {
-		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS" "%bonus_strength"
-								"MODIFIER_PROPERTY_HEALTH_BONUS" "%bonus_health"
-								"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE" "%health_regen_pct"
-								"MODIFIER_PROPERTY_EVASION_CONSTANT"				"%bonus_evasion"
+		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_strength"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	"%bonus_health"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	"%health_regen_pct"
+					"MODIFIER_PROPERTY_EVASION_CONSTANT"		"%bonus_evasion"
 		        }
 		    }
 		}
@@ -1992,7 +2007,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"                      "600"
+		"ItemCost"                      "900"
 		"ItemShopTags"                  ""
 
 		// Recipe
@@ -2192,7 +2207,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3200"
+		"ItemCost"						"4900"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2234,7 +2249,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_cooldown"		"35"
+				"bonus_cooldown"		"40"
 			}
 			"02"
 			{
