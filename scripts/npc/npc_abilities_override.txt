@@ -2724,10 +2724,10 @@
 
 	"zuus_lightning_bolt"
 	{
-		"MaxLevel" "6"
-    "AbilityManaCost"				"70 85 100 115 135 150"
+		"MaxLevel" "7"
+    "AbilityManaCost"				"70 85 100 115 135 150 180"
 
-    "AbilityDamage"					"150 225 300 350 400 450"
+    "AbilityDamage"					"150 225 300 350 400 450 500"
 	}
 	"zuus_thundergods_wrath"
 	{
@@ -2891,7 +2891,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1 1 1 2 2 3"
+				"stat_loss"				"1 1 1 2 2 2"
 			}
 			"03"
 			{

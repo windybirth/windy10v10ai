@@ -11,7 +11,7 @@ require('timers')
 require('settings')
 require('events')
 require('util')
-
+require('bot_think_modifier')
 
 function Activate()
 	AIGameMode:InitGameMode()
@@ -83,7 +83,8 @@ function AIGameMode:PreGameOptions()
 	self.iDireTowerEndure = self.iDireTowerEndure or 3
 	self.iRadiantTowerHeal = self.iRadiantTowerHeal or 0
 	self.iDireTowerHeal = self.iDireTowerHeal or 0
-	self.iStartingGold = self.iStartingGold or 999
+	self.iStartingGoldPlayer = self.iStartingGoldPlayer or 600
+	self.iStartingGoldBot = self.iStartingGoldBot or 600
 	self.bSameHeroSelection = self.bSameHeroSelection or 1
 	self.bFastCourier = self.bFastCourier or 1
 	self.fGameStartTime = 0
@@ -99,14 +100,6 @@ function AIGameMode:PreGameOptions()
 	-------------------------
 	AIGameMode:SpawnNeutralCreeps30sec()
 
-	-- TODO
-	-- AIGameMode:StartAddItemToNPC()
-
-	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-		if PlayerResource:IsValidPlayer(i) then
-			PlayerResource:SetGold(i, (self.iStartingGold-600),true)
-		end
-	end
 
 	if self.bSameHeroSelection == 1 then
 		GameRules:SetSameHeroSelectionEnabled( true )
@@ -146,7 +139,7 @@ function AIGameMode:PreGameOptions()
 		} -- value fixed
 		local iRequireLevel = tLevelRequire[30]
 		for i = 31, self.iMaxLevel do
-			iRequireLevel = iRequireLevel+i*100
+			iRequireLevel = iRequireLevel+i*200
 			table.insert(tLevelRequire, iRequireLevel)
 		end
 		GameRules:GetGameModeEntity():SetUseCustomHeroLevels( true )
@@ -159,27 +152,9 @@ end
 
 function AIGameMode:SpawnNeutralCreeps30sec()
 	GameRules:SpawnNeutralCreeps()
-	Timers:CreateTimer(60, function ()
+	Timers:CreateTimer(30, function ()
 		AIGameMode:SpawnNeutralCreeps30sec()
 	end)
-end
-
-function AIGameMode:StartAddItemToNPC()
-	Timers:CreateTimer(1500, function ()
-		AIGameMode:AddItemToNPC()
-	end)
-end
-
-function AIGameMode:AddItemToNPC(itemName)
--- TODO
-	GameRules:SendCustomMessage("AddItemToNPC!", 1, 1)
-	for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-		if PlayerResource:IsValidPlayer(i) then
-			if PlayerResource:GetPlayer(i) and PlayerResource:HasSelectedHero(i) then
-				PlayerResource:GetPlayer(i):AddItemByName(itemName)
-			end
-		end
-	end
 end
 
 ------------------------------------------------------------------
@@ -192,8 +167,6 @@ function AIGameMode:FilterGold(tGoldFilter)
 	local bReliable = tGoldFilter["reliable"] == 1
 
 	if iReason == DOTA_ModifyGold_HeroKill then
-	print("FilterGold iPlayerID:"..iPlayerID)
-	print("FilterGold iGold:"..iGold)
 			if iGold > 500 then
 					iGold = 500
 			end

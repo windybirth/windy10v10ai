@@ -2,10 +2,10 @@ local tBotNameList = {
 	"npc_dota_hero_axe",
 	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
-	"npc_dota_hero_bounty_hunter",
-	"npc_dota_hero_bloodseeker",
+	-- "npc_dota_hero_bounty_hunter",
+	-- "npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
-	"npc_dota_hero_chaos_knight",
+	-- "npc_dota_hero_chaos_knight",
 	"npc_dota_hero_crystal_maiden",
 	"npc_dota_hero_dazzle",
 	"npc_dota_hero_death_prophet",
@@ -28,27 +28,23 @@ local tBotNameList = {
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_sniper",
 	"npc_dota_hero_sven",
+	-- TODO
 	"npc_dota_hero_tiny",
 	"npc_dota_hero_vengefulspirit",
 	"npc_dota_hero_viper",
-	"npc_dota_hero_warlock",
 	"npc_dota_hero_windrunner",
 	"npc_dota_hero_witch_doctor",
-	"npc_dota_hero_skeleton_king"
+	"npc_dota_hero_skeleton_king",
+	"npc_dota_hero_zuus",
 }
 
 local tSkillCustomNameList = {
-	"npc_dota_hero_zuus",
 	"npc_dota_hero_crystal_maiden",
-	"npc_dota_hero_techies",
 	"npc_dota_hero_necrolyte",
-	"npc_dota_hero_skywrath_mage",
-	"npc_dota_hero_phantom_assassin",
 	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_mirana",
 	"npc_dota_hero_earthshaker",
 	"npc_dota_hero_nevermore",
-	"npc_dota_hero_tinker"
 }
 
 local tAPLevelList = {
@@ -59,10 +55,6 @@ local tAPLevelList = {
 	23,
 	24,
 	26,
-	27,
-	28,
-	29,
-	30
 }
 
 function AIGameMode:ArrayShuffle(array)
@@ -133,6 +125,7 @@ function AIGameMode:OnGameStateChanged(keys)
 				end
 			end
 		end
+
 		-- Eanble bots and fill empty slots
 		if IsServer() == true then
 			local iPlayerNumRadiant = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
@@ -160,7 +153,19 @@ function AIGameMode:OnGameStateChanged(keys)
 			end
 			GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
 			Tutorial:StartTutorialMode()
-			--Tutorial:SetItemGuide("String") -- Set the current item guide
+
+			-- set start gold
+				for i=0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+					if PlayerResource:IsValidPlayer(i) then
+						if self.tHumanPlayerList[i] then
+							print("Set start gold player")
+							PlayerResource:SetGold(i, (self.iStartingGoldPlayer-600),true)
+						else
+							print("Set start gold bot")
+							PlayerResource:SetGold(i, (self.iStartingGoldBot-600),true)
+						end
+					end
+				end
 		end
 
 	elseif state == DOTA_GAMERULES_STATE_PRE_GAME then
@@ -323,7 +328,12 @@ end
 
 
 function AIGameMode:OnNPCSpawned(keys)
-	if GameRules:State_Get() < DOTA_GAMERULES_STATE_PRE_GAME then return end
+	if GameRules:State_Get() < DOTA_GAMERULES_STATE_PRE_GAME then
+		Timers:CreateTimer(1, function ()
+			AIGameMode:OnNPCSpawned(keys)
+		end)
+		return
+	end
 	local hHero = EntIndexToHScript(keys.entindex)
 	if hHero:IsNull() then return end
 
@@ -393,10 +403,10 @@ function AIGameMode:OnGetLoadingSetOptions(eventSourceIndex, args)
 	if tonumber(args.host_privilege) ~= 1 then return end
 	self.iDesiredRadiant = tonumber(args.game_options.radiant_player_number)
 	self.iDesiredDire = tonumber(args.game_options.dire_player_number)
-	self.fRadiantGoldMultiplier = tonumber(args.game_options.radiant_gold_multiplier)
-	self.fRadiantXPMultiplier = tonumber(args.game_options.radiant_xp_multiplier)
-	self.fDireXPMultiplier = tonumber(args.game_options.dire_xp_multiplier)
-	self.fDireGoldMultiplier = tonumber(args.game_options.dire_gold_multiplier)
+	self.fRadiantGoldMultiplier = tonumber(args.game_options.radiant_gold_xp_multiplier)
+	self.fRadiantXPMultiplier = tonumber(args.game_options.radiant_gold_xp_multiplier)
+	self.fDireXPMultiplier = tonumber(args.game_options.dire_gold_xp_multiplier)
+	self.fDireGoldMultiplier = tonumber(args.game_options.dire_gold_xp_multiplier)
 	self.iRespawnTimePercentage = tonumber(args.game_options.respawn_time_percentage)
 	self.iMaxLevel = tonumber(args.game_options.max_level)
 	self.iRadiantTowerPower = tonumber(args.game_options.radiant_tower_power)
@@ -405,7 +415,8 @@ function AIGameMode:OnGetLoadingSetOptions(eventSourceIndex, args)
 	self.iDireTowerEndure = tonumber(args.game_options.dire_tower_endure)
 	self.iRadiantTowerHeal = tonumber(args.game_options.radiant_tower_heal)
 	self.iDireTowerHeal = tonumber(args.game_options.dire_tower_heal)
-	self.iStartingGold = tonumber(args.game_options.starting_gold)
+	self.iStartingGoldPlayer = tonumber(args.game_options.starting_gold_player)
+	self.iStartingGoldBot = tonumber(args.game_options.starting_gold_bot)
 	self.bSameHeroSelection = args.game_options.same_hero_selection
 	self.bFastCourier = args.game_options.fast_courier
 	self:PreGameOptions()
