@@ -182,7 +182,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"30"
+				"bonus_all_stats"		"20"
 			}
 			"02"
 			{
@@ -193,6 +193,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_mana"			"350"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"20"
 			}
 		}
 
@@ -223,6 +228,7 @@
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
 					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
 				}
 				"OnCreated"
 				{
@@ -257,6 +263,7 @@
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
 					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
 				}
 			}
 		}
@@ -2414,7 +2421,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"40"
+				"bonus_attack_speed"	"45"
 			}
 			"03"
 			{

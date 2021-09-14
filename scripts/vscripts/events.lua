@@ -3,7 +3,7 @@ local tBotNameList = {
 	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
 	-- "npc_dota_hero_bounty_hunter",
-	-- "npc_dota_hero_bloodseeker",
+	"npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
 	-- "npc_dota_hero_chaos_knight",
 	"npc_dota_hero_crystal_maiden",
@@ -169,6 +169,7 @@ function AIGameMode:OnGameStateChanged(keys)
 		end
 
 	elseif state == DOTA_GAMERULES_STATE_PRE_GAME then
+		-- modifier towers
 		local tTowers = Entities:FindAllByClassname("npc_dota_tower")
 		for k, v in pairs(tTowers) do
 			if v:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
@@ -184,9 +185,11 @@ function AIGameMode:OnGameStateChanged(keys)
 		local tTowers = Entities:FindAllByClassname("npc_dota_barracks")
 		for k, v in pairs(tTowers) do
 			if v:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
+				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iRadiantTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iRadiantTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iRadiantTowerHeal)
 			elseif v:GetTeamNumber() == DOTA_TEAM_BADGUYS then
+				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iDireTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
 			end
