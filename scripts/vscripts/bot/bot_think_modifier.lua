@@ -150,7 +150,6 @@ function BotThink:AddMoney(hHero)
 		multiplier = AIGameMode.fDireGoldMultiplier
   end
 
-  print("goldPerSec "..goldPerSec)
   if goldPerSec > 20 then
     return false
   end

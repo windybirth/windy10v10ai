@@ -162,9 +162,6 @@
 							<Label text="20" id="20"/>
 							<Label text="50" id="50"/>
 							<Label text="100" id="100"/>
-							<Label text="250" id="250"/>
-							<Label text="500" id="500"/>
-							<Label text="1000" id="1000"/>
 						</DropDown>
 					</Panel>
 					<Panel id="DireTowerHealPanel"	class="GameOptionsSubPanel">
@@ -177,9 +174,6 @@
 							<Label text="20" id="20"/>
 							<Label text="50" id="50"/>
 							<Label text="100" id="100"/>
-							<Label text="250" id="250"/>
-							<Label text="500" id="500"/>
-							<Label text="1000" id="1000"/>
 						</DropDown>
 					</Panel>
 					<Panel id="StartingGoldPlayerPanel"	class="GameOptionsSubPanel">

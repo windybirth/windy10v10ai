@@ -16,6 +16,9 @@
 		//"item"		"item_courier"
 		"item"		"item_bottle"
 		"item"		"item_aghanims_shard"
+		"item"		"item_tome_of_agility"
+		"item"		"item_tome_of_strength"
+		"item"		"item_tome_of_intelligence"
 	}
 
 	"attributes"
@@ -208,7 +211,7 @@
  		"item"		"item_sange_and_yasha"
  		"item"		"item_yasha_and_kaya"
  		"item"		"item_satanic"
- 		"item"		"item_skadi"
+ 		"item"		"item_skadi_2"
  		"item"		"item_mjollnir"
  		"item"		"item_overwhelming_blink"
  		"item"		"item_swift_blink"

@@ -162,7 +162,7 @@ end
 ------------------------------------------------------------------
 
 local function multiplierWithGameTime(multiplier)
-	local time = GameRules:GetGameTime(false, false)
+	local time = GameRules:GetDOTATime(false, false)
 	print("gametime "..time)
 	if time < 240 then
 		if multiplier < 2 then

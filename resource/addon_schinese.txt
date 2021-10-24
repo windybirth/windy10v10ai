@@ -300,5 +300,38 @@
 		"DOTA_Tooltip_ability_techies_stasis_trap"						"杰哥の陷♂阱"
 		"DOTA_Tooltip_ability_techies_suicide"							"飞翔吧！杰杰"
 		"DOTA_Tooltip_ability_techies_remote_mines"						"肛王炸弹"
+
+		"DOTA_Tooltip_Ability_item_skadi_2"				"粘妈之眼"
+		"DOTA_Tooltip_ability_item_skadi_2_Description"							"<h1>被动：霜冻攻击</h1>攻击附带霜冻效果，可以降低敌人的移动速度和攻击速度，并且他们的治疗、生命恢复、吸血和技能吸血效果降低%heal_reduction%%%，持续%cold_duration%秒。对敌方远程目标将减缓%cold_slow_ranged%%%移动速度，降低%cold_slow_ranged%攻击速度。对敌方近战目标将减缓%cold_slow_melee%%%移动速度，降低%cold_slow_melee%攻击速度。"
+		"DOTA_Tooltip_ability_item_skadi_2_Lore"									"极度罕见的古物，可以粘住网络喷子的妈妈。"
+		"DOTA_Tooltip_ability_item_skadi_2_bonus_all_stats"						"+$all"
+		"DOTA_Tooltip_ability_item_skadi_2_bonus_health"							"+$health"
+		"DOTA_Tooltip_ability_item_skadi_2_bonus_mana"							"+$mana"
+
+		// Tomes
+
+		"DOTA_Tooltip_Ability_item_tome_of_strength"					"力量之书"
+		"DOTA_Tooltip_Ability_item_tome_of_strength_Description"		"<h1>使用: 力量之书</h1> 永久增加力量 %bonus% 点"
+		"DOTA_Tooltip_Ability_item_tome_of_strength_Lore"				"Is it strength that you desire...?"
+
+		"DOTA_Tooltip_modifier_str_tome"								"Strength Tomes Consumed"
+		"DOTA_Tooltip_modifier_str_tome_Description"					"Strength increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
+
+
+		"DOTA_Tooltip_Ability_item_tome_of_agility"						"敏捷之书"
+		"DOTA_Tooltip_Ability_item_tome_of_agility_Description"			"<h1>使用: 敏捷之书</h1> 永久增加敏捷 %bonus% 点"
+		"DOTA_Tooltip_Ability_item_tome_of_agility_Lore"				"Is it swiftness that you seek...?"
+
+		"DOTA_Tooltip_modifier_agi_tome"								"Agility Tomes Consumed"
+		"DOTA_Tooltip_modifier_agi_tome_Description"					"Agility increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
+
+
+		"DOTA_Tooltip_Ability_item_tome_of_intelligence"				"智力之书"
+		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Description"	"<h1>使用: 智力之书</h1> 永久增加智力 %bonus% 点"
+		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Lore"			"Is it enlightenment that you aspire to...?"
+
+		"DOTA_Tooltip_modifier_int_tome"								"Intelligence Tomes Consumed"
+		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
+
 	}
 }
