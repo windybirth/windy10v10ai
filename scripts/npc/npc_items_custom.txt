@@ -802,12 +802,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage"			"120"
+				"aura_damage"			"100"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage_illusions"	"80"
+				"aura_damage_illusions"	"70"
 			}
 			"04"
 			{

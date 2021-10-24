@@ -125,7 +125,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有5%概率随机掉落。</font>"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有3%概率随机掉落。</font>"
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -169,7 +169,7 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有30%概率随机掉落。</font>"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有20%概率随机掉落。</font>"
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"咖喱棒效忠于被选中的王者，随机掉落。"
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"咖喱棒效忠于被选中的王者。"
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"

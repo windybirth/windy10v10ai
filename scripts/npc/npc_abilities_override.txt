@@ -1956,7 +1956,37 @@
 			}
 		}
 	}
+	"pangolier_shield_crash"
+	{
+		"MaxLevel" "7"
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16 15 14 13 12 11 10"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75 85 95 105 110 130 160"
 
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"90 160 230 300 350 400 450"
+				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hero_stacks"			"9 10 11 12 13 14 15"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"4 5 6 7 8 9 10"
+			}
+		}
+	}
 	"mirana_arrow"
 	{
 		"MaxLevel" "7"

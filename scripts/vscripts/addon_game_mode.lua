@@ -167,8 +167,14 @@ function AIGameMode:FilterGold(tGoldFilter)
 	local bReliable = tGoldFilter["reliable"] == 1
 
 	if iReason == DOTA_ModifyGold_HeroKill then
-			if iGold > 500 then
-					iGold = 500
+			if iGold > 2000 then
+				iGold = 1000
+			elseif iGold > 1000 then
+				iGold = iGold/4 + 500
+			elseif iGold > 500 then
+				iGold = iGold/2 + 250
+			else
+				iGold = iGold
 			end
 	end
 
@@ -190,7 +196,6 @@ function AIGameMode:FilterXP(tXPFilter)
 		tXPFilter["experience"] = math.floor(iXP*self.fRadiantXPMultiplier)
 	else
 		tXPFilter["experience"] = math.floor(iXP*self.fDireXPMultiplier)
-		--print("Dire XP", tXPFilter["experience"], iXP)
 	end
 	return true
 end

@@ -710,7 +710,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"24000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -738,7 +738,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"24000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"

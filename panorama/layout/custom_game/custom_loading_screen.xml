@@ -75,9 +75,7 @@
 							<Label text="100%" id="100"/>
 							<Label text="75%" id="75"/>
 							<Label text="50%" id="50"/>
-							<Label text="30%" id="30"/>
 							<Label text="10%" id="10"/>
-							<Label text="5%" id="5"/>
 							<Label text="0%" id="0"/>
 						</DropDown>
 					</Panel>
