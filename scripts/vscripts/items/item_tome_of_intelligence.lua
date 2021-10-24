@@ -9,7 +9,7 @@ if IsServer() then
     function item_tome_of_intelligence:OnSpellStart()
         local caster = self:GetCaster()
         local int = self:GetSpecialValueFor("bonus")
-        local tome_table = CustomNetTables:GetTableValue("int_tomes", caster:GetUnitName())
+        local tome_table = CustomNetTables:GetTableValue("player_table", "int_tome_" .. caster:GetUnitName())
         caster:ModifyIntellect(int)
         caster:EmitSound("Item.TomeOfKnowledge")
 
@@ -17,11 +17,11 @@ if IsServer() then
             local modifier = caster:FindModifierByName("modifier_int_tome")
             modifier:SetStackCount(modifier:GetStackCount() + 1)
             local newValue = tome_table.int + int
-            CustomNetTables:SetTableValue("int_tomes", caster:GetUnitName(), {int = newValue})
+            CustomNetTables:SetTableValue("player_table", "int_tome_" .. caster:GetUnitName(), {int = newValue})
         else
             caster:AddNewModifier(caster, self, "modifier_int_tome", {})
             caster:FindModifierByName("modifier_int_tome"):SetStackCount(1)
-            CustomNetTables:SetTableValue("int_tomes", caster:GetUnitName(), {int = int})
+            CustomNetTables:SetTableValue("player_table", "int_tome_" .. caster:GetUnitName(), {int = int})
         end
 
         self:SpendCharge()
@@ -51,10 +51,12 @@ function modifier_int_tome:OnCreated(kv)
     if IsServer() then
         local parent = self:GetParent()
         if parent:IsIllusion() or parent:IsTempestDouble() then
-            local tome_table = CustomNetTables:GetTableValue("int_tomes", self:GetParent():GetUnitName())
-            parent:ModifyIntellect(tome_table.int)
+            local tome_table = CustomNetTables:GetTableValue("player_table", "int_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_int_tome")
             mod:SetStackCount(tome_table.int/25)
+            if parent:IsIllusion() then
+                parent:ModifyIntellect(tome_table.int)
+            end
         end
     end
 end
@@ -63,10 +65,12 @@ function modifier_int_tome:OnRefresh(kv)
     if IsServer() then
         local parent = self:GetParent()
         if parent:IsIllusion() or parent:IsTempestDouble() then
-            local tome_table = CustomNetTables:GetTableValue("int_tomes", self:GetParent():GetUnitName())
-            parent:ModifyIntellect(tome_table.int)
+            local tome_table = CustomNetTables:GetTableValue("player_table", "int_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_int_tome")
             mod:SetStackCount(tome_table.int/25)
+            if parent:IsIllusion() then
+                parent:ModifyIntellect(tome_table.int)
+            end
         end
     end
 end

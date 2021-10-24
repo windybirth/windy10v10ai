@@ -613,6 +613,7 @@
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"850"			// Speed of projectile.
 
+		"Ability2"					"filler_ability"			// Ability 2.
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyGoldMin"				"200"		// Gold earned min.
@@ -740,6 +741,12 @@
 		//----------------------------------------------------------------
 		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
+	}
+	
+	"npc_dota_goodguys_healers"
+	{
+
+		"Ability2"					"filler_ability"			// Ability 2.
 	}
 	"dota_fountain"
 	{

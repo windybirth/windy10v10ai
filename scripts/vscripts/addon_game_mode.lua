@@ -168,16 +168,20 @@ local function multiplierWithGameTime(multiplier)
 			return multiplier
 		elseif multiplier <= 5 then
 			return 2
-		else
+		elseif multiplier <= 10 then
 			return 4
+		else
+			return 6
 		end
 	elseif time < (60 * 6) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
 			return 3
-		else
+		elseif multiplier <= 10 then
 			return 5
+		else
+			return 8
 		end
 	else
 		return multiplier
