@@ -163,8 +163,7 @@ end
 
 local function multiplierWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
-	print("gametime "..time)
-	if time < 240 then
+	if time < (60 * 3) then
 		if multiplier < 2 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -172,7 +171,7 @@ local function multiplierWithGameTime(multiplier)
 		else
 			return 4
 		end
-	elseif time < 420 then
+	elseif time < (60 * 6) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -204,9 +203,9 @@ function AIGameMode:FilterGold(tGoldFilter)
 	end
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tGoldFilter["gold"] = math.floor(iGold*self.fRadiantGoldMultiplier)
+		tGoldFilter["gold"] = math.floor(iGold*multiplierWithGameTime(self.fRadiantGoldMultiplier))
 	else
-		tGoldFilter["gold"] = math.floor(iGold*self.fDireGoldMultiplier)
+		tGoldFilter["gold"] = math.floor(iGold*multiplierWithGameTime(self.fDireGoldMultiplier))
 	end
 	return true
 end
