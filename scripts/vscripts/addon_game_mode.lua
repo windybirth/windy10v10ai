@@ -160,6 +160,31 @@ end
 ------------------------------------------------------------------
 --                          Gold Filter                         --
 ------------------------------------------------------------------
+
+local function multiplierWithGameTime(multiplier)
+	local time = GameRules:GetGameTime(false, false)
+	print("gametime "..time)
+	if time < 240 then
+		if multiplier < 2 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 2
+		else
+			return 4
+		end
+	elseif time < 420 then
+		if multiplier < 3 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 3
+		else
+			return 5
+		end
+	else
+		return multiplier
+	end
+end
+
 function AIGameMode:FilterGold(tGoldFilter)
 	local iGold = tGoldFilter["gold"]
 	local iPlayerID = tGoldFilter["player_id_const"]
@@ -193,9 +218,9 @@ function AIGameMode:FilterXP(tXPFilter)
 	local iReason = tXPFilter["reason_const"]
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tXPFilter["experience"] = math.floor(iXP*self.fRadiantXPMultiplier)
+		tXPFilter["experience"] = math.floor(iXP*multiplierWithGameTime(self.fRadiantXPMultiplier))
 	else
-		tXPFilter["experience"] = math.floor(iXP*self.fDireXPMultiplier)
+		tXPFilter["experience"] = math.floor(iXP*multiplierWithGameTime(self.fDireXPMultiplier))
 	end
 	return true
 end
@@ -215,7 +240,9 @@ local tPossibleRunes = {
 local tLastRunes = {}
 
 function AIGameMode:FilterRune(tRuneFilter)
-	if GameRules:GetGameTime() > 2395+self.fGameStartTime then
+	if GameRules:GetGameTime() < 300+self.fGameStartTime then
+		return false
+	elseif GameRules:GetGameTime() > 2395+self.fGameStartTime then
 		tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]
 		while tRuneFilter.rune_type == tLastRunes[tRuneFilter.spawner_entindex_const] do
 			tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]
