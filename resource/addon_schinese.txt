@@ -333,5 +333,12 @@
 		"DOTA_Tooltip_modifier_int_tome"								"Intelligence Tomes Consumed"
 		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
+		"DOTA_Tooltip_ability_creep_buff"								"大兵Buff"
+		"DOTA_Tooltip_ability_creep_buff_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_creep_buff_bonus_armor"						"+$armor"
+
+		"DOTA_Tooltip_ability_creep_buff_mega"								"超级兵Buff"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
 	}
 }

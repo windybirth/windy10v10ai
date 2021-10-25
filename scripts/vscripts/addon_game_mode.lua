@@ -99,6 +99,7 @@ function AIGameMode:PreGameOptions()
 
 	-------------------------
 	AIGameMode:SpawnNeutralCreeps30sec()
+	AIGameMode:AddCreepsSkill()
 
 
 	if self.bSameHeroSelection == 1 then
@@ -154,6 +155,29 @@ function AIGameMode:SpawnNeutralCreeps30sec()
 	GameRules:SpawnNeutralCreeps()
 	Timers:CreateTimer(30, function ()
 		AIGameMode:SpawnNeutralCreeps30sec()
+	end)
+end
+
+function AIGameMode:AddCreepsSkill()
+	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
+	local sumTowerPower = (AIGameMode.iRadiantTowerPower + AIGameMode.iDireTowerPower)
+	for _,creep in ipairs(npc_dota_creep_lane) do
+		local creepBuff = creep:FindAbilityByName("creep_buff")
+		if creepBuff and (creepBuff:GetLevel() == 0) then
+			print("Set Creep Skill level "..sumTowerPower)
+			creepBuff:SetLevel(sumTowerPower)
+		end
+
+		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
+		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
+			print("Set Creep MEGA Skill level "..sumTowerPower)
+			creepBuffMega:SetLevel(sumTowerPower)
+		end
+	end
+
+	-- loop in 10s
+	Timers:CreateTimer(10, function ()
+		AIGameMode:AddCreepsSkill()
 	end)
 end
 
