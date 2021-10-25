@@ -7,7 +7,7 @@ if IsServer() then
     function item_tome_of_agility:OnSpellStart()
         local caster = self:GetCaster()
         local agi = self:GetSpecialValueFor("bonus")
-        local tome_table = CustomNetTables:GetTableValue("agi_tomes", caster:GetUnitName())
+        local tome_table = CustomNetTables:GetTableValue("player_table", "agi_tome_" .. caster:GetUnitName())
         caster:ModifyAgility(agi)
         caster:EmitSound("Item.TomeOfKnowledge")
 
@@ -15,11 +15,11 @@ if IsServer() then
             local modifier = caster:FindModifierByName("modifier_agi_tome")
             modifier:SetStackCount(modifier:GetStackCount() + 1) -- + agi
             local newValue = tome_table.agi + agi
-            CustomNetTables:SetTableValue("agi_tomes", caster:GetUnitName(), {agi = newValue})
+            CustomNetTables:SetTableValue("player_table", "agi_tome_" .. caster:GetUnitName(), {agi = newValue})
         else
             caster:AddNewModifier(caster, self, "modifier_agi_tome", {})
             caster:FindModifierByName("modifier_agi_tome"):SetStackCount(1) -- (agi)
-            CustomNetTables:SetTableValue("agi_tomes", caster:GetUnitName(), {agi = agi})
+            CustomNetTables:SetTableValue("player_table", "agi_tome_" .. caster:GetUnitName(), {agi = agi})
         end
 
         self:SpendCharge()
@@ -48,10 +48,12 @@ function modifier_agi_tome:OnCreated(kv)
     if IsServer() then
         local parent = self:GetParent()
         if parent:IsIllusion() or parent:IsTempestDouble() then
-        	local tome_table = CustomNetTables:GetTableValue("agi_tomes", self:GetParent():GetUnitName())
-    		parent:ModifyAgility(tome_table.agi)
+        	local tome_table = CustomNetTables:GetTableValue("player_table", "agi_tome_" .. self:GetParent():GetUnitName())
     		local mod = parent:FindModifierByName("modifier_agi_tome")
     		mod:SetStackCount(tome_table.agi/25)
+            if parent:IsIllusion() then
+                parent:ModifyAgility(tome_table.agi)
+            end
         end
     end
 end
@@ -60,10 +62,12 @@ function modifier_agi_tome:OnRefresh(kv)
     if IsServer() then
         local parent = self:GetParent()
         if parent:IsIllusion() or parent:IsTempestDouble() then
-            local tome_table = CustomNetTables:GetTableValue("agi_tomes", self:GetParent():GetUnitName())
-            parent:ModifyAgility(tome_table.agi)
+            local tome_table = CustomNetTables:GetTableValue("player_table", "agi_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_agi_tome")
             mod:SetStackCount(tome_table.agi/25)
+            if parent:IsIllusion() then
+                parent:ModifyAgility(tome_table.agi)
+            end
         end
     end
 end
