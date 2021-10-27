@@ -14,7 +14,12 @@ if IsServer() then
         if caster:HasModifier("modifier_agi_tome") then
             local modifier = caster:FindModifierByName("modifier_agi_tome")
             modifier:SetStackCount(modifier:GetStackCount() + 1) -- + agi
-            local newValue = tome_table.agi + agi
+            
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.agi
+            end
+            local newValue = tomeValue + agi
             CustomNetTables:SetTableValue("player_table", "agi_tome_" .. caster:GetUnitName(), {agi = newValue})
         else
             caster:AddNewModifier(caster, self, "modifier_agi_tome", {})
@@ -50,9 +55,13 @@ function modifier_agi_tome:OnCreated(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
         	local tome_table = CustomNetTables:GetTableValue("player_table", "agi_tome_" .. self:GetParent():GetUnitName())
     		local mod = parent:FindModifierByName("modifier_agi_tome")
-    		mod:SetStackCount(tome_table.agi/25)
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.agi
+            end
+    		mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyAgility(tome_table.agi)
+                parent:ModifyAgility(tomeValue)
             end
         end
     end
@@ -64,9 +73,13 @@ function modifier_agi_tome:OnRefresh(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
             local tome_table = CustomNetTables:GetTableValue("player_table", "agi_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_agi_tome")
-            mod:SetStackCount(tome_table.agi/25)
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.agi
+            end
+            mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyAgility(tome_table.agi)
+                parent:ModifyAgility(tomeValue)
             end
         end
     end

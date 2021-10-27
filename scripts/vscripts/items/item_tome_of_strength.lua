@@ -16,7 +16,11 @@ if IsServer() then
         if caster:HasModifier("modifier_str_tome") then
             local modifier = caster:FindModifierByName("modifier_str_tome")
             modifier:SetStackCount(modifier:GetStackCount() + 1)
-            local newValue = tome_table.str + str
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.str
+            end
+            local newValue = tomeValue + str
             CustomNetTables:SetTableValue("player_table", "str_tome_" .. caster:GetUnitName(), {str = newValue})
         else
             caster:AddNewModifier(caster, self, "modifier_str_tome", {})
@@ -53,9 +57,13 @@ function modifier_str_tome:OnCreated(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
             local tome_table = CustomNetTables:GetTableValue("player_table", "str_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_str_tome")
-            mod:SetStackCount(tome_table.str/25)
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.str
+            end
+            mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyStrength(tome_table.str)
+                parent:ModifyStrength(tomeValue)
             end
         end
     end
@@ -67,9 +75,13 @@ function modifier_str_tome:OnRefresh(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
             local tome_table = CustomNetTables:GetTableValue("player_table", "str_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_str_tome")
-            mod:SetStackCount(tome_table.str/25)
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.str
+            end
+            mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyStrength(tome_table.str)
+                parent:ModifyStrength(tomeValue)
             end
         end
     end

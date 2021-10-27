@@ -689,3 +689,10 @@ tBotItemData.itemConsumeList = {
 	'item_ultimate_scepter_2',
 	'item_moon_shard_datadriven',
 }
+
+tBotItemData.itemConsumeNoTargetList = {
+	'item_tome_of_agility',
+	'item_tome_of_strength',
+	'item_tome_of_intelligence',
+}
+

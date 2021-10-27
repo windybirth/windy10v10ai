@@ -2563,7 +2563,7 @@
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
 		"AbilityCooldown"				"60.0"
-		"AbilityManaCost"			"900"
+		"AbilityManaCost"			"1200"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------

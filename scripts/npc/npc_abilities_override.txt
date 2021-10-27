@@ -2179,7 +2179,7 @@
 	}
 	"viper_viper_strike"
 	{
-		"MaxLevel" "7"
+		"MaxLevel" "5"
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
@@ -2307,7 +2307,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"110 130 150 170 190 210 230"
+		"AbilityManaCost"				"110 130 150 170 200 230 260"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -2321,7 +2321,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"laser_damage"			"80 160 240 320 380 440 500"
+				"laser_damage"			"80 160 240 300 350 400 450"
 				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
 			}
 		}
@@ -2333,7 +2333,7 @@
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"80 100 120 140 160 180 200"
+		"AbilityManaCost"				"80 100 120 140 170 200 230"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2347,12 +2347,12 @@
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"targets"			"2 2 2 3 3 4 4"
+				"targets"			"2 2 2 2 3 3 3"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"targets_scepter"	"4 4 4 5 5 6 6"
+				"targets_scepter"	"4 4 4 4 5 5 5"
 				"RequiresScepter"			"1"
 			}
 		}
@@ -2405,6 +2405,31 @@
 	"disruptor_static_storm"
 	{
 		"AbilityCooldown"				"60 50 40"
+	}
+
+	"dark_seer_wall_of_replica"
+	{
+		"AbilityCooldown"				"130.0 125.0 120.0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"duration"				"20.0"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"replica_damage_incoming"	"200"
+			}	
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_replica_total_damage_incoming"	"300"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
 	}
 	"enchantress_impetus"
 	{
@@ -2757,7 +2782,7 @@
 	{
 		"MaxLevel" "7"
 		"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
-		"AbilityManaCost"				"60 80 100 120 140 160 200"
+		"AbilityManaCost"				"60 80 100 130 160 200 250"
 
 		"AbilitySpecial"
 		{
@@ -2769,7 +2794,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"int_multiplier"		"1.4 1.5 1.6 1.65 1.7 1.75 1.8"
+				"int_multiplier"		"1.5 1.55 1.6 1.65 1.7 1.75 1.8"
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -2808,9 +2833,8 @@
 	"zuus_lightning_bolt"
 	{
 		"MaxLevel" "7"
-    "AbilityManaCost"				"70 85 100 115 135 150 180"
-
-    "AbilityDamage"					"150 225 300 350 400 450 500"
+		"AbilityManaCost"				"70 85 100 115 135 150 180"
+		"AbilityDamage"					"150 225 300 350 400 450 500"
 	}
 	"zuus_thundergods_wrath"
 	{

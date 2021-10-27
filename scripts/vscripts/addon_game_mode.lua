@@ -185,7 +185,7 @@ end
 --                          Gold Filter                         --
 ------------------------------------------------------------------
 
-local function multiplierWithGameTime(multiplier)
+local function multiplierGoldWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
 	if time < (60 * 3) then
 		if multiplier < 2 then
@@ -212,6 +212,33 @@ local function multiplierWithGameTime(multiplier)
 	end
 end
 
+local function multiplierXPWithGameTime(multiplier)
+	local time = GameRules:GetDOTATime(false, false)
+	if time < (60 * 3) then
+		if multiplier < 2 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 3
+		elseif multiplier <= 10 then
+			return 6
+		else
+			return 9
+		end
+	elseif time < (60 * 6) then
+		if multiplier < 3 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 4
+		elseif multiplier <= 10 then
+			return 8
+		else
+			return 12
+		end
+	else
+		return multiplier
+	end
+end
+
 function AIGameMode:FilterGold(tGoldFilter)
 	local iGold = tGoldFilter["gold"]
 	local iPlayerID = tGoldFilter["player_id_const"]
@@ -231,9 +258,9 @@ function AIGameMode:FilterGold(tGoldFilter)
 	end
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tGoldFilter["gold"] = math.floor(iGold*multiplierWithGameTime(self.fRadiantGoldMultiplier))
+		tGoldFilter["gold"] = math.floor(iGold*multiplierGoldWithGameTime(self.fRadiantGoldMultiplier))
 	else
-		tGoldFilter["gold"] = math.floor(iGold*multiplierWithGameTime(self.fDireGoldMultiplier))
+		tGoldFilter["gold"] = math.floor(iGold*multiplierGoldWithGameTime(self.fDireGoldMultiplier))
 	end
 	return true
 end
@@ -245,9 +272,9 @@ function AIGameMode:FilterXP(tXPFilter)
 	local iReason = tXPFilter["reason_const"]
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tXPFilter["experience"] = math.floor(iXP*multiplierWithGameTime(self.fRadiantXPMultiplier))
+		tXPFilter["experience"] = math.floor(iXP*multiplierXPWithGameTime(self.fRadiantXPMultiplier))
 	else
-		tXPFilter["experience"] = math.floor(iXP*multiplierWithGameTime(self.fDireXPMultiplier))
+		tXPFilter["experience"] = math.floor(iXP*multiplierXPWithGameTime(self.fDireXPMultiplier))
 	end
 	return true
 end

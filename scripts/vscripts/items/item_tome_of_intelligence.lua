@@ -16,7 +16,11 @@ if IsServer() then
         if caster:HasModifier("modifier_int_tome") then
             local modifier = caster:FindModifierByName("modifier_int_tome")
             modifier:SetStackCount(modifier:GetStackCount() + 1)
-            local newValue = tome_table.int + int
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.int
+            end
+            local newValue = tomeValue + int
             CustomNetTables:SetTableValue("player_table", "int_tome_" .. caster:GetUnitName(), {int = newValue})
         else
             caster:AddNewModifier(caster, self, "modifier_int_tome", {})
@@ -53,9 +57,14 @@ function modifier_int_tome:OnCreated(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
             local tome_table = CustomNetTables:GetTableValue("player_table", "int_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_int_tome")
-            mod:SetStackCount(tome_table.int/25)
+            
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.int
+            end
+            mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyIntellect(tome_table.int)
+                parent:ModifyIntellect(tomeValue)
             end
         end
     end
@@ -67,9 +76,14 @@ function modifier_int_tome:OnRefresh(kv)
         if parent:IsIllusion() or parent:IsTempestDouble() then
             local tome_table = CustomNetTables:GetTableValue("player_table", "int_tome_" .. self:GetParent():GetUnitName())
             local mod = parent:FindModifierByName("modifier_int_tome")
-            mod:SetStackCount(tome_table.int/25)
+            
+            local tomeValue = 0
+            if tome_table then
+                tomeValue = tome_table.int
+            end
+            mod:SetStackCount(tomeValue/25)
             if parent:IsIllusion() then
-                parent:ModifyIntellect(tome_table.int)
+                parent:ModifyIntellect(tomeValue)
             end
         end
     end

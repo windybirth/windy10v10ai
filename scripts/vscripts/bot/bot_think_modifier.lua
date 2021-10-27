@@ -4,6 +4,14 @@
 ================================================================================================================= ]]
 require('bot/bot_item_data')
 
+
+local function addTome(k, v)
+  for i = 0, 9 do
+    table.insert(v,"item_tome_of_agility")
+    table.insert(v,"item_tome_of_strength")
+    table.insert(v,"item_tome_of_intelligence")
+	end
+end
 --------------------
 -- Initial
 --------------------
@@ -11,6 +19,11 @@ if BotThink == nil then
   print("Bot Think initialize!")
 	_G.BotThink = class({}) -- put in the global scope
   BotThink.itemPrice = LoadKeyValues("scripts/kv/item_price.kv")
+
+  local allPurchaseTable = tBotItemData.purchaseItemList
+  table.foreach(allPurchaseTable, addTome)
+  print("---------------------Item List------------------------")
+  PrintTable(allPurchaseTable)
 end
 
 --------------------
@@ -133,6 +146,21 @@ function BotThink:ThinkConsumeItem(hHero)
       else
         print("Think use "..hHeroName.." try to use item "..vItemUseName)
         hHero:CastAbilityOnTarget(hHero, hItem, hHero:GetPlayerOwnerID())
+        return true
+      end
+		end
+  end
+
+  local itemConsumeNoTargetList = tBotItemData.itemConsumeNoTargetList
+  for i,vItemUseName in ipairs(itemConsumeNoTargetList) do
+    local hItem = FindItemByNameNotIncludeBackpack(hHero, vItemUseName)
+    if hItem then
+      if hItem:GetCooldownTimeRemaining() > 0 then
+        print("Warn! Think use item in cooldown"..hHeroName.." item "..vItemUseName)
+      else
+        print("Think use "..hHeroName.." try to use item "..vItemUseName)
+        hHero:CastAbilityNoTarget(hItem, hHero:GetPlayerOwnerID())
+        return true
       end
 		end
   end
