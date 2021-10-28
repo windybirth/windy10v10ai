@@ -3,7 +3,7 @@ local tBotNameList = {
 	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
 	-- "npc_dota_hero_bounty_hunter",
-	-- "npc_dota_hero_bloodseeker",
+	"npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
 	-- "npc_dota_hero_chaos_knight",
 	"npc_dota_hero_crystal_maiden",
@@ -169,6 +169,7 @@ function AIGameMode:OnGameStateChanged(keys)
 		end
 
 	elseif state == DOTA_GAMERULES_STATE_PRE_GAME then
+		-- modifier towers
 		local tTowers = Entities:FindAllByClassname("npc_dota_tower")
 		for k, v in pairs(tTowers) do
 			if v:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
@@ -184,9 +185,11 @@ function AIGameMode:OnGameStateChanged(keys)
 		local tTowers = Entities:FindAllByClassname("npc_dota_barracks")
 		for k, v in pairs(tTowers) do
 			if v:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
+				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iRadiantTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iRadiantTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iRadiantTowerHeal)
 			elseif v:GetTeamNumber() == DOTA_TEAM_BADGUYS then
+				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iDireTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
 			end
@@ -231,11 +234,11 @@ function AIGameMode:OnEntityKilled(keys)
 
 	local fRespawnTime = 0
 	local iLevel = hHero:GetLevel()
-	local tDOTARespawnTime = {3, 5, 7, 9, 13, 15, 16, 17, 18, 19, 20, 21, 22, 24, 26, 28, 30, 32, 34, 36, 37, 40, 42, 46, 48, 50, 52, 54, 56, 58}
+	local tDOTARespawnTime = {5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 26, 30, 32, 34, 36, 38, 40, 45, 48, 50, 52, 54, 56, 58, 60, 62, 64, 66, 68, 70}
 	if iLevel <= 30 then
-		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100)
+		fRespawnTime = math.ceil(tDOTARespawnTime[iLevel]*self.iRespawnTimePercentage/100.0)
 	else
-		fRespawnTime = (iLevel + 30)*self.iRespawnTimePercentage/100
+		fRespawnTime = math.ceil((iLevel/2 + 55)*self.iRespawnTimePercentage/100.0)
 	end
 
 	if hHero:FindModifierByName('modifier_necrolyte_reapers_scythe') then
@@ -372,7 +375,7 @@ end
 function AIGameMode:OnPlayerLevelUp(keys)
 	local iEntIndex=PlayerResource:GetPlayer(keys.player-1):GetAssignedHero():entindex()
 	Timers:CreateTimer(0.5, function ()
-		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.1)
+		EntIndexToHScript(iEntIndex):SetCustomDeathXP(40 + EntIndexToHScript(iEntIndex):GetCurrentXP()*0.09)
 	end)
 
 
