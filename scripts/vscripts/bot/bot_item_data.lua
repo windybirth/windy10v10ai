@@ -79,7 +79,8 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_recipe_abyssal_blade',
 		'item_wasp',
-		'item_ultimate_scepter_2',
+		-- bloodseeker scepter may cause game crash
+		-- 'item_ultimate_scepter_2',
 		'item_aghanims_shard',
 		'item_monkey_king_bar_2',
 		'item_radiance_2',
@@ -150,7 +151,7 @@ tBotItemData.purchaseItemList = {
 		'item_glimmer_cape',
 		'item_ultimate_scepter_2',
 		'item_aghanims_shard',
-		'item_arcane_octarine_core',
+		'item_insight_armor',
 
 		'item_wings_of_haste',
 		
@@ -413,6 +414,8 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_wasp',
 		'item_skadi',
+		'item_moon_shard_datadriven',
+		'item_satanic',
 	},
 	npc_dota_hero_sven = {
 		'item_wings_of_haste',
@@ -686,3 +689,10 @@ tBotItemData.itemConsumeList = {
 	'item_ultimate_scepter_2',
 	'item_moon_shard_datadriven',
 }
+
+tBotItemData.itemConsumeNoTargetList = {
+	'item_tome_of_agility',
+	'item_tome_of_strength',
+	'item_tome_of_intelligence',
+}
+

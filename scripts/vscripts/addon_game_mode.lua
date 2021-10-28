@@ -11,7 +11,7 @@ require('timers')
 require('settings')
 require('events')
 require('util')
-require('bot_think_modifier')
+require('bot/bot_think_modifier')
 
 function Activate()
 	AIGameMode:InitGameMode()
@@ -99,6 +99,7 @@ function AIGameMode:PreGameOptions()
 
 	-------------------------
 	AIGameMode:SpawnNeutralCreeps30sec()
+	AIGameMode:AddCreepsSkill()
 
 
 	if self.bSameHeroSelection == 1 then
@@ -157,9 +158,87 @@ function AIGameMode:SpawnNeutralCreeps30sec()
 	end)
 end
 
+function AIGameMode:AddCreepsSkill()
+	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
+	local sumTowerPower = (AIGameMode.iRadiantTowerPower + AIGameMode.iDireTowerPower)
+	for _,creep in ipairs(npc_dota_creep_lane) do
+		local creepBuff = creep:FindAbilityByName("creep_buff")
+		if creepBuff and (creepBuff:GetLevel() == 0) then
+			print("Set Creep Skill level "..sumTowerPower)
+			creepBuff:SetLevel(sumTowerPower)
+		end
+
+		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
+		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
+			print("Set Creep MEGA Skill level "..sumTowerPower)
+			creepBuffMega:SetLevel(sumTowerPower)
+		end
+	end
+
+	-- loop in 10s
+	Timers:CreateTimer(10, function ()
+		AIGameMode:AddCreepsSkill()
+	end)
+end
+
 ------------------------------------------------------------------
 --                          Gold Filter                         --
 ------------------------------------------------------------------
+
+local function multiplierGoldWithGameTime(multiplier)
+	local time = GameRules:GetDOTATime(false, false)
+	if time < (60 * 3) then
+		if multiplier < 2 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 2
+		elseif multiplier <= 10 then
+			return 4
+		else
+			return 6
+		end
+	elseif time < (60 * 6) then
+		if multiplier < 3 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 3
+		elseif multiplier <= 10 then
+			return 5
+		else
+			return 8
+		end
+	else
+		return multiplier
+	end
+end
+
+local function multiplierXPWithGameTime(multiplier)
+	local time = GameRules:GetDOTATime(false, false)
+	if time < (60 * 3) then
+		if multiplier < 2 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 3
+		elseif multiplier <= 10 then
+			return 6
+		else
+			return 9
+		end
+	elseif time < (60 * 6) then
+		if multiplier < 3 then
+			return multiplier
+		elseif multiplier <= 5 then
+			return 4
+		elseif multiplier <= 10 then
+			return 8
+		else
+			return 12
+		end
+	else
+		return multiplier
+	end
+end
+
 function AIGameMode:FilterGold(tGoldFilter)
 	local iGold = tGoldFilter["gold"]
 	local iPlayerID = tGoldFilter["player_id_const"]
@@ -167,15 +246,21 @@ function AIGameMode:FilterGold(tGoldFilter)
 	local bReliable = tGoldFilter["reliable"] == 1
 
 	if iReason == DOTA_ModifyGold_HeroKill then
-			if iGold > 500 then
-					iGold = 500
+			if iGold > 2000 then
+				iGold = 1000
+			elseif iGold > 1000 then
+				iGold = iGold/4 + 500
+			elseif iGold > 500 then
+				iGold = iGold/2 + 250
+			else
+				iGold = iGold
 			end
 	end
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tGoldFilter["gold"] = math.floor(iGold*self.fRadiantGoldMultiplier)
+		tGoldFilter["gold"] = math.floor(iGold*multiplierGoldWithGameTime(self.fRadiantGoldMultiplier))
 	else
-		tGoldFilter["gold"] = math.floor(iGold*self.fDireGoldMultiplier)
+		tGoldFilter["gold"] = math.floor(iGold*multiplierGoldWithGameTime(self.fDireGoldMultiplier))
 	end
 	return true
 end
@@ -187,10 +272,9 @@ function AIGameMode:FilterXP(tXPFilter)
 	local iReason = tXPFilter["reason_const"]
 
 	if PlayerResource:GetTeam(iPlayerID) == DOTA_TEAM_GOODGUYS then
-		tXPFilter["experience"] = math.floor(iXP*self.fRadiantXPMultiplier)
+		tXPFilter["experience"] = math.floor(iXP*multiplierXPWithGameTime(self.fRadiantXPMultiplier))
 	else
-		tXPFilter["experience"] = math.floor(iXP*self.fDireXPMultiplier)
-		--print("Dire XP", tXPFilter["experience"], iXP)
+		tXPFilter["experience"] = math.floor(iXP*multiplierXPWithGameTime(self.fDireXPMultiplier))
 	end
 	return true
 end
@@ -210,7 +294,9 @@ local tPossibleRunes = {
 local tLastRunes = {}
 
 function AIGameMode:FilterRune(tRuneFilter)
-	if GameRules:GetGameTime() > 2395+self.fGameStartTime then
+	if GameRules:GetGameTime() < 300+self.fGameStartTime then
+		return false
+	elseif GameRules:GetGameTime() > 2395+self.fGameStartTime then
 		tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]
 		while tRuneFilter.rune_type == tLastRunes[tRuneFilter.spawner_entindex_const] do
 			tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]

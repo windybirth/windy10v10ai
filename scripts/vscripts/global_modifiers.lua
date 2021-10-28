@@ -97,26 +97,26 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 	if IsClient() then return end
 
 	local GameTime = GameRules:GetDOTATime(false, false)	-- LATEGAME
-	if (GameTime >= (30 * 60)) then
+	if (GameTime >= (26 * 60)) then
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
-	elseif (GameTime >= (25 * 60)) then						-- LATEGAME
-		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
-		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
-		GameRules:GetGameModeEntity():SetBotsMaxPushTier(6)
-	elseif (GameTime >= (20 * 60)) then						-- MIDGAME
+	elseif (GameTime >= (22 * 60)) then						-- LATEGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
-	elseif (GameTime >= (15 * 60)) then						-- MIDGAME
+	elseif (GameTime >= (18 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
-		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
-	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
+	elseif (GameTime >= (14 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(3)
+	elseif (GameTime >= (10 * 60)) then						-- MIDGAME
+		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
+		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
+		GameRules:GetGameModeEntity():SetBotsMaxPushTier(2)
 	else													-- EARLYGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(false)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)

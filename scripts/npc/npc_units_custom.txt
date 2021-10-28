@@ -286,9 +286,11 @@
 
 		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"			// Health regeneration rate.
+		"BountyGoldMin"				"500"		// Gold earned min.
+		"BountyGoldMax"				"600"		// Gold earned max.
 	}
 	//=================================================================================
-	// 兵营
+	// 兵营 近战
 	//=================================================================================
 	"npc_dota_goodguys_melee_rax_top"
 	{
@@ -303,16 +305,21 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 	}
 	"npc_dota_goodguys_melee_rax_mid"
@@ -328,16 +335,21 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 	}
 	"npc_dota_goodguys_melee_rax_bot"
@@ -353,16 +365,21 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 	}
 
@@ -379,16 +396,21 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 	}
 	"npc_dota_badguys_melee_rax_mid"
@@ -404,16 +426,21 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
 	}
 	"npc_dota_badguys_melee_rax_bot"
@@ -429,17 +456,201 @@
 		"AttackDamageMin"			"200"			// Damage range min.
 		"AttackDamageMax"			"200"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.9"			// Speed of attack.
+		"AttackRate"				"1"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"250"			// Range within a target can be acquired.
 		"AttackRange"				"250"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"650"			// Speed of projectile.
 
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"4400"		// Base health.
+		"StatusHealth"				"3000"		// Base health.
 		"StatusHealthRegen"			"5"		// Health regeneration rate.
+	}
+	//=================================================================================
+	// 兵营 远程
+	//=================================================================================
+	"npc_dota_goodguys_range_rax_top"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+	}
+	"npc_dota_goodguys_range_rax_mid"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+	}
+	"npc_dota_goodguys_range_rax_bot"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+	}
+	
+
+	"npc_dota_badguys_range_rax_top"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+	}
+	"npc_dota_badguys_range_rax_mid"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
+	}
+	"npc_dota_badguys_range_rax_bot"
+	{
+		// Armor
+		//----------------------------------------------------------------
+		"ArmorPhysical"				"15"		// Physical protection.
+		"MagicalResistance"				"0"			// Magical protection.
+		// Attack
+		//----------------------------------------------------------------
+		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
+		"AttackDamageMin"			"140"			// Damage range min.
+		"AttackDamageMax"			"160"			// Damage range max.
+		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
+		"AttackRate"				"1.0"			// Speed of attack.
+		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
+		"AttackAcquisitionRange"	"650"			// Range within a target can be acquired.
+		"AttackRange"				"650"			// Range within a target can be attacked.
+		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
+
+		// Bounty
+		//----------------------------------------------------------------
+		"BountyGoldMin"				"200"		// Gold earned min.
+		"BountyGoldMax"				"300"		// Gold earned max.
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"2000"		// Base health.
+		"StatusHealthRegen"			"0"		// Health regeneration rate.
 	}
 	//=========================================================
 	// TIER 4
@@ -448,13 +659,14 @@
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.7" // 0.95
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
+		"MagicalResistance"			"25"			// Magical protection.
 		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
@@ -462,13 +674,14 @@
 	{
 		"AttackDamageMin"		"232" // 142
 		"AttackDamageMax"		"252" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.7" // 0.95
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
 
 		// Status
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
+		"MagicalResistance"			"25"			// Magical protection.
 		"StatusHealth"				"8000"		// Base health.
 		"StatusHealthRegen"			"10"			// Health regeneration rate.
 	}
@@ -480,7 +693,7 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"40"		// Physical protection.
-		"MagicalResistance"				"0"			// Magical protection.
+		"MagicalResistance"			"40"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -488,16 +701,16 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.32"			// Speed of attack.
+		"AttackRate"				"0.3"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_good.vpcf"			// Particle system model for projectile.
-		"ProjectileSpeed"			"650"			// Speed of projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"24000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -508,7 +721,7 @@
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"40"		// Physical protection.
-		"MagicalResistance"				"0"			// Magical protection.
+		"MagicalResistance"			"40"			// Magical protection.
 
 		// Attack
 		//----------------------------------------------------------------
@@ -516,23 +729,23 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.32"			// Speed of attack.
+		"AttackRate"				"0.3"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
-		"ProjectileSpeed"			"650"			// Speed of projectile.
+		"ProjectileSpeed"			"850"			// Speed of projectile.
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"24000"		// Base health.
+		"StatusHealth"				"20000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"
 	{
 		"AttackRate"				"0.04"
 		"AttackAcquisitionRange"	"2000"		// Range within a target can be acquired.
-		"AttackRange"				"1800"		// Range within a target can be attacked. (was 690)
+		"AttackRange"				"1600"		// Range within a target can be attacked. (was 690)
 	}
 
 
@@ -543,6 +756,9 @@
 	{
 		// General
 		"ModelScale"				"1.2" // 1.12
+
+		// Abilitys
+		"Ability1"	"creep_buff"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -574,6 +790,9 @@
 	{
 		// General
 		"ModelScale"				"1.5" // 1.12
+
+		// Abilitys
+		"Ability1"	"creep_buff_mega"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -607,6 +826,9 @@
 		// General
 		"ModelScale"				"1.2" // 1.12
 
+		// Abilitys
+		"Ability1"	"creep_buff"
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"3"			// 1
@@ -637,6 +859,9 @@
 	{
 		// General
 		"ModelScale"				"1.5" // 1.12
+
+		// Abilitys
+		"Ability1"	"creep_buff_mega"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -671,6 +896,9 @@
 		// General
 		"ModelScale"				"1.2" // 1.12
 
+		// Abilitys
+		"Ability1"	"creep_buff"
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"5"			// 3
@@ -701,6 +929,9 @@
 	{
 		// General
 		"ModelScale"				"1.5" // 1.12
+
+		// Abilitys
+		"Ability1"	"creep_buff_mega"
 
 		// Armor
 		//----------------------------------------------------------------
@@ -733,6 +964,9 @@
 		// General
 		"ModelScale"				"1.2" // 1.12
 
+		// Abilitys
+		"Ability1"	"creep_buff"
+
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"5"			// 3
@@ -763,6 +997,9 @@
 	{
 		// General
 		"ModelScale"				"1.5" // 1.12
+
+		// Abilitys
+		"Ability1"	"creep_buff_mega"
 
 		// Armor
 		//----------------------------------------------------------------

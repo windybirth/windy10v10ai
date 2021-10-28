@@ -182,7 +182,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_all_stats"		"30"
+				"bonus_all_stats"		"20"
 			}
 			"02"
 			{
@@ -193,6 +193,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_mana"			"350"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"			"20"
 			}
 		}
 
@@ -223,6 +228,7 @@
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
 					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
 				}
 				"OnCreated"
 				{
@@ -257,6 +263,7 @@
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
 					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
 					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
 				}
 			}
 		}
@@ -795,12 +802,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage"			"120"
+				"aura_damage"			"100"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_damage_illusions"	"80"
+				"aura_damage_illusions"	"70"
 			}
 			"04"
 			{
@@ -2414,7 +2421,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"40"
+				"bonus_attack_speed"	"45"
 			}
 			"03"
 			{
@@ -2556,7 +2563,7 @@
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
 		"AbilityCooldown"				"60.0"
-		"AbilityManaCost"			"900"
+		"AbilityManaCost"			"1200"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2602,4 +2609,172 @@
 		}
 	}
 
+	//=================================================================================================================
+	// Recipe: Skadi 2
+	//=================================================================================================================
+	"item_recipe_skadi_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3025"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_skadi"
+		
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3000"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_skadi_2"
+		"ItemRequirements"
+		{
+			"01"						"item_skadi;item_ultimate_orb;item_ultimate_orb"
+		}
+	}
+	
+	//=================================================================================================================
+	// Skadi 2
+	//=================================================================================================================
+	"item_skadi_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3026"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_skadi"
+		"AbilityTextureName"			"skadi_datadriven"
+
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_all_stats"		"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_health"			"600"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"600"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cold_slow_melee"	"-45"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"cold_slow_ranged"	"-70"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"cold_duration"	"4.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal_reduction"	"60"
+			}
+		}
+	}
+
+		//=================================================================================================================
+	// Item: Tome of Agility
+	//=================================================================================================================
+
+	"item_tome_of_agility"
+	{
+		"ID"						"3027"
+		"BaseClass"					"item_lua"
+		"ScriptFile"                    		"items/item_tome_of_agility.lua"
+		"AbilityTextureName"		    		"tome_of_agility"
+		"ItemCost"					"10000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"ItemAliases"					"agility tome;agi"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"				"1"
+		"IsTempestDoubleClonable"			"0"
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus"         		"25"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Item: Tome of Intelligence
+	//=================================================================================================================
+
+
+	"item_tome_of_intelligence"
+	{
+		"ID"						"3028"
+		"BaseClass"					"item_lua"
+		"ScriptFile"                    		"items/item_tome_of_intelligence.lua"
+		"AbilityTextureName"		   		"tome_of_intelligence"
+		"ItemCost"					"10000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"ItemAliases"					"intelligence tome;int"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"				"1"
+		"IsTempestDoubleClonable"			"0"
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus"         		"25"
+			}
+		}
+	}
+
+
+	//=================================================================================================================
+	// Item: Tome of Strength
+	//=================================================================================================================
+
+
+	"item_tome_of_strength"
+	{
+		"ID"						"3029"
+		"BaseClass"					"item_lua"
+		"ScriptFile"                    		"items/item_tome_of_strength.lua"
+		"AbilityTextureName"		    		"tome_of_strength"
+		"ItemCost"					"10000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"ItemAliases"					"strength tome;str"
+		"ItemShopTags"					"consumable"
+		"ItemQuality"					"consumable"
+		"ItemStackable"					"1"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"				"1"
+		"IsTempestDoubleClonable"			"0"
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"bonus"         		"25"
+			}
+		}
+	}
 }
