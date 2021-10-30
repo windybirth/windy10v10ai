@@ -295,7 +295,7 @@ local tLastRunes = {}
 
 function AIGameMode:FilterRune(tRuneFilter)
 	if GameRules:GetGameTime() < 300+self.fGameStartTime then
-		return false
+		return true
 	elseif GameRules:GetGameTime() > 2395+self.fGameStartTime then
 		tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]
 		while tRuneFilter.rune_type == tLastRunes[tRuneFilter.spawner_entindex_const] do

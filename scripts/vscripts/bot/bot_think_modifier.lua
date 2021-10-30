@@ -22,8 +22,6 @@ if BotThink == nil then
 
   local allPurchaseTable = tBotItemData.purchaseItemList
   table.foreach(allPurchaseTable, addTome)
-  print("---------------------Item List------------------------")
-  PrintTable(allPurchaseTable)
 end
 
 --------------------

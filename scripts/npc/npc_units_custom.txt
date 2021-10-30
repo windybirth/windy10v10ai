@@ -478,6 +478,9 @@
 	//=================================================================================
 	"npc_dota_goodguys_range_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -507,6 +510,9 @@
 	}
 	"npc_dota_goodguys_range_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -536,6 +542,9 @@
 	}
 	"npc_dota_goodguys_range_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -567,6 +576,9 @@
 
 	"npc_dota_badguys_range_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -596,6 +608,9 @@
 	}
 	"npc_dota_badguys_range_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -625,6 +640,9 @@
 	}
 	"npc_dota_badguys_range_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
+		"Ability2"					"big_thunder_lizard_wardrums_aura"			// Ability 2.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
