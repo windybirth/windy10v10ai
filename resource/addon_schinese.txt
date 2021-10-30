@@ -11,7 +11,8 @@
 		// 					              Options
 		//
 		// /////////////////////////////////////////////////////////////////////////////
-		"addon_option_title"	"Game Options"
+		"addon_option_title"	"游戏核心选项"
+		"addon_option_title_other"	"游戏额外选项"
 		"radiant_gold_multiplier"	"天辉金钱倍率"
 		"dire_gold_multiplier"	"夜魇金钱倍率"
 		"radiant_xp_multiplier"	"天辉经验倍率"

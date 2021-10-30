@@ -12,6 +12,7 @@
 		//
 		// /////////////////////////////////////////////////////////////////////////////
 		"addon_option_title"	"Game Options"
+		"addon_option_title_other"	"Other Options"
 		"radiant_gold_multiplier"	"Radiant Gold Multiplier"
 		"dire_gold_multiplier"	"Dire Gold Multiplier"
 		"radiant_xp_multiplier"	"Radiant XP Multiplier"
