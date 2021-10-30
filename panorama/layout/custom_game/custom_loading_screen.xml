@@ -92,7 +92,6 @@
 							<Label text="500" id="500"/>
 						</DropDown>
 					</Panel>
-					<Label id="GameOptionsPanelBr" text="#addon_option_title_br" />
 					<Panel id="RadiantTowerPowerPanel"	class="GameOptionsSubPanel">
 						<Label id="RadiantTowerPowerTitle" class="GameOptionsLabel" text="#radiant_tower_power" />
 						<DropDown id="radiant_tower_power_dropdown" class="GameOptionsDropdown">
@@ -147,7 +146,6 @@
 							<Label text="100" id="100"/>
 						</DropDown>
 					</Panel>
-					<Label id="GameOptionsPanelBr" text="#addon_option_title_br" />
 					<Panel id="StartingGoldPlayerPanel"	class="GameOptionsSubPanel">
 						<Label id="StartingGoldPlayerTitle" class="GameOptionsLabel" text="#starting_gold_player" />
 						<DropDown id="starting_gold_player_dropdown" class="GameOptionsDropdown">
@@ -168,7 +166,6 @@
 							<Label text="5000" id="5000"/>
 						</DropDown>
 					</Panel>
-					<Label id="GameOptionsPanelBr" text="#addon_option_title_br" />
 					<Panel id="SameHeroSelectionPanel"	class="GameOptionsSubPanel">
 						<Label id="SameHeroSelectionTitle" class="GameOptionsLabel" text="#same_hero_selection" />
 						<ToggleButton checked="false" class="GameOptionsToggle" id="same_hero_selection"/>

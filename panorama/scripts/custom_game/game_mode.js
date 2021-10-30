@@ -17,8 +17,7 @@ function InitializeUI(keys) {
 		return;
 	} else if (is_host) {
 		$("#game_options_container").style.visibility='visible';
-		$.GetContextPanel().GetParent().GetParent().FindChildTraverse("LoadingScreenChat").visible=false;
-		$("#ChatHideButtonShow").visible=true;
+		$("#ChatHideButtonHide").visible=true;
 	} else {
 		$("#ChatHideButtonHide").visible=true;
 	}
