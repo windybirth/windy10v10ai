@@ -2863,19 +2863,19 @@
 	{
 		"MaxLevel" "7"
 		"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
-		"AbilityManaCost"				"60 80 100 130 160 200 250"
+		"AbilityManaCost"				"60 80 100 150 200 250 300"
 
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bolt_damage"			"60 80 100 120 140 160 180"
+				"bolt_damage"			"60 80 100 120 150 180 210"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"int_multiplier"		"1.5 1.55 1.6 1.65 1.7 1.75 1.8"
+				"int_multiplier"		"1.5"
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -2884,7 +2884,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"60.0 50.0 40.0 30.0 20.0"
-		"AbilityManaCost"				"300 550 800 1050 1300"
+		"AbilityManaCost"				"300 550 800 1200 1800"
 
 		"AbilitySpecial"
 		{
@@ -3242,7 +3242,7 @@
 			"06"
 			{
 				"var_type"								"FIELD_FLOAT"
-				"ball_lightning_travel_cost_percent"	"0.75"
+				"ball_lightning_travel_cost_percent"	"0.7"
 			}
 		}
 	}

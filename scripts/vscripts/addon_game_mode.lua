@@ -362,5 +362,5 @@ function AIGameMode:FilterItemAdd(tItemFilter)
 		end
 	end	
 
-	return true;
+	return true
 end
