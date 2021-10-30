@@ -11,8 +11,8 @@
 		// 					              Options
 		//
 		// /////////////////////////////////////////////////////////////////////////////
-		"addon_option_title"	"游戏核心选项"
-		"addon_option_title_other"	"游戏额外选项"
+		"addon_option_title"	"游戏选项"
+		"addon_option_title_br"	""
 		"radiant_gold_multiplier"	"天辉金钱倍率"
 		"dire_gold_multiplier"	"夜魇金钱倍率"
 		"radiant_xp_multiplier"	"天辉经验倍率"
@@ -35,10 +35,10 @@
 		"dire_tower_heal"	"夜魇建筑生命恢复加成"
 		"starting_gold_player"	"玩家初始金钱"
 		"starting_gold_bot"	"机器人初始金钱"
-		"same_hero_selection"  "Allow Same Hero Selection"
-		"fast_courier"  "Fast Invulnerable Courier"
-		"hide_chat_team"  "Hide Chat and Team"
-		"show_chat_team"  "Show Chat and Team"
+		"same_hero_selection"  "允许选择相同英雄"
+		"fast_courier"  "快速信使"
+		"hide_chat_team"  "隐藏聊天框"
+		"show_chat_team"  "显示聊天框"
 
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."

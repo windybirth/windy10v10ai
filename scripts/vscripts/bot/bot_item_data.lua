@@ -6,15 +6,21 @@ tBotItemData = {}
 
 tBotItemData.purchaseItemList = {
 	npc_dota_hero_axe = {
-		'item_magic_stick',
-		'item_recipe_magic_wand',
+		'item_tango',
+		'item_enchanted_mango',
+		'item_flask',
+
+		'item_magic_wand',
 		'item_bracer',
+		'item_phase_boots',
+		'item_blink',
+		'item_blade_mail_2',
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
-		'item_aghanims_shard',
-		'item_recipe_blade_mail_2',
-		
 		'item_wings_of_haste',
+		'item_heart',
+		'item_aghanims_shard',
+		
 		'item_reaver',
 		'item_talisman_of_evasion',
 		'item_recipe_heart',
@@ -25,14 +31,16 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_nevermore = {
+		'item_magic_wand',
 		'item_wraith_band',
+		'item_bottle',
+		'item_power_treads',
 		
 		'item_wings_of_haste',
-
-		'item_hallowed_scepter',
 		'item_aghanims_shard',
 		'item_ultimate_scepter_2',
-		'item_recipe_wasp',
+
+		'item_wasp',
 		'item_satanic',
 		'item_moon_shard_datadriven',
 	},
@@ -509,7 +517,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_axe = {
 		'item_bracer',
 		'item_magic_wand',
-		'item_tranquil_boots',
+		'item_phase_boots',
 	},
 	npc_dota_hero_nevermore = {
 		'item_magic_wand',

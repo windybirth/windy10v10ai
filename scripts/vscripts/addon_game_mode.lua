@@ -93,6 +93,7 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetModifyGoldFilter( Dynamic_Wrap( AIGameMode, "FilterGold" ), self )
 	GameRules:GetGameModeEntity():SetModifyExperienceFilter( Dynamic_Wrap( AIGameMode, "FilterXP" ), self )
 	GameRules:GetGameModeEntity():SetRuneSpawnFilter( Dynamic_Wrap( AIGameMode, "FilterRune" ), self )
+	GameRules:GetGameModeEntity():SetItemAddedToInventoryFilter( Dynamic_Wrap( AIGameMode, "FilterItemAdd" ), self )
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
 	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
@@ -336,4 +337,30 @@ function AIGameMode:FilterRune(tRuneFilter)
 			end
 		end
 	end
+end
+
+function AIGameMode:FilterItemAdd(tItemFilter)
+	print("========================ItemFilter========================")
+	local item = EntIndexToHScript(tItemFilter.item_entindex_const)
+	if item then
+		print(item:GetAbilityName())
+		local itemPurchaseName = item:GetPurchaseTime()
+		print("item PurchaseTime "..itemPurchaseName)
+		if itemPurchaseName == -100 then
+			return true
+		end
+		local purchaser = item:GetPurchaser()
+		if purchaser then
+			print(purchaser:GetName())
+			if purchaser:IsControllableByAnyPlayer() then
+				print("ControllableByAnyPlayer")
+				return true
+			else
+				print("!!!!!!STOP BUY ITEM!!!!!!")
+				return false
+			end
+		end
+	end	
+
+	return true;
 end

@@ -69,7 +69,7 @@
 							<Label text="1" id="1"/>
 						</DropDown>
 					</Panel>
-					<Label id="GameOptionsPanelTitleOther" text="#addon_option_title_other" />
+					<Label id="GameOptionsPanelBr" text="#addon_option_title_br" />
 					<Panel id="RespawnTimePercentagePanel"	class="GameOptionsSubPanel">
 						<Label id="RespawnTimePercentagePanelTitle" class="GameOptionsLabel" text="#respawn_time_percentage" />
 						<DropDown id="respawn_time_percentage_dropdown" class="GameOptionsDropdown">
