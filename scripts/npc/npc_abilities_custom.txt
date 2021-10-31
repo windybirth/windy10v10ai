@@ -308,17 +308,27 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"			"0 0 0 0 0 0 5 10 15 20 30 40 50 60 70 80 90 100 110 120"
+				"bonus_damage"			"10 20 30 40 50 60 80 100"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_armor"			"0 0 0 0 0 0 2 4 6 8 10 15 20 25 30 35 40 45 50 55"
+				"bonus_armor"			"5 10 15 20 25 30 40 50"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"magical_resis"			"0 0 0 0 0 0 2 4 6 8 10 15 20 25 30 35 40 45 50 55"
+				"magical_resis"			"10 20 25 30 35 40 45 50"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_move_speed"			"5 10 15 15 20 20 25 25"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_attack_speed"			"10 20 30 40 50 60 80 100"
 			}
 		}
 		"Modifiers"
@@ -333,7 +343,9 @@
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%magical_resis"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magical_resis"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%bonus_move_speed"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
 				}
 			}
 		}
@@ -352,17 +364,27 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"			"0 0 0 0 0 0 10 20 40 60 80 100 120 140 160 180 200 220 240 260"
+				"bonus_damage"			"20 40 60 80 100 120 150 200"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_armor"			"0 0 0 0 0 0 5 10 15 20 25 30 40 50 60 70 80 100 120 150"
+				"bonus_armor"			"10 20 30 40 50 60 80 100"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"magical_resis"			"0 0 0 0 0 0 5 10 15 20 25 30 35 40 45 50 55 60 65 70"
+				"magical_resis"			"20 30 40 50 60 70 75 80"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_move_speed"			"10 20 30 40 50 60 70 80"
+			}
+			"05"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"bonus_attack_speed"			"20 40 60 80 100 120 150 200"
 			}
 		}
 		"Modifiers"
@@ -377,9 +399,104 @@
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"		"%magical_resis"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magical_resis"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%bonus_move_speed"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
 				}
 			}
 		}
+	}
+
+	//=================================================================================================================
+	// Ability: Tower
+	//=================================================================================================================
+	"tower_attack_speed_aura"
+	{
+		"BaseClass"						"big_thunder_lizard_wardrums_aura"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"speed_bonus"			"50"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"accuracy"			"60"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"1200"
+			}
+		}
+	}
+
+	"tower_armor_aura"
+	{
+		"BaseClass"						"black_dragon_dragonhide_aura"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"10"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"					"1200"
+			}
+		}
+	}
+	"tower_magical_armor_aura"
+	{
+		"BaseClass"						"mudgolem_cloak_aura"
+		
+		"AbilitySpecial"
+		{			
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor"	"20"
+			}	
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_magical_armor_creeps"	"35"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"					"1200"
+			}
+		}
+	}
+	"tower_hp_aura"
+	{
+		"BaseClass"						"granite_golem_hp_aura"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"bonus_hp"			"20"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"1200"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 }

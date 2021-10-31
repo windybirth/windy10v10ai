@@ -328,9 +328,13 @@
 		"DOTA_Tooltip_ability_creep_buff"								"Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_bonus_move_speed"					"+$move_speed"
 
 		"DOTA_Tooltip_ability_creep_buff_mega"								"Mega Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
 	}
 }

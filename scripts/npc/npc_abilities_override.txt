@@ -2039,12 +2039,13 @@
 	}
 	"pangolier_swashbuckle"
 	{
+		"MaxLevel" "7"
 		"AbilitySpecial"
 		{
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"24 42 60 78"
+				"damage"				"24 42 60 78 96 114 132"
 				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_3"
 				"CalculateSpellDamageTooltip"	"0"
 			}
