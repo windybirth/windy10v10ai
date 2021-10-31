@@ -2044,7 +2044,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"240 420 600 780"
+				"damage"				"24 42 60 78"
 				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_3"
 				"CalculateSpellDamageTooltip"	"0"
 			}
