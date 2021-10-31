@@ -681,7 +681,6 @@ tBotItemData.purchaseItemList = {
 		'item_magic_wand',
 		'item_null_talisman',
 		'item_boots',
-		'item_null_talisman',
 		'item_energy_booster',
 		'item_ultimate_scepter',
 		'item_aether_lens',

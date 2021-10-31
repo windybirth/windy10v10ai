@@ -160,21 +160,56 @@ function AIGameMode:SpawnNeutralCreeps30sec()
 end
 
 function AIGameMode:AddCreepsSkill()
-	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
 	local sumTowerPower = (AIGameMode.iRadiantTowerPower + AIGameMode.iDireTowerPower)
+	local skillLevel = 1
+	if sumTowerPower <= 6 then
+		skillLevel = 1
+	elseif sumTowerPower <= 8 then
+		skillLevel = 2
+	elseif sumTowerPower <= 10 then
+		skillLevel = 3
+	elseif sumTowerPower <= 14 then
+		skillLevel = 4
+	elseif sumTowerPower <= 16 then
+		skillLevel = 5
+	elseif sumTowerPower <= 18 then
+		skillLevel = 6
+	elseif sumTowerPower <= 20 then
+		skillLevel = 7
+	else
+		skillLevel = 8
+	end
+
+	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
 	for _,creep in ipairs(npc_dota_creep_lane) do
 		local creepBuff = creep:FindAbilityByName("creep_buff")
 		if creepBuff and (creepBuff:GetLevel() == 0) then
-			print("Set Creep Skill level "..sumTowerPower)
-			creepBuff:SetLevel(sumTowerPower)
+			print("Set Creep Skill level "..skillLevel)
+			creepBuff:SetLevel(skillLevel)
 		end
 
 		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
 		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
-			print("Set Creep MEGA Skill level "..sumTowerPower)
-			creepBuffMega:SetLevel(sumTowerPower)
+			print("Set Creep MEGA Skill level "..skillLevel)
+			creepBuffMega:SetLevel(skillLevel)
 		end
 	end
+
+	local npc_dota_creep_siege = Entities:FindAllByClassname("npc_dota_creep_siege")
+	for _,creep in ipairs(npc_dota_creep_siege) do
+		local creepBuff = creep:FindAbilityByName("creep_buff")
+		if creepBuff and (creepBuff:GetLevel() == 0) then
+			print("Set Creep Skill level "..skillLevel)
+			creepBuff:SetLevel(skillLevel)
+		end
+
+		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
+		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
+			print("Set Creep MEGA Skill level "..skillLevel)
+			creepBuffMega:SetLevel(skillLevel)
+		end
+	end
+	
 
 	-- loop in 10s
 	Timers:CreateTimer(10, function ()
