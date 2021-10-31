@@ -2,7 +2,7 @@ local tBotNameList = {
 	"npc_dota_hero_axe",
 	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
-	-- "npc_dota_hero_bounty_hunter",
+	"npc_dota_hero_bounty_hunter",
 	"npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
 	-- "npc_dota_hero_chaos_knight",
@@ -28,7 +28,6 @@ local tBotNameList = {
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_sniper",
 	"npc_dota_hero_sven",
-	-- TODO
 	"npc_dota_hero_tiny",
 	"npc_dota_hero_vengefulspirit",
 	"npc_dota_hero_viper",
