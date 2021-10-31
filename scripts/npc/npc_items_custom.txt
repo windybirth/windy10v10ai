@@ -2450,7 +2450,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2500"
+		"ItemCost"						"3400"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2477,8 +2477,8 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_magic_scepter.lua"
 
-		"AbilityCooldown"				"60.0"
-		"AbilityManaCost"			"500"
+		"AbilityCooldown"				"65.0"
+		"AbilityManaCost"				"800"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2500,12 +2500,12 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_intelligence"		"45"
+				"bonus_intelligence"		"60"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.09"
+				"spell_amp_per_int"			"0.08"
 			}
 			"03"
 			{
@@ -2534,7 +2534,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
+		"ItemCost"						"3000"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2562,8 +2562,8 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
 
-		"AbilityCooldown"				"60.0"
-		"AbilityManaCost"			"1200"
+		"AbilityCooldown"				"65.0"
+		"AbilityManaCost"			"1300"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -2589,17 +2589,17 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_intelligence"		"100"
+				"bonus_intelligence"		"120"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.18"
+				"spell_amp_per_int"			"0.16"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"active_boost"				"100"
+				"active_boost"				"90"
 			}
 			"04"
 			{
@@ -2687,7 +2687,7 @@
 		}
 	}
 
-		//=================================================================================================================
+	//=================================================================================================================
 	// Item: Tome of Agility
 	//=================================================================================================================
 
