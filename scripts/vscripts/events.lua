@@ -2,7 +2,7 @@ local tBotNameList = {
 	"npc_dota_hero_axe",
 	"npc_dota_hero_nevermore",
 	"npc_dota_hero_bane",
-	-- "npc_dota_hero_bounty_hunter",
+	"npc_dota_hero_bounty_hunter",
 	"npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
 	-- "npc_dota_hero_chaos_knight",
@@ -28,7 +28,6 @@ local tBotNameList = {
 	"npc_dota_hero_skywrath_mage",
 	"npc_dota_hero_sniper",
 	"npc_dota_hero_sven",
-	-- TODO
 	"npc_dota_hero_tiny",
 	"npc_dota_hero_vengefulspirit",
 	"npc_dota_hero_viper",
@@ -414,8 +413,8 @@ function AIGameMode:OnGetLoadingSetOptions(eventSourceIndex, args)
 	self.iMaxLevel = tonumber(args.game_options.max_level)
 	self.iRadiantTowerPower = tonumber(args.game_options.radiant_tower_power)
 	self.iDireTowerPower = tonumber(args.game_options.dire_tower_power)
-	self.iRadiantTowerEndure = tonumber(args.game_options.radiant_tower_endure)
-	self.iDireTowerEndure = tonumber(args.game_options.dire_tower_endure)
+	self.iRadiantTowerEndure = tonumber(args.game_options.radiant_tower_power)
+	self.iDireTowerEndure = tonumber(args.game_options.dire_tower_power)
 	self.iRadiantTowerHeal = tonumber(args.game_options.radiant_tower_heal)
 	self.iDireTowerHeal = tonumber(args.game_options.dire_tower_heal)
 	self.iStartingGoldPlayer = tonumber(args.game_options.starting_gold_player)

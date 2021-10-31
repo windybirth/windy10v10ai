@@ -17,8 +17,7 @@ function InitializeUI(keys) {
 		return;
 	} else if (is_host) {
 		$("#game_options_container").style.visibility='visible';
-		$.GetContextPanel().GetParent().GetParent().FindChildTraverse("LoadingScreenChat").visible=false;
-		$("#ChatHideButtonShow").visible=true;
+		$("#ChatHideButtonHide").visible=true;
 	} else {
 		$("#ChatHideButtonHide").visible=true;
 	}
@@ -57,18 +56,16 @@ function ShowChatTeamActivate() {
 }
 
 $("#radiant_gold_xp_multiplier_dropdown").SetSelected("1");
-$("#dire_gold_xp_multiplier_dropdown").SetSelected("2");
+$("#dire_gold_xp_multiplier_dropdown").SetSelected("5");
 $("#radiant_player_number_dropdown").SetSelected("5");
 $("#dire_player_number_dropdown").SetSelected("10");
 $("#radiant_tower_power_dropdown").SetSelected("5");
 $("#dire_tower_power_dropdown").SetSelected("5");
-$("#radiant_tower_endure_dropdown").SetSelected("5");
-$("#dire_tower_endure_dropdown").SetSelected("5");
 $("#max_level_dropdown").SetSelected("100");
-$("#radiant_tower_heal_dropdown").SetSelected("1");
-$("#dire_tower_heal_dropdown").SetSelected("1");
+$("#radiant_tower_heal_dropdown").SetSelected("5");
+$("#dire_tower_heal_dropdown").SetSelected("5");
 $("#starting_gold_player_dropdown").SetSelected("2000");
-$("#starting_gold_bot_dropdown").SetSelected("2000");
+$("#starting_gold_bot_dropdown").SetSelected("600");
 $("#same_hero_selection").checked=true;
 $("#fast_courier").checked=true;
 
@@ -84,8 +81,6 @@ function StateChange() {
 				"respawn_time_percentage": $("#respawn_time_percentage_dropdown").GetSelected().id,
 				"radiant_tower_power": $("#radiant_tower_power_dropdown").GetSelected().id,
 				"dire_tower_power": $("#dire_tower_power_dropdown").GetSelected().id,
-				"radiant_tower_endure": $("#radiant_tower_endure_dropdown").GetSelected().id,
-				"dire_tower_endure": $("#dire_tower_endure_dropdown").GetSelected().id,
 				"radiant_tower_heal": $("#radiant_tower_heal_dropdown").GetSelected().id,
 				"dire_tower_heal": $("#dire_tower_heal_dropdown").GetSelected().id,
 				"starting_gold_player": $("#starting_gold_player_dropdown").GetSelected().id,
