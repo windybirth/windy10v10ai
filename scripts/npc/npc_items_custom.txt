@@ -2505,7 +2505,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.1"
+				"spell_amp_per_int"			"0.09"
 			}
 			"03"
 			{
@@ -2594,7 +2594,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"spell_amp_per_int"			"0.2"
+				"spell_amp_per_int"			"0.18"
 			}
 			"03"
 			{

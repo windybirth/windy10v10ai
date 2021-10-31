@@ -93,6 +93,7 @@ function AIGameMode:PreGameOptions()
 	GameRules:GetGameModeEntity():SetModifyGoldFilter( Dynamic_Wrap( AIGameMode, "FilterGold" ), self )
 	GameRules:GetGameModeEntity():SetModifyExperienceFilter( Dynamic_Wrap( AIGameMode, "FilterXP" ), self )
 	GameRules:GetGameModeEntity():SetRuneSpawnFilter( Dynamic_Wrap( AIGameMode, "FilterRune" ), self )
+	GameRules:GetGameModeEntity():SetItemAddedToInventoryFilter( Dynamic_Wrap( AIGameMode, "FilterItemAdd" ), self )
 	GameRules:GetGameModeEntity():SetTowerBackdoorProtectionEnabled( true )
 	GameRules:GetGameModeEntity():SetMaximumAttackSpeed( 1000 )
 	GameRules:SetUseUniversalShopMode( true )
@@ -159,21 +160,56 @@ function AIGameMode:SpawnNeutralCreeps30sec()
 end
 
 function AIGameMode:AddCreepsSkill()
-	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
 	local sumTowerPower = (AIGameMode.iRadiantTowerPower + AIGameMode.iDireTowerPower)
+	local skillLevel = 1
+	if sumTowerPower <= 6 then
+		skillLevel = 1
+	elseif sumTowerPower <= 8 then
+		skillLevel = 2
+	elseif sumTowerPower <= 10 then
+		skillLevel = 3
+	elseif sumTowerPower <= 14 then
+		skillLevel = 4
+	elseif sumTowerPower <= 16 then
+		skillLevel = 5
+	elseif sumTowerPower <= 18 then
+		skillLevel = 6
+	elseif sumTowerPower <= 20 then
+		skillLevel = 7
+	else
+		skillLevel = 8
+	end
+
+	local npc_dota_creep_lane = Entities:FindAllByClassname("npc_dota_creep_lane")
 	for _,creep in ipairs(npc_dota_creep_lane) do
 		local creepBuff = creep:FindAbilityByName("creep_buff")
 		if creepBuff and (creepBuff:GetLevel() == 0) then
-			print("Set Creep Skill level "..sumTowerPower)
-			creepBuff:SetLevel(sumTowerPower)
+			print("Set Creep Skill level "..skillLevel)
+			creepBuff:SetLevel(skillLevel)
 		end
 
 		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
 		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
-			print("Set Creep MEGA Skill level "..sumTowerPower)
-			creepBuffMega:SetLevel(sumTowerPower)
+			print("Set Creep MEGA Skill level "..skillLevel)
+			creepBuffMega:SetLevel(skillLevel)
 		end
 	end
+
+	local npc_dota_creep_siege = Entities:FindAllByClassname("npc_dota_creep_siege")
+	for _,creep in ipairs(npc_dota_creep_siege) do
+		local creepBuff = creep:FindAbilityByName("creep_buff")
+		if creepBuff and (creepBuff:GetLevel() == 0) then
+			print("Set Creep Skill level "..skillLevel)
+			creepBuff:SetLevel(skillLevel)
+		end
+
+		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
+		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
+			print("Set Creep MEGA Skill level "..skillLevel)
+			creepBuffMega:SetLevel(skillLevel)
+		end
+	end
+	
 
 	-- loop in 10s
 	Timers:CreateTimer(10, function ()
@@ -295,7 +331,7 @@ local tLastRunes = {}
 
 function AIGameMode:FilterRune(tRuneFilter)
 	if GameRules:GetGameTime() < 300+self.fGameStartTime then
-		return false
+		return true
 	elseif GameRules:GetGameTime() > 2395+self.fGameStartTime then
 		tRuneFilter.rune_type = tPossibleRunes[RandomInt(1, 6)]
 		while tRuneFilter.rune_type == tLastRunes[tRuneFilter.spawner_entindex_const] do
@@ -336,4 +372,30 @@ function AIGameMode:FilterRune(tRuneFilter)
 			end
 		end
 	end
+end
+
+function AIGameMode:FilterItemAdd(tItemFilter)
+	print("========================ItemFilter========================")
+	local item = EntIndexToHScript(tItemFilter.item_entindex_const)
+	if item then
+		print(item:GetAbilityName())
+		local itemPurchaseName = item:GetPurchaseTime()
+		print("item PurchaseTime "..itemPurchaseName)
+		if itemPurchaseName == -100 then
+			return true
+		end
+		local purchaser = item:GetPurchaser()
+		if purchaser then
+			print(purchaser:GetName())
+			if purchaser:IsControllableByAnyPlayer() then
+				print("ControllableByAnyPlayer")
+				return true
+			else
+				print("!!!!!!STOP BUY ITEM!!!!!!")
+				return false
+			end
+		end
+	end	
+
+	return true
 end

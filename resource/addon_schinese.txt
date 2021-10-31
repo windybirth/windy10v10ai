@@ -11,7 +11,8 @@
 		// 					              Options
 		//
 		// /////////////////////////////////////////////////////////////////////////////
-		"addon_option_title"	"Game Options"
+		"addon_option_title"	"游戏选项"
+		"addon_option_title_br"	""
 		"radiant_gold_multiplier"	"天辉金钱倍率"
 		"dire_gold_multiplier"	"夜魇金钱倍率"
 		"radiant_xp_multiplier"	"天辉经验倍率"
@@ -26,18 +27,18 @@
 		"show_game_options"  "Show Game Options"
 		"respawn_time_percentage"	"复活时间百分比"
 		"max_level"	"等级上限"
-		"radiant_tower_power"	"天辉建筑攻击加成等级"
-		"dire_tower_power"	"夜魇建筑攻击加成等级"
+		"radiant_tower_power"	"天辉建筑攻击/防御加成等级"
+		"dire_tower_power"	"夜魇建筑攻击/防御加成等级"
 		"radiant_tower_endure"	"天辉建筑防御加成等级"
 		"dire_tower_endure"	"夜魇建筑防御加成等级"
 		"radiant_tower_heal"	"天辉建筑生命恢复加成"
 		"dire_tower_heal"	"夜魇建筑生命恢复加成"
 		"starting_gold_player"	"玩家初始金钱"
 		"starting_gold_bot"	"机器人初始金钱"
-		"same_hero_selection"  "Allow Same Hero Selection"
-		"fast_courier"  "Fast Invulnerable Courier"
-		"hide_chat_team"  "Hide Chat and Team"
-		"show_chat_team"  "Show Chat and Team"
+		"same_hero_selection"  "允许选择相同英雄"
+		"fast_courier"  "快速信使"
+		"hide_chat_team"  "隐藏聊天框"
+		"show_chat_team"  "显示聊天框"
 
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."
@@ -231,7 +232,7 @@
 		"DOTA_Tooltip_ability_item_arcane_octarine_core_bonus_mana"				"+$mana"
 		"DOTA_Tooltip_ability_item_arcane_octarine_core_Lore"						"位于法术技艺核心的，是只有身负异能之人才能感知的光带。"
 
-		"DOTA_Tooltip_Ability_item_aeon_pendant"				"永恒吊坠"
+		"DOTA_Tooltip_Ability_item_aeon_pendant"				"咸鱼之王"
 		"DOTA_Tooltip_ability_item_aeon_pendant_Description"					"<h1>被动：强断连招</h1>当受到伤害并且生命值低于%health_threshold_pct%%%时，会对英雄施加一个强驱散效果，%buff_duration%秒内+%status_resistance%%%状态抗性，并且所有受到和造成的伤害全部归零。来自玩家的伤害才会触发。"
 		"DOTA_Tooltip_ability_item_aeon_pendant_lore"					"一件多年以前被偷偷运出象牙孵巢的强力宝物。很多人都信以为真了。"
 		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_health"					"+$health"
@@ -243,23 +244,23 @@
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"
 
-		"DOTA_Tooltip_Ability_item_magic_scepter"								"Magic Scepter"
-		"DOTA_Tooltip_Ability_item_magic_scepter_Description"					"<h1>Active: Spell Boost</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续 %active_boost_duration% 秒.\n<h1>Passive: Arcane Refinement</h1>每点智力获得 %spell_amp_per_int% 法术增强."
+		"DOTA_Tooltip_Ability_item_magic_scepter"								"魔渊法杖"
+		"DOTA_Tooltip_Ability_item_magic_scepter_Description"					"<h1>主动: 魔力爆发</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续 %active_boost_duration% 秒.\n<h1>被动: 法术增强</h1>每点智力获得 %spell_amp_per_int% 法术增强."
 		"DOTA_Tooltip_Ability_item_magic_scepter_Lore"							"An ancient relic from the War Wizards, mildly deteriorated.."
 		"DOTA_Tooltip_Ability_item_magic_scepter_bonus_intelligence"			"+$int"
-		"DOTA_Tooltip_Ability_item_recipe_magic_scepter"						"Magic Scepter Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_magic_scepter"						"魔渊法杖卷轴"
 
-		"DOTA_Tooltip_modifier_item_magic_scepter_active"	                	"Spell Boost"
+		"DOTA_Tooltip_modifier_item_magic_scepter_active"	                	"魔力爆发"
 		"DOTA_Tooltip_modifier_item_magic_scepter_active_Description"	        "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
 
 		//Hallowed
-		"DOTA_Tooltip_Ability_item_hallowed_scepter"							"Hallowed Scepter"
-		"DOTA_Tooltip_Ability_item_hallowed_scepter_Description"				"<h1>Active: Hallowed Spell Boost</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续  %active_boost_duration% 秒.\n<h1>Passive: Arcane Refinement</h1>每点智力获得 %spell_amp_per_int% 法术增强.\n\n<h1>Passive: <font color='#a74abd'>Hallowed</font></h1>受到古老的光明与黑暗精神的祝福。不能出售或销毁."
+		"DOTA_Tooltip_Ability_item_hallowed_scepter"							"神聖法杖"
+		"DOTA_Tooltip_Ability_item_hallowed_scepter_Description"				"<h1>主动: 神聖爆发</h1> 将终极魔力赋予巫术师, 获得 %active_boost%%% 法术增强 持续  %active_boost_duration% 秒.\n<h1>被动: 法术增强</h1>每点智力获得 %spell_amp_per_int% 法术增强.\n\n<h1>被动: <font color='#a74abd'>Hallowed</font></h1>受到古老的光明与黑暗精神的祝福。不能出售或销毁."
 		"DOTA_Tooltip_Ability_item_hallowed_scepter_Lore"						"An ancient relic, mysteriously restored to its prime by unknown entities."
 		"DOTA_Tooltip_Ability_item_hallowed_scepter_bonus_intelligence"			"+$int"
-		"DOTA_Tooltip_Ability_item_recipe_hallowed_scepter"						"Hallowed Scepter Recipe"
+		"DOTA_Tooltip_Ability_item_recipe_hallowed_scepter"						"神聖法杖卷轴"
 
-		"DOTA_Tooltip_modifier_item_hallowed_scepter_active"	                "Hallowed Spell Boost"
+		"DOTA_Tooltip_modifier_item_hallowed_scepter_active"	                "神聖爆发"
 		"DOTA_Tooltip_modifier_item_hallowed_scepter_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
 
 
@@ -336,9 +337,14 @@
 		"DOTA_Tooltip_ability_creep_buff"								"大兵Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_bonus_move_speed"					"+$move_speed"
+	}
 
 		"DOTA_Tooltip_ability_creep_buff_mega"								"超级兵Buff"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
 	}
 }

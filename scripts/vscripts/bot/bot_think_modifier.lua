@@ -22,8 +22,6 @@ if BotThink == nil then
 
   local allPurchaseTable = tBotItemData.purchaseItemList
   table.foreach(allPurchaseTable, addTome)
-  print("---------------------Item List------------------------")
-  PrintTable(allPurchaseTable)
 end
 
 --------------------
@@ -68,7 +66,10 @@ local function BuyItemIfGoldEnough(hHero, iPurchaseTable)
       print("Warn! Think purchase "..hHero:GetName().." add "..iItemName.." stop with item count "..hHero:GetNumItemsInInventory())
     else
       print("Think purchase "..hHero:GetName().." try to buy "..iItemName.." cost "..iCost)
-      if hHero:AddItemByName(iItemName) then
+      local item = CreateItem(iItemName, hHero, hHero)
+      -- SetPurchaseTime -100 in order to judge is item add by bot think script
+      item:SetPurchaseTime(-100)
+      if hHero:AddItem(item) then
         PlayerResource:SpendGold(hHero:GetPlayerID(), iCost, DOTA_ModifyGold_PurchaseItem)
         table.remove(iPurchaseTable,1)
       else

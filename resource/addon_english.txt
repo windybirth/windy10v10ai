@@ -12,6 +12,7 @@
 		//
 		// /////////////////////////////////////////////////////////////////////////////
 		"addon_option_title"	"Game Options"
+		"addon_option_title_br"	""
 		"radiant_gold_multiplier"	"Radiant Gold Multiplier"
 		"dire_gold_multiplier"	"Dire Gold Multiplier"
 		"radiant_xp_multiplier"	"Radiant XP Multiplier"
@@ -26,8 +27,8 @@
 		"show_game_options"  "Show Game Options"
 		"respawn_time_percentage"	"Respawn Time Percentage"
 		"max_level"	"Max Level"
-		"radiant_tower_power"	"Radiant Tower Power Level"
-		"dire_tower_power"	"Dire Tower Power Level"
+		"radiant_tower_power"	"Radiant Tower Power/Endurance Level"
+		"dire_tower_power"	"Dire Tower Power/Endurance Level"
 		"radiant_tower_endure"	"Radiant Buildings Endurance Level"
 		"dire_tower_endure"	"Dire Buildings Endurance Level"
 		"radiant_tower_heal"	"Radiant Building Health Regen"
@@ -327,9 +328,13 @@
 		"DOTA_Tooltip_ability_creep_buff"								"Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_bonus_move_speed"					"+$move_speed"
 
 		"DOTA_Tooltip_ability_creep_buff_mega"								"Mega Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
 	}
 }

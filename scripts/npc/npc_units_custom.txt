@@ -294,6 +294,10 @@
 	//=================================================================================
 	"npc_dota_goodguys_melee_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -324,6 +328,10 @@
 	}
 	"npc_dota_goodguys_melee_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -354,6 +362,10 @@
 	}
 	"npc_dota_goodguys_melee_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -385,6 +397,10 @@
 
 	"npc_dota_badguys_melee_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -415,6 +431,10 @@
 	}
 	"npc_dota_badguys_melee_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -445,6 +465,10 @@
 	}
 	"npc_dota_badguys_melee_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_armor_aura"					// Ability 2.
+		"Ability3"					"tower_hp_aura"						// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -478,6 +502,10 @@
 	//=================================================================================
 	"npc_dota_goodguys_range_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -507,6 +535,10 @@
 	}
 	"npc_dota_goodguys_range_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -536,6 +568,10 @@
 	}
 	"npc_dota_goodguys_range_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -567,6 +603,10 @@
 
 	"npc_dota_badguys_range_rax_top"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -596,6 +636,10 @@
 	}
 	"npc_dota_badguys_range_rax_mid"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -625,6 +669,10 @@
 	}
 	"npc_dota_badguys_range_rax_bot"
 	{
+		// Ability
+		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
+		"Ability2"					"tower_attack_speed_aura"			// Ability 2.
+		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"15"		// Physical protection.
@@ -750,7 +798,7 @@
 
 
 	//=================================================================================
-	// Creeps: 小兵
+	// Creeps: 小兵 远程
 	//=================================================================================
 	"npc_dota_creep_badguys_ranged_upgraded"
 	{
@@ -891,6 +939,9 @@
 	}
 
 
+	//=================================================================================
+	// Creeps: 小兵 近战
+	//=================================================================================
 	"npc_dota_creep_badguys_melee_upgraded"
 	{
 		// General
@@ -1027,8 +1078,90 @@
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
+	//=================================================================================
+	// Creeps: 小兵 投石车
+	//=================================================================================
+	"npc_dota_goodguys_siege_upgraded"
+	{
+		// General
+		"ModelScale"				"0.9" // .65
 
+		// Abilitys
+		"Ability1"					"creep_buff"
 
+		// Attack
+		"AttackRate"				"2.5"			// 1
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1800"		// 935
+		"StatusHealthRegen"			"5"			// 0
+	}
+	"npc_dota_goodguys_siege_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.2" // .65
+
+		// Abilitys
+		"Ability1"					"creep_buff_mega"
+
+		// Attack
+		"AttackRate"				"2.0"			// 1
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// 935
+		"StatusHealthRegen"			"10"		// 0
+	}
+
+	"npc_dota_badguys_siege_upgraded"
+	{
+		// General
+		"ModelScale"				"0.9" // .65
+
+		// Abilitys
+		"Ability1"					"creep_buff"
+
+		// Attack
+		"AttackRate"				"2.5"			// 1
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"355"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"1800"		// 935
+		"StatusHealthRegen"			"5"			// 0
+	}
+	"npc_dota_badguys_siege_upgraded_mega"
+	{
+		// General
+		"ModelScale"				"1.2" // .65
+
+		// Abilitys
+		"Ability1"					"creep_buff_mega"
+
+		// Attack
+		"AttackRate"				"2.0"			// 1
+
+		// Movement
+		//----------------------------------------------------------------
+		"MovementSpeed"				"375"		// 325
+
+		// Status
+		//----------------------------------------------------------------
+		"StatusHealth"				"3000"		// 935
+		"StatusHealthRegen"			"10"		// 0
+	}
 
 
 
