@@ -2037,6 +2037,19 @@
 			}
 		}
 	}
+	"pangolier_swashbuckle"
+	{
+		"AbilitySpecial"
+		{
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"24 42 60 78"
+				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_3"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
 	"pangolier_shield_crash"
 	{
 		"MaxLevel" "7"
