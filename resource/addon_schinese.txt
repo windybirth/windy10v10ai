@@ -96,7 +96,7 @@
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_mana_regen"					"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_royal_jelly_custom"									"蜂王浆"
-		"DOTA_Tooltip_Ability_item_royal_jelly_custom_Description"					"<h1>使用: 消耗</h1> 使目标英雄获得一个永久的buff +%health_regen% 生命恢复 和 +%mana_regen% 魔法恢复。<br><br>无法重复作用于相同单位"
+		"DOTA_Tooltip_Ability_item_royal_jelly_custom_Description"					"<h1>使用: 消耗</h1> 使目标英雄获得一个永久的Buff， +%health_regen% 生命恢复 和 +%mana_regen% 魔法恢复。<br><br>无法重复作用于相同单位"
 		"DOTA_Tooltip_modifier_royal_jelly_custom"										"蜂王浆"
 		"DOTA_Tooltip_modifier_royal_jelly_custom_Description"						"提供 %fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复 %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% 魔法恢复。"
 		"DOTA_Tooltip_Ability_item_pirate_hat_custom"									"海盗帽"
