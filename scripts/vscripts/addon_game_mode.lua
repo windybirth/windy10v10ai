@@ -164,9 +164,9 @@ function AIGameMode:AddCreepsSkill()
 	local skillLevel = 1
 	if sumTowerPower <= 6 then
 		skillLevel = 1
-	elseif sumTowerPower <= 8 then
-		skillLevel = 2
 	elseif sumTowerPower <= 10 then
+		skillLevel = 2
+	elseif sumTowerPower <= 12 then
 		skillLevel = 3
 	elseif sumTowerPower <= 14 then
 		skillLevel = 4
@@ -223,7 +223,7 @@ end
 
 local function multiplierGoldWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
-	if time < (60 * 3) then
+	if time < (60 * 2) then
 		if multiplier < 2 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -233,13 +233,13 @@ local function multiplierGoldWithGameTime(multiplier)
 		else
 			return 6
 		end
-	elseif time < (60 * 6) then
+	elseif time < (60 * 5) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
 			return 3
 		elseif multiplier <= 10 then
-			return 5
+			return 6
 		else
 			return 8
 		end
@@ -250,7 +250,7 @@ end
 
 local function multiplierXPWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
-	if time < (60 * 3) then
+	if time < (60 * 2) then
 		if multiplier < 2 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -260,7 +260,7 @@ local function multiplierXPWithGameTime(multiplier)
 		else
 			return 9
 		end
-	elseif time < (60 * 6) then
+	elseif time < (60 * 5) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
