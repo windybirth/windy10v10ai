@@ -590,7 +590,7 @@
 		"ItemQuality"				"consumable"
 		"ItemIsNeutralDrop"			"1"
 		"ItemPurchasable"			"0"
-		"ItemInitialCharges"		"5"
+		"ItemInitialCharges"		"10"
 		"ItemPermanent"				"0"
 		"IsTempestDoubleClonable"	"0"
 
@@ -601,12 +601,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen"			"5.0"
+				"health_regen"			"4.0"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen"			"3.5"
+				"mana_regen"			"2.5"
 			}
 		}
 	}
@@ -2667,12 +2667,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cold_slow_melee"	"-45"
+				"cold_slow_melee"	"-50"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cold_slow_ranged"	"-70"
+				"cold_slow_ranged"	"-60"
 			}
 			"06"
 			{
@@ -2682,7 +2682,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal_reduction"	"60"
+				"heal_reduction"	"65"
 			}
 		}
 	}

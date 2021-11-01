@@ -189,12 +189,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cast_range_bonus"			"100"
+				"cast_range_bonus"			"90"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"3"
+				"bonus_mana_regen"		"2.5"
 			}
 		}
 	}
@@ -1552,7 +1552,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"reward_damage"			"5 10 15"
+				"reward_damage"			"10 15 20"
 				"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
 			}
 		}
@@ -2502,12 +2502,15 @@
 	}
 	"dark_willow_shadow_realm"
 	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"26 24 22 20 18 16 14"
+		"AbilityManaCost"				"70 80 90 105 120 140 160"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"damage"						"90 110 130 150"
+				"damage"						"90 120 150 180 210 240 270"
 				"LinkedSpecialBonus"			"special_bonus_unique_dark_willow_1"
 			}
 			"03"
@@ -2797,6 +2800,82 @@
 	{
 		"AbilityCooldown"				"60"
 	}
+
+	
+	"silencer_glaives_of_wisdom"
+	{
+		"MaxLevel" "7"
+		"AbilityCastRange"				"500"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"3 2.5 2 1.5 1 0.5 0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"15 20 25 30 40 50 60"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"intellect_damage_pct"	"15 25 35 45 55 65 75"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_3"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"int_steal"		"1 1 2 2 3 3 3"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"int_steal_duration"		"15 15 20 20 25 25 25"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"scepter_range"		"450"
+			}
+		}
+	}
+
+	"silencer_last_word"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"22 20 18 16 14 12 10"
+		"AbilityManaCost"				"90 100 110 125 140 160 180"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"120 160 200 240 280 320 360"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"int_multiplier"	"1.8 1.9 2.0 2.1 2.2 2.3 2.4"
+				"LinkedSpecialBonus"	"special_bonus_unique_silencer_4"
+			}
+		}
+	}
+	"special_bonus_unique_silencer_4"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"0.8"
+				"ad_linked_ability"			"silencer_last_word"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
 	"visage_summon_familiars"
 	{
 		"AbilityCooldown"				"20"
