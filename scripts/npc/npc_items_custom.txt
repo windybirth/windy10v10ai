@@ -247,25 +247,6 @@
 					}
 				}
 			}
-			"modifier_item_ultimate_scepter_2_consumed"
-			{
-				"IsBuff"			"1"
-				"IsPurgable"		"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
-
-				"TextureName"		"item_ultimate_regalia"
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_HEALTH_BONUS"				"%bonus_health"
-					"MODIFIER_PROPERTY_MANA_BONUS"					"%bonus_mana"
-					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
-				}
-			}
 		}
 	}
 	//=================================================================================================================
@@ -510,7 +491,12 @@
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"5"
+				"bonus_mana_regen"		"6"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"5"
 			}
 		}
 
@@ -544,27 +530,7 @@
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
 					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
-				}
-			}
-			"modifier_item_wings_of_haste_consumed"
-			{
-				"IsBuff"			"1"
-				"IsPurgable"		"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
-
-				"TextureName"		"item_wings_of_haste"
-
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE"		"%bonus_movement_speed"
-					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
-					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bonus_attack_speed"
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"				"%bonus_health_regen"
-					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%bonus_mana_regen"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
 				}
 			}
 		}
