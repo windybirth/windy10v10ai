@@ -1272,11 +1272,12 @@
 	{
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1800"
+		"ItemCost"						"2400"
 		"ItemShopTags"					""
 	}
 	"item_dagon"
 	{
+		"AbilityManaCost"				"160 240 320 400 480"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1290,11 +1291,17 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"500 750 1000 1250 1500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_tooltip"		"160 240 320 400 480"
 			}
 		}
 	}
 	"item_dagon_2"
 	{
+		"AbilityManaCost"				"160 240 320 400 480"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1308,11 +1315,17 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"500 750 1000 1250 1500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_tooltip"		"160 240 320 400 480"
 			}
 		}
 	}
 	"item_dagon_3"
 	{
+		"AbilityManaCost"				"160 240 320 400 480"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1326,11 +1339,17 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"500 750 1000 1250 1500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_tooltip"		"160 240 320 400 480"
 			}
 		}
 	}
 	"item_dagon_4"
 	{
+		"AbilityManaCost"				"160 240 320 400 480"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1344,11 +1363,17 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"500 750 1000 1250 1500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_tooltip"		"160 240 320 400 480"
 			}
 		}
 	}
 	"item_dagon_5"
 	{
+		"AbilityManaCost"				"160 240 320 400 480"
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
@@ -1362,6 +1387,11 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"damage"				"500 750 1000 1250 1500"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_tooltip"		"160 240 320 400 480"
 			}
 		}
 	}
@@ -2884,12 +2914,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bolt_damage"			"60 80 100 120 150 180 210"
+				"bolt_damage"			"80 100 120 150 180 210 240"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"int_multiplier"		"1.5"
+				"int_multiplier"		"1.4"
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -3310,7 +3340,7 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_mult"					"300"
+				"crit_mult"					"350"
 			}
 		}
 	}
