@@ -6,6 +6,7 @@ tBotItemData = {}
 
 tBotItemData.purchaseItemList = {
 	npc_dota_hero_axe = {
+		'item_tango',
 		'item_magic_wand',
 		'item_power_treads',
 		'item_bracer',
@@ -13,12 +14,12 @@ tBotItemData.purchaseItemList = {
 		'item_vanguard',
 		'item_blink',
 		'item_heart',
+		'item_blade_mail_2',
 		'item_reaver',
 		'item_talisman_of_evasion',
 		'item_recipe_heart',
 		
 		'item_wings_of_haste',
-		'item_blade_mail_2',
 		'item_aghanims_shard',
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
@@ -59,6 +60,9 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_bane = {
+		'item_tango',
+		'item_clarity',
+		'item_faerie_fire',
 		'item_magic_wand',
 		'item_arcane_boots',
 		'item_null_talisman',
@@ -610,13 +614,19 @@ tBotItemData.purchaseItemList = {
 	
 	},
 	npc_dota_hero_skywrath_mage = {
+		'item_tango',
+		'item_clarity',
+		'item_enchanted_mango',
 		'item_magic_wand',
+		'item_null_talisman',
+		'item_null_talisman',
 		'item_arcane_boots',
-		'item_null_talisman',
-		'item_null_talisman',
 		'item_glimmer_cape',
 		'item_force_staff',
 		'item_wings_of_haste',
+		'item_kaya',
+		'item_voodoo_mask',
+		'item_soul_booster',
 		'item_rod_of_atos',
 		'item_aghanims_shard',
 		'item_ultimate_scepter_2',
@@ -624,7 +634,6 @@ tBotItemData.purchaseItemList = {
 		'item_dagon_5',
 		'item_arcane_octarine_core',
 		'item_hallowed_scepter',
-		'item_bloodstone',
 		'item_aeon_disk',
 		'item_recipe_aeon_pendant',
 	
@@ -825,7 +834,6 @@ tBotItemData.purchaseItemList = {
 		'item_kaya',
 		'item_voodoo_mask',
 		'item_soul_booster',
-		'item_recipe_bloodstone',  
 		'item_aeon_disk',
 		'item_aghanims_shard',              
 		'item_dagon_5',
