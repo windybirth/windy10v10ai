@@ -15,8 +15,10 @@
 	"npc_dota_hero_silencer"
 	{
 		"override_hero"		"npc_dota_hero_silencer"
-		"Ability13"			"special_bonus_movement_speed_25"
-		"AttackRange"		"550"
+		"AttackRange"		"500"
+		"AttributeStrengthGain"		"2.200000"		// 2.4
+		"AttributeAgilityGain"		"1.900000"		// 2.4
+		"AttributeIntelligenceGain"		"2.500000"	// 2.9
 	}
 
 	"npc_dota_hero_techies"
@@ -1045,11 +1047,11 @@
 				"14"		"zuus_static_field"
 				"15"		"special_bonus_unique_zeus"
 				"16"		"zuus_static_field"
-				"17"		"zuus_lightning_bolt"
+				"17"		""
 				"18"		"zuus_thundergods_wrath"
-				"19"		"zuus_lightning_bolt"
+				"19"		""
 				"20"		"special_bonus_unique_zeus_4"
-				"21"		"zuus_lightning_bolt"
+				"21"		""
 				"22"		""
 				"23"		""
 				"24"		""
@@ -1059,6 +1061,11 @@
 				"28"		"special_bonus_hp_350"
 				"29"		"special_bonus_unique_zeus_3"
 				"30"		"special_bonus_unique_zeus_5"
+				"31"		"zuus_thundergods_wrath"
+				"32"		"zuus_lightning_bolt"
+				"33"		"zuus_lightning_bolt"
+				"34"		"zuus_lightning_bolt"
+				"35"		"zuus_thundergods_wrath"
 			}
 		}
 	}
