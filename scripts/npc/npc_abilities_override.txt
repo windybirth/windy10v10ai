@@ -1604,14 +1604,14 @@
 	"omniknight_guardian_angel"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilityCooldown"				"100 95 90 85 80"
 		"AbilityManaCost"				"125 175 250 325 400"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"5.0 6.0 7.0 8.0 9.0"
+				"duration"					"5.0 6.0 7.0 7.5 8.0"
 			}
 			"02"
 			{
@@ -1621,7 +1621,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_scepter"			"8.0 9.0 10.0 10.5 11.0"
+				"duration_scepter"			"8.0 8.5 9.0 9.5 10.0"
 				"RequiresScepter"		"1"
 			}
 			"04"
@@ -1639,7 +1639,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"35"
+				"value"				"30"
 				"ad_linked_ability"			"omniknight_guardian_angel"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -3031,7 +3031,7 @@
 	{
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"50 60 70 80"
+		"AbilityManaCost"				"60 70 80 90"
 	}
 
 	"zuus_lightning_bolt"
@@ -3042,7 +3042,17 @@
 	}
 	"zuus_thundergods_wrath"
 	{
-		"AbilityCooldown"				"100 90 80"
+		"AbilityCooldown"				"120 110 100 90 80"
+		"AbilityManaCost"				"300 450 600 800 1000"
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"300 375 450 525 600"
+				"LinkedSpecialBonus"	"special_bonus_unique_zeus_4"
+			}
+		}
 	}
 	//=================================================================================================================
 	// Spectre: Desolate 幽鬼 荒芜
