@@ -556,6 +556,7 @@
 			{
 				"IsBuff"			"1"
 				"IsPurgable"		"0"
+				"AllowIllusionDuplicate"	"1"
 
 				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT"
 
