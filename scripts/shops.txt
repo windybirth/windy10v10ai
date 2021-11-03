@@ -191,6 +191,7 @@
 		"item"		"item_abyssal_blade"
 		"item"		"item_radiance_2"
 		"item"		"item_wasp"
+		"item"		"item_dragon_lance_pro_max"
 		"item"		"item_excalibur"
 	}
 

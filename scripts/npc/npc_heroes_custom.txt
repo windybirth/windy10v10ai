@@ -680,11 +680,14 @@
 				"28"		"special_bonus_unique_necrophos_3"
 				"29"		"special_bonus_unique_necrophos_5"
 				"30"		"special_bonus_unique_necrophos_2"
-				"31"		"necrolyte_death_pulse"
+				"31"		"necrolyte_reapers_scythe"
 				"32"		"necrolyte_death_pulse"
-				"33"		"necrolyte_heartstopper_aura"
-				"34"		"necrolyte_heartstopper_aura"
+				"33"		"necrolyte_death_pulse"
+				"34"		"necrolyte_death_pulse"
 				"35"		"necrolyte_reapers_scythe"
+				"36"		"necrolyte_heartstopper_aura"
+				"37"		"necrolyte_heartstopper_aura"
+				"38"		"necrolyte_heartstopper_aura"
 			}
 		}
 	}
