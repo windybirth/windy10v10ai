@@ -41,7 +41,7 @@
 		"show_chat_team"  "Show Chat and Team"
 
 		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
-		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, splash radius is %dMODIFIER_PROPERTY_TOOLTIP%."
+		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
 		"DOTA_Tooltip_modifier_tower_endure"						"Buildings Endurance"
 		"DOTA_Tooltip_modifier_tower_endure_Description"		"The building's armor is changed by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, max health is set to %dMODIFIER_PROPERTY_TOOLTIP%%%."
