@@ -867,6 +867,9 @@
 			"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 			"AbilityTextureName"			"item_wasp"
 
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+
 			// Stats
 			//-------------------------------------------------------------------------------------------------------------
 			"AbilityCooldown"				"20.0"
@@ -1480,6 +1483,9 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ID"							"9048"
 		"AbilityTextureName"			"item_excalibur"
+
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2440,6 +2446,197 @@
 			{
 				"var_type"				"FIELD_INTEGER"
 				"bonus_chance_damage"			"210"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Dragon Lance PLUS  魔龙枪 PLUS合成图
+	//=================================================================================================================
+	"item_recipe_dragon_lance_plus"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9064"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3400"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dragon_lance_plus"
+		"ItemRequirements"
+		{
+			"01"						"item_dragon_lance;item_dragon_lance;"
+		}
+	}
+
+	//=================================================================================================================
+	// Dragon Lance PLUS  魔龙枪 PLUS
+	//=================================================================================================================
+	"item_dragon_lance_plus"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9065"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 			"dragon_lance_plus"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ScriptFile"                    "items/item_dragon_lance_plus.lua"
+
+		"AbilityCooldown"				"65.0"
+		"AbilityManaCost"				"100"
+		"AbilitySharedCooldown"			"dragonlance"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+
+		"ItemCost"						"7100"
+		"ItemShopTags"					"damage;attack_speed"
+		"ItemQuality"					"arcane"
+		"ItemAliases"					"dragon lance plus"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemRequiresCharges"			"0"
+		"ItemKillable"					"1"
+		"ItemSellable"					"1"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_agility"		        "35"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_strength"		    "25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"210"
+			}	
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"attack_speed_per_agi"			"0.3"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost"				"80"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost_duration"		"4"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Dragon Lance PRO MAX  魔龙枪 PRO MAX合成图
+	//=================================================================================================================
+	"item_recipe_dragon_lance_pro_max"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9066"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"3400"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_dragon_lance_pro_max"
+		"ItemRequirements"
+		{
+			"01"						"item_dragon_lance_plus;item_eagle;item_eagle;"
+		}
+	}
+
+	//=================================================================================================================
+	// Dragon Lance PRO MAX  魔龙枪PRO MAX
+	//=================================================================================================================
+	"item_dragon_lance_pro_max"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"9067"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 			"dragon_lance_pro_max"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ScriptFile"                    "items/item_dragon_lance_pro_max.lua"
+
+		"AbilityCooldown"				"65.0"
+		"AbilityManaCost"			    "200"
+		"AbilitySharedCooldown"			"dragonlance"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+
+		"ItemCost"						"12350"
+		"ItemShopTags"					"damage;attack_speed"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"dragon lance pro max"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"ItemRequiresCharges"			"0"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_agility"	        	"70"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_strength"		    "25"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"280"
+			}			
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"attack_speed_per_agi"			"0.6"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost"				"160"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"active_boost_duration"		"5"
 			}
 		}
 	}
