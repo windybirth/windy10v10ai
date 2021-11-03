@@ -110,11 +110,11 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
-	elseif (GameTime >= (26 * 60)) then						-- LATEGAME
+	elseif (GameTime >= (22 * 60)) then						-- LATEGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
-	elseif (GameTime >= (18 * 60)) then						-- MIDGAME
+	elseif (GameTime >= (16 * 60)) then						-- MIDGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
@@ -227,28 +227,9 @@ function modifier_tower_power:DeclareFunctions()
 		MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE,
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_EVENT_ON_ATTACK_LANDED,
-		MODIFIER_PROPERTY_TOOLTIP
 	}
 end
 
-function modifier_tower_power:OnAttackLanded(keys)
-	if keys.attacker ~= self:GetParent() then return end
-	local fPower = StackToPercentage(self:GetStackCount())
-	if fPower <= 1.0 then return end
-	local tTargets = FindUnitsInRadius(keys.attacker:GetTeamNumber(), keys.target:GetOrigin(), nil, self:OnTooltip(), DOTA_UNIT_TARGET_TEAM_ENEMY, DOTA_UNIT_TARGET_BASIC+DOTA_UNIT_TARGET_HERO, DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES, FIND_ANY_ORDER, false)
-
-	for i, v in ipairs(tTargets) do
-		if v ~= keys.target then
-			ApplyDamage({
-				attacker = keys.attacker,
-				victim = v,
-				damage = keys.damage,
-				damage_type = DAMAGE_TYPE_PHYSICAL,
-				damage_flag = DOTA_DAMAGE_FLAG_NONE
-			})
-		end
-	end
-end
 
 function modifier_tower_power:GetModifierAttackSpeedBonus_Constant()
 	local fPower = StackToPercentage(self:GetStackCount())
@@ -260,11 +241,6 @@ function modifier_tower_power:GetModifierBaseDamageOutgoing_Percentage()
 	return 100*StackToPercentage(self:GetStackCount())-100
 end
 
-function modifier_tower_power:OnTooltip()
-	local fPower = StackToPercentage(self:GetStackCount())
-	if fPower <= 1.0 then return 0 end
-	return math.floor((fPower-1)*50+24)
-end
 
 
 modifier_axe_thinker = class({})

@@ -56,6 +56,9 @@ function modifier_item_magic_scepter:GetModifierBonusStats_Intellect()
 end 
 
 function modifier_item_magic_scepter:GetModifierSpellAmplify_Percentage()
+	if self:GetParent():HasModifier("modifier_item_hallowed_scepter") then
+		return 0
+	end
 	if self:GetAbility() and self:GetAbility():GetSecondaryCharges() == 1 then
 		local current_int = self:GetParent():GetIntellect()
 		local applied_amp = current_int * self:GetAbility():GetSpecialValueFor("spell_amp_per_int")

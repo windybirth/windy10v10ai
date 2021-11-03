@@ -207,6 +207,9 @@
 	//=========================================================
 	"npc_dota_goodguys_tower3_top"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
 		"AttackRate"				"0.8" // 0.95
@@ -221,6 +224,9 @@
 	}
 	"npc_dota_badguys_tower3_top"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
 		"AttackRate"				"0.8" // 0.95
@@ -235,6 +241,9 @@
 	}
 	"npc_dota_goodguys_tower3_bot"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
 		"AttackRate"				"0.8" // 0.95
@@ -249,6 +258,9 @@
 	}
 	"npc_dota_badguys_tower3_bot"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
 		"AttackRate"				"0.8" // 0.95
@@ -263,9 +275,12 @@
 	}
 	"npc_dota_goodguys_tower3_mid"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -277,9 +292,12 @@
 	}
 	"npc_dota_badguys_tower3_mid"
 	{
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		"AttackDamageMin"		"192" // 142
 		"AttackDamageMax"		"212" // 162
-		"AttackRate"				"0.75" // 0.95
+		"AttackRate"				"0.8" // 0.95
 		"ArmorPhysical"			"25" // 19
 		"AttackAcquisitionRange"	"900"		// Range within a target can be acquired.
 		"AttackRange"				"900"		// Range within a target can be attacked.
@@ -743,13 +761,16 @@
 		"ArmorPhysical"				"40"		// Physical protection.
 		"MagicalResistance"			"40"			// Magical protection.
 
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.3"			// Speed of attack.
+		"AttackRate"				"0.35"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -758,7 +779,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
+		"StatusHealth"				"24000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	//=================================================================================
@@ -771,13 +792,16 @@
 		"ArmorPhysical"				"40"		// Physical protection.
 		"MagicalResistance"			"40"			// Magical protection.
 
+		// Ability
+		"Ability1"	"tower_split_shot"
+
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.3"			// Speed of attack.
+		"AttackRate"				"0.35"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -786,14 +810,15 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"20000"		// Base health.
+		"StatusHealth"				"24000"		// Base health.
 		"StatusHealthRegen"			"20"			// Health regeneration rate.
 	}
 	"dota_fountain"
 	{
-		"AttackRate"				"0.04"
-		"AttackAcquisitionRange"	"2000"		// Range within a target can be acquired.
+		"AttackRate"				"0.03"
+		"AttackAcquisitionRange"	"1600"		// Range within a target can be acquired.
 		"AttackRange"				"1600"		// Range within a target can be attacked. (was 690)
+		"ProjectileSpeed"			"1800"		// 1400
 	}
 
 
@@ -830,7 +855,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"675"		// 475
+		"StatusHealth"				"1000"		// 475
 		"StatusHealthRegen"			"5"			// 2
 	}
 
@@ -865,7 +890,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"875"		// 475
+		"StatusHealth"				"1600"		// 475
 		"StatusHealthRegen"			"5"			// 2
 	}
 
@@ -899,7 +924,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"675"		// 475
+		"StatusHealth"				"1000"		// 475
 		"StatusHealthRegen"			"5"			// 2
 	}
 
@@ -934,7 +959,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"875"		// 475
+		"StatusHealth"				"1600"		// 475
 		"StatusHealthRegen"			"5"			// 2
 	}
 
@@ -972,7 +997,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// 700
+		"StatusHealth"				"1200"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -1006,7 +1031,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1400"		// 700
+		"StatusHealth"				"2000"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -1040,7 +1065,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1000"		// 700
+		"StatusHealth"				"1200"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 
@@ -1074,7 +1099,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"1400"		// 700
+		"StatusHealth"				"2000"		// 700
 		"StatusHealthRegen"			"5"			// 0.5
 	}
 

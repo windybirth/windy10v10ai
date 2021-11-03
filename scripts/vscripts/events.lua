@@ -5,7 +5,7 @@ local tBotNameList = {
 	"npc_dota_hero_bounty_hunter",
 	"npc_dota_hero_bloodseeker",
 	"npc_dota_hero_bristleback",
-	-- "npc_dota_hero_chaos_knight",
+	"npc_dota_hero_chaos_knight",
 	"npc_dota_hero_crystal_maiden",
 	"npc_dota_hero_dazzle",
 	"npc_dota_hero_death_prophet",
@@ -39,7 +39,6 @@ local tBotNameList = {
 
 local tSkillCustomNameList = {
 	"npc_dota_hero_crystal_maiden",
-	"npc_dota_hero_necrolyte",
 	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_mirana",
 	"npc_dota_hero_earthshaker",
@@ -180,6 +179,17 @@ function AIGameMode:OnGameStateChanged(keys)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
 			end
+
+			-- set tower split
+			local towerSplitShot = v:FindAbilityByName("tower_split_shot")
+			if towerSplitShot then
+				print("tower_split_shot name", v:GetName())
+				local towerName = v:GetName()
+				if string.find(towerName, "tower3") then
+					towerSplitShot:SetLevel(2)
+				end
+				towerSplitShot:ToggleAbility()
+			end
 		end
 		local tTowers = Entities:FindAllByClassname("npc_dota_barracks")
 		for k, v in pairs(tTowers) do
@@ -213,6 +223,13 @@ function AIGameMode:OnGameStateChanged(keys)
 				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iDireTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
+			end
+
+			-- set tower split
+			local towerSplitShot = v:FindAbilityByName("tower_split_shot")
+			if towerSplitShot then
+				towerSplitShot:SetLevel(4)
+				towerSplitShot:ToggleAbility()
 			end
 		end
 
