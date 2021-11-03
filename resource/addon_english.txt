@@ -117,7 +117,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"WASP"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"A must-have artifact for the agile core in late stage."
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 3% change.</font>"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 3% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -161,7 +161,7 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"Excalibur"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 20% change.</font>"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 20% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
@@ -254,6 +254,28 @@
 		"DOTA_Tooltip_modifier_item_hallowed_scepter_active"	                "Hallowed Spell Boost"
 		"DOTA_Tooltip_modifier_item_hallowed_scepter_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
 
+		// dragon lance
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus"							"Dragon Lance Plus"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"				"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every point of agility. "
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"						"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		  		 "+$agi"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_attack_range"	   "+$attack_range"
+		"DOTA_Tooltip_Ability_item_recipe_dragon_lance_plus"					"Dragon Lance Plus Recipe"
+
+		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active"	                "Quick draw"
+		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
+
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"Dragon Lance Pro Max"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every points of agility.\n\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by dragon. Cannot be sold or destroyed."
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		    "+$agi"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		    "+$str"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_attack_range"	    "+$attack_range"
+		"DOTA_Tooltip_Ability_item_recipe_dragon_lance_pro_max"					"Dragon Lance Pro Max Recipe"
+
+		"DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active"	             "Quick draw"
+		"DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active_Description"	 "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
 		///////////////////////////////////////////////////
 		//
@@ -314,6 +336,7 @@
 		"DOTA_Tooltip_modifier_int_tome"								"Intelligence Tomes Consumed"
 		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
+		// creep buff
 		"DOTA_Tooltip_ability_creep_buff"								"Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_bonus_armor"						"+$armor"
