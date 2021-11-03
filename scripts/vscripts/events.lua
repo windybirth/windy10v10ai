@@ -179,6 +179,17 @@ function AIGameMode:OnGameStateChanged(keys)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
 			end
+
+			-- set tower split
+			local towerSplitShot = v:FindAbilityByName("tower_split_shot")
+			if towerSplitShot then
+				print("tower_split_shot name", v:GetName())
+				local towerName = v:GetName()
+				if string.find(towerName, "tower3") then
+					towerSplitShot:SetLevel(2)
+				end
+				towerSplitShot:ToggleAbility()
+			end
 		end
 		local tTowers = Entities:FindAllByClassname("npc_dota_barracks")
 		for k, v in pairs(tTowers) do
@@ -212,6 +223,13 @@ function AIGameMode:OnGameStateChanged(keys)
 				v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iDireTowerPower)
 				v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iDireTowerEndure)
 				v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iDireTowerHeal)
+			end
+
+			-- set tower split
+			local towerSplitShot = v:FindAbilityByName("tower_split_shot")
+			if towerSplitShot then
+				towerSplitShot:SetLevel(4)
+				towerSplitShot:ToggleAbility()
 			end
 		end
 

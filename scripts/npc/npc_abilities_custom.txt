@@ -499,4 +499,33 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
+
+	"tower_split_shot"
+	{
+		"BaseClass"						"medusa_split_shot"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_modifier"		"0 0 0 0"
+			}
+			"02"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_modifier_tooltip"		"100 100 100 100"
+			}
+			"03"
+			{	
+				"var_type"					"FIELD_INTEGER"
+				"arrow_count"				"2 3 4 5"
+				"LinkedSpecialBonus"			"special_bonus_unique_medusa_2"
+			}
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"split_shot_bonus_range"		"150"
+			}
+		}
+	}
 }

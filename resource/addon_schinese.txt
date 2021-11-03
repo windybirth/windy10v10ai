@@ -41,7 +41,7 @@
 		"show_chat_team"  "显示聊天框"
 
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
-		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%, 额外攻击范围 %dMODIFIER_PROPERTY_TOOLTIP%."
+		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
 		"DOTA_Tooltip_modifier_tower_endure"						"建筑防御加成"
 		"DOTA_Tooltip_modifier_tower_endure_Description"		"建筑物的护甲增加 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, 最大生命值设为 %dMODIFIER_PROPERTY_TOOLTIP%%%."
