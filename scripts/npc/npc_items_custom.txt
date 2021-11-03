@@ -2492,7 +2492,7 @@
 		"ScriptFile"                    "items/item_dragon_lance_plus.lua"
 
 		"AbilityCooldown"				"65.0"
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"150"
 		"AbilitySharedCooldown"			"dragonlance"
 
 		// Item Info
@@ -2525,12 +2525,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"210"
+				"bonus_attack_range"		"200"
 			}	
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"attack_speed_per_agi"			"0.3"
+				"attack_speed_per_agi"			"0.2"
 			}
 			"05"
 			{
@@ -2587,7 +2587,7 @@
 		"ScriptFile"                    "items/item_dragon_lance_pro_max.lua"
 
 		"AbilityCooldown"				"65.0"
-		"AbilityManaCost"			    "200"
+		"AbilityManaCost"			    "250"
 		"AbilitySharedCooldown"			"dragonlance"
 
 		// Item Info
@@ -2621,12 +2621,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"280"
+				"bonus_attack_range"		"260"
 			}			
 			"04"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"attack_speed_per_agi"			"0.6"
+				"attack_speed_per_agi"			"0.4"
 			}
 			"05"
 			{

@@ -110,7 +110,7 @@ function modifier_bot_attack_tower_pick_rune:OnIntervalThink()
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
-	elseif (GameTime >= (24 * 60)) then						-- LATEGAME
+	elseif (GameTime >= (22 * 60)) then						-- LATEGAME
 		GameRules:GetGameModeEntity():SetBotsInLateGame(true)
 		GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
 		GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
