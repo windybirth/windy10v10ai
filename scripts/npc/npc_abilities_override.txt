@@ -2535,17 +2535,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"20.0"
+				"duration"				"10.0 15.0 20.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"replica_damage_incoming"	"200"
+				"replica_damage_incoming"	"300"
 			}	
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_replica_total_damage_incoming"	"300"
+				"tooltip_replica_total_damage_incoming"	"400"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 		}
@@ -2645,61 +2645,85 @@
 			}
 		}
 	}
-	"necrolyte_death_pulse"
+
+	"lich_chain_frost"
 	{
-		"MaxLevel" "6"
-		"AbilityCooldown"				"9 8 7 6 5 4"
-		"AbilityDamage"					"100 150 200 250 300 350"
-		"AbilityManaCost"				"70 100 130 160 190 210"
+		"AbilityCooldown"				"80 70 60"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal"					"60 90 120 150 180 210"
+				"jumps"					"10 15 20"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"jump_range"			"450"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow_attack_speed"		"-65 -100 -135"
+			}
+		}			
+	}
+
+	"necrolyte_death_pulse"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"9 8 7 6 5 5.5 4"
+		"AbilityDamage"					"100 150 200 250 300 350 400"
+		"AbilityManaCost"				"70 100 130 160 190 220 250"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"heal"					"60 90 120 150 180 210 240"
 				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_4"
 			}
 		}
 	}
 	"necrolyte_heartstopper_aura"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "7"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"aura_damage"		"0.6 1.2 1.8 2.4 3.0 3.6"
+				"aura_damage"		"0.6 1.0 1.4 1.8 2.2 2.4 3.0"
 				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
 			}
 			"03"
 			{
 				"var_type"		"FIELD_FLOAT"
-				"health_regen"	"3.5 4.5 5.5 6.5 7.5 8.5"
+				"health_regen"	"3.5 4.5 5.5 6.5 7.5 8.5 9.5"
 			}
 			"04"
 			{
 				"var_type"		"FIELD_FLOAT"
-				"mana_regen"	"3.5 4.5 5.5 6.5 7.5 8.5"
+				"mana_regen"	"3.5 4.5 5.5 6.5 7.5 8.5 9.5"
 			}
 		}
 	}
 	"necrolyte_reapers_scythe"
 	{
-		"MaxLevel" "4"
-		"AbilityCooldown"				"90 80 70 60"
-		"AbilityManaCost"				"200 350 500 650"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"100 90 80 70 60"
+		"AbilityManaCost"				"200 350 500 650 800"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"damage_per_health"			"0.7 0.8 0.9 1.0"
+				"damage_per_health"			"0.7 0.75 0.8 0.85 0.9"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"respawn_constant"		"15 25 35 45"
+				"respawn_constant"		"15 20 25 30 35"
 			}
 		}
 	}

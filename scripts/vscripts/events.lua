@@ -39,7 +39,6 @@ local tBotNameList = {
 
 local tSkillCustomNameList = {
 	"npc_dota_hero_crystal_maiden",
-	"npc_dota_hero_necrolyte",
 	"npc_dota_hero_queenofpain",
 	"npc_dota_hero_mirana",
 	"npc_dota_hero_earthshaker",
