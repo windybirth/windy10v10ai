@@ -2222,7 +2222,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4900"
+		"ItemCost"						"4300"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2264,7 +2264,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_cooldown"		"40"
+				"bonus_cooldown"		"35"
 			}
 			"02"
 			{
