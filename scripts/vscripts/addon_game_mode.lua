@@ -233,7 +233,7 @@ local function multiplierGoldWithGameTime(multiplier)
 		else
 			return 6
 		end
-	elseif time < (60 * 5) then
+	elseif time < (60 * 4) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -241,7 +241,7 @@ local function multiplierGoldWithGameTime(multiplier)
 		elseif multiplier <= 10 then
 			return 6
 		else
-			return 8
+			return 9
 		end
 	else
 		return multiplier
@@ -260,7 +260,7 @@ local function multiplierXPWithGameTime(multiplier)
 		else
 			return 9
 		end
-	elseif time < (60 * 5) then
+	elseif time < (60 * 4) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then

@@ -1530,11 +1530,65 @@
 				"echo_slam_initial_damage"		"160 200 240 280 320"
 			}
 		}
+	}//=================================================================================================================
+	// Ability: 大牛
+	//=================================================================================================================
+	"elder_titan_echo_stomp_spirit"
+	{
+		"AbilitySpecial"
+		{
+			"03"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"sleep_duration"				"2.0 2.5 3.0 3.5"
+			}
+		}
 	}
 
-	"earth_spirit_magnetize"
+	"elder_titan_ancestral_spirit"
 	{
-		"AbilityCooldown"				"60 50 40"
+		"AbilitySpecial"
+		{
+			"09"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"damage_heroes"					"10 20 30 40"
+				"LinkedSpecialBonus"			"special_bonus_unique_elder_titan"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"11"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"armor_heroes"					"1 2 3 4"
+			}
+		}
+	}
+	"elder_titan_natural_order"
+	{
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"armor_reduction_pct"	    "35 40 45 50"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"magic_resistance_pct"		"35 40 45 50"
+			}
+		}
+	}
+	"elder_titan_earth_splitter"
+	{
+		"AbilitySpecial"
+		{
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_pct"				"20 25 30"
+			}
+		}
 	}
 	"legion_commander_duel"
 	{
@@ -1639,9 +1693,49 @@
 	{
 		"AbilityCooldown"				"110.0 95.0 80.0"
 	}
+	"sandking_caustic_finale"
+	{
+		"MaxLevel" "7"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"caustic_finale_damage_base"		"70 90 110 130 150 170 190"
+				"LinkedSpecialBonus"	"special_bonus_unique_sand_king_8"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"caustic_finale_damage_pct"		"8 9 10 11 12 13 14"
+			}			
+		}
+	}
 	"sandking_epicenter"
 	{
-		"AbilityCooldown"				"80 70 60"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"100 95 90 85 80"
+		"AbilityManaCost"				"150 225 300 400 500"
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_pulses"	"6 8 10 12 14"
+				"LinkedSpecialBonus"	"special_bonus_unique_sand_king"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"epicenter_damage"	"110 120 130 140 150"
+				"LinkedSpecialBonus"	"special_bonus_unique_sand_king_5"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"epicenter_slow_as"		"-30 -40 -50 -60 -70"
+			}
+		}
 	}
 	"snapfire_mortimer_kisses"
 	{
@@ -1708,6 +1802,30 @@
 	{
 		"AbilityCooldown"				"60 50 40"
 	}
+	"abyssal_underlord_firestorm"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"14.0"
+
+		"AbilityManaCost"				"110 120 130 140 160 180 200"
+		"AbilitySpecial"
+		{
+			"04"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"wave_damage"					"25 40 55 70 85 100 115"
+				"LinkedSpecialBonus"			"special_bonus_unique_underlord_2"
+			}
+			"06"
+			{
+				"var_type"						"FIELD_FLOAT"
+				"burn_damage"					"0.4 0.6 0.8 1 1.2 1.4 1.6"
+				"LinkedSpecialBonus"			"special_bonus_unique_underlord_4"
+				"CalculateSpellDamageTooltip"			"0"
+			}
+		}
+	}
+
 	"abyssal_underlord_dark_rift"
 	{
 		"AbilityCooldown"				"90 75 60"
@@ -2256,7 +2374,7 @@
 	"viper_poison_attack"
 	{
 		"MaxLevel" "7"
-		"AbilityManaCost"				"18 20 22 24 30 40 50"
+		"AbilityManaCost"				"15 20 30 40 50 60 70"
 		
 		"AbilitySpecial"
 		{
@@ -2562,9 +2680,26 @@
 			}
 		}
 	}
+	"enigma_midnight_pulse"
+	{
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_percent"			"2.6 2.9 3.2 3.5"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"9 10 11 12"
+				"LinkedSpecialBonus"	"special_bonus_unique_enigma_8"
+			}
+		}
+	}
 	"enigma_black_hole"
 	{
-		"AbilityCooldown"				"100.0 90.0 80.0"
+		"AbilityCooldown"				"100.0 95.0 90.0"
 	}
 	"grimstroke_soul_chain"
 	{
@@ -2693,7 +2828,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"aura_damage"		"0.6 1.0 1.4 1.8 2.2 2.4 3.0"
+				"aura_damage"		"1.0 1.1 1.2 1.3 1.4 1.5 1.6"
 				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
 			}
 			"03"
@@ -2727,9 +2862,59 @@
 			}
 		}
 	}
+	"obsidian_destroyer_arcane_orb"
+	{
+		"AbilityCooldown"				"6 4 2 0"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_pool_damage_pct"	"8"
+				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_cost_percentage"	"10"
+			}
+		}
+	}
+	"obsidian_destroyer_astral_imprisonment"
+	{
+		"AbilitySpecial"
+		{
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana_capacity_steal"	"13 14 15 16"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_FLOAT"
+				"mana_capacity_duration"	"30"
+			}
+		}
+	}	
+	"obsidian_destroyer_equilibrium"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"proc_chance"		"25"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"mana_restore"	"15 20 25 30"
+			}
+		}
+	}
 	"obsidian_destroyer_sanity_eclipse"
 	{
-		"AbilityCooldown"				"110 95 80"
+		"AbilityCooldown"				"120 110 100"
 	}
 	"puck_dream_coil"
 	{
@@ -2824,11 +3009,11 @@
 		
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"3 2.5 2 1.5 1 0.5 0"
+		"AbilityCooldown"				"2 1.5 1 0.8 0.6 0.4 0.3"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"				"15 20 25 30 40 50 60"
+		"AbilityManaCost"				"15 20 25 30 40 60 80"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -2837,7 +3022,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"intellect_damage_pct"	"15 25 35 45 55 65 75"
+				"intellect_damage_pct"	"40 45 50 55 60 65 70"
 				"LinkedSpecialBonus"	"special_bonus_unique_silencer_3"
 			}
 			"02"
@@ -2854,6 +3039,18 @@
 			{
 				"var_type"			"FIELD_INTEGER"
 				"scepter_range"		"450"
+			}
+		}
+	}
+	"special_bonus_unique_silencer_3"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"10"
+				"ad_linked_ability"			"silencer_glaives_of_wisdom"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -3054,6 +3251,31 @@
 		"MaxLevel" "7"
 		"AbilityManaCost"				"70 85 100 115 135 150 180"
 		"AbilityDamage"					"150 225 300 350 400 450 500"
+	}
+	"zuus_static_field"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"damage_health_pct"			"4 5 6 7"
+				"LinkedSpecialBonus"		"special_bonus_unique_zeus"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
+	"special_bonus_unique_zeus"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"value"				"1.0"
+				"ad_linked_ability"			"zuus_static_field"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
 	}
 	"zuus_thundergods_wrath"
 	{
@@ -3257,100 +3479,7 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Ability: 大牛
-	//=================================================================================================================
-	"elder_titan_echo_stomp_spirit"
-	{
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"sleep_duration"				"2.0 2.5 3.0 3.5"
-			}
-		}
-	}
-
-	"elder_titan_ancestral_spirit"
-	{
-			// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"radius"						"275"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"pass_damage"					"50"
-			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"spirit_duration"				"8.0"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"buff_duration"					"10.0"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"speed"							"900"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"move_pct_creeps"				"1"
-			}
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"move_pct_heroes"				"7"
-			}
-			"08"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"damage_creeps"					"3 7 11 15"
-				"CalculateSpellDamageTooltip"				"0"
-			}
-			"09"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"damage_heroes"					"10 20 30 40"
-				"LinkedSpecialBonus"			"special_bonus_unique_elder_titan"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-			"10"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"armor_creeps"					"0.5"
-			}
-			"11"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"armor_heroes"					"1 2 3 4"
-			}
-			"12"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"move_pct_cap"					"40"
-			}
-			"13"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"scepter_magic_immune_per_hero"	"1"
-				"RequiresScepter"				"1"
-			}
-		}
-	}
+	
 	// 蓝猫
 	"storm_spirit_electric_vortex"
 	{
