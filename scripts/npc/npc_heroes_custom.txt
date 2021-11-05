@@ -819,6 +819,11 @@
 				"28"		"special_bonus_unique_sand_king_6"
 				"29"		"special_bonus_unique_sand_king_8"
 				"30"		"special_bonus_unique_sand_king"
+				"31"		"sandking_epicenter"
+				"32"		"sandking_caustic_finale"
+				"33"		"sandking_caustic_finale"
+				"34"		"sandking_caustic_finale"
+				"35"		"sandking_epicenter"
 			}
 		}
 	}
