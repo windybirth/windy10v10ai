@@ -16,9 +16,9 @@
 	{
 		"override_hero"		"npc_dota_hero_silencer"
 		"AttackRange"		"500"
-		"AttributeStrengthGain"		"2.200000"		// 2.4
-		"AttributeAgilityGain"		"1.900000"		// 2.4
-		"AttributeIntelligenceGain"		"2.500000"	// 2.9
+		"AttributeStrengthGain"		"2.000000"		// 2.4
+		"AttributeAgilityGain"		"1.400000"		// 2.4
+		"AttributeIntelligenceGain"		"2.400000"	// 2.9
 	}
 
 	"npc_dota_hero_techies"
@@ -819,6 +819,11 @@
 				"28"		"special_bonus_unique_sand_king_6"
 				"29"		"special_bonus_unique_sand_king_8"
 				"30"		"special_bonus_unique_sand_king"
+				"31"		"sandking_epicenter"
+				"32"		"sandking_caustic_finale"
+				"33"		"sandking_caustic_finale"
+				"34"		"sandking_caustic_finale"
+				"35"		"sandking_epicenter"
 			}
 		}
 	}
