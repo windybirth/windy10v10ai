@@ -269,18 +269,19 @@ function AIGameMode:OnEntityKilled(keys)
 				local item_name = item:GetName()
 				if item_name == 'item_bloodstone' then
 					fRespawnTime = fRespawnTime - item:GetCurrentCharges()
-					if fRespawnTime < 1 then
-						fRespawnTime = 1
-					end
 					break
 				end
 			end
 		end
 	end
+	-- 复活时间至少1s
+	if fRespawnTime < 1 then
+		fRespawnTime = 1
+	end
 	hHero:SetTimeUntilRespawn(fRespawnTime)
 
 	-- drop items
-  RollDrops(hHero)
+	RollDrops(hHero)
 
 	-- set streak end bounty
 	local attckerUnit = EntIndexToHScript( keys.entindex_attacker )
