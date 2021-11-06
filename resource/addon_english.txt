@@ -40,6 +40,17 @@
 		"hide_chat_team"  "Hide Chat and Team"
 		"show_chat_team"  "Show Chat and Team"
 
+		"bots_multiplier_1"		"1(Beginner)"
+		"bots_multiplier_1.25"	"1.25(Beginner)"
+		"bots_multiplier_1.5"	"1.5(Beginner)"
+		"bots_multiplier_2"		"2(Passive)"
+		"bots_multiplier_3"		"3(Easy)"
+		"bots_multiplier_4"		"4(Normal)"
+		"bots_multiplier_5"		"5(Hard)"
+		"bots_multiplier_10"	"10(Unfair)"
+		"bots_multiplier_15"	"15(Legendary)"
+		"bots_multiplier_20"	"20(hell)"
+
 		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
