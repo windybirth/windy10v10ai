@@ -368,5 +368,19 @@
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
+
+		// manta 1
+		"DOTA_Tooltip_Ability_item_manta_1"				"幻影斧改"
+		"DOTA_Tooltip_Ability_item_recipe_manta_1"					"图纸（幻影斧改）"
+		"DOTA_Tooltip_ability_item_manta_1_Description"							"<h1>主动：镜像</h1>制造%images_count%个你的幻象，持续%tooltip_illusion_duration%秒。<br><br>近战英雄的幻象继承%tooltip_damage_outgoing_melee%%%的攻击力，承受%tooltip_damage_incoming_melee_total_pct%%%的伤害；远程英雄的幻象继承%tooltip_damage_outgoing_ranged%%%的攻击力，承受%tooltip_damage_incoming_ranged_total_pct%%%的伤害。</font><br><br> 驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+		"DOTA_Tooltip_ability_item_manta_1_Lore"								    "属性加强版的幻影斧。"
+		"DOTA_Tooltip_ability_item_manta_1_Note0"									"有%invuln_duration%秒的施法时间，其间处于无敌状态。"
+		"DOTA_Tooltip_ability_item_manta_1_Note1"									"可以使用幻影斧移除多种负面效果。"
+		"DOTA_Tooltip_ability_item_manta_1_Note2"									"不会与其他夜叉、散夜对剑以及幻影斧提供的移动速度加成叠加。"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_agility"							"+$agi"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_movement_speed"					"%+$move_speed"
 	}
 }
