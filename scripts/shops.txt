@@ -191,14 +191,13 @@
 		"item"		"item_abyssal_blade"
 		"item"		"item_radiance_2"
 		"item"		"item_wasp"
-		"item"		"item_dragon_lance_pro_max"
 		"item"		"item_excalibur"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
 	"artifacts"
 	{
- 		"item"		"item_dragon_lance"
+		"item"		"item_dragon_lance_pro_max"
 		"item"		"item_sange"
  		"item"		"item_yasha"
  		"item"		"item_kaya"
