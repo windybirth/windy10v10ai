@@ -183,12 +183,13 @@
 		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"Effects of multiple Toxic blades do not stack."
 
 		"DOTA_Tooltip_Ability_item_undying_heart"				"Undying Heart"
-		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>Passive: Regeneration Amplification</h1>Increases all passive health regeneration"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							""
 		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"The powerful headpiece of a dead necromancer."
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
-		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+Max Health Regen"
-		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"						"%+Max Health Regen (cannot repetitive)"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"							"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_status_resistance"						"%+Status Resistance"
 
 		"DOTA_Tooltip_Ability_item_force_staff_2"			"Wind Force Staff"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>Active: Wind Force</h1>Pushes any target unit %push_length% units in the direction it is facing.<br><br>Range: %abilitycastrange%"

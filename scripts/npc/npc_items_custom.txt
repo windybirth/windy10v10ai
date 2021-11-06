@@ -1533,7 +1533,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						""
+		"ItemCost"						"4800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1542,7 +1542,7 @@
 		"ItemResult"					"item_undying_heart"
 		"ItemRequirements"
 		{
-			"01"						"item_heart;item_reaver;item_talisman_of_evasion;item_recipe_heart"
+			"01"						"item_heart;item_reaver;item_talisman_of_evasion"
 		}
 	}
 
@@ -1553,7 +1553,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_datadriven"
+		"BaseClass"						"item_lua"
 		"ID"							"9051"
 		"AbilityTextureName"			"item_undying_heart"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
@@ -1563,6 +1563,7 @@
 		"ItemAliases"					"hot;heart of tarrasque"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"ScriptFile"                    "items/item_undying_heart.lua"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -1576,34 +1577,23 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"500"
+				"bonus_health"			"900"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"health_regen_pct"		"2.1"
+				"health_regen_pct"		"2.3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_evasion"			"15"
+				"bonus_evasion"			"12"
 			}
-		}
-		"Modifiers"
-		{
-		    "item_custom_modifier"
-		    {
-		        "Passive" "1"
-		        "IsHidden" "1"
-		        "Attributes" "MODIFIER_ATTRIBUTE_MULTIPLE" //This makes duplicate items stack their properties
-		        "Properties"
-		        {
-		            "MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_strength"
-					"MODIFIER_PROPERTY_HEALTH_BONUS"	"%bonus_health"
-					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	"%health_regen_pct"
-					"MODIFIER_PROPERTY_EVASION_CONSTANT"		"%bonus_evasion"
-		        }
-		    }
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"status_resistance"		"10"
+			}
 		}
 	}
 
