@@ -2464,7 +2464,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3400"
+		"ItemCost"						"2100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2473,7 +2473,7 @@
 		"ItemResult"					"item_dragon_lance_plus"
 		"ItemRequirements"
 		{
-			"01"						"item_dragon_lance;item_dragon_lance;"
+			"01"						"item_dragon_lance;"
 		}
 	}
 
@@ -2526,18 +2526,13 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bonus_attack_range"		"200"
-			}	
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"attack_speed_per_agi"			"0.2"
 			}
-			"05"
+			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"active_boost"				"80"
 			}
-			"06"
+			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"active_boost_duration"		"4"
@@ -2559,7 +2554,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3400"
+		"ItemCost"						"2100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2568,7 +2563,7 @@
 		"ItemResult"					"item_dragon_lance_pro_max"
 		"ItemRequirements"
 		{
-			"01"						"item_dragon_lance_plus;item_eagle;item_eagle;"
+			"01"						"item_dragon_lance_plus;item_eagle;"
 		}
 	}
 
@@ -2622,18 +2617,13 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"bonus_attack_range"		"260"
-			}			
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"attack_speed_per_agi"			"0.4"
 			}
-			"05"
+			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"active_boost"				"160"
 			}
-			"06"
+			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"active_boost_duration"		"5"

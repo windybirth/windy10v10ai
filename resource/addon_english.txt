@@ -256,7 +256,7 @@
 
 		// dragon lance
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus"							"Dragon Lance Plus"
-		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"				"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every point of agility. "
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"				"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds."
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"						"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		  		 "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
@@ -267,7 +267,7 @@
 		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"Dragon Lance Pro Max"
-		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every points of agility.\n\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by dragon. Cannot be sold or destroyed."
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by dragon. Cannot be sold or destroyed."
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		    "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		    "+$str"

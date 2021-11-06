@@ -254,7 +254,7 @@
 
 		// dragon lance
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus"						"魔龙枪 Plus"
-		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: 滴水穿石</h1>每点敏捷获得 %attack_speed_per_agi% 攻击速度."
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒."
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"					   "（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		       "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
@@ -265,7 +265,7 @@
 		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"魔龙枪 Pro Max"
-		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: 滴水穿石</h1>每点敏捷获得 %attack_speed_per_agi% 攻击速度.\n\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自龙族的神秘力量庇护，不能出售或销毁。"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自龙族的神秘力量庇护，不能出售或销毁。"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		   "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		   "+$str"
