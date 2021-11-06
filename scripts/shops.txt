@@ -197,7 +197,6 @@
 	// Level 4 - Orange / Orb / Artifacts
 	"artifacts"
 	{
-		"item"		"item_dragon_lance_pro_max"
 		"item"		"item_sange"
  		"item"		"item_yasha"
  		"item"		"item_kaya"
@@ -210,11 +209,12 @@
  		"item"		"item_sange_and_yasha"
  		"item"		"item_yasha_and_kaya"
  		"item"		"item_satanic"
- 		"item"		"item_skadi_2"
  		"item"		"item_mjollnir"
  		"item"		"item_overwhelming_blink"
  		"item"		"item_swift_blink"
  		"item"		"item_arcane_blink"
+ 		"item"		"item_skadi_2"
+		"item"		"item_dragon_lance_pro_max"
 	}
 
 	"sideshop1"
