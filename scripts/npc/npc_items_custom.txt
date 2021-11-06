@@ -844,7 +844,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"5000"
+			"ItemCost"						"6000"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -891,7 +891,7 @@
 					"01"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_agility"					"30"
+							"bonus_agility"					"35"
 					}
 					"02"
 					{
@@ -901,12 +901,12 @@
 					"03"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_evasion"					"30"
+							"bonus_evasion"					"35"
 					}
 					"04"
 					{
 							"var_type"						"FIELD_INTEGER"
-							"bonus_attack_speed"			"30"
+							"bonus_attack_speed"			"35"
 					}
 					"05"
 					{
@@ -2482,7 +2482,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_dragon_lance_plus.lua"
 
-		"AbilityCooldown"				"65.0"
+		"AbilityCooldown"				"45.0"
 		"AbilityManaCost"				"150"
 		"AbilitySharedCooldown"			"dragonlance"
 
@@ -2545,7 +2545,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2100"
+		"ItemCost"						"1600"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2572,7 +2572,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_dragon_lance_pro_max.lua"
 
-		"AbilityCooldown"				"65.0"
+		"AbilityCooldown"				"45.0"
 		"AbilityManaCost"			    "250"
 		"AbilitySharedCooldown"			"dragonlance"
 
@@ -2607,7 +2607,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"260"
+				"bonus_attack_range"		"240"
 			}
 			"04"
 			{
@@ -2617,7 +2617,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"active_boost_duration"		"5"
+				"active_boost_duration"		"4"
 			}
 		}
 	}
