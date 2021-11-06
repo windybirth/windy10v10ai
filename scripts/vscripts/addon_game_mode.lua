@@ -223,17 +223,7 @@ end
 
 local function multiplierGoldWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
-	if time < (60 * 2) then
-		if multiplier < 2 then
-			return multiplier
-		elseif multiplier <= 5 then
-			return 2
-		elseif multiplier <= 10 then
-			return 4
-		else
-			return 6
-		end
-	elseif time < (60 * 4) then
+	if time < (60 * 3) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
@@ -250,17 +240,7 @@ end
 
 local function multiplierXPWithGameTime(multiplier)
 	local time = GameRules:GetDOTATime(false, false)
-	if time < (60 * 2) then
-		if multiplier < 2 then
-			return multiplier
-		elseif multiplier <= 5 then
-			return 3
-		elseif multiplier <= 10 then
-			return 6
-		else
-			return 9
-		end
-	elseif time < (60 * 4) then
+	if time < (60 * 3) then
 		if multiplier < 3 then
 			return multiplier
 		elseif multiplier <= 5 then
