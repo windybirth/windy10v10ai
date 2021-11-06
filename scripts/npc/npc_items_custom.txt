@@ -1162,7 +1162,7 @@
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
-			"ItemCost"						"3800"
+			"ItemCost"						"5600"
 			"ItemShopTags"					""
 
 			// Recipe
@@ -1208,7 +1208,7 @@
 					"03"
 					{
 							"var_type"				"FIELD_FLOAT"
-							"mana_regen_aura"		"5" // This field has no force aside from description filling. Real value is set in the aura part
+							"mana_regen_aura"		"6"
 					}
 					"04"
 					{
@@ -1228,7 +1228,7 @@
 					"07"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"aura_radius"	"1200"
+							"aura_radius"			"1200"
 					}
 					"08"
 					{
@@ -1238,17 +1238,17 @@
 					"09"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"aura_positive_armor"			"10"
+							"aura_positive_armor"	"15"
 					}
 					"10"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"aura_attack_speed"		"40"
+							"aura_attack_speed"		"60"
 					}
 					"11"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"aura_negative_armor"	"-10"
+							"aura_negative_armor"	"-15"
 					}
 			}
 
@@ -1265,15 +1265,15 @@
 									"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"				"%bonus_all_stats"
 									"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"					"%bonus_all_stats"
 									"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"				"%bonus_all_stats"
-									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%bonus_attack_speed"
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"		"%bonus_armor"
+									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
 							}
 					}
 					"modifier_item_vladmir_2_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
 					{
 							"Passive"				"1"
 							"IsHidden"				"1"
-	"Attributes"				"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+							"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 
 							"Aura" 					"modifier_item_vladmir_2_building_aura"
 							"Aura_Radius" 			"%aura_radius"
@@ -1289,24 +1289,15 @@
 
 							"Properties"
 							{
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
 									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
-							}
-
-							"OnAttackLanded"
-							{
-									"RunScript"
-									{
-											"ScriptFile"            "items/item_vladmir_2.lua"
-											"Function"                "modifier_item_vladmir_2_lifesteal_aura_on_attack_landed"
-									}
 							}
 					}
 					"modifier_item_vladmir_2_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
 					{
 							"Passive"				"1"
 							"IsHidden"				"1"
-	"Attributes"				"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+							"Attributes"				"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 
 							"Aura" 					"modifier_item_vladmir_2_general_aura"
 							"Aura_Radius" 			"%aura_radius"
@@ -1322,10 +1313,10 @@
 
 							"Properties"
 							{
-									"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"			"%damage_aura"
+									"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
 									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
-									"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"						"5"  //This is hardcoded due to an obscure engine bug.
-									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+									"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
 							}
 
 							"OnAttackLanded"
@@ -1333,7 +1324,7 @@
 									"RunScript"
 									{
 											"ScriptFile"            "items/item_vladmir_2.lua"
-											"Function"                "modifier_item_vladmir_2_lifesteal_aura_on_attack_landed"
+											"Function"              "modifier_item_vladmir_2_lifesteal_aura_on_attack_landed"
 									}
 							}
 					}
@@ -1346,7 +1337,7 @@
 									"Lifesteal"
 									{
 											"Target"            "ATTACKER"
-											"LifestealPercent"    "%vampiric_aura"
+											"LifestealPercent"  "%vampiric_aura"
 									}
 							}
 					}
