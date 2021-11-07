@@ -770,7 +770,7 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.35"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -801,7 +801,7 @@
 		"AttackDamageMin"			"380"			// Damage range min.
 		"AttackDamageMax"			"390"			// Damage range max.
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
-		"AttackRate"				"0.35"			// Speed of attack.
+		"AttackRate"				"0.5"			// Speed of attack.
 		"AttackAnimationPoint"		"0.5"			// Normalized time in animation cycle to attack.
 		"AttackAcquisitionRange"	"700"			// Range within a target can be acquired.
 		"AttackRange"				"700"			// Range within a target can be attacked.
@@ -874,15 +874,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"90"		// 41
-		"AttackDamageMax"			"100"		// 46
+		"AttackDamageMin"			"140"		// 41
+		"AttackDamageMax"			"180"		// 46
 		"AttackRate"				"0.9"			// 1
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"22"		// 22
-		"BountyGoldMin"				"19"		// 19
-		"BountyGoldMax"				"25"		// 25
+		"BountyXP"					"32"		// 22
+		"BountyGoldMin"				"29"		// 19
+		"BountyGoldMax"				"35"		// 25
 
 		// Movement
 		//----------------------------------------------------------------
@@ -943,15 +943,15 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"90"		// 41
-		"AttackDamageMax"			"100"		// 46
+		"AttackDamageMin"			"140"		// 41
+		"AttackDamageMax"			"180"		// 46
 		"AttackRate"				"0.9"			// 1
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"22"		// 22
-		"BountyGoldMin"				"19"		// 19
-		"BountyGoldMax"				"25"		// 25
+		"BountyXP"					"32"		// 22
+		"BountyGoldMin"				"29"		// 19
+		"BountyGoldMax"				"35"		// 25
 
 		// Movement
 		//----------------------------------------------------------------
@@ -1109,12 +1109,14 @@
 	"npc_dota_goodguys_siege_upgraded"
 	{
 		// General
-		"ModelScale"				"0.9" // .65
+		"ModelScale"				"0.85" // .65
 
 		// Abilitys
 		"Ability1"					"creep_buff"
 
 		// Attack
+		"AttackDamageMin"			"100"		// 51
+		"AttackDamageMax"			"120"		// 62
 		"AttackRate"				"2.5"			// 1
 
 		// Movement
@@ -1129,12 +1131,14 @@
 	"npc_dota_goodguys_siege_upgraded_mega"
 	{
 		// General
-		"ModelScale"				"1.2" // .65
+		"ModelScale"				"1.1" // .65
 
 		// Abilitys
 		"Ability1"					"creep_buff_mega"
 
 		// Attack
+		"AttackDamageMin"			"150"		// 51
+		"AttackDamageMax"			"180"		// 62
 		"AttackRate"				"2.0"			// 1
 
 		// Movement
@@ -1150,12 +1154,14 @@
 	"npc_dota_badguys_siege_upgraded"
 	{
 		// General
-		"ModelScale"				"0.9" // .65
+		"ModelScale"				"0.85" // .65
 
 		// Abilitys
 		"Ability1"					"creep_buff"
 
 		// Attack
+		"AttackDamageMin"			"100"		// 51
+		"AttackDamageMax"			"120"		// 62
 		"AttackRate"				"2.5"			// 1
 
 		// Movement
@@ -1170,12 +1176,14 @@
 	"npc_dota_badguys_siege_upgraded_mega"
 	{
 		// General
-		"ModelScale"				"1.2" // .65
+		"ModelScale"				"1.1" // .65
 
 		// Abilitys
 		"Ability1"					"creep_buff_mega"
 
 		// Attack
+		"AttackDamageMin"			"150"		// 51
+		"AttackDamageMax"			"180"		// 62
 		"AttackRate"				"2.0"			// 1
 
 		// Movement

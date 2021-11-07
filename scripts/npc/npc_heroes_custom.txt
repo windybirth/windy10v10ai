@@ -829,6 +829,8 @@
 	}
 	"npc_dota_hero_skywrath_mage"
 	{
+		"AttributeBaseIntelligence"		"28"		// 25
+		"AttributeIntelligenceGain"		"3.800000"	// 4.1
 		"Bot"
 		{
 			"Build"

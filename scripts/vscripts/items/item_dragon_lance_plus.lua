@@ -46,7 +46,6 @@ function modifier_item_dragon_lance_plus:DeclareFunctions()
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_ATTACK_RANGE_BONUS_UNIQUE,
-		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT
 	}
 end 
 
@@ -67,16 +66,6 @@ function modifier_item_dragon_lance_plus:GetModifierAttackRangeBonusUnique()
 	end 
 end 
 
-function modifier_item_dragon_lance_plus:GetModifierAttackSpeedBonus_Constant()
-	if self:GetParent():HasModifier("modifier_item_dragon_lance_pro_max") then
-		return 0
-	end
-	if self:GetAbility() and self:GetAbility():GetSecondaryCharges() == 1 then
-		local current_agi = self:GetParent():GetAgility()
-		local applied_attack_speed = math.floor(current_agi * self:GetAbility():GetSpecialValueFor("attack_speed_per_agi"))
-		return applied_attack_speed
-	end
-end 
 
 
 modifier_item_dragon_lance_plus_active = class({})

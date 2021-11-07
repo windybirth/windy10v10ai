@@ -21,7 +21,7 @@ tBotItemData.purchaseItemList = {
 		'item_heart',
 		'item_reaver',
 		'item_talisman_of_evasion',
-		'item_recipe_heart',
+		'item_recipe_undying_heart',
 		'item_insight_armor',
 		'item_ultimate_scepter_2',
 		'item_black_king_bar',
