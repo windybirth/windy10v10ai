@@ -1592,7 +1592,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"status_resistance"		"10"
+				"status_resistance"		"12"
 			}
 		}
 	}
