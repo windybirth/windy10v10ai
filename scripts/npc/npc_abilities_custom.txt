@@ -308,7 +308,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"			"40 60 80 100 120 140 160 180"
+				"bonus_damage"			"60 80 100 120 140 160 180 200"
 			}
 			"02"
 			{
@@ -328,7 +328,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_speed"			"40 60 80 100 120 140 160 180"
+				"bonus_attack_speed"			"60 80 100 120 140 160 180 200"
 			}
 		}
 		"Modifiers"
@@ -364,7 +364,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_damage"			"80 120 160 200 240 280 320 360"
+				"bonus_damage"			"120 160 200 240 280 320 360 400"
 			}
 			"02"
 			{
@@ -384,7 +384,7 @@
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_speed"			"80 120 160 200 240 280 320 360"
+				"bonus_attack_speed"			"60 80 100 120 140 160 180 200"
 			}
 		}
 		"Modifiers"
@@ -425,7 +425,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"accuracy"			"60"
+				"accuracy"			 "60"
 			}
 			"03"
 			{
