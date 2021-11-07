@@ -37,7 +37,7 @@ function modifier_item_undying_heart:GetModifierBonusStats_Strength()
 	return self:GetAbility():GetSpecialValueFor("bonus_strength")
 end
 
-function modifier_item_undying_heart:GetModifierBonusStats_Health()
+function modifier_item_undying_heart:GetModifierHealthBonus()
 	return self:GetAbility():GetSpecialValueFor("bonus_health")
 end
 

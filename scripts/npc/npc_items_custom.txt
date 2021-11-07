@@ -1572,12 +1572,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"80"
+				"bonus_strength"		"120"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_health"			"900"
+				"bonus_health"			"600"
 			}
 			"03"
 			{
