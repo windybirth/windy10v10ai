@@ -40,6 +40,17 @@
 		"hide_chat_team"  "Hide Chat and Team"
 		"show_chat_team"  "Show Chat and Team"
 
+		"bots_multiplier_1"		"1   (Beginner)"
+		"bots_multiplier_1_25"	"1.25(Beginner)"
+		"bots_multiplier_1_5"	"1.5 (Beginner)"
+		"bots_multiplier_2"		"2   (Easy)"
+		"bots_multiplier_3"		"3   (Normal)"
+		"bots_multiplier_4"		"4   (Hard)"
+		"bots_multiplier_5"		"5   (Unfair)"
+		"bots_multiplier_10"	"10  (Legendary)"
+		"bots_multiplier_15"	"15  (Hell)"
+		"bots_multiplier_20"	"20  (Inferno)"
+
 		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
@@ -117,7 +128,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"WASP"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"A must-have artifact for the agile core in late stage."
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 3% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 2% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -161,7 +172,7 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"Excalibur"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 20% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 8% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
@@ -172,12 +183,13 @@
 		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"Effects of multiple Toxic blades do not stack."
 
 		"DOTA_Tooltip_Ability_item_undying_heart"				"Undying Heart"
-		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>Passive: Regeneration Amplification</h1>Increases all passive health regeneration"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							""
 		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"The powerful headpiece of a dead necromancer."
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
-		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+Max Health Regen"
-		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"						"%+Max Health Regen (cannot repetitive)"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"							"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_status_resistance"						"%+Status Resistance"
 
 		"DOTA_Tooltip_Ability_item_force_staff_2"			"Wind Force Staff"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>Active: Wind Force</h1>Pushes any target unit %push_length% units in the direction it is facing.<br><br>Range: %abilitycastrange%"
@@ -256,7 +268,7 @@
 
 		// dragon lance
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus"							"Dragon Lance Plus"
-		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"				"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every point of agility. "
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"				"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds."
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"						"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		  		 "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
@@ -267,7 +279,7 @@
 		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"Dragon Lance Pro Max"
-		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive:  Constant effort brings success</h1>Grants %attack_speed_per_agi% attack speed for every points of agility.\n\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by dragon. Cannot be sold or destroyed."
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>Active: Quick draw</h1> Grants %active_boost% attack speed for  %active_boost_duration% seconds.\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by dragon. Cannot be sold or destroyed."
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（Attack range）become more longer and（bonus）become more strengther is the eternal pursuit of all people"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		    "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		    "+$str"
@@ -348,5 +360,19 @@
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
+
+		// manta 1
+		"DOTA_Tooltip_Ability_item_manta_1"										"Manta Style 2"
+		"DOTA_Tooltip_Ability_item_recipe_manta_1"								"Manta Style 2 Recipe"
+		"DOTA_Tooltip_ability_item_manta_1_Description"							"<h1>Active: Mirror Image</h1>Creates %images_count% images of your hero that last %tooltip_illusion_duration% seconds. <br><br>Melee images deal %tooltip_damage_outgoing_melee%%% damage and take %tooltip_damage_incoming_melee_total_pct%%% damage, while Ranged images deal %tooltip_damage_outgoing_ranged%%% and take %tooltip_damage_incoming_ranged_total_pct%%% damage.<br><br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+		"DOTA_Tooltip_ability_item_manta_1_Lore"									"Manta Style 2"
+		"DOTA_Tooltip_ability_item_manta_1_Note0"									"Has a %invuln_duration% second cast time during which you are invulnerable."
+		"DOTA_Tooltip_ability_item_manta_1_Note1"									"Many effects are removed upon using Manta."
+		"DOTA_Tooltip_ability_item_manta_1_Note2"									"Yasha based movement speed bonuses from multiple items do not stack."
+		"DOTA_Tooltip_ability_item_manta_1_bonus_agility"							"+$agi"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_movement_speed"					"%+$move_speed"
 	}
 }

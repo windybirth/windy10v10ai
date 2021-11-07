@@ -40,6 +40,17 @@
 		"hide_chat_team"  "隐藏聊天框"
 		"show_chat_team"  "显示聊天框"
 
+		"bots_multiplier_1"		"1     (新手)"
+		"bots_multiplier_1_25"	"1.25(新手)"
+		"bots_multiplier_1_5"	"1.5  (新手)"
+		"bots_multiplier_2"		"2    (简单)"
+		"bots_multiplier_3"		"3    (普通)"
+		"bots_multiplier_4"		"4    (困难)"
+		"bots_multiplier_5"		"5    (疯狂)"
+		"bots_multiplier_10"	"10  (传说)"
+		"bots_multiplier_15"	"15  (地狱)"
+		"bots_multiplier_20"	"20  (炼狱) 谨慎选择"
+
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
@@ -115,7 +126,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"大核荣耀"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"敏捷核心大后期必备神器。"
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有3%概率随机掉落。</font>\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自战争之神的神秘力量庇护，不能出售或销毁。"
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>主动：看！他在天上飛</h1>%duration%秒内变成飞翔模式，移动速度提升%bonus_move_speed%%%。\n<h1>被动：辅助的怨念</h1><font color='#e03e2e'>死亡有2%概率随机掉落。</font>\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自战争之神的神秘力量庇护，不能出售或销毁。"
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -159,7 +170,7 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"EX咖喱棒"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有20%概率随机掉落。</font>\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自战争之神的神秘力量庇护，不能出售或销毁。"
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>被动：先王</h1> <font color='#e03e2e'>死亡有8%概率随机掉落。</font>\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自战争之神的神秘力量庇护，不能出售或销毁。"
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"咖喱棒效忠于被选中的王者，随机掉落。"
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"咖喱棒效忠于被选中的王者。"
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"
@@ -170,12 +181,13 @@
 		"DOTA_Tooltip_ability_item_quelling_blade_2_datadriven_Note0"						"多个毒瘤之刃效果不会叠加。"
 
 		"DOTA_Tooltip_Ability_item_undying_heart"				"不朽之心"
-		"DOTA_Tooltip_ability_item_undying_heart_Description"							"<h1>被动：恢复增强</h1>所有被动生命恢复效果提升。"
+		"DOTA_Tooltip_ability_item_undying_heart_Description"							""
 		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
-		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"							"%+最大生命恢复"
-		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"						"%+最大生命恢复（无法叠加）"
+		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"							"%+$evasion"
+		"DOTA_Tooltip_ability_item_undying_heart_status_resistance"						"%+状态抗性"
 
 		"DOTA_Tooltip_Ability_item_force_staff_2"			"风力法杖"
 		"DOTA_Tooltip_Ability_item_force_staff_2_Description"						"<h1>主动：风力</h1>将任何目标单位向其面对方向推进%push_length%距离。<br><br>施法距离：%abilitycastrange%"
@@ -223,13 +235,13 @@
 
 		"DOTA_Tooltip_Ability_item_aeon_pendant"				"咸鱼之王"
 		"DOTA_Tooltip_ability_item_aeon_pendant_Description"					"<h1>被动：强断连招</h1>当受到伤害并且生命值低于%health_threshold_pct%%%时，会对英雄施加一个强驱散效果，%buff_duration%秒内+%status_resistance%%%状态抗性，并且所有受到和造成的伤害全部归零。来自玩家的伤害才会触发。"
-		"DOTA_Tooltip_ability_item_aeon_pendant_lore"					"一件多年以前被偷偷运出象牙孵巢的强力宝物。很多人都信以为真了。"
+		"DOTA_Tooltip_ability_item_aeon_pendant_lore"					"受咸鱼之王保佑的，就别太固执了。"
 		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_health"					"+$health"
 		"DOTA_Tooltip_ability_item_aeon_pendant_bonus_mana"					"+$mana"
 
-		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"金箍棒·改"
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"定海神针"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
-		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"一位大师级战士使用的强力棍棒。"
+		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"当年孙悟空从东海龙王敖广的海底宝库中偷出来的趁手的兵器。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_attack_speed"					"+$attack"
 
@@ -254,7 +266,7 @@
 
 		// dragon lance
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus"						"魔龙枪 Plus"
-		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: 滴水穿石</h1>每点敏捷获得 %attack_speed_per_agi% 攻击速度."
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒."
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"					   "（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		       "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
@@ -265,7 +277,7 @@
 		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"魔龙枪 Pro Max"
-		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: 滴水穿石</h1>每点敏捷获得 %attack_speed_per_agi% 攻击速度.\n\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自龙族的神秘力量庇护，不能出售或销毁。"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒.\n<h1>被动: <font color='#a74abd'>永恒</font></h1>受到来自龙族的神秘力量庇护，不能出售或销毁。"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		   "+$agi"
 		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		   "+$str"
@@ -357,5 +369,19 @@
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"						"+$armor"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_attack_speed"				"+$attack"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_move_speed"					"+$move_speed"
+
+		// manta 1
+		"DOTA_Tooltip_Ability_item_manta_1"				"幻身斧"
+		"DOTA_Tooltip_Ability_item_recipe_manta_1"					"图纸（幻身斧）"
+		"DOTA_Tooltip_ability_item_manta_1_Description"							"<h1>主动：镜像</h1>制造%images_count%个你的幻象，持续%tooltip_illusion_duration%秒。<br><br>近战英雄的幻象继承%tooltip_damage_outgoing_melee%%%的攻击力，承受%tooltip_damage_incoming_melee_total_pct%%%的伤害；远程英雄的幻象继承%tooltip_damage_outgoing_ranged%%%的攻击力，承受%tooltip_damage_incoming_ranged_total_pct%%%的伤害。</font><br><br> 驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+		"DOTA_Tooltip_ability_item_manta_1_Lore"								    "幻影是虚像，我的分身可是有硬实力的哦？"
+		"DOTA_Tooltip_ability_item_manta_1_Note0"									"有%invuln_duration%秒的施法时间，其间处于无敌状态。"
+		"DOTA_Tooltip_ability_item_manta_1_Note1"									"可以使用幻影斧移除多种负面效果。"
+		"DOTA_Tooltip_ability_item_manta_1_Note2"									"不会与其他夜叉、散夜对剑以及幻影斧提供的移动速度加成叠加。"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_agility"							"+$agi"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_manta_1_bonus_movement_speed"					"%+$move_speed"
 	}
 }
