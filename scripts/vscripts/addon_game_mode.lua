@@ -184,13 +184,11 @@ function AIGameMode:AddCreepsSkill()
 	for _,creep in ipairs(npc_dota_creep_lane) do
 		local creepBuff = creep:FindAbilityByName("creep_buff")
 		if creepBuff and (creepBuff:GetLevel() == 0) then
-			print("Set Creep Skill level "..skillLevel)
 			creepBuff:SetLevel(skillLevel)
 		end
 
 		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
 		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
-			print("Set Creep MEGA Skill level "..skillLevel)
 			creepBuffMega:SetLevel(skillLevel)
 		end
 	end
@@ -199,13 +197,11 @@ function AIGameMode:AddCreepsSkill()
 	for _,creep in ipairs(npc_dota_creep_siege) do
 		local creepBuff = creep:FindAbilityByName("creep_buff")
 		if creepBuff and (creepBuff:GetLevel() == 0) then
-			print("Set Creep Skill level "..skillLevel)
 			creepBuff:SetLevel(skillLevel)
 		end
 
 		local creepBuffMega = creep:FindAbilityByName("creep_buff_mega")
 		if creepBuffMega and (creepBuffMega:GetLevel() == 0) then
-			print("Set Creep MEGA Skill level "..skillLevel)
 			creepBuffMega:SetLevel(skillLevel)
 		end
 	end
