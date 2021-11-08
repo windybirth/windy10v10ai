@@ -383,5 +383,24 @@
 		"DOTA_Tooltip_ability_item_manta_1_bonus_intellect"						"+$int"
 		"DOTA_Tooltip_ability_item_manta_1_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_manta_1_bonus_movement_speed"					"%+$move_speed"
+
+		// item silver edge 2
+		"DOTA_Tooltip_Ability_item_silver_edge_2"			"无敌之刃"
+		"DOTA_Tooltip_ability_item_silver_edge_2_Description"						"<h1>主动：暗影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害，并且%backstab_duration%秒内目标的被动技能无效。<h1></h1><h1>被动：致命一击</h1>每次攻击时有%crit_chance%%%概率造成%crit_multiplier%%%伤害。"
+		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_damage"				"+$damage"
+		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_attack_speed"			"+$attack"
+		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_mana_regen"              "+$mana_regen"
+		//"DOTA_Tooltip_ability_item_silver_edge_2_bonus_strength"                "+$str"
+		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_intellect"                "+$int"
+		//"DOTA_Tooltip_ability_item_silver_edge_2_windwalk_duration"					"SHADOW WALK DURATION:"
+		//"DOTA_Tooltip_ability_item_silver_edge_2_windwalk_bonus_damage"		"BONUS ATTACK DAMAGE:"
+		//"DOTA_Tooltip_ability_item_silver_edge_2_backstab_reduction"		"%ENEMY DAMAGE REDUCTION:"
+		//"DOTA_Tooltip_ability_item_silver_edge_2_backstab_duration"		"REDUCTION DURATION:"
+		"DOTA_Tooltip_ability_item_silver_edge_2_Lore"						"众所周知，隐身等于无敌。"
+		"DOTA_Tooltip_ability_item_silver_edge_2_Note0"					"暗影步无法闪避。"
+		"DOTA_Tooltip_ability_item_silver_edge_2_Note1"					"暗影步并不能无视技能免疫。"
+
+		"DOTA_Tooltip_modifier_item_silver_edge_2_windwalk"	"暗影步"
+		"DOTA_Tooltip_modifier_item_silver_edge_2_windwalk_Description"	"隐身，移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，而且可以穿过单位。破隐一击将造成%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE_POST_CRIT%点额外伤害，同时禁用被动技能。"
 	}
 }
