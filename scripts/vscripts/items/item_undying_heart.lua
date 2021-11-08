@@ -16,12 +16,15 @@ function modifier_item_undying_heart:OnCreated()
 	if IsServer() then
         if not self:GetAbility() then self:Destroy() end
     end
-	if not IsServer() then return end
+	
+	if self:GetAbility() then
+		self.bonus_strength = self:GetAbility():GetSpecialValueFor("bonus_strength")
+		self.bonus_health = self:GetAbility():GetSpecialValueFor("bonus_health")
+		self.health_regen_pct = self:GetAbility():GetSpecialValueFor("health_regen_pct")
+		self.bonus_evasion = self:GetAbility():GetSpecialValueFor("bonus_evasion")
+		self.status_resistance = self:GetAbility():GetSpecialValueFor("status_resistance")
+	end
 end 
-
-function modifier_item_undying_heart:OnDestroy()
-	if not IsServer() then return end
-end
  
 function modifier_item_undying_heart:DeclareFunctions()
 	return {
@@ -34,21 +37,21 @@ function modifier_item_undying_heart:DeclareFunctions()
 end
 
 function modifier_item_undying_heart:GetModifierBonusStats_Strength()
-	return self:GetAbility():GetSpecialValueFor("bonus_strength")
+	return self.bonus_strength
 end
 
 function modifier_item_undying_heart:GetModifierHealthBonus()
-	return self:GetAbility():GetSpecialValueFor("bonus_health")
+	return self.bonus_health
 end
 
 function modifier_item_undying_heart:GetModifierHealthRegenPercentageUnique()
-	return self:GetAbility():GetSpecialValueFor("health_regen_pct")
+	return self.health_regen_pct
 end
 
 function modifier_item_undying_heart:GetModifierEvasion_Constant()
-	return self:GetAbility():GetSpecialValueFor("bonus_evasion")
+	return self.bonus_evasion
 end
 
 function modifier_item_undying_heart:GetModifierStatusResistanceStacking()
-	return self:GetAbility():GetSpecialValueFor("status_resistance")
+	return self.status_resistance
 end
