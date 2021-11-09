@@ -3106,4 +3106,107 @@
 			}		
 		}
 	}	
+
+	//=================================================================================================================
+	// Recipe: Silver Edge 2
+	//=================================================================================================================
+	"item_recipe_silver_edge_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3032"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"						"item_recipe_silver_edge"
+		
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"0"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_silver_edge_2"
+		"ItemRequirements"
+		{
+			"01"						"item_silver_edge;item_relic;item_relic"
+		}
+	}
+
+	//=================================================================================================================
+	// silver edge 2
+	//=================================================================================================================
+	"item_silver_edge_2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3033"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"                     "item_silver_edge"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityTextureName"			"silver_edge_2"
+
+		// Stats		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"15.0"
+		"AbilitySharedCooldown"			"shadow_blade"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"175"
+
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"45"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_duration"		"18.0"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_movement_speed"	"30"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"windwalk_fade_time"	"0.3"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"windwalk_bonus_damage"	"500"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"backstab_duration"		"8"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"crit_chance"			"40"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"crit_multiplier"		"200"
+			}
+			"13"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"tooltip_crit_damage"	"60"
+			}
+		}
+	}
 }
