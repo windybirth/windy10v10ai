@@ -100,12 +100,12 @@
 							<Label text="75%" id="2"/>
 							<Label text="100%" id="3"/>
 							<Label text="125%" id="4"/>
-							<Label text="#radiant_tower_power_150%" id="5"/>
-							<Label text="175%" id="6"/>
-							<Label text="#radiant_tower_power_200%" id="7"/>
+							<Label text="#radiant_tower_power_150" id="5"/>
+							<Label text="#radiant_tower_power_175" id="6"/>
+							<Label text="#radiant_tower_power_200" id="7"/>
 							<Label text="300%" id="8"/>
 							<Label text="400%" id="9"/>
-							<Label text="#radiant_tower_power_500%" id="10"/>
+							<Label text="#radiant_tower_power_500" id="10"/>
 						</DropDown>
 					</Panel>
 					<Panel id="DireTowerPowerPanel"	class="GameOptionsSubPanel">
@@ -115,12 +115,12 @@
 							<Label text="75%" id="2"/>
 							<Label text="100%" id="3"/>
 							<Label text="125%" id="4"/>
-							<Label text="#dire_tower_power_150%" id="5"/>
-							<Label text="175%" id="6"/>
-							<Label text="#dire_tower_power_200%" id="7"/>
+							<Label text="#dire_tower_power_150" id="5"/>
+							<Label text="#dire_tower_power_175" id="6"/>
+							<Label text="#dire_tower_power_200" id="7"/>
 							<Label text="300%" id="8"/>
 							<Label text="400%" id="9"/>
-							<Label text="#dire_tower_power_500%" id="10"/>
+							<Label text="#dire_tower_power_500" id="10"/>
 						</DropDown>
 					</Panel>
 					<Panel id="RadiantTowerHealPanel"	class="GameOptionsSubPanel">
@@ -131,7 +131,7 @@
 							<Label text="5" id="5"/>
 							<Label text="#radiant_tower_heal_10" id="10"/>
 							<Label text="#radiant_tower_heal_20" id="20"/>
-							<Label text="50" id="50"/>
+							<Label text="#radiant_tower_heal_50" id="50"/>
 							<Label text="#radiant_tower_heal_100" id="100"/>
 						</DropDown>
 					</Panel>
@@ -143,7 +143,7 @@
 							<Label text="5" id="5"/>
 							<Label text="#dire_tower_heal_10" id="10"/>
 							<Label text="#dire_tower_heal_20" id="20"/>
-							<Label text="50" id="50"/>
+							<Label text="#dire_tower_heal_50" id="50"/>
 							<Label text="#dire_tower_heal_100" id="100"/>
 						</DropDown>
 					</Panel>
