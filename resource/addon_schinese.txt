@@ -51,6 +51,44 @@
 		"bots_multiplier_15"	"15  (地狱)"
 		"bots_multiplier_20"	"20  (炼狱) 谨慎选择"
 
+		"radiant_gold_xp_multiplier_1"               "1     (推荐)"
+		"radiant_gold_xp_multiplier_1_25"            "1.25  (推荐)"
+		"radiant_gold_xp_multiplier_1_5"             "1.5   (推荐)"
+		"radiant_gold_xp_multiplier_2"               "2     (不推荐)"
+		"radiant_gold_xp_multiplier_5"               "5     (我要虐电脑)"
+		"radiant_gold_xp_multiplier_10"              "10    (加大力度)"
+		"radiant_gold_xp_multiplier_20"              "20    (你是来欺负人的？)"
+
+		"respawn_time_percentage_75%"         "75%      (推荐)"
+		"respawn_time_percentage_50%"         "50%      (推荐)"
+		"respawn_time_percentage_0%"          "0%       (极不推荐)"
+
+		"max_level_100"                   "100     (推荐)"
+		"max_level_150"                   "150     (推荐)"
+		"max_level_500"                   "500    (极不推荐)"
+
+		"radiant_tower_power_150%"         "150%       (推荐)"
+		"radiant_tower_power_200%"         "200%       (推荐)"
+		"radiant_tower_power_500%"         "500%       (极不推荐)"
+
+		"dire_tower_power_150%"           "150%       （推荐）"
+		"dire_tower_power_200%"           "200%       （推荐）"
+		"dire_tower_power_500%"           "500%       （极不推荐）"
+
+		"radiant_tower_heal_10"        "10       （推荐）"
+		"radiant_tower_heal_20"        "20       （推荐）"
+		"radiant_tower_heal_100"       "100      （极不推荐）"
+
+		"dire_tower_heal_10"           "10       （推荐）"
+		"dire_tower_heal_20"           "20       （推荐）"
+		"dire_tower_heal_100"          "100      （极不推荐）"
+
+		"starting_gold_player_2000"    "2000      (推荐)"
+		"starting_gold_player_5000"    "5000      (不推荐)"
+
+		"starting_gold_bot_2000"       "2000      (推荐)"
+		"starting_gold_bot_5000"       "5000      (不推荐)"
+
 		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, 攻速增加 %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
