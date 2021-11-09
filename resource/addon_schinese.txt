@@ -386,7 +386,7 @@
 
 		// item silver edge 2
 		"DOTA_Tooltip_Ability_item_silver_edge_2"			"无敌之刃"
-		"DOTA_Tooltip_ability_item_silver_edge_2_Description"						"<h1>主动：暗影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害，并且%backstab_duration%秒内目标的被动技能无效。<h1></h1><h1>被动：致命一击</h1>每次攻击时有%crit_chance%%%概率造成%crit_multiplier%%%伤害。"
+		"DOTA_Tooltip_ability_item_silver_edge_2_Description"						"<h1>主动：暗影步</h1>进入隐身直到%windwalk_duration%秒持续时间结束、攻击或施法。隐身时，移动速度将提升%windwalk_movement_speed%%%，而且可以穿越单位。<br><br>破隐一击将额外造成%windwalk_bonus_damage%点物理伤害，并且%backstab_duration%秒内目标的被动技能无效。<h1>\n</h1><h1>被动：致命一击</h1>每次攻击时有%crit_chance%%%概率造成%crit_multiplier%%%伤害。"
 		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_damage"				"+$damage"
 		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_attack_speed"			"+$attack"
 		"DOTA_Tooltip_ability_item_silver_edge_2_bonus_mana_regen"              "+$mana_regen"
