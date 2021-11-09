@@ -51,6 +51,48 @@
 		"bots_multiplier_15"	"15  (Hell)"
 		"bots_multiplier_20"	"20  (Inferno)"
 
+		"radiant_gold_xp_multiplier_1"               "1"
+		"radiant_gold_xp_multiplier_1_25"            "1.25"
+		"radiant_gold_xp_multiplier_1_5"             "1.5"
+		"radiant_gold_xp_multiplier_2"               "2"
+		"radiant_gold_xp_multiplier_5"               "5"
+		"radiant_gold_xp_multiplier_10"              "10"
+		"radiant_gold_xp_multiplier_20"              "20"
+
+		"respawn_time_percentage_75%"         "75%"
+		"respawn_time_percentage_50%"         "50%"
+		"respawn_time_percentage_0%"          "0%"
+
+		"max_level_100"                   "100"
+		"max_level_150"                   "150"
+		"max_level_500"                   "500"
+
+		"radiant_tower_power_150"         "150%"
+		"radiant_tower_power_175"         "175%"
+		"radiant_tower_power_200"         "200%"
+		"radiant_tower_power_500"         "500%"
+
+		"dire_tower_power_150"           "150%"
+		"dire_tower_power_175"           "175%"
+		"dire_tower_power_200"           "200%"
+		"dire_tower_power_500"           "500%"
+
+		"radiant_tower_heal_10"        "10"
+		"radiant_tower_heal_20"        "20"
+		"radiant_tower_heal_50"        "50"
+		"radiant_tower_heal_100"       "100"
+
+		"dire_tower_heal_10"           "10"
+		"dire_tower_heal_20"           "20"
+		"dire_tower_heal_50"           "50"
+		"dire_tower_heal_100"          "100"
+
+		"starting_gold_player_2000"    "2000"
+		"starting_gold_player_5000"    "5000"
+
+		"starting_gold_bot_2000"       "2000"
+		"starting_gold_bot_5000"       "5000"
+
 		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
