@@ -51,6 +51,48 @@
 		"bots_multiplier_15"	"15  (Hell)"
 		"bots_multiplier_20"	"20  (Inferno)"
 
+		"radiant_gold_xp_multiplier_1"               "1"
+		"radiant_gold_xp_multiplier_1_25"            "1.25"
+		"radiant_gold_xp_multiplier_1_5"             "1.5"
+		"radiant_gold_xp_multiplier_2"               "2"
+		"radiant_gold_xp_multiplier_5"               "5"
+		"radiant_gold_xp_multiplier_10"              "10"
+		"radiant_gold_xp_multiplier_20"              "20"
+
+		"respawn_time_percentage_75%"         "75%"
+		"respawn_time_percentage_50%"         "50%"
+		"respawn_time_percentage_0%"          "0%"
+
+		"max_level_100"                   "100"
+		"max_level_150"                   "150"
+		"max_level_500"                   "500"
+
+		"radiant_tower_power_150"         "150%"
+		"radiant_tower_power_175"         "175%"
+		"radiant_tower_power_200"         "200%"
+		"radiant_tower_power_500"         "500%"
+
+		"dire_tower_power_150"           "150%"
+		"dire_tower_power_175"           "175%"
+		"dire_tower_power_200"           "200%"
+		"dire_tower_power_500"           "500%"
+
+		"radiant_tower_heal_10"        "10"
+		"radiant_tower_heal_20"        "20"
+		"radiant_tower_heal_50"        "50"
+		"radiant_tower_heal_100"       "100"
+
+		"dire_tower_heal_10"           "10"
+		"dire_tower_heal_20"           "20"
+		"dire_tower_heal_50"           "50"
+		"dire_tower_heal_100"          "100"
+
+		"starting_gold_player_2000"    "2000"
+		"starting_gold_player_5000"    "5000"
+
+		"starting_gold_bot_2000"       "2000"
+		"starting_gold_bot_5000"       "5000"
+
 		"DOTA_Tooltip_modifier_tower_power"							"Tower power"
 		"DOTA_Tooltip_modifier_tower_power_Description"			"The tower's attack damage is changed by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%, bonus attack speed is %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
@@ -128,7 +170,7 @@
 
 		"DOTA_Tooltip_ability_item_wasp"						"WASP"
 		"DOTA_Tooltip_ability_item_wasp_Lore"								"A must-have artifact for the agile core in late stage."
-		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 2% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
+		"DOTA_Tooltip_ability_item_wasp_Description"						"<h1>Active: Flight</h1>Get %bonus_move_speed%%% additional movement speed and flying movement for %duration% seconds.\n<h1>Passive: The enmity of support</h1><font color='#e03e2e'>Drop on death with 1% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_ability_item_wasp_bonus_agility"						"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_bonus_evasion"						"%+$evasion"
@@ -172,7 +214,7 @@
 		"DOTA_Tooltip_ability_item_sphere_2_bonus_mana_regen"						"+$mana_regen"
 
 		"DOTA_Tooltip_Ability_item_excalibur"				"Excalibur"
-		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 8% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
+		"DOTA_Tooltip_Ability_item_excalibur_Description"							"<h1>Passive: Late king</h1> <font color='#e03e2e'>Drop on death with 6% change.</font>\n<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Cannot be sold or destroyed."
 		"DOTA_Tooltip_Ability_item_excalibur_Note0"								"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_Lore"									"Excalibur are loyal to the chosen king and drop randomly."
 		"DOTA_Tooltip_Ability_item_excalibur_bonus_damage"							"+$damage"

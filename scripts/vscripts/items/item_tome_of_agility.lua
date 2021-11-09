@@ -42,7 +42,7 @@ function modifier_agi_tome:RemoveOnDeath()
 end
 
 function modifier_agi_tome:AllowIllusionDuplicate()
-    return true
+    return false
 end
 
 function modifier_agi_tome:IsPermanent()
