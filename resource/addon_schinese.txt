@@ -79,12 +79,12 @@
 
 		"radiant_tower_heal_10"        "10"
 		"radiant_tower_heal_20"        "20"
-		"radiant_tower_heal_50"        "50       (不推荐)"
+		"radiant_tower_heal_50"        "50        (不推荐)"
 		"radiant_tower_heal_100"       "100      (不推荐)"
 
 		"dire_tower_heal_10"        "10"
 		"dire_tower_heal_20"        "20"
-		"dire_tower_heal_50"        "50       (不推荐)"
+		"dire_tower_heal_50"        "50        (不推荐)"
 		"dire_tower_heal_100"       "100      (不推荐)"
 
 		"starting_gold_player_2000"    "2000"
