@@ -160,6 +160,10 @@
 			}
 		}
 	}
+	"item_black_king_bar"
+	{
+		"AbilitySharedCooldown"			"bkb"
+	}
 	// level 1
 	"item_philosophers_stone"
 	{
