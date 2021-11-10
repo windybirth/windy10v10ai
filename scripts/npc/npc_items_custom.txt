@@ -2619,7 +2619,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3033"
+		"ID"							"3021"
 		"BaseClass"						"item_datadriven"
 		"AbilityTextureName" 			"item_recipe"
 		"Model"							"models/props_gameplay/recipe.vmdl"
@@ -2646,7 +2646,7 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3034"
+		"ID"							"3022"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName" 			"magic_scepter"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
