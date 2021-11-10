@@ -323,6 +323,10 @@
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_health"							"+$health"
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_mana"							"+$mana"
 
+		"DOTA_Tooltip_ability_bloodseeker_rupture_scepter_description"				"Bloodseeker Aghanim's Scepter effect has been removed due to cause game crash."
+		"DOTA_Tooltip_ability_bloodseeker_rupture_max_charges_scepter"					        ""
+		"DOTA_Tooltip_ability_bloodseeker_rupture_charge_restore_time_scepter"					""
+
 		// Tomes
 
 		"DOTA_Tooltip_Ability_item_tome_of_strength"					"Tome of Strength"

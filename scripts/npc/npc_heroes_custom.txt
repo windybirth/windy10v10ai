@@ -305,6 +305,11 @@
 				"28"		"special_bonus_unique_bloodseeker_7"
 				"29"		"special_bonus_unique_bloodseeker_3"
 				"30"		"special_bonus_unique_bloodseeker_4"
+				"31"		"bloodseeker_rupture"
+				"32"		""
+				"33"		""
+				"34"		""
+				"35"		"bloodseeker_rupture"
 			}
 		}
 	}
