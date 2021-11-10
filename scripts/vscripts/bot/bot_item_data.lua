@@ -264,7 +264,6 @@ tBotItemData.purchaseItemList = {
 		'item_insight_armor',
 		'item_undying_heart',
 		'item_wasp',
-		'item_undying_heart',
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
 	
@@ -567,8 +566,6 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_satanic',
-		'item_moon_shard_datadriven',
-		'item_moon_shard_datadriven',
 		'item_undying_heart',
 		'item_wasp',
 		'item_excalibur',

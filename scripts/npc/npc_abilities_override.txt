@@ -2709,21 +2709,10 @@
 	{
 		"AbilitySpecial"
 		{
-			"04"
+			"08"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"duration"					"7"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_scepter"			"100 140 180"
-				"RequiresScepter"		"1"
-			}
-			"09"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"duration_scepter"			"15"
+				"var_type"					"FIELD_FLOAT"
+				"scepter_bonus_duration"			"5"
 				"RequiresScepter"		"1"
 			}
 		}
@@ -3006,10 +2995,6 @@
 	{
 		"MaxLevel" "7"
 		"AbilityCastRange"				"500"
-		
-		// Time		
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"2 1.5 1 0.8 0.6 0.4 0.3"
 
 		// Cost
 		//-------------------------------------------------------------------------------------------------------------
@@ -3451,7 +3436,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"stat_loss"				"1 1 1 2 2 2"
+				"stat_loss"				"1 1 1 1 1 1"
 			}
 			"03"
 			{
