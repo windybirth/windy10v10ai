@@ -2709,21 +2709,10 @@
 	{
 		"AbilitySpecial"
 		{
-			"04"
+			"08"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"duration"					"7"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_scepter"			"100 140 180"
-				"RequiresScepter"		"1"
-			}
-			"09"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"duration_scepter"			"15"
+				"var_type"					"FIELD_FLOAT"
+				"scepter_bonus_duration"			"5"
 				"RequiresScepter"		"1"
 			}
 		}
