@@ -1957,6 +1957,32 @@
 	// --------------------------------
 	// -------- Agility Heroes 敏捷英雄--------
 	// --------------------------------
+	"bloodseeker_rupture"
+	{
+		// remove Scepter effect due to cause game crash
+		"HasScepterUpgrade"			"0"
+
+		"AbilityCooldown"				"70 65 60 55 50"
+		"AbilityManaCost"				"100 150 200 300 400"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"10 11 12 13 14"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_damage_pct"		"33 44 55 70 90"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
+	}
+
 	"drow_ranger_marksmanship"
 	{
 		"AbilitySpecial"
