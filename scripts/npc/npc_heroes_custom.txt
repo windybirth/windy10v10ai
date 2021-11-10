@@ -15,10 +15,10 @@
 	"npc_dota_hero_silencer"
 	{
 		"override_hero"		"npc_dota_hero_silencer"
-		"AttackRange"		"500"
-		"AttributeStrengthGain"		"2.000000"		// 2.4
-		"AttributeAgilityGain"		"1.400000"		// 2.4
-		"AttributeIntelligenceGain"		"2.400000"	// 2.9
+		"AttackRange"		"500"					// 600
+		"AttributeStrengthGain"		"1.900000"		// 2.4
+		"AttributeAgilityGain"		"1.200000"		// 2.4
+		"AttributeIntelligenceGain"		"2.100000"	// 2.9
 	}
 
 	"npc_dota_hero_techies"
