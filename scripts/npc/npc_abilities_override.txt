@@ -1963,9 +1963,10 @@
 	// --------------------------------
 	"bloodseeker_rupture"
 	{
-		// remove Scepter effect due to cause game crash
-		"HasScepterUpgrade"			"0"
+		// cannot remove Scepter effect due to cause game crash
+		"HasScepterUpgrade"			"1"
 
+		"MaxLevel"						"5"
 		"AbilityCooldown"				"70 65 60 55 50"
 		"AbilityManaCost"				"100 150 200 300 400"		
 
@@ -1983,6 +1984,18 @@
 				"var_type"					"FIELD_INTEGER"
 				"movement_damage_pct"		"33 44 55 70 90"
 				"CalculateSpellDamageTooltip"	"0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_charges_scepter"		"1"
+				"RequiresScepter"		"1"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"charge_restore_time_scepter"		"50"
+				"RequiresScepter"		"1"
 			}
 		}
 	}
