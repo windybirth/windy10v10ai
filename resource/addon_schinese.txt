@@ -374,7 +374,7 @@
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_health"							"+$health"
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_mana"							"+$mana"
 
-		"DOTA_Tooltip_ability_bloodseeker_rupture_scepter_description"				"血魔神杖会导致游戏卡顿，神杖特效已移除。"
+		"DOTA_Tooltip_ability_bloodseeker_rupture_scepter_description"				"<font color='#e03e2e'>【注意】</font>千万不要给血魔购买神杖！神杖血魔会导致游戏卡顿崩溃！"
 		"DOTA_Tooltip_ability_bloodseeker_rupture_max_charges_scepter"					        ""
 		"DOTA_Tooltip_ability_bloodseeker_rupture_charge_restore_time_scepter"					""
 
