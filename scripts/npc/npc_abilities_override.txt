@@ -1483,7 +1483,7 @@
 	}
 	"chaos_knight_phantasm"
 	{
-		"AbilityCooldown"				"60"
+		"AbilityCooldown"				"120"
 	}
 	"doom_bringer_doom"
 	{
@@ -2683,7 +2683,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"10.0 15.0 20.0"
+				"duration"				"10.0"
 			}
 			"04"
 			{

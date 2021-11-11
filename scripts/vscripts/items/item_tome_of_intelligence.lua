@@ -43,7 +43,7 @@ function modifier_int_tome:RemoveOnDeath()
 end
 
 function modifier_int_tome:AllowIllusionDuplicate()
-    return true
+    return false
 end
 
 
