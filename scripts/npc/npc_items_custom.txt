@@ -3303,7 +3303,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"5000"	
+		"ItemCost"						"6600"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -3345,17 +3345,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"500"
+				"bonus_damage"			"380"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"corruption_armor"		"-100"
+				"corruption_armor"		"-26"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"corruption_duration"	"2.0"
+				"corruption_duration"	"4.0"
 			}
 		}
 	}
