@@ -186,29 +186,10 @@ end
 
 function modifier_tower_endure:GetModifierPhysicalArmorBonus()
 	local sName = self:GetParent():GetName()
+	local sArmor = self:GetParent():GetPhysicalArmorBaseValue()
 	local fPercent = StackToPercentage(self:GetStackCount())
 
-	if string.match(sName, "healer") then
-		return math.floor(10*(fPercent-1))
-	end
-	if string.match(sName, "fort") then
-		return math.floor(7*(fPercent-1))
-	end
-	if string.match(sName, "range") then
-		return math.floor(5*(fPercent-1))
-	end
-	if string.match(sName, "melee") then
-		return math.floor(7*(fPercent-1))
-	end
-	if string.match(sName, "1") then
-		return math.floor(7*(fPercent-1))
-	end
-	if string.match(sName, "[2-3]") then
-		return math.floor(8*(fPercent-1))
-	end
-	if string.match(sName, "4") then
-		return math.floor(12*(fPercent-1))
-	end
+	return math.floor(sArmor*(fPercent-1))
 end
 
 function modifier_tower_endure:OnTooltip()
