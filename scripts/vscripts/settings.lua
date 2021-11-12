@@ -5,7 +5,7 @@ ENABLE_AUTO_LAUNCH = true               -- Should we automatically have the game
 AUTO_LAUNCH_DELAY = 60                -- How long should the default team selection launch timer be?  The default for custom games is 30.  Setting to 0 will skip team selection.
 LOCK_TEAM_SETUP = false                 -- Should we lock the teams initially?  Note that the host can still unlock the teams
 HERO_SELECTION_TIME = 60.0              -- How long should we let people select their hero?
-PRE_GAME_TIME = 30.0                     -- How long after people select their heroes should the horn blow and the game start?
+PRE_GAME_TIME = 60.0                     -- How long after people select their heroes should the horn blow and the game start?
 
 RADIANT_PLAYER_COUNT = 10
 DIRE_PLAYER_COUNT = 10

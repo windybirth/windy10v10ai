@@ -51,13 +51,13 @@
 		"bots_multiplier_15"	"15  (地狱)"
 		"bots_multiplier_20"	"20  (炼狱) 谨慎选择"
 
-		"radiant_gold_xp_multiplier_1"               "1     (推荐)"
-		"radiant_gold_xp_multiplier_1_25"            "1.25(推荐)"
-		"radiant_gold_xp_multiplier_1_5"             "1.5  (推荐)"
-		"radiant_gold_xp_multiplier_2"               "2     (不推荐)"
-		"radiant_gold_xp_multiplier_5"               "5     (我要虐电脑)"
-		"radiant_gold_xp_multiplier_10"              "10   (加大力度)"
-		"radiant_gold_xp_multiplier_20"              "20   (你是来欺负人的?)"
+		"radiant_gold_xp_multiplier_1"               "1"
+		"radiant_gold_xp_multiplier_1_25"            "1.25"
+		"radiant_gold_xp_multiplier_1_5"             "1.5"
+		"radiant_gold_xp_multiplier_2"               "2    (不推荐)"
+		"radiant_gold_xp_multiplier_5"               "5    (我要虐电脑)"
+		"radiant_gold_xp_multiplier_10"              "10  (加大力度)"
+		"radiant_gold_xp_multiplier_20"              "20  (你是来欺负人的?)"
 
 		"respawn_time_percentage_75%"         "75%      (推荐)"
 		"respawn_time_percentage_50%"         "50%      (推荐)"
@@ -374,6 +374,10 @@
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_health"							"+$health"
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_mana"							"+$mana"
 
+		"DOTA_Tooltip_ability_bloodseeker_rupture_scepter_description"				"<font color='#e03e2e'>【注意】</font>千万不要给血魔购买神杖！神杖血魔会导致游戏卡顿崩溃！"
+		"DOTA_Tooltip_ability_bloodseeker_rupture_max_charges_scepter"					        ""
+		"DOTA_Tooltip_ability_bloodseeker_rupture_charge_restore_time_scepter"					""
+
 		// Tomes
 
 		"DOTA_Tooltip_Ability_item_tome_of_strength"					"力量之书"
@@ -444,5 +448,26 @@
 
 		"DOTA_Tooltip_modifier_item_silver_edge_2_windwalk"	"暗影步"
 		"DOTA_Tooltip_modifier_item_silver_edge_2_windwalk_Description"	"隐身，移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，而且可以穿过单位。破隐一击将造成%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE_POST_CRIT%点额外伤害，同时禁用被动技能。"
+		
+		"DOTA_Tooltip_Ability_item_black_king_bar_2"			"天神杖"
+		"DOTA_Tooltip_Ability_item_recipe_black_king_bar_2"			"图纸（天神杖）"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_Description"					"<h1>主动：天神下凡</h1>获得技能免疫状态。持续时间每使用一次都会降低。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_Lore"							"山丘之王的锤子年久失修，锤头掉了只剩一个锤柄，凑合能用。"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_Note0"						"再次购买黑皇杖也不会重置天神下凡的持续时间。"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_Note1"						"使用黑皇杖将使部分有益状态消失。"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_bonus_strength"				"+$str"
+		"DOTA_Tooltip_ability_item_black_king_bar_2_bonus_damage"					"+$damage"
+
+		// item infernal desolator
+		"DOTA_Tooltip_Ability_item_infernal_desolator"				"绝对破防之刃"
+		"DOTA_Tooltip_ability_item_infernal_desolator_Description"						"<h1>被动：绝对腐蚀</h1> 物理攻击将降低目标%corruption_armor%点护甲，持续%corruption_duration%秒。"
+		"DOTA_Tooltip_ability_item_infernal_desolator_Lore"							"上百护甲，一秒打穿。"
+		"DOTA_Tooltip_ability_item_infernal_desolator_Note0"								"护甲降低效果对建筑有效。"
+		//"DOTA_Tooltip_ability_item_infernal_desolator_corruption_armor"					"ARMOR REDUCTION:"
+		"DOTA_Tooltip_ability_item_infernal_desolator_bonus_damage"						"+$damage"		
+		
+		"DOTA_Tooltip_modifier_infernal_desolator_buff"					"绝对破防之刃"
+		"DOTA_Tooltip_modifier_infernal_desolator_buff_Description"		"绝对破防之刃使你的护甲被削弱%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点。"
+
 	}
 }
