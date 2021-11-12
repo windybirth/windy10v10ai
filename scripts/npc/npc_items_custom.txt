@@ -3223,7 +3223,7 @@
 		
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"8550"	
+		"ItemCost"						"4550"	
 		"ItemShopTags"					""
 		
 		// Recipe
@@ -3232,7 +3232,7 @@
 		"ItemResult"					"item_black_king_bar_2"
 		"ItemRequirements"
 		{
-			// "01"						"item_black_king_bar;item_mithril_hammer;item_mithril_hammer"
+			"01"						"item_black_king_bar;item_mithril_hammer;item_mithril_hammer"
 		}
 	}
 	
