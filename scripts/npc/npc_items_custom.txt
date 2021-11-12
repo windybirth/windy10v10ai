@@ -2313,13 +2313,10 @@
 		"BaseClass"						"item_aeon_disk"
 		"AbilityTextureName" 			"item_aeon_pendant"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySharedCooldown"			"aeon"
 
-		// Stats
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"60.0"
 
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"3100"
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
@@ -2652,6 +2649,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_magic_scepter.lua"
+		"AbilitySharedCooldown"			"magic_scepter"
 
 		"AbilityCooldown"				"65.0"
 		"AbilityManaCost"				"800"
@@ -2737,6 +2735,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_hallowed_scepter.lua"
+		"AbilitySharedCooldown"			"magic_scepter"
 
 		"AbilityCooldown"				"65.0"
 		"AbilityManaCost"			"1300"
@@ -2993,6 +2992,8 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
 		"BaseClass"						"item_manta"
 		"AbilityTextureName"			"manta_1"
+		"AbilitySharedCooldown"			"manta"
+
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"30.0"
@@ -3271,17 +3272,17 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"80"
+				"bonus_damage"			"60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"12.0 11.0 10.0 9.0"
+				"duration"				"10.0 9.5 9.0 8.5 8.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"max_level"				"4"
+				"max_level"				"5"
 			}
 			"05"
 			{

@@ -164,6 +164,14 @@
 	{
 		"AbilitySharedCooldown"			"bkb"
 	}
+	"item_aeon_disk"
+	{
+		"AbilitySharedCooldown"			"aeon"
+	}
+	"item_manta"
+	{
+		"AbilitySharedCooldown"			"manta"
+	}
 	// level 1
 	"item_philosophers_stone"
 	{
