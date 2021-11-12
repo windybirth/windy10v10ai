@@ -24,7 +24,7 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"630.0"
+		"ItemInitialStockTime"			"660.0"
 	}
 	"item_refresher"
 	{
@@ -159,6 +159,10 @@
 				"barrier_block_creep"	"800"
 			}
 		}
+	}
+	"item_black_king_bar"
+	{
+		"AbilitySharedCooldown"			"bkb"
 	}
 	// level 1
 	"item_philosophers_stone"
@@ -721,7 +725,7 @@
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"300.0"
-		"ItemInitialStockTime"			"330.0"
+		"ItemInitialStockTime"			"360.0"
 		"AbilitySpecial"
 		{
 			"01"
@@ -1957,6 +1961,45 @@
 	// --------------------------------
 	// -------- Agility Heroes 敏捷英雄--------
 	// --------------------------------
+	"bloodseeker_rupture"
+	{
+		// cannot remove Scepter effect due to cause game crash
+		"HasScepterUpgrade"			"1"
+
+		"MaxLevel"						"5"
+		"AbilityCooldown"				"70 65 60 55 50"
+		"AbilityManaCost"				"100 150 200 300 400"		
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"10 11 12 13 14"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"movement_damage_pct"		"33 44 55 70 90"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"06"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_charges_scepter"		"1"
+				"RequiresScepter"		"1"
+			}
+			"07"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"charge_restore_time_scepter"		"50"
+				"RequiresScepter"		"1"
+			}
+		}
+	}
+
 	"drow_ranger_marksmanship"
 	{
 		"AbilitySpecial"
