@@ -3380,4 +3380,118 @@
 			}
 		}
 	}
+
+	//=================================================================================================================
+	// Recipe: sacred trident
+	//=================================================================================================================
+	"item_recipe_sacred_trident"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3038"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"normal_recipe"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6666"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sacred_trident"
+		"ItemRequirements"
+		{
+			"01"						"item_kaya_and_sange;item_yasha_and_kaya;item_sange_and_yasha"
+			"02"						"item_kaya_and_sange;item_kaya_and_sange;item_yasha;item_yasha"
+			"03"						"item_yasha_and_kaya;item_yasha_and_kaya;item_sange;item_sange"
+			"04"						"item_sange_and_yasha;item_sange_and_yasha;item_kaya;item_kaya"
+		}
+	}
+	
+	//=================================================================================================================
+	// sacred trident
+	//=================================================================================================================
+	"item_sacred_trident"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ID"							"3039"
+		"AbilityTextureName"			"item_sacred_trident"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"six swords"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ScriptFile"                    "items/item_sacred_trident.lua"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage_per"		"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"66"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"status_resistance"		"33"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_amp"			"33"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"66"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_speed_percent_bonus"				"33"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"33"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"66"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"				"33"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"	"33"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"			"33"
+			}
+		}
+	}
+
+
 }
