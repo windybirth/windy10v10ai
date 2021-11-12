@@ -2469,7 +2469,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_dragon_lance_plus.lua"
 
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"30.0"
 		"AbilityManaCost"				"150"
 		"AbilitySharedCooldown"			"dragonlance"
 
@@ -2503,7 +2503,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"200"
+				"bonus_attack_range"		"180"
 			}
 			"04"
 			{
@@ -2559,7 +2559,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_dragon_lance_pro_max.lua"
 
-		"AbilityCooldown"				"45.0"
+		"AbilityCooldown"				"30.0"
 		"AbilityManaCost"			    "250"
 		"AbilitySharedCooldown"			"dragonlance"
 
@@ -2594,7 +2594,7 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_attack_range"		"240"
+				"bonus_attack_range"		"220"
 			}
 			"04"
 			{
