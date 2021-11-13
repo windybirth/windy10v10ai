@@ -2726,7 +2726,7 @@
 			"04"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"max_damage_duration"			"4.5"
+				"max_damage_duration"			"3.5"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 		}
@@ -3657,6 +3657,302 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"crit_mult"					"350"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Shredder: Flamethrower ( shard ability )  伐木机
+	//=================================================================================================================
+	"shredder_flamethrower"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage_per_second"		"180"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"duration"		"10"
+			}
+			"03"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"width"		"400"
+			}
+			"04"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"length"		"800"
+			}
+		}
+	}
+	"shredder_whirling_death"
+	{
+		"MaxLevel" "7"
+
+		"AbilityCooldown"				"5"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"whirling_radius"			"600"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"whirling_damage"			"60 120 180 240 300 360 420"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"tree_damage_scale"			"11 18 25 32 39 46 53 60"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"stat_loss_pct"				"14 15 16 17 18 19 20"
+				"LinkedSpecialBonus"		"special_bonus_unique_timbersaw"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"14 15 16 17 18 19 20"
+			}
+		}
+		
+	}
+	"shredder_timber_chain"
+	{
+		"MaxLevel" "7"
+
+		"AbilityCastRange"				"800 950 1100 1250 1400 1550 1700"
+		
+		"AbilityCooldown"				"3"
+		
+		"AbilityManaCost"				"60 70 80 90 100 110 120"
+		
+		"AbilitySpecial"
+		{
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"range"				"800 950 1100 1250 1400 1550 1700"
+				"LinkedSpecialBonus"	"special_bonus_unique_timbersaw_3"
+			}
+			
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"2200 2400 2600 2800 3000 3200 3400"
+			}
+			"05"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"70 120 170 220 270 320 370"
+			}
+		}
+	}
+
+	"shredder_reactive_armor"
+	{
+		"MaxLevel" "5"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"bonus_armor"						"3 4 5 6 7"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"bonus_hp_regen"							"3 4 5 6 7"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"stack_limit"						"2 3 4 5 6"
+				"LinkedSpecialBonus"				"special_bonus_unique_timbersaw_2"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"stack_duration"					"12 14 16 18 20"
+				"LinkedSpecialBonus"				"special_bonus_unique_timbersaw_2"
+			}
+		}
+	}
+
+	"shredder_chakram"
+	{
+		"AbilityCastRange"				"1200 1200 1200"
+	
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"speed"					"1200.0"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"400"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pass_damage"			"120 240 360"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_second"		"50 100 150"
+			}
+			
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"damage_interval"		"0.5"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"break_distance"		"3000.0"
+			}		
+		}
+	}
+	"shredder_chakram_2"
+	{
+		"AbilityCastRange"				"1200 1200 1200"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"speed"					"1200.0"
+				"RequiresScepter"	"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"radius"				"400"
+				"RequiresScepter"	"1"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"pass_damage"			"120 160 200"
+				"RequiresScepter"	"1"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_per_second"		"50 100 150"
+				"RequiresScepter"	"1"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"break_distance"		"3000.0"
+				"RequiresScepter"	"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Pugna: Nether Blast 帕格纳
+	//=================================================================================================================
+	"pugna_nether_blast"
+	{
+		"MaxLevel"						"7"
+
+		"AbilityCastRange"				"700"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.2 0.2 0.2 0.2"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"5"
+
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"85 105 125 145 165 185 205"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"structure_damage_mod"		"0.5"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"delay"						"0.8"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"550"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"blast_damage"				"200 250 300 350 400 450 500"
+				"LinkedSpecialBonus"		"special_bonus_unique_pugna_2"
+			}
+		}
+	}
+	"pugna_nether_ward"
+	{
+		"AbilityDuration"				"20 25 30 35"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"radius"					"2500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"base_damage"			"100"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"mana_multiplier"			"2.50 2.75 3.00 3.25"
+				"LinkedSpecialBonus"		"special_bonus_unique_pugna_3"
+			}
+		}
+	}
+	"pugna_life_drain"
+	{
+		"AbilityCastRange"				"1400"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"health_drain"					"200 300 400"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_health_drain"			"300 400 500"
+				"RequiresScepter"		"1"
 			}
 		}
 	}
