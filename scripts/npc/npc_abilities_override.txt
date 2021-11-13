@@ -164,6 +164,14 @@
 	{
 		"AbilitySharedCooldown"			"bkb"
 	}
+	"item_aeon_disk"
+	{
+		"AbilitySharedCooldown"			"aeon"
+	}
+	"item_manta"
+	{
+		"AbilitySharedCooldown"			"manta"
+	}
 	// level 1
 	"item_philosophers_stone"
 	{
@@ -2007,7 +2015,7 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"chance"	"15 20 25"
+				"chance"	"15 18 21"
 				"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_3"
 			}
 			"02"
@@ -2033,15 +2041,21 @@
 				"scepter_range"					"300"
 				"RequiresScepter"		"1"
 			}
-			"07"
+		}
+	}
+	"special_bonus_unique_drow_ranger_3"
+	{
+		"AbilitySpecial"
+		{
+			"01"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"damage_reduction_scepter"		"20"
-				"RequiresScepter"		"1"
-				"CalculateSpellDamageTooltip"	"0"
+				"var_type"					"FIELD_INTEGER"
+				"value"				"6"
+				"ad_linked_ability"			"drow_ranger_marksmanship"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
+
 	"ember_spirit_sleight_of_fist"
 	{
 		"AbilityCooldown"				"18 16 14 12"
@@ -2488,8 +2502,47 @@
 		"AbilityCooldown"				"30"
 	}
 	// -------------------------------------
-	// -------- Intelligence Heroes --------
+	// ---- Intelligence Heroes 智力英雄 ----
 	// -------------------------------------
+	"ancient_apparition_chilling_touch"
+	{
+		"MaxLevel" "7"
+		"AbilityCooldown"				"15 13 11 9 7 5 3"
+		"AbilityManaCost"				"30 45 60 75 90 105 120"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage"				"50 90 130 170 210 250 290"
+				"LinkedSpecialBonus"		"special_bonus_unique_ancient_apparition_2"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"slow"					"90"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"attack_range_bonus"	"60 90 120 150 180 210 240"
+			}
+		}
+	}
+
+	"special_bonus_unique_ancient_apparition_7"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"100"
+				"ad_linked_ability"			"ancient_apparition_chilling_touch"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
 	"bane_fiends_grip"
 	{
 		"AbilityCooldown"				"80 70 60"
@@ -2516,7 +2569,7 @@
 	}
 	"chen_hand_of_god"
 	{
-		"AbilityCooldown"				"60 50 40"
+		"AbilityCooldown"				"60 55 50"
 	}
 	"crystal_maiden_freezing_field"
 	{

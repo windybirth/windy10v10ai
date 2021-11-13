@@ -163,7 +163,7 @@
 		"item"		"item_vanguard"
 		"item"		"item_crimson_guard"
 		"item"		"item_lotus_orb"
-		"item"		"item_black_king_bar"
+		"item"		"item_black_king_bar_2"
 		"item"		"item_hurricane_pike"
 		"item"		"item_manta_1"
 		"item"		"item_shivas_guard"
