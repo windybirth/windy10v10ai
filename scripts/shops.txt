@@ -171,6 +171,7 @@
 		"item"		"item_undying_heart"
 		"item"		"item_vladmir_2"
 		"item"		"item_sphere_2"
+		"item"		"item_sacred_trident"
 	}
 
 	"weapons"
