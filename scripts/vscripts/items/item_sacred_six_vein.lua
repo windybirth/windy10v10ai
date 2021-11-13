@@ -1,19 +1,19 @@
-if item_sacred_trident == nil then item_sacred_trident = class({}) end
+if item_sacred_six_vein == nil then item_sacred_six_vein = class({}) end
 
-LinkLuaModifier("modifier_item_sacred_trident", 			"items/item_sacred_trident.lua", LUA_MODIFIER_MOTION_NONE)
+LinkLuaModifier("modifier_item_sacred_six_vein", 			"items/item_sacred_six_vein.lua", LUA_MODIFIER_MOTION_NONE)
 
-function item_sacred_trident:GetIntrinsicModifierName()
-	return "modifier_item_sacred_trident" end
+function item_sacred_six_vein:GetIntrinsicModifierName()
+	return "modifier_item_sacred_six_vein" end
 
-if modifier_item_sacred_trident == nil then modifier_item_sacred_trident = class({}) end
+if modifier_item_sacred_six_vein == nil then modifier_item_sacred_six_vein = class({}) end
 
 
-function modifier_item_sacred_trident:IsHidden()		return true end
-function modifier_item_sacred_trident:IsPurgable()		return false end
-function modifier_item_sacred_trident:RemoveOnDeath()	return false end
-function modifier_item_sacred_trident:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
+function modifier_item_sacred_six_vein:IsHidden()		return true end
+function modifier_item_sacred_six_vein:IsPurgable()		return false end
+function modifier_item_sacred_six_vein:RemoveOnDeath()	return false end
+function modifier_item_sacred_six_vein:GetAttributes()	return MODIFIER_ATTRIBUTE_MULTIPLE end
   
-function modifier_item_sacred_trident:OnCreated()
+function modifier_item_sacred_six_vein:OnCreated()
 	if not self:GetAbility() then self:Destroy() return end
 
 	self.bonus_damage = self:GetAbility():GetSpecialValueFor("bonus_damage")
@@ -36,7 +36,7 @@ function modifier_item_sacred_trident:OnCreated()
     end
 end 
 
-function modifier_item_sacred_trident:OnDestroy()
+function modifier_item_sacred_six_vein:OnDestroy()
     if not IsServer() then return end
     
     for _, mod in pairs(self:GetParent():FindAllModifiersByName(self:GetName())) do
@@ -44,7 +44,7 @@ function modifier_item_sacred_trident:OnDestroy()
     end
 end
 
-function modifier_item_sacred_trident:DeclareFunctions()
+function modifier_item_sacred_six_vein:DeclareFunctions()
 	return {
 		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
@@ -62,54 +62,54 @@ function modifier_item_sacred_trident:DeclareFunctions()
 	}
 end
 
-function modifier_item_sacred_trident:GetModifierPreAttack_BonusDamage()
+function modifier_item_sacred_six_vein:GetModifierPreAttack_BonusDamage()
 	return self.bonus_damage
 end 
 
-function modifier_item_sacred_trident:GetModifierBonusStats_Strength()
+function modifier_item_sacred_six_vein:GetModifierBonusStats_Strength()
 	return self.bonus_strength
 end
 
-function modifier_item_sacred_trident:GetModifierBonusStats_Agility()
+function modifier_item_sacred_six_vein:GetModifierBonusStats_Agility()
 	return self.bonus_agility
 end
 
-function modifier_item_sacred_trident:GetModifierBonusStats_Intellect()
+function modifier_item_sacred_six_vein:GetModifierBonusStats_Intellect()
 	return self.bonus_intellect
 end
 
-function modifier_item_sacred_trident:GetModifierStatusResistanceStacking()
+function modifier_item_sacred_six_vein:GetModifierStatusResistanceStacking()
 	return self.status_resistance
 end
 
-function modifier_item_sacred_trident:GetModifierHPRegenAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierHPRegenAmplify_Percentage()
 	return self.hp_regen_amp
 end
 
-function modifier_item_sacred_trident:GetModifierLifestealRegenAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierLifestealRegenAmplify_Percentage()
 	return self.hp_regen_amp
 end
 
-function modifier_item_sacred_trident:GetModifierMoveSpeedBonus_Percentage_Unique()
+function modifier_item_sacred_six_vein:GetModifierMoveSpeedBonus_Percentage_Unique()
 	return self.movement_speed_percent_bonus
 end
 
-function modifier_item_sacred_trident:GetModifierAttackSpeedBonus_Constant()
+function modifier_item_sacred_six_vein:GetModifierAttackSpeedBonus_Constant()
 	return self.bonus_attack_speed
 end
 
-function modifier_item_sacred_trident:GetModifierSpellAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierSpellAmplify_Percentage()
 	return self.spell_amp
 end
 
-function modifier_item_sacred_trident:GetModifierSpellLifestealRegenAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierSpellLifestealRegenAmplify_Percentage()
 	return self.spell_lifesteal_amp
 end
 
-function modifier_item_sacred_trident:GetModifierMPRegenAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierMPRegenAmplify_Percentage()
 	return self.mana_regen_multiplier
 end
 
-function modifier_item_sacred_trident:GetModifierMagicalResistanceBonus()
+function modifier_item_sacred_six_vein:GetModifierMagicalResistanceBonus()
 	return self.spell_resist
 end
