@@ -485,7 +485,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"120"
+				"bonus_movement_speed"		"110"
 			}
 			"02"
 			{
@@ -3382,7 +3382,7 @@
 	}
 
 	//=================================================================================================================
-	// Recipe: sacred trident
+	// Recipe: sacred trident 三叉戟
 	//=================================================================================================================
 	"item_recipe_sacred_trident"
 	{
@@ -3390,12 +3390,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"3038"
 		"BaseClass"						"item_datadriven"
-		"AbilityTextureName" 			"normal_recipe"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"			"item_recipe"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"6666"
+		"ItemCost"						"3333"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3404,10 +3404,10 @@
 		"ItemResult"					"item_sacred_trident"
 		"ItemRequirements"
 		{
-			"01"						"item_kaya_and_sange;item_yasha_and_kaya;item_sange_and_yasha"
-			"02"						"item_kaya_and_sange;item_kaya_and_sange;item_yasha;item_yasha"
-			"03"						"item_yasha_and_kaya;item_yasha_and_kaya;item_sange;item_sange"
-			"04"						"item_sange_and_yasha;item_sange_and_yasha;item_kaya;item_kaya"
+			"01"						"item_yasha;item_sange;item_kaya"
+			"02"						"item_kaya_and_sange;item_yasha"
+			"03"						"item_yasha_and_kaya;item_sange"
+			"04"						"item_sange_and_yasha;item_kaya"
 		}
 	}
 	
@@ -3425,8 +3425,7 @@
 
 		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
 		"ItemQuality"					"epic"
-		"ItemAliases"					"six swords"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemAliases"					"sacred trident"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		"ScriptFile"                    "items/item_sacred_trident.lua"
@@ -3438,42 +3437,42 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage_per"		"1"
+				"bonus_damage"			"33"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"66"
+				"bonus_strength"		"33"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"status_resistance"		"33"
+				"bonus_agility"			"33"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_amp"			"33"
+				"bonus_intellect"		"33"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_agility"			"66"
+				"bonus_attack_speed"	"33"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"movement_speed_percent_bonus"				"33"
+				"status_resistance"		"22"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"33"
+				"movement_speed_percent_bonus"				"11"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"66"
+				"hp_regen_amp"			"33"
 			}
 			"09"
 			{
@@ -3488,10 +3487,126 @@
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"			"33"
+				"mana_regen_multiplier"	"66"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_resist"			"22"
 			}
 		}
 	}
 
+	//=================================================================================================================
+	// Recipe: Sacred Six Vein 六脉神剑
+	//=================================================================================================================
+	"item_recipe_sacred_six_vein"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3040"
+		"BaseClass"						"item_datadriven"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"AbilityTextureName"			"item_recipe"
 
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"6666"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sacred_six_vein"
+		"ItemRequirements"
+		{
+			"01"						"item_sacred_trident;item_sacred_trident"
+		}
+	}
+	
+	//=================================================================================================================
+	// sacred six vein
+	//=================================================================================================================
+	"item_sacred_six_vein"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ID"							"3041"
+		"AbilityTextureName"			"item_sacred_six_vein"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"ItemShopTags"					"damage;str;agi;attack_speed;unique"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"sacred six vein"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ScriptFile"                    "items/item_sacred_six_vein.lua"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"66"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_strength"		"66"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_agility"			"66"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intellect"		"66"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"66"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"status_resistance"		"44"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"movement_speed_percent_bonus"				"22"
+			}
+			"08"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"hp_regen_amp"			"66"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_amp"				"66"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_lifesteal_amp"	"66"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"mana_regen_multiplier"	"99"
+			}
+			"12"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"spell_resist"			"44"
+			}
+		}
+	}
 }
