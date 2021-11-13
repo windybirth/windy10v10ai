@@ -17,11 +17,11 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
-		'item_manta',
 		'item_heart',
 		'item_reaver',
 		'item_talisman_of_evasion',
 		'item_recipe_undying_heart',
+		'item_manta',
 		'item_insight_armor',
 		'item_ultimate_scepter_2',
 		'item_black_king_bar',
@@ -117,11 +117,9 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
-		'item_skadi_2',
 		'item_wasp',
 		'item_infernal_desolator',
-
-		
+		'item_sacred_six_vein',
 	},
 	npc_dota_hero_bristleback = {
 		'item_magic_wand',
@@ -556,11 +554,10 @@ tBotItemData.purchaseItemList = {
 		'item_magic_wand',
 		'item_power_treads',
 		'item_wraith_band',
-		'item_vanguard',
 		'item_falcon_blade',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_sange_and_yasha',
+		'item_vanguard',
 		'item_monkey_king_bar_2',
 		'item_basher',
 		'item_recipe_abyssal_blade',
@@ -676,20 +673,19 @@ tBotItemData.purchaseItemList = {
 		'item_mask_of_madness',
 		'item_wings_of_haste',
 		'item_echo_sabre',
-		'item_sange_and_yasha',
 		'item_aghanims_shard',
 		'item_ultimate_scepter',
 		'item_ultimate_orb',
 		'item_ultimate_orb',
 		'item_black_king_bar',
 		'item_monkey_king_bar_2',
-		'item_infernal_desolator',
 		'item_vladmir_2',
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
-		'item_skadi_2',
-		'item_wasp',	
-		'item_excalibur',
+		'item_wasp',
+		'item_undying_heart',
+		'item_infernal_desolator',
+		'item_sacred_six_vein',
 	},
 	npc_dota_hero_tiny = {
 		'item_magic_wand',
@@ -786,7 +782,6 @@ tBotItemData.purchaseItemList = {
 		'item_skadi_2',
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
-		
 	},
 	npc_dota_hero_witch_doctor = {
 		'item_magic_wand',
@@ -859,7 +854,6 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_orb',
 		'item_hallowed_scepter',
 		'item_wind_waker',
-	
 	},
 }
 
@@ -898,7 +892,6 @@ tBotItemData.sellItemList = {
 		'item_wraith_band',
 		'item_power_treads',
 		'item_sange_and_yasha',
-		
 	},
 	npc_dota_hero_bristleback = {
 		'item_magic_wand',
