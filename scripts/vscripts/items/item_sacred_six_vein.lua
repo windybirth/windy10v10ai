@@ -50,12 +50,12 @@ function modifier_item_sacred_six_vein:DeclareFunctions()
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
-		MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING,
+		MODIFIER_PROPERTY_STATUS_RESISTANCE,
 		MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE,
-		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
+		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_UNIQUE,
 		MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_MP_REGEN_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
@@ -78,7 +78,7 @@ function modifier_item_sacred_six_vein:GetModifierBonusStats_Intellect()
 	return self.bonus_intellect
 end
 
-function modifier_item_sacred_six_vein:GetModifierStatusResistanceStacking()
+function modifier_item_sacred_six_vein:GetModifierStatusResistance()
 	return self.status_resistance
 end
 
@@ -98,7 +98,7 @@ function modifier_item_sacred_six_vein:GetModifierAttackSpeedBonus_Constant()
 	return self.bonus_attack_speed
 end
 
-function modifier_item_sacred_six_vein:GetModifierSpellAmplify_Percentage()
+function modifier_item_sacred_six_vein:GetModifierSpellAmplify_PercentageUnique()
 	return self.spell_amp
 end
 
