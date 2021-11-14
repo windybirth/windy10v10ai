@@ -16,7 +16,6 @@ function modifier_item_sacred_trident:GetAttributes()	return MODIFIER_ATTRIBUTE_
 function modifier_item_sacred_trident:OnCreated()
 	if not self:GetAbility() then self:Destroy() return end
 
-	self.bonus_damage = self:GetAbility():GetSpecialValueFor("bonus_damage")
 	self.bonus_strength = self:GetAbility():GetSpecialValueFor("bonus_strength")
 	self.status_resistance = self:GetAbility():GetSpecialValueFor("status_resistance")
 	self.hp_regen_amp = self:GetAbility():GetSpecialValueFor("hp_regen_amp")
@@ -46,7 +45,6 @@ end
 
 function modifier_item_sacred_trident:DeclareFunctions()
 	return {
-		MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE,
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
@@ -61,10 +59,6 @@ function modifier_item_sacred_trident:DeclareFunctions()
 		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS,
 	}
 end
-
-function modifier_item_sacred_trident:GetModifierPreAttack_BonusDamage()
-	return self.bonus_damage
-end 
 
 function modifier_item_sacred_trident:GetModifierBonusStats_Strength()
 	return self.bonus_strength
