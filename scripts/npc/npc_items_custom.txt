@@ -3436,7 +3436,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"33"
+				"bonus_damage"			"33"			// not used
 			}
 			"02"
 			{
@@ -3549,7 +3549,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"66"
+				"bonus_damage"			"66"			// not used
 			}
 			"02"
 			{
