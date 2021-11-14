@@ -21,7 +21,6 @@ function modifier_item_sacred_six_vein:OnCreated()
 	self.hp_regen_amp = self:GetAbility():GetSpecialValueFor("hp_regen_amp")
 	self.bonus_agility = self:GetAbility():GetSpecialValueFor("bonus_agility")
 	self.movement_speed_percent_bonus = self:GetAbility():GetSpecialValueFor("movement_speed_percent_bonus")
-	self.bonus_attack_speed = self:GetAbility():GetSpecialValueFor("bonus_attack_speed")
 	self.bonus_intellect = self:GetAbility():GetSpecialValueFor("bonus_intellect")
 	self.spell_amp = self:GetAbility():GetSpecialValueFor("spell_amp")
 	self.spell_lifesteal_amp = self:GetAbility():GetSpecialValueFor("spell_lifesteal_amp")
@@ -51,7 +50,6 @@ function modifier_item_sacred_six_vein:DeclareFunctions()
 		MODIFIER_PROPERTY_STATUS_RESISTANCE,
 		MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE,
 		MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE,
-		MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT,
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE_UNIQUE,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE_UNIQUE,
 		MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE,
@@ -86,10 +84,6 @@ end
 
 function modifier_item_sacred_six_vein:GetModifierMoveSpeedBonus_Percentage_Unique()
 	return self.movement_speed_percent_bonus
-end
-
-function modifier_item_sacred_six_vein:GetModifierAttackSpeedBonus_Constant()
-	return self.bonus_attack_speed
 end
 
 function modifier_item_sacred_six_vein:GetModifierSpellAmplify_PercentageUnique()
