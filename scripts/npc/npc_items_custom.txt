@@ -2387,7 +2387,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1875"
+		"ItemCost"						"3936"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2443,7 +2443,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_chance_damage"			"210"
+				"bonus_chance_damage"			"280"
 			}
 		}
 	}
