@@ -2892,7 +2892,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_agility.lua"
 		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -2906,7 +2906,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
@@ -2923,7 +2923,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_intelligence.lua"
 		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -2937,7 +2937,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
@@ -2954,7 +2954,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_strength.lua"
 		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -2968,7 +2968,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
