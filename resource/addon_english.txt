@@ -459,5 +459,34 @@
 		
 		"DOTA_Tooltip_modifier_infernal_desolator_buff"					"Desolator S"
 		"DOTA_Tooltip_modifier_infernal_desolator_buff_Description"		"Desolator S attacks reduced your armor by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+
+		// item sacred trident
+		"DOTA_Tooltip_Ability_item_sacred_trident"										"Sacred Trident"
+		"DOTA_Tooltip_Ability_item_sacred_trident_bonus_damage"							"+$damage"
+		"DOTA_Tooltip_Ability_item_sacred_trident_bonus_strength"						"+$str"
+		"DOTA_Tooltip_Ability_item_sacred_trident_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_Ability_item_sacred_trident_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_Ability_item_sacred_trident_status_resistance"					"%+Status Resistance"
+		"DOTA_Tooltip_Ability_item_sacred_trident_hp_regen_amp"							"%+Self HP Regen and Lifesteal Amp"
+		"DOTA_Tooltip_Ability_item_sacred_trident_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_Ability_item_sacred_trident_movement_speed_percent_bonus"			"%+$move_speed"	
+		"DOTA_Tooltip_Ability_item_sacred_trident_spell_amp"							"%+Spell Amplification"
+		"DOTA_Tooltip_Ability_item_sacred_trident_mana_regen_multiplier"				"%+Mana Regen Amplification"	
+		"DOTA_Tooltip_Ability_item_sacred_trident_spell_lifesteal_amp"					"%+Spell Lifesteal Amplification"
+		"DOTA_Tooltip_Ability_item_sacred_trident_spell_resist"							"%+$spell_resist"
+
+		"DOTA_Tooltip_Ability_item_sacred_six_vein"										"Sacred Six Vein"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_bonus_strength"						"+$str"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_bonus_intellect"						"+$int"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_status_resistance"					"%+Status Resistance"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_hp_regen_amp"						"%+Self HP Regen and Lifesteal Amp"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_movement_speed_percent_bonus"		"%+$move_speed"	
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_spell_amp"							"%+Spell Amplification"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_mana_regen_multiplier"				"%+Mana Regen Amplification"	
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_spell_lifesteal_amp"					"%+Spell Lifesteal Amplification"
+		"DOTA_Tooltip_Ability_item_sacred_six_vein_spell_resist"						"%+$spell_resist"
 	}
 }

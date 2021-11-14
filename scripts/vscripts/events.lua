@@ -187,6 +187,8 @@ function AIGameMode:OnGameStateChanged(keys)
 				local towerName = v:GetName()
 				if string.find(towerName, "tower3") then
 					towerSplitShot:SetLevel(2)
+				elseif string.find(towerName, "tower4") then
+					towerSplitShot:SetLevel(1)
 				end
 				towerSplitShot:ToggleAbility()
 			end
