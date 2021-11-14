@@ -59,9 +59,11 @@
 		"radiant_gold_xp_multiplier_10"              "10"
 		"radiant_gold_xp_multiplier_20"              "20"
 
-		"respawn_time_percentage_75%"         "75%"
-		"respawn_time_percentage_50%"         "50%"
-		"respawn_time_percentage_0%"          "0%"
+		"respawn_time_percentage_200"        "200%"
+		"respawn_time_percentage_100"        "100%"
+		"respawn_time_percentage_75"         "75%"
+		"respawn_time_percentage_50"         "50%"
+		"respawn_time_percentage_0"          "0%"
 
 		"max_level_100"                   "100"
 		"max_level_150"                   "150"
