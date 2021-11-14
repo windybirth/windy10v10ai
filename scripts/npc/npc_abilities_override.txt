@@ -3682,24 +3682,17 @@
 	{
 		"MaxLevel" "7"
 
-		"AbilityCooldown"				"5"
-
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"whirling_radius"			"600"
+				"whirling_radius"			"450"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
 				"whirling_damage"			"60 120 180 240 300 360 420"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"tree_damage_scale"			"11 18 25 32 39 46 53 60"
 			}
 			"05"
 			{
@@ -3720,8 +3713,6 @@
 		"MaxLevel" "7"
 
 		"AbilityCastRange"				"800 950 1100 1250 1400 1550 1700"
-		
-		"AbilityCooldown"				"3"
 		
 		"AbilityManaCost"				"60 70 80 90 100 110 120"
 		
@@ -3780,8 +3771,6 @@
 
 	"shredder_chakram"
 	{
-		"AbilityCastRange"				"1200 1200 1200"
-	
 		"AbilitySpecial"
 		{
 			"01"
@@ -3819,8 +3808,6 @@
 	}
 	"shredder_chakram_2"
 	{
-		"AbilityCastRange"				"1200 1200 1200"
-		
 		"AbilitySpecial"
 		{
 			"01"
@@ -3902,7 +3889,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"radius"					"2500"
+				"radius"					"2000"
 			}
 			"02"
 			{
@@ -3915,11 +3902,17 @@
 				"mana_multiplier"			"2.50 2.75 3.00 3.25"
 				"LinkedSpecialBonus"		"special_bonus_unique_pugna_3"
 			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attacks_to_destroy_tooltip"				"8 8 8 8"
+				"LinkedSpecialBonus"		"special_bonus_unique_pugna_6"
+			}
 		}
 	}
 	"pugna_life_drain"
 	{
-		"AbilityCastRange"				"1400"
+		"AbilityCastRange"				"1200"
 		
 		"AbilitySpecial"
 		{
@@ -3934,6 +3927,158 @@
 				"var_type"					"FIELD_INTEGER"
 				"scepter_health_drain"			"300 400 500"
 				"RequiresScepter"		"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// Rattletrap: Overclocking (scepter ability)              发条地精
+	//=================================================================================================================
+	"rattletrap_overclocking"
+	{
+		"AbilityCooldown"				"30"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"buff_duration"				"10"
+				"RequiresScepter"			"1"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_movement_speed"		"50"
+				"RequiresScepter"			"1"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"debuff_duration"		"1"
+				"RequiresScepter"			"1"
+			}
+		}
+	}
+	"rattletrap_battery_assault"
+	{
+		"MaxLevel"						"7"
+
+		"AbilityCooldown"				"25 23 21 19 17 15 13"
+
+		"AbilityManaCost"				"100"
+		
+		"AbilityDamage"					"20 45 70 95 120 145 170"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"325 325 325 325"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"interval"			"0.5 0.5 0.5 0.5"
+				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"20 45 70 95 120 145 170"
+				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_3"
+			}
+		}
+	}
+	"rattletrap_power_cogs"
+	{
+		"AbilityCooldown"				"15"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"7.0 8.0 9.0 10.0"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"		"100 175 250 325"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"mana_burn"		"100 130 160 190"
+				"LinkedSpecialBonus"		"special_bonus_unique_clockwerk_8"
+			}
+		}
+	}
+	"rattletrap_rocket_flare"
+	{
+		"MaxLevel"						"7"
+
+		"AbilityCooldown"				"20.0 18.0 16.0 14.0 12.0 10.0 8.0"
+		
+		"AbilityManaCost"				"35 40 45 50 55 60 65"
+		
+		"AbilityDamage"					"100 140 180 220 260 300 340"
+		
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"			"800"
+			}
+			"02"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"12.0"
+			}
+			"03"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"3250"
+			}
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"vision_radius"		"1500"
+			}
+			"05"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"100 140 180 220 260 300 340"
+				"LinkedSpecialBonus"	"special_bonus_unique_clockwerk_2"
+			}	
+		}
+	}
+	"rattletrap_hookshot"
+	{
+		"MaxLevel"						"4"
+		
+		"AbilityCastRange"				"2000 2500 3000 3500"
+		
+		"AbilityCooldown"				"60.0 45.0 30.0 15.0"
+		
+		"AbilitySpecial"
+		{
+			"03"
+			{	
+				"var_type"			"FIELD_FLOAT"
+				"duration"			"1.5 2.0 2.5 3.0"
+			}
+			
+			"04"
+			{	
+				"var_type"			"FIELD_INTEGER"
+				"speed"				"4000 5000 6000 7000"
+			}
+			"05"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"damage"			"100 200 300 400"
 			}
 		}
 	}
