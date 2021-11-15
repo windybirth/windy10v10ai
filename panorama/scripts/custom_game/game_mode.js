@@ -59,9 +59,11 @@ $("#radiant_gold_xp_multiplier_dropdown").SetSelected("1");
 $("#dire_gold_xp_multiplier_dropdown").SetSelected("5");
 $("#radiant_player_number_dropdown").SetSelected("10");
 $("#dire_player_number_dropdown").SetSelected("10");
+
+$("#respawn_time_percentage_dropdown").SetSelected("75");
+$("#max_level_dropdown").SetSelected("100");
 $("#radiant_tower_power_dropdown").SetSelected("5");
 $("#dire_tower_power_dropdown").SetSelected("5");
-$("#max_level_dropdown").SetSelected("100");
 $("#radiant_tower_heal_dropdown").SetSelected("5");
 $("#dire_tower_heal_dropdown").SetSelected("5");
 $("#starting_gold_player_dropdown").SetSelected("2000");

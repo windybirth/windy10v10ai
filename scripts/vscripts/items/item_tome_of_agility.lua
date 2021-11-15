@@ -59,7 +59,7 @@ function modifier_agi_tome:OnCreated(kv)
             if tome_table then
                 tomeValue = tome_table.agi
             end
-    		mod:SetStackCount(tomeValue/25)
+    		mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyAgility(tomeValue)
             end
@@ -77,7 +77,7 @@ function modifier_agi_tome:OnRefresh(kv)
             if tome_table then
                 tomeValue = tome_table.agi
             end
-            mod:SetStackCount(tomeValue/25)
+            mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyAgility(tomeValue)
             end
@@ -93,7 +93,7 @@ function modifier_agi_tome:DeclareFunctions()
 end
 
 function modifier_agi_tome:OnTooltip()
-    return self:GetStackCount() * 25
+    return self:GetStackCount() * 50
 end
 
 function modifier_agi_tome:GetTexture()

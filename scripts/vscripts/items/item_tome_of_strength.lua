@@ -61,7 +61,7 @@ function modifier_str_tome:OnCreated(kv)
             if tome_table then
                 tomeValue = tome_table.str
             end
-            mod:SetStackCount(tomeValue/25)
+            mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyStrength(tomeValue)
             end
@@ -79,7 +79,7 @@ function modifier_str_tome:OnRefresh(kv)
             if tome_table then
                 tomeValue = tome_table.str
             end
-            mod:SetStackCount(tomeValue/25)
+            mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyStrength(tomeValue)
             end
@@ -97,7 +97,7 @@ end
 
 
 function modifier_str_tome:OnTooltip()
-    return self:GetStackCount() * 25
+    return self:GetStackCount() * 50
 end
 
 function modifier_str_tome:GetTexture()
