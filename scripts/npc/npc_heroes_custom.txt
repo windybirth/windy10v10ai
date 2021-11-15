@@ -181,7 +181,7 @@
 				"21"		"nevermore_dark_lord"
 				"22"		"nevermore_dark_lord"
 				"23"		"nevermore_dark_lord"
-				"24"		""
+				"24"		"nevermore_dark_lord"
 				"25"		"special_bonus_unique_nevermore_4"
 				"26"		""
 				"27"		"special_bonus_attack_speed_25"
@@ -890,6 +890,8 @@
 				"28"		"special_bonus_attack_speed_30"
 				"29"		"special_bonus_unique_sniper_1"
 				"30"		"special_bonus_attack_range_100"
+				"31"		"sniper_assassinate"
+				"32"		"sniper_assassinate"
 			}
 		}
 	}
