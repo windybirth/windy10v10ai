@@ -2886,14 +2886,13 @@
 	//=================================================================================================================
 	// Item: Tome of Agility
 	//=================================================================================================================
-
 	"item_tome_of_agility"
 	{
 		"ID"						"3027"
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_agility.lua"
 		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -2907,7 +2906,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
@@ -2924,7 +2923,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_intelligence.lua"
 		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -2938,7 +2937,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
@@ -2955,7 +2954,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_strength.lua"
 		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"10000"
+		"ItemCost"					"19999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -2969,7 +2968,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"25"
+				"bonus"         		"50"
 			}
 		}
 	}
@@ -3404,10 +3403,10 @@
 		"ItemResult"					"item_sacred_trident"
 		"ItemRequirements"
 		{
-			"01"						"item_yasha;item_sange;item_kaya"
-			"02"						"item_kaya_and_sange;item_yasha"
-			"03"						"item_yasha_and_kaya;item_sange"
-			"04"						"item_sange_and_yasha;item_kaya"
+			"01"						"item_kaya_and_sange;item_yasha"
+			"02"						"item_yasha_and_kaya;item_sange"
+			"03"						"item_sange_and_yasha;item_kaya"
+			"04"						"item_yasha;item_sange;item_kaya"
 		}
 	}
 	
@@ -3437,7 +3436,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"33"
+				"bonus_damage"			"33"			// not used
 			}
 			"02"
 			{
@@ -3457,7 +3456,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"33"
+				"bonus_attack_speed"	"33"			// not used
 			}
 			"06"
 			{
@@ -3472,27 +3471,27 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_amp"			"33"
+				"hp_regen_amp"			"30"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amp"				"33"
+				"spell_amp"				"30"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"	"33"
+				"spell_lifesteal_amp"	"30"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"	"66"
+				"mana_regen_multiplier"	"60"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resist"			"22"
+				"spell_resist"			"20"
 			}
 		}
 	}
@@ -3550,7 +3549,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"66"
+				"bonus_damage"			"66"			// not used
 			}
 			"02"
 			{
@@ -3570,12 +3569,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"66"
+				"bonus_attack_speed"	"66"			// not used
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"status_resistance"		"44"
+				"status_resistance"		"40"
 			}
 			"07"
 			{
@@ -3585,27 +3584,27 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hp_regen_amp"			"66"
+				"hp_regen_amp"			"60"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_amp"				"66"
+				"spell_amp"				"60"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_lifesteal_amp"	"66"
+				"spell_lifesteal_amp"	"60"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"mana_regen_multiplier"	"99"
+				"mana_regen_multiplier"	"90"
 			}
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resist"			"44"
+				"spell_resist"			"40"
 			}
 		}
 	}

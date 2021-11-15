@@ -62,7 +62,7 @@ function modifier_int_tome:OnCreated(kv)
             if tome_table then
                 tomeValue = tome_table.int
             end
-            mod:SetStackCount(tomeValue/25)
+            mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyIntellect(tomeValue)
             end
@@ -81,7 +81,7 @@ function modifier_int_tome:OnRefresh(kv)
             if tome_table then
                 tomeValue = tome_table.int
             end
-            mod:SetStackCount(tomeValue/25)
+            mod:SetStackCount(tomeValue/50)
             if parent:IsIllusion() then
                 parent:ModifyIntellect(tomeValue)
             end
@@ -100,7 +100,7 @@ end
 
 
 function modifier_int_tome:OnTooltip()
-    return self:GetStackCount() * 25
+    return self:GetStackCount() * 50
 end
 
 function modifier_int_tome:GetTexture()
