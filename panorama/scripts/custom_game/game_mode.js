@@ -66,7 +66,7 @@ $("#radiant_tower_power_dropdown").SetSelected("5");
 $("#dire_tower_power_dropdown").SetSelected("5");
 $("#radiant_tower_heal_dropdown").SetSelected("5");
 $("#dire_tower_heal_dropdown").SetSelected("5");
-$("#starting_gold_player_dropdown").SetSelected("2000");
+$("#starting_gold_player_dropdown").SetSelected("5000");
 $("#starting_gold_bot_dropdown").SetSelected("600");
 $("#same_hero_selection").checked=true;
 $("#fast_courier").checked=true;
