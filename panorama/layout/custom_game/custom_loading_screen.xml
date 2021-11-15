@@ -75,10 +75,11 @@
 					<Panel id="RespawnTimePercentagePanel"	class="GameOptionsSubPanel">
 						<Label id="RespawnTimePercentagePanelTitle" class="GameOptionsLabel" text="#respawn_time_percentage" />
 						<DropDown id="respawn_time_percentage_dropdown" class="GameOptionsDropdown">
-							<Label text="100%" id="100"/>
-							<Label text="#respawn_time_percentage_75%" id="75"/>
-							<Label text="#respawn_time_percentage_50%" id="50"/>
-							<Label text="#respawn_time_percentage_0%" id="0"/>
+							<Label text="#respawn_time_percentage_200" id="200"/>
+							<Label text="#respawn_time_percentage_100" id="100"/>
+							<Label text="#respawn_time_percentage_75" id="75"/>
+							<Label text="#respawn_time_percentage_50" id="50"/>
+							<Label text="#respawn_time_percentage_0" id="0"/>
 						</DropDown>
 					</Panel>
 					<Panel id="MaxLevelPanel"	class="GameOptionsSubPanel">
