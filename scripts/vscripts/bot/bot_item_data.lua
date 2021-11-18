@@ -631,7 +631,7 @@ tBotItemData.purchaseItemList = {
 		'item_seer_stone',
 		'item_magic_wand',
 		'item_arcane_boots',
-		'item_vanguard',
+		'item_aether_lens_3',
 		'item_blink',
 		'item_shivas_guard',
 		'item_wings_of_haste',
@@ -1084,7 +1084,6 @@ tBotItemData.sellItemList = {
 		'item_magic_wand',
 		'item_arcane_boots',
 		'item_shivas_guard',
-
 	},
 	npc_dota_hero_skywrath_mage = {
 		'item_magic_wand',
