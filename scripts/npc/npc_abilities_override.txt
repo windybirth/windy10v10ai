@@ -378,6 +378,10 @@
 			}
 		}
 	}
+	"item_third_eye"
+	{
+		"ItemInitialCharges"			"50"
+	}
 	// level 4
 	"item_timeless_relic"{
 		"AbilitySpecial"
@@ -422,7 +426,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"			"3.5"
+				"duration"			"5"
 			}
 		}
 	}
