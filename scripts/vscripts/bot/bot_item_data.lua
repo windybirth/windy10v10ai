@@ -247,7 +247,7 @@ tBotItemData.purchaseItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_dragon_knight = {
-		'item_ex_machina',
+		'item_giants_ring',
 		'item_magic_wand',
 		'item_power_treads',
 		'item_bracer',
@@ -271,7 +271,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
 		'item_sacred_six_vein',
-		'item_ex_machina',
+		'item_giants_ring',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_ballista',
@@ -599,7 +599,7 @@ tBotItemData.purchaseItemList = {
 		'item_seer_stone',
 	},
 	npc_dota_hero_pudge = {
-		'item_ex_machina',
+		'item_giants_ring',
 		'item_magic_wand',
 		'item_arcane_boots',
 		'item_bracer',
@@ -625,7 +625,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_moon_shard_datadriven',
 		'item_sacred_six_vein',
-		'item_ex_machina',
+		'item_giants_ring',
 	},
 	npc_dota_hero_sand_king = {
 		'item_seer_stone',
