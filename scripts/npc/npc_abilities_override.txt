@@ -4270,7 +4270,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius_tooltip_scepter"	"2000"
+				"aura_radius_tooltip_scepter"	"1500"
 				"RequiresScepter"			"1"
 			}
 		}
