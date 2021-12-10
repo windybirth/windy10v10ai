@@ -4294,7 +4294,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"							"3053"
 		"BaseClass"						"item_lua"
-		"AbilityTextureName" 			"Non_Mage_Key"
+		"AbilityTextureName" 			"item_Non_Mage_Key"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
 		"ScriptFile"                    "items/item_Non_Mage_Key.lua"

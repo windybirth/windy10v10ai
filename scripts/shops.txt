@@ -177,6 +177,7 @@
 		"item"		"item_vladmir_2"
 		"item"		"item_radiance_2"
 		"item"		"item_heavens_halberd_v2"
+		"item"		"item_Non_Mage_Key"
 	}
 
 	"weapons"
