@@ -4057,3 +4057,106 @@
 }
 
 
+    //=================================================================================================================
+	// Recipe:Non-Mage Key 禁发之钥 合成图
+	//=================================================================================================================
+	"item_recipe_Non_Mage_Key"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3052"
+		"BaseClass"						"item_datadriven"
+		"AbilityTextureName" 			"item_recipe_Non_Mage_Key"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1450"
+		"ItemShopTags"					""
+
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_Non_Mage_Key"
+		"ItemRequirements"
+		{
+			"01"						"item_diffusal_blade;item_mage_slayer"
+		}
+	}
+
+	//=================================================================================================================
+	// Non-Mage Key 禁发之钥
+	//=================================================================================================================
+	"item_Non_Mage_Key"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"							"3053"
+		"BaseClass"						"item_lua"
+		"AbilityTextureName" 			"Non_Mage_Key"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"ScriptFile"                    "items/item_Non_Mage_Key.lua"
+
+
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"7000"
+		"ItemShopTags"					"damage;attack_speed"
+		"ItemQuality"					"arcane"
+		"ItemAliases"					"Non-Mage Key"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemRequiresCharges"			"0"
+
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"//敏捷
+				"bonus_agility"		        "30"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"//智力
+				"bonus_intelligence"		"15"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"//攻击力
+				"bonus_attack_damage"		"30"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"//回蓝
+				"mana_recover"		        "5"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"//debuff时间
+				"debuff_boost_duration"		"6"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"//降低法强
+				"debuff_boost"				"35"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_INTEGER"//烧蓝伤害
+				"debuff_DMG"				"50"
+			}
+			"08"
+			{
+				"var_type"					"FIELD_INTEGER"//攻速
+				"bonus_attack_speed"		"30"
+			}
+			"09"
+			{
+				"var_type"					"FIELD_INTEGER"//抗性
+				"bonus_magical_resistance"	"30"
+			}
+		}
+	}

@@ -544,5 +544,21 @@
 		"DOTA_Tooltip_ability_item_adi_king_plus_rate"											"%+turn rate"
 		"DOTA_Tooltip_modifier_item_adi_king_plus_aura"							        		"speed aura"
 		"DOTA_Tooltip_modifier_item_adi_king_plus_buff"											"speed buff"
+
+		// 禁魔之钥
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key"								"Non-Mage Key"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Agility"                  "<h1>Passive：Non-Mage</h1>Add the power of non-mage to the attack，each normal attack will damage the target by %debuff_DMG% mana points，and deal the same amount of magic damage，the spell strength of the target will be reduced %debuff_boost%% last %debuff_boost_duration%% seconds."
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Lore"							"The magic will be destroyed in my hand"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Agility"					"+$agi"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Intelligence"				"+$int"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Attack_Damage"			"+$damage"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Mana_Recover"					"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Attack_Speed"				"+$attack"
+		"DOTA_Tooltip_Ability_item_Non_Mage_Key_Bonus_Magical_Resistance"		"%+$spell_resist"
+		"DOTA_Tooltip_Ability_item_recipe_Non_Mage_Key"							"禁魔之钥卷轴"
+
+		"DOTA_Tooltip_modifier_item_Non_Mage_Key_debuff"						"禁魔之钥"
+		"DOTA_Tooltip_modifier_item_Non_Mage_Key_debuff_Description"			"Your spell strength has been reduced%debuff_boost%% :-)"
+
 	}
 }
