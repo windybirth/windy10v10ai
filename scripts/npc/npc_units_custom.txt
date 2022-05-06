@@ -14,7 +14,7 @@
 		//----------------------------------------------------------------
 
 		"Ability1"					"dummy_unit_passive"			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"dummy_unit_passive2"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -387,6 +387,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -420,6 +421,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -453,6 +455,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -487,6 +490,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -520,6 +524,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -553,6 +558,7 @@
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
 		"Ability3"					"tower_armor_aura"					// Ability 3.
+		"Ability4"					"tower_hp_aura"						// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"30"		// Physical protection.
@@ -588,7 +594,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -620,7 +627,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -652,7 +660,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -686,7 +695,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -718,7 +728,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.
@@ -750,7 +761,8 @@
 	{
 		// Ability
 		"Ability1"					"backdoor_protection_in_base"		// Ability 1.
-		"Ability3"					"tower_magical_armor_aura"			// Ability 3.
+		"Ability3"					"tower_attack_speed_aura"			// Ability 3.
+		"Ability4"					"tower_magical_armor_aura"			// Ability 4.
 		// Armor
 		//----------------------------------------------------------------
 		"ArmorPhysical"				"20"		// Physical protection.

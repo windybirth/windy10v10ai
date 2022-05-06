@@ -1238,6 +1238,7 @@ tBotItemData.wardHeroList = Set {
 	'npc_dota_hero_lich',
 	'npc_dota_hero_lion',
 	'npc_dota_hero_witch_doctor',
+	'npc_dota_hero_necrolyte',
 	'npc_dota_hero_warlock',
 	'npc_dota_hero_ogre_magi',
 	'npc_dota_hero_oracle',

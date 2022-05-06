@@ -863,7 +863,7 @@
 					{
 							"Passive"				"1"
 							"IsHidden"				"1"
-							"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+							"Attributes"				"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 
 							"Aura" 					"modifier_item_vladmir_2_general_aura"
 							"Aura_Radius" 			"%aura_radius"
@@ -887,12 +887,11 @@
 
 							"OnAttackLanded"
 							{
-								"RunScript"
-								{
-									"ScriptFile"	"items/item_vladmir_2.lua"
-									"Function"		"VampiricAuraApply"
-									"attack_damage"	"%attack_damage"
-								}
+									"Lifesteal"
+									{
+											"Target"            "ATTACKER"
+											"LifestealPercent"  "%vampiric_aura"
+									}
 							}
 					}
 
@@ -1812,7 +1811,7 @@
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"5225"
+		"ItemCost"						"4625"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1839,7 +1838,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"11800"
+		"ItemCost"						"11200"
 		"ItemShopTags"					"move_speed;boost_mana;mana_pool"
 		"ItemQuality"					"rare"
 		"ItemAliases"					"mana;mb;octarine core"
@@ -2172,7 +2171,7 @@
 		"ScriptFile"                    "items/item_dragon_lance_pro_max.lua"
 
 		"AbilityCooldown"				"20.0"
-		"AbilityManaCost"			    "150"
+		"AbilityManaCost"			    "200"
 		"AbilitySharedCooldown"			"dragonlance"
 
 		// Item Info
@@ -2922,7 +2921,7 @@
 		"ItemResult"					"item_infernal_desolator"
 		"ItemRequirements"
 		{
-			"01"						"item_dodo_desolator;item_relic"
+			"01"						"item_desolator;item_dodo_desolator"
 		}
 	}
 
@@ -3330,7 +3329,7 @@
 		"AbilityBehavior"						"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"								"3200"
+		"ItemCost"								"3000"
 		"ItemShopTags"							""
 
 
@@ -3386,12 +3385,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_strength"		"45"
+				"bonus_strength"		"40"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"disarm_con"			"2"
+				"disarm_con"			"1"
 			}
 			"04"
 			{
@@ -3428,13 +3427,6 @@
 				"var_type"				"FIELD_FLOAT"
 				"spell_resist"			"20"
 			}
-		}
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
-		{
-			"knockback_range"			"350"
-			"knockback_distance"		"150"
 		}
 	}
 
@@ -3707,7 +3699,7 @@
 		"AbilityCooldown"				"20.0"
 		"AbilitySharedCooldown"			"force"
 
-		"AbilityManaCost"				"200"
+		"AbilityManaCost"				"250"
 		"ItemCost"						"4450"
 		"ItemShopTags"					"int;damage;attack_speed;hard_to_tag"
 		"ItemQuality"					"epic"
@@ -5290,7 +5282,7 @@
 			"12"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"450"
+				"radius"			"600"
 			}
 			"13"
 			{
@@ -5314,7 +5306,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3750"
+		"ItemCost"						"750"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5323,7 +5315,7 @@
 		"ItemResult"					"item_dodo_desolator"
 		"ItemRequirements"
 		{
-			"01"						"item_desolator"
+			"01"						"item_desolator;item_relic"
 		}
 	}
 
@@ -5526,7 +5518,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"80"
+				"cleave_damage_percent"	"90"
 			}
 			"05"
 			{
@@ -5575,33 +5567,11 @@
 	//=================================================================================================================
 	// 苍蓝魔珠
 	//=================================================================================================================
-	"item_recipe_orb_of_the_brine"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3081"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"BaseClass"						"item_datadriven"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"AbilityTextureName"			"item_recipe_orb_of_the_brine"
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2550"
-		"ItemShopTags"					""
-
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_orb_of_the_brine"
-		"ItemRequirements"
-		{
-			"01"						"item_glimmer_cape;item_holy_locket"
-		}
-	}
 	"item_orb_of_the_brine"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3082"
+		"ID"							"3081"
 		"BaseClass"						"item_lua"
 		"AbilityTextureName"			"orb_of_the_brine"
 		"ScriptFile"					"items/item_orb_of_the_brine"
@@ -5626,72 +5596,38 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityValues"
+		"AbilitySpecial"
 		{
-			"bonus_all_stats"		"15"
-			"bonus_health"			"500"
-			"bonus_mana"			"500"
-			"heal_increase"			"50"
-
-			"bubble_duration"		"3.0"
-			"bubble_move_speed"		"300"
-			"bubble_heal_per_tick"	"300"
-			"heal_tick_interval"	"0.5"
-		}
-	}
-
-	//=================================================================================================================
-	// 洛书
-	//=================================================================================================================
-	"item_recipe_tome_of_luoshu"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3083"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"BaseClass"						"item_datadriven"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"AbilityTextureName"			"item_recipe_orb_of_the_brine"
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"28891"
-		"ItemShopTags"					""
-
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_tome_of_luoshu"
-		"ItemRequirements"
-		{
-			"01"						"item_tome_of_strength;item_tome_of_agility;item_tome_of_intelligence"
-		}
-	}
-	"item_tome_of_luoshu"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"3084"
-		"BaseClass"						"item_lua"
-		"AbilityTextureName"			"tome_of_luoshu"
-		"ScriptFile"                    "items/item_tome_of_luoshu"
-
-		"Model"							"models/props_gameplay/red_box.vmdl"
-
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
-		"ItemAliases"					"tome;luoshu"
-		"ItemShopTags"					"consumable"
-		"ItemQuality"					"consumable"
-		"ItemStackable"					"0"
-		"ItemPermanent"					"0"
-		"ItemInitialCharges"			"1"
-		"IsTempestDoubleClonable"		"0"
-		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"AbilityValues"
-		{
-			"bonus_all_stats"			"50"
-			"status_resistance"			"30"
-			"spell_amp"					"30"
-			"bonus_base_damage_percent"	"30"
-			"bonus_cast_range"			"200"
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"required_level"		"1"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_intelligence"	"50"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"10"
+			}
+			"04"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"bubble_duration"		"3.0"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bubble_heal_per_tick"	"300"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"heal_tick_interval"	"0.5"
+			}
 		}
 	}
 }

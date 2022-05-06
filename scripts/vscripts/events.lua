@@ -76,59 +76,21 @@ developerSteamAccountID[916506173]="Arararara"
 developerSteamAccountID[385130282]="米米花"
 
 
--- 称号属性 START
-local windySteamAccountID = Set {
-	-- windy
-	136407523,
-	-- 测试
-	916506173,
-}
-
+-- 称号属性
 local lumaoSteamAccountID = Set {
-	-- 撸猫
+	-- 成神
 	128984820,
-}
-
-local bulangyaSteamAccountID = Set {
-	-- 布狼牙
-	117417953,
-}
-
-local qiliuSteamAccountID = Set {
-	-- 76
-	353885092,
 	-- 测试
-	-- 136407523,
+	-- 916506173,
 }
 
-local hunzhuoSteamAccountID = Set {
-	-- 浑浊
-	251171524,
-	-- 测试
-	-- 136407523,
-}
-
-local chashaobaoSteamAccountID = Set {
-	-- 叉烧包
-	882465781,
-	-- 测试
-	-- 136407523,
-}
-
-local luoshuBuffSteamAccountID = Set {
+local luoshuSteamAccountID = Set {
 	-- 洛书
 	136668998,
 	-- 测试
-	-- 916506173,
+	-- 136407523,
 }
 
-local luoshuHeroSteamAccountID = Set {
-	136668998,
-	138837968,
-	-- 测试
-	-- 916506173,
-}
--- 称号属性 END
 
 function AIGameMode:ArrayShuffle(array)
 	local size = #array
@@ -173,13 +135,10 @@ end
 function AIGameMode:OnGameStateChanged(keys)
 	local state = GameRules:State_Get()
 
-	if state == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-		if IsServer() then
-			WebServer:Initial()
-		end
-	elseif state == DOTA_GAMERULES_STATE_HERO_SELECTION then
-		if IsServer() then
+	if state == DOTA_GAMERULES_STATE_HERO_SELECTION then
+		if IsServer() == true then
 			self:InitHumanPlayerListAndSetHumanStartGold()
+			WebServer:Initial()
 		end
 	elseif state == DOTA_GAMERULES_STATE_STRATEGY_TIME then
 		if not self.PreGameOptionsSet then
@@ -686,39 +645,15 @@ function AIGameMode:OnNPCSpawned(keys)
 		-- Player Buff
 		if self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] then
 			local steamAccountID = PlayerResource:GetSteamAccountID(hEntity:GetPlayerOwnerID())
-			if windySteamAccountID[steamAccountID] then
-				LinkLuaModifier("modifier_windy", "modifiers/player/modifier_windy", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_windy", {})
-			end
 			if lumaoSteamAccountID[steamAccountID] then
 				LinkLuaModifier("modifier_lumao", "modifiers/player/modifier_lumao", LUA_MODIFIER_MOTION_NONE)
 				hEntity:AddNewModifier(hEntity, nil, "modifier_lumao", {})
 			end
-			if bulangyaSteamAccountID[steamAccountID] then
-				LinkLuaModifier("modifier_bulangya", "modifiers/player/modifier_bulangya", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_bulangya", {})
-			end
-			if qiliuSteamAccountID[steamAccountID] then
-				LinkLuaModifier("modifier_76", "modifiers/player/modifier_76", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_76", {})
-			end
-			if hunzhuoSteamAccountID[steamAccountID] then
-				LinkLuaModifier("modifier_hunzhuo", "modifiers/player/modifier_hunzhuo", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_hunzhuo", {})
-			end
-			if chashaobaoSteamAccountID[steamAccountID] then
-				LinkLuaModifier("modifier_chashaobao", "modifiers/player/modifier_chashaobao", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_chashaobao", {})
-			end
-
-			if luoshuBuffSteamAccountID[steamAccountID] then
+			if luoshuSteamAccountID[steamAccountID] then
 				LinkLuaModifier("modifier_saber", "modifiers/player/modifier_saber", LUA_MODIFIER_MOTION_NONE)
 				hEntity:AddNewModifier(hEntity, nil, "modifier_saber", {})
-				LinkLuaModifier("modifier_abyss", "modifiers/player/modifier_abyss", LUA_MODIFIER_MOTION_NONE)
-				hEntity:AddNewModifier(hEntity, nil, "modifier_abyss", {})
 			end
-
-			if WebServer.memberSteamAccountID[steamAccountID] and WebServer.memberSteamAccountID[steamAccountID].enable then
+			if WebServer.memberSteamAccountID[steamAccountID] then
 				hEntity:AddNewModifier(hEntity, nil, "modifier_member", {})
 			end
 		end
@@ -859,13 +794,10 @@ function AIGameMode:OnPlayerChat( event )
 		end
 	end
 
-	if WebServer.memberSteamAccountID[steamAccountID] and WebServer.memberSteamAccountID[steamAccountID].enable then
+	if WebServer.memberSteamAccountID[steamAccountID] then
 		local pszHeroClass
-		if sChatMsg:find( '沉渊之剑' ) then
-			pszHeroClass = "npc_dota_hero_visage"
-		end
-		if sChatMsg:find( 'AbyssSword' ) then
-			pszHeroClass = "npc_dota_hero_visage"
+		if sChatMsg:find( '^圣剑.*解放.*$' ) then
+			pszHeroClass = "npc_dota_hero_broodmother"
 		end
 		if pszHeroClass ~= nil then
 			local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
@@ -873,7 +805,7 @@ function AIGameMode:OnPlayerChat( event )
 			return
 		end
 	end
-	if luoshuHeroSteamAccountID[steamAccountID] then
+	if WebServer.memberAbyssAccountID[steamAccountID] then
 		local pszHeroClass
 		if sChatMsg:find( '沉渊之剑' ) then
 			pszHeroClass = "npc_dota_hero_visage"
@@ -915,8 +847,7 @@ function AIGameMode:EndScreenStats(isWinner, bTrueEnd)
             if hero and IsValidEntity(hero) and not hero:IsNull() then
                 -- local tip_points = WebServer.TipCounter[playerID] or 0
 				local steamAccountID = PlayerResource:GetSteamAccountID(playerID)
-                local membership = WebServer.memberSteamAccountID[steamAccountID] and WebServer.memberSteamAccountID[steamAccountID].enable or false
-				local memberInfo = WebServer.memberSteamAccountID[steamAccountID]
+                local membership = WebServer.memberSteamAccountID[steamAccountID] and true or false
                 local damage = PlayerResource:GetRawPlayerDamage(playerID)
                 local damagereceived = 0
 
@@ -932,7 +863,6 @@ function AIGameMode:EndScreenStats(isWinner, bTrueEnd)
                     steamid = tostring(PlayerResource:GetSteamID(playerID)),
                     steamAccountID = steamAccountID,
                     membership = membership,
-					memberInfo = memberInfo,
                     kills = PlayerResource:GetKills(playerID) or 0,
                     deaths = PlayerResource:GetDeaths(playerID) or 0,
                     assists = PlayerResource:GetAssists(playerID) or 0,

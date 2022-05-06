@@ -541,7 +541,7 @@
 						]
 					},
 					{
-						m_name = "select_hgh"
+						m_name = "select_high"
 						m_HitBoxes = 
 						[
 							{

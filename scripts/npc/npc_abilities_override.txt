@@ -1508,12 +1508,12 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"3.5 4.0 4.5 5.0"
+				"duration"					"4.5 5.0 5.5 6.0"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration_scepter"			"4.5 5.0 5.5 6.0"
+				"duration_scepter"			"5.5 6.0 6.5 7.0"
 				"RequiresScepter"	"1"
 			}
 		}
@@ -1542,7 +1542,7 @@
 					"LinkedSpecialBonus"			"special_bonus_unique_underlord_4"
 				}
 				"burn_interval"					"1.0"
-				"burn_duration"					"1.0"
+				"burn_duration"					"2.0"
 		}
 	}
 	"abyssal_underlord_pit_of_malice"
@@ -2360,9 +2360,8 @@
 	"chaos_knight_phantasm"
 	{
 		"MaxLevel" "5"
-		"HasScepterUpgrade"				"0"
 		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"75 125 175 225 275"
+		"AbilityManaCost"				"200"
 		"AbilitySpecial"
 		{
 			"01"
@@ -2373,13 +2372,13 @@
 			"02"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"illusion_duration"			"20"
+				"illusion_duration"			"30"
 				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_4"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage"			"-30 -10 10 30 50"
+				"outgoing_damage"			"0"
 			}
 			"04"
 			{
@@ -5246,20 +5245,8 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"max_skeleton_charges"		"2 3 4 5 6"
+				"max_skeleton_charges"		"2 4 6 8 10"
 				"LinkedSpecialBonus"	"special_bonus_unique_wraith_king_5"
-			}
-		}
-	}
-	"special_bonus_unique_wraith_king_5"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
-				"ad_linked_abilities"			"skeleton_king_vampiric_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -5325,7 +5312,7 @@
 			"07"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"scepter_duration"		"4"
+				"scepter_duration"		"5"
 				"RequiresScepter"			"1"
 			}
 		}
@@ -6187,8 +6174,7 @@
 	}
 	"treant_eyes_in_the_forest"
 	{
-		"AbilityCharges"				"5"
-		"AbilityChargeRestoreTime"		"120.0"
+		"AbilityChargeRestoreTime"		"100.0"
 	}
 	//=================================================================================================================
 	// Ability: Undying 不朽尸王
@@ -6251,34 +6237,6 @@
 			}
 		}
 	}
-	// 墓碑
-	"undying_tombstone"
-	{
-		"AbilityCooldown"				"120"
-		"AbilityManaCost"				"120 130 140 150"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
-		{
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"20.0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"600"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"zombie_interval"		"4.0"
-			}
-		}
-	}
-
 	"undying_flesh_golem"
 	{
 		"MaxLevel" "5"
@@ -6850,8 +6808,8 @@
 	"clinkz_strafe"
 	{
 		"MaxLevel" "5"
-		"AbilityChannelTime"			"1.2 1.6 2.0 2.4 2.8"
-		"AbilityCooldown"				"26 24 22 18 16"
+		"AbilityChannelTime"			"1.2 1.6 2.0 2.4 2.7"
+		"AbilityCooldown"				"28 26 24 22 18"
 		"AbilityManaCost"				"40 55 70 85 100"
 		"AbilityValues"
 		{
@@ -6860,11 +6818,11 @@
 					"value"			"3 4 5 6 7"
 					"LinkedSpecialBonus"		"special_bonus_unique_clinkz_12"
 				}
-				"range"	"700 750 800 850 900"
+				"range"	"750 800 850 900 950"
 				"damage_pct"
 				{
 					"value"		"55"
-					"special_bonus_unique_clinkz_4"	"+15"
+					"special_bonus_unique_clinkz_4"	"+25"
 				}
 
 		}
@@ -7684,6 +7642,7 @@
 	"lone_druid_true_form"
 	{
 		"MaxLevel" "5"
+		"AbilityCooldown"				"100"
 		"AbilitySpecial"
 		{
 			"01"
@@ -7697,15 +7656,10 @@
 				"bonus_hp"					"500 1000 1500 2000 2500"
 				"LinkedSpecialBonus"	"special_bonus_unique_lone_druid_7"
 			}
-			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"base_attack_time"			"1.4"
-			}
 			"05"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"50"
+				"duration"					"100"
 			}
 		}
 	}
@@ -7716,17 +7670,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"spell_resistance"		"20 30 40 50"
+				"spell_resistance"		"50"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_building_damage"		"-20"
+				"bonus_building_damage"		"20 40 60 80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"true_form_bonus_building_damage"		"15 20 25 30"
+				"true_form_bonus_building_damage"		"30 50 70 90"
 			}
 		}
 	}
@@ -9905,7 +9859,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"trance_duration"		"5.0"
+				"trance_duration"		"6.5"
 				"LinkedSpecialBonus"		"special_bonus_unique_troll_warlord_7"
 			}
 			"02"
@@ -10614,12 +10568,6 @@
 				"var_type"				"FIELD_INTEGER"
 				"attack_range_bonus"	"60 90 120 150 180"
 			}
-			"05"
-			{
-				"var_type"									"FIELD_INTEGER"
-				"scepter_mana_cost_reduction_pct"			"20"
-				"RequiresScepter"							"1"
-			}
 		}
 	}
 	"special_bonus_unique_ancient_apparition_7"
@@ -10645,17 +10593,17 @@
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"frostbite_duration"	"9 10 11 12"
+				"frostbite_duration"	"10 11 12 13"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"dot_damage"			"20.0 30.0 40.0 50.0"
+				"dot_damage"			"20.0 25.0 30.0 35.0"
 			}
 			"08"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"kill_pct"				"11 12 13 14"
+				"kill_pct"				"12 13 14 15"
 				"LinkedSpecialBonus"	"special_bonus_unique_ancient_apparition_5"
 			}
 		}
@@ -10719,7 +10667,6 @@
 	}
 	"bane_fiends_grip"
 	{
-		"HasScepterUpgrade"			"0"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"60 50 40 30 20"
 		"AbilityManaCost"				"200 300 400 500 600"
@@ -10739,7 +10686,7 @@
 			"fiend_grip_damage"				"70 110 150 190 230"
 			"scepter_cooldown"
 			{
-				"value"				"-50"
+				"value"				"5"
 				"RequiresScepter"	"1"
 			}
 			"scepter_incoming_illusion_damage"
@@ -12831,7 +12778,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"aura_damage"		"1.2 1.4 1.6 1.8 2.0 2.2 2.4"
+				"aura_damage"		"1.2 1.5 1.8 2.1 2.4 2.7 3.0"
 				"LinkedSpecialBonus"		"special_bonus_unique_necrophos_2"
 				"DamageTypeTooltip"	"DAMAGE_TYPE_NONE"
 			}
@@ -12865,12 +12812,20 @@
 	}
 	"special_bonus_unique_necrophos_2"
 	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"6703"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.6"
+				"value"				"1.0"
 				"ad_linked_abilities"			"necrolyte_heartstopper_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -13457,7 +13412,7 @@
 			"06"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"shard_damage_pct_from_ward"			"60"
+				"shard_damage_pct_from_ward"			"80"
 				"RequiresShard"		"1"
 			}
 		}
@@ -13954,12 +13909,6 @@
 				"var_type"			"FIELD_FLOAT"
 				"int_steal_duration"		"15 20 25 30 35"
 			}
-			"07"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shard_permanent_int_steal_amount_bonus"		"1"
-				"RequiresShard"		"1"
-			}
 		}
 	}
 	"special_bonus_unique_silencer_3"
@@ -13969,7 +13918,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"10"
+				"value"				"15"
 				"ad_linked_abilities"			"silencer_glaives_of_wisdom"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -13984,12 +13933,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage"			"120 180 240 300 360"
+				"damage"			"120 160 200 240 300"
 			}
 			"02"
 			{
 				"var_type"			"FIELD_FLOAT"
-				"int_multiplier"	"1.2 1.4 1.6 1.8 2.0"
+				"int_multiplier"	"1.6 1.8 2.0 2.2 2.4"
 				"LinkedSpecialBonus"	"special_bonus_unique_silencer_4"
 			}
 			"04"
@@ -14000,7 +13949,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"scepter_radius"		"400"
+				"scepter_radius"		"500"
 				"RequiresScepter"			"1"
 			}
 			"06"
@@ -14018,7 +13967,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.4"
+				"value"				"0.6"
 				"ad_linked_abilities"			"silencer_last_word"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -14038,20 +13987,21 @@
 	//=================================================================================================================
 	"skywrath_mage_arcane_bolt"
 	{
-		"MaxLevel" "7"
-		"AbilityCooldown"				"5.0 4.5 4.0 3.5 3.0 2.5 2.0"
-		"AbilityManaCost"				"90 105 120 135 150 165 180"
+		"MaxLevel" "5"
+		"AbilityCastRange"				"875" // 875
+		"AbilityCooldown"				"6.0 5.0 4.0 3.0 2.0"
+		"AbilityManaCost"				"90 100 110 120 130"
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bolt_damage"			"90 120 150 180 210 240 270"
+				"bolt_damage"			"100 125 150 175 200"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"int_multiplier"		"1.0"
+				"int_multiplier"		"1.2"
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}

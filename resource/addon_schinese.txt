@@ -84,16 +84,8 @@
 		"bot_multiplier"	"电脑倍率"
 		"tower_power"		"建筑倍率"
 
-		///////////////////////////////////////////////////
-		//
-		//            Member
-		//
-		///////////////////////////////////////////////////
-		"player_member_ship"		"点击查看会员详情"
+		"player_member_ship"		"会员"
 		"player_member_ship_url"		"https://afdian.net/@windy10v10"
-
-		"player_member_button"		"感谢您的支持！<br/> - 打字输入“沉渊之剑”即可召唤新英雄<br/>会员有效期：{expireDate}"
-		"player_member_button_expire"		"感谢您的支持！<br/>会员已于{expireDate}到期，点击按钮续订。"
 
 		///////////////////////////////////////////////////
 		//
@@ -157,19 +149,10 @@
 		// 茶神
 		"npc_dota_hero_techies"					"茶神"
 
+		"DOTA_Tooltip_modifier_lumao"					"<font color='#fc8eac'>★ 大师级撸猫玩家 ★</font>"
 		"DOTA_Tooltip_modifier_member"					"<font color='#FFCC66'>★ 会员专属BUFF ★</font>"
 		"DOTA_Tooltip_modifier_member_Description"	"额外获得 +%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% 攻击力, +%dMODIFIER_PROPERTY_HEALTH_BONUS% HP, +%dMODIFIER_PROPERTY_MANA_BONUS% MP."
-		"DOTA_Tooltip_modifier_lumao"					"<font color='#fc8eac'>★ 大师级撸猫玩家 ★</font>"
-		"DOTA_Tooltip_modifier_bulangya"				"<font color='#5534A5'>★ 迷城骇兔 ★</font>"
 		"DOTA_Tooltip_modifier_saber"					"<font color='#FFCC66'>★ SaberのMaster ★</font>"
-		"DOTA_Tooltip_modifier_saber_Description"		"<font color='#FFCC66'>使用氪金令咒使SABER降临战场的御主。</font>"
-		"DOTA_Tooltip_modifier_abyss"					"<font color='#55D8C1'>★ 沉渊之剑 ★</font>"
-		"DOTA_Tooltip_modifier_abyss_Description"		"<font color='#55D8C1'>唤醒沉渊魔剑的旅行者，是幸运？还是不幸？</font>"
-		"DOTA_Tooltip_modifier_76"						"<font color='#F66B0E'>★ 克林克兹之馈赠 ★</font>"
-		"DOTA_Tooltip_modifier_windy"					"<font color='#0AA1DD'>★ Windy ★</font>"
-		"DOTA_Tooltip_modifier_hunzhuo"					"<font color='#A85CF9'>★ 我的口袋只剩玫瑰一片，此行又山高路远 ★</font>"
-		"DOTA_Tooltip_modifier_hunzhuo_Description"		"<font color='#A85CF9'>蹉跎错，消磨过，最是光阴化浮沫。</font>"
-		"DOTA_Tooltip_modifier_chashaobao"				"<font color='#E8C07D'>★ 叉烧包之王 ★</font>"
 
 		// 初音未来
 		"npc_dota_hero_meepo"					"初音未来"
@@ -285,6 +268,7 @@
 
 		//沉渊之剑
 		"npc_dota_hero_visage"									"沉渊之剑"
+
 		"DOTA_Tooltip_Ability_abyss_sword_rush_night_sword_qi"				"冲宵剑气"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sword_qi_description"	"沉渊之剑向前方劈出一道剑气，对触碰到的敌方单位造成一次附带额外伤害的普通攻击"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sword_qi_Lore"		"来自沉渊之剑师门的基础剑法"
@@ -314,10 +298,9 @@
 		"DOTA_Tooltip_ability_abyss_sword_hidden_sharp_attack_times"			"攻击次数："
 		"DOTA_Tooltip_ability_abyss_sword_hidden_sharp_scepter_description"		"藏锋不再需要持续施法，且不再有攻击次数限制，原持续施法期间获得极速效果"
 
-
 		"DOTA_Tooltip_Ability_abyss_sword_rush_night_sally"				"冲宵破军"
-		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_description"	"沉渊之剑获得攻击速度和移动速度加成，并使沉渊之剑的攻击有几率发射多道冲宵剑气。<br><br>不触发法球和攻击特效。"
-		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_Note0"		"冲宵剑气或者幻象的攻击不会触发此技能的效果。"
+		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_description"	"沉渊之剑获得攻击速度和移动速度加成，并使沉渊之剑的攻击有几率发射多道冲宵剑气"
+		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_Note0"		"冲宵剑气的攻击不会触发此技能的效果"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_Lore"		"真正的剑道大师能够将基础剑法使用的出神入化"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_attackspeed"		"攻击速度加成："
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sally_movespeed"			"%移动速度加成："
@@ -331,12 +314,75 @@
 		"DOTA_Tooltip_Ability_special_bonus_unique_abyss_sword_5"				"+{s:bonus_count} 冲宵破军剑气数量"
 		"DOTA_Tooltip_Ability_special_bonus_unique_abyss_sword_6"				"冲宵剑气必定触发出鞘"
 
+		//龙珠-孙悟空
+		"npc_dota_hero_chen"									"孙悟空"
 
+		"DOTA_Tooltip_Ability_goku_kamehameha"								"龟派气功"
+		"DOTA_Tooltip_ability_goku_kamehameha_description"					"孙悟空将全身所有能量聚集一点浓缩后一起释放出来，射出一道光波，在持续时间内对直线上的敌人造成伤害\n<h1>超级赛亚人模式：</h1>光波距离变为无限，且伤害变为%super_saiyan_damage_multiple%倍"
+		"DOTA_Tooltip_ability_goku_kamehameha_Lore"							"由龟仙人所创的绝技"
+		"DOTA_Tooltip_ability_goku_kamehameha_channel"						"持续时间："
+		"DOTA_Tooltip_ability_goku_kamehameha_length"						"光波长度："
+		"DOTA_Tooltip_ability_goku_kamehameha_width"						"光波宽度："
+		"DOTA_Tooltip_ability_goku_kamehameha_manacost_pre_second"			"每秒耗蓝："
+		"DOTA_Tooltip_ability_goku_kamehameha_damage_pre_second"			"每秒伤害："
+		"DOTA_Tooltip_ability_goku_kamehameha_scepter_description"			"龟派气功无视技能免疫，并变为纯粹伤害"
+
+		"DOTA_Tooltip_Ability_goku_tp"										"高速移动"
+		"DOTA_Tooltip_ability_goku_tp_description"							"孙悟空爆发出腿部的力量，用极快的速度贴地飞行，增加移动速度并无法被选中\n<h1>超级赛亚人模式：</h1>高速移动可以突破移速上限"
+		"DOTA_Tooltip_ability_goku_tp_Lore"									"急速运动是躲避攻击的最好办法"
+		"DOTA_Tooltip_ability_goku_tp_duration"								"持续时间："
+		"DOTA_Tooltip_ability_goku_tp_bonus_movespeed"						"%移动速度加成："
+
+		"DOTA_Tooltip_Ability_goku_kaioken"									"界王拳"
+		"DOTA_Tooltip_ability_goku_kaioken_description"						"孙悟空使用超过自身极限的力量，获得攻击速度加成，且攻击时有几率击晕敌人并召唤幻影再次进行攻击\n<h1>超级赛亚人模式：</h1>界王拳可以主动使用。对目标范围的所有敌人发起一次攻击并返回原位"
+		"DOTA_Tooltip_ability_goku_kaioken_Lore"							"孙悟空在北界王处修炼时学会的招数"
+		"DOTA_Tooltip_ability_goku_kaioken_chance"							"%触发几率："
+		"DOTA_Tooltip_ability_goku_kaioken_stun_duration"					"眩晕时间："
+		"DOTA_Tooltip_ability_goku_kaioken_bonus_attackspeed"				"攻击速度加成："
+		"DOTA_Tooltip_ability_goku_kaioken_super_saiyan_tick"				"主动效果攻击间隔："
+		"DOTA_Tooltip_ability_goku_kaioken_super_saiyan_radius"				"主动效果范围："
+
+		"DOTA_Tooltip_Ability_goku_super_saiyan"							"超级赛亚人"
+		"DOTA_Tooltip_ability_goku_super_saiyan_description"				"<h1>被动：</h1>超级赛亚人的力量隐藏在孙悟空的体内，使孙悟空被动获得全属性加成\n<h1>主动：</h1>孙悟空进入超级赛亚人模式，每秒恢复一定百分比自身最大生命魔法值，获得状态抗性加成，并强化自己的所有技能"
+		"DOTA_Tooltip_ability_goku_super_saiyan_Lore"						"传说中每一千年才会出现一个的超级战士"
+		"DOTA_Tooltip_Ability_goku_super_saiyan_bonus_attribute"			"全属性增强："
+		"DOTA_Tooltip_Ability_goku_super_saiyan_bonus_status_resistance"	"%状态抗性："
+		"DOTA_Tooltip_Ability_goku_super_saiyan_regen"						"%生命魔法恢复："
+		"DOTA_Tooltip_Ability_goku_super_saiyan_duration"					"持续时间："
+
+		"DOTA_Tooltip_Ability_goku_spirit_bomb"								"元气弹"
+		"DOTA_Tooltip_ability_goku_spirit_bomb_description"					"孙悟空双手举高持续施法，将能量凝聚成一个巨大的蓝白色能量球，并获得高空视野，持续施法时间越久，能量球越大，高空视野和伤害范围越大，伤害越高，抛出后造成范围伤害\n<h1>超级赛亚人模式：</h1>元气弹无论持续施法多久，始终为最大伤害"
+		"DOTA_Tooltip_ability_goku_spirit_bomb_Lore"						"由北界王开发出来，孙悟空与拉蒂兹一战中死后从界王星所学到的招式"
+		"DOTA_Tooltip_ability_goku_spirit_bomb_channel"						"最大施法时间："
+		"DOTA_Tooltip_ability_goku_spirit_bomb_visionRange_max"				"最大高空视野："
+		"DOTA_Tooltip_ability_goku_spirit_bomb_damage_max"					"最大伤害："
+		"DOTA_Tooltip_ability_goku_spirit_bomb_radius_max"					"最大范围："
+		"DOTA_Tooltip_ability_goku_spirit_bomb_speed"						"飞行速度："
+
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_1"					"+{s:bonus_damage_pre_second} 龟派气功每秒伤害"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_2"					"+{s:bonus_duration}秒 高速移动持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_3"					"+{s:bonus_stun_duration}秒 界王拳击晕时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4"					"龟派气功强驱散"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4_description"		"龟派气功会对其中的敌人持续造成强驱散"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5"					"+{s:bonus_regen}% 超级赛亚人恢复"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_6"					"龟派气功无限持续时间"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_7"					"超级赛亚人变为被动技能"
 		// /////////////////////////////////////////////////////////////////////////////
 		//
 		// 					              Modifiers
 		//
 		// /////////////////////////////////////////////////////////////////////////////
+
+
+		//龙珠-孙悟空
+		"DOTA_Tooltip_modifier_goku_tp"	"高速移动"
+		"DOTA_Tooltip_modifier_goku_tp_Description"	"获得%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%移动速度加成"
+		"DOTA_Tooltip_modifier_goku_kaioken"	"界王拳"
+		"DOTA_Tooltip_modifier_goku_kaioken_Description"	"获得%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%攻击速度加成，攻击有几率击晕目标并召唤幻影再次攻击"
+		"DOTA_Tooltip_modifier_goku_super_saiyan_passive"	"超级赛亚人：潜在"
+		"DOTA_Tooltip_modifier_goku_super_saiyan_passive_Description"	"获得%dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%力量加成，%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%敏捷加成，%dMODIFIER_PROPERTY_STATS_INTELLECT_BONUS%智力加成"
+		"DOTA_Tooltip_modifier_goku_super_saiyan"	"超级赛亚人:激活"
+		"DOTA_Tooltip_modifier_goku_super_saiyan_Description"	"强化自身所有的技能，获得%dMODIFIER_PROPERTY_STATUS_RESISTANCE%%%状态抗性加成，每秒恢复%dMODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE%%%魔法和%dMODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE%%%生命"
 
 		//沉渊之剑
 		"DOTA_Tooltip_modifier_abyss_sword_hidden_sharp"	"藏锋"
@@ -383,13 +429,6 @@
 
 		"DOTA_Tooltip_modifier_int_tome"								"智力之书加成"
 		"DOTA_Tooltip_modifier_int_tome_Description"					"智力增加 <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
-
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"洛书"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>使用: 洛书祝福</h1> 永久增加全属性 %bonus_all_stats% 点，%status_resistance%%%状态抗性，%spell_amp%%%技能增强，%bonus_base_damage_percent%%%基础攻击力，%bonus_cast_range%施法距离。\n只可使用一次\n可以分享给队友"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"Is it enlightenment that you aspire to...?"
-
-		"DOTA_Tooltip_modifier_luoshu_tome"								"洛书看好你！"
-		"DOTA_Tooltip_modifier_luoshu_tome_Description"					"哥哥你为我花了这么多钱，你女朋友不会生气吧？"
 
 		// item_moon_shard_datadriven
 		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed"						"真·银月之晶"
@@ -774,7 +813,7 @@
 
 		// item_heavens_halberd_v2
 		"DOTA_Tooltip_ability_item_heavens_halberd_v2"                      				"无锋战戟"
-		"DOTA_Tooltip_ability_item_heavens_halberd_v2_description"							"<h1><font color='#FFFF00'>主动：天堂冲击</font></h1>以自身为中心对%knockback_range%范围内单位进行缴械，并产生击退效果，击退%knockback_distance%码，缴械持续时间：%disarm_con%+英雄当前力量/%disarm_con_per_str%秒,最长为%disarm_con_max%秒。\n<h1><font color='#FFFF00'>被动：以战止战</font></h1>普攻有%attch%%%概率对目标缴械%disarm%秒，每5秒可以触发一次。"
+		"DOTA_Tooltip_ability_item_heavens_halberd_v2_description"							"<h1><font color='#FFFF00'>主动：天堂冲击</font></h1>以自身为中心对300范围内单位进行缴械，并产生击退效果，击退300码，缴械持续时间：%disarm_con%+英雄当前力量/%disarm_con_per_str%秒,最长为%disarm_con_max%秒。\n<h1><font color='#FFFF00'>被动：以战止战</font></h1>普攻有%attch%%%概率对目标缴械%disarm%秒，每5秒可以触发一次。"
 		"DOTA_Tooltip_ability_item_heavens_halberd_v2_bonus_evasion"						"%+$evasion"
 		"DOTA_Tooltip_ability_item_heavens_halberd_v2_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_heavens_halberd_v2_status_resistance"					"%+状态抗性"
@@ -889,7 +928,7 @@
 		"DOTA_Tooltip_ability_item_satanic_2_bonus_damage"						"+$damage"
 
 		// 大狂战
-		"DOTA_Tooltip_Ability_item_bfury_2"				"超级狂战斧"
+		"DOTA_Tooltip_Ability_item_bfury_2"				"进阶狂战斧"
 		"DOTA_Tooltip_ability_item_bfury_2_Description"							"<h1>主动：砍伐</h1>砍伐一根指定树木。<br><br>砍伐施法距离：%abilitycastrange%\n<h1>被动：压制</h1>对非英雄单位进行物理攻击会造成额外伤害，近战英雄为%quelling_bonus%点，远程英雄为%quelling_bonus_ranged%点。\n<h1>被动：分裂</h1>普通攻击时对目标周围最远%cleave_distance%距离的锥形区域内敌人造成%cleave_damage_percent%%%物理伤害。对非英雄单位造成%cleave_damage_percent_creep%%%物理伤害。（仅近战有效）"
 		"DOTA_Tooltip_ability_item_bfury_2_Lore"									"持有这把强大斧头的人可以一次砍倒一片敌人。"
 		"DOTA_Tooltip_ability_item_bfury_2_Note0"									"分裂伤害无视技能免疫。"
@@ -901,10 +940,9 @@
 		// 苍洋魔珠
 		"DOTA_Tooltip_Ability_item_orb_of_the_brine"						"苍洋魔珠"
 		"DOTA_Tooltip_Ability_item_orb_of_the_brine_Lore"						"要不是这颗尊崇的魔珠，教团在石鱼门一役就全军覆没。"
-		"DOTA_Tooltip_Ability_item_orb_of_the_brine_Description"			"<h1>主动：苍洋泡沫</h1> 使一个友方单位进入具有无敌效果的疗伤泡泡，移动速度降低至%bubble_move_speed%，无法攻击释放技能和道具持续%bubble_duration%秒，每%heal_tick_interval%秒治疗%bubble_heal_per_tick%点生命。\n\n<h1>被动：苍洋福佑</h1>自身提供的治疗效果提升%heal_increase%%%。"
-		"DOTA_Tooltip_Ability_item_orb_of_the_brine_bonus_all_stats"		"+$all"
-		"DOTA_Tooltip_Ability_item_orb_of_the_brine_bonus_health"			"+$health"
-		"DOTA_Tooltip_Ability_item_orb_of_the_brine_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_Ability_item_orb_of_the_brine_Description"			"<h1>主动：苍洋泡沫</h1> 使一个友方单位进入具有无敌效果的疗伤泡泡，可以缓慢移动但是无法攻击释放技能和道具，持续%bubble_duration%秒，每%heal_tick_interval%秒治疗%bubble_heal_per_tick%点生命。"
+		"DOTA_Tooltip_Ability_item_orb_of_the_brine_bonus_intelligence"	"+$int"
+		"DOTA_Tooltip_Ability_item_orb_of_the_brine_bonus_mana_regen"	"+$mana_regen"
 
 		"DOTA_Tooltip_modifier_item_orb_of_the_brine_bubble"				"苍洋泡沫"
 		"DOTA_Tooltip_modifier_item_orb_of_the_brine_bubble_Description"	"这个单位正受到苍洋泡沫的保护。每秒恢复600点生命。"
