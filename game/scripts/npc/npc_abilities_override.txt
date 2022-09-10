@@ -6600,6 +6600,167 @@
 			}
 		}
 	}
+	"death_pact_2"
+{
+	// General
+	//-------------------------------------------------------------------------------------------------------------
+	"BaseClass"				"ability_datadriven"
+	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+	"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+	"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
+	"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+	"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+	"AbilityTextureName"			"clinkz_death_pact"
+
+	// Casting
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCastRange"				"400"
+	"AbilityCastPoint"				"0.5 0.5 0.5"
+
+	// Time
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityCooldown"				"45.0 35.0 25.0"
+
+	// Cost
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilityManaCost"				"100 100 100"
+
+	// Special
+	//-------------------------------------------------------------------------------------------------------------
+	"AbilitySpecial"
+	{
+		"01"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"duration"				"35.0 35.0 35.0"
+		}
+		"02"
+		{
+			"var_type"				"FIELD_INTEGER"
+			"health_gain_pct"		"50 65 80"
+		}
+		"03"
+		{
+			"var_type"				"FIELD_FLOAT"
+			"damage_gain_pct"		"5.0 6.5 8.0"
+		}
+	}
+
+	"precache"
+	{
+		"particle" 	"particles/units/heroes/hero_clinkz/clinkz_death_pact.vpcf"
+		"particle"  "particles/units/heroes/hero_clinkz/clinkz_death_pact_buff.vpcf"
+		"soundfile" "soundevents/game_sounds_heroes/game_sounds_clinkz.vsndevts"
+	}
+
+	"OnSpellStart"
+	{
+		"FireSound"
+		{
+			"EffectName"	"Hero_Clinkz.DeathPact.Cast"
+			"Target" 		"CASTER"
+		}
+
+		"FireEffect"
+		{
+			"EffectName"        "particles/units/heroes/hero_clinkz/clinkz_death_pact.vpcf"
+			"EffectAttachType"  "follow_origin"
+			"Target"            "TARGET"
+			"ControlPointEntities"
+			{
+				"TARGET"	"attach_origin"
+				"CASTER"	"attach_origin"
+			}
+		}
+
+		"FireSound"
+		{
+			"EffectName"	"Hero_Clinkz.DeathPact"
+			"Target" 		"TARGET"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_death_pact"
+			"Target" 		"CASTER"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_death_pact_damage"
+			"Target" 		"CASTER"
+		}
+
+		"RemoveModifier"
+		{
+			"ModifierName"	"modifier_death_pact_health"
+			"Target" 		"CASTER"
+		}
+
+		"ApplyModifier"
+		{
+			"ModifierName"	"modifier_death_pact"
+			"Target" 		"CASTER"
+			"Duration"		"%duration"
+		}
+
+		"RunScript"
+		{
+			"ScriptFile"	"heroes/hero_clinkz/clinkz_death_pact_2.lua"
+			"Function"		"DeathPact"
+		}
+	}
+
+	"Modifiers"
+	{
+		"modifier_death_pact"
+		{
+			"EffectName"		"particles/units/heroes/hero_clinkz/clinkz_death_pact_buff.vpcf"
+			"EffectAttachType"	"follow_origin"
+
+			"ThinkInterval"  "0.03"
+			"OnIntervalThink"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_clinkz/clinkz_death_pact_2.lua"
+					"Function"		"DeathPactHealth"
+				}
+			}
+		}
+
+		"modifier_death_pact_damage"
+		{
+			"IsHidden"			"1"
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE" "1"
+			}
+		}
+
+		"modifier_death_pact_health"
+		{
+			"IsHidden"			"1"
+			"Attributes"		"MODIFIER_ATTRIBUTE_MULTIPLE"
+
+			"Properties"
+			{
+				"MODIFIER_PROPERTY_HEALTH_BONUS" "1"
+			}
+
+			"OnDestroy"
+			{
+				"RunScript"
+				{
+					"ScriptFile"	"heroes/hero_clinkz/clinkz_death_pact_2.lua"
+					"Function"		"SetCurrentHealth"
+				}
+			}
+		}
+	}
+}
 	//=================================================================================================================
 	// Ability: Drow Ranger 卓尔游侠/小黑
 	//=================================================================================================================

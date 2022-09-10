@@ -274,6 +274,12 @@
 		"Ability8"					"pangolier_heartpiercer"
 	}
 
+	"npc_dota_hero_clinkz"
+	{
+		"Ability7"                  "clinkz_death_pact_2"
+		"Ability8"                  "generic_hidden"
+	}
+
 	"npc_dota_hero_naga_siren"
 	{
 		"Ability5"		"naga_siren_crit"
