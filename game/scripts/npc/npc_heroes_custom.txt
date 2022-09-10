@@ -276,8 +276,8 @@
 
 	"npc_dota_hero_clinkz"
 	{
-		"Ability7"                  "clinkz_death_pact_2"
 		"Ability8"                  "generic_hidden"
+		"Ability9"                  "clinkz_death_pact_2"
 	}
 
 	"npc_dota_hero_naga_siren"
