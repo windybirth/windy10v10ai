@@ -51,8 +51,6 @@ function yukari_01CreateProjectile(caster,ability,start_position,end_position,sp
 				Ability = ability,
 				vSpawnOrigin = start_position,
 				bDeleteOnHit = DeleteOnHit,
-			    iUnitTargetTeam	 	= ability:GetAbilityTargetTeam(),
-	   			iUnitTargetType 	= ability:GetAbilityTargetType(),
 				EffectName = particle,
 				fDistance = distance,
 				fStartRadius = ability.radius,
@@ -76,7 +74,7 @@ function ability_yukari_01:OnProjectileHitHandle(hTarget, vLocation, iProjectile
 	local caster = self.caster
 	local target = hTarget
 	local ability = self
-	local damage = self.damage+caster:GetIntellect()*0.8+self:GetCaster():FindTalentValue("special_bonus_yukari_20")
+	local damage = self.damage+caster:GetIntellect()*0.8
 
 	if target == nil and caster.yukari_01 == false then
 
@@ -106,7 +104,7 @@ function ability_yukari_01:OnProjectileHitHandle(hTarget, vLocation, iProjectile
 							}
 
 				damage_dealt = UnitDamageTarget(damageTable)
-end
+	end
 end
 
 modifier_yukari_01_hitcount = {}
