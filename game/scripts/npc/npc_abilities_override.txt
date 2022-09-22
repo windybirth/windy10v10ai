@@ -708,6 +708,28 @@
 	{
 		"AbilityCooldown"				"120.0"
 	}
+	"item_wizard_refresher"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_wizard_refresher"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName" 			"items/wizard_refresher"
+
+		"AbilityCooldown"               "210"
+		"AbilityManaCost"               "15000"
+		"AbilitySharedCooldown"			"item_refresher"
+
+		"AbilityValues"
+		{
+			"bonus_health"				"2500"
+			"bonus_mana"				"5000"
+			"bonus_allstats"			"125"
+
+			"cooldown_reduction"		"35"
+		}
+	}
 	// 微光
 	"item_glimmer_cape"
 	{

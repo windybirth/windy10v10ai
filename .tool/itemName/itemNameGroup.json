@@ -53,6 +53,7 @@
 			"item"		"item_hallowed_scepter"  //仙云法杖
 		    "item"		"item_necronomicon_staff"  //死灵法杖
 			"item"		"item_sacred_six_vein"  //六脉神剑
+			"item"      "item_wizard_refresher" //超级刷新球
 		}
 
 		"#dota_item_build_windy_physical_core_items"
@@ -89,6 +90,7 @@
 		    "item"		"item_ultimate_scepter_2"  //真阿哈利姆神杖
 		    "item"		"item_hallowed_scepter"  //仙云法杖
 		    "item"		"item_necronomicon_staff"  //死灵法杖
+			"item"      "item_wizard_refresher" //超级刷新球
 		}
 
 		"#dota_item_build_windy_defense_items"
