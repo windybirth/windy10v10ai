@@ -712,21 +712,20 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"BaseClass"						"item_lua"
+		"BaseClass"						"item_refresher"
 		"ScriptFile"					"items/item_wizard_refresher"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityTextureName" 			"items/wizard_refresher"
+		"AbilityTextureName" 			"wizard_refresher"
 
 		"AbilityCooldown"               "210"
-		"AbilityManaCost"               "15000"
+		"AbilityManaCost"               "1000"
 		"AbilitySharedCooldown"			"item_refresher"
 
 		"AbilityValues"
 		{
-			"bonus_health"				"2500"
-			"bonus_mana"				"5000"
-			"bonus_allstats"			"125"
-
+			"bonus_health"				"1000"
+			"bonus_mana"				"1000"
+			"bonus_allstats"			"30"
 			"cooldown_reduction"		"35"
 		}
 	}

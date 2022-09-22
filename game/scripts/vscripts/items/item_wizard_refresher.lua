@@ -1,24 +1,10 @@
-require("items/item_refresher")
-
-item_wizard_refresher = class(item_refresher)
+modifier_item_wizard_refresher = class{()}
 
 function item_wizard_refresher:GetIntrinsicModifierName()
     return "modifier_item_wizard_refresher"
 end
 
 modifier_item_wizard_refresher = class({
-    IsHidden = function()
-        return true
-    end,
-    IsPurgable = function()
-        return false
-    end,
-    IsPurgeException = function()
-        return false
-    end,
-	GetAttributes = function()
-        return MODIFIER_ATTRIBUTE_MULTIPLE
-    end,
 	RegisterFunctions = function()
         return
         {
@@ -28,7 +14,7 @@ modifier_item_wizard_refresher = class({
             MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
             MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
             MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
-            MODIFIER_PROPERTY_ROSHDEF_COOLDOWN_REDUCTION_STACKING_UNIQUE
+            MODIFIER_PROPERTY_COOLDOWN_REDUCTION
         }
     end
 })

@@ -703,6 +703,10 @@
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_mana"					"+$mana"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_spell_amp"					"%+$spell_amp"
 
+		// item_wizard_refresher
+		"DOTA_Tooltip_modifier_item_wizard_refresher"                               "超级刷新球"
+		"DOTA_Tooltip_modifier_item_wizard_refresher_Description"                   "<h1>主动：刷新</h1> 刷新你的所有冷却。\n<h1>被动：冷却缩减</h1>你的所有冷却减少35%。"
+
         // wings_of_haste
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"急速之翼"
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度, %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 攻击速度, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复, %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% 魔法恢复。"
