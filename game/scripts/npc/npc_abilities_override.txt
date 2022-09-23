@@ -12943,7 +12943,7 @@
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"shard_ward_count"		"6"
+				"shard_ward_count"		"3"
 				"RequiresShard"			"1"
 			}
 			"06"
@@ -12963,12 +12963,12 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"ward_count"		"10"
+				"ward_count"		"6"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_tooltip"			"80 120 160"
+				"damage_tooltip"			"160 240 320"
 				"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_4"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -12980,14 +12980,14 @@
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hits_to_destroy_tooltip"			"3"
+				"hits_to_destroy_tooltip"			"4"
 				"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_1"
 				"LinkedSpecialBonusField"		"value2"
 			}
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"hits_to_destroy_tooltip_creeps"		"6"
+				"hits_to_destroy_tooltip_creeps"		"8"
 				"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_1"
 			}
 		}
@@ -13017,7 +13017,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"60"
+				"value"				"120"
 				"ad_linked_abilities"			"shadow_shaman_mass_serpent_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -13031,12 +13031,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"count"		"6"
+				"count"		"3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"length"		"725"
+				"length"		"300"
 			}
 		}
 	}
