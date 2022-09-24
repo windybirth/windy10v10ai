@@ -1436,6 +1436,7 @@ tBotItemData.wardObserverPostionList = {
 	-- 上路
 	Vector(-5856, 827, 0),
 	Vector(2106,6046,0),
+	Vector(-1998,6113,0),
 	-- 上野区
 	Vector(-5187, -1619, 0),
 	Vector(-4640,-1056,0),
@@ -1452,6 +1453,7 @@ tBotItemData.wardObserverPostionList = {
 	Vector(-3545,-6958,0),
 	Vector(1037,-2023,0),
 	Vector(1290,842,0),
+	Vector(-2567,-1743,0),
 	-- 下野区
 	Vector(2800, -3087, 0),
 	Vector(303, -2584, 0),
@@ -1494,6 +1496,9 @@ tBotItemData.wardObserverPostionList = {
 	Vector(-3804,4120,0),
 	-- 中路
 	Vector(2190,4065,0),
+	Vector(4861,5994,0),
+	Vector(6319,4319,0),
+	Vector(1739,1264),
 	-- 下野区
 	Vector(2050, -761, 0),
 	Vector(2781, -1575, 0),
@@ -1503,6 +1508,7 @@ tBotItemData.wardObserverPostionList = {
 	Vector(3240.6,196.2,0),
 	Vector(4517,1319,0),
 	Vector(3298,-181,256),
+	Vector(6287,-1011,0),
 	-- 下路
 }
 tBotItemData.wardSentryPostionList = {
@@ -1514,6 +1520,7 @@ tBotItemData.wardSentryPostionList = {
 	-- 上路
 	Vector(-6586, -2440, 0),
 	Vector(2106,6046,0),
+	Vector(-1998,6113,0),
 	-- 上野区
 	Vector(-4347, -1028, 0),
 	-- 中路
@@ -1523,6 +1530,8 @@ tBotItemData.wardSentryPostionList = {
 	Vector(-7036,-5603,0),
 	Vector(-2073,-2417,0),
 	Vector(1290,842,0),
+	Vector(1739,1264,0),
+	Vector(-2567,-1743,0),
 	-- 下野区
 	Vector(303, -2584, 0),
 	Vector(-510, -3334, 0),
@@ -1550,6 +1559,8 @@ tBotItemData.wardSentryPostionList = {
 	-- 夜魇
 	Vector(5251, 2947, 0),
 	Vector(3493, 4632, 0),
+	Vector(4861,5994,0),
+	Vector(6319,4319,0),
 
 	-- 上路
 	Vector(-3300, 5608, 0),
