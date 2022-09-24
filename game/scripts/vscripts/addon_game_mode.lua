@@ -17,7 +17,7 @@ require('bot/bot_think_item_build')
 require('bot/bot_think_item_use')
 require('bot/bot_think_ability_use')
 require('bot/bot_think_modifier')
-require('web/web_server')
+require('api/api_loader')
 require("damage")
 
 function Activate()
@@ -32,7 +32,6 @@ function Precache( context )
 	PrecacheResource("soundfile", "soundevents/game_sounds_heroes/game_sounds_saber.vsndevts", context)
 	PrecacheResource( "soundfile", "soundevents/yukari_yakumo.vsndevts", context )
 	PrecacheResource( "soundfile", "soundevents/hero_themes.vsndevts", context )
-
 end
 
 function AIGameMode:InitGameMode()
@@ -90,6 +89,7 @@ function AIGameMode:InitEvents()
 	CustomGameEventManager:RegisterListener("set_unit_share_mask", function(_, keys) return AIGameMode:SetUnitShareMask(keys) end)
 	-- 选择道具
 	CustomGameEventManager:RegisterListener("item_choice_made", Dynamic_Wrap(AIGameMode, "FinishItemPick"))
+	CustomGameEventManager:RegisterListener("item_choice_shuffle", Dynamic_Wrap(AIGameMode, "ItemChoiceShuffle"))
 end
 
 
