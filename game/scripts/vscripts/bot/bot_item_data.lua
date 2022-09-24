@@ -1435,6 +1435,7 @@ tBotItemData.wardObserverPostionList = {
 
 	-- 上路
 	Vector(-5856, 827, 0),
+	Vector(2106,6046,0),
 	-- 上野区
 	Vector(-5187, -1619, 0),
 	Vector(-4640,-1056,0),
@@ -1446,10 +1447,11 @@ tBotItemData.wardObserverPostionList = {
 	Vector(-1445,-2504,0),
 	Vector(-4526.85,-5406.58,0),
 	Vector(-5916,-3984,0),
-	Vector(-7079,-4904,0),
-	Vector(-5238.3,-6668.1,0),
+	Vector(-6657,-4427,256),
+	Vector(-5017,-6268,0),
 	Vector(-3545,-6958,0),
 	Vector(1037,-2023,0),
+	Vector(1290,842,0),
 	-- 下野区
 	Vector(2800, -3087, 0),
 	Vector(303, -2584, 0),
@@ -1464,6 +1466,8 @@ tBotItemData.wardObserverPostionList = {
 	Vector(1045,-2041,128),
 	-- 下路
 	Vector(3443, -5779, 0),
+	Vector(4445, -5124, 0),
+	Vector(6318,-1038,0),
 
 	-- 中路河道
 	Vector(-1625, -200, 0),
@@ -1509,6 +1513,7 @@ tBotItemData.wardSentryPostionList = {
 
 	-- 上路
 	Vector(-6586, -2440, 0),
+	Vector(2106,6046,0),
 	-- 上野区
 	Vector(-4347, -1028, 0),
 	-- 中路
@@ -1516,6 +1521,8 @@ tBotItemData.wardSentryPostionList = {
 	Vector(-3345, -4005, 0),
 	Vector(-6119,-6403,0),
 	Vector(-7036,-5603,0),
+	Vector(-2073,-2417,0),
+	Vector(1290,842,0),
 	-- 下野区
 	Vector(303, -2584, 0),
 	Vector(-510, -3334, 0),
@@ -1560,6 +1567,7 @@ tBotItemData.wardSentryPostionList = {
 	Vector(4359, -426, 0),
 	-- 下路
 	Vector(6342, 1735, 0),
+	Vector(6318,-1038),
 }
 -- purchase neutral item in order
 tBotItemData.addNeutralItemList = {
