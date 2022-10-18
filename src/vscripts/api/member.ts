@@ -1,5 +1,5 @@
 
-import { ApiClient } from "./api_client";
+import { ApiClient, HttpMethod } from "./api_client";
 
 class MemberDto {
 	steamId!: number;
@@ -37,8 +37,10 @@ export class Member {
 				steamIds.push(PlayerResource.GetSteamAccountID(i));
 			}
 		}
+		// FIXME remove test get match id
+		const matchId = GameRules.Script_GetMatchID().toString();
 		// get member list from server
-		ApiClient.getWithRetry("/members", { steamIds: steamIds.join(",") }, (data: string) => {
+		ApiClient.sendWithRetry(HttpMethod.GET, "/game/start", { steamIds: steamIds.join(","), matchId }, null, (data: string) => {
 			print(`[Member] GetMember callback data ${data}`);
 			this.MemberList = json.decode(data)[0] as MemberDto[];
 			DeepPrintTable(this.MemberList);

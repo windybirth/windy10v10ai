@@ -7,10 +7,7 @@ function modifier_player_adolphzero:GetTexture() return "player/adolphzero" end
 function modifier_player_adolphzero:OnCreated()
 	self.iMoveSpeed = 150
 
-	self.iAttackRange = 0
-	if self:GetParent():IsRangedAttacker() then
-		self.iAttackRange = 200
-	end
+	self.iAttackRange = 200
 	self.iSpellAmplify = 30
 	self.iLifeSteal = 15
 	self.iCooldownReduction = 32
@@ -33,6 +30,8 @@ end
 function modifier_player_adolphzero:DeclareFunctions()
 	return {
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
+        MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT,
+        MODIFIER_PROPERTY_MOVESPEED_LIMIT,
 		MODIFIER_PROPERTY_ATTACK_RANGE_BONUS,
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
 		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
@@ -53,8 +52,19 @@ function modifier_player_adolphzero:GetModifierMoveSpeedBonus_Constant()
 	return self.iMoveSpeed
 end
 
+function modifier_player_adolphzero:GetModifierMoveSpeed_Limit()
+    return 5000
+end
+
+function modifier_player_adolphzero:GetModifierIgnoreMovespeedLimit()
+    return 1
+end
+
 function modifier_player_adolphzero:GetModifierAttackRangeBonus()
-	return self.iAttackRange
+	if self:GetParent():IsRangedAttacker() then
+		return self.iAttackRange
+	end
+	return 0
 end
 
 function modifier_player_adolphzero:GetModifierBonusStats_Strength()

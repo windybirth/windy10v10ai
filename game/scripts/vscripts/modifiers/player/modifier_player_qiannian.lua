@@ -16,6 +16,9 @@ function modifier_player_qiannian:OnCreated()
 	self.intellect = 80
 	self.iModelScale = -50
 	self.iMoveSpeed = 200
+	self.iArmor = 40
+	self.iHealthRegen = 2.0
+	self.iAttackRange = 200
 	-- get parent's primary attribute
 	if IsClient() then return end
 	local primaryAttribute = self:GetParent():GetPrimaryAttribute()
@@ -41,6 +44,9 @@ function modifier_player_qiannian:DeclareFunctions()
         MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT,
         MODIFIER_PROPERTY_MOVESPEED_LIMIT,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
+		MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS,
+		MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE,
+		MODIFIER_PROPERTY_ATTACK_RANGE_BONUS,
 	}
 end
 
@@ -86,4 +92,19 @@ end
 
 function modifier_player_qiannian:GetModifierSpellAmplify_Percentage()
 	return self.iSpellAmplify
+end
+
+function modifier_player_qiannian:GetModifierPhysicalArmorBonus()
+    return self.iArmor
+end
+
+function modifier_player_qiannian:GetModifierHealthRegenPercentage()
+	return self.iHealthRegen
+end
+
+function modifier_player_qiannian:GetModifierAttackRangeBonus()
+	if self:GetParent():IsRangedAttacker() then
+		return self.iAttackRange
+	end
+	return 0
 end

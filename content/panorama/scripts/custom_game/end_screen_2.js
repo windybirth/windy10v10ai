@@ -14,6 +14,7 @@ var imagefile = {
 	'npc_dota_hero_chen': 'file://{images}/heroes/npc_dota_hero_chen_custom.png',
 	'npc_dota_hero_pangolier': 'file://{images}/heroes/npc_dota_hero_pangolier_custom.png',
 	'npc_dota_hero_phantom_lancer': 'file://{images}/heroes/npc_dota_hero_phantom_lancer_custom.png',
+	'npc_dota_hero_brewmaster': 'file://{images}/heroes/npc_dota_hero_brewmaster_custom.png',
 }
 
 var GAME_RESULT = {};
@@ -88,7 +89,8 @@ function Snippet_Player(playerId, rootPanel, index) {
 	panel.SetDialogVariableInt("money", Players.GetTotalEarnedGold(playerId));
 	panel.SetDialogVariableInt("damage", playerData.damage);
 	panel.SetDialogVariableInt("damagereceived", playerData.damagereceived);
-	panel.SetDialogVariable("heroHealing", playerData.heroHealing);
+	panel.SetDialogVariableInt("heroHealing", playerData.heroHealing);
+	panel.SetDialogVariableInt("points", playerData.points);
 
 	panel.SetDialogVariableInt("strength", playerData.str);
 	panel.SetDialogVariableInt("agility", playerData.agi);

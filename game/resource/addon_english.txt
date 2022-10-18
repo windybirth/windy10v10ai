@@ -96,7 +96,7 @@
 		"player_member_ship"		"Sponsor. Click to view more."
 		"player_member_ship_url"		"https://www.patreon.com/windy10v10"
 
-		"player_member_button"		"Thank you for your sponsorship!<br/>Member Benefits<br/> - Rspawn time reduced by 5 seconds.<br/> - Buyback CD reduced to 2 minutes.<br/> - Can refresh the items lottery once.<br/> - Type '-AbyssSword', '-Goku' or '-Yukari' to swap to new hero.<br/>Membership is valid until {expireDate}."
+		"player_member_button"		"Thank you for your sponsorship!<br/>Member Benefits<br/> - Rspawn time reduced by 5 seconds.<br/> - Buyback CD reduced to 2 minutes.<br/> - Can refresh the items lottery once.<br/> - Type '-Goku' or '-Yukari' to swap to new hero.<br/>Membership is valid until {expireDate}."
 		"player_member_button_expire"		"Thank you for your sponsorship!<br/>Membership is valid until {expireDate}, Click the button to renew."
 
 		///////////////////////////////////////////////////
@@ -318,7 +318,8 @@
         "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"					"-{s:bonus_AbilityCooldown}s cooldown of Excalibur"
 
 		//沉渊之剑
-		"npc_dota_hero_visage" 									 "Abyss Sword"
+		"npc_dota_hero_visage" 									"Abyss Sword"
+		"npc_dota_hero_visage_npedesc1"							"The sword master from the abyss come and go between the battlefields."
 		"DOTA_Tooltip_Ability_abyss_sword_rush_night_sword_qi" 				 "Rush night sword Qo"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sword_qi_description" 	 "Abyss Sword splits a sword Qi forward and causes an ordinary attack with additional damage to the enemy units it touches"
 		"DOTA_Tooltip_ability_abyss_sword_rush_night_sword_qi_Lore" 		 "Basic sword technique from Abyss Sword sword school"
@@ -509,7 +510,7 @@
 
         // 电棍 razor
         "DOTA_Tooltip_ability_special_bonus_unique_razor_101"   "+{s:bonus_radius} plasma field radius"
-        "DOTA_Tooltip_ability_special_bonus_unique_razor_401"   "+{s:value}s eye of the storm duration"
+        "DOTA_Tooltip_ability_special_bonus_unique_razor_401"   "+{s:bonus_duration}s eye of the storm duration"
         "DOTA_Tooltip_ability_special_bonus_unique_razor_402"   "+{s:value} eye of the storm damage"
 
         // 小鱼 slark
@@ -1073,7 +1074,7 @@
 
         // item_jump_jump_jump 跳刀3
 		"DOTA_Tooltip_ability_item_jump_jump_jump"						"*Jump! Jump! Jump!*"
-		"DOTA_Tooltip_ability_item_jump_jump_jump_Description"			"<h1>Active: Advanced Flash</h1> Combines the effects of Fallen Sky and all three Blink Dagger upgrades.<br><br>Transforms into a meteor, which lands at the target point, stunning enemies in %meteor_land_radius% radius for %meteor_stun_duration% seconds. <br>Affected enemies take %base_damage% + %str_damage%%% of the caster's strength as magical damage, then burn for a further %meteor_burn_dps% damage per second for %meteor_burn_duration% seconds.<br>Deals half damage and stun duration to buildings.<br><br>After all this calamity happens, the caster receives the benefits of Swift Blink and Arcane Blink. Affected enemies suffer the effect of Overwhelming Blink after the stun duration ends."
+		"DOTA_Tooltip_ability_item_jump_jump_jump_Description"			"<h1>Active: Advanced Flash</h1> Combines the effects of Fallen Sky and all three Blink Dagger upgrades.<br><br>Transforms into a meteor, which lands at the target point, stunning enemies in %meteor_land_radius% radius for %meteor_stun_duration% seconds. <br>Affected enemies take %base_damage% + %str_damage%%% of the caster's strength as magical damage, then burn for a further %meteor_burn_dps% damage per second for %meteor_burn_duration% seconds.<br>Deals half damage to buildings.<br><br>After all this calamity happens, the caster receives the benefits of Swift Blink and Arcane Blink. Affected enemies suffer the effect of Overwhelming Blink after the stun duration ends."
 		"DOTA_Tooltip_Ability_item_jump_jump_jump_bonus_all_stats"		"+$all"
 		"DOTA_Tooltip_ability_item_jump_jump_jump_Lore"					"You say Flash？No No No I am a Dotaer not LOLer.It is Blink man."
 
@@ -1184,7 +1185,7 @@
 	    "DOTA_Tooltip_ability_item_hand_of_group_description"							"<h1>Active: Transmute</h1> Kills a non-hero target for %self_gold% gold and %self_xp%x experience. <br>Allies within %group_range% of the target gains %group_gold% gold and %group_xp%x experience.<br><br> Cannot be used on Ancient Creeps.<br><br>Range: %abilitycastrange%"
 	    "DOTA_Tooltip_ability_item_hand_of_group_attack_speed"			                "+$attack"
 	    "DOTA_Tooltip_ability_item_hand_of_group_Lore" 									"A wise choice and Scientific investment."
-	    "DOTA_Tooltip_ability_item_hand_of_group_Note0"  								"The money and experience obtained does not has the multiplier bonus."
+	    "DOTA_Tooltip_ability_item_hand_of_group_Note0"  								"The money and experience obtained does will has the multiplier bonus!"
 
 	}
 }
