@@ -6,6 +6,7 @@
 		<include src="file://{resources}/styles/custom_game/end_screen.css" />
 	</styles>
 	<scripts>
+		<include src="file://{resources}/scripts/custom_game/long.js" />
 		<include src="file://{resources}/scripts/custom_game/utils.js" />
 		<include src="file://{resources}/scripts/custom_game/end_screen_2.js" />
 	</scripts>
@@ -36,7 +37,7 @@
 					</Panel>
 					<Label class="LegendPanel HeroHealingColumn" text="#dota_page_match_details_legend_hero_healing" onmouseover="UIShowTextTooltipStyled( #dota_page_match_details_legend_hero_healing_tooltip, ShortTextTooltip )" onmouseout="UIHideTextTooltip()" />
 					<Panel class="LegendPanel PtsColumn">
-						<Image class="PtsColumnImg" src="s2r://panorama/images/custom_game/pts_earned_png.vtex" onmouseover="UIShowTextTooltipStyled( #DOTA_BattlePass_AchievementsTooltip_BattlePointsEarned, ShortTextTooltip )" onmouseout="UIHideTextTooltip()" />
+						<Image class="PtsColumnImg" src="s2r://panorama/images/custom_game/pts_earned_png.vtex" onmouseover="UIShowTextTooltipStyled( #data_panel_season_point, ShortTextTooltip )" onmouseout="UIHideTextTooltip()" />
 					</Panel>
 					<Label class="LegendPanel ItemsColumn" text="#dota_page_match_details_legend_items" />
 					<Label class="LegendPanel NeutralColumn" text="#DOTA_Location_Name_Neutral" />

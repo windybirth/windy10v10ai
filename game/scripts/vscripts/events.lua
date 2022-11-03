@@ -1,93 +1,81 @@
 require('modifiers/player/enable_player_modifier')
+require('event/creep')
+require('event/chat')
+require('event/kill')
 
 local tBotNameList = {
-	--"npc_dota_hero_invoker",
-	--"npc_dota_hero_antimage", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_spirit_breaker", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_silencer", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_mirana", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_furion", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_huskar", // 不会放技能，只会物品和A人
-	--"npc_dota_hero_batrider",
-	--"npc_dota_hero_obsidian_destroyer",
-	--"npc_dota_hero_enchantress",
-	--"npc_dota_hero_snapfire",
-	--"npc_dota_hero_broodmother",
-	--"npc_dota_hero_lycan",
-	--"npc_dota_hero_arc_warden",
-	--"npc_dota_hero_ancient_apparition",
-	--"npc_dota_hero_treant",
-	--"npc_dota_hero_rubick",
-	--"npc_dota_hero_shredder",
-	--"npc_dota_hero_tinker",
-	"npc_dota_hero_abaddon",
-	"npc_dota_hero_axe",
-	"npc_dota_hero_bane",
-	"npc_dota_hero_bounty_hunter",
-	"npc_dota_hero_bloodseeker",
-	"npc_dota_hero_bristleback",
-	"npc_dota_hero_chaos_knight",
-	"npc_dota_hero_crystal_maiden",
-	"npc_dota_hero_dazzle",
-	"npc_dota_hero_death_prophet",
-	"npc_dota_hero_dragon_knight",
-	"npc_dota_hero_drow_ranger",
-	"npc_dota_hero_earthshaker",
-	"npc_dota_hero_jakiro",
-	"npc_dota_hero_juggernaut",
-	"npc_dota_hero_kunkka",
-	"npc_dota_hero_lich",
-	"npc_dota_hero_lina",
-	"npc_dota_hero_lion",
-	"npc_dota_hero_luna",
-	"npc_dota_hero_medusa",
-	"npc_dota_hero_meepo",
-	"npc_dota_hero_nevermore",
-	"npc_dota_hero_necrolyte",
-	"npc_dota_hero_ogre_magi",
-	"npc_dota_hero_omniknight",
-	"npc_dota_hero_oracle",
-	"npc_dota_hero_phantom_assassin",
-	"npc_dota_hero_pudge",
-	"npc_dota_hero_riki",
-	--"npc_dota_hero_razor", // 在泉水站着完全不动
-	"npc_dota_hero_sand_king",
-	"npc_dota_hero_shadow_shaman",
-	"npc_dota_hero_skywrath_mage",
-	"npc_dota_hero_sniper",
-	"npc_dota_hero_sven",
-	--"npc_dota_hero_tidehunter", // 在泉水站着完全不动
-	"npc_dota_hero_tiny",
-	"npc_dota_hero_vengefulspirit",
-	"npc_dota_hero_viper",
-	"npc_dota_hero_warlock",
-	"npc_dota_hero_windrunner",
-	"npc_dota_hero_witch_doctor",
-	"npc_dota_hero_skeleton_king",
-	"npc_dota_hero_zuus",
+    --"npc_dota_hero_invoker",
+    --"npc_dota_hero_antimage", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_spirit_breaker", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_silencer", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_mirana", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_furion", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_huskar", // 不会放技能，只会物品和A人
+    --"npc_dota_hero_batrider",
+    --"npc_dota_hero_obsidian_destroyer",
+    --"npc_dota_hero_enchantress",
+    --"npc_dota_hero_snapfire",
+    --"npc_dota_hero_broodmother",
+    --"npc_dota_hero_lycan",
+    --"npc_dota_hero_arc_warden",
+    --"npc_dota_hero_ancient_apparition",
+    --"npc_dota_hero_treant",
+    --"npc_dota_hero_rubick",
+    --"npc_dota_hero_shredder",
+    --"npc_dota_hero_tinker",
+    "npc_dota_hero_abaddon",
+    "npc_dota_hero_necrolyte",
+    "npc_dota_hero_axe",
+    "npc_dota_hero_bane",
+    "npc_dota_hero_bounty_hunter",
+    "npc_dota_hero_bloodseeker",
+    "npc_dota_hero_spectre",
+    "npc_dota_hero_bristleback",
+    "npc_dota_hero_chaos_knight",
+    "npc_dota_hero_crystal_maiden",
+    "npc_dota_hero_dazzle",
+    "npc_dota_hero_death_prophet",
+    "npc_dota_hero_dragon_knight",
+    "npc_dota_hero_drow_ranger",
+    "npc_dota_hero_earthshaker",
+    "npc_dota_hero_jakiro",
+    "npc_dota_hero_juggernaut",
+    "npc_dota_hero_kunkka",
+    "npc_dota_hero_lich",
+    "npc_dota_hero_lina",
+    "npc_dota_hero_lion",
+    "npc_dota_hero_luna",
+    "npc_dota_hero_medusa",
+    "npc_dota_hero_meepo",
+    "npc_dota_hero_nevermore",
+    "npc_dota_hero_ogre_magi",
+    "npc_dota_hero_omniknight",
+    "npc_dota_hero_oracle",
+    "npc_dota_hero_phantom_assassin",
+    "npc_dota_hero_pudge",
+    "npc_dota_hero_riki",
+    --"npc_dota_hero_razor", // 在泉水站着完全不动
+    "npc_dota_hero_sand_king",
+    "npc_dota_hero_shadow_shaman",
+    "npc_dota_hero_skywrath_mage",
+    "npc_dota_hero_sniper",
+    "npc_dota_hero_sven",
+    --"npc_dota_hero_tidehunter", // 在泉水站着完全不动
+    "npc_dota_hero_tiny",
+    "npc_dota_hero_vengefulspirit",
+    "npc_dota_hero_viper",
+    "npc_dota_hero_warlock",
+    "npc_dota_hero_windrunner",
+    "npc_dota_hero_witch_doctor",
+    "npc_dota_hero_skeleton_king",
+    "npc_dota_hero_zuus",
 }
 
-local tSkillCustomNameList = {"npc_dota_hero_crystal_maiden", "npc_dota_hero_queenofpain", "npc_dota_hero_mirana",
-                              "npc_dota_hero_earthshaker", "npc_dota_hero_nevermore"}
+local tSkillCustomNameList = { "npc_dota_hero_crystal_maiden", "npc_dota_hero_queenofpain", "npc_dota_hero_mirana",
+                               "npc_dota_hero_earthshaker", "npc_dota_hero_nevermore" }
 
-local tAPLevelList = {17, 19, 21, 22, 23, 24, 26}
+local tAPLevelList = { 17, 19, 21, 22, 23, 24, 26 }
 
-local tDOTARespawnTime = {4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50,
-                          51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73,
-                          74, 75, 75}
-
--- 注册测试人员id
-local developerSteamAccountID = {}
-developerSteamAccountID[136407523] = "windy"
-developerSteamAccountID[1194383041] = "咸鱼"
-developerSteamAccountID[143575444] = "茶神"
-developerSteamAccountID[314757913] = "孤尘"
-developerSteamAccountID[916506173] = "Arararara"
-developerSteamAccountID[385130282] = "米米花"
-developerSteamAccountID[353885092] = "76岁靠谱成年男性"
-developerSteamAccountID[245559423] = "puck1609"
-
-local luoshuHeroSteamAccountID = Set {136668998, 138837968}
 
 function AIGameMode:ArrayShuffle(array)
     local size = #array
@@ -171,7 +159,7 @@ function AIGameMode:OnGameStateChanged(keys)
 
     if state == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
         if IsServer() then
-            Member:InitMemberInfo()
+            Player:Init()
         end
     elseif state == DOTA_GAMERULES_STATE_HERO_SELECTION then
         if IsServer() then
@@ -244,12 +232,12 @@ function AIGameMode:OnGameStateChanged(keys)
             return
         end
 
-		-- 每分钟30秒时刷一次怪
-		Timers:CreateTimer(30, function ()
-			AIGameMode:SpawnNeutralCreeps30sec()
-			return 60
-		end)
-	end
+        -- 每分钟30秒时刷一次怪
+        Timers:CreateTimer(30, function()
+            AIGameMode:SpawnNeutralCreeps30sec()
+            return 60
+        end)
+    end
 end
 
 function AIGameMode:SpawnNeutralCreeps30sec()
@@ -266,9 +254,11 @@ function AIGameMode:RefreshGameStatus()
 
     -- set global state
     local GameTime = GameRules:GetDOTATime(false, false)
-    if (GameTime >= ((AIGameMode.botPushMin * 4) * 60)) then -- LATEGAME
+    if (GameTime >= ((AIGameMode.botPushMin * 4) * 60)) then
+        -- LATEGAME
         GameRules:GetGameModeEntity():SetBotsMaxPushTier(-1)
-    elseif (GameTime >= ((AIGameMode.botPushMin + 4) * 60)) then -- MIDGAME
+    elseif (GameTime >= ((AIGameMode.botPushMin + 4) * 60)) then
+        -- MIDGAME
         if AIGameMode.tower3PushedGood >= 2 or AIGameMode.tower3PushedBad >= 2 then
             GameRules:GetGameModeEntity():SetBotsMaxPushTier(4)
         end
@@ -278,11 +268,13 @@ function AIGameMode:RefreshGameStatus()
         elseif AIGameMode.barrackPushedGood > 2 or AIGameMode.barrackPushedBad > 2 then
             GameRules:GetGameModeEntity():SetBotsMaxPushTier(5)
         end
-    elseif (GameTime >= (AIGameMode.botPushMin * 60)) then -- MIDGAME
+    elseif (GameTime >= (AIGameMode.botPushMin * 60)) then
+        -- MIDGAME
         GameRules:GetGameModeEntity():SetBotsInLateGame(true)
         GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(true)
         GameRules:GetGameModeEntity():SetBotsMaxPushTier(3)
-    else -- EARLYGAME
+    else
+        -- EARLYGAME
         GameRules:GetGameModeEntity():SetBotsInLateGame(false)
         GameRules:GetGameModeEntity():SetBotsAlwaysPushWithHuman(false)
         GameRules:GetGameModeEntity():SetBotsMaxPushTier(1)
@@ -364,6 +356,13 @@ function AIGameMode:RefreshGameStatus()
     AIGameMode.creepBuffLevelBad = buffLevelBad
     AIGameMode.creepBuffLevelMegaGood = buffLevelMegaGood
     AIGameMode.creepBuffLevelMegaBad = buffLevelMegaBad
+
+    -- 简单限制电脑前期买活
+    -- if GameTime <= 15 * 60 then
+    --     GameRules:SetBuybackEnabled(false)
+    -- else
+    --     GameRules:SetBuybackEnabled(true)
+    -- end
 end
 
 -- 买活时间设定
@@ -377,7 +376,7 @@ function AIGameMode:OnBuyback(e)
             -- 会员买活时间上限设置
             local memberBuybackCooldownMaximum = 120
             local steamAccountID = PlayerResource:GetSteamAccountID(playerId)
-            if Member:IsMember(steamAccountID) then
+            if Player:IsMember(steamAccountID) then
                 local buybackTime = hHero:GetBuybackCooldownTime()
                 if buybackTime > memberBuybackCooldownMaximum then
                     buybackTime = memberBuybackCooldownMaximum
@@ -388,297 +387,13 @@ function AIGameMode:OnBuyback(e)
     end)
 end
 
-function AIGameMode:OnEntityKilled(keys)
-	local hEntity = EntIndexToHScript(keys.entindex_killed)
-	-- on hero killed
-	if hEntity:IsRealHero() and hEntity:IsReincarnating() == false then
-		HeroKilled(keys)
-		-- drop items only when killed by hero
-		if EntIndexToHScript(keys.entindex_attacker):GetPlayerOwner() then
-			AIGameMode:RollDrops(EntIndexToHScript(keys.entindex_killed))
-		end
-	end
-	-- on barrack killed
-	if hEntity:GetClassname() == "npc_dota_barracks" then
-		RecordBarrackKilled(hEntity)
-	end
-	-- on tower killed
-	if hEntity:GetClassname() == "npc_dota_tower" then
-		RecordTowerKilled(hEntity)
-	end
-
-	if hEntity:GetClassname() == "npc_dota_fort" then
-		print(hEntity:GetUnitName())
-		print(hEntity:GetClassname())
-		local winnerTeam = 1
-		if hEntity:GetUnitName() == "npc_dota_badguys_fort" then
-			winnerTeam = DOTA_TEAM_GOODGUYS
-		else
-			winnerTeam = DOTA_TEAM_BADGUYS
-		end
-		AIGameMode:OnFortKilled(winnerTeam)
-	end
-end
-function AIGameMode:OnFortKilled(winnerTeam)
-	if IsServer() then
-		local endData = self:EndScreenStats(winnerTeam, true)
-		Game:SendEndGameInfo(endData)
-	end
-end
-
-function RecordBarrackKilled(hEntity)
-    local team = hEntity:GetTeamNumber()
-    if DOTA_TEAM_GOODGUYS == team then
-        AIGameMode.barrackPushedBad = AIGameMode.barrackPushedBad + 1
-        print("barrackPushedBad ", AIGameMode.barrackPushedBad)
-    elseif DOTA_TEAM_BADGUYS == team then
-        AIGameMode.barrackPushedGood = AIGameMode.barrackPushedGood + 1
-        print("barrackPushedGood ", AIGameMode.barrackPushedGood)
-    end
-end
-
-function RecordTowerKilled(hEntity)
-    local team = hEntity:GetTeamNumber()
-    local sName = hEntity:GetUnitName()
-    if string.find(sName, "tower1") then
-        if DOTA_TEAM_GOODGUYS == team then
-            AIGameMode.tower1PushedBad = AIGameMode.tower1PushedBad + 1
-            print("tower1PushedBad ", AIGameMode.tower1PushedBad)
-        elseif DOTA_TEAM_BADGUYS == team then
-            AIGameMode.tower1PushedGood = AIGameMode.tower1PushedGood + 1
-            print("tower1PushedGood ", AIGameMode.tower1PushedGood)
-        end
-    elseif string.find(sName, "tower2") then
-        if DOTA_TEAM_GOODGUYS == team then
-            AIGameMode.tower2PushedBad = AIGameMode.tower2PushedBad + 1
-            print("tower2PushedBad ", AIGameMode.tower2PushedBad)
-        elseif DOTA_TEAM_BADGUYS == team then
-            AIGameMode.tower2PushedGood = AIGameMode.tower2PushedGood + 1
-            print("tower2PushedGood ", AIGameMode.tower2PushedGood)
-        end
-    elseif string.find(sName, "tower3") then
-        if DOTA_TEAM_GOODGUYS == team then
-            AIGameMode.tower3PushedBad = AIGameMode.tower3PushedBad + 1
-            print("tower3PushedBad ", AIGameMode.tower3PushedBad)
-            -- 破高地后 给4塔 基地添加分裂箭
-            if AIGameMode.tower3PushedBad == 1 then
-                local towers = Entities:FindAllByClassname("npc_dota_tower")
-                for _, tower in pairs(towers) do
-                    if string.find(tower:GetUnitName(), "npc_dota_goodguys_tower4") then
-                        local towerSplitShot = tower:AddAbility("tower_split_shot")
-                        if towerSplitShot then
-                            towerSplitShot:SetLevel(1)
-                            towerSplitShot:ToggleAbility()
-                        end
-                    end
-                end
-                local forts = Entities:FindAllByClassname("npc_dota_fort")
-                for _, fort in pairs(forts) do
-                    if string.find(fort:GetUnitName(), "npc_dota_goodguys_fort") then
-                        local towerSplitShot = fort:AddAbility("tower_split_shot")
-                        if towerSplitShot then
-                            towerSplitShot:SetLevel(3)
-                            towerSplitShot:ToggleAbility()
-                        end
-                    end
-                end
-            end
-        elseif DOTA_TEAM_BADGUYS == team then
-            AIGameMode.tower3PushedGood = AIGameMode.tower3PushedGood + 1
-            print("tower3PushedGood ", AIGameMode.tower3PushedGood)
-            -- 破高地后 给4塔 基地添加分裂箭
-            if AIGameMode.tower3PushedGood == 1 then
-                local towers = Entities:FindAllByClassname("npc_dota_tower")
-                for _, tower in pairs(towers) do
-                    if string.find(tower:GetUnitName(), "npc_dota_badguys_tower4") then
-                        local towerSplitShot = tower:AddAbility("tower_split_shot")
-                        if towerSplitShot then
-                            towerSplitShot:SetLevel(1)
-                            towerSplitShot:ToggleAbility()
-                        end
-                    end
-                end
-                local forts = Entities:FindAllByClassname("npc_dota_fort")
-                for _, fort in pairs(forts) do
-                    if string.find(fort:GetUnitName(), "npc_dota_badguys_fort") then
-                        local towerSplitShot = fort:AddAbility("tower_split_shot")
-                        if towerSplitShot then
-                            towerSplitShot:SetLevel(2)
-                            towerSplitShot:ToggleAbility()
-                        end
-                    end
-                end
-            end
-        end
-    elseif string.find(sName, "tower4") then
-        if DOTA_TEAM_GOODGUYS == team then
-            AIGameMode.tower4PushedBad = AIGameMode.tower4PushedBad + 1
-            print("tower4PushedBad ", AIGameMode.tower4PushedBad)
-        elseif DOTA_TEAM_BADGUYS == team then
-            AIGameMode.tower4PushedGood = AIGameMode.tower4PushedGood + 1
-            print("tower4PushedGood ", AIGameMode.tower4PushedGood)
-        end
-    end
-end
-
-function HeroKilled(keys)
-    local hHero = EntIndexToHScript(keys.entindex_killed)
-    local attacker = EntIndexToHScript(keys.entindex_attacker)
-    local playerId = hHero:GetPlayerID() -- 死亡玩家id
-    local attackerPlayer = attacker:GetPlayerOwner()
-    local attackerPlayerID = -1
-    if attackerPlayer then
-        attackerPlayerID = attackerPlayer:GetPlayerID()
-    end
-    local fRespawnTime = 0
-    local iLevel = hHero:GetLevel()
-    local GameTime = GameRules:GetDOTATime(false, false)
-
-    ---- 复活时间逻辑
-    if iLevel <= 50 then
-        fRespawnTime = math.ceil(tDOTARespawnTime[iLevel] * AIGameMode.iRespawnTimePercentage / 100.0)
-    else
-        fRespawnTime = math.ceil((iLevel / 4 + 62) * AIGameMode.iRespawnTimePercentage / 100.0)
-    end
-
-    -- NEC大招
-    if hHero:FindModifierByName('modifier_necrolyte_reapers_scythe') then
-        fRespawnTime = fRespawnTime +
-                           hHero:FindModifierByName('modifier_necrolyte_reapers_scythe'):GetAbility():GetLevel() * 10
-    end
-
-    -- 会员减少5s复活时间
-    if Member:IsMember(PlayerResource:GetSteamAccountID(playerId)) then
-        fRespawnTime = fRespawnTime - 5
-    end
-
-    -- 复活时间至少1s
-    if fRespawnTime < 1 then
-        fRespawnTime = 1
-    end
-
-    hHero:SetTimeUntilRespawn(fRespawnTime)
-
-    -- 玩家团队奖励逻辑
-    if attackerPlayer and IsGoodTeamPlayer(attackerPlayerID) and IsBadTeamPlayer(playerId) then
-        local gold = 0
-        if iLevel <= 10 then
-            gold = 5 + iLevel * 2
-        elseif iLevel <= 20 then
-            gold = 10 + iLevel * 2.5
-        elseif iLevel <= 30 then
-            gold = 15 + iLevel * 3
-        elseif iLevel <= 50 then
-            gold = 25 + iLevel * 3.5
-        else
-            gold = 200
-        end
-        -- 初次更新 数值改保守点
-        gold = gold / 2
-        for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
-            if PlayerResource:IsValidPlayerID(playerID) and PlayerResource:IsValidPlayer(playerID) and
-                PlayerResource:GetSelectedHeroEntity(playerID) and IsGoodTeamPlayer(playerID) then
-                GameRules:ModifyGoldFiltered(playerID, gold, true, DOTA_ModifyGold_CreepKill)
-                local playerHero = PlayerResource:GetSelectedHeroEntity(playerID)
-                playerHero:EmitSound( "DOTA_Item.Hand_Of_Midas" )
-                SendOverheadEventMessage(playerHero, OVERHEAD_ALERT_GOLD, playerHero, gold * AIGameMode:GetPlayerGoldXpMultiplier(playerID), playerHero)
-            end
-        end
-    end
-
-    -- AI连续死亡记录
-    if attackerPlayer and IsGoodTeamPlayer(attackerPlayerID) and IsBadTeamPlayer(playerId) then
-        if AIGameMode.BotRecordSuccessiveDeathTable[playerId] then
-            AIGameMode.BotRecordSuccessiveDeathTable[playerId] = AIGameMode.BotRecordSuccessiveDeathTable[playerId] + 1
-        else
-            AIGameMode.BotRecordSuccessiveDeathTable[playerId] = 1
-        end
-    end
-
-    -- AI连续死亡记录清零
-    if attackerPlayer and IsBadTeamPlayer(attackerPlayerID) and IsGoodTeamPlayer(playerId) then
-        AIGameMode.BotRecordSuccessiveDeathTable[attackerPlayerID] = 0
-    end
-
-    -- AI连死补偿
-    -- AI 50级后不再补偿
-    if attackerPlayer and IsGoodTeamPlayer(attackerPlayerID) and IsBadTeamPlayer(playerId) and
-        AIGameMode.BotRecordSuccessiveDeathTable[playerId] and AIGameMode.BotRecordSuccessiveDeathTable[playerId] >= 3 and
-        iLevel < 50 then
-
-        -- 补偿的金钱和经验 设计上不应该超过AI通过击杀玩家获得的
-        local deathCount = AIGameMode.BotRecordSuccessiveDeathTable[playerId]
-        local gold = 0
-        local xp = 0
-
-        if GameTime <= 5 * 60 then
-            gold = 10
-            xp = 15
-        elseif GameTime <= 10 * 60 then
-            gold = 20
-            xp = 30
-        elseif GameTime <= 15 * 60 then
-            -- 初次更新 数值改保守点
-            -- gold = 40
-            -- xp = 60
-            gold = 30
-            xp = 45
-        else
-            -- 初次更新 数值改保守点
-            -- gold = 80
-            -- xp = 120
-            gold = 40
-            xp = 60
-        end
-
-        xp = xp * AIGameMode:GetPlayerGoldXpMultiplier(playerId)
-
-        if PlayerResource:IsValidPlayerID(playerId) and PlayerResource:IsValidPlayer(playerId) and
-            PlayerResource:GetSelectedHeroEntity(playerId) then
-            GameRules:ModifyGoldFiltered(playerId, gold, true, DOTA_ModifyGold_CreepKill)
-            hHero:AddExperience(xp, DOTA_ModifyXP_CreepKill, false, false)
-        end
-
-    end
-
-end
-
-function AIGameMode:RollDrops(hHero)
-    if GameRules.DropTable then
-        for item_name, chance in pairs(GameRules.DropTable) do
-            for i = 0, 8 do
-                local hItem = hHero:GetItemInSlot(i)
-                if hItem then
-                    local hItem_name = hItem:GetName()
-                    if item_name == hItem_name then
-                        if RollPercentage(chance) then
-                            -- Remove the item
-                            hHero:RemoveItem(hItem)
-                            -- Create the item
-                            AIGameMode:CreateItem(item_name, hHero)
-                        end
-                    end
-                end
-            end
-        end
-    end
-end
-
-function AIGameMode:CreateItem(sItemName, hEntity)
-    local item = CreateItem(sItemName, nil, nil)
-    local pos = hEntity:GetAbsOrigin()
-    CreateItemOnPositionSync(pos, item)
-    local pos_launch = pos + RandomVector(RandomFloat(150, 200))
-    item:LaunchLoot(false, 200, 0.75, pos_launch)
-end
-
 function AIGameMode:OnLastHit(keys)
-	if keys.FirstBlood == 1 then
-		local hero = PlayerResource:GetSelectedHeroEntity(keys.PlayerID)
-		if hero and hero:HasAbility("Hero_vo_player") then
-			hero:PlayVoiceAllPlayerIgnoreCooldown(hero:GetName() .. ".vo.FirstBlood")
-		end
-	end
+    if keys.FirstBlood == 1 then
+        local hero = PlayerResource:GetSelectedHeroEntity(keys.PlayerID)
+        if hero and hero:HasAbility("Hero_vo_player") then
+            hero:PlayVoiceAllPlayerIgnoreCooldown(hero:GetName() .. ".vo.FirstBlood")
+        end
+    end
 end
 
 function AIGameMode:OnPickHeroSpawn(keys)
@@ -701,23 +416,23 @@ function AIGameMode:OnNPCSpawned(keys)
         return
     end
 
-	if hEntity:IsBaseNPC() then
-		local playerid = hEntity:GetPlayerOwnerID()
-		if playerid then
-			 local hero = PlayerResource:GetSelectedHeroEntity(playerid)
-			 if hero and hero == hEntity and hero:HasAbility("Hero_vo_player") then
-			   if not hero.isBuyBack then
-				   hero:PlayVoiceIgnoreCooldown(hero:GetName() .. ".vo.Respawn")
-			   end
-			   hero.isBuyBack = false
-			 end
-		end
-	end
+    if hEntity:IsBaseNPC() then
+        local playerid = hEntity:GetPlayerOwnerID()
+        if playerid then
+            local hero = PlayerResource:GetSelectedHeroEntity(playerid)
+            if hero and hero == hEntity and hero:HasAbility("Hero_vo_player") then
+                if not hero.isBuyBack then
+                    hero:PlayVoiceIgnoreCooldown(hero:GetName() .. ".vo.Respawn")
+                end
+                hero.isBuyBack = false
+            end
+        end
+    end
 
-	if hEntity:IsCourier() and self.bFastCourier == 1 then
-		hEntity:AddNewModifier(hEntity, nil, "modifier_courier_speed", {})
-		return
-	end
+    if hEntity:IsCourier() and self.bFastCourier == 1 then
+        hEntity:AddNewModifier(hEntity, nil, "modifier_courier_speed", {})
+        return
+    end
 
     local sName = hEntity:GetName()
     if sName == "npc_dota_creep_lane" or sName == "npc_dota_creep_siege" then
@@ -732,6 +447,15 @@ function AIGameMode:OnNPCSpawned(keys)
             buffLevel = AIGameMode.creepBuffLevelBad
             buffLevelMega = AIGameMode.creepBuffLevelMegaBad
         end
+
+        -- 随时间增加金钱
+        local originMaxGold = hEntity:GetMaximumGoldBounty()
+        local originMinGold = hEntity:GetMinimumGoldBounty()
+        local mul = AIGameMode:GetLaneGoldMul()
+        local modifiedMaxGold = originMaxGold * mul
+        local modifiedMinGold = originMinGold * mul
+        hEntity:SetMaximumGoldBounty(modifiedMaxGold)
+        hEntity:SetMinimumGoldBounty(modifiedMinGold)
 
         if buffLevel > 0 then
             if not string.find(sUnitName, "upgraded") and not string.find(sUnitName, "mega") then
@@ -778,7 +502,7 @@ function AIGameMode:OnNPCSpawned(keys)
 
     if hEntity:IsRealHero() and not hEntity.bInitialized then
         if hEntity:GetAttackCapability() == DOTA_UNIT_CAP_MELEE_ATTACK or sName == "npc_dota_hero_troll_warlord" or
-            sName == "npc_dota_hero_lone_druid" then
+                sName == "npc_dota_hero_lone_druid" then
             hEntity:AddNewModifier(hEntity, nil, "modifier_melee_resistance", {})
         end
 
@@ -789,7 +513,7 @@ function AIGameMode:OnNPCSpawned(keys)
 
         -- choose item 玩家抽选物品
         if self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] and not self.tIfItemChosen[hEntity:GetPlayerOwnerID()] and
-            not self.tIfItemChooseInited[hEntity:GetPlayerOwnerID()] then
+                not self.tIfItemChooseInited[hEntity:GetPlayerOwnerID()] then
             self:SpecialItemAdd(hEntity)
             self.tIfItemChooseInited[hEntity:GetPlayerOwnerID()] = true
         end
@@ -922,143 +646,6 @@ function AIGameMode:SetUnitShareMask(data)
     end
 end
 
-function AIGameMode:OnPlayerChat(event)
-    local iPlayerID = event.playerid
-    local sChatMsg = event.text
-    if not iPlayerID or not sChatMsg then
-        return
-    end
-    local steamAccountID = PlayerResource:GetSteamAccountID(iPlayerID)
-
-    if self.DebugMode and developerSteamAccountID[steamAccountID] then
-        if sChatMsg:find('^-greedisgood$') then
-            -- give money to the player
-            -- get hero
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            local iGold = 10000
-            hHero:ModifyGold(iGold, true, DOTA_ModifyGold_CheatCommand)
-            GameRules:SendCustomMessage("号外号外！开发者:" .. developerSteamAccountID[steamAccountID] ..
-                                            " 用自己的菊花交换了增加10000金币", DOTA_TEAM_GOODGUYS, 0)
-            return
-        end
-        if sChatMsg:find('^-pos$') then
-            -- get position
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            -- print position
-            local pos = hHero:GetAbsOrigin()
-            GameRules:SendCustomMessage("开发者:" .. developerSteamAccountID[steamAccountID] .. " 的位置是:" ..
-                                            pos.x .. "," .. pos.y .. "," .. pos.z, DOTA_TEAM_GOODGUYS, 0)
-            print(
-                "开发者:" .. developerSteamAccountID[steamAccountID] .. " 的位置是:" .. pos.x .. "," .. pos.y ..
-                    "," .. pos.z)
-            return
-        end
-
-        if sChatMsg:find('^-modifier$') then
-            -- get position
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            -- print all modifiers
-            local modifiers = hHero:FindAllModifiers()
-            for _, modifier in pairs(modifiers) do
-                print("Get here modifiers: ", modifier:GetName())
-            end
-            return
-        end
-
-        if sChatMsg:find('^-kill$') then
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            hHero:ForceKill(true)
-            return
-        end
-
-        if sChatMsg:find('^-refresh buyback$') then
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            hHero:SetBuybackCooldownTime(0)
-            return
-        end
-
-        if sChatMsg:find('^-shard$') then
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            hHero:AddItemByName('item_aghanims_shard')
-            return
-        end
-        if sChatMsg:find('^-item$') then
-            self.tIfItemChosen[iPlayerID] = false
-            self.tIfItemChooseInited[iPlayerID] = false
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            self:SpecialItemAdd(hHero)
-            return
-        end
-        if sChatMsg:find('^-playerinfo$') then
-            print('playerid:')
-            print(iPlayerID)
-            print('steamid:')
-            print(PlayerResource:GetSteamAccountID(iPlayerID))
-            return
-        end
-
-		if sChatMsg:find( '^-postgame$' ) then
-			print("[AIGameMode] SendEndGameInfo POST_GAME")
-            local endData = self:EndScreenStats(2, true)
-            Game:SendEndGameInfo(endData)
-			return
-		end
-
-        if sChatMsg:find( '^-g$' ) then
-            local hero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            PlayerResource:ModifyGold(iPlayerID, 99999, true, DOTA_ModifyGold_CheatCommand)
-            hero:AddExperience( 49999 , DOTA_ModifyXP_Unspecified , false, false )
-            return
-        end
-
-	end
-
-    if Member:IsMember(steamAccountID) then
-        local pszHeroClass
-
-        if sChatMsg:find('-超级赛亚人') then
-            pszHeroClass = "npc_dota_hero_chen"
-        end
-        if sChatMsg:find('-Goku') then
-            pszHeroClass = "npc_dota_hero_chen"
-        end
-
-		if sChatMsg:find( '-八云紫' ) then
-			pszHeroClass = "npc_dota_hero_phantom_lancer"
-		end
-		if sChatMsg:find( '-Yukari' ) then
-			pszHeroClass = "npc_dota_hero_phantom_lancer"
-		end
-		if pszHeroClass ~= nil then
-			if self.tIfChangeHeroList[iPlayerID] then return end
-			self.tIfChangeHeroList[iPlayerID] = true
-			self.tIfItemChosen[iPlayerID] = false
-			self.tIfItemChooseInited[iPlayerID] = false
-			local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-			PlayerResource:ReplaceHeroWith(iPlayerID, pszHeroClass, hHero:GetGold(), hHero:GetCurrentXP())
-			return
-		end
-	end
-	if luoshuHeroSteamAccountID[steamAccountID] then
-		local pszHeroClass
-		if sChatMsg:find( '-超级赛亚人' ) then
-			pszHeroClass = "npc_dota_hero_chen"
-		end
-		if sChatMsg:find( '-男妈妈来哩' ) then
-			pszHeroClass = "npc_dota_hero_brewmaster"
-		end
-		if pszHeroClass ~= nil then
-			if self.tIfChangeHeroList[iPlayerID] then return end
-			self.tIfChangeHeroList[iPlayerID] = true
-			self.tIfItemChosen[iPlayerID] = false
-			self.tIfItemChooseInited[iPlayerID] = false
-			local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-			PlayerResource:ReplaceHeroWith(iPlayerID, pszHeroClass, hHero:GetGold(), hHero:GetCurrentXP())
-			return
-		end
-	end
-end
-
 function AIGameMode:OnPlayerReconnect(keys)
     local playerID = keys.PlayerID
     local new_state = GameRules:State_Get()
@@ -1131,36 +718,46 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
     local basePoint = 0
     if time > 3600 then
         basePoint = 50
-    elseif time > 900 then
-        basePoint = math.floor(20 + time / 120)
-    end
-    if winnerTeamId ~= DOTA_TEAM_GOODGUYS then
-        basePoint = basePoint / 2
+    else
+        basePoint = math.floor(10 + time / 120)
     end
 
     local playerNumber = 0
-    -- find most
-    local mostKillPlayerID = -1
-    local mostKill = 0
-    local mostDamageReceivedPlayerID = -1
-    local mostDamageReceived = 0
-    local mostHealingPlayerID = -1
-    local mostHealing = 0
-    local mostAssistsPlayerID = -1
-    local mostAssists = 0
+    -- 参战率积分
+    local battleParticipationBase = 20
+    -- find most kill/assist 1st to 6th
+    -- local mostKillPlayerIDList = {}
+    -- local mostKillList = {}
+
+    -- local mostAssistsPlayerList = {}
+    -- local mostAssistsList = {}
+
+    local mostDamageReceivedPlayerID_1 = -1
+    local mostDamageReceived_1 = 0
+    local mostDamageReceivedPlayerID_2 = -1
+    local mostDamageReceived_2 = 0
+    local mostHealingPlayerID_1 = -1
+    local mostHealing_1 = 0
+    local mostHealingPlayerID_2 = -1
+    local mostHealing_2 = 0
+    local mostTowerKillPlayerID_1 = -1
+    local mostTowerKill_1 = 0
+    local mostTowerKillPlayerID_2 = -1
+    local mostTowerKill_2 = 0
 
     for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
         if PlayerResource:IsValidPlayerID(playerID) and PlayerResource:IsValidPlayer(playerID) and
-            PlayerResource:GetSelectedHeroEntity(playerID) then
+                PlayerResource:GetSelectedHeroEntity(playerID) then
             local hero = PlayerResource:GetSelectedHeroEntity(playerID)
             if hero and IsValidEntity(hero) and not hero:IsNull() then
-                local membership = Member:IsMember(steamAccountID)
-                local memberInfo = Member:GetMember(steamAccountID)
+                local steamAccountID = PlayerResource:GetSteamAccountID(playerID)
+                local membership = Player:IsMember(steamAccountID)
+                local memberInfo = Player:GetMember(steamAccountID)
                 local damage = PlayerResource:GetRawPlayerDamage(playerID)
                 local damagereceived = 0
                 for victimID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
                     if PlayerResource:IsValidPlayerID(victimID) and PlayerResource:IsValidPlayer(victimID) and
-                        PlayerResource:GetSelectedHeroEntity(victimID) then
+                            PlayerResource:GetSelectedHeroEntity(victimID) then
                         if PlayerResource:GetTeam(victimID) ~= PlayerResource:GetTeam(playerID) then
                             damagereceived = damagereceived + PlayerResource:GetDamageDoneToHero(victimID, playerID)
                         end
@@ -1170,6 +767,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
                 local assists = PlayerResource:GetAssists(playerID)
                 local deaths = PlayerResource:GetDeaths(playerID)
                 local kills = PlayerResource:GetKills(playerID)
+                local towerKills = PlayerResource:GetTowerKills(playerID)
 
                 local playerInfo = {
                     steamid = tostring(PlayerResource:GetSteamID(playerID)),
@@ -1187,7 +785,8 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
                     str = hero:GetStrength() or 0,
                     agi = hero:GetAgility() or 0,
                     int = hero:GetIntellect() or 0,
-                    items = {}
+                    items = {},
+                    isDisconnect = false,
                 }
 
                 for item_slot = DOTA_ITEM_SLOT_1, DOTA_STASH_SLOT_6 do
@@ -1202,26 +801,86 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
                     playerInfo.items[DOTA_ITEM_NEUTRAL_SLOT] = hNeutralItem:GetAbilityName()
                 end
 
-
                 if not PlayerResource:IsFakeClient(playerID) then
                     playerNumber = playerNumber + 1
-                    playerInfo.points = playerInfo.points + basePoint
-                    if kills > mostKill then
-                        mostKill = kills
-                        mostKillPlayerID = playerID
+
+                    if PlayerResource:GetConnectionState(playerID) == DOTA_CONNECTION_STATE_CONNECTED then
+                        playerInfo.points = basePoint
+                    else
+                        playerInfo.isDisconnect = true
                     end
-                    if damagereceived > mostDamageReceived then
-                        mostDamageReceived = damagereceived
-                        mostDamageReceivedPlayerID = playerID
+                    -- 参战积分
+                    local teamKills = GetTeamHeroKills(PlayerResource:GetTeam(playerID))
+
+                    print("teamKills", teamKills)
+                    if teamKills > 0 then
+                        local battleParticipation = math.floor(battleParticipationBase * ((kills + assists) / teamKills))
+                        print("battleParticipation", battleParticipation)
+                        playerInfo.points = playerInfo.points + battleParticipation
                     end
-                    if healing > mostHealing then
-                        mostHealing = PlayerResource:GetHealing(playerID)
-                        mostHealingPlayerID = playerID
+                    -- -- find most kill 1st to 6th
+                    -- for i = 1, 6 do
+                    --     if mostKillList[i] == nil then
+                    --         mostKillList[i] = kills
+                    --         mostKillPlayerIDList[i] = playerID
+                    --         break
+                    --     elseif mostKillList[i] < kills then
+                    --         for j = 6, i + 1, -1 do
+                    --             mostKillList[j] = mostKillList[j - 1]
+                    --             mostKillPlayerIDList[j] = mostKillPlayerIDList[j - 1]
+                    --         end
+                    --         mostKillList[i] = kills
+                    --         mostKillPlayerIDList[i] = playerID
+                    --         break
+                    --     end
+                    -- end
+                    -- -- find assist kill 1st to 6th
+                    -- for i = 1, 6 do
+                    --     if mostAssistsList[i] == nil then
+                    --         mostAssistsList[i] = assists
+                    --         mostAssistsPlayerList[i] = playerID
+                    --         break
+                    --     elseif mostAssistsList[i] < assists then
+                    --         for j = 6, i + 1, -1 do
+                    --             mostAssistsList[j] = mostAssistsList[j - 1]
+                    --             mostAssistsPlayerList[j] = mostAssistsPlayerList[j - 1]
+                    --         end
+                    --         mostAssistsList[i] = assists
+                    --         mostAssistsPlayerList[i] = playerID
+                    --         break
+                    --     end
+                    -- end
+
+                    if damagereceived > mostDamageReceived_1 then
+                        mostDamageReceivedPlayerID_2 = mostDamageReceivedPlayerID_1
+                        mostDamageReceived_2 = mostDamageReceived_1
+                        mostDamageReceivedPlayerID_1 = playerID
+                        mostDamageReceived_1 = damagereceived
+                    elseif damagereceived > mostDamageReceived_2 then
+                        mostDamageReceivedPlayerID_2 = playerID
+                        mostDamageReceived_2 = damagereceived
                     end
-                    if assists > mostAssists then
-                        mostAssists = assists
-                        mostAssistsPlayerID = playerID
+
+                    if healing > mostHealing_1 then
+                        mostHealingPlayerID_2 = mostHealingPlayerID_1
+                        mostHealing_2 = mostHealing_1
+                        mostHealingPlayerID_1 = playerID
+                        mostHealing_1 = healing
+                    elseif healing > mostHealing_2 then
+                        mostHealingPlayerID_2 = playerID
+                        mostHealing_2 = healing
                     end
+
+                    if towerKills > mostTowerKill_1 then
+                        mostTowerKillPlayerID_2 = mostTowerKillPlayerID_1
+                        mostTowerKill_2 = mostTowerKill_1
+                        mostTowerKillPlayerID_1 = playerID
+                        mostTowerKill_1 = towerKills
+                    elseif towerKills > mostTowerKill_2 then
+                        mostTowerKillPlayerID_2 = playerID
+                        mostTowerKill_2 = towerKills
+                    end
+
                 end
 
                 data.players[playerID] = playerInfo
@@ -1229,18 +888,41 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
         end
     end
 
+    local pointOne = playerNumber * 1
+    local pointHalf = playerNumber * 0.5
+
     -- add point to most player
-    if mostKillPlayerID ~= -1 then
-        data.players[mostKillPlayerID].points = data.players[mostKillPlayerID].points + playerNumber
+    -- for i = 1, #mostKillPlayerIDList do
+    --     local playerID = mostKillPlayerIDList[i]
+    --     data.players[playerID].points = data.players[playerID].points + playerNumber * (2 - 0.2 * (i - 1))
+    -- end
+    -- for i = 1, #mostAssistsPlayerList do
+    --     local playerID = mostAssistsPlayerList[i]
+    --     data.players[playerID].points = data.players[playerID].points + playerNumber * (2 - 0.2 * (i - 1))
+    -- end
+
+
+    if mostDamageReceivedPlayerID_1 ~= -1 then
+        data.players[mostDamageReceivedPlayerID_1].points = data.players[mostDamageReceivedPlayerID_1].points + pointOne
     end
-    if mostDamageReceivedPlayerID ~= -1 then
-        data.players[mostDamageReceivedPlayerID].points = data.players[mostDamageReceivedPlayerID].points + playerNumber
+    if mostDamageReceivedPlayerID_2 ~= -1 then
+        data.players[mostDamageReceivedPlayerID_2].points = data.players[mostDamageReceivedPlayerID_2].points + pointHalf
     end
-    if mostHealingPlayerID ~= -1 then
-        data.players[mostHealingPlayerID].points = data.players[mostHealingPlayerID].points + playerNumber
+    if mostHealingPlayerID_1 ~= -1 then
+        data.players[mostHealingPlayerID_1].points = data.players[mostHealingPlayerID_1].points + pointOne
     end
-    if mostAssistsPlayerID ~= -1 then
-        data.players[mostAssistsPlayerID].points = data.players[mostAssistsPlayerID].points + playerNumber
+    if mostHealingPlayerID_2 ~= -1 then
+        data.players[mostHealingPlayerID_2].points = data.players[mostHealingPlayerID_2].points + pointHalf
+    end
+    if mostTowerKillPlayerID_1 ~= -1 then
+        data.players[mostTowerKillPlayerID_1].points = data.players[mostTowerKillPlayerID_1].points + pointOne
+    end
+    if mostTowerKillPlayerID_2 ~= -1 then
+        data.players[mostTowerKillPlayerID_2].points = data.players[mostTowerKillPlayerID_2].points + pointHalf
+    end
+    -- filter points
+    for playerID, playerInfo in pairs(data.players) do
+        playerInfo.points = AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
     end
 
     local sTable = "ending_stats"
@@ -1248,6 +930,32 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
     CustomNetTables:SetTableValue(sTable, "player_data", data)
 
     return data
+end
+
+
+function AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
+    local points = playerInfo.points
+
+    if GameRules:IsCheatMode() and not AIGameMode.DebugMode then
+        print("Cheat mode is on, no season point will be given")
+        return 0
+    end
+    if AIGameMode.sumTowerPower <= 6 then
+        print("Tower power is low than 100%, half season point will be given")
+        points = points * 0.5
+    end
+    if AIGameMode.iDesiredDire < 10 then
+        print("DesiredDire bot is less than 10")
+        points = points * AIGameMode.iDesiredDire / 10
+    end
+
+    if GameRules:GetDOTATime(false, true) < 20 * 60 then
+        points = points * 0.5
+    end
+    if winnerTeamId ~= DOTA_TEAM_GOODGUYS then
+        points = points * 0.5
+    end
+    return math.ceil(points)
 end
 
 function AIGameMode:StackToPercentage(iStackCount)
@@ -1278,3 +986,4 @@ function AIGameMode:StackToPercentage(iStackCount)
         return "100%"
     end
 end
+

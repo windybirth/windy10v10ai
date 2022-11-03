@@ -2,7 +2,7 @@ local ____lualib = require("lualib_bundle")
 local __TS__Class = ____lualib.__TS__Class
 local __TS__New = ____lualib.__TS__New
 local __TS__SourceMapTraceBack = ____lualib.__TS__SourceMapTraceBack
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["7"] = 2,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 4,["13"] = 4,["14"] = 11,["15"] = 11,["17"] = 17,["18"] = 18,["19"] = 16,["20"] = 22,["21"] = 22,["22"] = 22,["24"] = 23,["25"] = 26,["26"] = 27,["27"] = 28,["28"] = 29,["29"] = 31,["31"] = 33,["32"] = 33,["33"] = 34,["34"] = 35,["35"] = 36,["36"] = 37,["37"] = 38,["38"] = 39,["39"] = 39,["40"] = 39,["42"] = 39,["43"] = 40,["44"] = 40,["46"] = 33,["49"] = 45,["50"] = 45,["51"] = 45,["52"] = 45,["53"] = 45,["54"] = 45,["55"] = 46,["56"] = 45,["57"] = 45,["58"] = 26});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["7"] = 2,["8"] = 2,["9"] = 2,["10"] = 4,["11"] = 4,["13"] = 4,["14"] = 12,["15"] = 12,["17"] = 19,["18"] = 20,["19"] = 18,["20"] = 24,["21"] = 24,["22"] = 24,["24"] = 27,["25"] = 30,["26"] = 31,["27"] = 32,["28"] = 33,["29"] = 34,["30"] = 35,["32"] = 37,["33"] = 37,["34"] = 38,["35"] = 39,["36"] = 40,["37"] = 41,["38"] = 42,["39"] = 43,["40"] = 43,["41"] = 43,["43"] = 43,["44"] = 44,["45"] = 44,["46"] = 44,["48"] = 44,["49"] = 45,["50"] = 45,["52"] = 37,["55"] = 49,["56"] = 49,["57"] = 49,["58"] = 49,["59"] = 49,["60"] = 49,["61"] = 50,["62"] = 49,["63"] = 49,["64"] = 30,["65"] = 26});
 local ____exports = {}
 local ____api_client = require("api.api_client")
 local ApiClient = ____api_client.ApiClient
@@ -26,6 +26,7 @@ function Game.prototype.SendEndGameInfo(self, endData)
     local gameInfo = __TS__New(GameInfo)
     gameInfo.winnerTeamId = endData.winnerTeamId
     gameInfo.matchId = tostring(GameRules:Script_GetMatchID())
+    gameInfo.version = ____exports.Game.VERSION
     gameInfo.gameOption = endData.gameOption
     do
         local i = 0
@@ -40,8 +41,13 @@ function Game.prototype.SendEndGameInfo(self, endData)
                     ____endData_players_i_points_0 = ____endData_players_i_points_0.points
                 end
                 player.points = ____endData_players_i_points_0
-                local ____gameInfo_players_2 = gameInfo.players
-                ____gameInfo_players_2[#____gameInfo_players_2 + 1] = player
+                local ____endData_players_i_isDisconnect_2 = endData.players[i]
+                if ____endData_players_i_isDisconnect_2 ~= nil then
+                    ____endData_players_i_isDisconnect_2 = ____endData_players_i_isDisconnect_2.isDisconnect
+                end
+                player.isDisconnect = ____endData_players_i_isDisconnect_2
+                local ____gameInfo_players_4 = gameInfo.players
+                ____gameInfo_players_4[#____gameInfo_players_4 + 1] = player
             end
             i = i + 1
         end
@@ -56,4 +62,5 @@ function Game.prototype.SendEndGameInfo(self, endData)
         end
     )
 end
+Game.VERSION = "v1.46"
 return ____exports

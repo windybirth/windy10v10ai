@@ -4,9 +4,11 @@ SKIP_TEAM_SETUP = false                 -- Should we skip the team setup entirel
 ENABLE_AUTO_LAUNCH = true               -- Should we automatically have the game complete team setup after AUTO_LAUNCH_DELAY seconds?
 AUTO_LAUNCH_DELAY = 60                -- How long should the default team selection launch timer be?  The default for custom games is 30.  Setting to 0 will skip team selection.
 LOCK_TEAM_SETUP = false                 -- Should we lock the teams initially?  Note that the host can still unlock the teams
-HERO_SELECTION_TIME = 30.0              -- How long should we let people select their hero?
+HERO_SELECTION_TIME = 45.0              -- How long should we let people select their hero?
 PRE_GAME_TIME = 60.0                     -- How long after people select their heroes should the horn blow and the game start?
 STRATEGY_TIME = 10.0
+SHOWCASE_TIME = 0.0
+GAME_END_DELAY = 30.0                     -- How long should we wait after the game winner is set to display the victory banner and End Screen?  Use -1 to keep the default (about 10 seconds)
 
 RADIANT_PLAYER_COUNT = 10
 DIRE_PLAYER_COUNT = 10
@@ -89,7 +91,6 @@ FOUNTAIN_CONSTANT_MANA_REGEN = -1       -- What should we use for the constant f
 FOUNTAIN_PERCENTAGE_MANA_REGEN = -1     -- What should we use for the percentage fountain mana regen?  Use -1 to keep the default dota behavior.
 FOUNTAIN_PERCENTAGE_HEALTH_REGEN = -1   -- What should we use for the percentage fountain health regen?  Use -1 to keep the default dota behavior.
 
-GAME_END_DELAY = -1                     -- How long should we wait after the game winner is set to display the victory banner and End Screen?  Use -1 to keep the default (about 10 seconds)
 VICTORY_MESSAGE_DURATION = 3            -- How long should we wait after the victory message displays to show the End Screen?  Use
 STARTING_GOLD = 625                     -- How much starting gold should we give to each player?
 DISABLE_DAY_NIGHT_CYCLE = false         -- Should we disable the day night cycle from naturally occurring? (Manual adjustment still possible)
