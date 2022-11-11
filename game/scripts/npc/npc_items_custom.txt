@@ -5904,6 +5904,38 @@
             }
         }
     }
+	//====================================================================================================================
+	// Wizard refresher
+	//====================================================================================================================
+		"item_wizard_refresher"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"                            "9503"
+		"BaseClass"						"item_lua"
+		"ScriptFile"					"items/item_wizard_refresher.lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityTextureName" 			"item_wizard_refresher"
+		"ItemBaseLevel"					"1"
+		"MaxUpgradeLevel"				"1"
+		"ItemCost"						"18500"
+
+		"AbilityCooldown"               "210"
+		"AbilityManaCost"               "500"
+		"AbilitySharedCooldown"			"item_refresher"
+		"ItemRequirements"
+		{
+			"1"                         "item_arcane_octarine_core;item_refresher"
+		}
+
+		"AbilityValues"
+		{
+			"bonus_health"				"1000"
+			"bonus_mana"				"1000"
+			"bonus_allstats"			"30"
+			"cooldown_reduction"		"35"
+		}
+	}
 
     "item_gem"
     {
