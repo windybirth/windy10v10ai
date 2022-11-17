@@ -17,7 +17,7 @@ require('bot/bot_think_item_build')
 require('bot/bot_think_item_use')
 require('bot/bot_think_ability_use')
 require('bot/bot_think_modifier')
-require('api/api_loader')
+require('ts_loader')
 require('damage')
 require('voicePlayer/PlayFuncs')
 require('custom_test_env')
@@ -57,7 +57,7 @@ end
 function AIGameMode:EnterDebugMode()
     print("========Enter Debug Mode========")
     self.DebugMode = true
-    GameRules:SetCustomGameSetupAutoLaunchDelay(30)
+    GameRules:SetCustomGameSetupAutoLaunchDelay(10)
     GameRules:SetHeroSelectionTime(15)
     GameRules:SetPreGameTime(10)
 end
@@ -165,6 +165,9 @@ function AIGameMode:PreGameOptions()
 
     -- 死亡不扣钱
     gameMode:SetLoseGoldOnDeath(LOSE_GOLD_ON_DEATH)
+
+    -- 启用自定义买活
+    gameMode:SetCustomBuybackCostEnabled(true)
 
     -- 每点敏捷提供护甲
     gameMode:SetCustomAttributeDerivedStatValue(DOTA_ATTRIBUTE_AGILITY_ARMOR, 0.143)

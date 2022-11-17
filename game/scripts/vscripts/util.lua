@@ -1,3 +1,16 @@
+function TsPrint(_, s)
+	if not AIGameMode.DebugMode then
+		return
+	end
+	GameRules:SendCustomMessage(s, DOTA_TEAM_GOODGUYS, 0)
+end
+function TsPrintTable(_, t, indent, done)
+	if not AIGameMode.DebugMode then
+		return
+	end
+	PrintTable(t, indent, done)
+end
+
 function Printf(pattern, ...)
 	if not AIGameMode.DebugMode then
 		return
@@ -105,6 +118,9 @@ function SetMember (list)
 	for _, l in ipairs(list) do set[l] = {enable=1, expireDateString="获取失败"} end
 	return set
 end
+function TsLifeStealOnAttackLanded (_, params, iLifeSteal, hHero, hAbility)
+	LifeStealOnAttackLanded (params, iLifeSteal, hHero, hAbility)
+end
 
 function LifeStealOnAttackLanded (params, iLifeSteal, hHero, hAbility)
 	if IsServer() then
@@ -177,5 +193,22 @@ function GetFullCastRange(hHero, hAbility)
 	return hAbility:GetCastRange(hHero:GetOrigin(), nil) + hHero:GetCastRangeBonus()
 end
 
+function GetBuyBackCost(playerId)
+	local hHero = PlayerResource:GetSelectedHeroEntity(playerId)
+	local iNetWorth = PlayerResource:GetNetWorth(playerId)
+	local level = hHero:GetLevel()
+	local cost = math.floor(200 + iNetWorth / 20)
+	cost = math.min(cost, 50000)
+	-- Printf("计算买活金钱: %d, 玩家id: %d", cost, hHero:GetPlayerID())
+	return cost
+end
 
-
+function SelectEveryValidPlayerDoFunc(func)
+	-- type func = void function(playerID)
+	for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
+		if PlayerResource:IsValidPlayerID(playerID) and PlayerResource:IsValidPlayer(playerID) and
+				PlayerResource:GetSelectedHeroEntity(playerID) then
+			func(playerID)
+		end
+	end
+end
