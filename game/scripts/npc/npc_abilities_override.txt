@@ -6387,8 +6387,9 @@
 			{
 				"var_type"					"FIELD_INTEGER"
 				"move_speed_bonus_pct"		"15 30 45 60 75"
-				"skeleton_archer_count"	"0"
+				"clinkz_skeleton_archer_count"	"0"
 				"shard_skeleton_archer_count" "0"
+			}
 		}
 	}
 	"clinkz_burning_army"
