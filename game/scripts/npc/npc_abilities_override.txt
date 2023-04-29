@@ -4607,7 +4607,6 @@
 	{
 		"MaxLevel" "5"
 		"AbilitySpecial"
-		"AbilitySpecial"
 		{
 			"01"
 			{
