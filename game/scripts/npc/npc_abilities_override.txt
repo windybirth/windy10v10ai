@@ -2878,7 +2878,7 @@
 			}
 			"reward_damage"
 			{
-				"value"			"10 20 30"
+				"value"			"10 30 50"
 				"LinkedSpecialBonus"	"special_bonus_unique_legion_commander"
 			}
 			"victory_range"			"600"
@@ -5455,8 +5455,8 @@
 			}
 			"mana_void_damage_per_mana"
 			{
-				"value"				"1.0 1.5 2.0 2.5"
-				"special_bonus_unique_antimage_6"	"+0.5"
+				"value"				"0.8 1.1 1.4 1.7"
+				"special_bonus_unique_antimage_6"	"+0.3"
 			}
 			"mana_void_ministun"
 			{
@@ -6005,6 +6005,7 @@
 	//=================================================================================================================
 	"faceless_void_time_walk"
 	{
+		"AbilityManaCost"				"80"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"15 12 9 6 4"
 		"AbilitySpecial"
@@ -6088,7 +6089,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"80000"
+				"value"				"1800"
 				"ad_linked_abilities"			"faceless_void_chronosphere"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -6289,7 +6290,7 @@
 				}
 				"healing_ward_hits_to_kill_tooltip"
 				{
-					"value" "1"
+					"value" "999"
 					"special_bonus_unique_juggernaut_2" "+999"
 				}
 		}
@@ -11631,7 +11632,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"1075 1150 1225 1300 1375"
-		"AbilityCooldown"				"10.5 8.0 5.5 3.0 0.5"
+		"AbilityCooldown"				"6.5 5.5 4.5 3.5 2.5"
 		"AbilityValues"
 		{
 				"min_blink_range"		"200"
