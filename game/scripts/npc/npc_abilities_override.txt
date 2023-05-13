@@ -6006,7 +6006,7 @@
 	"faceless_void_time_walk"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15 12 9 6 3"
+		"AbilityCooldown"				"15 12 9 6 4"
 		"AbilitySpecial"
 		{
 			"02"
