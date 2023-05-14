@@ -8430,13 +8430,13 @@
 	"terrorblade_metamorphosis"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"80.0"
+		"AbilityCooldown"				"160.0"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"35 40 45 50 55"
+				"duration"				"30 32 34 36 38"
 				"LinkedSpecialBonus"	"special_bonus_unique_terrorblade_3"
 			}
 			"03"
@@ -8447,12 +8447,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_range"			"600 800 1000 1200 1500"
+				"bonus_range"			"300 500 700 900 1200"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_attack_range"			"750 950 1150 1350 1650"
+				"tooltip_attack_range"			"350 650 850 1050 1350"
 			}
 			"06"
 			{
@@ -8482,7 +8482,7 @@
 	"terrorblade_sunder"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"20.0 20.0 20.0 20.0"
+		"AbilityCooldown"				"20.0 20.0 20.0 15.0"
 		"AbilityManaCost"				"200 200 200 200"
 		"AbilityCastRange"				"80000"
 		"AbilityCastPoint"				"0.35"
