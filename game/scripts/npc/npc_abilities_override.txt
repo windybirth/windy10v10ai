@@ -10115,17 +10115,17 @@
 	}
 	"enigma_black_hole"
 	{
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"500"
 		"AbilityCastPoint"				"0.3 0.3 0.3"
 		"AbilityChannelTime"			"6.0"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"80"
-		"AbilityManaCost"				"500 600 700 800 900"
+		"AbilityCooldown"				"100"
+		"AbilityManaCost"				"500 600 700 900 1200"
 		"AbilityValues"
 		{
-			"radius"			"750"
+			"radius"			"650"
 			"damage"
 			{
 				"value"		"100 150 200 250 300"
@@ -10133,7 +10133,7 @@
 			}
 			"scepter_pct_damage"
 			{
-				"value"					"6"
+				"value"					"4.5"
 				"RequiresScepter"		"1"
 			}
 		}
