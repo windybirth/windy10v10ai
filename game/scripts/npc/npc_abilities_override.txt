@@ -11861,7 +11861,7 @@
 	"shadow_demon_shadow_poison"
 	{
 		"AbilityDuration"				"20"
-		"AbilityCooldown"				"1.5"
+		"AbilityCooldown"				"2.5"
 		"MaxLevel" "5"
 		"AbilitySpecial"
 		{
