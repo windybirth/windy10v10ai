@@ -2031,13 +2031,13 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_per_second"		"60 100 140 180 220"
+				"damage_per_second"		"40 70 100 130 160"
 				"LinkedSpecialBonus"	"special_bonus_unique_doom_4"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"1800"
+				"radius"				"900"
 			}
 			"03"
 			{
@@ -2088,7 +2088,7 @@
 			"06"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"shard_bonus_stun_duration"		"3.5"
+				"shard_bonus_stun_duration"		"3.0"
 				"RequiresShard"					"1"
 			}
 			"07"
@@ -6027,7 +6027,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"dodge_chance_pct"		"10 20 30 40 50"
+				"dodge_chance_pct"		"20 25 30 35 40"
 
 			}
 		}
@@ -6039,7 +6039,7 @@
 		"AbilityDraftPreAbility"		"faceless_void_backtrack"
 		"AbilityValues"
 		{
-				"chance_pct"			"10 20 30 40 50"
+				"chance_pct"			"12 18 24 30 36"
 				"bonus_damage"
 				{
 					"value"				"20 40 60 80 100"
@@ -6077,7 +6077,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"300"
+				"bonus_attack_speed"	"950"
 				"LinkedSpecialBonus"	"special_bonus_unique_faceless_void"
 			}
 		}
