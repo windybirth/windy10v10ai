@@ -12608,7 +12608,7 @@
 				"AbilityChargeRestoreTime"
 				{
 					"value"			"24 21 18 16"
-					"special_bonus_unique_void_spirit_1"	"-6"
+					"special_bonus_unique_void_spirit_1"	"-4"
 				}
 				"min_travel_distance"	"200"
 				"max_travel_distance"	"800 1700 2600 3500"
@@ -12635,12 +12635,12 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"base_absorb_amount"	"700 900 1100 1300 1500"
+				"base_absorb_amount"	"350 450 550 650 750"
 			}
 			"06"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"absorb_per_hero_hit"	"480 560 640 720 850"
+				"absorb_per_hero_hit"	"180 260 340 420 500"
 			}
 		}
 	}
