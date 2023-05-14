@@ -2825,13 +2825,13 @@
 	"legion_commander_press_the_attack"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12 11 10 9 8"
+		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilitySpecial"
 		{
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"move_speed"			"10 20 30 40 50"
+				"move_speed"			"10 14 18 22 26"
 			}
 			"03"
 			{
@@ -2844,7 +2844,7 @@
 	"legion_commander_moment_of_courage"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"1.3 1.0 0.7 0.4 0.1"
+		"AbilityCooldown"				"1.0 1.0 1.0 0.5 0.1"
 		"AbilityValues"
 		{
 			"trigger_chance"
@@ -2870,10 +2870,10 @@
 		"AbilityModifierSupportValue"	"3.0"
 		"AbilityValues"
 		{
-			"duration"				"600"
+			"duration"				"10 20 30 40"
 			"duration_scepter"
 			{
-				"value"			"600"
+				"value"			"30 40 50 60"
 				"RequiresScepter"	"1"
 			}
 			"reward_damage"
