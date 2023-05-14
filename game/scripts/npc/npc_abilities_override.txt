@@ -8442,7 +8442,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"base_attack_time"		"0.8"
+				"base_attack_time"		"1.2"
 			}
 			"04"
 			{
