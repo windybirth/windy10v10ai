@@ -8430,7 +8430,7 @@
 	"terrorblade_metamorphosis"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"160.0"
+		"AbilityCooldown"				"170.0"
 		"AbilitySpecial"
 		{
 			"01"
@@ -8442,7 +8442,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"base_attack_time"		"1.2"
+				"base_attack_time"		"1.25"
 			}
 			"04"
 			{
@@ -8452,7 +8452,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_attack_range"			"350 650 850 1050 1350"
+				"tooltip_attack_range"			"450 650 850 1050 1350"
 			}
 			"06"
 			{
