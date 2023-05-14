@@ -7181,8 +7181,8 @@
 		{
 			"presence_armor_reduction"
 			{
-				"value"		"-5 -10 -15 -20 -25"
-				"special_bonus_unique_nevermore_5"			"-10"
+				"value"		"-4 -7 -10 -13 -16"
+				"special_bonus_unique_nevermore_5"			"-4"
 			}
 		}
 	}
