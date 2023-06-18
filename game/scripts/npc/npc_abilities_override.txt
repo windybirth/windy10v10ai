@@ -12766,6 +12766,7 @@
 	"tinker_laser"
 	{
 		"MaxLevel" "5"
+		"AbilityCastRange"				"950"
 		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityManaCost"				"110 130 150 170 190"
 		"AbilitySpecial"
@@ -12843,6 +12844,10 @@
 		{
 			"damage"					"100"
 		}
+	}
+	"tinker_rearm"
+	{
+		"AbilityChannelTime"				"2.40 1.60 0.80"
 	}
 	//=================================================================================================================
 	// Ability: Visage 维萨吉/死灵龙
