@@ -9890,25 +9890,25 @@
 	}
 	"dazzle_shadow_wave"
 	{
-		"MaxLevel" "7"
-		"AbilityCooldown"				"13 12 11 10 9 8 7"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"12 11 10 9 8"
 		"AbilityManaCost"				"90"
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"max_targets"		"3 4 5 6 7 8 9"
+				"max_targets"		"4 5 6 7 8"
 			}
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"tooltip_max_targets_inc_dazzle"		"4 5 6 7 8 9 10"
+				"tooltip_max_targets_inc_dazzle"		"5 6 7 8 9"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"80 100 120 140 160 180 200"
+				"damage"				"100 120 140 160 180"
 				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_2"
 			}
 		}
@@ -9928,7 +9928,9 @@
 	"dazzle_bad_juju"
 	{
 		"MaxLevel" "4"
-		"AbilityHealthCost"				"75 100 125 150"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCooldown"				"3"
+		"AbilityHealthCost"				"0 0 0"
 		"AbilityValues"
 		{
 			"armor_reduction"
@@ -9937,9 +9939,12 @@
 				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_4"
 			}
 			"duration"					"8 10 12 14"
+
 			"cooldown_reduction"			"4 5 6 7"
-			"cooldown_reduction_items" 		"3 4 5 6"
-			"mana_cost_increase_duration"	"30 25 20 15"
+			"cooldown_reduction_items" 		"4 5 6 7"
+			"mana_cost_increase_pct"		"0"
+			"mana_cost_increase_duration"	"30 25 20"
+			"max_stacks"					"15"
 		}
 	}
 	"special_bonus_unique_dazzle_4"
@@ -9957,6 +9962,11 @@
 	"dazzle_good_juju"
 	{
 		"MaxLevel" "4"
+		"LinkedAbility"					"dazzle_bad_juju"
+		"HasScepterUpgrade"				"1"
+		"AbilityCastPoint"				"0.2"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastRange"				"250"
 		"AbilityValues"
 		{
 				"cooldown_reduction"		"1 1.5 2 2.5"
@@ -9966,7 +9976,7 @@
 					"RequiresScepter"	"1"
 				}
 				"scepter_mana_cost"			"250"
-				"scepter_cooldown"			"120"
+				"scepter_cooldown"			"180"
 		}
 	}
 	//=================================================================================================================

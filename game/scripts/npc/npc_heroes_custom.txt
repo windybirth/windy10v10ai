@@ -1014,8 +1014,7 @@
 	"npc_dota_hero_dazzle"
 	{
 		"Ability4"		"dazzle_weave"
-		"Bot"
-		{
+		"Ability7"      "dazzle_good_juju"
 			"Build"
 			{
                 "1"		"dazzle_poison_touch"
