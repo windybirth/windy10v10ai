@@ -1015,6 +1015,8 @@
 	{
 		"Ability4"		"dazzle_weave"
 		"Ability7"      "dazzle_good_juju"
+		"Bot"
+		{
 			"Build"
 			{
                 "1"		"dazzle_poison_touch"
