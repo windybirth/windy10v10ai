@@ -8409,7 +8409,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"18 23 28 33 38"
+				"bonus_damage"			"20 30 40 50 60"
 				"LinkedSpecialBonus"		"special_bonus_unique_spectre_2"
 			}
 			"02"
@@ -8439,6 +8439,7 @@
 		"HasScepterUpgrade"			    "1"
 		"AbilityDraftPreAbility"		    "spectre_reality"
         "AbilityDraftUltScepterAbility"		"spectre_haunt_single"
+		"RequiredLevel"					"30"
 		"AbilitySpecial"
 		{
 			"01"
