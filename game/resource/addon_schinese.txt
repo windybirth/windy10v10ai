@@ -963,20 +963,6 @@
         "DOTA_Tooltip_modifier_spectre_ursa_enrage" "斗战胜佛"
         "DOTA_Tooltip_modifier_spectre_ursa_enrage_Description"	"获得%dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%%承受伤害减少和%dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%%状态抗性"
 
-		// 大圣 monkey
-		"DOTA_Tooltip_Ability_monkey_king_immortal_secret"                                              "不朽之谜"
-        "DOTA_Tooltip_ability_monkey_king_immortal_secret_Description"                                          "被激活时孙悟空与自然合一.<br><br>另外被动当孙悟空受到致命伤害时，他会在短时间内变得无敌，并在效果后恢复其最大生命值的百分比."
-        "DOTA_Tooltip_ability_monkey_king_immortal_secret_hit_count"                            "攻击次数:"
-        "DOTA_Tooltip_ability_monkey_king_immortal_secret_immortal_duration"                            "不朽持续时间:"
-        "DOTA_Tooltip_ability_monkey_king_immortal_secret_immortal_regen_pct"                           "%不朽回复:"
-        "DOTA_Tooltip_ability_monkey_king_immortal_secret_immortal_cooldown"                            "不朽冷却:"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret"                             "不朽"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret_Description"                 "你是不朽的"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret_buff"                                "不朽之力"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret_buff_Description"                    "你很强壮"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret_cooldown"                                    "不朽冷却"
-        "DOTA_Tooltip_modifier_monkey_king_immortal_secret_cooldown_Description"                        "不朽正在冷却"
-
         // 剧毒
         "DOTA_Tooltip_ability_special_bonus_unique_venomancer_201"  "+{s:bonus_damage} 毒刺伤害"
 
