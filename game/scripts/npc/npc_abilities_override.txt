@@ -6415,7 +6415,7 @@
 	"hoodwink_acorn_shot"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12 10 8 6 4"
+		"AbilityCooldown"				"11 10 9 8 7"
 		"AbilityManaCost"				"75 85 95 105 115"
 		"AbilitySpecial"
 		{
@@ -8260,9 +8260,10 @@
 	"sniper_assassinate"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"30 25 20 15 10"
+		"AbilityCooldown"				"30 24 16 8 4"
 		"AbilityDamage"					"350 500 650 800 950"
 		"AbilityManaCost"				"175 225 275 325 375"
+		"AbilityCastRange"				"3000 4000 5000 6000 80000"
 		"AbilityValues"
 		{
 				"projectile_speed"			"2500 2500 2500"
