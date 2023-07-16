@@ -467,7 +467,7 @@
 
 	"npc_dota_hero_rubick"
 	{
-		"Ability3" "tinker_rearm"
+		"Ability3" "tinker_rearm_lua"
 		"Ability8"		"rubick_arcane_supremacy"
 		"Ability20"		"rubick_null_field"
 	}
