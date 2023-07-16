@@ -2311,6 +2311,12 @@
 			}
 		}
 	}
+	"npc_dota_hero_hoodwink"
+	{
+		"Ability15"					"special_bonus_unique_hoodwink_acorn_shot_charges"
+		"Ability16"					"special_bonus_corruption_4"
+		"Ability17"					"special_bonus_unique_hoodwink_bushwhack_radius"
+	}
 	"npc_dota_hero_silencer"
 	{
 		"override_hero"		"npc_dota_hero_silencer"
