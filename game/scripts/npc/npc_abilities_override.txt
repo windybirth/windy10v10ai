@@ -9245,18 +9245,18 @@
 	"weaver_geminate_attack"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"8 4 2 1 0.5"
+		"AbilityCooldown"				"6 5 4 3 2"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"delay"			"0.25"
+				"delay"			"0.10"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_attack"			"3"
+				"tooltip_attack"			"1"
 				"LinkedSpecialBonus"	"special_bonus_unique_weaver_5"
 			}
 			"03"
@@ -9278,6 +9278,19 @@
 			}
 		}
 	}
+	"special_bonus_unique_weaver_5"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"4"
+				"ad_linked_abilities"			"weaver_geminate_attack"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+
 	"special_bonus_unique_weaver_2"
 	{
 		"AbilitySpecial"
@@ -9699,7 +9712,7 @@
 	"dark_willow_shadow_realm"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"20 18 16 14 12"
+		"AbilityCooldown"				"19 17 15 13 11"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilitySpecial"
 		{

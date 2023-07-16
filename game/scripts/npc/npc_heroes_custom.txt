@@ -1654,6 +1654,9 @@
 
 	"npc_dota_hero_weaver"
 	{
+		"Ability15"		"special_bonus_unique_weaver_5"
+		"Ability16"		"special_bonus_unique_weaver_6"
+		"Ability17"		"special_bonus_unique_weaver_3"
 		"AttackRange"		"850"
 	}
 
