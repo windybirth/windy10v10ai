@@ -6415,25 +6415,49 @@
 	"hoodwink_acorn_shot"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"16 14 12 10 8"
+		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"75 85 95 105 115"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_range"			"125 200 275 350 425"
+				"bonus_range"			"300 400 500 600 700"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"acorn_shot_damage"		"50 75 100 125 150"
+				"acorn_shot_damage"		"150 200 250 300 350"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"base_damage_pct"		"100"
+				"CalculateSpellDamageTooltip"	"1.0"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bounce_count"			"2 3 4 5 6"
+				"bounce_count"			"4 6 8 10 12"
 				"LinkedSpecialBonus"		"special_bonus_unique_hoodwink_sharpshooter_speed"
+			}
+		}
+	}
+	"special_bonus_unique_hoodwink_acorn_shot_charges"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"9509"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"value"							"4"
+				"ad_linked_abilities"			"hoodwink_acorn_shot"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -6445,8 +6469,8 @@
 		{
 			"trap_radius"
 			{
-				"value"		"265"
-				"special_bonus_unique_hoodwink_bushwhack_radius"	"+135"
+				"value"		"400"
+				"special_bonus_unique_hoodwink_bushwhack_radius"	"+255"
 			}
 			"debuff_duration"		"1.25 1.5 1.75 2.0 2.25"
 			"projectile_speed"	"1200"
@@ -6468,8 +6492,8 @@
 	"hoodwink_sharpshooter"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"45 40 35 30"
-		"AbilityManaCost"				"125 175 225 275"
+		"AbilityCooldown"				"30 25 20 15 5"
+		"AbilityManaCost"				"125 175 225 275 325"
 		"AbilitySpecial"
 		{
 			"06"
@@ -10927,7 +10951,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tower_bonus"			"1.5"
+				"tower_bonus"			"1.0"
 			}
 		}
 	}
@@ -11000,7 +11024,7 @@
         "MaxLevel" "5"
 		"AbilityValues"
 		{
-				"mana_cost_per_second"	"25 45 65 85 105"
+				"mana_cost_per_second"	"25 50 75 135 195"
 				"radius"				"1050"
 				"damage"
 				{
@@ -11010,12 +11034,12 @@
 				"damage_resistance"
 				{
 					"value"			"0"
-					"special_bonus_unique_leshrac_4"	"+33"
+					"special_bonus_unique_leshrac_4"	"+30"
 				}
 				"bonus_movespeed"
 				{
 					"value"			"0"
-					"special_bonus_unique_leshrac_7"	"+33"
+					"special_bonus_unique_leshrac_7"	"+30"
 				}
 		}
 	}
