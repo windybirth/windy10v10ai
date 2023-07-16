@@ -467,6 +467,8 @@
 
 	"npc_dota_hero_rubick"
 	{
+		"Ability3" "tinker_rearm"
+		"Ability8"		"rubick_arcane_supremacy"
 		"Ability20"		"rubick_null_field"
 	}
 
@@ -1655,8 +1657,21 @@
 			}
 		}
 	}
+
+	"npc_dota_hero_phoenix"
+	{
+		"Ability5" "tinker_rearm"
+	}
+
+	"npc_dota_hero_weaver"
+	{
+		"AttackRange"		"850"
+	}
+
 	"npc_dota_hero_medusa"
 	{
+		"Ability15"		"special_bonus_unique_medusa_4"
+		"Ability17"		"special_bonus_unique_medusa"
 		"Bot"
 		{
 			"Build"
@@ -2053,6 +2068,8 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
+		"VisionDaytimeRange"		"2500"
+		"VisionNighttimeRange"		"2500"
 		"Bot"
 		{
 			"Build"
@@ -2786,6 +2803,8 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
+		"AttackRate"		"1.300000"
+		"AttackRange"		"800"
 		"Bot"
 		{
 			"Build"
