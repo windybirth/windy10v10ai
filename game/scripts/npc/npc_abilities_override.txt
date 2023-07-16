@@ -3632,10 +3632,10 @@
 			}
 			"base_damage"
 			{
-				"value"		"70 100 130 160 190"
-				"special_bonus_unique_omniknight_4"	"+110"
+				"value"		"70 90 110 130 150"
+				"special_bonus_unique_omniknight_4"	"+75"
 			}
-			"bonus_damage"	"70 100 150 200 250"
+			"bonus_damage"	"70 100 130 160 190"
 			"duration"	"5"
 			"movement_slow"				"15 25 40 60 80"
 
@@ -3693,7 +3693,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_str"		"10 25 50 75 100"
+				"bonus_str"		"10 25 40 55 70"
 			}
 			"04"
 			{
@@ -3922,6 +3922,7 @@
 		"MaxLevel" "4"
 		"AbilityCooldown"				"90"
 		"AbilityManaCost"				"150 200 250 300"
+		"AbilityDuration"				"4.0"
 		"AbilitySpecial"
 		{
 			"01"
@@ -3932,7 +3933,7 @@
 			"02"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"damage_per_sec"	"60 90 120 180"
+				"damage_per_sec"	"120 180 240 360"
 			}
 
 			"03"
@@ -3944,13 +3945,13 @@
 			"04"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"max_hero_attacks"	"6 12 16 20"
+				"max_hero_attacks"	"12 16 20 24"
 				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
 			}
 			"05"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"max_hero_attacks_scepter"	"7 14 21 35"
+				"max_hero_attacks_scepter"	"14 21 28 35"
 				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
 				"RequiresScepter"	"1"
 			}
@@ -4524,11 +4525,11 @@
 		"AbilityCooldown"				"24 22 20 18 16"
 		"AbilityValues"
 		{
-				"bonus_speed"					"25 35 45 60 75"
+				"bonus_speed"					"25 30 35 45 55"
 				"puddle_regen"
 				{
-					"value"						"10 20 30 40 50"
-					"special_bonus_scepter"		"+50"
+					"value"						"10 15 25 35 45"
+					"special_bonus_scepter"		"+45"
 				}
 				"puddle_armor"
 				{
@@ -4543,7 +4544,7 @@
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
-			    "crush_radius"				"750"
+			    "crush_radius"				"600"
 				"crush_extra_slow"
 				{
 					"value"	"-20 -25 -30 -35 -40"
@@ -4583,12 +4584,12 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"1.6"
+				"duration"				"1.2"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_count"			"1"
+				"attack_count"			"2"
 			}
 		}
 	}
@@ -4612,8 +4613,8 @@
 		{
 			"armor_reduction"
 			{
-				"value"				"-15 -25 -35 -45 -60"
-				"special_bonus_unique_slardar_5"	"-5"
+				"value"				"-10 -15 -20 -25 -35"
+				"special_bonus_unique_slardar_5"	"-10"
 			}
 			"duration"
 			{
@@ -4621,7 +4622,7 @@
 			}
 			"puddle_radius"
 			{
-				"value"			"350"
+				"value"			"200"
 			}
 			"puddle_duration"
 			{
@@ -7662,6 +7663,7 @@
 		"MaxLevel" "5"
 		"AbilityCastRange"				"800 900 1000 1100 1200"
 		"AbilityManaCost"				"30 35 40 45 50"
+		"AbilityCooldown"				"4"
 		"AbilityValues"
 		{
 			"move_slow"					"-50"
@@ -7729,13 +7731,13 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_chance"				"80 40 20 10 1"
+				"crit_chance"				"30 20 15 10 1"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_2"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit_bonus"				"200 400 600 800 3200"
+				"crit_bonus"				"200 350 500 800 3200"
 			}
 		}
 	}
@@ -8367,7 +8369,7 @@
 		{
 			"instances"
 			{
-				"value"						"5 7 9 12 15"
+				"value"						"4 7 10 13 16"
 				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin"
 			}
 			"bonus_damage"
@@ -8386,20 +8388,12 @@
 	}
 	"special_bonus_unique_templar_assassin"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"6071"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
+				"value"				"8"
 				"ad_linked_abilities"			"templar_assassin_refraction"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -8419,27 +8413,19 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"-5 -7 -9 -12 -15"
+				"bonus_armor"				"-5 -7 -9 -11 -13"
 				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin_2"
 			}
 		}
 	}
 	"special_bonus_unique_templar_assassin_2"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"					"6545"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"-15"
+				"value"				"-7"
 				"ad_linked_abilities"			"templar_assassin_meld"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -8452,7 +8438,7 @@
 		{
 				"bonus_attack_range"
 				{
-					"value"		"160 220 280 340 400"
+					"value"		"100 150 200 250 300"
 					"special_bonus_unique_templar_assassin_8"	"+150"
 				}
 				"attack_spill_range"
@@ -8460,7 +8446,7 @@
 					"value"							"550 650 750 850 950"
 					"special_bonus_unique_templar_assassin_8"	"+200"
 				}
-				"attack_spill_width"		"135"
+				"attack_spill_width"		"120"
 				"attack_spill_pct"			"133"
 				"attack_spill_penalty"			"10"
 		}
@@ -9223,18 +9209,18 @@
 	"weaver_geminate_attack"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"8 6.5 5 3.5 2"
+		"AbilityCooldown"				"8 4 2 1 0.5"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"delay"			"0.15"
+				"delay"			"0.25"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"tooltip_attack"			"5"
+				"tooltip_attack"			"3"
 				"LinkedSpecialBonus"	"special_bonus_unique_weaver_5"
 			}
 			"03"
@@ -11993,8 +11979,9 @@
 	}
 	"rubick_spell_steal"
 	{
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"MaxLevel" "4"
-		"AbilityCooldown"				"12 8 4 1"
+		"AbilityCooldown"				"8 4 2 1"
 		"AbilitySpecial"
 		{
 			"01"
@@ -12005,7 +11992,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"stolen_debuff_amp"			"25 50 75 100"
+				"stolen_debuff_amp"			"20 30 40 50"
 			}
 		}
 	}
