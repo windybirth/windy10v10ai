@@ -8232,8 +8232,8 @@
 			}
 			"knockback_distance"
 			{
-				"value"					"10 12 14 16 "
-				"special_bonus_unique_sniper_3"			"+34"
+				"value"					"10 12 14 16 18"
+				"special_bonus_unique_sniper_3"			"+32"
 			}
 		}
 	}
@@ -13043,7 +13043,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"15"
-		"AbilityDuration"				"4 4.5 5 5.5 6"
+		"AbilityDuration"				"4 5 6 7 8"
 		"AbilityValues"
 		{
 			"enemy_movespeed_bonus_pct"

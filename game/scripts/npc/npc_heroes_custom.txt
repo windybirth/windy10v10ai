@@ -1654,6 +1654,7 @@
 
 	"npc_dota_hero_weaver"
 	{
+		"Ability12"		"special_bonus_mana_break_100"
 		"Ability15"		"special_bonus_unique_weaver_5"
 		"Ability16"		"special_bonus_unique_weaver_6"
 		"Ability17"		"special_bonus_unique_weaver_3"
@@ -2461,6 +2462,7 @@
 	"npc_dota_hero_sniper"
 	{
 		"Ability5"		"sniper_assassinate_upgrade"
+		"MovementSpeed"		"550"
 		"Bot"
 		{
 			"Build"
