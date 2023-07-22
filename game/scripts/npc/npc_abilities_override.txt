@@ -10413,7 +10413,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"8"
+				"value"					"16"
 				"special_bonus_unique_invoker_9"	"-8"
 			}
 			"duration"
@@ -10438,7 +10438,7 @@
 	}
 	"invoker_ghost_walk"
 	{
-		"AbilityCooldown"				"24"
+		"AbilityCooldown"				"10"
 	}
 	"invoker_tornado"
 	{
