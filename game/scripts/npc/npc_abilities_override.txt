@@ -10525,6 +10525,13 @@
 	"invoker_ice_wall"
 	{
 		"AbilityCooldown"				"10"
+		"AbilityValues"
+		{
+			"wall_place_distance"	"200"
+			"num_wall_elements"		"15"
+			"wall_element_spacing"	"160"
+			"wall_element_radius"	"210"
+		}
 	}
 	"invoker_deafening_blast"
 	{
