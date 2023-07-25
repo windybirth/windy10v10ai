@@ -3660,7 +3660,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"status_resistance"		"35"
+				"status_resistance"		"15"
 			}
 			"03"
 			{
