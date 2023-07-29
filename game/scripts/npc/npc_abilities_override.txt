@@ -5180,7 +5180,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"4"
+				"value"				"3"
 				"ad_linked_abilities"			"tiny_avalanche"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -5280,20 +5280,31 @@
 	"tiny_toss_tree"
 	{
 		"AbilityCastRange"				"2400"
-		"AbilityCastPoint"				"0"
+		"AbilityCastPoint"				"0.1"
 		"AbilityValues"
 		{
-				"speed"		"900.0"
-				"range"		"1500"
-				"bonus_damage"
-				{
-					"value"				"33"
-					"CalculateSpellDamageTooltip"	"1"
-				}
-				"splash_radius"				"400"
-				"movement_slow"				"100"
-				"slow_duration"				"5"
-
+			"speed"		"900.0"
+			"range"		"1500"
+			"bonus_damage"
+			{
+				"value"				"33"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"splash_radius"				"400"
+			"movement_slow"				"100"
+			"slow_duration"				"5"
+		}
+	}
+	"special_bonus_unique_tiny_2"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"4"
+				"ad_linked_abilities"			"tiny_toss"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
 	//=================================================================================================================
@@ -6121,9 +6132,16 @@
 				"value"										"80 120 160 200 240"
 			}
 			"agility_multiplier"							"30 40 60 80 100"
-			"split_range"									"0"
+			"agility_range"									"99999"
+			"agility_multiplier_ally"						"100"
+			"split_range"									"400"
 			"split_damage_reduction"						"0"
-
+			"disable_range"									"0"
+			"split_count"
+			{
+				"value"										"3"
+				"special_bonus_scepter"						"1"
+			}
 		}
 	}
 	//=================================================================================================================
@@ -7158,7 +7176,7 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"morph_cooldown"		"0.1 0.1 0.05 0.05 0.05"
+			"morph_cooldown"		"0.1 0.1 0.05 0.025 0.01"
 			"morph_rate_tooltip"	"10 20 40 80 160"
 			"mana_cost"
 			{
@@ -7173,7 +7191,7 @@
 		"AbilityValues"
 		{
 			"points_per_tick"		"1"
-			"morph_cooldown"		"0.1 0.1 0.05 0.05 0.05"
+			"morph_cooldown"		"0.1 0.1 0.05 0.025 0.01"
 			"morph_rate_tooltip"	"10 20 40 80 160"
 			"mana_cost"				"0"
 			"castable_while_stunned"
@@ -7193,7 +7211,7 @@
 		{
 			"duration"
 			{
-				"value"						"34"
+				"value"						"24"
 				"LinkedSpecialBonus"		"special_bonus_unique_morphling_8"
 			}
             "scepter_stat_steal"
@@ -7214,6 +7232,11 @@
 			"scepter_status_resist"
 			{
 				"value"						"75"
+				"RequiresScepter"			"1"
+			}
+			"scepter_additional_stats"
+			{
+				"value"						"25"
 				"RequiresScepter"			"1"
 			}
 			"scepter_cooldown_reduction"
