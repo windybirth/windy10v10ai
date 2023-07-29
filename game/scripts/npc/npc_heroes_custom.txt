@@ -1132,7 +1132,7 @@
 	}
 	"npc_dota_hero_drow_ranger"
 	{
-		"MovementSpeed" "550"
+		"MovementSpeed" "350"
 		"Bot"
 		{
 			"Build"
@@ -1241,6 +1241,7 @@
 	}
 	"npc_dota_hero_furion"
 	{
+		"AttackRange" "850"
 		"Bot"
 		{
 			"Build"
@@ -2938,7 +2939,7 @@
 	}
 	"npc_dota_hero_zuus"
 	{
-		"Ability7" "zuus_static_field"
+		"Ability8" "zuus_static_field"
 		"Bot"
 		{
 			"Build"
