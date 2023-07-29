@@ -456,6 +456,7 @@
 
 	"npc_dota_hero_naga_siren"
 	{
+		"MovementSpeed"		"444"
 		"Ability5"		"naga_siren_crit"
 	}
 
@@ -468,6 +469,13 @@
 	"npc_dota_hero_rubick"
 	{
 		"Ability20"		"rubick_null_field"
+	}
+
+	"npc_dota_hero_enchantress"
+	{
+		"AttackRate" "1.4"
+		"AttackRange" "850"
+		"MovementSpeed"		"400"
 	}
 
 	"npc_dota_hero_slark"
@@ -1166,6 +1174,21 @@
 				"36"		"drow_ranger_multishot"
 			}
 		}
+	}
+	"npc_dota_hero_puck"
+	{
+		"AttributeBaseAgility"		"50"
+		"AttributeAgilityGain"		"3.5"
+		"MovementSpeed"		"350"
+		"AttackAcquisitionRange"		"1200"
+		"Ability10"		"special_bonus_unique_puck_orb_damage"
+		"Ability14"		"special_bonus_unique_puck_7"
+		"Ability12"		"special_bonus_unique_puck"
+		"Ability13"		"special_bonus_unique_puck_6"
+		"Ability11"		"special_bonus_unique_puck_2"
+		"Ability16"		"special_bonus_unique_puck_coil_damage"
+		"Ability15"		"special_bonus_unique_puck_5"
+		"Ability17"		"special_bonus_unique_puck_rift_radius"
 	}
 	"npc_dota_hero_earthshaker"
 	{
@@ -2117,6 +2140,17 @@
 			}
 		}
 	}
+	"npc_dota_hero_ember_spirit"
+	{
+		"Ability7" "zuus_arc_lightning"
+		"Ability8" "zuus_lightning_hands"
+	}
+	"npc_dota_hero_invoker"
+	{
+		"Ability23"		"special_bonus_unique_invoker_additional_chaos_meteors"
+		"Ability22"		"special_bonus_unique_invoker_5"
+		"Ability21"		"special_bonus_unique_invoker_2"
+	}
 	"npc_dota_hero_razor"
 	{
 	    "Ability11"		"special_bonus_unique_razor_101"
@@ -2576,6 +2610,7 @@
 	}
 	"npc_dota_hero_tiny"
 	{
+		"MovementSpeed"		"350"
 		"Ability5"					"tiny_craggy_exterior"
 		"Bot"
 		{
@@ -2623,8 +2658,14 @@
 			}
 		}
 	}
+	"npc_dota_hero_morphling"
+	{
+		"Ability22" "special_bonus_unique_morphling_6"
+	}
 	"npc_dota_hero_tidehunter"
 	{
+		"Ability17"		"special_bonus_unique_tidehunter_10"
+		"Ability14"		"special_bonus_unique_tidehunter_8"
 		"Bot"
 		{
 			"Build"
@@ -2896,6 +2937,7 @@
 	}
 	"npc_dota_hero_zuus"
 	{
+		"Ability7" "zuus_static_field"
 		"Bot"
 		{
 			"Build"
