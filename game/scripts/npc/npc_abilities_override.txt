@@ -700,9 +700,10 @@
 	//=================================================================================================================
 	"item_recipe_phylactery"
 	{
+		"ItemCost"						"1375"
 		"ItemRequirements"
 		{
-			"01"						"item_point_booster;item_diadem;item_sobi_mask;item_point_booster;item_diadem;item_sobi_mask;item_point_booster;item_diadem;item_sobi_mask;item_point_booster;item_diadem;item_sobi_mask"
+			"01"						"item_point_booster;item_diadem;item_sobi_mask;item_point_booster;item_diadem;item_sobi_mask;item_point_booster;item_diadem;item_sobi_mask"
 		}
 	}
 	//=================================================================================================================
@@ -710,17 +711,17 @@
 	//=================================================================================================================
 	"item_phylactery"
 	{
-		"AbilityCooldown"				"0"
-		"ItemCost"						"9500"
+		"AbilityCooldown"				"1"		// 6
+		"ItemCost"						"8500"
 		"AbilityValues"
 		{
-			"bonus_health"		"1000"
-			"bonus_mana"		"1000"
-			"bonus_all_stats"	"35"
-			"bonus_mana_regen"	"3.5"
-			"slow"						"50"
-			"bonus_spell_damage"		"1000"
-			"slow_duration"				"2.5"
+			"bonus_health"		"1000"			// 200
+			"bonus_mana"		"1000"			// 200
+			"bonus_all_stats"	"35"			// 7
+			"bonus_mana_regen"	"3.5"			// .7
+			"slow"						"60"	// 50
+			"bonus_spell_damage"		"1000"	// 150
+			"slow_duration"				"2.5"	// 1.5
 		}
 	}
 	//=================================================================================================================
