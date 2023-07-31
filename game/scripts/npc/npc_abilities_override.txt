@@ -4256,6 +4256,23 @@
 				"value"		"50 90 130 170 210"
 				"special_bonus_unique_sand_king_2"	"40"
 			}
+			"damage_tick_rate"	"0.1"
+			"fade_delay"			"0.7"
+			"scepter_explosion_radius"
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+120"
+			}
+			"scepter_explosion_min_dist"
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+40"
+			}
+			"scepter_explosions_per_pulse"
+			{
+				"value"					"0"
+				"special_bonus_scepter"		"+10"
+			}
 		}
 	}
 	"sandking_caustic_finale"
@@ -5096,7 +5113,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_reduction"		"80 170 260 350 440"
+				"damage_reduction"		"100 200 300 400 500"
 				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_4"
 				"CalculateSpellDamageTooltip"	"1"
 			}
