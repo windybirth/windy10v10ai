@@ -280,28 +280,28 @@ function OnGameOptionsChange() {
 	}
 	$("#DisplayGameDifficulty").text = $.Localize('#game_difficulty_n' + iDifficulty);
 
-	let seasonPointMulti = "1.0";
+	let seasonPointMulti = "0";
 	switch (+iDifficulty) {
 		case 1:
-			seasonPointMulti = "1.2";
+			seasonPointMulti = "0";
 			break;
 		case 2:
-			seasonPointMulti = "1.4";
+			seasonPointMulti = "0";
 			break;
 		case 3:
-			seasonPointMulti = "1.6";
+			seasonPointMulti = "0";
 			break;
 		case 4:
-			seasonPointMulti = "1.8";
+			seasonPointMulti = "0";
 			break;
 		case 5:
-			seasonPointMulti = "2.0";
+			seasonPointMulti = "0";
 			break;
 		case 6:
-			seasonPointMulti = "2.2";
+			seasonPointMulti = "0";
 			break;
 		default:
-			seasonPointMulti = "1.0";
+			seasonPointMulti = "0";
 			break;
 	}
 	$("#DisplaySeasonPointMulti").text = "x"+ seasonPointMulti;
