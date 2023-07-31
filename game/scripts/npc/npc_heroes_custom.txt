@@ -456,7 +456,7 @@
 
 	"npc_dota_hero_naga_siren"
 	{
-		"MovementSpeed"		"444"
+		"MovementSpeed"		"600"
 		"Ability5"		"naga_siren_crit"
 	}
 

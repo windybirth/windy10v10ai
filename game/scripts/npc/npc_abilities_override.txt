@@ -4261,7 +4261,7 @@
 			"scepter_explosion_radius"
 			{
 				"value"					"0"
-				"special_bonus_scepter"		"+120"
+				"special_bonus_scepter"		"+60"
 			}
 			"scepter_explosion_min_dist"
 			{
@@ -4271,7 +4271,7 @@
 			"scepter_explosions_per_pulse"
 			{
 				"value"					"0"
-				"special_bonus_scepter"		"+10"
+				"special_bonus_scepter"		"+3"
 			}
 		}
 	}
