@@ -21,7 +21,7 @@ function modifier_player_adolphzero:GetModifierBaseAttackTimeConstant()
 		self.bat_check = true
         local current_bat = self:GetParent():GetBaseAttackTime()
 
-        local bat_reduction = 0.1
+        local bat_reduction = 0.3
         local new_bat = current_bat - bat_reduction
         self.bat_check = false
         return new_bat
