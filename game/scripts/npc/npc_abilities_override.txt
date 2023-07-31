@@ -7288,7 +7288,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_incoming_damage_total_pct"			"100"
+				"tooltip_incoming_damage_total_pct"			"20"
 			}
 		}
 	}
