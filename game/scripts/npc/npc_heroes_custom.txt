@@ -2939,7 +2939,8 @@
 	}
 	"npc_dota_hero_zuus"
 	{
-		"Ability8" "zuus_static_field"
+		"Ability18"		"zuus_lightning_hands"
+		"Ability5"      "zuus_static_field"
 		"Bot"
 		{
 			"Build"
