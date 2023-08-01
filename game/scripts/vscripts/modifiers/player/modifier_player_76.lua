@@ -5,10 +5,11 @@ function modifier_player_76:RemoveOnDeath() return false end
 function modifier_player_76:GetTexture() return "player/76" end
 
 function modifier_player_76:OnCreated()
-	self.istrength = 200
-	self.iagility = 200
-	self.iintellect = 200
-	self.imovementspeed = 200
+	self.istrength = 80
+	self.iagility = 0
+	self.iintellect = 80
+	self.imovementspeed = 100
+	self.cooldown = 50
 end
 
 
@@ -18,7 +19,8 @@ function modifier_player_76:DeclareFunctions()
 		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS;
         MODIFIER_PROPERTY_STATS_AGILITY_BONUS;
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS;
-		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
+		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT;
+		MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT,
 	}
 end
 
@@ -36,4 +38,8 @@ end
 
 function modifier_player_76:GetModifierMoveSpeedBonus_Constant()
 	return self.imovementspeed
+end
+
+function modifier_player_76:GetModifierPercentageCooldown()
+	return self.cooldown
 end
