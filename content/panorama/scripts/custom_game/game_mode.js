@@ -280,7 +280,7 @@ function OnGameOptionsChange() {
 	}
 	$("#DisplayGameDifficulty").text = $.Localize('#game_difficulty_n' + iDifficulty);
 
-	let seasonPointMulti = "0";
+	let seasonPointMulti = "1";
 	switch (+iDifficulty) {
 		case 1:
 			seasonPointMulti = "0";
@@ -298,7 +298,7 @@ function OnGameOptionsChange() {
 			seasonPointMulti = "0";
 			break;
 		case 6:
-			seasonPointMulti = "0";
+			seasonPointMulti = "5.0";
 			break;
 		default:
 			seasonPointMulti = "0";
