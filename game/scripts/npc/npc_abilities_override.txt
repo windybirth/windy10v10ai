@@ -10277,13 +10277,26 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed"		"-150 -300 -450 -600 -750"
+				"slow_attack_speed"		"-200 -400 -600 -800 -1000"
 				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_3"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
 				"slow_duration"			"5"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	"special_bonus_unique_enchantress_3"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"-80000"
+				"ad_linked_abilities"			"enchantress_untouchable"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
