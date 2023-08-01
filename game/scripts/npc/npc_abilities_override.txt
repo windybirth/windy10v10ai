@@ -7305,7 +7305,7 @@
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_incoming_damage_total_pct"			"20"
+				"tooltip_incoming_damage_total_pct"			"15"
 			}
 		}
 	}
@@ -7331,7 +7331,7 @@
 			"AbilityCooldown"
 			{
 				"value"								"21 18 15 12 9"
-				"special_bonus_unique_naga_siren_net_cooldown"				"-3"
+				"special_bonus_unique_naga_siren_net_cooldown"				"-5"
 			}
 			"AbilityCastRange"
 			{
@@ -7342,19 +7342,28 @@
 	}
 	"naga_siren_rip_tide"
 	{
-		"MaxLevel" "5"
 		"AbilityValues"
 		{
+			"hits"
+			{
+				"value"											"4"
+				"special_bonus_unique_naga_siren_3"				"-3"
+			}
 			"armor_reduction"
 			{
-				"value"					"-5 -10 -15 -20 -25"
+				"value"						"-5 -10 -15 -20 -25"
 			}
 			"damage"
 			{
-				"value"			"60 90 120 150 180"
+				"value"			"34 41 48 55 180"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_2"
 			}
+
+			"radius"					"450"
+			"duration"					"5.0"
+			"debuff_duration"			"10"
 		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	"special_bonus_unique_naga_siren_2"
 	{
@@ -7413,7 +7422,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"						"-4"
+				"value"						"-3"
 				"ad_linked_abilities"		"naga_siren_rip_tide"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -10227,6 +10236,39 @@
 	//=================================================================================================================
 	// Ability: Enchantress 魅惑魔女/小鹿
 	//=================================================================================================================
+	"enchantress_bunny_hop"
+	{
+		"AbilityCooldown"				"3"
+		"AbilityManaCost"				"50"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hop_distance"				"500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"hop_duration"				"0.4"
+			}
+			"03"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"hop_height"				"150"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"attack_targets"			"10"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_attack_range"		"300"
+			}
+		}
+	}
 	"enchantress_untouchable"
 	{
 		"MaxLevel" "5"
@@ -10408,8 +10450,8 @@
 			"duration"		"10"
 			"damage_per_tree"		"20"
 			"slow_per_tree"			"10"
-			"radius"				"2500"
-			"range"					"800"
+			"radius"				"800"
+			"range"					"2400"
 		}
 	}
 	"furion_sprout"
