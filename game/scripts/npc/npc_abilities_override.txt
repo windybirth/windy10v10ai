@@ -6122,14 +6122,14 @@
 	"drow_ranger_multishot"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"18 16 14 12 10"
+		"AbilityCooldown"				"19 18 17 16 15"
 		"AbilityManaCost"				"90 110 130 150 170"
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"arrow_damage_pct"			"125 150 175 200 225"
+				"arrow_damage_pct"			"150 175 200 250 300"
 				"LinkedSpecialBonus"		"special_bonus_unique_drow_ranger_1"
 			}
 			"04"
@@ -9511,11 +9511,12 @@
 		"AbilityDamage"					"250 325 400 475"
 		"AbilityValues"
 		{
-			"frostbite_duration"	"9 10 11 12"
+			"frostbite_duration"	"10 15 20 25"
 			"dot_damage"			"20.0 30.0 40.0 50.0"
+			"speed"					"1500 2500 3500 4500"
 			"kill_pct"
 			{
-				"value"				"10 14 18 22"
+				"value"				"10 15 20 25"
 				"special_bonus_unique_ancient_apparition_5"	"+8"
 			}
 		}
