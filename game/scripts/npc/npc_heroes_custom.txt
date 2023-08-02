@@ -2944,8 +2944,6 @@
 		"AttackRange"   "700"
 		"Ability18"		"zuus_lightning_hands"
 		"Ability5"      "zuus_static_field"
-		"Ability19"     "medusa_split_shot"
-		"Ability11"     "special_bonus_unique_medusa_4"
 		"Bot"
 		{
 			"Build"
