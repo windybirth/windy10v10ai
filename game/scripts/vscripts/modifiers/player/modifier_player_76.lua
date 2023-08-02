@@ -9,7 +9,7 @@ function modifier_player_76:OnCreated()
 	self.iagility = 0
 	self.iintellect = 80
 	self.imovementspeed = 100
-	self.cooldown = 50
+	self.icd = 50
 end
 
 
@@ -20,7 +20,7 @@ function modifier_player_76:DeclareFunctions()
         MODIFIER_PROPERTY_STATS_AGILITY_BONUS;
 		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS;
 		MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT;
-		MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT,
+		MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE,
 	}
 end
 
@@ -41,5 +41,5 @@ function modifier_player_76:GetModifierMoveSpeedBonus_Constant()
 end
 
 function modifier_player_76:GetModifierPercentageCooldown()
-	return self.cooldown
+	return self.icd
 end

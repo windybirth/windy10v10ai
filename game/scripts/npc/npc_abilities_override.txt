@@ -10316,7 +10316,7 @@
 			"radius"				"275 550 825 1100 80000"
 			"wisp_count"
 			{
-				"value"				"8 12 16 20 24"
+				"value"				"8 9 10 11 12"
 				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_2"
 			}
 			"movespeed"
