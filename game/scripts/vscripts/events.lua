@@ -958,7 +958,7 @@ function AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
     -- 根据难度积分加倍
     local difficulty = self.iGameDifficulty
     if difficulty == 1 then
-        points = points * 0
+        points = points * -500
     elseif difficulty == 2 then
         points = points * 0
     elseif difficulty == 3 then
