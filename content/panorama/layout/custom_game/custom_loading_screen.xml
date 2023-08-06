@@ -34,6 +34,7 @@
 							<Label text="6" id="6"/>
 							<Label text="8" id="8"/>
 							<Label text="10" id="10"/>
+							<Label text="30" id="30"/>
 						</DropDown>
 					</Panel>
 					<Panel id="RadiantPlayerNumberMultiplierPanel"	class="GameOptionsSubPanel">
@@ -101,6 +102,7 @@
 							<Label text="250%" id="8"/>
 							<Label text="300%" id="9"/>
 							<Label text="400%" id="10"/>
+							<Label text="1000%" id="11"/>
 						</DropDown>
 					</Panel>
 					<Panel id="TowerEndurePanel"	class="GameOptionsSubPanel">
@@ -116,6 +118,7 @@
 							<Label text="250%" id="8"/>
 							<Label text="300%" id="9"/>
 							<Label text="400%" id="10"/>
+							<Label text="1000%" id="11"/>
 						</DropDown>
 					</Panel>
 					<Panel id="TowerHealPanel"	class="GameOptionsSubPanel">
@@ -145,6 +148,7 @@
 							<Label text="2000" id="2000"/>
 							<Label text="3000" id="3000"/>
 							<Label text="5000" id="5000"/>
+							<Label text="10000" id="10000"/>
 						</DropDown>
 					</Panel>
 					<Panel id="SameHeroSelectionPanel"	class="GameOptionsSubPanel">
