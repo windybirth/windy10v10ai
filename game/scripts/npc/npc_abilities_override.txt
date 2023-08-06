@@ -5550,16 +5550,56 @@
 				}
 		}
 	}
+	"special_bonus_unique_wisp_7"
+	{
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"slow"						"100"
+				"ad_linked_abilities"			"wisp_spirits"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+			"02"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"slow_duration"				"2.0"
+				"ad_linked_abilities"			"wisp_spirits"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
 	"wisp_spirits"
 	{
-		"MaxLevel" "5"
+		"Maxlevel"                      "5"
+		"AbilityDuration"				"19.0 19.0 19.0 19.0 19.0"
 		"AbilityValues"
 		{
+
 			"creep_damage"				"10 15 20 25 30"
 			"hero_damage"
 			{
 				"value"				"30 50 70 90 110"
-				"special_bonus_unique_wisp"		"+55"
+				"special_bonus_unique_wisp"		"+110"
+			}
+			"revolution_time"			"10.0 10.0 10.0 10.0 10.0"
+			"min_range"					"200"
+			"max_range"					"650"
+			"hero_hit_radius"			"220"
+			"explode_radius"			"500"
+			"hit_radius"				"150 150 150 150 150"
+			"spirit_movement_rate"		"250 350 450 550 650"
+			"spirit_duration"			"19.0 19.0 19.0 19.0 19.0"
+			"spirit_amount"			"5"
+			"scepter_slow_pct"
+			{
+				"value"			"0"
+				"special_bonus_scepter"			"+100"
+			}
+			"scepter_slow_duration"
+			{
+				"value"			"0"
+				"special_bonus_scepter"			"+2.0"
 			}
 			"AbilityManaCost"
 			{
@@ -5567,11 +5607,12 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"				"28.0 26.0 24.0 22.0 20.0"
-				"special_bonus_scepter"			"-50%"
+				"value"				"26.0 24.0 22.0 20.0 18.0"
+				"special_bonus_scepter"			"-0%"
 			}
 		}
 	}
+
 	"wisp_overcharge"
 	{
 		"MaxLevel" "7"
