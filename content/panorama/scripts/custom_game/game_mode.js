@@ -158,7 +158,7 @@ function UnLockOptionAll() {
 
 	$("#starting_gold_player_dropdown").enabled=true;
 	$("#starting_gold_bot_dropdown").enabled=true;
-	//$("#same_hero_selection").enabled=true;
+	$("#same_hero_selection").enabled=true;
 	$("#fast_courier").enabled=true;
 	$("#radiant_bot_same_multi").enabled=true;
 }
