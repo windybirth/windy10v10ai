@@ -109,7 +109,7 @@ function InitSetting() {
 
 	$("#starting_gold_player_dropdown").SetSelected("3000");
 	$("#starting_gold_bot_dropdown").SetSelected("1000");
-	$("#same_hero_selection").checked=true;
+	$("#same_hero_selection").checked=false;
 	$("#fast_courier").checked=true;
 	$("#radiant_bot_same_multi").checked=true;
 
@@ -170,7 +170,7 @@ function InitDifficultyCommonSetting() {
 	$("#max_level_dropdown").SetSelected("50");
 	$("#tower_heal_dropdown").SetSelected("10");
 
-	$("#same_hero_selection").checked=true;
+	$("#same_hero_selection").checked=false;
 	$("#fast_courier").checked=true;
 	$("#radiant_bot_same_multi").checked=true;
 }
