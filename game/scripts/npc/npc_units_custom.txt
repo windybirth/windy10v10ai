@@ -882,7 +882,7 @@
 	"dota_fountain"
 	{
 		// Abilities
-		"Ability2"					"tower_headshot"			// none
+		//"Ability2"					"tower_headshot"			// none
 
 		"AttackDamageMin"			"490"		// 290
 		"AttackDamageMax"			"510"		// 310
