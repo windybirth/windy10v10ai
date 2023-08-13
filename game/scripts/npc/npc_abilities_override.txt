@@ -10752,6 +10752,11 @@
 				"value"			"400 500 600 700 800 900 1000"
 				"levelkey"				"wexlevel"
 			}
+			"shard_drag_speed"
+			{
+				"value"					"450"
+				"RequiresShard"			"1"
+			}
 		}
 	}
 	"invoker_alacrity"
@@ -10808,7 +10813,7 @@
 			}
 			"cataclysm_cooldown"
 			{
-				"value"					"60"
+				"value"					"80"
 				"RequiresScepter"		"1"
 			}
 			"cataclysm_min_range"
@@ -10823,7 +10828,7 @@
 			}
 		}
 	}
-"invoker_ice_wall"
+	"invoker_ice_wall"
 	{
 		"AbilityCooldown"				"10"
 		"AbilityValues"
@@ -10902,7 +10907,7 @@
 			}
 			"cooldown_reduction"
 			{
-				"value"		"1 2 3 4 5 6 7"
+				"value"		"1 1 1 1 1 1 1"
 				"special_bonus_unique_invoker_13"	"x4"
 			}
 			"agility_bonus"			"1"
