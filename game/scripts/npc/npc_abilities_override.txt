@@ -10720,7 +10720,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"10"
+				"value"					"16"
 			}
 		}
 	}
@@ -10730,7 +10730,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"16"
+				"value"					"20"
 				"special_bonus_unique_invoker_3" "-6"
 			}
 			"area_of_effect"		"200"
@@ -10744,7 +10744,7 @@
 	}
 	"invoker_emp"
 	{
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"16"
 		"AbilityValues"
 		{
 			"mana_burned"
@@ -10786,7 +10786,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"10"
+				"value"					"16"
 			}
 		}
 	}
