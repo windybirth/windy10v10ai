@@ -2623,6 +2623,9 @@
 	}
 	"npc_dota_hero_tidehunter"
 	{
+		"Ability5" "tidehunter_arm_of_the_deep"
+		"Ability17"		"special_bonus_unique_tidehunter_10"
+		"Ability14"		"special_bonus_unique_tidehunter_8"
 		"Bot"
 		{
 			"Build"
