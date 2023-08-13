@@ -10907,8 +10907,8 @@
 			}
 			"cooldown_reduction"
 			{
-				"value"		"1 1 1 1 1 1 1"
-				"special_bonus_unique_invoker_13"	"x4"
+				"value"		"1 1 2 2 3 3 4"
+				"special_bonus_unique_invoker_13"	"x3"
 			}
 			"agility_bonus"			"1"
 		}
