@@ -227,7 +227,7 @@ function InitN5Setting() {
 }
 function InitN6Setting() {
 	$("#player_gold_xp_multiplier_dropdown").SetSelected("1.5");
-	$("#bot_gold_xp_multiplier_dropdown").SetSelected("30");
+	$("#bot_gold_xp_multiplier_dropdown").SetSelected("20");
 
 	$("#tower_power_dropdown").SetSelected("10");
 	$("#tower_endure_dropdown").SetSelected("10");
@@ -298,7 +298,7 @@ function OnGameOptionsChange() {
 			seasonPointMulti = "2.0";
 			break;
 		case 6:
-			seasonPointMulti = "4.0";
+			seasonPointMulti = "3.0";
 			break;
 		default:
 			seasonPointMulti = "1.0";
