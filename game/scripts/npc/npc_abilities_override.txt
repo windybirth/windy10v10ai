@@ -267,9 +267,9 @@
 	{
 		"AbilityValues"
 		{
-				"bonus_gpm"			"1200"
+				"bonus_gpm"			"1000"
 				"bonus_mana"		"-800"
-				"bonus_damage"		"-300"
+				"bonus_damage"		"-350"
 		}
 	}
 	"item_poor_mans_shield" //穷鬼盾
@@ -352,8 +352,8 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"			"75"		// 100
-			"attack_speed_bonus"			"30"		// 20
-			"magic_resistance_reduction"		"30"	// 15
+			"attack_speed_bonus"			"40"		// 20
+			"magic_resistance_reduction"		"20"	// 15
 		}
 	}
 	"item_orb_of_destruction" //毁灭灵球
@@ -383,7 +383,7 @@
 		{
 			"bonus_attack_speed"	"80"
 			"bonus_damage"			"100"
-			"bonus_armor"			"30"
+			"bonus_armor"			"40"
 			"bonus_slow_resist"		"100"
 		}
 	}
@@ -556,8 +556,8 @@
 	{
 		"AbilityValues"
 		{
-			"debuff_amp"		"50"
-			"spell_amp"			"60"
+			"debuff_amp"		"40"
+			"spell_amp"			"50"
 		}
 	}
 	"item_demonicon" //大死灵书 冥灵书
