@@ -88,3 +88,12 @@
 	flow-children: right;
 	horizontal-align: center;
 }
+#CloseButton{
+	color: #FFFFFF;
+	width: 28%;
+	height: 38px;
+	margin: 5px;
+	align: center center;
+	background-color: gradient( linear, 0% 100%, 0% 10%, from( #64CCC5 ), color-stop( 0.7, #176B87 ),to( #04364A) );
+	transition: background-color .35s ease-in-out 0s;
+}
