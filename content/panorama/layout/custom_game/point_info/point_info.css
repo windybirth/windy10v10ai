@@ -4,6 +4,8 @@
 	flow-children: down;
 }
 .PanelHeader {
+	opacity: 0.0;
+	visibility: collapse;
 	vertical-align: top;
 	horizontal-align: center;
 	flow-children: down;

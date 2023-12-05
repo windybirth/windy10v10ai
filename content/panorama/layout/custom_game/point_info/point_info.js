@@ -13,17 +13,16 @@ function OnDataLoaded() {
 
 	if (data == null) {
 		$.Schedule(0.5, OnDataLoaded);
-
-		// if data is null, panel is hidden
-		$('#panel_id').style.opacity = '0.0';
-		$('#panel_id').style.visibility = 'collapse';
-
 		return;
 	}
 
 	for (const index in data) {
 		AddPointInfo(data[index]);
 	}
+
+	// panel is displayed
+	$('#panel_id').style.opacity = '1.0';
+	$('#panel_id').style.visibility = 'visible';
 }
 
 function AddPointInfo(data) {
