@@ -4782,24 +4782,10 @@
 		{
 			"bonus_damage"
 			{
-				"value"		"200 300 400 500 600"
-				"special_bonus_unique_slardar_2"	"+150"
+				"value"		"100 200 300 400 500"
+				"special_bonus_unique_slardar_2"	"+100"
 			}
-			"duration"				"1.5"
-			"attack_count"			"2"
 			"river_damage"			"30 60 90 120 150"
-		}
-	}
-	"special_bonus_unique_slardar_2"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
-				"ad_linked_abilities"			"slardar_bash"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	"slardar_amplify_damage"
