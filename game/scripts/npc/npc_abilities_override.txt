@@ -8233,12 +8233,12 @@
 		{
 			"damage_min"
 			{
-				"value"				"350 400 450 500 550"
+				"value"				"300 350 400 450 500"
 				"special_bonus_unique_razor_4"	"+300"
 			}
 			"damage_max"
 			{
-				"value"				"800 1150 1500 1850"
+				"value"				"500 550 600 650 700"
 				"special_bonus_unique_razor_4"	"+300"
 			}
 			"radius"
@@ -10388,8 +10388,8 @@
 		{
 				"damage"
 				{
-					"value"				"200 400 600 800 1000"
-					"special_bonus_unique_death_prophet_3"	"+1000"
+					"value"				"100 200 300 400 500"
+					"special_bonus_unique_death_prophet_3"	"+300"
 				}
 				"haunt_duration"				"10"
 				"damage_pct" "25"
@@ -12433,7 +12433,7 @@
 	"shadow_demon_disruption"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"24 23 22 21 20"
+		"AbilityCooldown"				"30"
 		"AbilitySpecial"
 		{
 			"02"
@@ -12450,16 +12450,6 @@
 			{
 				"var_type"					"FIELD_FLOAT"
 				"illusion_outgoing_tooltip"	"40.0 50.0 60.0 70.0 80.0"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"illusion_incoming_damage"	"-80"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tooltip_total_illusion_incoming_damage"	"20"
 			}
 		}
 	}
