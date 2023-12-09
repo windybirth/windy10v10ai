@@ -7223,7 +7223,7 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"10 9 8 7 6"
 		"AbilityDamage"					"60 150 240 330 420"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"arrow_speed"		"2000.0"
 			"arrow_range"		"8000"
@@ -7314,7 +7314,7 @@
 			"damage"
 			{
 				"value"			"200 400 600 800 1000"
-				"special_bonus_unique_mirana_7"	"+4000"
+				"special_bonus_unique_mirana_7"	"+400"
 			}
 		}
 	}
