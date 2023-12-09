@@ -6468,7 +6468,7 @@
 				"tick_interval"					"0.2"
 				"damage_per_second"
 				{
-					"value"			"200 250 300 350 400"
+					"value"			"50 100 200 250 300"
 					"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_3"
 				}
 				"blind_pct"				"50"
@@ -6659,7 +6659,7 @@
 		{
 				"rocket_damage"
 				{
-					"value"				"100 150 200 250 300"
+					"value"				"50 75 100 125 150"
 					"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_3"
 				}
 		}
@@ -6705,7 +6705,7 @@
 			}
 			"fire_rate"
 			{
-				"value"								"0.25"
+				"value"								"0.35"
 				"RequiresScepter"					"1"
 			}
 			"scepter_radius"
@@ -6726,12 +6726,12 @@
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_first"				"600 1000 1400 1800"
+				"damage_first"				"200 400 600 800"
 			}
 			"04"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_second"				"800 1200 1600 2000"
+				"damage_second"				"400 800 1200 1600"
 			}
 		}
 	}
@@ -7977,7 +7977,7 @@
 		{
 			"damage"
 			{
-				"value"					"300 400 500 600 700"
+				"value"					"200 300 400 500 600"
 				"CalculateSpellDamageTooltip"	"1"
 			}
 			"base_shield"	"2000"
