@@ -2249,7 +2249,7 @@
 				"LinkedSpecialBonus"		"special_bonus_unique_dawnbreaker_luminosity_attack_count"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
 			}
-			"heal_pct"					"60 80 100 120 300"
+			"heal_pct"					"40 60 80 100 120"
 			"bonus_damage"
 			{
 				"value"		"250 300 350 400 450"
@@ -2266,15 +2266,15 @@
 		{
 			"base_damage"
 			{
-				"value"			"200 300 400 500 600"
+				"value"			"150 200 250 300 350"
 				"CalculateSpellDamageTooltip" "1.5"
 			}
 			"base_heal"
 			{
-				"value"				"1000 1500 2000 2500 3000"
-				"special_bonus_scepter"	"+500 750 1000 1250 1500"
+				"value"				"400 600 800 1000 1200"
+				"special_bonus_scepter"	"+150 200 250 300 350"
 			}
-			"land_damage"			"700 900 1100 1300 1500"
+			"land_damage"			"300 500 700 900 1100"
 			"land_stun_duration"			"2.8 3.2 3.6 4 4.4"
 			"radius"
 			{
@@ -2945,12 +2945,12 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"heal"					"1000"
+				"heal"					"100"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"attrib_bonus"			"0.1 0.15 0.20 0.25 1.0"
+				"attrib_bonus"			"0.1 0.15 0.20 0.25 0.3"
 			}
 			"03"
 			{
@@ -3019,7 +3019,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"duration"						"80000"
+				"duration"						"100"
 			}
 		}
 	}
@@ -3048,7 +3048,7 @@
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"maximum_health_regen"			"300 450 600 750 900"
+				"maximum_health_regen"			"100 150 200 250 300"
 				"LinkedSpecialBonus"			"special_bonus_unique_huskar_6"
 			}
 			"03"
@@ -3722,8 +3722,8 @@
 		{
 			"damage"
 			{
-				"value"		"400 600 800 1000 1200"
-				"special_bonus_unique_night_stalker_4"	"+300"
+				"value"		"200 400 600 800 1000"
+				"special_bonus_unique_night_stalker_4"	"+200"
 			}
 			"radius_scepter"
 			{
@@ -3810,8 +3810,8 @@
 		{
 			"bonus_damage"
 			{
-				"value"			"250 500 1000 1500"
-				"special_bonus_unique_night_stalker_3"	"+500"
+				"value"			"100 200 400 600"
+				"special_bonus_unique_night_stalker_3"	"+200"
 			}
 		}
 	}
@@ -4298,7 +4298,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"rot_damage"			"200 400 600 800 1000"
+				"rot_damage"			"150 300 450 600 750"
 				"LinkedSpecialBonus"	"special_bonus_unique_pudge_2"
 			}
 		}
@@ -4770,7 +4770,7 @@
 			}
 			"crush_damage"
 			{
-				"value"					"200 400 600 800 1000"
+				"value"					"100 200 300 400 500"
 				"LinkedSpecialBonus"	"special_bonus_unique_slardar"
 			}
 		}
