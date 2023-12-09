@@ -3054,7 +3054,7 @@
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"hp_threshold_max"				"70"
+				"hp_threshold_max"				"50"
 			}
 			"04"
 			{
@@ -4318,7 +4318,7 @@
 			{
 				"value"				"0.3 0.6 0.9 1.2"
 				"special_bonus_unique_pudge_3"	"x2.5"
-				"CalculateSpellDamageTooltip"	"1"
+				"CalculateSpellDamageTooltip"	"0"
 			}
 			"AbilityCooldown"
 			{
@@ -6714,7 +6714,7 @@
 				"RequiresScepter"					"1"
 				"affected_by_aoe_increase"	"1"
 			}
-			"bonus_night_vision"		"80000"
+			"bonus_night_vision"		"4000"
 		}
 	}
 	"gyrocopter_call_down"
@@ -7218,7 +7218,6 @@
 	//=================================================================================================================
 	"mirana_arrow"
 	{
-		"AbilityCastRange"				"8000"
 		"AbilityDuration"				"20 20 20 20 20"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"10 9 8 7 6"
@@ -7226,8 +7225,6 @@
 		"AbilityValues"
 		{
 			"arrow_speed"		"2000.0"
-			"arrow_range"		"8000"
-			"arrow_max_stunrange"	"2000"
 			"arrow_max_stun"	"3.0 5.0 7.0 9.0 11.0"
 			"arrow_bonus_damage"	"150 200 250 300 350"
 			"scepter_radius"
@@ -7281,7 +7278,7 @@
 		{
 			"fade_delay"			"2.5 2.0 1.5 1.0 0.1"
 			"duration"				"30.0"
-			"bonus_movement_speed"		"100 150 200 250 500"
+			"bonus_movement_speed"		"100 150 200 250 300"
 		}
 	}
 	"mirana_leap"
@@ -8333,7 +8330,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"shard_damage"			"600"
+				"shard_damage"			"300"
 				"RequiresShard"			"1"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
 				"CalculateSpellDamageTooltip"	"1"
@@ -8368,7 +8365,7 @@
 					"value"			"60 75 90 105"
 					"special_bonus_unique_razor_402"    "+60"
 				}
-				"armor_reduction"	"1 1.5 2 2.5"
+				"armor_reduction"	"1 2 3 4"
 		}
 	}
 	"special_bonus_unique_razor_401"
@@ -8851,12 +8848,12 @@
 				"bonus_attack_range"
 				{
 					"value"		"100 150 200 250 300"
-					"special_bonus_unique_templar_assassin_8"	"+300"
+					"special_bonus_unique_templar_assassin_8"	"+200"
 				}
 				"attack_spill_range"
 				{
 					"value"							"550 650 750 900 1100"
-					"special_bonus_unique_templar_assassin_8"	"+300"
+					"special_bonus_unique_templar_assassin_8"	"+200"
 				}
 				"attack_spill_width"		"180"
 				"attack_spill_pct"			"200"
@@ -8903,7 +8900,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"16"
+				"value"				"11"
 				"ad_linked_abilities"			"templar_assassin_refraction"
 			}
 		}
