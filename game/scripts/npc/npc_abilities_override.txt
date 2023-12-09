@@ -2229,14 +2229,14 @@
 			}
 			"swipe_damage"
 			{
-				"value"											"150 300 450 600 750"
-				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"		"+250"
+				"value"											"160 240 320 400 480"
+				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"		"+120"
 
 			}
 			"smash_damage"
 			{
-				"value"				"150 300 450 600 750"
-				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"			"+250"
+				"value"				"160 240 320 400 480"
+				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"			"+120"
 			}
 			"smash_stun_duration"			"1 1.5 2.0 2.5 3.0"
 		}
@@ -2248,13 +2248,13 @@
 		"AbilityManaCost"				"130 140 150 160 170"
 		"AbilityValues"
 		{
-			"hammer_damage"			"110 200 400 600 800"
+			"hammer_damage"			"110 180 250 320 390"
 			"move_slow"
 			{
-				"value"							"30 40 50 60 70"
-				"special_bonus_unique_dawnbreaker_celestial_hammer_slow"		"+30"
+				"value"							"30 36 42 48 54"
+				"special_bonus_unique_dawnbreaker_celestial_hammer_slow"		"+26"
 			}
-			"burn_damage"						"55 100 200 300 400"
+			"burn_damage"						"55 90 125 160 195"
 			"range"
 			{
 				"value"								"1000 1500 2000 2500 3000"
