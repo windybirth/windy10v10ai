@@ -401,18 +401,10 @@
 	// level 4
 	"item_titan_sliver" //巨神残铁
 	{
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_resistance"			"20"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"status_resistance"			"20"
-			}
+				"magic_resistance"			"20"		// 16
+				"status_resistance"			"20"		// 10
 		}
 	}
 	"item_martyrs_plate" //烈士鳞甲
@@ -556,20 +548,16 @@
 	{
 		"AbilityValues"
 		{
-			"debuff_amp"		"40"
-			"spell_amp"			"50"
+			"debuff_amp"		"35"	// 20
+			"spell_amp"			"50"	// 15
 		}
 	}
 	"item_demonicon" //大死灵书 冥灵书
 	{
 		"AbilityCooldown"				"60.0"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"summon_duration"				"35"
-			}
+				"summon_duration"		"35"	// 75
 		}
 	}
 	"item_mirror_shield" //神镜盾
