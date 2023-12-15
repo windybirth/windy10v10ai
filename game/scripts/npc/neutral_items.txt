@@ -56,7 +56,7 @@
 		"items"
 		{
 			//"item_ring_of_aquila"		  "1" //天鹰戒
-			//"item_imp_claw"			  "1" //打野爪
+			//"item_imp_claw"			  "1" //魔童之爪 暴击爪
 			//"item_nether_shawl"		  "1" //幽冥披肩
 			//"item_misericorde"		  "1" //飞贼之刃
 			//"item_essence_ring"		  "1" //精华指环
@@ -76,7 +76,7 @@
 			"item_vampire_fangs"		  "1" //吸血鬼獠牙
 			"item_gossamer_cape"		  "1" //蛛丝斗篷
 			"item_light_collector"	      "1" //集光器
-			"item_apex"			        	  "1" //极
+			"item_apex"			          "1" //极
 		}
 	}
 	"3"
