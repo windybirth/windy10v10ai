@@ -68,6 +68,7 @@ function AIGameMode:SpecialItemAdd(owner)
 		"item_repair_kit",			    -- 修理工具
 		"item_princes_knife",			-- 亲王短刀
 		"item_the_leveller",            -- 平世剑
+		"item_minotaur_horn",           -- 恶牛角
 	}
 
 	tier[4] =	{
