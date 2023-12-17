@@ -246,7 +246,7 @@
 		"ItemCost"						"1000"
 		"ItemStockInitial"				"5"
 		"ItemStockMax"					"20"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"5"
 		"ItemInitialStockTime"			"0"
 		"ItemInitialStockTimeTurbo"		"0"
 		"ItemStackable"					"1"
@@ -1854,7 +1854,7 @@
     {
         "AbilityCastRange"				"600"
 		"ItemSellable"					"0"
-        "ItemStockTime"					"240.0"
+        "ItemStockTime"					"60.0"
         "AllowedInBackpack"				"1"
     }
 
