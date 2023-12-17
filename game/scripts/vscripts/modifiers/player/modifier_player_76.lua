@@ -5,12 +5,13 @@ function modifier_player_76:RemoveOnDeath() return false end
 function modifier_player_76:GetTexture() return "player/76" end
 
 function modifier_player_76:OnCreated()
-	self.iIncomingDamage = -40
+	self.iIncomingDamage = -50
     self.icd = 50
     self.istrength = 200
     self.iagility = 200
     self.iintelligence = 200
-    self.icastrange = 800
+    self.icastrange = 600
+    self.ikangxing = 50
 end
 
 
@@ -22,6 +23,7 @@ function modifier_player_76:DeclareFunctions()
         MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
         MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
         MODIFIER_PROPERTY_CAST_RANGE_BONUS,
+        MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING,
 	}
 end
 
@@ -50,4 +52,8 @@ end
 
 function modifier_player_76:GetModifierCastRangeBonus()
     return self.icastrange
+end
+
+function modifier_player_76:GetModifierStatusResistanceStacking()
+    return self.ikangxing
 end
