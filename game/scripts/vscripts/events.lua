@@ -370,7 +370,7 @@ function AIGameMode:OnBuyback(e)
         if hEntity:IsRealHero() and hEntity:IsReincarnating() == false then
             local hHero = hEntity
             -- 会员买活时间上限设置
-            local memberBuybackCooldownMaximum = 120
+            local memberBuybackCooldownMaximum = 60
             local steamAccountID = PlayerResource:GetSteamAccountID(playerId)
             if PlayerController:IsMember(steamAccountID) then
                 local buybackTime = hHero:GetBuybackCooldownTime()
