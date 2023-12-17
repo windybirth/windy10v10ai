@@ -162,12 +162,13 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 	//=================================================================================================================
-	// 疗伤莲花 奶酪 奶酪块
+	// 疗伤莲花
 	//=================================================================================================================
 	"item_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "500"
+		"ItemPurchasable"               "1"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -178,7 +179,7 @@
 	"item_great_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "1000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -189,19 +190,12 @@
 	"item_greater_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "3000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
 		{
 				"replenish_amount"		"4000"
-		}
-	}
-	"item_recipe_great_famango"
-	{
-		"ItemRequirements"
-		{
-			"01"						"item_famango;item_famango"
 		}
 	}
 	"item_recipe_greater_famango"
@@ -214,28 +208,31 @@
 			"01"						"item_great_famango"
 		}
 	}
+	"item_recipe_great_famango"
+	{
+		"ItemRequirements"
+		{
+			"01"						"item_famango;item_famango"
+		}
+	}
 	"item_royale_with_cheese"
 	{
 		"AbilityValues"
 		{
 				"shield"			"4000"
-				"regen"				"500"
-				"idle"				"2"
+				"regen"				"1000"
 		}
 	}
 	"item_cheese"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"						"4000"	// 1000
-		"ItemStockInitial"				"1"
-		"ItemStockMax"					"3"
-		"ItemStockTime"					"300"
+		"ItemCost"						"4000"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "1"
 		"AbilityValues"
 		{
-				"health_restore"		"5000"	// 2500
-				"mana_restore"			"3000"	// 1500
+				"health_restore"		"5000"
+				"mana_restore"			"3000"
 		}
 	}
 
@@ -7976,30 +7973,34 @@
 	"nevermore_dark_lord"
 	{
 		"MaxLevel" "5"
+		"AbilityCastRange"			"1200"
 		"AbilityValues"
 		{
 			"presence_armor_reduction"
 			{
-				"value"		"-4 -5 -6 -7 -8"
-				"special_bonus_unique_nevermore_5"			"-6"
+				"value"		"-8 -10 -12 -14 -16"
+				"special_bonus_unique_nevermore_5"			"-14"
 			}
+			"presence_radius"				"1200"
+			"bonus_armor_per_stack"			"5"
+			"kill_buff_duration"			"99999"
 		}
 	}
 	"nevermore_requiem"
 	{
-		"MaxLevel" "5"
-		"AbilityCastPoint"				"1.67 1.33 0.99 0.67 0.33"
-		"AbilityDamage"					"80 120 160 200 240"
-		"AbilityManaCost"				"150 175 200 225 250"
+		"MaxLevel" "4"
+		"AbilityCastPoint"				"1.33 0.99 0.67 0.33"
+		"AbilityDamage"					"120 160 200 240"
+		"AbilityManaCost"				"175 200 225 250"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
 				{
-					"value"		"120 110 100 90 80"
+					"value"		"90 80 70 60"
 					"special_bonus_scepter"	"-20"
 				}
-				"requiem_reduction_ms"	"-20 -25 -30 -35 -40"
-				"requiem_reduction_mres"	"-6 -9 -12 -15 -18"
+				"requiem_reduction_ms"	"-25 -30 -35 -40"
+				"requiem_reduction_mres"	"-16 -24 -32 -40"
 		}
 	}
 	//=================================================================================================================

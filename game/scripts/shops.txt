@@ -19,6 +19,7 @@
 		"item"		"item_tome_of_knowledge"
 		"item"		"item_candy_candy"
 		"item"		"item_consumable_gem"
+		"item"      "item_famango"
 		"item"      "item_cheese"
 	}
 
