@@ -74,6 +74,8 @@
 		"item"      "item_blade_mail_ultra"
 		"item"      "item_satanic_ultra"
 		"item"      "item_glimmer_cape_ultra"
+		"item"      "item_spirit_vessel_ultra"
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	"misc"
@@ -104,8 +106,6 @@
 		"item"      "item_black_king_bar_real"
 		"item"      "item_black_king_bar_ultra"
 		"item"      "item_vladmir_ultra"
-		"item"      "item_spirit_vessel_ultra"
-		"item"      "item_shivas_guard_ultra"
 	}
 
 	// Level 1 - Green Recipes
