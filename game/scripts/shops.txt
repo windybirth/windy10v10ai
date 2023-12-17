@@ -66,6 +66,14 @@
 		"item"		"item_javelin"
 		"item"		"item_claymore"
 		"item"		"item_mithril_hammer"
+		"item"      "item_solar_crest_ultra"
+		"item"      "item_radiance_ultra"
+		"item"      "item_bloodthorn_ultra"
+		"item"      "item_bloodstone_ultra"
+		"item"      "item_mjollnir_ultra"
+		"item"      "item_blade_mail_ultra"
+		"item"      "item_satanic_ultra"
+		"item"      "item_glimmer_cape_ultra"
 	}
 
 	"misc"
@@ -88,6 +96,16 @@
 		"item"		"item_void_stone"
 
 		"item"      "item_recipe_greater_famango"
+		"item"      "item_bfury_ultra"
+		"item"      "item_skadi_ultra"
+		"item"      "item_rapier_ultra"
+		"item"      "item_sphere_ultra"
+		"item"      "item_gungir_ultra"
+		"item"      "item_black_king_bar_real"
+		"item"      "item_black_king_bar_ultra"
+		"item"      "item_vladmir_ultra"
+		"item"      "item_spirit_vessel_ultra"
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	// Level 1 - Green Recipes

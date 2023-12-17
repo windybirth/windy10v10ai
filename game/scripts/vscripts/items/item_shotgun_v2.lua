@@ -73,7 +73,7 @@ function modifier_item_shotgun_v2:GetModifierProcAttack_Feedback(keys)
 				victim 			= enemy,
 				attacker 		= keys.attacker,
 				damage 			= damage,
-				damage_type 	= DAMAGE_TYPE_MAGICAL,
+				damage_type 	= DAMAGE_TYPE_PURE,
 				damage_flags 	= DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION,
 				ability 		= ability,
 			})

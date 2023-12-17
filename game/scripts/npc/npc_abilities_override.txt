@@ -2666,43 +2666,43 @@
 	//=================================================================================================================
 	"dawnbreaker_fire_wreath"
 	{
-		"MaxLevel" "7"
-		"AbilityManaCost"				"100 110 120 130 140 150 160"
+		"MaxLevel" "5"
+		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
-				"value"					"17 16 15 14 13 12 11"
+				"value"					"15 14 13 12 11"
 				"special_bonus_unique_dawnbreaker_fire_wreath_cooldown"			"-6"
 			}
 			"swipe_damage"
 			{
-				"value"											"40 55 70 85 100 115 130"
+				"value"											"70 85 100 115 130"
 				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"		"+30"
 
 			}
 			"smash_damage"
 			{
-				"value"				"40 55 70 85 100 115 130"
+				"value"				"70 85 100 115 130"
 				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"			"+30"
 			}
-			"smash_stun_duration"			"0.8 0.9 1 1.1 1.2 1.3 1.4"
+			"smash_stun_duration"			"1 1.1 1.2 1.3 1.4"
 		}
 	}
 	"dawnbreaker_celestial_hammer"
 	{
-		"MaxLevel" "7"
-		"AbilityCooldown"				"18 17 16 15 14 13 12"
-		"AbilityManaCost"				"110 120 130 140 150 160 170"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"16 15 14 13 12"
+		"AbilityManaCost"				"130 140 150 160 170"
 		"AbilityValues"
 		{
-			"hammer_damage"			"50 80 110 140 170 200 230"
+			"hammer_damage"			"110 140 170 200 230"
 			"move_slow"
 			{
-				"value"							"24 28 32 36 40 44 48"
+				"value"							"32 36 40 44 48"
 				"special_bonus_unique_dawnbreaker_celestial_hammer_slow"		"+14"
 			}
-			"burn_damage"						"20 30 40 50 60 70 80"
+			"burn_damage"						"40 50 60 70 80"
 		}
 	}
 	"dawnbreaker_luminosity"
@@ -8346,6 +8346,8 @@
 	}
 	"phantom_assassin_phantom_strike"
 	{
+		"LinkedAbility"					"chaos_knight_chaos_strike_final"
+		"AbilityDraftPreAbility"		"chaos_knight_chaos_strike_final"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"35 40 45 50 55"
@@ -8390,6 +8392,31 @@
 		"AbilityValues"
 		{
 			"crit_bonus"				"200 325 450 575"
+		}
+	}
+	"chaos_knight_chaos_strike_final"
+	{
+		"LinkedAbility"					"phantom_assassin_phantom_strike"
+		"AbilityDraftPreAbility"		"phantom_assassin_phantom_strike"
+		"MaxLevel" "5"
+		"BaseClass"                     "chaos_knight_chaos_strike"
+		"AbilityValues"
+		{
+				"chance"
+				{
+						"value"				"6"
+						"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
+				}
+				"crit_min"				"125"
+				"crit_max"				"300 500 750 1000 80000"
+				"lifesteal"
+				{
+					"value"					"30 60 100 150 200"
+					"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
+				}
+
+				"creep_multiplier"					"1.9"
+				"creep_lifesteal_reduction_pct"		"70"
 		}
 	}
 	//=================================================================================================================
