@@ -66,7 +66,6 @@
 		"item"		"item_javelin"
 		"item"		"item_claymore"
 		"item"		"item_mithril_hammer"
-		"item"      "item_solar_crest_ultra"
 		"item"      "item_radiance_ultra"
 		"item"      "item_bloodthorn_ultra"
 		"item"      "item_bloodstone_ultra"
