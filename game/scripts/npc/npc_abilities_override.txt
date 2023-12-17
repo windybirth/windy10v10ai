@@ -439,7 +439,7 @@
 			"damage_return_creep"	"60" //20
 		}
 	}
-	"item_iron_talon"
+	"item_iron_talon" //打野爪
 	{
 		"AbilityCooldown"				"15.0" //25
 		"AbilityValues"
