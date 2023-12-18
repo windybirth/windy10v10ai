@@ -555,7 +555,7 @@
 		"AbilityValues"
 		{
 			"attack_lifesteal"			"30"		// 15
-			"spell_lifesteal"			"30"		// 10
+			"spell_lifesteal"			"20"		// 10
 			"night_vision"			"450"			// 300
 			"creep_lifesteal_reduction_pct"	"40"
 		}
@@ -659,17 +659,6 @@
 			"bonus_armor"				"21" //7
 			"all_stats"			        "35" //7
 			"counter_cooldown"			"1.0" //5
-		}
-	}
-	"item_paladin_sword" //骑士剑
-	{
-		"AbilityValues"
-		{
-			"bonus_damage"			"80" //16
-			"bonus_lifesteal"		"48" //16
-			"bonus_spell_lifesteal"	"24"  //8
-			"bonus_amp"			    "28" //14
-			"creep_lifesteal_reduction_pct"	"40" //40
 		}
 	}
 	"item_nemesis_curse" //天珠之咒
@@ -849,7 +838,7 @@
 	{
 		"AbilityValues"
 		{
-			"evasion"	"50"         //25
+			"evasion"	"40"         //25
 			"move_speed"	"90"     //30
 			"flight_threshold"	"70" //30
 		}
@@ -1013,6 +1002,17 @@
 				"bonus_cooldown"		"24"  //12
 				"bonus_all_stats"		"20"   //5
 				"mana_regen"			"8"   //2
+		}
+	}
+	"item_paladin_sword" //骑士剑
+	{
+		"AbilityValues"
+		{
+			"bonus_damage"			"80" //16
+			"bonus_lifesteal"		"48" //16
+			"bonus_spell_lifesteal"	"24"  //8
+			"bonus_amp"			    "28" //14
+			"creep_lifesteal_reduction_pct"	"40" //40
 		}
 	}
 	// level 5

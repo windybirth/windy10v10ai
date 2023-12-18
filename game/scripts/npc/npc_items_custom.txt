@@ -6885,21 +6885,21 @@
 		{
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
-			"chain_chance"			"100"
-			"chain_damage"			"1000"
+			"chain_chance"			"80"
+			"chain_damage"			"1200"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
-			"chain_cooldown"		"0.2"
+			"chain_cooldown"		"0"
 			"bonus_intellect"		"120"
 			"bonus_hp"				"2000"
-			"duration"				"4.0"
+			"duration"				"5.0"
 			"radius"
 			{
 				"value"		"750"
 				"affected_by_aoe_increase"	"1"
 			}
-			"active_damage"			"2000"
+			"active_damage"			"2400"
 			"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -6968,7 +6968,7 @@
 			"duration"				"99999"
 			"max_level"				"1"
 			"model_scale"			"0"     // Percentage over model scale
-			"magic_resist"			"-50"
+			"magic_resist"			"-100"
 		}
 	}
 
@@ -7375,19 +7375,19 @@
 			"bonus_damage"			"150"
 			"bonus_attack_speed"	"540"
 			"static_duration"		"30.0"
-			"static_chance"			"100"
+			"static_chance"			"80"
 			"static_strikes"		"8"
 			"static_damage"			"1000"
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
-			"static_cooldown"		"0.2"
-			"chain_chance"			"100"
+			"static_cooldown"		"0"
+			"chain_chance"			"80"
 			"chain_damage"			"1000"
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
-			"chain_cooldown"		"0.2"
+			"chain_cooldown"		"0"
 			"max_charges"			"0"
 			"illusion_multiplier_pct"	"150"
 		}

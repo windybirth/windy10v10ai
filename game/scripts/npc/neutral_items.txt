@@ -103,7 +103,6 @@
 			//"item_spider_legs"			  "1" //网虫腿 蜘蛛腿
 			//"item_icarus_wings"		      "1"
 			"item_defiant_shell"			  "1" //不羁甲壳
-			"item_paladin_sword"			  "1" //骑士剑
 			"item_nemesis_curse"			  "1" //天诛之咒
 			"item_vindicators_axe"			  "1" //正义之斧
 			"item_dandelion_amulet"			  "1" //蒲公英护符
@@ -159,6 +158,7 @@
 			"item_martyrs_plate"			  "1" //烈士鳞甲
 			"item_rattlecage"				  "1" //回响之笼
 			"item_repair_kit"                 "1" //维修器具
+			"item_paladin_sword"			  "1" //骑士剑
 		}
 	}
 	"5"
