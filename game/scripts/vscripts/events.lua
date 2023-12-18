@@ -146,13 +146,13 @@ function AIGameMode:OnGameStateChanged(keys)
             v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
             -- add tower ability
-            if string.find(towerName, "tower3") or string.find(towerName, "tower4") then
-                v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
-                if v:GetTeamNumber() == DOTA_TEAM_BADGUYS and iTowerLevel > 5 then
-                    v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
-                    v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
-                end
-            end
+            --if string.find(towerName, "tower3") or string.find(towerName, "tower4") then
+                --v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
+                --if v:GetTeamNumber() == DOTA_TEAM_BADGUYS and iTowerLevel > 5 then
+                    --v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
+                    --v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
+                --end
+            --end
         end
         local barracks = Entities:FindAllByClassname("npc_dota_barracks")
         for k, v in pairs(barracks) do
@@ -171,9 +171,9 @@ function AIGameMode:OnGameStateChanged(keys)
             v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
             -- add tower ability
-            v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
-            v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
-            v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
+            --v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
+            --v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
+            --v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
         end
 
 
