@@ -5,49 +5,28 @@ function modifier_player_76:RemoveOnDeath() return false end
 function modifier_player_76:GetTexture() return "player/76" end
 
 function modifier_player_76:OnCreated()
-	self.iIncomingDamage = -50
-    self.icd = 50
-    self.istrength = 200
-    self.iagility = 200
-    self.iintelligence = 200
-    self.icastrange = 600
-    self.ikangxing = 50
+    self.icd = 40
+    self.icastrange = 400
+    self.ikangxing = 40
+    self.imovespeed = 200
+    self.ipctmanaregen = 3
 end
 
 
 function modifier_player_76:DeclareFunctions()
 	return {
-		MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE,
         MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT,
-        MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
-        MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
-        MODIFIER_PROPERTY_STATS_INTELLECT_BONUS,
         MODIFIER_PROPERTY_CAST_RANGE_BONUS,
         MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING,
+        MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
+        MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE,
+        MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT,
+		MODIFIER_PROPERTY_MOVESPEED_LIMIT,
 	}
-end
-
-function modifier_player_76:GetModifierIncomingDamage_Percentage()
-	return self.iIncomingDamage
 end
 
 function modifier_player_76:GetModifierPercentageCooldown()
     return self.icd
-end
-
-
-function modifier_player_76:GetModifierBonusStats_Strength()
-    return self.istrength
-end
-
-
-function modifier_player_76:GetModifierBonusStats_Agility()
-    return self.iagility
-end
-
-
-function modifier_player_76:GetModifierBonusStats_Intellect()
-    return self.iintelligence
 end
 
 function modifier_player_76:GetModifierCastRangeBonus()
@@ -56,4 +35,20 @@ end
 
 function modifier_player_76:GetModifierStatusResistanceStacking()
     return self.ikangxing
+end
+
+function modifier_player_76:GetModifierMoveSpeedBonus_Constant()
+    return self.imovespeed
+end
+
+function modifier_player_76:GetModifierTotalPercentageManaRegen()
+    return self.ipctmanaregen
+end
+
+function modifier_player_76:GetModifierMoveSpeed_Limit()
+    return 5000
+end
+
+function modifier_player_76:GetModifierIgnoreMovespeedLimit()
+    return 1
 end

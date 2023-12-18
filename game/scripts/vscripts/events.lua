@@ -134,8 +134,8 @@ function AIGameMode:OnGameStateChanged(keys)
             local towerName = v:GetName()
             if string.find(towerName, "tower1") then
                 -- 一塔攻击最高200%
-                if self.iTowerPower > 7 then
-                    v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(7)
+                if self.iTowerPower > 10 then
+                    v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(10)
                 else
                     v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iTowerPower)
                 end
@@ -184,33 +184,33 @@ function AIGameMode:OnGameStateChanged(keys)
         end)
 
         -- 增强N6电脑出门属性 技能点
-        if self.iGameDifficulty == 6 then
-            Timers:CreateTimer(10, function()
+        --if self.iGameDifficulty == 6 then
+            --Timers:CreateTimer(10, function()
                 -- for each player in dire
-                for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-                    if PlayerResource:IsValidPlayer(i) then
-                        if PlayerResource:GetTeam(i) == DOTA_TEAM_BADGUYS then
-                            local hero = PlayerResource:GetSelectedHeroEntity(i)
-                            if hero then
+                --for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
+                    --if PlayerResource:IsValidPlayer(i) then
+                        --if PlayerResource:GetTeam(i) == DOTA_TEAM_BADGUYS then
+                            --local hero = PlayerResource:GetSelectedHeroEntity(i)
+                            --if hero then
                                 -- set to level 5
-                                hero:SetAbilityPoints(4)
+                                --hero:SetAbilityPoints(4)
                                 -- add modifier
-                                local statsModifier = CreateItem("item_player_modifiers", nil, nil)
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_strength_bonus_level_8", {})
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_agility_bonus_level_8", {})
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_intellect_bonus_level_8", {})
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_physical_armor_bonus_level_8", {})
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_movespeed_bonus_constant_level_4", {})
-                                statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_preattack_bonus_damage_level_4", {})
+                                --local statsModifier = CreateItem("item_player_modifiers", nil, nil)
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_strength_bonus_level_8", {})
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_agility_bonus_level_8", {})
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_stats_intellect_bonus_level_8", {})
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_physical_armor_bonus_level_8", {})
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_movespeed_bonus_constant_level_4", {})
+                                --statsModifier:ApplyDataDrivenModifier(hero, hero, "modifier_player_property_preattack_bonus_damage_level_4", {})
                                 -- Cleanup
-                                UTIL_RemoveImmediate(statsModifier)
-                                statsModifier = nil
-                            end
-                        end
-                    end
-                end
-            end)
-        end
+                                --UTIL_RemoveImmediate(statsModifier)
+                                --statsModifier = nil
+                            --end
+                        --end
+                    --end
+                --end
+            --end)
+        --end
 
     elseif state == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
         self.fGameStartTime = GameRules:GetGameTime()
