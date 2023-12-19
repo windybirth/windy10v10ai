@@ -171,9 +171,9 @@ function AIGameMode:OnGameStateChanged(keys)
             v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
             -- add tower ability
-            --v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
-            --v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
-            --v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
+            v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
+            v:AddAbility("tower_troll_warlord_fervor"):SetLevel(iTowerLevel)
+            v:AddAbility("tower_antimage_mana_break"):SetLevel(iTowerLevel)
         end
 
 

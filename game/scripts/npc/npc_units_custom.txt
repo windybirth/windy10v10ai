@@ -869,8 +869,8 @@
 		"AttackDamageType"			"DAMAGE_TYPE_ArmorPhysical"
 		"AttackRate"				"0.6"			// Speed of attack.
 		// "AttackAnimationPoint"		"0.6"			// Normalized time in animation cycle to attack.
-		"AttackAcquisitionRange"	"1100"			// Range within a target can be acquired.
-		"AttackRange"				"1100"			// Range within a target can be attacked.
+		"AttackAcquisitionRange"	"800"			// Range within a target can be acquired.
+		"AttackRange"				"800"			// Range within a target can be attacked.
 		"ProjectileModel"			"particles/base_attacks/ranged_tower_bad.vpcf"			// Particle system model for projectile.
 		"ProjectileSpeed"			"850"			// Speed of projectile.
 

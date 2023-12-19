@@ -6656,9 +6656,9 @@
 		"BaseClass"                     "item_bfury"
 		"AbilityValues"
 		{
-				"bonus_damage"			"600"
-				"bonus_health_regen"	"80"
-				"bonus_mana_regen"		"40"
+				"bonus_damage"			"300"
+				"bonus_health_regen"	"40"
+				"bonus_mana_regen"		"20"
 				"cleave_damage_percent"	"350"
 				"cleave_damage_percent_creep"	"350"
 				"quelling_bonus"			"100"
@@ -6886,7 +6886,7 @@
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
 			"chain_chance"			"60"
-			"chain_damage"			"1200"
+			"chain_damage"			"800"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
@@ -6899,7 +6899,7 @@
 				"value"		"750"
 				"affected_by_aoe_increase"	"1"
 			}
-			"active_damage"			"2400"
+			"active_damage"			"1000"
 			"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -7377,13 +7377,13 @@
 			"static_duration"		"30.0"
 			"static_chance"			"60"
 			"static_strikes"		"8"
-			"static_damage"			"1000"
+			"static_damage"			"800"
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
 			"static_cooldown"		"0"
-			"chain_chance"			"80"
-			"chain_damage"			"1000"
+			"chain_chance"			"60"
+			"chain_damage"			"800"
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
@@ -7483,7 +7483,7 @@
 		"ItemResult"					"item_satanic_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_satanic_2;item_satanic_2"
+			"01"						"item_satanic_2;item_satanic"
 		}
 	}
 	"item_satanic_ultra"
@@ -7500,8 +7500,8 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-			"bonus_strength"		"600"
-			"bonus_damage"			"600"
+			"bonus_strength"		"300"
+			"bonus_damage"			"300"
 			"lifesteal_percent"		"150"
 			"creep_lifesteal_reduction_pct"	"40"
 			"unholy_lifesteal_percent"	"850"

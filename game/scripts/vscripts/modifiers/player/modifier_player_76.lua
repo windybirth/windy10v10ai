@@ -5,7 +5,7 @@ function modifier_player_76:RemoveOnDeath() return false end
 function modifier_player_76:GetTexture() return "player/76" end
 
 function modifier_player_76:OnCreated()
-    self.icd = 40
+    self.icd = 60
     self.icastrange = 400
     self.ikangxing = 40
     self.imovespeed = 200
@@ -15,7 +15,7 @@ end
 
 function modifier_player_76:DeclareFunctions()
 	return {
-        MODIFIER_PROPERTY_COOLDOWN_REDUCTION_CONSTANT,
+        MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE,
         MODIFIER_PROPERTY_CAST_RANGE_BONUS,
         MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING,
         MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
