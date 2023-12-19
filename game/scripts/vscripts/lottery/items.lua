@@ -69,6 +69,7 @@ function AIGameMode:SpecialItemAdd(owner)
 		"item_princes_knife",			-- 亲王短刀
 		"item_the_leveller",            -- 平世剑
 		"item_minotaur_horn",           -- 恶牛角
+		"item_titan_sliver",            -- 巨神残铁
 	}
 
 	tier[4] =	{
@@ -79,7 +80,7 @@ function AIGameMode:SpecialItemAdd(owner)
 		"item_panic_button",            -- 神灯
 		"item_pirate_hat",				-- 海盗帽
 		"item_fallen_sky",				-- 天崩
-		"item_demonicon",				-- 大死灵书
+		-- "item_demonicon",				-- 大死灵书
 		"item_mirror_shield",			-- 神镜盾
 		"item_spell_prism",				-- 法术棱镜
 		"item_ex_machina",				-- 机械之心

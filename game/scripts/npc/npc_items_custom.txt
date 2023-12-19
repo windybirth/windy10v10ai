@@ -6744,8 +6744,8 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"6666"
-			"bonus_spell_amp"		"666"
+			"bonus_damage"			"3333"
+			"bonus_spell_amp"		"333"
 		}
 		"Modifiers"
 		{
@@ -6824,7 +6824,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_refresher_shard.vpcf"
 		"AbilityCooldown"				"0"
 		"AbilityManaCost"				"0"
-		"ItemCost"						"2000"
+		"ItemCost"						"5000"
 		"ItemShopTags"					""
 		"ItemQuality"					"consumable"
 		"ItemPurchasable"				"1"
@@ -6885,8 +6885,8 @@
 		{
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
-			"chain_chance"			"60"
-			"chain_damage"			"800"
+			"chain_chance"			"50"
+			"chain_damage"			"450"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
@@ -6899,7 +6899,7 @@
 				"value"		"750"
 				"affected_by_aoe_increase"	"1"
 			}
-			"active_damage"			"1000"
+			"active_damage"			"900"
 			"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -7363,7 +7363,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityCastRange"				"800"
+		"AbilityCastRange"				"1200"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"10"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
@@ -7377,13 +7377,13 @@
 			"static_duration"		"30.0"
 			"static_chance"			"60"
 			"static_strikes"		"8"
-			"static_damage"			"800"
+			"static_damage"			"600"
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
 			"static_cooldown"		"0"
-			"chain_chance"			"60"
-			"chain_damage"			"800"
+			"chain_chance"			"70"
+			"chain_damage"			"700"
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
