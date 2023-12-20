@@ -10717,46 +10717,35 @@
 	//=================================================================================================================
 	// Ability: Leshrac 拉席克/老鹿
 	//=================================================================================================================
+	// 撕裂大地
 	"leshrac_split_earth"
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"80 100 120 140 160"
 		"AbilityDamage"					"120 180 240 300 360"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"radius"			"150 175 200 225 250"
-				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_5"
-			}
+				"radius"
+				{
+					"value"	"150 180 210 240 270"
+					"LinkedSpecialBonus"	"special_bonus_unique_leshrac_5"
+					"affected_by_aoe_increase"	"1"
+				}
 		}
 	}
-	"special_bonus_unique_leshrac_5"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"70"
-				"ad_linked_abilities"			"leshrac_split_earth"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
+	// 恶魔敕令
 	"leshrac_diabolic_edict"
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"90 110 130 150 170"
 		"AbilityDamage"					"10 20 30 40 50"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"num_explosions"		"50"
-				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_1"
-			}
+				"num_explosions"
+				{
+					"value"		"60"
+					"LinkedSpecialBonus"	"special_bonus_unique_leshrac_1"
+				}
 		}
 	}
 	"special_bonus_unique_leshrac_1"
@@ -10766,63 +10755,44 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"40"
+				"value"				"30"
 				"ad_linked_abilities"			"leshrac_diabolic_edict"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
+	// 闪电风暴
 	"leshrac_lightning_storm"
 	{
 		"MaxLevel" "7"
-		"AbilityManaCost"				"80 90 100 110 120 130 140"
-		"AbilitySpecial"
+		"AbilityManaCost"				"80 100 120 140 160 180 200"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"70 120 170 220 270 320 370"
-				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_6"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"jump_count"			"6 7 8 9 10 11 12"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"slow_duration"			"1.0"
-				"LinkedSpecialBonus"	"special_bonus_unique_leshrac_2"
-			}
+				"damage"
+				{
+					"value"		"90 140 190 240 290 340 390"
+					"special_bonus_unique_leshrac_6"	"+100"
+				}
+				"jump_count"			"5 7 9 11 13 15 17"
+				"slow_duration"				"0.45 0.7 0.95 1.2 1.45 1.7 1.95"
 		}
 	}
+	// 虚无主义
 	"leshrac_greater_lightning_storm"
 	{
 		"AbilityCooldown"				"20"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"		"5"
+			"magic_amp"		"40"
+			"slow"		"40"
+			"radius"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"		"5"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"magic_amp"		"40"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow"		"40"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"		"600"
+				"value"		"600"
+				"affected_by_aoe_increase"		"1"
 			}
 		}
 	}
+	// 脉冲新星
 	"leshrac_pulse_nova"
 	{
         "MaxLevel" "5"
