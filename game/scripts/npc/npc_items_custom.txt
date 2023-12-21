@@ -6378,8 +6378,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"240.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"80.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -6418,8 +6418,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"240.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"80.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -6458,8 +6458,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"240.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"80.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"

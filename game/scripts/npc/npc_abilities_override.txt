@@ -8337,8 +8337,8 @@
 	}
 	"phantom_assassin_phantom_strike"
 	{
-		"LinkedAbility"					"chaos_knight_chaos_strike_final"
-		"AbilityDraftPreAbility"		"chaos_knight_chaos_strike_final"
+		//"LinkedAbility"					"chaos_knight_chaos_strike_final"
+		//"AbilityDraftPreAbility"		"chaos_knight_chaos_strike_final"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"35 40 45 50 55"
@@ -8385,31 +8385,31 @@
 			"crit_bonus"				"200 325 450 575"
 		}
 	}
-	"chaos_knight_chaos_strike_final"
-	{
-		"LinkedAbility"					"phantom_assassin_phantom_strike"
-		"AbilityDraftPreAbility"		"phantom_assassin_phantom_strike"
-		"MaxLevel" "5"
-		"BaseClass"                     "chaos_knight_chaos_strike"
-		"AbilityValues"
-		{
-				"chance"
-				{
-						"value"				"6"
-						"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
-				}
-				"crit_min"				"125"
-				"crit_max"				"300 500 750 1000 80000"
-				"lifesteal"
-				{
-					"value"					"30 60 100 150 200"
-					"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
-				}
-
-				"creep_multiplier"					"1.9"
-				"creep_lifesteal_reduction_pct"		"70"
-		}
-	}
+	//"chaos_knight_chaos_strike_final"
+	//{
+	//	"LinkedAbility"					"phantom_assassin_phantom_strike"
+	//	"AbilityDraftPreAbility"		"phantom_assassin_phantom_strike"
+	//	"MaxLevel" "5"
+	//	"BaseClass"                     "chaos_knight_chaos_strike"
+	//	"AbilityValues"
+	//	{
+	//			"chance"
+	//			{
+	//					"value"				"6"
+	//					"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_5"
+	//			}
+	//			"crit_min"				"125"
+	//			"crit_max"				"300 500 750 1000 80000"
+	//			"lifesteal"
+	//			{
+	//				"value"					"30 60 100 150 200"
+	//				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
+	//			}
+//
+//				"creep_multiplier"					"1.9"
+//				"creep_lifesteal_reduction_pct"		"70"
+//		}
+//	}
 	//=================================================================================================================
 	// Ability: Razor 剃刀/电棍
 	//=================================================================================================================
