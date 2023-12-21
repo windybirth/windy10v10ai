@@ -7541,7 +7541,6 @@
 		"ShouldBeSuggested"				"1"
 		"ItemDroppable"                 "0"
 		"AllowedInBackpack"             "0"
-		"ItemSellable"					"0"
 		"AbilityValues"
 		{
 			"initial_fade_delay"				"0.5"
