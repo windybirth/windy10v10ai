@@ -227,13 +227,13 @@ function InitN5Setting() {
 }
 function InitN6Setting() {
 	$("#player_gold_xp_multiplier_dropdown").SetSelected("2");
-	$("#bot_gold_xp_multiplier_dropdown").SetSelected("30");
+	$("#bot_gold_xp_multiplier_dropdown").SetSelected("40");
 
 	$("#tower_power_dropdown").SetSelected("10");
 	$("#tower_endure_dropdown").SetSelected("10");
 
-	$("#starting_gold_player_dropdown").SetSelected("5000");
-	$("#starting_gold_bot_dropdown").SetSelected("5000");
+	$("#starting_gold_player_dropdown").SetSelected("3000");
+	$("#starting_gold_bot_dropdown").SetSelected("10000");
 }
 // -------- send to server --------
 function StateChange() {

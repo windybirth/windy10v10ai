@@ -6744,8 +6744,8 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"3333"
-			"bonus_spell_amp"		"333"
+			"bonus_damage"			"2222"
+			"bonus_spell_amp"		"222"
 		}
 		"Modifiers"
 		{
@@ -6960,6 +6960,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AllowedInBackpack"             "0"
 		"ItemDroppable"                 "0"
+		"ItemSellable"					"0"
 
 		"AbilityValues"
 		{
@@ -7326,8 +7327,8 @@
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityValues"
 		{
-				"bonus_intellect"			"200"
-				"bonus_attack_speed"		"400"
+				"bonus_intellect"			"100"
+				"bonus_attack_speed"		"300"
 				"bonus_mana_regen"			"30"
 				"bonus_health_regen"		"65"
 				"silence_duration"			"5"
@@ -7423,7 +7424,7 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-			"bonus_aoe"				"750"
+			"bonus_aoe"				"250"
 			"bonus_health"			"5000"
 			"bonus_mana"			"5000"
 			"spell_lifesteal"		"300"
@@ -7454,19 +7455,19 @@
 	{
 		"BaseClass"                     "item_blade_mail"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityCooldown"				"20.0"
+		"AbilityCooldown"				"30.0"
 		"AbilityManaCost"				"25"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
 				"bonus_damage"			"100"
-				"bonus_armor"			"-40"
+				"bonus_armor"			"-100"
 				"bonus_intellect"		"100"
 				"duration"				"8"
 				"passive_reflection_constant"			"500"
-				"passive_reflection_pct"			"100"
-				"active_reflection_pct"			"500"
+				"passive_reflection_pct"			"50"
+				"active_reflection_pct"			"400"
 		}
 	}
 
@@ -7540,6 +7541,7 @@
 		"ShouldBeSuggested"				"1"
 		"ItemDroppable"                 "0"
 		"AllowedInBackpack"             "0"
+		"ItemSellable"					"0"
 		"AbilityValues"
 		{
 			"initial_fade_delay"				"0.5"
