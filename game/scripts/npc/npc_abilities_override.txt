@@ -812,12 +812,12 @@
 	// level 4
 	"item_specialists_array" //行家阵列
 	{
-		"AbilityCooldown"				"0.5"   //8
+		"AbilityCooldown"				"0.1"   //8
 		"AbilityValues"
 		{
 			"all_stats"						"35" //7
 			"bonus_damage"					"120"//12
-			"count"							"4" //2
+			"count"							"8" //2
 			"secondary_target_range_bonus"	"450"//225
 			"proc_bonus_damage"				"200" //20
 		}
