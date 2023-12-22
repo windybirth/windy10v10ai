@@ -3229,9 +3229,9 @@
 				"bonus_health"			"600"
 				"bonus_mana"			"600"
 				"cold_slow_melee"		"-60"
-				"cold_attack_slow_melee"	"-80"
+				"cold_attack_slow_melee"	"-15"
 				"cold_slow_ranged"	"-75"
-				"cold_attack_slow_ranged"	"-120"
+				"cold_attack_slow_ranged"	"-30"
 				"cold_duration"	"4.0"
 				"heal_reduction"	"65"
 		}
@@ -6858,7 +6858,7 @@
 		"ItemResult"					"item_gungir_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_gungir;item_gungir;item_gungir;item_gungir"
+			"01"						"item_gungir_2;item_gungir"
 		}
 	}
 
@@ -6886,7 +6886,7 @@
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
 			"chain_chance"			"50"
-			"chain_damage"			"450"
+			"chain_damage"			"550"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
@@ -6899,7 +6899,7 @@
 				"value"		"750"
 				"affected_by_aoe_increase"	"1"
 			}
-			"active_damage"			"900"
+			"active_damage"			"1100"
 			"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -7285,10 +7285,10 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"400"
-				"aura_damage"			"600"
-				"aura_damage_illusions"	"400"
+				"aura_damage"			"800"
+				"aura_damage_illusions"	"600"
 				"upgrade_day_vision"	"800"
-				"evasion"				"50"
+				"evasion"				"100"
 				"blind_pct"				"100"
 				"aura_radius"			"1400"
 				"illusion_multiplier_pct"	"300"
@@ -7354,7 +7354,7 @@
 		"ItemResult"					"item_mjollnir_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_mjollnir;item_mjollnir;item_mjollnir;item_mjollnir"
+			"01"						"item_mjollnir;item_mjollnir;item_mjollnir"
 		}
 	}
 	"item_mjollnir_ultra"
@@ -7376,15 +7376,15 @@
 			"bonus_damage"			"150"
 			"bonus_attack_speed"	"540"
 			"static_duration"		"30.0"
-			"static_chance"			"60"
+			"static_chance"			"65"
 			"static_strikes"		"8"
-			"static_damage"			"600"
+			"static_damage"			"650"
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
 			"static_cooldown"		"0"
-			"chain_chance"			"70"
-			"chain_damage"			"700"
+			"chain_chance"			"75"
+			"chain_damage"			"750"
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
@@ -7535,7 +7535,7 @@
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCastRange"				"600"
-		"AbilityCooldown"				"1000"
+		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"90"
 		"ItemShopTags"					""
 		"ShouldBeSuggested"				"1"
