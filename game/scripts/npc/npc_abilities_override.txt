@@ -918,7 +918,7 @@
 		"AbilityValues"
 		{
 				"magic_damage"	"135"  //45
-				"attack_speed"	"90"   //30
+				"attack_speed"	"60"   //30
 				"duration"		"4.0"  //2
 		}
 	}
@@ -952,7 +952,7 @@
 		{
 			"duration"					"15"   //10
 			"magic_resist"				"50"   //25
-			"damage_redirection"		"100"  //25
+			"damage_redirection"		"50"  //25
 			"aura_radius"				"1800" //900
 			"hp_regen"					"40"   //5
 		}
@@ -971,7 +971,7 @@
 		"AbilityCooldown"				"10.0"
 		"AbilityValues"
 		{
-			"bonus_movement_speed"	"100"        //25
+			"bonus_movement_speed"	"50"        //25
 			"turn_rate"	            "50"         //50
 			"bonus_movement_speed_active"	"36" //18
 			"duration"			    "4.5"        //3.5
@@ -981,11 +981,11 @@
 	{
 		"AbilityValues"
 		{
-				"damage"			    "180"  //45
-				"melee_attack_range"	"300" //100
+				"damage"			    "120"  //45
+				"melee_attack_range"	"200" //100
 				"maim_chance"			"50"  //25
 				"maim_slow_movement"	"80"  //20
-				"maim_slow_attack"		"300"  //60
+				"maim_slow_attack"		"200"  //60
 				"maim_duration"			"3"   //3
 		}
 	}
@@ -1012,9 +1012,9 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"80" //16
-			"bonus_lifesteal"		"48" //16
+			"bonus_lifesteal"		"24" //16
 			"bonus_spell_lifesteal"	"24"  //8
-			"bonus_amp"			    "28" //14
+			"bonus_amp"			    "24" //14
 			"creep_lifesteal_reduction_pct"	"40" //40
 		}
 	}
@@ -1023,7 +1023,7 @@
 	{
 		"AbilityValues"
 		{
-			"debuff_amp"		"50"	// 20
+			"debuff_amp"		"40"	// 20
 			"spell_amp"			"60"	// 15
 		}
 	}
@@ -1033,17 +1033,17 @@
 		"AbilityCooldown"				"4.0"  //8
 		"AbilityValues"
 		{
-				"bonus_movement_speed"	"230"  //115
+				"bonus_movement_speed"	"180"  //115
 				"push_length"			"750"  //750
 				"push_duration"			"0.5"  //0.5
-				"hp_regen"			    "120"  //30
+				"hp_regen"			    "90"  //30
 		}
 	}
 	"item_desolator_2" //寂灭
 	{
 		"AbilityValues"
 		{
-				"bonus_damage"			"300"  //60
+				"bonus_damage"			"200"  //60
 				"corruption_armor"		"-20" //-10
 				"corruption_duration"	"7.0" //7
 		}
@@ -1063,8 +1063,8 @@
 		"AbilityCooldown"				"6.0"  //8
 		"AbilityValues"
 		{
-			"bonus_all_stats"	"65"  //13
-			"night_vision"		"1000" //400
+			"bonus_all_stats"	"40"  //13
+			"night_vision"		"800" //400
 			"duration"			"4"   //4
 		}
 	}
@@ -1085,7 +1085,7 @@
 		{
 			"cast_range_bonus"		"400"  //350
 			"vision_bonus"			"700"  //350
-			"mana_regen"			"40"   //10
+			"mana_regen"			"25"   //10
 			"radius"
 			{
 				"value"		"1200"          //800
@@ -1099,7 +1099,7 @@
 		"AbilityValues"
 		{
 			"bonus_strength"			"100" //35
-			"movement_speed"			"150" //50
+			"movement_speed"			"100" //50
 			"model_scale"			    "0"   //50
 			"pct_str_damage_per_second"	"150" //100
 			"damage_radius"			    "250" //100
@@ -1124,7 +1124,7 @@
 			"self_armor"				"20"   //5
 			"self_mres"					"30"  //20
 			"bonus_aoe_mres"			"30"  //20
-			"active_reflection_pct"		"80"  //40
+			"active_reflection_pct"		"60"  //40
 		}
 	}
 	"item_pirate_hat"  //海盗帽
@@ -1150,7 +1150,7 @@
 		"AbilityValues"
 		{
 				"bonus_health"			"1500"  //300
-				"heal"		            "10000" //1000
+				"heal"		            "5000" //1000
 				"health_threshold"		"20"   //20
 		}
 	}
@@ -1197,7 +1197,7 @@
 	{
 		"AbilityValues"
 		{
-				"bonus_armor"		"24" //6
+				"bonus_armor"		"18" //6
 				"duration"			"7.5" //5
 		}
 	}
