@@ -23,11 +23,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
-          title: Update from ${{ steps.get_branch.outputs.branch }}
-          body: |
-            ## Changes git log
-            ```
-            git log --pretty=format:'- %s (%h)' --abbrev-commit origin/develop..${{ steps.get_branch.outputs.branch }}
-            ```
+          title: Update ${{ steps.get_branch.outputs.branch }}
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
+          reviewers: windybirth
