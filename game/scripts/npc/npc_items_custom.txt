@@ -7734,8 +7734,8 @@
 		"AbilityCooldown"				"0.0"
 		"AbilityValues"
 		{
-			"bonus_armor"		"6"
-			"duration"			"3600"
+			"bonus_armor"		"0"
+			"duration"			"7200"
 		}
 	}
 }
