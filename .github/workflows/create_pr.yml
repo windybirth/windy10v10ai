@@ -6,20 +6,14 @@ jobs:
   create_pull_request:
     runs-on: ubuntu-latest
     steps:
-      - name: Set color
-        id: color-selector
-        run: echo "SELECTED_COLOR=green" >> "$GITHUB_OUTPUT"
-      - name: Get color
-        env:
-          SELECTED_COLOR: ${{ steps.color-selector.outputs.SELECTED_COLOR }}
-        run: echo "The selected color is $SELECTED_COLOR"
-
       - name: Get branch name
         id: get_branch
         run: echo "name=branch::${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
 
       - name: show branch name
-        run: echo ${{ steps.get_branch.outputs.branch }}
+        env:
+          BRANCH_NAME: ${{ steps.get_branch.outputs.branch }}
+        run: echo "The selected color is $BRANCH_NAME"
 
       - name: Check out code
         uses: actions/checkout@v4
