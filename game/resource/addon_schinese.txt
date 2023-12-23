@@ -1877,6 +1877,6 @@
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙赐福</font>"
 		"DOTA_Tooltip_ability_item_blessing_of_dragon_Description"		"<h1>被动：不死之身</h1>受到致命伤害不会死亡。"
 		"DOTA_Tooltip_modifier_item_blessing_of_dragon_active"			"不死之身"
-		"DOTA_Tooltip_modifier_item_blessing_of_dragon_active_Description"			"因神龙赐福获得永恒生命"
+		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active_Description"			"因神龙赐福获得永恒生命"
 	}
 }
