@@ -8,9 +8,10 @@ jobs:
     steps:
       - name: Get branch name
         id: get_branch
-        run: |
-          echo "name=branch::${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
-          echo "name=branch::${GITHUB_REF#refs/heads/}"
+        run: echo "name=branch::${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
+
+      - name: show branch name
+        run: echo ${{ steps.get_branch.outputs.branch }}
 
       - name: Check out code
         uses: actions/checkout@v4
