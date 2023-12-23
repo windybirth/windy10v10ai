@@ -8,11 +8,9 @@ jobs:
     steps:
       - name: Get branch name
         id: get_branch
-        run: echo "name=branch::${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
-
-      - name: Get commit log
-        id: get_log
-        run: echo "name=log::$(git log --pretty=format:'- %s' origin/develop..HEAD)" >> "$GITHUB_OUTPUT"
+        run: |
+          echo "name=branch::${GITHUB_REF#refs/heads/}" >> "$GITHUB_OUTPUT"
+          echo "name=branch::${GITHUB_REF#refs/heads/}"
 
       - name: Check out code
         uses: actions/checkout@v4
@@ -23,6 +21,12 @@ jobs:
         run: |
           git fetch origin ${{ steps.get_branch.outputs.branch }}:${{ steps.get_branch.outputs.branch }}
           git reset --hard ${{ steps.get_branch.outputs.branch }}
+
+      - name: Get commit log
+        id: get_log
+        run: |
+          echo "name=log::$(git log --pretty=format:'- %s' origin/develop..HEAD)" >> "$GITHUB_OUTPUT"
+          echo "name=log::$(git log --pretty=format:'- %s' origin/develop..HEAD)"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
