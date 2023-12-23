@@ -23,8 +23,8 @@ jobs:
       - name: Get commit log
         id: get_log
         run: |
-          echo "log=$(git log --pretty=format:'%s' origin/develop..origin/${{ steps.get_branch.outputs.branch }})" >> $GITHUB_OUTPUT
-          echo "log=$(git log --pretty=format:'%s' origin/develop..origin/${{ steps.get_branch.outputs.branch }})"
+          echo "log=$(git log --pretty=format:'%s' develop..${{ steps.get_branch.outputs.branch }})" >> $GITHUB_OUTPUT
+          echo "log=$(git log --pretty=format:'%s' develop..${{ steps.get_branch.outputs.branch }})"
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
