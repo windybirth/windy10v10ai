@@ -6981,7 +6981,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"item_datadriven"
-		"ID"							"9602"  //Valve's version of this item uses the ID "118".
+		"ID"							"9603"  //Valve's version of this item uses the ID "118".
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
 
@@ -7176,6 +7176,7 @@
 	"item_recipe_spirit_vessel_ultra"
 	{
 		"BaseClass"                     "item_recipe_spirit_vessel"
+		"ID"						    "9605"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemRecipe"					"1"
@@ -7188,6 +7189,7 @@
 	"item_spirit_vessel_ultra"
 	{
 		"BaseClass"                     "item_spirit_vessel"
+		"ID"						    "9606"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
@@ -7220,6 +7222,7 @@
 	"item_recipe_shivas_guard_ultra"
 	{
 		"BaseClass"                     "item_recipe_shivas_guard"
+		"ID"						    "9607"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemRecipe"					"1"
@@ -7232,6 +7235,7 @@
 	"item_shivas_guard_ultra"
 	{
 		"BaseClass"                     "item_shivas_guard"
+		"ID"						    "9608"
 		"AbilityCooldown"				"10"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
@@ -7267,6 +7271,7 @@
 	"item_recipe_radiance_ultra"
 	{
 		"BaseClass"                     "item_recipe_radiance"
+		"ID"						    "9609"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemRecipe"					"1"
@@ -7279,6 +7284,7 @@
 	"item_radiance_ultra"
 	{
 		"BaseClass"                     "item_radiance"
+		"ID"						    "9610"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
 		"AbilityCastRange" 				"1400"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
@@ -7301,6 +7307,7 @@
 	"item_recipe_bloodthorn_ultra"
 	{
 		"BaseClass"                     "item_recipe_bloodthorn"
+		"ID"						    "9611"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemRecipe"					"1"
@@ -7313,6 +7320,7 @@
 	"item_bloodthorn_ultra"
 	{
 		"BaseClass"                     "item_bloodthorn"
+		"ID"						    "9612"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7347,6 +7355,7 @@
 	"item_recipe_mjollnir_ultra"
 	{
 		"BaseClass"                     "item_recipe_mjollnir"
+		"ID"						    "9613"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
@@ -7360,6 +7369,7 @@
 	"item_mjollnir_ultra"
 	{
 		"BaseClass"                     "item_mjollnir"
+		"ID"						    "9614"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7400,6 +7410,7 @@
 	"item_recipe_bloodstone_ultra"
 	{
 		"BaseClass"                     "item_recipe_bloodstone"
+		"ID"						    "9615"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
@@ -7413,6 +7424,7 @@
 	"item_bloodstone_ultra"
 	{
 		"BaseClass"                     "item_bloodstone"
+		"ID"						    "9616"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"AbilityCastPoint"				"0.0"
@@ -7440,6 +7452,7 @@
 	"item_recipe_blade_mail_ultra"
 	{
 		"BaseClass"                     "item_recipe_blade_mail"
+		"ID"						    "9617"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"FightRecapLevel"				"1"
 		"ItemCost"						"0"
@@ -7454,6 +7467,7 @@
 	"item_blade_mail_ultra"
 	{
 		"BaseClass"                     "item_blade_mail"
+		"ID"						    "9618"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityCooldown"				"30.0"
 		"AbilityManaCost"				"25"
@@ -7477,6 +7491,7 @@
 	"item_recipe_satanic_ultra"
 	{
 		"BaseClass"                     "item_recipe_satanic"
+		"ID"						    "9619"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
@@ -7490,6 +7505,7 @@
 	"item_satanic_ultra"
 	{
 		"BaseClass"                     "item_satanic"
+		"ID"						    "9620"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
@@ -7517,6 +7533,7 @@
 	"item_recipe_glimmer_cape_ultra"
 	{
 		"BaseClass"                     "item_recipe_glimmer_cape"
+		"ID"						    "9621"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
@@ -7529,6 +7546,7 @@
 	"item_glimmer_cape_ultra"
 	{
 		"BaseClass"                     "item_glimmer_cape"
+		"ID"						    "9622"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7549,6 +7567,175 @@
 			"duration"					"1000"
 			"bonus_magical_armor"			"70"
 			"barrier_block"					"5000"
+		}
+	}
+
+	//=================================================================================================================
+	// 龙珠系列 dragon ball blessing of dragon
+	//=================================================================================================================
+	"item_dragon_ball_1"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10001"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_1"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"10"
+		}
+	}
+	"item_dragon_ball_2"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10002"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_2"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"20"
+		}
+	}
+	"item_dragon_ball_3"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10003"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_3"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"30"
+		}
+	}
+	"item_dragon_ball_4"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10004"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_4"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"40"
+		}
+	}
+	"item_dragon_ball_5"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10005"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_5"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"50"
+		}
+	}
+	"item_dragon_ball_6"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10006"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_6"
+		"ItemCost"						"6666"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"60"
+		}
+	}
+	"item_dragon_ball_7"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10007"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dragon_ball_7"
+		"ItemCost"						"7777"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"70"
+		}
+	}
+	"item_recipe_blessing_of_dragon"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "9623"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_blessing_of_dragon"
+		"ItemRequirements"
+		{
+			"01"                        "item_dragon_ball_1;item_dragon_ball_2;item_dragon_ball_3;item_dragon_ball_4;item_dragon_ball_5;item_dragon_ball_6;item_dragon_ball_7"
+		}
+	}
+	"item_blessing_of_dragon"
+	{
+		"BaseClass"                     "item_helm_of_the_undying"
+		"ID"						    "9624"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_blessing_of_dragon"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityCooldown"				"0.0"
+		"AbilityValues"
+		{
+			"bonus_armor"		"6"
+			"duration"			"3600"
 		}
 	}
 }

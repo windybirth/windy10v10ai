@@ -1872,5 +1872,11 @@
 		"DOTA_Tooltip_ability_item_glimmer_cape_ultra_Lore"					"隐形科技的巅峰之作"
 		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade"					"隐形斗篷"
 		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade_Description"		"吸收魔法伤害。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%%%。"
+
+		// item_blessing_of_dragon 神龙赐福
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙赐福</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_Description"		"<h1>被动：不死之身</h1>受到致命伤害不会死亡。"
+		"DOTA_Tooltip_modifier_item_blessing_of_dragon_active"			"不死之身"
+		"DOTA_Tooltip_modifier_item_blessing_of_dragon_active_Description"			"因神龙赐福获得永恒生命"
 	}
 }
