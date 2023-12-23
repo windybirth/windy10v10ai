@@ -8,11 +8,11 @@ jobs:
     steps:
       - name: Get branch name
         id: get_branch
-        run: echo "::set-output name=branch::${GITHUB_REF#refs/heads/}"
+        run: echo "name=branch::${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
 
       - name: Get commit log
         id: get_log
-        run: echo "::set-output name=log::$(git log --pretty=format:'- %s' origin/develop..HEAD)"
+        run: echo "name=log::$(git log --pretty=format:'- %s' origin/develop..HEAD)" >> $GITHUB_OUTPUT
 
       - name: Check out code
         uses: actions/checkout@v4
