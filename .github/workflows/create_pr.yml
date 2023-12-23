@@ -20,18 +20,12 @@ jobs:
           git fetch origin ${{ steps.get_branch.outputs.branch }}:${{ steps.get_branch.outputs.branch }}
           git reset --hard ${{ steps.get_branch.outputs.branch }}
 
-      - name: Get commit log
-        id: get_log
-        run: |
-          echo "log=$(git log --pretty=format:'%s' origin/develop..HEAD)" >> $GITHUB_OUTPUT
-          echo "log=$(git log --pretty=format:'%s' origin/develop..HEAD)"
-
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           title: Update from ${{ steps.get_branch.outputs.branch }}
           body: |
             Changes in this pull request:
-            ${{ steps.get_log.outputs.log }}
+            $(git log --pretty=format:'- %s (%h)' --abbrev-commit origin/develop..${{ steps.get_branch.outputs.branch }})
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
