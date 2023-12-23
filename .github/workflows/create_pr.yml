@@ -25,7 +25,9 @@ jobs:
         with:
           title: Update from ${{ steps.get_branch.outputs.branch }}
           body: |
-            Changes in this pull request:
-            $(git log --pretty=format:'- %s (%h)' --abbrev-commit origin/develop..${{ steps.get_branch.outputs.branch }})
+            ## Changes git log
+            ```
+            git log --pretty=format:'- %s (%h)' --abbrev-commit origin/develop..${{ steps.get_branch.outputs.branch }}
+            ```
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
