@@ -6824,7 +6824,7 @@
 		"Effect"						"particles/generic_gameplay/dropped_refresher_shard.vpcf"
 		"AbilityCooldown"				"0"
 		"AbilityManaCost"				"0"
-		"ItemCost"						"5000"
+		"ItemCost"						"3500"
 		"ItemShopTags"					""
 		"ItemQuality"					"consumable"
 		"ItemPurchasable"				"1"
@@ -7589,7 +7589,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"10"
+			"bonus_all_stats"		"11"
 		}
 	}
 	"item_dragon_ball_2"
@@ -7608,7 +7608,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"20"
+			"bonus_all_stats"		"22"
 		}
 	}
 	"item_dragon_ball_3"
@@ -7627,7 +7627,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"30"
+			"bonus_all_stats"		"33"
 		}
 	}
 	"item_dragon_ball_4"
@@ -7646,7 +7646,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"40"
+			"bonus_all_stats"		"44"
 		}
 	}
 	"item_dragon_ball_5"
@@ -7655,7 +7655,7 @@
 		"ID"						    "10005"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"            "item_dragon_ball_5"
-		"ItemCost"						"0"
+		"ItemCost"						"5555"
 		"ItemIsNeutralDrop"				"1"
 		"ItemShopTags"					""
 		"ItemQuality"					""
@@ -7665,7 +7665,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"50"
+			"bonus_all_stats"		"55"
 		}
 	}
 	"item_dragon_ball_6"
@@ -7684,7 +7684,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"60"
+			"bonus_all_stats"		"66"
 		}
 	}
 	"item_dragon_ball_7"
@@ -7703,7 +7703,7 @@
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"70"
+			"bonus_all_stats"		"77"
 		}
 	}
 	"item_recipe_blessing_of_dragon"

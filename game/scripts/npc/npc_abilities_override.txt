@@ -1223,7 +1223,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Smoke of Deceit
+	// Smoke of Deceit 雾
 	//=================================================================================================================
 	"item_smoke_of_deceit"
 	{
@@ -1239,20 +1239,86 @@
 			"secondary_application_radius"		"300"
 		}
 	}
+	//=================================================================================================================
+	// Teleport Scroll 回城卷轴
+	//=================================================================================================================
+	"item_tpscroll"
+	{
+		"AbilityCooldown"				"30.0"
+		"AbilityValues"
+		{
+				"minimun_distance"		"70"
+				"maximum_distance"		"80000"
+				"vision_radius"			"200"
+				"tooltip_channel_time"			"3.0"
+		}
+	}
+	"item_flask" //大药
+	{
+		"AbilityValues"
+		{
+				"buff_duration"			"10"
+				"health_regen"			"3000"
+				"break_on_hero_damage"	"1"
+		}
+	}
+	"item_clarity" //小净化
+	{
+		"AbilityValues"
+		{
+				"mana_regen"			"600"
+				"buff_duration"			"10"
+		}
+	}
+	"item_blood_grenade" //血腥榴弹
+	{
+		"AbilityValues"
+		{
+			"ItemStockTime"			"30"
+			"speed"					"1100"
+			"radius"
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movespeed_slow"		"-100"
+			"bonus_health"			"200"
+			"damage_over_time"		"60"
+			"impact_damage"			"200"
+			"tick_rate"				"1"
+			"debuff_duration"		"10"
+		}
+	}
+	"item_tango" //吃树
+	{
+		"ItemStockTime"					"30"
+		"AbilityValues"
+		{
+				"health_regen"			"20.0"
+				"buff_duration"			"30.0"
+				"tooltip_charges"				"3"
+		}
+	}
+	"item_bottle" //瓶子
+	{
+		"AbilityValues"
+		{
+				"health_restore"		"1100"
+				"mana_restore"			"600"
+				"health_restore_pct"	"1"
+				"mana_restore_pct"		"1"
+				"restore_time"			"5.0"
+				"max_charges"			"3"
+				"break_on_hero_damage"	"1"
+				"rune_expire_time"		"90.0"
+		}
+	}
 
 
 
 	//=================================================================================================================
 	// Custom item Override 通用物品
 	//=================================================================================================================
-	"item_tpscroll"
-	{
-		"AbilityCooldown"		"30.0"
-		"ItemPermanent"			"1"
-		"ItemPurchasable"		"1"
-		"ItemStockMax"			"1"
-		"ItemCost"				"0"
-	}
 	"item_aghanims_shard"
 	{
 		"ItemInitialStockTime"			"180.0"
@@ -1376,7 +1442,9 @@
 	{
 		"AbilityValues"
 		{
-				"manacost_per_hit"		"75"
+			"bonus_damage"			"140"
+			"spell_lifesteal"		"100"
+			"manacost_per_hit"		"75"
 		}
 	}
 	//=================================================================================================================
@@ -8960,7 +9028,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"20 30 40 50 60"
+				"bonus_damage"			"50 70 90 110 130"
 				"LinkedSpecialBonus"		"special_bonus_unique_spectre_2"
 			}
 			"02"
