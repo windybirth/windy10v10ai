@@ -1228,11 +1228,11 @@
 	"item_smoke_of_deceit"
 	{
 		"ItemStockMax"					"99"
-		"ItemStockTime"					"30.0"
+		"ItemStockTime"					"15.0"
 		"AbilityValues"
 		{
 			"application_radius"	"1200"
-			"visibility_radius"		"500"
+			"visibility_radius"		"600"
 			"bonus_movement_speed"		"15"
 			"duration"				"45.0"
 			"second_cast_cooldown"	"2.0"
@@ -6509,13 +6509,13 @@
 		{
 			"bonus_damage"
 			{
-				"value"			"60 100 140 180 220"
-				"special_bonus_unique_bounty_hunter_4"	"+40"
+				"value"			"120 200 280 360 440"
+				"special_bonus_unique_bounty_hunter_4"	"+80"
 			}
 			"gold_steal"
 			{
-				"value"			"20 24 28 32 36"
-				"special_bonus_unique_bounty_hunter"		"+50"
+				"value"			"0"
+				"special_bonus_unique_bounty_hunter"		"+0"
 			}
 		}
 	}
@@ -6550,18 +6550,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"target_crit_multiplier"	"140 170 200 230 260"
+				"target_crit_multiplier"	"170 210 240 270 320"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_gold_self"		"130 225 320 400 480"
+				"bonus_gold_self"		"260 450 640 800 960"
 				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
 			}
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_gold"			"40 80 120 160 200"
+				"bonus_gold"			"80 160 240 320 400"
 				"LinkedSpecialBonus"	"special_bonus_unique_bounty_hunter_3"
 			}
 			"07"
@@ -6572,7 +6572,7 @@
 			"08"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"toss_crit_multiplier"	"140 170 200 230 260"
+				"toss_crit_multiplier"	"170 210 240 270 2320"
 			}
 		}
 	}
@@ -7830,6 +7830,11 @@
 		"AbilityCooldown"				"120 100 80 60"
 		"AbilityValues"
 		{
+			"duration"
+			{
+				"value"						"40"
+				"LinkedSpecialBonus"		"special_bonus_unique_morphling_8"
+			}
             "scepter_stat_steal"
 			{
 				"value"						"25"
