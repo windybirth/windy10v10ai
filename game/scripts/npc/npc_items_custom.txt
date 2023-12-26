@@ -7706,6 +7706,82 @@
 			"bonus_all_stats"		"77"
 		}
 	}
+	"item_wish_1"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10008"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_wish_1"
+		"ItemCost"						"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+	}
+	"item_wish_2"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10009"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_wish_2"
+		"ItemCost"						"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+	}
+	"item_wish_3"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10010"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_wish_3"
+		"ItemCost"						"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+	}
+	"item_wish_4"
+	{
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10011"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_wish_4"
+		"ItemCost"						"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemSellable"				    "1"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+	}
 	"item_recipe_blessing_of_dragon"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7721,10 +7797,42 @@
 	}
 	"item_blessing_of_dragon"
 	{
-		"BaseClass"                     "item_helm_of_the_undying"
-		"ID"						    "9624"
+		"BaseClass"                     "item_circlet"
+		"ID"						    "10012"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"            "item_blessing_of_dragon"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"0"
+		"ItemSellable"				    "0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"308"
+		}
+	}
+	"item_recipe_blessing_of_dragon_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "9624"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_blessing_of_dragon_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_blessing_of_dragon;item_wish_1"
+		}
+	}
+	"item_blessing_of_dragon_1"
+	{
+		"BaseClass"                     "item_helm_of_the_undying"
+		"ID"						    "9625"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_blessing_of_dragon_1"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
 		"ItemIsNeutralDrop"				"0"
@@ -7736,6 +7844,45 @@
 		{
 			"bonus_armor"		"0"
 			"duration"			"7200"
+		}
+	}
+	"item_recipe_blessing_of_dragon_2"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "9626"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_blessing_of_dragon_2"
+		"ItemRequirements"
+		{
+			"01"                        "item_blessing_of_dragon;item_wish_2"
+		}
+	}
+	"item_recipe_blessing_of_dragon_3"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "9628"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_blessing_of_dragon_3"
+		"ItemRequirements"
+		{
+			"01"                        "item_blessing_of_dragon;item_wish_3"
+		}
+	}
+	"item_recipe_blessing_of_dragon_4"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "9630"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_blessing_of_dragon_4"
+		"ItemRequirements"
+		{
+			"01"                        "item_blessing_of_dragon;item_wish_4"
 		}
 	}
 }
