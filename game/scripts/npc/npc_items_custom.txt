@@ -7603,7 +7603,7 @@
 		"ItemShopTags"					""
 		"ItemQuality"					""
 		"ItemAliases"					""
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				    "1"
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
