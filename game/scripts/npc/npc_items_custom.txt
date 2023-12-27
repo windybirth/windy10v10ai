@@ -7863,8 +7863,7 @@
 	{
 		"BaseClass"                     "item_shivas_guard"
 		"ID"						    "9627"
-		"AbilityUnitTargetTeam"         "DOTA_UNIT_TARGET_TEAM_BOTH"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCooldown"				"180"
@@ -7952,31 +7951,37 @@
 	}
 	"item_blessing_of_dragon_4"
 	{
-		"BaseClass"                     "item_arcane_blink"
+		"BaseClass"                     "item_fallen_sky"
 		"ID"						    "9631"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
-		"AbilityCastRange"				"99999"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
-		"AbilityOvershootCastRange"     "99999"
-		"AbilityCastPoint"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityCastRange"				"99999"
 		"AbilityCooldown"				"0"
-		"AbilityManaCost"				"0"
-		"ItemShopTags"					""
-		"ItemQuality"					""
-		"ItemAliases"					""
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"AbilityTextureName"            "item_blessing_of_dragon_4"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"					"0"
+		"AbilityTextureName"            "item_blessing_of_dragon_4"
 		"AbilityValues"
 		{
-				"blink_range"			"99999"
-				"blink_damage_cooldown"	"0.0"
-				"blink_range_clamp"		"99999"
-				"bonus_intellect"		"0"
-				"heal_amount"			"99999"
-				"mana_amount"			"99999"
-
+			"bonus_strength"		"0"
+			"bonus_intellect"		"0"
+			"bonus_health_regen"	"0.0"
+			"bonus_mana_regen"		"0.0"
+			"burn_dps_buildings"	"120"
+			"burn_dps_units"		"600"
+			"burn_duration"		    "6"
+			"stun_duration"		    "0.8"
+			"burn_interval"		    "1.0"
+			"land_time"				"0"
+			"impact_radius"
+			{
+				"value"			"350"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_duration"		"2.5"
+			"impact_damage_buildings"		"150"
+			"impact_damage_units"		"750"
+			"blink_damage_cooldown"	"0"
 		}
 	}
 }
