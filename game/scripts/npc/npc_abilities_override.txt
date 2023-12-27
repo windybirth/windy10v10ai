@@ -1244,6 +1244,7 @@
 	//=================================================================================================================
 	"item_tpscroll"
 	{
+		"ItemPermanent"                 "1"
 		"AbilityCooldown"				"30.0"
 		"AbilityValues"
 		{
@@ -1259,7 +1260,7 @@
 		{
 				"buff_duration"			"10"
 				"health_regen"			"3000"
-				"break_on_hero_damage"	"1"
+				"break_on_hero_damage"	"0"
 		}
 	}
 	"item_clarity" //小净化
@@ -1309,7 +1310,7 @@
 				"mana_restore_pct"		"1"
 				"restore_time"			"5.0"
 				"max_charges"			"3"
-				"break_on_hero_damage"	"1"
+				"break_on_hero_damage"	"0"
 				"rune_expire_time"		"90.0"
 		}
 	}

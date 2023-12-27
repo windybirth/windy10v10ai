@@ -1873,10 +1873,43 @@
 		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade"					"隐形斗篷"
 		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade_Description"		"吸收魔法伤害。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%%%。"
 
+		// item_blessing_of_dragon 神龙
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_Description"		"恭喜你集齐了七颗龙珠，成功召唤了神龙，现在你可以在商店购买你要许下的愿望。"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_bonus_all_stats"					"+$all"
+
 		// item_blessing_of_dragon_1 神龙赐福·不死
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon_1"				"<font color='#e03e2e'>神龙赐福·不死</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_1_Description"		"<h1>被动：不死之身</h1>字面意思。"
-		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active"			"<font color='#e03e2e'>不死之身</font>"
-		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active_Description"			"字面意思"
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon_1"				"<font color='#9f5f9f'>神龙赐福·不死</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_1_Description"		"<h1><font color='#9f5f9f'>被动：不死之身</font></h1>字面意思。"
+		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active"			"<font color='#9f5f9f'>不死之身</font>"
+		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active_Description"			"<font color='#FFFF00'>求求你打死我</font>"
+
+		// item_blessing_of_dragon_2 神龙赐福·毁灭
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon_2"				"<font color='#9f5f9f'>神龙赐福·毁灭</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_2_Description"		"<h1>主动：毁灭世界</h1>累了，毁灭吧。"
+
+		// item_blessing_of_dragon_3 神龙赐福·时间
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon_3"				"<font color='#9f5f9f'>神龙赐福·时间</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_3_Description"		"<h1>主动：时间操纵</h1>你掌控了时间，能够随意刷新你的冷却。"
+
+		// item_blessing_of_dragon_4 神龙赐福·空间
+		"DOTA_Tooltip_Ability_item_blessing_of_dragon_4"				"<font color='#9f5f9f'>神龙赐福·空间</font>"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_4_Description"		"<h1>主动：空间折跃</h1>来去自如，来无影去无踪，甚至能在折跃后恢复状态。"
+
+		// item_wish_1 愿望1
+		"DOTA_Tooltip_Ability_item_wish_1"				"<font color='#FFFF00'>愿望1</font>"
+		"DOTA_Tooltip_ability_item_wish_1_Description"		"<h1>被动：许愿</h1>“我想要不死之身”你对神龙这样说道"
+
+		// item_wish_2 愿望2
+		"DOTA_Tooltip_Ability_item_wish_2"				"<font color='#FFFF00'>愿望2</font>"
+		"DOTA_Tooltip_ability_item_wish_2_Description"		"<h1>被动：许愿</h1>“我想要毁灭世界”你对神龙这样说道"
+
+		// item_wish_1 愿望3
+		"DOTA_Tooltip_Ability_item_wish_3"				"<font color='#FFFF00'>愿望3</font>"
+		"DOTA_Tooltip_ability_item_wish_3_Description"		"<h1>被动：许愿</h1>“我想要时间之力”你对神龙这样说道"
+
+		// item_wish_1 愿望4
+		"DOTA_Tooltip_Ability_item_wish_4"				"<font color='#FFFF00'>愿望4</font>"
+		"DOTA_Tooltip_ability_item_wish_4_Description"		"<h1>被动：许愿</h1>“我想要空间之力”你对神龙这样说道"
 	}
 }
