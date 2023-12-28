@@ -168,6 +168,7 @@
 	{
 		"AbilityCooldown"				"0"
 		"ItemCost"                      "0"
+		"ItemPurchasable"               "1"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -206,7 +207,7 @@
 	}
 	"item_recipe_greater_famango"
 	{
-		"ItemCost"						"2000"
+		"ItemCost"						"1000"
 		"ItemPurchasable"               "1"
 		"ItemSellable"                  "1"
 		"ItemRequirements"
@@ -1217,6 +1218,19 @@
 			}
 		}
 	}
+	"item_smoke_of_deceit"
+	{
+		"ItemStockTime"					"15.0"
+		"AbilityValues"
+		{
+			"application_radius"	"1200"
+			"visibility_radius"		"500"
+			"bonus_movement_speed"		"15"
+			"duration"				"45.0"
+			"second_cast_cooldown"	"2.0"
+			"secondary_application_radius"		"300"
+		}
+	}
 
 
 
@@ -1403,7 +1417,9 @@
 	{
 		"AbilityValues"
 		{
-				"manacost_per_hit"		"150"
+			"bonus_damage"			"140"
+			"spell_lifesteal"		"80"
+			"manacost_per_hit"		"35"
 		}
 	}
 	//=================================================================================================================
@@ -6344,13 +6360,13 @@
 		{
 			"bonus_damage"
 			{
-				"value"			"60 100 140 180 220"
-				"special_bonus_unique_bounty_hunter_4"	"+40"
+				"value"			"120 200 280 360 440"
+				"special_bonus_unique_bounty_hunter_4"	"+80"
 			}
 			"gold_steal"
 			{
-				"value"			"12 16 20 24 28"
-				"special_bonus_unique_bounty_hunter"		"+30"
+				"value"			"0"
+				"special_bonus_unique_bounty_hunter"		"+50"
 			}
 		}
 	}
@@ -6384,19 +6400,19 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"target_crit_multiplier"	"140 170 200 230 260"
+				"target_crit_multiplier"	"190 230 270 310 350"
 				"bonus_gold_self"
 				{
-					"value"		"130 225 320 400 480"
-					"special_bonus_unique_bounty_hunter_3"	"+45"
+					"value"		"260 450 640 800 960"
+					"special_bonus_unique_bounty_hunter_3"	"+450"
 				}
 				"bonus_gold"
 				{
-					"value"		"40 80 120 160 200"
-					"special_bonus_unique_bounty_hunter_3"	"+45"
+					"value"		"80 160 240 320 400"
+					"special_bonus_unique_bounty_hunter_3"	"+450"
 				}
 				"bonus_move_speed_pct"	"16 20 24 28 32"
-				"toss_crit_multiplier"	"140 170 200 230 260"
+				"toss_crit_multiplier"	"190 230 270 310 350"
 		}
 	}
 	//=================================================================================================================
