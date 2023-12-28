@@ -86,7 +86,7 @@ function AIGameMode:SpecialItemAdd(owner)
 		"item_ex_machina",				-- 机械之心
 		"item_seer_stone",				-- 先哲石
 		-- "item_vengeances_shadow",		-- 复仇之影
-		-- "item_helm_of_the_undying",		-- 不死头盔
+		"item_helm_of_the_undying",		-- 不死头盔
 		"item_woodland_striders",		-- 丛林鞋
 	}
 
