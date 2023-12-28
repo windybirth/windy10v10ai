@@ -7863,7 +7863,7 @@
 	{
 		"BaseClass"                     "item_shivas_guard"
 		"ID"						    "9627"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL |  DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCooldown"				"180"
@@ -7876,6 +7876,8 @@
 		"AbilityTextureName"            "item_blessing_of_dragon_2"
 		"ItemPurchasable"				"0"
 		"ItemSellable"				    "0"
+		"ItemInitialCharges"			"1"
+		"ItemPermanent"					"0"
 		"AbilityValues"
 		{
 				"bonus_intellect"		"0"
