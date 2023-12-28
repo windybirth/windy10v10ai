@@ -7418,7 +7418,7 @@
 		"ItemResult"					"item_bloodstone_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_bloodstone;item_bloodstone;item_bloodstone"
+			"01"						"item_bloodstone;item_bloodstone"
 		}
 	}
 	"item_bloodstone_ultra"
@@ -7436,9 +7436,9 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-			"bonus_aoe"				"250"
-			"bonus_health"			"5000"
-			"bonus_mana"			"5000"
+			"bonus_aoe"				"450"
+			"bonus_health"			"10000"
+			"bonus_mana"			"10000"
 			"spell_lifesteal"		"300"
 			"buff_duration"			"12"
 			"lifesteal_multiplier"	"10"
