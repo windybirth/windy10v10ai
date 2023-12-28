@@ -1201,6 +1201,22 @@
 				"duration"			"7.5" //5
 		}
 	}
+	"kobold_tunneler_prospecting"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"gpm_aura"	"400 500 600 800"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"radius"	"80000"
+			}
+		}
+	}
 
 
 
@@ -1209,11 +1225,22 @@
 	//=================================================================================================================
 	"item_tpscroll"
 	{
-		"AbilityCooldown"		"30.0"
-		"ItemPermanent"			"1"
-		"ItemPurchasable"		"1"
-		"ItemStockMax"			"1"
-		"ItemCost"				"0"
+		"AbilityCastRange"				"0"
+		"AbilityCooldown"				"30.0"
+		"AbilitySharedCooldown"			"teleport"
+		"AbilityChannelTime"			"2.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityManaCost"				"75"
+		"ItemCost"						"100"
+		"ItemPermanent"					"1"
+		"ItemInitialCharges"			"1"
+		"AbilityValues"
+		{
+				"minimun_distance"		"70"
+				"maximum_distance"		"80000"
+				"vision_radius"			"200"
+				"tooltip_channel_time"			"2.0"
+		}
 	}
 	"item_aghanims_shard"
 	{
@@ -1223,6 +1250,44 @@
 	{
 		"AbilityManaCost"				"450"	// 350
 		"AbilityCooldown"				"180.0"	// 180.0
+	}
+	"item_bottle"
+	{
+		"AbilityCooldown"				"0.5"
+		"AbilityCastRange"				"80000"
+		"AbilityValues"
+		{
+			"health_restore"		"1100"
+			"mana_restore"			"600"
+			"health_restore_pct"	"10"
+			"mana_restore_pct"		"10"
+			"restore_time"			"2.7"
+			"max_charges"			"6"
+			"break_on_hero_damage"	"0"
+			"rune_expire_time"		"90.0"
+		}
+	}
+	"item_tango"
+	{
+		"ItemStockTime"					"60"
+		"ItemInitialCharges"			"3"
+		"AbilityValues"
+		{
+				"health_regen"			"40.0"
+				"buff_duration"			"30.0"
+				"tooltip_charges"				"3"
+		}
+	}
+	"item_flask"
+	{
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60"
+		"AbilityValues"
+		{
+				"buff_duration"			"10"
+				"health_regen"			"3000"
+				"break_on_hero_damage"	"1"
+		}
 	}
 	//=================================================================================================================
 	//微光披风（超級加强） Glimmer Cape
@@ -6502,20 +6567,25 @@
 	// 数箭齐发
 	"drow_ranger_multishot"
 	{
-		"MaxLevel" "7"
-		"AbilityManaCost"				"50 70 90 110 130 150 170"
+		"MaxLevel" "5"
+		"AbilityManaCost"				"90 110 130 150 170"
 		"AbilityValues"
 		{
+			"wave_count"
+			{
+				"value"				"3"
+				"special_bonus_unique_drow_ranger_8"		"+3"
+			}
 			"arrow_damage_pct"
 			{
-				"value"										"100 120 140 160 180 200 220"
+				"value"										"140 160 180 200 220"
 				"special_bonus_unique_drow_ranger_1"		"+25"
 			}
-			"arrow_slow_duration"		"1.25 2 2.75 3.5 4.25 5 5.75"
+			"arrow_slow_duration"		"2.75 3.5 4.25 5 5.75"
 			"AbilityCooldown"
 			{
-				"value"											"26 24 22 20 18 16 14"
-				"special_bonus_unique_drow_ranger_6"			"-4"
+				"value"											"22 20 18 16 14"
+				"special_bonus_unique_drow_ranger_6"			"-8"
 			}
 		}
 	}
@@ -6536,6 +6606,14 @@
 			}
 			"agility_multiplier"							"30 40 50 60 70"
 			"agility_multiplier_ally"						"100"
+			"split_count"
+			{
+				"value"										"0"
+				"special_bonus_scepter"						"4"
+			}
+			"split_range"									"550"
+			"split_damage_reduction"						"0"
+			"disable_range"									"0"
 		}
 	}
 	//=================================================================================================================
@@ -7796,6 +7874,9 @@
 				"value"		"-4 -5 -6 -7 -8"
 				"special_bonus_unique_nevermore_5"			"-6"
 			}
+			"presence_radius"				"1200"
+			"bonus_armor_per_stack"			"2"
+			"kill_buff_duration"			"7200"
 		}
 	}
 	"nevermore_requiem"
