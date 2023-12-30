@@ -315,7 +315,7 @@ function OnGameOptionsChange() {
       seasonPointMulti = "2.0";
       break;
     case 6:
-      seasonPointMulti = "2.0";
+      seasonPointMulti = "2.5";
       break;
     default:
       seasonPointMulti = "1.0";
