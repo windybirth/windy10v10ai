@@ -6654,6 +6654,7 @@
 		"ID"                            "9591"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"BaseClass"                     "item_bfury"
+		"AbilityTextureName"            "bfury_ultra"
 		"AbilityValues"
 		{
 				"bonus_damage"			"300"
@@ -6693,11 +6694,12 @@
 		"ID"                            "9593"
 		"BaseClass"                     "item_skadi"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "skadi_ultra"
 		"AbilityValues"
 		{
 				"bonus_all_stats"		"200"
-				"bonus_health"			"1500"
-				"bonus_mana"			"1500"
+				"bonus_health"			"2400"
+				"bonus_mana"			"2400"
 				"cold_slow_melee"	"-100"
 				"cold_attack_slow_melee"	"-300"
 				"cold_slow_ranged"	"-100"
@@ -6796,8 +6798,9 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"FightRecapLevel"				"1"
 		"AbilityCastRange"				"900"
-		"AbilityCooldown"				"0.1"
+		"AbilityCooldown"				"0.03"
 		"AbilitySharedCooldown"			""
+		"AbilityTextureName"            "sphere_ultra"
 
 		"AbilityValues"
 		{
@@ -6881,11 +6884,12 @@
 		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "gungir_ultra"
 		"AbilityValues"
 		{
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
-			"chain_chance"			"50"
+			"chain_chance"			"65"
 			"chain_damage"			"550"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
@@ -6952,7 +6956,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"BaseClass"						"item_black_king_bar"
-		"AbilityTextureName"			"item_black_king_bar_2"
+		"AbilityTextureName"			"item_black_king_bar_ultra"
 		"AbilityCooldown"				"0"
 		"AbilityManaCost"				"0"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -7006,7 +7010,7 @@
 			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 			"Model"							"models/props_gameplay/red_box.vmdl"
 			"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
-			"AbilityTextureName"			"item_vladmir_2"
+			"AbilityTextureName"			"item_vladmir_ultra"
 
 			// Item Info
 			//-------------------------------------------------------------------------------------------------------------
@@ -7197,6 +7201,7 @@
 		"AbilitySharedCooldown"			"urn"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "spirit_vessel_ultra"
 		"AbilityValues"
 		{
 				"bonus_mana_regen"		"6"
@@ -7238,6 +7243,7 @@
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityManaCost"				"100"
+		"AbilityTextureName"            "shivas_guard_ultra"
 		"AbilityValues"
 		{
 			"bonus_intellect"		"80"
@@ -7286,6 +7292,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
 		"AbilityCastRange" 				"700"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
+		"AbilityTextureName"            "radiance_ultra"
 		"AbilityValues"
 		{
 				"bonus_damage"			"600"
@@ -7331,6 +7338,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
+		"AbilityTextureName"            "bloodthorn_ultra"
 		"AbilityValues"
 		{
 				"bonus_intellect"			"100"
@@ -7379,6 +7387,7 @@
 		"AbilityManaCost"				"50"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "mjollnir_ultra"
 		"AbilityValues"
 		{
 			"bonus_damage"			"150"
@@ -7432,6 +7441,7 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AllowedInBackpack"				"1"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "bloodstone_ultra"
 		"AbilityValues"
 		{
 			"bonus_aoe"				"400"
@@ -7471,10 +7481,11 @@
 		"AbilityManaCost"				"25"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "blade_mail_ultra"
 		"AbilityValues"
 		{
 				"bonus_damage"			"100"
-				"bonus_armor"			"-200"
+				"bonus_armor"			"-120"
 				"bonus_intellect"		"100"
 				"duration"				"8"
 				"passive_reflection_constant"			"500"
@@ -7513,6 +7524,7 @@
 		"ItemAliases"					"satanic"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "satanic_ultra"
 		"AbilityValues"
 		{
 			"bonus_strength"		"300"
@@ -7557,6 +7569,7 @@
 		"ShouldBeSuggested"				"1"
 		"ItemDroppable"                 "0"
 		"AllowedInBackpack"             "0"
+		"AbilityTextureName"            "glimmer_cape_ultra"
 		"AbilityValues"
 		{
 			"initial_fade_delay"				"0.5"
