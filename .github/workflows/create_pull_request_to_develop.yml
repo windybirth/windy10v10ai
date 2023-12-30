@@ -33,7 +33,7 @@ jobs:
         run: |
           response=$(curl --request GET --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }})
           title=$(echo "$response" | jq -r .title)
-          if [ not $title ]; then
+          if [ $title = "" ]; then
             title=$(echo ${GITHUB_REF#refs/heads/})
           fi
           echo title=$title >> $GITHUB_OUTPUT
