@@ -20,11 +20,26 @@ jobs:
           git fetch origin ${{ steps.get_branch.outputs.branch }}:${{ steps.get_branch.outputs.branch }}
           git reset --hard ${{ steps.get_branch.outputs.branch }}
 
+      - name: Get issue number from branch name
+        id: get_issue
+        run: echo "::set-output name=number::$(echo ${GITHUB_REF#refs/heads/} | grep -oP '(?<=issue)\d+')"
+
+      - name: Fetch issue details
+        id: fetch_issue
+        run: |
+          response=$(curl --request GET \
+            --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }} \
+            --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+          title=$(echo "$response" | jq -r .title)
+          echo "::set-output name=title::$title"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Pull Request
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          title: Update ${{ steps.get_branch.outputs.branch }}
+          title: ${{ steps.get_branch.outputs.branch }}
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
           reviewers: windybirth
