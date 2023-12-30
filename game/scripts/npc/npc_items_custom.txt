@@ -5924,7 +5924,7 @@
 		"AbilityTextureName"			"item_recipe_tome_of_luoshu"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"5000"
+		"ItemCost"						"6003"
 		"ItemShopTags"					""
 
 		// Recipe
