@@ -27,11 +27,10 @@ jobs:
       - name: Fetch issue details
         id: fetch_issue
         run: |
-          response=$(curl --request GET \
-            --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }} \
-            --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+          response=$(curl --request GET --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }} --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
+          echo $response
           title=$(echo "$response" | jq -r .title)
-          echo "::set-output name=title::$title"
+          echo title=$title >> $GITHUB_OUTPUT
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
