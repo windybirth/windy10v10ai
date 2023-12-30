@@ -1,8 +1,8 @@
 # Windy10v10AI
 
-This is a custom game for Dota2. It is a 10v10 AI game.<br>
+This is a PVE Dota2 custom game. 10 Players vs 10 crazy Bots.<br>
 
-这是一个Dota2的自定义游戏。是一个10v10的AI游戏。
+这是一个PVE的Dota2的自定义游戏。10位玩家 挑战 10个疯狂的AI。
 
 ## Steam workshop
 
@@ -10,7 +10,7 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2307479570
 
 ## Table of Contents
 
-1. [Contributing 参与指南](#contributing)
+1. [Contributing 参与开发](#contributing)
 2. [Get Start 环境配置](#get-start)
    - [Requirement](#requirement)
    - [Develop Tool](#develop-tool)
@@ -19,9 +19,11 @@ https://steamcommunity.com/sharedfiles/filedetails/?id=2307479570
    - [Dota2 vConsole2 Command](#dota2-vconsole2-command)
    - [How to compile item png to vtex_c](#how-to-compile-item-png-to-vtex_c)
 
-# Contributing
+# Contributing 参与开发
 
 If you would like to contribute to Windy10v10AI, please see our [contributing guidelines](.github/CONTRIBUTING.md).
+
+如果你想参与Windy10v10AI的开发，请参考我们的[参与指南](.github/CONTRIBUTING.md#参与开发-windy10v10ai)。
 
 # Get Start
 
