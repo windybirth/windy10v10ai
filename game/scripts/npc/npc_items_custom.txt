@@ -6647,7 +6647,7 @@
 		"ItemResult"					"item_rapier_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier;item_rapier"
+			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier;item_monkey_king_bar_2"
 		}
 	}
 
@@ -6664,8 +6664,8 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"2222"
-			"bonus_spell_amp"		"222"
+			"bonus_damage"			"2000"
+			"bonus_spell_amp"		"200"
 		}
 		"Modifiers"
 		{
