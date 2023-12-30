@@ -26,11 +26,12 @@ jobs:
 
       - name: Get issue number from branch name
         id: get_issue
-        run: echo "::set-output name=number::$(echo ${GITHUB_REF#refs/heads/} | grep -oP '(?<=issue)\d+')"
+        run: echo "::set-output name=number::$(echo ${GITHUB_REF#refs/heads/feature/} | cut -d'-' -f1)"
 
       - name: Fetch issue details
         id: fetch_issue
         run: |
+          echo title=Auto Created Pull Request >> $GITHUB_OUTPUT
           response=$(curl --request GET --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }} --header 'Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}')
           echo $response
           title=$(echo "$response" | jq -r .title)
