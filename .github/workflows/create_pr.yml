@@ -30,7 +30,6 @@ jobs:
           reviewers: windybirth
 
       - name: Enable Pull Request Automerge
-        if: steps.cpr.outputs.pull-request-operation == 'created'
         uses: peter-evans/enable-pull-request-automerge@v3
         with:
           # token: ${{ secrets.PAT }}
