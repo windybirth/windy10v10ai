@@ -88,6 +88,7 @@
 		"item"		"item_void_stone"
 
 		"item"      "item_recipe_greater_famango"
+		"item"      "item_rapier_ultra"
 	}
 
 	// Level 1 - Green Recipes

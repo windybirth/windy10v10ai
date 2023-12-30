@@ -1,13 +1,13 @@
 local dropTable = nil
 
 
-local function CreateItemLocal(sItemName, hEntity)
-    local item = CreateItem(sItemName, nil, nil)
-    local pos = hEntity:GetAbsOrigin()
-    CreateItemOnPositionSync(pos, item)
-    local pos_launch = pos + RandomVector(RandomFloat(150, 200))
-    item:LaunchLoot(false, 200, 0.75, pos_launch, nil)
-end
+-- local function CreateItemLocal(sItemName, hEntity)
+--    local item = CreateItem(sItemName, nil, nil)
+--    local pos = hEntity:GetAbsOrigin()
+--    CreateItemOnPositionSync(pos, item)
+--    local pos_launch = pos + RandomVector(RandomFloat(150, 200))
+--    item:LaunchLoot(false, 200, 0.75, pos_launch, nil)
+-- end
 
 local function RollDrops(hHero)
     if not dropTable then
@@ -23,7 +23,7 @@ local function RollDrops(hHero)
                         -- Remove the item
                         hHero:RemoveItem(hItem)
                         -- Create the item
-                        CreateItemLocal(item_name, hHero)
+                        -- CreateItemLocal(item_name, hHero)
                     end
                 end
             end
