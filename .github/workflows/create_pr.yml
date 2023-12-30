@@ -39,7 +39,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
-          title: ${{ steps.get_branch.outputs.branch }}
+          title: ${{ steps.fetch_issue.outputs.title }}
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
           reviewers: windybirth
