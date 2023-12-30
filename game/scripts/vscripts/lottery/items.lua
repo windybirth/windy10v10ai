@@ -92,7 +92,7 @@ function AIGameMode:SpecialItemAdd(owner)
 		-- "item_demonicon",				-- 大死灵书
 		"item_minotaur_horn",			-- 恶牛角
 		"item_spell_prism",				-- 法术棱镜
-		"item_helm_of_the_undying",		-- 不死头盔
+		-- "item_helm_of_the_undying",		-- 不死头盔
 		"item_woodland_striders",		-- 丛林鞋
 	}
 
