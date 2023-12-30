@@ -24,7 +24,7 @@
   },
   "[txt]": {
     "editor.insertSpaces": false,
-    "editor.tabSize": 4, // 或者你想要的任何其他数值
+    "editor.tabSize": 4,
     "editor.formatOnSave": true,
     "files.trimTrailingWhitespace": true,
     "editor.autoIndent": "full"
