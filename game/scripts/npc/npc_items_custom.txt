@@ -7582,6 +7582,56 @@
 	}
 
 	//=================================================================================================================
+	// 永恒虚灵刀
+	//=================================================================================================================
+	"item_recipe_ethereal_blade_ultra"
+	{
+		"BaseClass"                     "item_recipe_ethereal_blade"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ethereal_blade_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_ethereal_blade;item_ethereal_blade"
+		}
+	}
+	"item_ethereal_blade_ultra"
+	{
+		"BaseClass"                     "item_ethereal_blade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"11.0"
+		"AbilitySharedCooldown"			"ethereal"
+		"AbilityManaCost"				"100"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "ethereal_blade_ultra"
+		"AbilityValues"
+		{
+				"bonus_agility"			"40"
+				"bonus_strength"		"40"
+				"bonus_intellect"		"40"
+				"bonus_mana"			"900"
+				"bonus_cast_range"		"500"
+				"bonus_mana_regen"		"30"
+				"blast_movement_slow"	"-100"
+				"duration"				"99999"
+				"blast_agility_multiplier"			"4.5"
+				"blast_damage_base"			"500"
+				"duration_ally"				"99999"
+				"ethereal_damage_bonus"	"-100"
+				"projectile_speed"	"1275"
+		}
+	}
+
+	//=================================================================================================================
 	// 龙珠系列 dragon ball blessing of dragon
 	//=================================================================================================================
 	"item_dragon_ball_1"
@@ -7872,45 +7922,40 @@
 	}
 	"item_blessing_of_dragon_2"
 	{
-		"BaseClass"                     "item_shivas_guard"
+		"BaseClass"                     "item_blood_grenade"
 		"ID"						    "9627"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET |  DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL |  DOTA_ABILITY_BEHAVIOR_SUPPRESS_ASSOCIATED_CONSUMABLE"
-		"FightRecapLevel"				"1"
-		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityCooldown"				"180"
-		"AbilityManaCost"				"0"
-		"ItemShopTags"					""
-		"ItemQuality"					""
-		"ItemAliases"					""
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
 		"AbilityTextureName"            "item_blessing_of_dragon_2"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				    "0"
-		"ItemInitialCharges"			"1"
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0"
+		"AbilityHealthCost"				"0"
+		"AbilityCooldown"				"180"
+		"ItemCost"						"0"
+		"ItemStackable"					"0"
+		"ItemInitialCharges"			"3"
 		"ItemPermanent"					"0"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+		"ItemPurchasable"               "0"
+		"ItemSellable"                  "0"
 		"AbilityValues"
 		{
-				"bonus_intellect"		"0"
-				"bonus_strength"		"0"
-				"bonus_agility"			"0"
-				"bonus_hp_regen"		"0"
-				"bonus_armor"			"0"
-				"aura_radius"			"0"
-				"aura_attack_speed"		"-0"
-				"blast_damage"			"999999"
-				"blast_movement_speed"	"0"
-				"blast_debuff_duration"	"0"
-				"blast_radius"
-				{
-					"value"		"99999"
-					"affected_by_aoe_increase"	"1"
-				}
-				"blast_speed"			"99999"
-				"hp_regen_degen_aura"	"0"
-				"illusion_multiplier_pct"	"100"
-				"spell_amp"			"0"
-				"resist_debuff_duration"	"0"
+			"speed"					"99999"
+			"radius"
+			{
+				"value"		"99999"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movespeed_slow"		"-100"
+			"bonus_health"			"0"
+			"damage_over_time"		"999999"
+			"impact_damage"			"99999"
+			"tick_rate"				"1"
+			"debuff_duration"		"10"
 		}
 	}
 	"item_recipe_blessing_of_dragon_3"

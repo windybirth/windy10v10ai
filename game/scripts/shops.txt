@@ -77,15 +77,7 @@
 		"item"		"item_javelin"
 		"item"		"item_claymore"
 		"item"		"item_mithril_hammer"
-		"item"      "item_radiance_ultra"
-		"item"      "item_bloodthorn_ultra"
-		"item"      "item_bloodstone_ultra"
-		"item"      "item_mjollnir_ultra"
-		"item"      "item_blade_mail_ultra"
-		"item"      "item_satanic_ultra"
-		"item"      "item_glimmer_cape_ultra"
-		"item"      "item_spirit_vessel_ultra"
-		"item"      "item_shivas_guard_ultra"
+		"item"      "item_ethereal_blade_ultra"
 	}
 
 	"misc"
@@ -108,14 +100,6 @@
 		"item"		"item_void_stone"
 
 		"item"      "item_recipe_greater_famango"
-		"item"      "item_bfury_ultra"
-		"item"      "item_skadi_ultra"
-		"item"      "item_rapier_ultra"
-		"item"      "item_sphere_ultra"
-		"item"      "item_gungir_ultra"
-		"item"      "item_black_king_bar_real"
-		"item"      "item_black_king_bar_ultra"
-		"item"      "item_vladmir_ultra"
 	}
 
 	// Level 1 - Green Recipes
@@ -236,6 +220,14 @@
 		"item"		"item_infernal_desolator"
 		"item"      "item_wasp_golden"
 		"item"		"item_excalibur"
+		"item"      "item_radiance_ultra"
+		"item"      "item_bloodthorn_ultra"
+		"item"      "item_bloodstone_ultra"
+		"item"      "item_mjollnir_ultra"
+		"item"      "item_blade_mail_ultra"
+		"item"      "item_satanic_ultra"
+		"item"      "item_glimmer_cape_ultra"
+		"item"      "item_spirit_vessel_ultra"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
@@ -268,6 +260,14 @@
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
 		"item"		"item_tome_of_luoshu"
+		"item"      "item_bfury_ultra"
+		"item"      "item_skadi_ultra"
+		"item"      "item_rapier_ultra"
+		"item"      "item_sphere_ultra"
+		"item"      "item_gungir_ultra"
+		"item"      "item_black_king_bar_ultra"
+		"item"      "item_vladmir_ultra"
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	"sideshop1"

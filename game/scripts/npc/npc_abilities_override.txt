@@ -167,7 +167,7 @@
 	"item_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "1000"
 		"ItemPurchasable"               "1"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
@@ -179,7 +179,7 @@
 	"item_great_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "2000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -190,7 +190,7 @@
 	"item_greater_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "3000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -227,7 +227,7 @@
 	"item_cheese"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"						"4000"	// 1000
+		"ItemCost"						"2000"	// 1000
 		"ItemStockInitial"				"1"
 		"ItemStockMax"					"3"
 		"ItemStockTime"					"300"
@@ -506,7 +506,7 @@
 		"AbilityValues"
 		{
 			"cast_range_bonus"					"175"  //125
-			"mana_reduction_pct"				"40"   //15
+			"mana_reduction_pct"				"20"   //15
 			"bonus_mana_regen"					"5.0" //1.25
 		}
 	}
@@ -549,9 +549,9 @@
 	{
 		"AbilityValues"
 		{
-				"bonus_gpm"			"750" //75
-				"bonus_mana"		"-800" //200
-				"bonus_damage"		"-250" //-30
+				"bonus_gpm"			"1500" //75
+				"bonus_mana"		"-2000" //200
+				"bonus_damage"		"-300" //-30
 		}
 	}
 	"item_vampire_fangs" //吸血鬼獠牙
@@ -816,7 +816,7 @@
 	// level 4
 	"item_specialists_array" //行家阵列
 	{
-		"AbilityCooldown"				"0.5"   //8
+		"AbilityCooldown"				"0.1"   //8
 		"AbilityValues"
 		{
 			"all_stats"						"35" //7
@@ -899,8 +899,8 @@
 	{
 		"AbilityValues"
 		{
-			"extra_bonus_damage"	"500"    //50
-			"bonus_damage"			"100"    //50
+			"extra_bonus_damage"	"1000"    //50
+			"bonus_damage"			"200"    //50
 			"radius"				"2000"  //2000
 		}
 	}
@@ -1220,7 +1220,7 @@
 	}
 	"item_smoke_of_deceit"
 	{
-		"ItemStockTime"					"15.0"
+		"ItemStockTime"					"15"
 		"AbilityValues"
 		{
 			"application_radius"	"1200"
@@ -1231,8 +1231,38 @@
 			"secondary_application_radius"		"300"
 		}
 	}
-
-
+	"item_blood_grenade"
+	{
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.0"
+		"AbilityHealthCost"				"75"
+		"AbilityCooldown"				"10"
+		"ItemCost"						"50"
+		"ItemStackable"					"1"
+		"ItemStackableMax"				"2"
+		"ItemStockMax"					"3"
+		"ItemStockInitial"				"2"
+		"ItemStockTime"					"15"
+		"ItemInitialCharges"			"1"
+		"ItemPermanent"					"0"
+		"IsTempestDoubleClonable"		"0"
+		"ShouldBeInitiallySuggested"	"1"
+		"AbilityValues"
+		{
+			"speed"					"1100"
+			"radius"
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"
+			}
+			"movespeed_slow"		"-100"
+			"bonus_health"			"500"
+			"damage_over_time"		"60"
+			"impact_damage"			"200"
+			"tick_rate"				"1"
+			"debuff_duration"		"8"
+		}
+	}
 
 	//=================================================================================================================
 	// Custom item Override 通用物品
@@ -1276,7 +1306,7 @@
 			"health_restore_pct"	"10"
 			"mana_restore_pct"		"10"
 			"restore_time"			"2.7"
-			"max_charges"			"6"
+			"max_charges"			"3"
 			"break_on_hero_damage"	"0"
 			"rune_expire_time"		"90.0"
 		}
@@ -1557,10 +1587,6 @@
 		"AbilitySharedCooldown"			"gungir"
 	}
 
-	"item_smoke_of_deceit"
-	{
-		"ItemStockTime"					"180.0"
-	}
 
 	//=================================================================================================================
 	// Observer Wards 假眼
@@ -1953,13 +1979,13 @@
     {
         "AbilityCastRange"				"600"
 		"ItemSellable"					"0"
-        "ItemStockTime"					"240.0"
+        "ItemStockTime"					"60.0"
         "AllowedInBackpack"				"1"
     }
 
     "item_rapier"
     {
-        "AllowedInBackpack"				"1"
+        "AllowedInBackpack"				"0"
     }
 
 	//=================================================================================================================
