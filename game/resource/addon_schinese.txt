@@ -1724,7 +1724,7 @@
 
 		// item_black_king_bar_ultra 永恒黑黄杖
 		"DOTA_Tooltip_Ability_item_black_king_bar_ultra"			"<font color='#e03e2e'>神器·永恒黑黄杖</font>"
-		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Description"				"<h1>主动：永久天神下凡</h1>获得减益免疫状态。提供%magic_resist%%%魔法抗性加成，并且免疫纯粹和反弹伤害。持续时间内敌方技能的负面效果不会生效。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span> \n<h1>被动：力量的代价</h1>过于强大力量总会有它的代价，至于是什么，这不重要，重要的是你无敌了。"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Description"				"<h1>主动：永久天神下凡</h1>获得减益免疫状态。同时-%magic_resist%%%魔法抗性，并且免疫纯粹和反弹伤害。持续时间内敌方技能的负面效果不会生效。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span> \n<h1>被动：力量的代价</h1>过于强大力量总会有它的代价，至于是什么，这不重要，重要的是你无敌了。"
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Lore"						"那么代价是什么呢？"
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note0"						"死亡摧毁，休想白嫖。"
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note1"						"假魔免也是魔免，别看不起人。"
@@ -1844,10 +1844,10 @@
 		"DOTA_Tooltip_modifier_item_bloodstone_ultra_drained"							"精疲力竭"
 		"DOTA_Tooltip_modifier_item_bloodstone_ultra_drained_Description"				"血之契约的加成效果不会施加给精疲力竭的单位。"
 
-		// item_blade_mail_ultra 自在极意甲
-		"DOTA_Tooltip_Ability_item_blade_mail_ultra"	"<font color='#e03e2e'>神器·自在极意甲</font>"
-		"DOTA_Tooltip_ability_item_blade_mail_ultra_Description"						"<h1>主动：防守反击</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"
-		"DOTA_Tooltip_ability_item_blade_mail_ultra_Lore"								"自在极意的巅峰之作，浓缩在甲胄之中。"
+		// item_blade_mail_ultra 天地同寿
+		"DOTA_Tooltip_Ability_item_blade_mail_ultra"	"<font color='#e03e2e'>神器·天地同寿</font>"
+		"DOTA_Tooltip_ability_item_blade_mail_ultra_Description"						"<h1>主动：自爆卡车</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"
+		"DOTA_Tooltip_ability_item_blade_mail_ultra_Lore"								"反伤的巅峰之作，浓缩在甲胄之中。"
 		"DOTA_Tooltip_ability_item_blade_mail_ultra_Note0"							"反弹的均为减免前的伤害。"
 		"DOTA_Tooltip_ability_item_blade_mail_ultra_Note1"							"伤害反弹不会反弹来自其他刃甲的伤害。"
 		"DOTA_Tooltip_ability_item_blade_mail_ultra_Note2"							"反弹伤害的类型与受到时相同。"

@@ -6678,12 +6678,12 @@
 	{
 		"ID"                            "9592"
 		"BaseClass"                     "item_recipe_skadi"
-		"ItemCost"						"0"
+		"ItemCost"						"400"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_skadi_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_skadi;item_skadi;item_skadi;item_skadi"
+			"01"						"item_skadi;item_skadi_2;item_ultimate_orb"
 		}
 
 	}
@@ -6934,9 +6934,7 @@
 	//=================================================================================================================
 	"item_recipe_black_king_bar_ultra"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"9601"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"9601"
 		"BaseClass"						"item_recipe_black_king_bar"
 		"ItemCost"						"0"
 		"ItemShopTags"					""
@@ -6944,13 +6942,13 @@
 		"ItemResult"					"item_black_king_bar_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_black_king_bar_2;item_black_king_bar_2;item_black_king_bar_2"
+			"01"						"item_black_king_bar_2;item_black_king_bar;item_black_king_bar_real"
 		}
 	}
 
 	"item_black_king_bar_ultra"
 	{
-		"ID"							"9602"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"9602"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"FightRecapLevel"				"2"
 		"BaseClass"						"item_black_king_bar"
@@ -6964,11 +6962,11 @@
 
 		"AbilityValues"
 		{
-			"bonus_strength"		"300"
-			"bonus_damage"			"600"
+			"bonus_strength"		"180"
+			"bonus_damage"			"360"
 			"duration"				"99999"
 			"max_level"				"1"
-			"model_scale"			"0"     // Percentage over model scale
+			"model_scale"			"0"
 			"magic_resist"			"-100"
 		}
 	}
@@ -7064,7 +7062,7 @@
 					"11"
 					{
 							"var_type"				"FIELD_INTEGER"
-							"aura_negative_armor"	"-80"
+							"aura_negative_armor"	"-120"
 					}
 			}
 			"Modifiers"
@@ -7178,12 +7176,12 @@
 		"BaseClass"                     "item_recipe_spirit_vessel"
 		"ID"						    "9605"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
+		"ItemCost"						"100"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_spirit_vessel_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_spirit_vessel;item_spirit_vessel;item_spirit_vessel;item_spirit_vessel"
+			"01"						"item_spirit_vessel;item_skadi_2"
 		}
 	}
 	"item_spirit_vessel_ultra"
@@ -7194,7 +7192,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
-		"AbilityCastRange"				"80000"
+		"AbilityCastRange"				"1500"
 		"AbilityCooldown"				"0.5"
 		"AbilitySharedCooldown"			"urn"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -7208,11 +7206,11 @@
 				"soul_radius"			"1800"
 				"soul_initial_charge"	"10"
 				"soul_additional_charges"	"5"
-				"soul_heal_amount"		"500"
-				"soul_damage_amount"	"500"
-				"duration"			"15.0"
+				"soul_heal_amount"		"200"
+				"soul_damage_amount"	"200"
+				"duration"			"12.0"
 				"hp_regen_reduction_enemy"	"99"
-				"enemy_hp_drain"		"10"
+				"enemy_hp_drain"		"6"
 		}
 	}
 
@@ -7224,19 +7222,19 @@
 		"BaseClass"                     "item_recipe_shivas_guard"
 		"ID"						    "9607"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
+		"ItemCost"						"1500"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_shivas_guard_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_shivas_guard;item_shivas_guard;item_shivas_guard;item_shivas_guard"
+			"01"						"item_shivas_guard;item_shivas_guard_2"
 		}
 	}
 	"item_shivas_guard_ultra"
 	{
 		"BaseClass"                     "item_shivas_guard"
 		"ID"						    "9608"
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"12"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityManaCost"				"100"
@@ -7278,7 +7276,7 @@
 		"ItemResult"					"item_radiance_ultra"
 		"ItemRequirements"
 		{
-			"01"						"iitem_radiance;item_radiance;item_radiance;item_radiance;item_radiance"
+			"01"						"iitem_radiance_2;item_radiance_2"
 		}
 	}
 	"item_radiance_ultra"
@@ -7286,17 +7284,17 @@
 		"BaseClass"                     "item_radiance"
 		"ID"						    "9610"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE"
-		"AbilityCastRange" 				"1400"
+		"AbilityCastRange" 				"700"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityValues"
 		{
-				"bonus_damage"			"400"
-				"aura_damage"			"800"
+				"bonus_damage"			"600"
+				"aura_damage"			"600"
 				"aura_damage_illusions"	"600"
 				"upgrade_day_vision"	"800"
 				"evasion"				"100"
 				"blind_pct"				"100"
-				"aura_radius"			"1400"
+				"aura_radius"			"700"
 				"illusion_multiplier_pct"	"300"
 		}
 	}
@@ -7412,13 +7410,13 @@
 		"BaseClass"                     "item_recipe_bloodstone"
 		"ID"						    "9615"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
+		"ItemCost"						"1600"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bloodstone_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_bloodstone;item_bloodstone"
+			"01"						"item_bloodstone;item_bloodstone_v2"
 		}
 	}
 	"item_bloodstone_ultra"
@@ -7426,7 +7424,7 @@
 		"BaseClass"                     "item_bloodstone"
 		"ID"						    "9616"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"FightRecapLevel"				"2"
+		"FightRecapLevel"				"3"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"20.0"
 		"AbilityManaCost"				"0"
@@ -7436,9 +7434,9 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-			"bonus_aoe"				"450"
-			"bonus_health"			"10000"
-			"bonus_mana"			"10000"
+			"bonus_aoe"				"400"
+			"bonus_health"			"6000"
+			"bonus_mana"			"6000"
 			"spell_lifesteal"		"300"
 			"buff_duration"			"12"
 			"lifesteal_multiplier"	"10"
@@ -7461,7 +7459,7 @@
 		"ItemResult"					"item_blade_mail_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_blade_mail;item_blade_mail;item_blade_mail;item_blade_mail;item_blade_mail"
+			"01"						"item_blade_mail;item_blade_mail_2;item_blade_mail_2"
 		}
 	}
 	"item_blade_mail_ultra"
@@ -7476,7 +7474,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"100"
-				"bonus_armor"			"-100"
+				"bonus_armor"			"-200"
 				"bonus_intellect"		"100"
 				"duration"				"8"
 				"passive_reflection_constant"			"500"
