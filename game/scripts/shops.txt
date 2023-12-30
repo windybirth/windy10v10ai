@@ -88,7 +88,6 @@
 		"item"		"item_void_stone"
 
 		"item"      "item_recipe_greater_famango"
-		"item"      "item_rapier_ultra"
 	}
 
 	// Level 1 - Green Recipes
@@ -187,7 +186,7 @@
 	"weapons"
 	{
 		// "item"		"item_lesser_crit"
- 		"item"		"item_desolator"
+		"item"      "item_rapier_ultra"
 		"item"		"item_basher"
 		"item"		"item_nullifier"			// 否决
 		"item"		"item_greater_crit"
