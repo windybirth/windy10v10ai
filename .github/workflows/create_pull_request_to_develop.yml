@@ -1,6 +1,10 @@
 name: Create Pull Request to develop
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/*
+      - fix-ci
 
 jobs:
   create_pull_request:
