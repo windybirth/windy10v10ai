@@ -1,6 +1,10 @@
 name: Create Pull Request to develop
 on:
   workflow_dispatch:
+  # TODO remove
+  push:
+    branches:
+      - feature/735-balance
 
 jobs:
   create_pull_request:
