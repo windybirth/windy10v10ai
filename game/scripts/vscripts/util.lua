@@ -121,6 +121,10 @@ end
 function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 	if IsServer() then
 		local attacker = params.attacker
+		if params.inflictor then
+			return
+		end
+
 		if attacker == hHero then
 			local hTarget = params.unit
 			if attacker:IsBuilding() or attacker:IsIllusion() then
@@ -133,6 +137,7 @@ function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 			local iHeal = actual_damage * iLifeSteal * 0.01
             attacker:HealWithParams(iHeal,hAbility,true,true,attacker,false)
 
+			print("攻击吸血: "..iHeal)
 			-- effect
 			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, attacker)
 			ParticleManager:SetParticleControl(lifesteal_pfx, 0, attacker:GetAbsOrigin())
@@ -145,6 +150,7 @@ end
 function LifeStealOnAttackLanded (params, iLifeSteal, hHero, hAbility)
 	if IsServer() then
 		local attacker = params.attacker
+
 		if attacker == hHero then
 			local hTarget = params.target
 			if attacker:IsBuilding() or attacker:IsIllusion() then
@@ -179,6 +185,8 @@ function SpellLifeSteal(keys, hAbility, ilifeSteal)
 		if keys.unit:IsCreep() then
 			iHeal = iHeal / 5
 		end
+
+		print("法术吸血: "..iHeal)
 		hParent:HealWithParams(iHeal, hAbility:GetAbility(),false,true,hParent,true)
 		local pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, hParent)
 		ParticleManager:ReleaseParticleIndex(pfx)
