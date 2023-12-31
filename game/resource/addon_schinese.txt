@@ -906,7 +906,7 @@
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_3"					"+{s:bonus_stun_duration}秒 界王拳击晕时间"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4"					"龟派气功强驱散"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4_description"		"龟派气功会对其中的敌人持续造成强驱散，不会驱散眩晕等Debuff。"
-		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5"					"+{s:bonus_regen}% 超级赛亚人恢复"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5"					"+{s:bonus_length} 龟派气功光波长度"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_6"					"+{s:bonus_channel} 龟派气功持续时间"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_7"					"+{s:bonus_duration}秒 超级赛亚人持续时间"
 
@@ -1661,6 +1661,14 @@
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Note1"						"横扫饥饿，做回自己，10秒真男人。"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_bonus_strength"				"+$str"
 
+		// item_rapier_ultra 诅咒圣剑
+		"DOTA_Tooltip_ability_item_rapier_ultra"                        "<font color='#e03e2e'>神器·诅咒圣剑</font>"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_Description"            "<h1>被动：克敌机先</h1>攻击不会因闪避或其他效果而落空。\n<h1>被动：<font color='#e03e2e'>力量的代价</font></h1>过于强大力量总会有它的代价，至于是什么，这不重要，重要的是你无敌了。"
+		"DOTA_Tooltip_ability_item_rapier_ultra_Lore"					"死亡摧毁。"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_damage"			"+$damage"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_spell_amp"           "%+$spell_amp"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_Note0"					"其实是死亡99%概率摧毁，至于能不能幸免于难，施主且行且珍惜。"
+
 		// item_satanic_ultra 撒旦之神力
 		"DOTA_Tooltip_Ability_item_satanic_ultra"				"<font color='#e03e2e'>神器·撒旦之神力</font>"
 		"DOTA_Tooltip_ability_item_satanic_ultra_Description"							"<h1>主动：神力狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成的伤害回复%lifesteal_percent%%%的生命值。"
@@ -1739,6 +1747,5 @@
 		"DOTA_Tooltip_ability_item_skadi_ultra_bonus_health"			"+$health"
 		"DOTA_Tooltip_ability_item_skadi_ultra_bonus_mana"				"+$mana"
 		"DOTA_Tooltip_Ability_item_skadi_ultra_Note0"					"gtmd全能戴泽nec。"
-
 	}
 }
