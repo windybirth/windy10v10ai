@@ -12,6 +12,9 @@ function TsPrintTable(_, t, indent, done)
 end
 
 function Printf(pattern, ...)
+	if not AIGameMode.DebugMode then
+		return
+	end
 	local str = string.format(pattern, ...)
 	GameRules:SendCustomMessage(str, DOTA_TEAM_GOODGUYS, 0)
 end
@@ -137,7 +140,7 @@ function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 			local iHeal = actual_damage * iLifeSteal * 0.01
             attacker:HealWithParams(iHeal,hAbility,true,true,attacker,false)
 
-			print("攻击吸血: "..iHeal)
+			Printf("攻击吸血: "..iHeal)
 			-- effect
 			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, attacker)
 			ParticleManager:SetParticleControl(lifesteal_pfx, 0, attacker:GetAbsOrigin())
@@ -186,7 +189,7 @@ function SpellLifeSteal(keys, hAbility, ilifeSteal)
 			iHeal = iHeal / 5
 		end
 
-		print("法术吸血: "..iHeal)
+		Printf("法术吸血: "..iHeal)
 		hParent:HealWithParams(iHeal, hAbility:GetAbility(),false,true,hParent,true)
 		local pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, hParent)
 		ParticleManager:ReleaseParticleIndex(pfx)
