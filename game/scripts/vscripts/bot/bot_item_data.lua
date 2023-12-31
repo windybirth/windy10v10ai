@@ -25,12 +25,13 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_overwhelming_blink',
 		'item_ultimate_scepter_2',
 		'item_shivas_guard_2',
-		'item_black_king_bar_2',
 		'item_vladmir_2',
 		'item_insight_armor',
 		'item_saint_orb',
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
+		'item_blade_mail_ultra',
+		'item_radiance_ultra',
 	},
 	npc_dota_hero_arc_warden = {
 		'item_wings_of_haste',
@@ -84,6 +85,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_abyssal_blade_v2',
 		'item_jump_jump_jump',
+		'item_blade_mail_ultra',
 	},
 	npc_dota_hero_spectre = {
 		'item_magic_wand',
@@ -105,6 +107,7 @@ tBotItemData.purchaseItemList = {
 		'item_blue_fantasy',
 		'item_jump_jump_jump',
 		'item_moon_shard_datadriven',
+		'item_blade_mail_ultra',
 	},
 	npc_dota_hero_bane = {
 		'item_magic_wand',
@@ -194,7 +197,7 @@ tBotItemData.purchaseItemList = {
 		'item_saint_orb',
 		'item_undying_heart',
 		'item_moon_shard_datadriven',
-		'item_sacred_six_vein',
+		'item_blade_mail_ultra',
 	},
 	npc_dota_hero_chaos_knight = {
 		'item_magic_wand',
@@ -337,14 +340,13 @@ tBotItemData.purchaseItemList = {
 		'item_hurricane_pike_2',
 		'item_ultimate_scepter_2',
 		'item_butterfly',
-		'item_satanic',
 		'item_silver_edge_2',
 		'item_infernal_desolator',
 		'item_black_king_bar_2',
 		'item_lesser_crit',
 		'item_recipe_wasp_callous',
 		'item_wasp_despotic',
-		'item_satanic',
+		'item_satanic_ultra',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_magic_wand',
@@ -367,7 +369,7 @@ tBotItemData.purchaseItemList = {
 		'item_undying_heart',
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
-		'item_sacred_six_vein',
+		'item_blade_mail_ultra',
 	},
 	npc_dota_hero_jakiro = {
 		'item_magic_wand',
@@ -528,12 +530,11 @@ tBotItemData.purchaseItemList = {
 		'item_hurricane_pike_2',
 		'item_monkey_king_bar_2',
 		'item_ultimate_scepter_2',
-		'item_satanic',
 		'item_infernal_desolator',
 		'item_wasp_callous',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_wasp_despotic',
-		'item_satanic',
+		'item_satanic_ultra',
 	},
 	npc_dota_hero_medusa = {
 		'item_magic_wand',
@@ -546,7 +547,6 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_ultimate_scepter',
 		'item_wings_of_haste',
-		'item_skadi',
 		'item_hurricane_pike_2',
 		'item_butterfly',
 		'item_recipe_ultimate_scepter_2',
@@ -555,7 +555,7 @@ tBotItemData.purchaseItemList = {
 		'item_black_king_bar_2',
 		'item_recipe_wasp_callous',
 		'item_wasp_despotic',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_excalibur',
 	},
 	npc_dota_hero_meepo = {
@@ -615,12 +615,11 @@ tBotItemData.purchaseItemList = {
 		'item_eagle',
 		'item_recipe_swift_blink',
 		'item_infernal_desolator',
-		'item_satanic',
 		'item_wasp_callous',
 		'item_monkey_king_bar_2',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_wasp_despotic',
-		'item_satanic',
+		'item_satanic_ultra',
 		'item_jump_jump_jump',
 	},
 	npc_dota_hero_necrolyte = {
@@ -736,10 +735,9 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter_2',
 		'item_abyssal_blade_v2',
 		'item_wasp_callous',
-		'item_satanic',
 		'item_wasp_despotic',
 		'item_excalibur',
-		'item_satanic',
+		'item_satanic_ultra',
 	},
 	npc_dota_hero_pudge = {
 		'item_magic_wand',
@@ -753,19 +751,16 @@ tBotItemData.purchaseItemList = {
 		'item_blade_mail_2',
 		'item_blink',
 		'item_eternal_shroud',
-		'item_aether_lens_2',
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
 		'item_ultimate_scepter_2',
-		'item_octarine_core',
-		'item_recipe_arcane_octarine_core',
 		'item_saint_orb',
 		'item_undying_heart',
 		'item_shivas_guard_2',
-		'item_refresher',
-		'item_recipe_refresh_core',
-		'item_moon_shard_datadriven',
 		'item_abyssal_blade_v2',
+		'item_moon_shard_datadriven',
+		'item_blade_mail_ultra',
+		'item_radiance_ultra',
 	},
 	-- 未启用
 	npc_dota_hero_razor = {
@@ -784,7 +779,7 @@ tBotItemData.purchaseItemList = {
 		'item_black_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_monkey_king_bar_2',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_moon_shard_datadriven',
 		'item_undying_heart',
 		'item_insight_armor',
@@ -808,12 +803,11 @@ tBotItemData.purchaseItemList = {
 		'item_infernal_desolator',
 		'item_ultimate_scepter_2',
 		'item_blue_fantasy',
-		'item_satanic',
 		'item_moon_shard_datadriven',
 		'item_wasp_callous',
 		'item_wasp_despotic',
 		'item_abyssal_blade_v2',
-		'item_satanic',
+		'item_satanic_ultra',
 	},
 	npc_dota_hero_shadow_shaman = {
 		'item_magic_wand',
@@ -868,7 +862,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_refresh_core',
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
-		'item_necronomicon_staff',
+		'item_radiance_ultra',
 	},
 	npc_dota_hero_skywrath_mage = {
 		'item_tango',
@@ -910,11 +904,10 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter_2',
 		'item_infernal_desolator',
 		'item_angels_demise',
-		'item_satanic',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_shotgun_v2',
 		'item_excalibur',
-		'item_satanic',
+		'item_satanic_ultra',
 	},
 	npc_dota_hero_sven = {
 		'item_magic_wand',
@@ -1058,7 +1051,7 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_wasp_callous',
 		'item_infernal_desolator',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_vladmir_2',
 		'item_wasp_despotic',
 	},
@@ -1119,7 +1112,7 @@ tBotItemData.purchaseItemList = {
 		'item_black_king_bar_2',
 		'item_infernal_desolator',
 		'item_ultimate_scepter_2',
-		'item_skadi_2',
+		'item_skadi_ultra',
 		'item_wasp_callous',
 	},
 	npc_dota_hero_witch_doctor = {
@@ -1345,7 +1338,6 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_sand_king = {
 		'item_overwhelming_blink',
-		'item_blade_mail_2',
 		'item_saint_orb',
 	},
 	npc_dota_hero_skywrath_mage = {
@@ -1467,6 +1459,9 @@ tBotItemData.sellItemCommonList = {
 	'item_veil_of_discord',
 	-- 吹风
 	'item_cyclone',
+
+	'item_blade_mail',		-- 刃甲
+	'item_blade_mail_2',		-- 刃甲 2
 
 	-- 推推棒
 	'item_force_staff',
@@ -1848,4 +1843,3 @@ tBotItemData.addNeutralItemMultiTimeMap = {
 		600,
 	},
 }
-
