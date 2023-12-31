@@ -7282,7 +7282,7 @@
 		"ItemResult"					"item_radiance_ultra"
 		"ItemRequirements"
 		{
-			"01"						"iitem_radiance_2;item_radiance_2"
+			"01"						"item_radiance_2;item_radiance_2"
 		}
 	}
 	"item_radiance_ultra"
