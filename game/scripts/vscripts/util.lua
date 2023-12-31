@@ -140,7 +140,7 @@ function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 			local iHeal = actual_damage * iLifeSteal * 0.01
             attacker:HealWithParams(iHeal,hAbility,true,true,attacker,false)
 
-			Printf("攻击吸血: "..iHeal)
+			-- Printf("攻击吸血: "..iHeal)
 			-- effect
 			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, attacker)
 			ParticleManager:SetParticleControl(lifesteal_pfx, 0, attacker:GetAbsOrigin())
@@ -189,7 +189,7 @@ function SpellLifeSteal(keys, hAbility, ilifeSteal)
 			iHeal = iHeal / 5
 		end
 
-		Printf("法术吸血: "..iHeal)
+		-- Printf("法术吸血: "..iHeal)
 		hParent:HealWithParams(iHeal, hAbility:GetAbility(),false,true,hParent,true)
 		local pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, hParent)
 		ParticleManager:ReleaseParticleIndex(pfx)
