@@ -6980,20 +6980,12 @@
 	//=================================================================================================================
 	"item_recipe_vladmir_ultra"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"item_datadriven"
-		"ID"							"9603"  //Valve's version of this item uses the ID "118".
+		"ID"							"9603"
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
-
-		// Item Info
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"0"
 		"ItemShopTags"					""
-
-		// Recipe
-		//-------------------------------------------------------------------------------------------------------------
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_vladmir_ultra"
 		"ItemRequirements"
@@ -7001,175 +6993,824 @@
 			"01"						"item_vladmir_2;item_vladmir_2"
 		}
 	}
+	"item_recipe_vladmir_ultra_2"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9702"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe_vladmir_2"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_vladmir_ultra_2"
+		"ItemRequirements"
+		{
+			"01"						"item_vladmir_ultra;item_assault"
+		}
+	}
+	"item_recipe_vladmir_ultra_3"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9703"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe_vladmir_2"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_vladmir_ultra_3"
+		"ItemRequirements"
+		{
+			"01"						"item_vladmir_ultra_2;item_assault"
+		}
+	}
+	"item_recipe_vladmir_ultra_4"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9704"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe_vladmir_2"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_vladmir_ultra_4"
+		"ItemRequirements"
+		{
+			"01"						"item_vladmir_ultra_3;item_assault"
+		}
+	}
+	"item_recipe_vladmir_ultra_5"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9705"
+		"Model"							"models/props_gameplay/recipe.mdl"
+		"AbilityTextureName"			"item_recipe_vladmir_2"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_vladmir_ultra_5"
+		"ItemRequirements"
+		{
+			"01"						"item_vladmir_ultra_4;item_assault"
+		}
+	}
 	"item_vladmir_ultra"
 	{
-			// General
-			//-------------------------------------------------------------------------------------------------------------
-			"BaseClass"						"item_datadriven"
-			"ID"							"9604"  //Valve's version of this item uses the ID "81".
-			"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-			"Model"							"models/props_gameplay/red_box.vmdl"
-			"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
-			"AbilityTextureName"			"item_vladmir_ultra"
-
-			// Item Info
-			//-------------------------------------------------------------------------------------------------------------
-			"ItemShopTags"					"lifesteal;damage;armor;regen_mana;attack_speed;hard_to_tag"
-			"ItemQuality"					"artifact"
-			"ItemAliases"					"vladmir's offering;vlads"
-			"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
-			"AbilityCastRange"              "1800"
-
-
-			"AbilitySpecial"
+		"BaseClass"						"item_datadriven"
+		"ID"							"9604"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/red_box.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_vladmir_ultra"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"              "1200"
+		"UpgradesItems"					"item_vladmir_ultra_2;item_vladmir_ultra_3;item_vladmir_ultra_4;item_vladmir_ultra_5"
+		"UpgradeRecipe"					"item_recipe_vladmir_ultra_2"
+		"AbilitySpecial"
+		{
+			"01"
 			{
-					"01"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"bonus_attack_speed"	"160"
-					}
-					"02"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"bonus_armor"			"80"
-					}
-					"03"
-					{
-							"var_type"				"FIELD_FLOAT"
-							"mana_regen_aura"		"24"
-					}
-					"05"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"damage_aura"			"80"
-					}
-					"06"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"vampiric_aura"			"300"
-					}
-					"07"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_radius"			"1800"
-					}
-					"09"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_positive_armor"	"80"
-					}
-					"10"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_attack_speed"		"160"
-					}
-					"11"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_negative_armor"	"-120"
-					}
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"120"
 			}
-			"Modifiers"
+			"02"
 			{
-					"modifier_item_vladmir_ultra"
-					{
-							"Passive"			"1"
-							"IsHidden"			"1"
-							"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-
-							"Properties"
-							{
-									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
-							}
-					}
-					"modifier_item_vladmir_ultra_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
-					{
-							"Passive"				"1"
-							"IsHidden"				"1"
-							"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-
-							"Aura" 					"modifier_item_vladmir_ultra_building_aura"
-							"Aura_Radius" 			"%aura_radius"
-							"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-							"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
-							"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-							"Aura_ApplyToCaster" 	"1"
-					}
-					"modifier_item_vladmir_ultra_building_aura"
-					{
-							"Passive"			"0"
-							"IsHidden"			"0"
-
-							"Properties"
-							{
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
-									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
-							}
-					}
-					"modifier_item_vladmir_ultra_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
-					{
-							"Passive"				"1"
-							"IsHidden"				"1"
-							"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-
-							"Aura" 					"modifier_item_vladmir_ultra_general_aura"
-							"Aura_Radius" 			"%aura_radius"
-							"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-							"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-							"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-							"Aura_ApplyToCaster" 	"1"
-					}
-					"modifier_item_vladmir_ultra_general_aura"
-					{
-							"Passive"			"0"
-							"IsHidden"			"0"
-
-							"Properties"
-							{
-									"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
-									"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
-									"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
-							}
-
-							"OnAttackLanded"
-							{
-								"RunScript"
-								{
-									"ScriptFile"	"items/item_vladmir_2"
-									"Function"		"VampiricAuraApply"
-									"attack_damage"	"%attack_damage"
-								}
-							}
-					}
-
-					"modifier_item_vladmir_ultra_enemy_aura_emitter"
-					{
-							"Passive"				"1"
-							"IsHidden"				"1"
-
-							"Aura" 					"modifier_item_vladmir_ultra_enemy_aura"
-							"Aura_Radius" 			"%aura_radius"
-							"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-							"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
-							"Aura_ApplyToCaster" 	"0"
-					}
-					"modifier_item_vladmir_ultra_enemy_aura"
-					{
-							"Passive"			"0"
-							"IsHidden"			"0"
-							"IsDebuff"          "1"
-							"IsBuff"            "0"
-							"IsPurgable"        "0"
-
-							"Properties"
-							{
-									"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
-							}
-					}
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"60"
 			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_aura"		"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_aura"			"60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"30"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"120"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-60"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_item_vladmir_ultra"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
+				}
+			}
+			"modifier_item_vladmir_ultra_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_building_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_building_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+				}
+			}
+			"modifier_item_vladmir_ultra_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_general_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_general_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_vladmir_2"
+						"Function"		"VampiricAuraApply"
+						"attack_damage"	"%attack_damage"
+					}
+				}
+			}
+			"modifier_item_vladmir_ultra_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Aura" 					"modifier_item_vladmir_ultra_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_vladmir_ultra_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"          "1"
+				"IsBuff"            "0"
+				"IsPurgable"        "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
+				}
+			}
+		}
+	}
+	"item_vladmir_ultra_2"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9802"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/red_box.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_vladmir_ultra"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"              "1200"
+		"UpgradesItems"					"item_vladmir_ultra_3;item_vladmir_ultra_4;item_vladmir_ultra_5"
+		"UpgradeRecipe"					"item_recipe_vladmir_ultra_3"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"160"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"80"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_aura"		"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_aura"			"60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"40"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"160"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-80"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_item_vladmir_ultra_2"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
+				}
+			}
+			"modifier_item_vladmir_ultra_2_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_2_building_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_2_building_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+				}
+			}
+			"modifier_item_vladmir_ultra_2_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_2_general_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_2_general_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_vladmir_2"
+						"Function"		"VampiricAuraApply"
+						"attack_damage"	"%attack_damage"
+					}
+				}
+			}
+			"modifier_item_vladmir_ultra_2_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Aura" 					"modifier_item_vladmir_ultra_2_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_vladmir_ultra_2_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"          "1"
+				"IsBuff"            "0"
+				"IsPurgable"        "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
+				}
+			}
+		}
+	}
+	"item_vladmir_ultra_3"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9803"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/red_box.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_vladmir_ultra"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"              "1200"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"200"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"100"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_aura"		"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_aura"			"60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"50"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"200"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-100"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_item_vladmir_ultra_3"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
+				}
+			}
+			"modifier_item_vladmir_ultra_3_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_3_building_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_3_building_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+				}
+			}
+			"modifier_item_vladmir_ultra_3_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_3_general_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_3_general_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_vladmir_2"
+						"Function"		"VampiricAuraApply"
+						"attack_damage"	"%attack_damage"
+					}
+				}
+			}
+			"modifier_item_vladmir_ultra_3_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Aura" 					"modifier_item_vladmir_ultra_3_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_vladmir_ultra_3_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"          "1"
+				"IsBuff"            "0"
+				"IsPurgable"        "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
+				}
+			}
+		}
+	}
+	"item_vladmir_ultra_4"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9804"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/red_box.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_vladmir_ultra"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"              "1200"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"240"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"120"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_aura"		"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_aura"			"60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"60"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"240"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-120"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_item_vladmir_ultra_4"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
+				}
+			}
+			"modifier_item_vladmir_ultra_4_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_4_building_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_4_building_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+				}
+			}
+			"modifier_item_vladmir_ultra_4_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_4_general_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_4_general_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_vladmir_2"
+						"Function"		"VampiricAuraApply"
+						"attack_damage"	"%attack_damage"
+					}
+				}
+			}
+			"modifier_item_vladmir_ultra_4_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Aura" 					"modifier_item_vladmir_ultra_4_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_vladmir_ultra_4_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"          "1"
+				"IsBuff"            "0"
+				"IsPurgable"        "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
+				}
+			}
+		}
+	}
+	"item_vladmir_ultra_5"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9805"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"							"models/props_gameplay/red_box.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_item.vpcf"
+		"AbilityTextureName"			"item_vladmir_ultra"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"              "1200"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_attack_speed"	"300"
+			}
+			"02"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"bonus_armor"			"140"
+			}
+			"03"
+			{
+				"var_type"				"FIELD_FLOAT"
+				"mana_regen_aura"		"18"
+			}
+			"05"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"damage_aura"			"60"
+			}
+			"06"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"150"
+			}
+			"07"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_radius"			"1200"
+			}
+			"09"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"70"
+			}
+			"10"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_attack_speed"		"300"
+			}
+			"11"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"aura_negative_armor"	"-140"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_item_vladmir_ultra_5"
+			{
+				"Passive"			"1"
+				"IsHidden"			"1"
+				"Attributes" 		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%bonus_attack_speed"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%bonus_armor"
+				}
+			}
+			"modifier_item_vladmir_ultra_5_building_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_5_building_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_5_building_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_positive_armor"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"		"%aura_attack_speed"
+				}
+			}
+			"modifier_item_vladmir_ultra_5_general_aura_emitter"  //We use two aura emitters because the lifesteal part only affects melee units.
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Attributes"			"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura" 					"modifier_item_vladmir_ultra_5_general_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"1"
+			}
+			"modifier_item_vladmir_ultra_5_general_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%damage_aura"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"				"%aura_positive_armor"
+					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"					"%mana_regen_aura"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"			"%aura_attack_speed"
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"items/item_vladmir_2"
+						"Function"		"VampiricAuraApply"
+						"attack_damage"	"%attack_damage"
+					}
+				}
+			}
+			"modifier_item_vladmir_ultra_5_enemy_aura_emitter"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"Aura" 					"modifier_item_vladmir_ultra_5_enemy_aura"
+				"Aura_Radius" 			"%aura_radius"
+				"Aura_Teams" 			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types" 			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags" 			"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+				"Aura_ApplyToCaster" 	"0"
+			}
+			"modifier_item_vladmir_ultra_5_enemy_aura"
+			{
+				"Passive"			"0"
+				"IsHidden"			"0"
+				"IsDebuff"          "1"
+				"IsBuff"            "0"
+				"IsPurgable"        "0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"			"%aura_negative_armor"
+				}
+			}
+		}
 	}
 
 	//=================================================================================================================

@@ -1593,23 +1593,23 @@
 	//=================================================================================================================
 	"item_ward_observer"
 	{
-		"AbilityCastRange"				"600"
-		"ItemStockTime"					"90.0"	// 135.0
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"30.0"	// 135.0
 	}
 	//=================================================================================================================
 	// Sentry Ward
 	//=================================================================================================================
 	"item_ward_sentry"
 	{
-
-
+		"AbilityCastRange"				"80000"
 		"ItemCost"						"40"
 		"ItemStockMax"					"20"
 		"ItemStockInitial"				"3"
-		"ItemStockTime"					"45"	// 70.0
+		"ItemStockTime"					"30"	// 70.0
 	}
 	"item_ward_dispenser"
 	{
+		"AbilityCastRange"				"80000"
 		"AbilitySpecial"
 		{
 			"04"
