@@ -86,7 +86,9 @@ npm run dev:vscripts
 npm run dev:panorama
 ```
 
-## Supported by ModDota template
+# Supported by ModDota template and x-template
+
+## ModDota template
 
 Panorama UI with webpack, TypeScript and React.
 
@@ -104,3 +106,7 @@ Panorama UI with webpack, TypeScript and React.
 
 - **[game/*]:** Dota game directory containing files such as npc kv files and compiled lua scripts.
 - **[content/*]:** Dota content directory containing panorama sources other than scripts (xml, css, compiled js)
+
+## X-Template
+
+https://github.com/XavierCHN/x-template
