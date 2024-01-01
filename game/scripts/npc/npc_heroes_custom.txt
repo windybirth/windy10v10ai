@@ -2051,9 +2051,13 @@
 			}
 		}
 	}
+	"npc_dota_hero_pugna"
+	{
+		"Ability4"		"tinker_rearm_lua"
+	}
 	"npc_dota_hero_phantom_assassin"
 	{
-		//"Ability7" "chaos_knight_chaos_strike_final"
+		"Ability7" "chaos_knight_chaos_strike_final"
 		"Bot"
 		{
 			"Build"
