@@ -124,19 +124,8 @@ function getFileScope(): [any, string] {
   let level = 1;
   while (true) {
     const info = debug.getinfo(level, "S");
-    if (
-      info &&
-      info.what === "main" &&
-      // 此处是为了修正加密后的脚本因为使用 loadstring 载入之后
-      // 导致的 info.source 不是正确的文件名的问题
-      // 需要往上再来一级才行
-      // loadstring的 main short_src 为'[string "local a = 1"] blah blah
-      // 如果你没有加密使用这个方法的脚本（目前为包含registerAbility与registerModifier的代码）
-      // 可以注释或忽略下面这两行代码
-      info.source &&
-      info.source.startsWith("@") // ensure this is the main script
-    ) {
-      return [getfenv(level), info.source];
+    if (info && info.what === "main") {
+      return [getfenv(level), info.source!];
     }
 
     level += 1;

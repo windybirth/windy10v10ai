@@ -12,7 +12,7 @@
     "dev:panorama": "tsc --project src/panorama/tsconfig.json --watch",
     "dev:vscripts": "tstl --project src/vscripts/tsconfig.json --watch",
     "prettier-check": "prettier --check .",
-    "lint": "eslint --ext .js,.ts,.tsx --quiet --fix  \"./src/**/*.{js,ts,tsx}\""
+    "lint": "eslint --ext .js,.ts,.tsx --quiet --fix  \"./**/*.{js,ts,tsx}\""
   },
   "devDependencies": {
     "@moddota/dota-lua-types": "^4.31.0",
