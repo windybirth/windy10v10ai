@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "vscripts",
+    "target": "esnext",
+    "lib": ["esnext"],
+    "types": ["@moddota/dota-lua-types/normalized"], // enum简洁模式API
+    // "types": ["@moddota/dota-lua-types"], // enum完整模式API
+    "plugins": [
+      { "transform": "@moddota/dota-lua-types/transformer" } // 使用简洁模式API需要同时使用transformer
+    ],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    // TODO: 严格模式开启后，会有很多报错，需要逐个修复
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "strict": false
+  },
+  "include": ["src"],
+  "tstl": {
+    "luaTarget": "JIT",
+    "sourceMapTraceback": true,
+    "luaPlugins": [
+      {
+        // 特殊的tstl编译插件
+        // 用来给输出的 addon_game_mode.lua 添加一个
+        // compile timestamp，避免忘记执行run dev操作了
+        // 但是还是很久没发现，如果不需要，可以删除这一行
+        "name": "../../scripts/tstl/beforeEmit.ts"
+      }
+    ]
+  }
+}
