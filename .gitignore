@@ -3,7 +3,6 @@ tool/reference
 game/*.bin
 game/panorama_debugger.cfg
 game/panorama/layout/custom_game/*.vxml_c
-game/panorama/layout/custom_game/custom_loading_screen.vxml_c
 game/resource/custom_game_whitelist.txt
 node_modules
 src/content/
