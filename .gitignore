@@ -9,3 +9,8 @@ src/content/
 src/game/
 /.idea
 /official_scripts
+
+# Ignore tstl output
+game/scripts/vscripts/modules/
+game/scripts/vscripts/server/
+game/scripts/vscripts/utils/
