@@ -8374,6 +8374,7 @@
 	{
 		"LinkedAbility"					"phantom_assassin_phantom_strike"
 		"AbilityDraftPreAbility"		"phantom_assassin_phantom_strike"
+		"BaseClass"                     "chaos_knight_chaos_strike"
 		"MaxLevel"                      "5"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -10969,6 +10970,7 @@
 	}
 	"invoker_emp"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"8"
 		"AbilityValues"
 		{

@@ -22,7 +22,6 @@
 		"item"      "item_famango"
 		"item"      "item_cheese"
 		"item"      "item_refresher_shard"
-		"item"      "item_dragon_ball_3"
 		"item"      "item_dragon_ball_4"
 		"item"      "item_dragon_ball_5"
 		"item"      "item_dragon_ball_6"
