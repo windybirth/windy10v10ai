@@ -71,24 +71,26 @@ npm run lint
 
 ## Use typescript to develop
 
-### Typescript to lua
+```
+npm run dev
+```
 
-```
-npm run dev:vscripts
-```
+### Typescript to lua
 
 - sample modifiers and abilities:
   https://github.com/ModDota/TypeScriptAddonTemplate/tree/master/src/vscripts
 
-### React to paranoma (not setted)
-
-```
-npm run dev:panorama
-```
-
 # Supported by ModDota template and x-template
 
-## ModDota template
+### ModDota template
+
+https://github.com/ModDota/TypeScriptAddonTemplate
+
+### X-Template
+
+https://github.com/XavierCHN/x-template
+
+## ModDota template README
 
 Panorama UI with webpack, TypeScript and React.
 
@@ -106,7 +108,3 @@ Panorama UI with webpack, TypeScript and React.
 
 - **[game/*]:** Dota game directory containing files such as npc kv files and compiled lua scripts.
 - **[content/*]:** Dota content directory containing panorama sources other than scripts (xml, css, compiled js)
-
-## X-Template
-
-https://github.com/XavierCHN/x-template
