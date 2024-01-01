@@ -910,27 +910,27 @@
 			"01"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_speed"			"200"
+				"bonus_attack_speed"			"300"
 			}
 			"02"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"bonus_night_vision"			"300"
+				"bonus_night_vision"			"4000"
 			}
 			"03"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"consumed_bonus_attack_speed"	"80"	// tooltip only
+				"consumed_bonus_attack_speed"	"150"	// tooltip only
 			}
 			"04"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"consumed_bonus_night_vision"	"150"	// tooltip only
+				"consumed_bonus_night_vision"	"600"	// tooltip only
 			}
 			"05"
 			{
 				"var_type"						"FIELD_INTEGER"
-				"consumed_bonus_day_vision"		"150"	// tooltip only
+				"consumed_bonus_day_vision"		"600"	// tooltip only
 			}
 		}
 
