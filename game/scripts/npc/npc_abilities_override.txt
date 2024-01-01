@@ -13190,36 +13190,39 @@
 	{
 		"AbilityCharges"		"4"
 		"MaxLevel" "4"
-		"radius"
+		"AbilityValues"
 		{
-			"value"	"200"
-			"affected_by_aoe_increase"	"1"
-		}
-		"AbilityChargeRestoreTime"
-		{
-			"value"			"25 20 15 10"
-			"special_bonus_unique_void_spirit_1"	"-5"
-		}
-		"min_travel_distance"	"200"
-		"max_travel_distance"	"800 1600 3200 6400"
-		"pop_damage_delay"
-		{
-			"value"	"1.25"
-			"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
-		}
-		"pop_damage"
-		{
-			"value"					"200 400 600 800"
-			"CalculateSpellDamageTooltip"	"1"
-		}
-		"movement_slow_pct"		"40 60 80 99"
-		"ability_chance_pct"
-		{
-			"value"				"0"
-		}
-		"attack_chance_pct"
-		{
-			"value"				"0"
+			"radius"
+			{
+				"value"	"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"AbilityChargeRestoreTime"
+			{
+				"value"			"25 20 15 10"
+				"special_bonus_unique_void_spirit_1"	"-5"
+			}
+			"min_travel_distance"	"200"
+			"max_travel_distance"	"800 1600 3200 6400"
+			"pop_damage_delay"
+			{
+				"value"	"1.25"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
+			"pop_damage"
+			{
+				"value"					"200 400 600 800"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"movement_slow_pct"		"40 60 80 99"
+			"ability_chance_pct"
+			{
+				"value"				"0"
+			}
+			"attack_chance_pct"
+			{
+				"value"				"0"
+			}
 		}
 	}
 	// 共鸣脉冲
@@ -13258,7 +13261,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"value"					"350" // (Astral Step Crit)
+				"value"					"400" // (Astral Step Crit)
 				"ad_linked_abilities"		"void_spirit_astral_step"
 			}
 		}
