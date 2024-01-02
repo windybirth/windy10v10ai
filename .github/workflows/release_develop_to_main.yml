@@ -32,9 +32,9 @@ jobs:
         id: check_pr
         run: |
           response=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?head=windybirth:develop")
-          echo "API response: $response"
-          pr_exists=$(echo "$response" | jq -e '.[] | select(.head.ref=="develop")')
-          if [[ -n "$pr_exists" ]]; then
+          ref_exists=$(echo "$response" | jq -e '.[].head.ref')
+          echo $ref_exists
+          if [ $ref_exists = "develop" ]; then
             exists=true
           else
             exists=false
