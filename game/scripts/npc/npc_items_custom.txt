@@ -6868,7 +6868,7 @@
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
-			"chain_cooldown"		"0"
+			"chain_cooldown"		"0.1"
 			"max_charges"			"0"
 			"illusion_multiplier_pct"	"150"
 		}
