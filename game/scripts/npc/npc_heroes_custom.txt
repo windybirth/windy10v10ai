@@ -392,7 +392,9 @@
 
 	"npc_dota_hero_faceless_void"
 	{
-		"Ability5"		"faceless_void_backtrack"
+		"AttackRate"    "1.2"
+		"Ability7"		"faceless_void_backtrack"
+		"Ability5"      "faceless_void_chronosphere_final"
 	}
 
 	"npc_dota_hero_brewmaster"
@@ -1371,7 +1373,7 @@
 		"Ability2"		"juggernaut_healing_ward"
 		"Ability3"		"juggernaut_blade_dance"
 		"Ability4"		"juggernaut_swift_slash"
-		"Ability5"		"generic_hidden"
+		"Ability5"		"marci_unleash_final"
 		"Ability6"		"juggernaut_omni_slash"
 		"Ability10"		"special_bonus_all_stats_5"
 		"Ability11"		"special_bonus_unique_juggernaut"
@@ -1514,6 +1516,7 @@
 	}
 	"npc_dota_hero_lina"
 	{
+		"AttackRate"    "1.0"
 	    "Ability10"		"special_bonus_unique_lina_3"
         "Ability11"		"special_bonus_unique_lina_1"
         "Ability12"		"special_bonus_unique_lina_2"
@@ -2057,7 +2060,6 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
-		"Ability7" "chaos_knight_chaos_strike_final"
 		"Bot"
 		{
 			"Build"

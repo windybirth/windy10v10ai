@@ -2180,7 +2180,7 @@
 			{
 				"value"							"350"
 				"special_bonus_unique_axe_2"	"+100"
-				"affected_by_aoe_increase"	"2"
+				"affected_by_aoe_increase"	"1"
 			}
 			"bonus_armor"
 			{
@@ -2971,18 +2971,18 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"ministun_duration"		"1.5"
+				"ministun_duration"		"2.0"
 			}
 			"05"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"shard_ministun_duration"		"2.5"
+				"shard_ministun_duration"		"3.0"
 				"RequiresShard"					"1"
 			}
 			"06"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"shard_bonus_stun_duration"		"2.5"
+				"shard_bonus_stun_duration"		"3.0"
 				"RequiresShard"					"1"
 			}
 			"07"
@@ -3030,7 +3030,7 @@
 			{
 				"value"										"0"
 				"special_bonus_scepter"						"+600"
-				"affected_by_aoe_increase"	"200"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -6916,7 +6916,7 @@
 				{
 					"value"		"500"
 					"LinkedSpecialBonus"	"special_bonus_unique_faceless_void_2"
-					"affected_by_aoe_increase"	"200"
+					"affected_by_aoe_increase"	"1"
 				}
 				"duration"				"3.75 4.25 4.75 5.25"
 				"vision_radius"
@@ -6953,6 +6953,42 @@
 				"var_type"					"FIELD_INTEGER"
 				"value"				"500"
 				"ad_linked_abilities"			"faceless_void_chronosphere"
+			}
+		}
+	}
+	"faceless_void_chronosphere_final"
+	{
+		"RequiredLevel"                 "30"
+		"MaxLevel"                      "1"
+		"BaseClass"                     "faceless_void_chronosphere"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_FacelessVoid.Chronosphere"
+		"AbilityCastRange"				"500"
+		"AbilityCastPoint"				"0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCooldown"				"180"
+		"AbilityManaCost"				"0"
+		"AbilityModifierSupportBonus"		"50"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"		"99999"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"				"10"
+			"vision_radius"
+			{
+				"value"	"99999"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_attack_speed"
+			{
+				"value"		"850"
 			}
 		}
 	}
@@ -7108,7 +7144,7 @@
 				"blade_dance_crit_mult"
 				{
 					"value"		"180 200 220 240 260"
-					"special_bonus_unique_juggernaut_4"	"+10"
+					"special_bonus_unique_juggernaut_4"	"+40"
 				}
 		}
 	}
@@ -7120,7 +7156,7 @@
 		{
 			"blade_fury_damage_per_tick"
 			{
-				"value"				"35 40 45 50 55"
+				"value"				"140 160 180 200 220"
 			}
 			"AbilityCooldown"
 			{
@@ -7136,16 +7172,33 @@
 		"AbilityManaCost"				"140 130 120 110 100"
 		"AbilityValues"
 		{
-				"healing_ward_heal_amount"	"2 3 4 5 6"
-				"healing_ward_aura_radius"	"500"
-				"healing_ward_movespeed_tooltip"
-				{
-					"value"	"325"
-				}
+			"healing_ward_heal_amount"	"2 4 6 8 10"
+			"healing_ward_aura_radius"
+			{
+				"value"		"600"
+				"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_juggernaut_3"		"+300"
+			}
+			"healing_ward_movespeed_tooltip"
+			{
+				"value"	"550"
+			}
+			"healing_ward_bonus_health"
+			{
+				"value"	"0"
+				"special_bonus_unique_juggernaut_2"	"+99"
+			}
+			"healing_ward_hits_to_kill_tooltip"
+			{
+				"value" "1"
+				"special_bonus_unique_juggernaut_2" "+99"
+			}
 		}
 	}
 	"juggernaut_omni_slash"
 	{
+		"LinkedAbility"                 "marci_unleash_final"
+		"AbilityDraftPreAbility"        "marci_unleash_final"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"90"
 		"AbilityManaCost"				"200 250 300 350 400"
@@ -7170,6 +7223,70 @@
 				"LinkedSpecialBonus"		"special_bonus_unique_juggernaut_2"
 			}
 		}
+	}
+	"marci_unleash_final"
+	{
+		"LinkedAbility"                 "juggernaut_omni_slash"
+		"AbilityDraftPreAbility"        "juggernaut_omni_slash"
+		"MaxLevel"                      "5"
+		"BaseClass"                     "marci_unleash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Marci.Unleash.Cast"
+		"HasScepterUpgrade"				"1"
+		"AbilityCastPoint"				"0"
+		"AbilityCooldown"				"90 80 70 60 50"
+		"AbilityManaCost"				"100 125 150 175 200"
+		"AbilityValues"
+		{
+			"duration"				"6"
+			"charges_per_flurry"	"40 50 60 70 80"
+			"flurry_bonus_attack_speed"	"1000 1500 2000 2500 3000"
+			"time_between_flurries"	"1.5"
+			"pulse_radius"
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"pulse_debuff_duration"	"2.0"
+			"pulse_damage"
+			{
+				"value"			"50 100 150 200 250"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"pulse_move_slow_pct"	"30.0"
+			"pulse_attack_slow_pct"	"60.0 70.0 80.0 90.0 100.0"
+			"max_time_window_per_hit"	"1.0"
+			"bonus_movespeed"
+			{
+				"value"		"20"
+			}
+			"recovery_fixed_attack_rate"	"2.0"
+			"shard_push_length"
+			{
+				"value"		"300"
+				"affected_by_aoe_increase"	"1"
+			}
+			"scepter_cooldown_reduction"
+			{
+				"value"					"10.0"
+				"RequiresScepter"		"1"
+			}
+			"dispel"
+			{
+				"value"			"0"
+				"special_bonus_scepter"	"+1"
+			}
+			"pulse_silence_duration"
+			{
+				"value"			"0"
+				"special_bonus_scepter"	"+1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 	}
 	//=================================================================================================================
 	// Ability: Lone Druid 德鲁伊
@@ -8356,8 +8473,6 @@
 	}
 	"phantom_assassin_phantom_strike"
 	{
-		"LinkedAbility"					"chaos_knight_chaos_strike_final"
-		"AbilityDraftPreAbility"		"chaos_knight_chaos_strike_final"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"35 40 45 50 55"
@@ -8369,32 +8484,6 @@
 				"special_bonus_unique_phantom_assassin_strike_aspd"		"+60"
 			}
 		}
-	}
-	"chaos_knight_chaos_strike_final"
-	{
-		"LinkedAbility"					"phantom_assassin_phantom_strike"
-		"AbilityDraftPreAbility"		"phantom_assassin_phantom_strike"
-		"BaseClass"                     "chaos_knight_chaos_strike"
-		"MaxLevel"                      "5"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityValues"
-		{
-				"chance"
-				{
-						"value"				"6"
-				}
-				"crit_min"				"125 150 175 200 400"
-				"crit_max"				"150 200 250 300 80000"
-				"lifesteal"
-				{
-					"value"					"50 75 100 125 150"
-				}
-
-				"creep_multiplier"					"1.9"
-				"creep_lifesteal_reduction_pct"		"70"
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	"phantom_assassin_blur"
 	{
@@ -11610,7 +11699,7 @@
 			"AbilityCooldown"
 			{
 				"value"								"45 40 35 30 25"
-				"special_bonus_unique_lina_6"		"-10"
+				"special_bonus_unique_lina_6"		"-15"
 			}
 		}
 	}
@@ -12170,7 +12259,7 @@
 				"radius"
 				{
 					"value"			"800"
-					"affected_by_aoe_increase"	"2"
+					"affected_by_aoe_increase"	"1"
 				}
 		}
 	}
