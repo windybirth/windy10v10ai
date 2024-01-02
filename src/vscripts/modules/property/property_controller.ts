@@ -21,7 +21,7 @@ import {
   property_stats_strength_bonus,
   property_status_resistance_stacking,
   property_evasion_constant,
-} from "./property_declare";
+} from "../../modifiers/property/property_declare";
 
 export class PropertyController {
   private static propertyValuePerLevel = new Map<string, number>();

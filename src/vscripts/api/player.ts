@@ -1,4 +1,4 @@
-import { PropertyController } from "../modifiers/property/property_controller";
+import { PropertyController } from "../modules/property/property_controller";
 import { ApiClient, HttpMethod } from "./api_client";
 
 export class MemberDto {
