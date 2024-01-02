@@ -6862,7 +6862,7 @@
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
-			"static_cooldown"		"0"
+			"static_cooldown"		"0.1"
 			"chain_chance"			"75"
 			"chain_damage"			"750"
 			"chain_strikes"			"12"
