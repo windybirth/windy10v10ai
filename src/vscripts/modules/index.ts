@@ -1,5 +1,6 @@
 import { Debug } from "./Debug";
 import { GameConfig } from "./GameConfig";
+import { PropertyController } from "./property/property_controller";
 import { XNetTable } from "./xnet-table";
 
 declare global {
@@ -21,5 +22,7 @@ export function ActivateModules() {
     new GameConfig();
     // 初始化测试模块xD
     new Debug();
+
+    new PropertyController();
   }
 }
