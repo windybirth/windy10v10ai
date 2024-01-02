@@ -5,7 +5,7 @@ export class Debug {
   DebugEnabled = false;
   // 在线测试白名单
   OnlineDebugWhiteList = [
-    86815341, // Xavier
+    136407523, // windy
   ];
 
   constructor() {
@@ -20,6 +20,8 @@ export class Debug {
     const args = strs.slice(1);
     const steamid = PlayerResource.GetSteamAccountID(keys.playerid);
 
+    print(`[DEBUG] ${steamid} ${keys.playerid} ${keys.teamonly} ${keys.userid} ${keys.text}`);
+
     if (cmd === "-debug") {
       if (this.OnlineDebugWhiteList.includes(steamid)) {
         this.DebugEnabled = !this.DebugEnabled;
@@ -27,17 +29,23 @@ export class Debug {
     }
 
     // 只在允许调试的时候才执行以下指令
+
     // commands that only work in debug mode below:
+    print(`[DEBUG] this.DebugEnabled ${this.DebugEnabled}`);
     if (!this.DebugEnabled) return;
+    if (!this.OnlineDebugWhiteList.includes(steamid)) {
+      return;
+    }
 
     // 其他的测试指令写在下面
-    if (cmd === "get_key_v3") {
+    if (cmd.startsWith("get_key_v3")) {
+      print("get_key_v3");
       const version = args[0];
       const key = GetDedicatedServerKeyV3(version);
       Say(HeroList.GetHero(0), `${version}: ${key}`, true);
     }
 
-    if (cmd === "get_key_v2") {
+    if (cmd.startsWith("get_key_v2")) {
       const version = args[0];
       const key = GetDedicatedServerKeyV2(version);
       Say(HeroList.GetHero(0), `${version}: ${key}`, true);
