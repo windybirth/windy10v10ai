@@ -1,6 +1,5 @@
 import { Player } from "../../api/player";
 import { Helper } from "../helper/helper";
-import { PropertyController } from "../property/property_controller";
 
 export class Event {
   constructor() {
@@ -10,7 +9,16 @@ export class Event {
   }
 
   OnPlayerLevelUp(keys: GameEventProvidedProperties & DotaPlayerGainedLevelEvent): void {
-    PropertyController.RefreshPlayerPropertyWhereLevelUp(keys);
+    const hero = EntIndexToHScript(keys.hero_entindex) as CDOTA_BaseNPC_Hero | undefined;
+
+    // 更新玩家属性
+    if (Helper.IsHumanPlayer(hero)) {
+      // FIXME 前8级升级属性
+      if (keys.level <= 8) {
+        print(`[Event] OnPlayerLevelUp SetPlayerProperty ${hero.GetUnitName()}`);
+        Player.SetPlayerProperty(hero);
+      }
+    }
   }
 
   OnNpcSpawned(keys: GameEventProvidedProperties & NpcSpawnedEvent): void {
@@ -29,7 +37,8 @@ export class Event {
     if (keys.is_respawn == 0) {
       // is human player
       if (Helper.IsHumanPlayer(npc)) {
-        Player.InitPlayerProperty(npc as CDOTA_BaseNPC_Hero);
+        print(`[Event] OnNpcSpawned SetPlayerProperty ${npc.GetUnitName()}`);
+        Player.SetPlayerProperty(npc as CDOTA_BaseNPC_Hero);
       }
     }
   }

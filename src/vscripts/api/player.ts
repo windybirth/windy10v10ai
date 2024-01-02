@@ -127,8 +127,8 @@ export class Player {
     });
   }
 
-  public static InitPlayerProperty(hero: CDOTA_BaseNPC_Hero) {
-    print(`[Player] InitPlayerProperty ${hero.GetUnitName()}`);
+  public static SetPlayerProperty(hero: CDOTA_BaseNPC_Hero) {
+    print(`[Player] SetPlayerProperty ${hero.GetUnitName()}`);
     if (!hero) {
       return;
     }
@@ -138,7 +138,7 @@ export class Player {
 
     if (playerInfo?.properties) {
       for (const property of playerInfo.properties) {
-        PropertyController.addOrUpdateModifier(hero, property);
+        PropertyController.setModifier(hero, property);
       }
     }
   }

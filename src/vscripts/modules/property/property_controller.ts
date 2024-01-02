@@ -75,16 +75,13 @@ export class PropertyController {
     );
   }
 
-  // TODO
-  public static RefreshPlayerPropertyWhereLevelUp(keys: DotaPlayerGainedLevelEvent) {
-    const hero = EntIndexToHScript(keys.hero_entindex) as CDOTA_BaseNPC_Hero;
-    const level = keys.level;
-    const dataDrivenNameList = ["modifier_player_property_movespeed_bonus_constant_level_"];
-    for (const dataDrivenName of dataDrivenNameList) {
-      // TODO check level
-      this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, level);
-    }
-  }
+  private static limitPropertyNames = [
+    "property_preattack_bonus_damage",
+    "property_attackspeed_bonus_constant",
+    "property_stats_strength_bonus",
+    "property_stats_agility_bonus",
+    "property_stats_intellect_bonus",
+  ];
 
   // 属性加点后更新属性
   public static RefreshPlayerProperty(property: PlayerProperty) {
@@ -94,7 +91,7 @@ export class PropertyController {
         if (steamId == property.steamId) {
           const hero = PlayerResource.GetSelectedHeroEntity(i);
           if (hero) {
-            PropertyController.addOrUpdateModifier(hero, property);
+            PropertyController.setModifier(hero, property);
           }
         }
       }
@@ -102,10 +99,18 @@ export class PropertyController {
   }
 
   // 更新单条属性
-  public static addOrUpdateModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
+  public static setModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
+    const name = property.name;
+    let limitdLevel = property.level;
+    print(`[PropertyController] setModifier ${name} ${limitdLevel}`);
+    if (PropertyController.limitPropertyNames.includes(name)) {
+      const heroLevel = hero.GetLevel();
+      limitdLevel = Math.min(limitdLevel, heroLevel);
+      print(`[PropertyController] setModifier ${name} ${limitdLevel} limit`);
+    }
     const propertyValuePerLevel = PropertyController.propertyValuePerLevel.get(property.name);
     if (propertyValuePerLevel) {
-      const value = propertyValuePerLevel * property.level;
+      const value = propertyValuePerLevel * limitdLevel;
       if (value != 0) {
         hero.RemoveModifierByName(property.name);
         hero.AddNewModifier(hero, undefined, property.name, {
@@ -115,7 +120,7 @@ export class PropertyController {
     } else {
       const dataDrivenName = PropertyController.propertyDataDrivenName.get(property.name);
       if (dataDrivenName) {
-        this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, property.level);
+        this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, limitdLevel);
       }
     }
   }
