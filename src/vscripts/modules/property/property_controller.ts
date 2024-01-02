@@ -93,9 +93,8 @@ export class PropertyController {
     "property_spell_lifesteal",
   ];
 
-  // FIXME 正式版改成2级一次
   // 每N级加点一次
-  public static HERO_LEVEL_PER_POINT = 4;
+  public static HERO_LEVEL_PER_POINT = 2;
 
   // 属性加点后更新属性
   public static RefreshPlayerProperty(property: PlayerProperty) {
