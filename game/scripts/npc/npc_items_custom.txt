@@ -6642,13 +6642,13 @@
 		"BaseClass"						"item_datadriven"
 		"ID"							"9594"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
+		"ItemCost"						"10000"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_rapier_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier;item_monkey_king_bar_2"
+			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier"
 		}
 	}
 
@@ -6783,7 +6783,7 @@
 		"BaseClass"                     "item_recipe_bloodstone"
 		"ID"						    "9615"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"10000"
+		"ItemCost"						"6000"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bloodstone_ultra"
@@ -6796,11 +6796,10 @@
 	{
 		"BaseClass"                     "item_bloodstone"
 		"ID"						    "9616"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"FightRecapLevel"				"3"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"35.0"
-		"AbilityManaCost"				"500"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AllowedInBackpack"				"1"
