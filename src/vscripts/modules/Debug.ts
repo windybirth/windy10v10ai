@@ -39,16 +39,15 @@ export class Debug {
 
     // 其他的测试指令写在下面
     if (cmd.startsWith("get_key_v3")) {
-      print("get_key_v3");
       const version = args[0];
       const key = GetDedicatedServerKeyV3(version);
-      Say(HeroList.GetHero(0), `${version}: ${key}`, true);
+      Say(HeroList.GetHero(0), `${version}: ${key}`, false);
     }
 
     if (cmd.startsWith("get_key_v2")) {
       const version = args[0];
       const key = GetDedicatedServerKeyV2(version);
-      Say(HeroList.GetHero(0), `${version}: ${key}`, true);
+      Say(HeroList.GetHero(0), `${version}: ${key}`, false);
     }
   }
 }
