@@ -35,10 +35,11 @@ jobs:
           echo "API response: $response"
           pr_exists=$(echo "$response" | jq -e '.[] | select(.head.ref=="develop")')
           if [[ -n "$pr_exists" ]]; then
-            echo exists=true >> $GITHUB_OUTPUT
+            exists=true
           else
-            echo exists=false >> $GITHUB_OUTPUT
+            exists=false
           fi
+          echo exists=$exists >> $GITHUB_OUTPUT
 
       - name: Create Pull Request
         if: steps.check_pr.outputs.exists == 'false'
