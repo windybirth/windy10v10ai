@@ -107,7 +107,7 @@ export class PropertyController {
     }
   }
 
-  private static refreshPlayerPropertyWhereLevelUp(keys: DotaPlayerGainedLevelEvent) {
+  public static refreshPlayerPropertyWhereLevelUp(keys: DotaPlayerGainedLevelEvent) {
     const hero = EntIndexToHScript(keys.hero_entindex) as CDOTA_BaseNPC_Hero;
     const level = keys.level;
     const dataDrivenNameList = ["modifier_player_property_movespeed_bonus_constant_level_"];
