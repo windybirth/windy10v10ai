@@ -6642,6 +6642,7 @@
 		"BaseClass"						"item_datadriven"
 		"ID"							"9594"
 		"Model"							"models/props_gameplay/recipe.vmdl"
+        "AbilityTextureName" 			"item_recipe_rapier_ultra"
 		"ItemCost"						"10000"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
