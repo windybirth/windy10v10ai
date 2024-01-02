@@ -75,7 +75,34 @@ export class PropertyController {
     );
   }
 
-  public static addModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
+  // TODO
+  public static RefreshPlayerPropertyWhereLevelUp(keys: DotaPlayerGainedLevelEvent) {
+    const hero = EntIndexToHScript(keys.hero_entindex) as CDOTA_BaseNPC_Hero;
+    const level = keys.level;
+    const dataDrivenNameList = ["modifier_player_property_movespeed_bonus_constant_level_"];
+    for (const dataDrivenName of dataDrivenNameList) {
+      // TODO check level
+      this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, level);
+    }
+  }
+
+  // 属性加点后更新属性
+  public static RefreshPlayerProperty(property: PlayerProperty) {
+    for (let i = 0; i < PlayerResource.GetPlayerCount(); i++) {
+      if (PlayerResource.IsValidPlayer(i)) {
+        const steamId = PlayerResource.GetSteamAccountID(i);
+        if (steamId == property.steamId) {
+          const hero = PlayerResource.GetSelectedHeroEntity(i);
+          if (hero) {
+            PropertyController.addOrUpdateModifier(hero, property);
+          }
+        }
+      }
+    }
+  }
+
+  // 更新单条属性
+  public static addOrUpdateModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
     const propertyValuePerLevel = PropertyController.propertyValuePerLevel.get(property.name);
     if (propertyValuePerLevel) {
       const value = propertyValuePerLevel * property.level;
@@ -90,30 +117,6 @@ export class PropertyController {
       if (dataDrivenName) {
         this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, property.level);
       }
-    }
-  }
-
-  public static RefreshPlayerProperty(property: PlayerProperty) {
-    for (let i = 0; i < PlayerResource.GetPlayerCount(); i++) {
-      if (PlayerResource.IsValidPlayer(i)) {
-        const steamId = PlayerResource.GetSteamAccountID(i);
-        if (steamId == property.steamId) {
-          const hero = PlayerResource.GetSelectedHeroEntity(i);
-          if (hero) {
-            PropertyController.addModifier(hero, property);
-          }
-        }
-      }
-    }
-  }
-
-  public static refreshPlayerPropertyWhereLevelUp(keys: DotaPlayerGainedLevelEvent) {
-    const hero = EntIndexToHScript(keys.hero_entindex) as CDOTA_BaseNPC_Hero;
-    const level = keys.level;
-    const dataDrivenNameList = ["modifier_player_property_movespeed_bonus_constant_level_"];
-    for (const dataDrivenName of dataDrivenNameList) {
-      // TODO check level
-      this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, level);
     }
   }
 
