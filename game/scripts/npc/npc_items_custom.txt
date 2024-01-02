@@ -6705,7 +6705,7 @@
 				"cold_slow_ranged"	"-100"
 				"cold_attack_slow_ranged"	"-600"
 				"cold_duration"	"3.0"
-				"heal_reduction"	"999"
+				"heal_reduction"	"99"
 		}
 	}
 
@@ -7855,7 +7855,7 @@
 				"soul_heal_amount"		"200"
 				"soul_damage_amount"	"200"
 				"duration"			"12.0"
-				"hp_regen_reduction_enemy"	"999"
+				"hp_regen_reduction_enemy"	"200"
 				"enemy_hp_drain"		"6"
 		}
 	}
@@ -7903,7 +7903,7 @@
 				"affected_by_aoe_increase"	"1"
 			}
 			"blast_speed"			"600"
-			"hp_regen_degen_aura"	"999"
+			"hp_regen_degen_aura"	"99"
 			"illusion_multiplier_pct"	"150"
 			"spell_amp"			"100"
 			"resist_debuff_duration"	"20.0"
