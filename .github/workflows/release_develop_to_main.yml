@@ -31,7 +31,9 @@ jobs:
       - name: Check if PR exists
         id: check_pr
         run: |
-          pr_exists=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?head=windybirth:develop" | jq -e '.[] | select(.head.ref=="develop")')
+          response=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?head=windybirth:develop")
+          echo "API response: $response"
+          pr_exists=$(echo "$response" | jq -e '.[] | select(.head.ref=="develop")')
           if [[ -n "$pr_exists" ]]; then
             echo exists=true >> $GITHUB_OUTPUT
           else
