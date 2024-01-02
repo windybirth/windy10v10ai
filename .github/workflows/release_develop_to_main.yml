@@ -34,7 +34,7 @@ jobs:
           response=$(curl -s "https://api.github.com/repos/${{ github.repository }}/pulls?head=windybirth:develop")
           ref_exists=$(echo "$response" | jq -e '.[].head.ref')
           echo $ref_exists
-          if [ $ref_exists = "develop" ]; then
+          if [ $ref_exists ]; then
             exists=true
           else
             exists=false
