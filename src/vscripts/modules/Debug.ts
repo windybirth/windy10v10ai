@@ -15,27 +15,25 @@ export class Debug {
   }
 
   OnPlayerChat(keys: GameEventProvidedProperties & PlayerChatEvent): void {
+    const steamid = PlayerResource.GetSteamAccountID(keys.playerid);
+
+    if (!this.OnlineDebugWhiteList.includes(steamid)) {
+      return;
+    }
+
     const strs = keys.text.split(" ");
     const cmd = strs[0];
     const args = strs.slice(1);
-    const steamid = PlayerResource.GetSteamAccountID(keys.playerid);
 
     print(`[DEBUG] ${steamid} ${keys.playerid} ${keys.teamonly} ${keys.userid} ${keys.text}`);
 
     if (cmd === "-debug") {
-      if (this.OnlineDebugWhiteList.includes(steamid)) {
-        this.DebugEnabled = !this.DebugEnabled;
-      }
+      this.DebugEnabled = !this.DebugEnabled;
     }
 
     // 只在允许调试的时候才执行以下指令
-
     // commands that only work in debug mode below:
-    print(`[DEBUG] this.DebugEnabled ${this.DebugEnabled}`);
     if (!this.DebugEnabled) return;
-    if (!this.OnlineDebugWhiteList.includes(steamid)) {
-      return;
-    }
 
     // 其他的测试指令写在下面
     if (cmd.startsWith("get_key_v3")) {
