@@ -78,6 +78,7 @@ TextEntry.MonoFont {
 .tooltipIcon {
   width: 16px;
   height: 16px;
+  margin: 2px;
   vertical-align: center;
 
   tooltip-position: top;
@@ -88,7 +89,7 @@ TextEntry.MonoFont {
   vertical-align: top;
   color: white;
   font-size: 16px;
-  margin: 5px;
+  margin: 2px 0 0 20px;
 }
 
 .flowDown {
@@ -386,8 +387,12 @@ TextEntry.MonoFont {
   flow-children: down;
 }
 
-.ItemName {
+.ItemNamePanel {
   width: 100%;
+}
+
+.ItemName {
+  width: 90%;
   font-size: 22px;
   letter-spacing: 0px;
   color: #ffffff90;
@@ -417,6 +422,10 @@ TextEntry.MonoFont {
   text-align: center;
   text-transform: uppercase;
   text-shadow: 2px 2px 4px 3 black;
+}
+
+.hidden {
+  visibility: collapse;
 }
 
 .LevelupButton {

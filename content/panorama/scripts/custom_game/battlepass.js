@@ -157,6 +157,14 @@ function AddPlayerProperty(property) {
   panel.FindChildTraverse("Levelup").nextLevel = nextLevel;
   panel.FindChildTraverse("LevelupText").text = levelupText;
 
+  if (Player_Propertys_Show_Tooltip_1.includes(property.name)) {
+    panel.FindChildTraverse("PropertyTooltip1").SetHasClass("hidden", false);
+  } else if (Player_Propertys_Show_Tooltip_2.includes(property.name)) {
+    panel.FindChildTraverse("PropertyTooltip2").SetHasClass("hidden", false);
+  } else {
+    panel.FindChildTraverse("PropertyTooltip").SetHasClass("hidden", false);
+  }
+
   if (property.level < maxLevel && levelUseable >= nextLevel - property.level) {
     panel.FindChildTraverse("Levelup").SetHasClass("deactivated", false);
     panel.FindChildTraverse("Levelup").SetHasClass("activated", true);
@@ -180,6 +188,17 @@ function OnLevelupActive(panel) {
     level: panel.FindChildTraverse("Levelup").nextLevel,
   });
 }
+
+const Player_Propertys_Show_Tooltip_1 = [
+  "property_cooldown_percentage",
+  "property_movespeed_bonus_constant",
+  "property_health_regen_percentage",
+  "property_mana_regen_total_percentage",
+  "property_ignore_movespeed_limit",
+  "property_cannot_miss",
+];
+
+const Player_Propertys_Show_Tooltip_2 = ["property_skill_points_bonus"];
 
 const Player_Property_List = [
   {
