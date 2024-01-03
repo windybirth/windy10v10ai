@@ -7243,7 +7243,7 @@
 		"AbilityValues"
 		{
 			"duration"				"8"
-			"charges_per_flurry"	"40 50 60 70 80"
+			"charges_per_flurry"	"10 15 20 25 30"
 			"flurry_bonus_attack_speed"	"700 1000 1300 1600 1900"
 			"time_between_flurries"	"1.5"
 			"pulse_radius"
