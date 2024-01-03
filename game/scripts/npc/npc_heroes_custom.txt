@@ -1514,9 +1514,13 @@
 			}
 		}
 	}
+	"npc_dota_hero_doom_bringer"
+	{
+		"AttackRate"    "1.2"
+	}
 	"npc_dota_hero_lina"
 	{
-		"AttackRate"    "1.0"
+		"AttackRate"    "1.2"
 	    "Ability10"		"special_bonus_unique_lina_3"
         "Ability11"		"special_bonus_unique_lina_1"
         "Ability12"		"special_bonus_unique_lina_2"

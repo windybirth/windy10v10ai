@@ -8263,7 +8263,7 @@
 				"bonus_cast_range"		"500"
 				"bonus_mana_regen"		"30"
 				"blast_movement_slow"	"-100"
-				"duration"				"99999"
+				"duration"				"30"
 				"blast_agility_multiplier"			"4.5"
 				"blast_damage_base"			"500"
 				"duration_ally"				"99999"
