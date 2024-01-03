@@ -5,7 +5,7 @@ local __TS__New = ____lualib.__TS__New
 local __TS__ArrayIncludes = ____lualib.__TS__ArrayIncludes
 local __TS__StringEndsWith = ____lualib.__TS__StringEndsWith
 local __TS__SourceMapTraceBack = ____lualib.__TS__SourceMapTraceBack
-__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["10"] = 2,["11"] = 3,["12"] = 4,["13"] = 5,["14"] = 6,["15"] = 7,["16"] = 8,["17"] = 9,["18"] = 10,["19"] = 11,["20"] = 12,["21"] = 13,["22"] = 14,["23"] = 15,["24"] = 16,["25"] = 17,["26"] = 18,["27"] = 19,["28"] = 20,["29"] = 21,["30"] = 22,["31"] = 23,["32"] = 26,["33"] = 26,["34"] = 26,["36"] = 30,["37"] = 31,["38"] = 32,["39"] = 33,["40"] = 34,["41"] = 35,["42"] = 36,["43"] = 37,["44"] = 38,["45"] = 39,["46"] = 40,["47"] = 41,["48"] = 42,["49"] = 43,["50"] = 44,["51"] = 47,["52"] = 52,["53"] = 56,["54"] = 60,["55"] = 64,["56"] = 68,["57"] = 72,["58"] = 29,["59"] = 100,["61"] = 101,["62"] = 101,["63"] = 102,["64"] = 103,["65"] = 104,["66"] = 105,["67"] = 106,["68"] = 107,["72"] = 101,["75"] = 100,["76"] = 115,["77"] = 116,["78"] = 117,["79"] = 118,["80"] = 120,["81"] = 121,["82"] = 122,["83"] = 123,["85"] = 127,["86"] = 128,["87"] = 129,["88"] = 130,["89"] = 131,["90"] = 132,["93"] = 137,["94"] = 138,["95"] = 139,["98"] = 115,["99"] = 144,["100"] = 149,["103"] = 153,["105"] = 155,["106"] = 155,["107"] = 156,["108"] = 155,["111"] = 158,["113"] = 160,["115"] = 163,["116"] = 168,["117"] = 171,["118"] = 144,["119"] = 27,["120"] = 28,["121"] = 78,["122"] = 78,["123"] = 78,["124"] = 78,["125"] = 78,["126"] = 78,["127"] = 78,["128"] = 78,["129"] = 78,["130"] = 78,["131"] = 78,["132"] = 78,["133"] = 78,["134"] = 78,["135"] = 78,["136"] = 78,["137"] = 78,["138"] = 97});
+__TS__SourceMapTraceBack(debug.getinfo(1).short_src, {["10"] = 2,["11"] = 3,["12"] = 4,["13"] = 5,["14"] = 6,["15"] = 7,["16"] = 8,["17"] = 9,["18"] = 10,["19"] = 11,["20"] = 12,["21"] = 13,["22"] = 14,["23"] = 15,["24"] = 16,["25"] = 17,["26"] = 18,["27"] = 19,["28"] = 20,["29"] = 21,["30"] = 22,["31"] = 23,["32"] = 26,["33"] = 26,["34"] = 26,["36"] = 31,["37"] = 32,["38"] = 33,["39"] = 34,["40"] = 35,["41"] = 36,["42"] = 37,["43"] = 38,["44"] = 39,["45"] = 40,["46"] = 41,["47"] = 42,["48"] = 43,["49"] = 44,["50"] = 45,["51"] = 48,["52"] = 53,["53"] = 57,["54"] = 61,["55"] = 65,["56"] = 69,["57"] = 73,["58"] = 30,["59"] = 102,["61"] = 103,["62"] = 103,["63"] = 104,["64"] = 105,["65"] = 106,["66"] = 107,["67"] = 108,["68"] = 109,["72"] = 103,["75"] = 102,["76"] = 117,["77"] = 118,["78"] = 119,["79"] = 120,["80"] = 122,["81"] = 123,["82"] = 124,["83"] = 125,["85"] = 129,["86"] = 130,["89"] = 135,["90"] = 136,["91"] = 137,["92"] = 138,["93"] = 139,["94"] = 140,["97"] = 145,["98"] = 146,["99"] = 147,["102"] = 117,["103"] = 152,["104"] = 157,["105"] = 158,["106"] = 159,["107"] = 160,["108"] = 161,["111"] = 164,["112"] = 165,["113"] = 166,["114"] = 152,["115"] = 169,["116"] = 174,["119"] = 178,["121"] = 180,["122"] = 180,["123"] = 181,["124"] = 180,["127"] = 183,["129"] = 185,["131"] = 188,["132"] = 193,["133"] = 196,["134"] = 169,["135"] = 27,["136"] = 28,["137"] = 29,["138"] = 79,["139"] = 79,["140"] = 79,["141"] = 79,["142"] = 79,["143"] = 79,["144"] = 79,["145"] = 79,["146"] = 79,["147"] = 79,["148"] = 79,["149"] = 79,["150"] = 79,["151"] = 79,["152"] = 79,["153"] = 79,["154"] = 79,["155"] = 79,["156"] = 99});
 local ____exports = {}
 local ____property_declare = require("modifiers.property.property_declare")
 local property_attackspeed_bonus_constant = ____property_declare.property_attackspeed_bonus_constant
@@ -75,26 +75,42 @@ function PropertyController.RefreshPlayerProperty(self, property)
 end
 function PropertyController.setModifier(self, hero, property)
     local name = property.name
-    local limitdLevel = property.level
-    print((("[PropertyController] setModifier " .. name) .. " ") .. tostring(limitdLevel))
+    print((("[PropertyController] setModifier " .. name) .. " origin level ") .. tostring(property.level))
+    local activeLevel = property.level
     if __TS__ArrayIncludes(____exports.PropertyController.limitPropertyNames, name) then
-        local maxLevel = math.ceil(hero:GetLevel() / ____exports.PropertyController.HERO_LEVEL_PER_POINT)
-        limitdLevel = math.min(limitdLevel, maxLevel)
-        print(((("[PropertyController] setModifier " .. name) .. " ") .. tostring(limitdLevel)) .. " limit")
+        local activeLevelMax = math.floor(hero:GetLevel() / ____exports.PropertyController.HERO_LEVEL_PER_POINT)
+        activeLevel = math.min(property.level, activeLevelMax)
+        print(((("[PropertyController] setModifier " .. name) .. " ") .. tostring(activeLevel)) .. " limit")
+    end
+    if name == "property_skill_points_bonus" then
+        ____exports.PropertyController:setBonusSkillPoints(hero, property, activeLevel)
+        return
     end
     local propertyValuePerLevel = ____exports.PropertyController.propertyValuePerLevel:get(property.name)
     if propertyValuePerLevel then
-        local value = propertyValuePerLevel * limitdLevel
-        if value ~= 0 then
+        local value = propertyValuePerLevel * activeLevel
+        if value > 0 then
             hero:RemoveModifierByName(property.name)
             hero:AddNewModifier(hero, nil, property.name, {value = value})
         end
     else
         local dataDrivenName = ____exports.PropertyController.propertyDataDrivenName:get(property.name)
         if dataDrivenName then
-            self:refreshDataDrivenPlayerProperty(hero, dataDrivenName, limitdLevel)
+            self:refreshDataDrivenPlayerProperty(hero, dataDrivenName, activeLevel)
         end
     end
+end
+function PropertyController.setBonusSkillPoints(self, hero, property, activeLevel)
+    local steamId = property.steamId
+    local shoudAddSP = math.floor(activeLevel / 2)
+    local currentAddedSP = ____exports.PropertyController.bnusSkillPointsAdded:get(steamId) or 0
+    local deltaSP = shoudAddSP - currentAddedSP
+    if deltaSP <= 0 then
+        return
+    end
+    print((("[PropertyController] setBonusSkillPoints " .. tostring(shoudAddSP)) .. " ") .. tostring(deltaSP))
+    hero:SetAbilityPoints(hero:GetAbilityPoints() + deltaSP)
+    ____exports.PropertyController.bnusSkillPointsAdded:set(steamId, shoudAddSP)
 end
 function PropertyController.refreshDataDrivenPlayerProperty(self, hero, dataDrivenName, level)
     if level == 0 then
@@ -118,7 +134,9 @@ function PropertyController.refreshDataDrivenPlayerProperty(self, hero, dataDriv
 end
 PropertyController.propertyValuePerLevel = __TS__New(Map)
 PropertyController.propertyDataDrivenName = __TS__New(Map)
+PropertyController.bnusSkillPointsAdded = __TS__New(Map)
 PropertyController.limitPropertyNames = {
+    "property_skill_points_bonus",
     "property_cast_range_bonus_stacking",
     "property_spell_amplify_percentage",
     "property_status_resistance_stacking",

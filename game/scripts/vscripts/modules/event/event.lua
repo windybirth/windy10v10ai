@@ -27,7 +27,7 @@ end
 function Event.prototype.OnPlayerLevelUp(self, keys)
     local hero = EntIndexToHScript(keys.hero_entindex)
     if Helper:IsHumanPlayer(hero) then
-        if keys.level % PropertyController.HERO_LEVEL_PER_POINT == 1 then
+        if keys.level % PropertyController.HERO_LEVEL_PER_POINT == 0 then
             print("[Event] OnPlayerLevelUp SetPlayerProperty " .. hero:GetUnitName())
             Player:SetPlayerProperty(hero)
         end
