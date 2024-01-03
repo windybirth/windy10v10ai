@@ -17,9 +17,19 @@
   "editor.insertSpaces": true,
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
   "[typescript]": {
     "editor.formatOnSave": true
+  },
+  "[txt]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.autoIndent": "full"
   }
 }
