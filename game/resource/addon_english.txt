@@ -145,11 +145,12 @@
 		"data_panel_player_property_movespeed_bonus_constant"	"Movement Speed"
 		"data_panel_player_property_ignore_movespeed_limit"		"Ignore the Movement Speed Limit"
 		"data_panel_player_property_cannot_miss"				"True Strike"
+		"data_panel_player_property_skill_points_bonus"			"Bonus Skill Points"
 
 		"data_panel_player_property_value"				"Value"
 		"data_panel_player_property_level"				"Level"
 		"data_panel_player_property_level_up"			"Level Up"
-		"data_panel_player_property_level_up_8"			"Level Up with 8 Points"
+		"data_panel_player_property_level_up_X"			"Level Up with X Points"
 
 		///////////////////////////////////////////////////
 		//

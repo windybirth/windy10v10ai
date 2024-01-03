@@ -26,6 +26,7 @@ import {
 export class PropertyController {
   private static propertyValuePerLevel = new Map<string, number>();
   private static propertyDataDrivenName = new Map<string, string>();
+  private static bnusSkillPointsAdded = new Map<number, number>();
   constructor() {
     print("PropertyController init");
     PropertyController.propertyValuePerLevel.set(property_cooldown_percentage.name, 4);
@@ -114,19 +115,23 @@ export class PropertyController {
   // 更新单条属性
   public static setModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
     const name = property.name;
-    let limitdLevel = property.level;
-    print(`[PropertyController] setModifier ${name} ${limitdLevel}`);
+    if (name == "property_skill_points_bonus") {
+      PropertyController.setBonusSkillPoints(hero, property);
+      return;
+    }
+    let shoudAddLevel = property.level;
+    print(`[PropertyController] setModifier ${name} ${shoudAddLevel}`);
     // 根据英雄等级设置点数
     if (PropertyController.limitPropertyNames.includes(name)) {
-      const maxLevel = Math.ceil(hero.GetLevel() / PropertyController.HERO_LEVEL_PER_POINT);
-      limitdLevel = Math.min(limitdLevel, maxLevel);
-      print(`[PropertyController] setModifier ${name} ${limitdLevel} limit`);
+      const currentMaxLevel = Math.floor(hero.GetLevel() / PropertyController.HERO_LEVEL_PER_POINT);
+      shoudAddLevel = Math.min(property.level, currentMaxLevel);
+      print(`[PropertyController] setModifier ${name} ${shoudAddLevel} limit`);
     }
 
     // 设置属性
     const propertyValuePerLevel = PropertyController.propertyValuePerLevel.get(property.name);
     if (propertyValuePerLevel) {
-      const value = propertyValuePerLevel * limitdLevel;
+      const value = propertyValuePerLevel * shoudAddLevel;
       if (value != 0) {
         hero.RemoveModifierByName(property.name);
         hero.AddNewModifier(hero, undefined, property.name, {
@@ -136,9 +141,25 @@ export class PropertyController {
     } else {
       const dataDrivenName = PropertyController.propertyDataDrivenName.get(property.name);
       if (dataDrivenName) {
-        this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, limitdLevel);
+        this.refreshDataDrivenPlayerProperty(hero, dataDrivenName, shoudAddLevel);
       }
     }
+  }
+
+  // 设置额外技能点
+  private static setBonusSkillPoints(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
+    const steamId = property.steamId;
+    const currentMaxLevel = Math.floor(
+      hero.GetLevel() / PropertyController.HERO_LEVEL_PER_POINT / 2,
+    );
+    const shoudAddSP = Math.min(property.level, currentMaxLevel);
+    const currentAddedSP = PropertyController.bnusSkillPointsAdded.get(steamId) || 0;
+    const deltaSP = shoudAddSP - currentAddedSP;
+    if (deltaSP <= 0) {
+      return;
+    }
+    hero.SetAbilityPoints(hero.GetAbilityPoints() + deltaSP);
+    PropertyController.bnusSkillPointsAdded.set(steamId, shoudAddSP);
   }
 
   private static refreshDataDrivenPlayerProperty(
