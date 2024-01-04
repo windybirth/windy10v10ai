@@ -4508,6 +4508,7 @@
 				"value"			"40 80 120 160 200"
 				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
 			}
+		}
 	}
 	// 烈日炙烤
 	"phoenix_sun_ray"
