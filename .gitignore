@@ -13,6 +13,8 @@ src/game/
 /.idea
 /official_scripts
 
+
+game/scripts/vscripts/bots/
 # Ignore tstl output
 game/scripts/vscripts/api/
 game/scripts/vscripts/modules/
