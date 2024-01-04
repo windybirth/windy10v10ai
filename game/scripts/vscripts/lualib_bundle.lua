@@ -1,4 +1,4 @@
----@diagnostic disable: inject-field, deprecated, duplicate-set-field
+---@diagnostic disable: inject-field, deprecated, duplicate-set-field, redundant-parameter
 local function __TS__ArrayIsArray(value)
     return type(value) == "table" and (value[1] ~= nil or next(value) == nil)
 end
