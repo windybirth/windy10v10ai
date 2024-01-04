@@ -4443,43 +4443,62 @@
 	"phoenix_icarus_dive"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"36 34 32 30 28"
+		"AbilityCooldown"				"36 32 28 24 20"
 		"AbilityValues"
 		{
-				"hp_cost_perc"			"10"
-				"dash_length"
-				{
-					"value"	"1100 1200 1300 1400 1500"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_4"
-				}
-				"damage_per_second"
-				{
-					"value"				"30 70 110 150 190"
-					"special_bonus_unique_phoenix_dive_damage"		"+40"
-				}
-
-				"slow_movement_speed_pct"
-				{
-					"value"		"16 19 22 25 28"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_6"
-				}
+			"hp_cost_perc"			"8"
+			"dash_length"
+			{
+				"value"	"1100 1200 1400 1600 1800"
+				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_4"
+			}
+			"damage_per_second"
+			{
+				"value"				"30 70 110 150 190"
+				"special_bonus_unique_phoenix_dive_damage"		"+40"
+			}
+			"slow_movement_speed_pct"
+			{
+				"value"		"23 26 29 32 35"
+				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_6"
+			}
 		}
 	}
 	// 烈火精灵
 	"phoenix_fire_spirits"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"35 30 25 20 15"
+		"AbilityCooldown"				"32 29 26 23 20"
 		"AbilityValues"
 		{
-				"hp_cost_perc"		"15"
-				"attackspeed_slow"	"-65 -90 -115 -140 -165"
-				"damage_per_second"
-				{
-					"value"		"40 80 120 160 200"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
-				}
+			"hp_cost_perc"		"10"
+			"attackspeed_slow"	"-100 -200 -300 -350 -400"
+			"damage_per_second"
+			{
+				"value"		"40 80 120 160 200"
+				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
+			}
 		}
+	}
+	// 释放烈火精灵
+	"phoenix_launch_fire_spirit"
+	{
+		"MaxLevel" "5"
+		"AbilityValues"
+		{
+			"hp_cost_perc"		"10"
+			"spirit_speed"		"1000 1200 1400 1600 2000"
+			"radius"
+			{
+				"value"	"300"
+				"affected_by_aoe_increase"	"1"
+			}
+			"attackspeed_slow"	"-100 -200 -300 -350 -400"
+			"damage_per_second"
+			{
+				"value"			"40 80 120 160 200"
+				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
+			}
 	}
 	// 烈日炙烤
 	"phoenix_sun_ray"
@@ -4488,15 +4507,27 @@
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
-				"hp_cost_perc_per_second"		"5"
-				"base_damage"			"30 40 50 60 70"
-				"hp_perc_damage"
-				{
-					"value"			"2.5 2.75 3.0 3.25 3.5"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_5"
-				}
-				"base_heal"			"20 30 40 50 60"
-				"hp_perc_heal"			"2.0 2.5 3.0 3.5 4.0"
+			"hp_cost_perc_per_second"		"3"
+			"base_damage"			"30 40 50 60 70"
+			"hp_perc_damage"
+			{
+				"value"			"1 2 3 4 5"
+				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_5"
+			}
+			"base_heal"			"7 10 13 16"
+			"hp_perc_heal"			"1.0 2.0 3.0 4.0 5.0"
+			"radius"
+			{
+				"value"	"200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"forward_move_speed"	"350"
+			"shard_move_slow_pct"
+			{
+				"value"				"25"
+				"RequiresShard"				"1"
+			}
+			"blind_per_second"	"30"
 		}
 	}
 	"special_bonus_unique_phoenix_5"
@@ -4506,7 +4537,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"value"				"0.5"
+				"value"				"1.5"
 				"ad_linked_abilities"			"phoenix_sun_ray"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -4522,12 +4553,12 @@
 				"damage_per_sec"	"60 90 120 150"
 				"stun_duration"
 				{
-					"value"			"1.6 2 2.4 2.8"
+					"value"			"2.0 2.5 3.0 3.5"
 					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_2"
 				}
 				"max_hero_attacks"
 				{
-					"value"			"12 16 20 24"
+					"value"			"12 18 24 30"
 					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
 				}
 				"max_hero_attacks_scepter"
@@ -4548,21 +4579,6 @@
 				"value"				"8"
 				"ad_linked_abilities"			"phoenix_supernova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
-		}
-	}
-	// 释放烈火精灵
-	"phoenix_launch_fire_spirit"
-	{
-		"MaxLevel" "5"
-		"AbilityValues"
-		{
-				"hp_cost_perc"		"15"
-				"attackspeed_slow"	"-80 -100 -120 -140 -160"
-				"damage_per_second"
-				{
-					"value"			"40 80 120 160 200"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
-				}
 		}
 	}
 	//=================================================================================================================
@@ -9461,6 +9477,7 @@
 	//=================================================================================================================
 	// Ability: Venomancer 剧毒术士
 	//=================================================================================================================
+	// 瘴气
 	"venomancer_venomous_gale"
 	{
 		"MaxLevel" "5"
@@ -9485,6 +9502,7 @@
 			}
 		}
 	}
+	// 毒刺
 	"venomancer_poison_sting"
 	{
 		"MaxLevel" "5"
@@ -9514,42 +9532,43 @@
         "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
         "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
 	}
+	// 剧毒蛇棒
 	"venomancer_plague_ward"
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"40 50 60 70 80"
-		"AbilityCooldown"				"8"
+		"AbilityCooldown"				"80"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"duration"				"18"
+				"duration"				"60"
 				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp_tooltip"		"300 450 600 750 900"
+				"ward_hp_tooltip"		"600 1200 1800 2400 3000"
 				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_damage_tooltip"	"20 30 40 50 60"
+				"ward_damage_tooltip"	"140 220 300 380 460"
 				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
 				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 			}
 			"04" // For special bonus at level 25
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_hp"		"900 1350 1800 2250 2700"
+				"ward_hp"		"1500 3000 4500 6000 7500"
 			}
 			"05" // For special bonus at level 25
 			{
 				"var_type"				"FIELD_INTEGER"
-				"ward_damage"	"60 90 120 150 180"
+				"ward_damage"	"350 550 750 950 1150"
 			}
 		}
 	}
@@ -9567,6 +9586,7 @@
             }
         }
     }
+	// 恶性瘟疫
 	"venomancer_noxious_plague"
 	{
 		"MaxLevel" "4"
@@ -9596,6 +9616,7 @@
 			"projectile_speed"			"1200"
 		}
 	}
+	// 剧毒新星
 	"venomancer_poison_nova"
 	{
 		"AbilityValues"
@@ -9608,7 +9629,7 @@
 			"start_radius"				"255"
 			"duration"					"10"
 			"damage"					"5"
-			"magic_resist"				"-30"
+			"magic_resist"				"-25"
 			"speed"						"550"
 			"trigger_cd"				"5"
 		}
@@ -9676,6 +9697,7 @@
 			}
 		}
 	}
+	// 腐蚀皮肤
 	"viper_corrosive_skin"
 	{
 		"MaxLevel" "5"
@@ -9736,6 +9758,7 @@
 	//=================================================================================================================
 	// Ability: Weaver 编织者/蚂蚁
 	//=================================================================================================================
+	// 虫群
 	"weaver_the_swarm"
 	{
 		"MaxLevel" "5"
@@ -9774,6 +9797,7 @@
 			}
 		}
 	}
+	// 缩地
 	"weaver_shukuchi"
 	{
 		"MaxLevel" "5"
@@ -9819,6 +9843,7 @@
 			}
 		}
 	}
+	// 时光倒流
 	"weaver_time_lapse"
 	{
 		"MaxLevel" "4"
@@ -9842,6 +9867,7 @@
 	//=================================================================================================================
 	// Ability: Ancient Apparition 远古冰魂/AA
 	//=================================================================================================================
+	// 寒霜之足
 	"ancient_apparition_cold_feet"
 	{
 		"MaxLevel" "5"
@@ -9884,6 +9910,7 @@
 			}
 		}
 	}
+	// 极寒之触
 	"ancient_apparition_chilling_touch"
 	{
 		"MaxLevel" "5"
@@ -9931,6 +9958,7 @@
 	//=================================================================================================================
 	// Ability: Bane 祸乱之源/痛苦之源
 	//=================================================================================================================
+	// 虚弱
 	"bane_enfeeble"
 	{
 		"MaxLevel" "5"
@@ -9987,25 +10015,26 @@
 			}
 		}
 	}
+	// 魔爪
 	"bane_fiends_grip"
 	{
-		"MaxLevel" "5"
-		"AbilityManaCost"				"200 300 400 500 600"
+		"MaxLevel" "4】"
+		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
 			"AbilityChannelTime"
 			{
-				"value"					"4.75 5.25 5.75 6.25 6.75"
+				"value"					"4.8 5.3 5.8 6.3"
 				"special_bonus_unique_bane_3"		"+3"
 			}
 			"fiend_grip_damage"
 			{
-				"value"			"70 110 150 190 230"
+				"value"			"70 110 150 190"
 				"CalculateSpellDamageTooltip" "1"
 			}
 			"AbilityCooldown"
 			{
-				"value"	"80 70 60 50 40"
+				"value"	"80 70 60 50"
 				"special_bonus_scepter"	"-20"
 			}
 			"illusion_count"
@@ -10017,6 +10046,7 @@
 	//=================================================================================================================
 	// Ability: Batrider 蝙蝠骑士
 	//=================================================================================================================
+	// 叠油
 	"batrider_sticky_napalm"
 	{
 		"MaxLevel" "5"
@@ -10039,6 +10069,7 @@
 			}
 		}
 	}
+	// 燃烧弹
 	"batrider_flamebreak"
 	{
 		"MaxLevel" "5"
@@ -10059,6 +10090,7 @@
 			}
 		}
 	}
+	// 火焰飞行
 	"batrider_firefly"
 	{
 		"MaxLevel" "5"
@@ -10072,6 +10104,7 @@
 			}
 		}
 	}
+	// 燃烧枷锁
 	"batrider_flaming_lasso"
 	{
 		"MaxLevel" "4"
@@ -10099,6 +10132,7 @@
 	//=================================================================================================================
 	// Ability: Crystal Maiden 水晶室女/冰女
 	//=================================================================================================================
+	// 冰霜新星
 	"crystal_maiden_crystal_nova"
 	{
 		"MaxLevel" "5"
@@ -10119,6 +10153,7 @@
 			}
 		}
 	}
+	// 冰封禁制
 	"crystal_maiden_frostbite"
 	{
 		"MaxLevel" "5"
@@ -10156,16 +10191,17 @@
 			}
 		}
 	}
+	// 极寒领域
 	"crystal_maiden_freezing_field"
 	{
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"AbilityCooldown"				"90"
-			"AbilityManaCost"				"200 400 600 800 1000"
+			"AbilityManaCost"				"400 600 800 1000"
 			"damage"
 			{
-				"value"										"105 170 250 330 410"
+				"value"										"170 250 330 410"
 				"special_bonus_unique_crystal_maiden_3"		"+50"
 			}
 		}
@@ -10253,6 +10289,7 @@
 	//=================================================================================================================
 	// Ability: Dazzle 戴泽/暗牧
 	//=================================================================================================================
+	// 编织
 	"dazzle_weave"
 	{
 		"MaxLevel" "5"
@@ -10295,6 +10332,7 @@
 			"bonus_slow"			"-2 -2.5 -3 -3.5 -4.0"
 		}
 	}
+	// 薄葬
 	"dazzle_shallow_grave"
 	{
 		"MaxLevel" "5"
@@ -10349,24 +10387,25 @@
 			}
 		}
 	}
+	// 邪能
 	"dazzle_bad_juju"
 	{
 		"MaxLevel" "4"
-		"AbilityCastPoint"				"0.2"
+		"AbilityCastPoint"				"0.25"
 		"AbilityCooldown"				"3"
 		"AbilityHealthCost"				"75 100 125 150"
 		"AbilityValues"
 		{
 			"armor_reduction"
 			{
-				"value"			"1 2 3 4"
+				"value"			"1 3 5 5"
 				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_4"
 			}
-			"duration"					"8 10 12 14"
+			"duration"					"8 10 10 12"
 
-			"cooldown_reduction"			"4 5 6 7"
-			"cooldown_reduction_items" 		"4"
-			"mana_cost_increase_pct"		"10"
+			"cooldown_reduction"			"4 5 5 6"
+			"cooldown_reduction_items" 		"0 0 0 1"
+			"mana_cost_increase_pct"		"40"
 			"mana_cost_increase_duration"	"20"
 			"max_stacks"					"15"
 		}
@@ -10383,17 +10422,18 @@
 			}
 		}
 	}
+	// 善咒
 	"dazzle_good_juju"
 	{
 		"MaxLevel" "4"
 		"LinkedAbility"					"dazzle_bad_juju"
 		"HasScepterUpgrade"				"1"
-		"AbilityCastPoint"				"0.2"
+		"AbilityCastPoint"				"0.25"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCastRange"				"250"
 		"AbilityValues"
 		{
-				"cooldown_reduction"		"1 1.5 2 2.5"
+				"cooldown_reduction"		"1 1.3 1.6 2.0"
 				"item_cooldown_reduction"
 				{
 					"value"		"50"
@@ -10417,6 +10457,7 @@
 		"LinkedAbility"					"death_prophet_witchcraft"
 		"AbilityDraftPreAbility"		"death_prophet_witchcraft"
 	}
+	// 吸魂巫术
 	"death_prophet_spirit_siphon"
 	{
 		"MaxLevel" "5"
@@ -10424,14 +10465,15 @@
 		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
-				"damage"					"10 15 20 25 30"
-				"damage_pct"
-				{
-					"value"			"1.0 2.0 3.0 4.0 5.0"
-				    "special_bonus_unique_death_prophet_3"	"+1.5"
-				}
+			"damage"
+			{
+				"value"				"25 50 75 100 125"
+				"special_bonus_unique_death_prophet_3"	"+75"
+			}
+			"damage_pct"				"2 3 4 5 6"
 		}
 	}
+	// 巫术精研
 	"death_prophet_witchcraft"
 	{
 		"MaxLevel" "5"
@@ -10481,21 +10523,22 @@
 			}
 		}
 	}
+	// 驱使恶灵
 	"death_prophet_exorcism"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"120"
-		"AbilityManaCost"				"200 300 400 500 600"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"150"
+		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
-				"spirits"
-				{
-					"value"					"4 5 6 7 8"
-					"LinkedSpecialBonus"	"special_bonus_unique_death_prophet"
-				}
-				"min_damage"			"100 150 200 250 300"
-				"max_damage"			"100 150 200 250 300"
-				"average_damage"		"100 150 200 250 300"
+			"spirits"
+			{
+				"value"					"4 4 4 4"
+				"LinkedSpecialBonus"	"special_bonus_unique_death_prophet"
+			}
+			"min_damage"			"200 400 600 800"
+			"max_damage"			"200 400 600 800"
+			"average_damage"		"200 400 600 800"
 		}
 	}
 	"special_bonus_unique_death_prophet"
@@ -10529,6 +10572,7 @@
 			}
 		}
 	}
+	// 恶念瞥视
 	"disruptor_glimpse"
 	{
 		"MaxLevel" "5"
@@ -10593,9 +10637,9 @@
 	// 静态风暴
 	"disruptor_static_storm"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"80 70 60 50 40"
-		"AbilityManaCost"				"125 175 225 275 325"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"70 60 50 40"
+		"AbilityManaCost"				"175 225 275 325"
 		"AbilityValues"
 		{
 				"radius"
@@ -10610,7 +10654,7 @@
 					"LinkedSpecialBonus"			"special_bonus_unique_disruptor_7"
 					"LinkedSpecialBonusField"		"value2"
 				}
-				"damage_max"				"200 275 350 425 500"
+				"damage_max"				"275 350 425 500"
 		}
 	}
 	//=================================================================================================================
@@ -10619,17 +10663,18 @@
 	// 不可侵犯
 	"enchantress_untouchable"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"slow_attack_speed"		"-120 -160 -200 -240 -280"
+				"slow_attack_speed"		"-100 -200 -300 -400"
 				"LinkedSpecialBonus"	"special_bonus_unique_enchantress_3"
 			}
 		}
 	}
+	// 自然之助
 	"enchantress_natures_attendants"
 	{
 		"MaxLevel" "5"
@@ -10642,6 +10687,7 @@
 			}
 		}
 	}
+	// 推进
 	"enchantress_impetus"
 	{
 		"MaxLevel" "5"
@@ -10649,8 +10695,8 @@
 		{
 			"distance_damage_pct"
 			{
-				"value"			"12 16 20 26 32"
-				"special_bonus_unique_enchantress_4"	"+6.5"
+				"value"			"10 14 18 22 26"
+				"special_bonus_unique_enchantress_4"	"+10"
 			}
 		}
 	}
@@ -10719,14 +10765,14 @@
 	// 黑洞
 	"enigma_black_hole"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilityCooldown"				"130"
-		"AbilityManaCost"				"300 400 500 600 700"
+		"AbilityManaCost"				"400 500 600 700"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"		"100 150 200 250 300"
+				"value"		"100 150 200 250"
 				"special_bonus_unique_enigma_6"	"+50"
 			}
 			"scepter_pct_damage"
@@ -10739,6 +10785,7 @@
 	//=================================================================================================================
 	// Ability: Furion 先知
 	//=================================================================================================================
+	// 框
 	"furion_sprout"
 	{
 		"MaxLevel" "5"
@@ -10750,6 +10797,7 @@
 			"duration"						"3 4 5 6 7"
 		}
 	}
+	// 传送
 	"furion_teleportation"
 	{
 		"MaxLevel" "5"
@@ -10764,48 +10812,50 @@
 			}
 		}
 	}
+	// 自然呼唤
 	"furion_force_of_nature"
 	{
 		"AbilityValues"
         {
 			"max_treants"
 			{
-				"value"							"2"
+				"value"							"1"
 				"special_bonus_unique_furion_2"	"+1"
 			}
 			"treant_duration"				"30"
 			"treant_health"
 			{
-				"value"								"500 600 700 800"
+				"value"								"1200 1800 2400 3000"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_damage_min"
 			{
-				"value"					"35 50 65 80"
+				"value"					"50 100 200 300"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_damage_max"
 			{
-				"value"					"35 50 65 80"
+				"value"					"50 100 200 300"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"AbilityCooldown"
 			{
-				"value"				"90"
+				"value"				"70"
 				"special_bonus_unique_furion_6"		"-10"
 			}
         }
 	}
+	// 自然之怒
 	"furion_wrath_of_nature"
 	{
-		"MaxLevel" "5"
-		"AbilityManaCost"				"175 225 275 325 375"
+		"MaxLevel" "4"
+		"AbilityManaCost"				"225 275 325 375"
 		"AbilityValues"
 		{
 
 			"damage"
 			{
-				"value"				"105 145 185 225 265"
+				"value"				"105 145 185 225"
 				"special_bonus_unique_furion_5"			"+30"
 			}
 		}
@@ -10813,6 +10863,7 @@
 	//=================================================================================================================
 	// Ability: Grimstroke 天涯墨客
 	//=================================================================================================================
+	// 命运之笔
 	"grimstroke_dark_artistry"
 	{
 		"MaxLevel" "5"
@@ -10842,6 +10893,7 @@
 			}
 		}
 	}
+	// 幻影之拥
 	"grimstroke_ink_creature"
 	{
 		"MaxLevel" "5"
@@ -10878,6 +10930,7 @@
 			}
 		}
 	}
+	// 墨涌
 	"grimstroke_spirit_walk"
 	{
 		"MaxLevel" "5"
@@ -10909,10 +10962,17 @@
 			}
 		}
 	}
+	// 暗绘
 	"grimstroke_dark_portrait"
 	{
+		"AbilityCooldown"				"60"
 		"AbilitySpecial"
 		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"illusion_duration"			"30"
+			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
@@ -10923,10 +10983,15 @@
 				"var_type"				"FIELD_INTEGER"
 				"images_do_damage_percent_tooltip"			"300"
 			}
+			"04"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"images_take_damage_percent"	"-50"
+			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"images_take_damage_percent_tooltip"			"100"
+				"images_take_damage_percent_tooltip"			"50"
 			}
 			"06"
 			{
@@ -10950,6 +11015,7 @@
 			}
 		}
 	}
+	// 幽灵漫步
 	"invoker_ghost_walk"
 	{
 		"AbilityValues"
@@ -10982,6 +11048,7 @@
 			}
 		}
 	}
+	// 磁暴
 	"invoker_emp"
 	{
 		"AbilityCooldown"				"16"
@@ -11035,10 +11102,12 @@
 			}
 		}
 	}
+	// 冰墙
 	"invoker_ice_wall"
 	{
 		"AbilityCooldown"				"10"
 	}
+	// 超震声波
 	"invoker_deafening_blast"
 	{
 		"AbilityCooldown"				"20"
@@ -11091,6 +11160,7 @@
 			}
 		}
 	}
+	// 冰封路径
 	"jakiro_ice_path"
 	{
 		"MaxLevel" "5"
@@ -11114,6 +11184,7 @@
 			}
 		}
 	}
+	// 液态火
 	"jakiro_liquid_fire"
 	{
 		"MaxLevel" "5"
@@ -11129,11 +11200,12 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"15 25 35 45 55"
+				"damage"				"20 30 40 50 60"
 				"LinkedSpecialBonus"	"special_bonus_unique_jakiro_8"
 			}
 		}
 	}
+	// 液态冰
 	"jakiro_liquid_ice"
 	{
 		"AbilityCooldown"				"10"
@@ -11152,10 +11224,11 @@
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"pct_health_damage" 		"1.0"
+				"pct_health_damage" 		"2.0"
 			}
 		}
 	}
+	// 烈焰焚身
 	"jakiro_macropyre"
 	{
 		"MaxLevel" "4"
@@ -11174,6 +11247,7 @@
 	//=================================================================================================================
 	// Ability: Keeper of the Light 光之守卫/光法
 	//=================================================================================================================
+	// 冲击波
 	"keeper_of_the_light_illuminate"
 	{
 		"MaxLevel" "5"
@@ -11188,6 +11262,7 @@
 			"channel_vision_step"		"150 180 210 240 270"
 		}
 	}
+	// 法力流失
 	"keeper_of_the_light_mana_leak"
 	{
 		"AbilityCooldown"				"16 14 12 10"
@@ -11212,6 +11287,7 @@
 			}
 		}
 	}
+	// 查克拉
 	"keeper_of_the_light_chakra_magic"
 	{
 		"AbilityCooldown"				"15 13 11 9"
@@ -11244,6 +11320,7 @@
 			}
 		}
 	}
+	// 灵魂形态
 	"keeper_of_the_light_spirit_form"
 	{
 		"MaxLevel" "4"
@@ -11273,6 +11350,7 @@
 			}
 		}
 	}
+	// 大招状态下冲击波
 	"keeper_of_the_light_spirit_form_illuminate"
 	{
 		"MaxLevel" "5"
@@ -11383,13 +11461,13 @@
 	// 脉冲新星
 	"leshrac_pulse_nova"
 	{
-        "MaxLevel" "5"
+        "MaxLevel" "4"
 		"AbilityValues"
 		{
-				"mana_cost_per_second"	"25 45 65 85 105"
+				"mana_cost_per_second"	"45 65 85 105"
 				"damage"
 				{
-					"value"			"80 135 180 225 270"
+					"value"			"135 180 225 270"
 					"LinkedSpecialBonus"	"special_bonus_unique_leshrac_3"
 				}
 		}
@@ -11427,6 +11505,7 @@
 			}
 		}
 	}
+	// 冰柱
 	"lich_frost_aura"
 	{
 		"MaxLevel" "5"
@@ -11438,6 +11517,7 @@
 			"movespeed_slow"	"7 14 21 28 35"
 		}
 	}
+	// 阴邪凝视
 	"lich_sinister_gaze"
 	{
 		"MaxLevel" "5"
@@ -11454,6 +11534,7 @@
 			"mana_drain"		"10 15 20 25 30"
 		}
 	}
+	// 霜冻护甲
 	"lich_frost_armor"
 	{
 		"MaxLevel" "5"
@@ -11466,6 +11547,7 @@
 			"slow_attack_speed"		"-8 -16 -24 -32 -40"
 		}
 	}
+	// 冰霜魔盾
 	"lich_frost_shield"
 	{
 		"MaxLevel" "5"
@@ -11487,22 +11569,22 @@
 			"damage"				"20 30 40 50 60"
 		}
 	}
+	// 连环霜冻
 	"lich_chain_frost"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"80 75 70 65 60"
-		"AbilityManaCost"				"180 300 420 540 660"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"75 70 65 60"
+		"AbilityManaCost"				"300 420 540 660"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"		"250 400 550 700 850"
+				"value"		"250 400 550 700"
 				"special_bonus_unique_lich_7" "+150"
 			}
 			"jumps"
 			{
-			    "value" "10 12 14 16 18"
-			    "special_bonus_unique_lich_401" "+18"
+			    "value" "10 12 14 16"
 			}
 			"jump_range"			"650"
 			"slow_movement_speed"	"-65"
@@ -11510,16 +11592,10 @@
 			"slow_duration"			"2.5"
 			"projectile_speed"		"1050"
 			"vision_radius"			"800"
-			"bonus_jump_damage"		"15 20 25 30 35"
+			"bonus_jump_damage"		"15 20 25 30"
 			"initial_projectile_speed"		"1050"
 		}
 	}
-	"special_bonus_unique_lich_401"
-    {
-        "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    }
 	//=================================================================================================================
 	// Ability: Lina 莉娜/火女
 	//=================================================================================================================
@@ -11555,7 +11631,7 @@
 		{
 				"light_strike_array_aoe"
 				{
-					"value" "250"
+					"value" "300"
 					"affected_by_aoe_increase"	"1"
 					"LinkedSpecialBonus"		"special_bonus_unique_lina_201"
 				}
@@ -11614,7 +11690,7 @@
 			"supercharge_duration"	"10"
 			"supercharge_stacks"
 			{
-				"value"				"20"
+				"value"				"15"
 				"special_bonus_unique_lina_supercharge_stacks"		"+10"
 			}
 		}
@@ -11622,6 +11698,7 @@
 	//=================================================================================================================
 	// Ability: Lion 莱恩
 	//=================================================================================================================
+	// 裂地尖刺
 	"lion_impale"
 	{
 		"MaxLevel" "5"
@@ -11636,6 +11713,7 @@
 			"duration"			"1.6 1.8 2.0 2.3 2.6"
 		}
 	}
+	// 变羊
 	"lion_voodoo"
 	{
 		"MaxLevel" "5"
@@ -11668,17 +11746,18 @@
 				}
 		}
 	}
+	// 死亡一指
 	"lion_finger_of_death"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"80.0 70.0 60.0 50.0 40.0"
-		"AbilityManaCost"				"200 400 600 800 1000"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"80.0 70.0 60.0 50.0"
+		"AbilityManaCost"				"200 400 600 800"
 
 		"AbilityValues"
 		{
 				"damage"
 				{
-					"value"				"600 725 850 975 1100"
+					"value"				"600 725 850 975"
 					"special_bonus_scepter"		"+300"
 				}
 				"damage_per_kill"
@@ -11687,10 +11766,10 @@
 					"special_bonus_unique_lion_8"	"+20"
 					"CalculateSpellDamageTooltip"	"0"
 				}
-				"grace_period"				"3.5"
+				"grace_period"				"7"
 				"cooldown_scepter"
 				{
-					"value"	"60.0 50.0 40.0 30.0 20.0"
+					"value"	"40.0 35.0 30.0 25.0"
 					"RequiresScepter"			"1"
 				}
 		}
@@ -11698,6 +11777,7 @@
 	//=================================================================================================================
 	// Ability: Necrolyte 瘟疫法师/死灵法师
 	//=================================================================================================================
+	// 死亡脉冲
 	"necrolyte_death_pulse"
 	{
 		"MaxLevel" "5"
@@ -11726,6 +11806,7 @@
 			}
 		}
 	}
+	// 竭心光环 胜利光环
 	"necrolyte_heartstopper_aura"
 	{
 		"MaxLevel" "5"
@@ -11759,6 +11840,7 @@
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
+	// 幽魂护罩
 	"necrolyte_sadist"
 	{
 		"MaxLevel" "5"
@@ -11783,21 +11865,23 @@
 			}
 		}
 	}
+	// 死神镰刀
 	"necrolyte_reapers_scythe"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"70"
-		"AbilityManaCost"				"250 375 500 625 750"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"90"
+		"AbilityManaCost"				"250 375 500 625"
 		"AbilityValues"
 		{
-			"damage_per_health"			"0.8 0.85 0.9 0.95 1"
-			"hp_per_kill"				"4 8 12 16 20"
-			"mana_per_kill"				"2 4 6 8 10"
+			"damage_per_health"			"0.8 0.85 0.9 0.95"
+			"hp_per_kill"				"4 8 12 16"
+			"mana_per_kill"				"2 4 6 8"
 		}
 	}
 	//=================================================================================================================
 	// Ability: Obsidian Destroyer 殁境神蚀者/黑鸟
 	//=================================================================================================================
+	// 奥术天球
 	"obsidian_destroyer_arcane_orb"
 	{
 		"MaxLevel" "5"
@@ -11806,12 +11890,13 @@
 		{
 			"mana_pool_damage_pct"
 			{
-				"value"										"6 7 8 9 10"
+				"value"										"7 9 11 13 15"
 				"special_bonus_unique_outworld_devourer"	"+2"
 			}
-			"mana_cost_percentage"							"20"
+			"mana_cost_percentage"							"40"
 		}
 	}
+	// 星体禁锢
 	"obsidian_destroyer_astral_imprisonment"
 	{
 		"MaxLevel" "5"
@@ -11828,12 +11913,13 @@
 			"mana_capacity_duration"	"30"
 		}
 	}
+	// 精华变迁
 	"obsidian_destroyer_equilibrium"
 	{
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"proc_chance"	"25"
+			"proc_chance"	"30"
 			"mana_restore"	"25 35 45 55 65"
 			"mana_capacity_duration"	"30 40 50 60 70"
 		}
@@ -11846,37 +11932,18 @@
 		"AbilityManaCost"				"200 325 450 575"
 		"AbilityValues"
 		{
-				"base_damage"				"200 300 400 500"
-				"radius"
-				{
-					"value"			"450 525 600 675"
-					"affected_by_aoe_increase"	"1"
-				}
-		}
-		"AbilitySpecial"
-		{
-			"01"
+			"base_damage"				"200 300 400 500"
+			"radius"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"base_damage"				"200 300 400 500"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"400 500 600 700"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"damage_multiplier"	"0.4"
-				"LinkedSpecialBonus"	"special_bonus_unique_outworld_devourer_4"
-				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				"value"			"450 550 650 750"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
 	//=================================================================================================================
 	// Ability: Ogre Magi 食人魔魔法师/蓝胖
 	//=================================================================================================================
+	// 火焰爆轰
 	"ogre_magi_fireblast"
 	{
 		"MaxLevel" "5"
@@ -11892,6 +11959,7 @@
 			}
 		}
 	}
+	// 未精通的火焰爆轰
 	"ogre_magi_unrefined_fireblast"
 	{
 		"AbilitySpecial"
@@ -11908,6 +11976,7 @@
 			}
 		}
 	}
+	// 引燃
 	"ogre_magi_ignite"
 	{
 		"MaxLevel" "5"
@@ -11933,6 +12002,7 @@
 			}
 		}
 	}
+	// 嗜血术
 	"ogre_magi_bloodlust"
 	{
 		"MaxLevel" "5"
@@ -11964,25 +12034,39 @@
 			}
 		}
 	}
+	// 嗜血术天赋攻速
+	"special_bonus_unique_ogre_magi"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"50"
+				"ad_linked_abilities"			"ogre_magi_bloodlust"
+			}
+		}
+	}
+	// 多重施法
 	"ogre_magi_multicast"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_2_times"		"70 75 80 85 90"
+				"multicast_2_times"		"70 75 80 85"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_3_times"		"15 25 35 45 55"
+				"multicast_3_times"		"15 25 35 45"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"multicast_4_times"		"5 10 15 20 25"
+				"multicast_4_times"		"5 10 15 20"
 			}
 		}
 	}
@@ -12004,6 +12088,7 @@
 			}
 		}
 	}
+	// 命运敕令
 	"oracle_fates_edict"
 	{
 		"MaxLevel" "5"
@@ -12019,6 +12104,7 @@
 			}
 		}
 	}
+	// 涤罪之焰
 	"oracle_purifying_flames"
 	{
 		"MaxLevel" "5"
@@ -12041,6 +12127,7 @@
 			}
 		}
 	}
+	// 虚妄之诺
 	"oracle_false_promise"
 	{
 		"MaxLevel" "4"
@@ -12070,6 +12157,7 @@
 			}
 		}
 	}
+	// 天命之雨
 	"oracle_rain_of_destiny"
 	{
 		"AbilityCooldown"				"30"
@@ -12105,6 +12193,7 @@
 			}
 		}
 	}
+	// 新月之痕
 	"puck_waning_rift"
 	{
 		"MaxLevel" "5"
@@ -12124,6 +12213,7 @@
 				}
 		}
 	}
+	// 相位转移
 	"puck_phase_shift"
 	{
 		"AbilityChannelTime"			"1 1.75 2.5 3.1"
@@ -12133,26 +12223,27 @@
 				"duration"					"1 1.75 2.5 3.1"
 		}
 	}
+	// 梦境缠绕
 	"puck_dream_coil"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"100 150 200 250 300"
+		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
 				"coil_initial_damage"
 				{
-					"value"					"150 230 310 390 470"
+					"value"					"230 310 390 470"
 					"special_bonus_unique_puck_coil_damage"			"+230"
 				}
 				"coil_stun_duration"
 				{
-					"value"			"1.8 2.2 2.6 3.0 3.4"
+					"value"			"2.2 2.6 3.0 3.4"
 					"special_bonus_unique_puck_4"	"+0.8"
 				}
 				"coil_break_damage"
 				{
-					"value"					"200 300 400 500 600"
+					"value"					"300 400 500 600"
 					"special_bonus_unique_puck_coil_damage"			"+230"
 				}
 		}
@@ -12203,6 +12294,7 @@
 			"bonus_movement_speed"		"-30 -40 -50 -60 -70"
 		}
 	}
+	// 生命汲取
 	"pugna_life_drain"
 	{
 		"MaxLevel" "4"
@@ -12229,6 +12321,7 @@
 	//=================================================================================================================
 	// Ability: Queen of Pain 痛苦女王/QOP
 	//=================================================================================================================
+	// 暗影突袭
 	"queenofpain_shadow_strike"
 	{
 		"MaxLevel" "5"
@@ -12247,6 +12340,7 @@
 			"duration_heal"		"10 20 30 40 50"
 		}
 	}
+	// 闪烁
 	"queenofpain_blink"
 	{
 		"MaxLevel" "5"
@@ -12273,6 +12367,7 @@
 				}
 		}
 	}
+	// 痛苦尖叫
 	"queenofpain_scream_of_pain"
 	{
 		"MaxLevel" "5"
@@ -12289,6 +12384,7 @@
 
 		}
 	}
+	// 超声冲击波
 	"queenofpain_sonic_wave"
 	{
 		"MaxLevel" "4"
@@ -12334,6 +12430,7 @@
 			}
 		}
 	}
+	// 弱化能流
 	"rubick_fade_bolt"
 	{
 		"MaxLevel" "5"
@@ -12357,6 +12454,7 @@
 			}
 		}
 	}
+	// 奥术光环
 	"rubick_null_field"
 	{
 		"MaxLevel" "5"
@@ -12371,6 +12469,7 @@
 			}
 		}
 	}
+	// 奥术至尊
 	"rubick_arcane_supremacy"
 	{
 		"MaxLevel" "5"
@@ -12390,6 +12489,7 @@
 			}
 		}
 	}
+	// 技能窃取
 	"rubick_spell_steal"
 	{
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
@@ -12442,8 +12542,10 @@
 				"illusion_duration"			"5"
 		}
 	}
+	// 漂毒
 	"shadow_demon_shadow_poison"
 	{
+		"AbilityCastPoint"          "0.0"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
@@ -12461,6 +12563,7 @@
 				}
 		}
 	}
+	// 邪恶净化
 	"shadow_demon_demonic_purge"
 	{
 		"MaxLevel" "4"
@@ -12508,6 +12611,7 @@
 			}
 		}
 	}
+	// 邪恶净愈
 	"shadow_demon_demonic_cleanse"
 	{
 		"AbilityDuration"				"12.0"
@@ -12616,6 +12720,7 @@
 			}
 		}
 	}
+	// 群蛇守卫
 	"shadow_shaman_mass_serpent_ward"
 	{
 		"MaxLevel" "3"
@@ -12673,6 +12778,7 @@
 	//=================================================================================================================
 	// Ability: Silencer 沉默术士
 	//=================================================================================================================
+	// 奥术诅咒
 	"silencer_curse_of_the_silent"
 	{
 		"MaxLevel" "5"
@@ -12713,6 +12819,7 @@
 			}
 		}
 	}
+	// 遗言
 	"silencer_last_word"
 	{
 		"MaxLevel" "5"
@@ -12762,6 +12869,7 @@
 			}
 		}
 	}
+	// 全领域禁默
 	"silencer_global_silence"
 	{
 		"MaxLevel" "4"
@@ -12775,6 +12883,7 @@
 	//=================================================================================================================
 	// Ability: Skywrath Mage 天怒法师
 	//=================================================================================================================
+	// 奥术鹰隼
 	"skywrath_mage_arcane_bolt"
 	{
 		"MaxLevel" "5"
@@ -12800,6 +12909,7 @@
 			}
 		}
 	}
+	// 震荡光弹
 	"skywrath_mage_concussive_shot"
 	{
 		"MaxLevel" "5"
@@ -12814,6 +12924,7 @@
 			}
 		}
 	}
+	// 上古封印
 	"skywrath_mage_ancient_seal"
 	{
 		"MaxLevel" "5"
@@ -12835,18 +12946,19 @@
 			}
 		}
 	}
+	// 神秘之耀
 	"skywrath_mage_mystic_flare"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"60.0 50.0 40.0 30.0 20.0"
-		"AbilityManaCost"				"300 550 800 1050 1300"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"60.0 50.0 35.0 20.0"
+		"AbilityManaCost"				"300 550 800 1300"
 
 		"AbilitySpecial"
 		{
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage"				"800 1200 1600 2000 2400"
+				"damage"				"800 1200 1800 2400"
 				"LinkedSpecialBonus"	"special_bonus_unique_skywrath_5"
 			}
 		}
@@ -12882,6 +12994,20 @@
 					"value"				"1.2 1.5 1.8 2.1 2.4"
 					"special_bonus_unique_storm_spirit"	"+0.3"
 				}
+		}
+	}
+	// 电子狂欢
+	"storm_spirit_electric_rave"
+	{
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"		"750"
+				"affected_by_aoe_increase"	"1"
+			}
+			"charges"				"9"
+			"duration"				"20"
 		}
 	}
 	// 超负荷
@@ -12925,21 +13051,22 @@
 	//=================================================================================================================
 	// Ability: Techies 工程师/炸弹人
 	//=================================================================================================================
+	// 感应地雷
 	"techies_land_mines"
 	{
-		"AbilityManaCost"				"140 270 400"
+		"AbilityManaCost"				"140 270 420"
 		"AbilityValues"
 		{
 				"damage"
 				{
-					"value"			"600 1050 1500"
+					"value"			"1000 1500 2000"
 				}
 				"AbilityChargeRestoreTime"
 				{
 					"value"		"36 32 28"
-					"special_bonus_unique_techies_3"	"-2"
+					"special_bonus_unique_techies_3"	"-6"
 				}
-				"mres_reduction"			"30 40 50"
+				"mres_reduction"			"30 35 40"
 		}
 	}
 	// 爆破起飞！
@@ -12952,14 +13079,15 @@
 		"AbilityDraftPreAbility"		"techies_stasis_trap"
 		"AbilityValues"
 		{
-				"damage"
-				{
-					"value"			"200 300 400 500 600"
-					"LinkedSpecialBonus"		"special_bonus_unique_techies"
-				}
-				"stun_duration"				"0.8 1 1.2 1.4 1.6"
+			"damage"
+			{
+				"value"			"200 300 400 500 600"
+				"LinkedSpecialBonus"		"special_bonus_unique_techies"
+			}
+			"stun_duration"				"0.8 1 1.2 1.4 1.6"
 		}
 	}
+	// 粘性炸弹
 	"techies_sticky_bomb"
 	{
 		"MaxLevel" "5"
@@ -12991,6 +13119,7 @@
 				"pre_chase_time"		"0.1"
 		}
 	}
+	// 活性电击
 	"techies_reactive_tazer"
 	{
 		"MaxLevel" "5"
@@ -13005,6 +13134,7 @@
 	//=================================================================================================================
 	// Ability: Tinker 修补匠/TK
 	//=================================================================================================================
+	// 防御矩阵
 	"tinker_defense_matrix"
 	{
 		"MaxLevel" "5"
@@ -13030,6 +13160,7 @@
 			}
 		}
 	}
+	// 激光
 	"tinker_laser"
 	{
 		"MaxLevel" "5"
@@ -13052,6 +13183,7 @@
 			}
 		}
 	}
+	// 热导飞弹
 	"tinker_heat_seeking_missile"
 	{
 		"MaxLevel" "5"
@@ -13083,6 +13215,7 @@
 			}
 		}
 	}
+	// 传送
 	"tinker_keen_teleport"
 	{
 		"AbilityChannelTime"			"4.5 3.5 2.5"
@@ -13100,11 +13233,13 @@
 			}
 		}
 	}
+	// 再装填
 	"tinker_rearm_lua"
 	{
 		"LinkedAbility"					"tinker_keen_teleport"
 		"AbilityDraftPreAbility"		"tinker_keen_teleport"
 	}
+	// 折跃光束
 	"tinker_warp_grenade"
 	{
 		"AbilityValues"
@@ -13112,6 +13247,7 @@
 			"damage"					"100"
 		}
 	}
+	// 再装填（原版）
 	"tinker_rearm"
 	{
 		"AbilityChannelTime"				"2.40 1.60 0.80"
@@ -13123,6 +13259,7 @@
 	//=================================================================================================================
 	// Ability: Void Spirit 虚无之灵/紫猫
 	//=================================================================================================================
+	// 残阴
 	"void_spirit_aether_remnant"
 	{
 		"MaxLevel" "5"
@@ -13143,6 +13280,7 @@
 			}
 		}
 	}
+	// 异化
 	"void_spirit_dissimilate"
 	{
 		"MaxLevel" "5"
@@ -13150,6 +13288,7 @@
 		"AbilityDamage"					"100 200 300 400 500"
 		"AbilityManaCost"				"100 110 120 130 140"
 	}
+	// 太虚之径
 	"void_spirit_astral_step"
 	{
 		"MaxLevel" "4"
@@ -13203,6 +13342,7 @@
 	//=================================================================================================================
 	// Ability: Warlock 术士
 	//=================================================================================================================
+	// 致命
 	"warlock_fatal_bonds"
 	{
 		"MaxLevel" "5"
@@ -13213,22 +13353,23 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"count"						"6 7 8 9 10"
+				"count"						"6"
 				"LinkedSpecialBonus"		"special_bonus_unique_warlock_9"
 			}
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"damage_share_percentage"	"15"
+				"damage_share_percentage"	"18"
 				"LinkedSpecialBonus"		"special_bonus_unique_warlock_5"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_FLOAT"
-				"duration"					"20.0"
+				"duration"					"22.0"
 			}
 		}
 	}
+	// 暗言术
 	"warlock_shadow_word"
 	{
 		"MaxLevel" "5"
@@ -13238,8 +13379,8 @@
 		{
 				"damage"
 				{
-					"value"				"20 30 40 50 60"
-					"special_bonus_unique_warlock_7"		"+18"
+					"value"				"30 50 70 90 110"
+					"special_bonus_unique_warlock_7"		"+40"
 				}
 				"spell_aoe"
 				{
@@ -13248,6 +13389,7 @@
 				}
 		}
 	}
+	// 剧变
 	"warlock_upheaval"
 	{
 		"MaxLevel" "5"
@@ -13265,37 +13407,38 @@
 			"max_slow"				"40 48 56 64 72"
 			"max_damage"			"35 60 85 110 135"
 
-			"imps_interval"				"4"
-			"minor_imp_duration"		"5"
-			"major_imp_duration"		"10"
+			"imps_interval"				"3600"
+			"minor_imp_duration"		"0"
+			"major_imp_duration"		"0"
 		}
 	}
+	// 混乱之雨
 	"warlock_rain_of_chaos"
 	{
-		"MaxLevel" "5"
-		"AbilityManaCost"				"250 375 500 625 750"
+		"MaxLevel" "4"
+		"AbilityManaCost"				"250 375 500 625"
 		"AbilityValues"
 		{
 			"golem_duration"			"30"
-			"golem_hp"					"1500 2500 3500 4500 6000"
-			"golem_dmg"					"100 150 200 250 300"
-			"golem_armor"				"8 12 14 16 18"
-			"golem_movement_speed"		"320 340 360 380 400"
-			"golem_health_regen"		"25 50 75 100 125"
-			"golem_gold_bounty"			"100 150 200 250 300"
+			"golem_hp"					"1500 2500 3500 4500"
+			"golem_dmg"					"100 150 200 250"
+			"golem_armor"				"8 12 14 16"
+			"golem_movement_speed"		"320 340 360 380"
+			"golem_health_regen"		"25 50 75 100"
+			"golem_gold_bounty"			"100 150 200 250"
 			"golem_hp_scepter"
 			{
-				"value"			"1500 2500 3500 4500 6000"
+				"value"			"1500 2500 3500 4500"
 				"RequiresScepter"		"1"
 			}
 			"golem_dmg_scepter"
 			{
-				"value"				"100 150 200 250 300"
+				"value"				"100 150 200 250"
 				"RequiresScepter"		"1"
 			}
 			"golem_gold_bounty_scepter"
 			{
-				"value"					"100 150 200 250 300"
+				"value"					"100 150 200 250"
 				"RequiresScepter"		"1"
 			}
 			"bonus_armor"
@@ -13305,7 +13448,7 @@
 			}
 			"tooltip_golem_armor"
 			{
-				"value"			"8 12 14 16 18"
+				"value"			"8 12 14 16"
 				"special_bonus_unique_warlock_2"		"+40"
 			}
 		}
@@ -13313,6 +13456,7 @@
 	//=================================================================================================================
 	// Ability: Windrunner 风行者
 	//=================================================================================================================
+	// 狂风之力
 	"windrunner_gale_force"
 	{
 		"AbilityCooldown"				"20"
@@ -13370,6 +13514,7 @@
 			"duration"					"3 4 5 6 7"
 		}
 	}
+	// 集中火力
 	"windrunner_focusfire"
 	{
 		"MaxLevel" "4"
@@ -13381,7 +13526,7 @@
 				"bonus_attack_speed"			"300 400 500 600"
 				"focusfire_damage_reduction"
 				{
-					"value"						"-20"
+					"value"						"-10"
 					"LinkedSpecialBonus"		"special_bonus_unique_windranger_8"
 				}
 				"focusfire_fire_on_the_move"	"1"
@@ -13394,7 +13539,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"20"
+				"value"				"40"
 				"ad_linked_abilities"			"windrunner_focusfire"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -13402,6 +13547,7 @@
 	//=================================================================================================================
 	// Ability: Winter Wyvern 寒冬飞龙/冰龙
 	//=================================================================================================================
+	// 严寒灼烧
 	"winter_wyvern_arctic_burn"
 	{
 		"MaxLevel" "5"
@@ -13438,12 +13584,14 @@
 			}
 		}
 	}
+	// 冰片
 	"winter_wyvern_splinter_blast"
 	{
 		"MaxLevel" "5"
 		"AbilityDamage"					"100 180 260 340 420"
 		"AbilityManaCost"				"105 120 135 150 165"
 	}
+	// 冰箱
 	"winter_wyvern_cold_embrace"
 	{
 		"MaxLevel" "5"
@@ -13484,9 +13632,9 @@
 		"AbilityManaCost"				"200 225 250 275"
 		"AbilityValues"
 		{
-				"damage_reduction"	"50"
-				"damage_amplification"	"30 40 50"
-				"bonus_attack_speed"	"100"
+				"damage_reduction"	"0"
+				"damage_amplification"	"30 40 50 60"
+				"bonus_attack_speed"	"130"
 				"duration"
 				{
 					"value"	"4.5 5 5.5 6"
@@ -13498,6 +13646,7 @@
 	//=================================================================================================================
 	// Ability: Witch Doctor 巫医
 	//=================================================================================================================
+	// 麻痹药剂
 	"witch_doctor_paralyzing_cask"
 	{
 		"MaxLevel" "5"
@@ -13539,6 +13688,7 @@
 				}
 		}
 	}
+	// 诅咒
 	"witch_doctor_maledict"
 	{
 		"MaxLevel" "5"
@@ -13555,15 +13705,16 @@
 				}
 		}
 	}
+	// 死亡守卫
 	"witch_doctor_death_ward"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"100 90 80 70 60"
+		"AbilityCooldown"				"100 90 80 70"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"		"60 120 180 240 300"
+				"value"		"60 120 180 240"
 				"LinkedSpecialBonus"	"special_bonus_unique_witch_doctor_5"
 				"CalculateSpellDamageTooltip"	"0"
 			}
@@ -13584,6 +13735,7 @@
 	//=================================================================================================================
 	// Ability: Zuus 宙斯
 	//=================================================================================================================
+	// 神圣一跳
 	"zuus_heavenly_jump"
 	{
 		"MaxLevel" "5"
@@ -13635,6 +13787,7 @@
 				"sight_duration"		"6"
 		}
 	}
+	// 静电场（疑似失效）
 	"zuus_static_field"
 	{
 		"AbilityValues"
@@ -13646,16 +13799,17 @@
 				}
 		}
 	}
+	// 雷神之怒
 	"zuus_thundergods_wrath"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"120 110 100 90 80"
-		"AbilityManaCost"				"300 400 500 600 700"
+		"AbilityCooldown"				"120 110 100 90"
+		"AbilityManaCost"				"300 400 500 600"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"							"350 500 650 800 950"
+				"value"							"350 500 650 800"
 				"special_bonus_unique_zeus_4"		"+150"
 			}
 		}
@@ -13664,6 +13818,7 @@
 	//=================================================================================================================
 	// MUERTA: 琼英碧灵/奶绿
 	//=================================================================================================================
+	// 弹无虚发
 	"muerta_dead_shot"
 	{
 		"MaxLevel" "5"
@@ -13695,7 +13850,7 @@
 			"impact_slow_duration"			"0.3"
 		}
 	}
-
+	// 唤魂
 	"muerta_the_calling"
 	{
 		"MaxLevel" "5"
@@ -13731,6 +13886,7 @@
 			"show_warning"					"1"
 		}
 	}
+	// 神枪在手
 	"muerta_gunslinger"
 	{
 		"MaxLevel" "5"
@@ -13743,18 +13899,19 @@
 			}
 		}
 	}
+	// 越界
 	"muerta_pierce_the_veil"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"65 60 55 50 45"
-		"AbilityManaCost"				"150 250 350 450"
+		"AbilityCooldown"				"65 60 55 50"
+		"AbilityManaCost"				"150 250 350"
 		"AbilityValues"
 		{
-			"duration"					"4 5 6 7 8"
+			"duration"					"4 5 6 7"
 			"transform_duration"		"0.35"
 			"base_damage_pct"			"80"
 			"modelscale"				"0"
-			"bonus_damage"				"50 75 100 125 150"
+			"bonus_damage"				"50 75 100 125"
 			"spell_lifesteal"
 			{
 				"value"				"20"
@@ -13772,12 +13929,9 @@
 			}
 		}
 	}
+	// 临别一枪
 	"muerta_parting_shot"
 	{
-		"AbilityCooldown"				"60"
-		"AbilityValues"
-		{
-			"damage_reduction_percent"	"15"
-		}
+		"AbilityCooldown"				"180"
 	}
 }
