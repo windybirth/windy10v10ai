@@ -81,8 +81,7 @@ function AIGameMode:InitHeroSelection()
                 Tutorial:AddBot(self:GetFreeHeroName(true), "", sDifficulty, true)
             end
         end
-        -- TODO 暂时关闭默认bot
-        GameRules:GetGameModeEntity():SetBotThinkingEnabled(false)
+        GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
         Tutorial:StartTutorialMode()
         for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
             if PlayerResource:IsValidPlayer(i) then
