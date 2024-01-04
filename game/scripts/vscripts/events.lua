@@ -81,7 +81,8 @@ function AIGameMode:InitHeroSelection()
                 Tutorial:AddBot(self:GetFreeHeroName(true), "", sDifficulty, true)
             end
         end
-        GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
+        -- TODO 暂时关闭默认bot
+        GameRules:GetGameModeEntity():SetBotThinkingEnabled(false)
         Tutorial:StartTutorialMode()
         for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
             if PlayerResource:IsValidPlayer(i) then
@@ -498,7 +499,6 @@ function AIGameMode:OnNPCSpawned(keys)
                     hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_ward", {})
                 end
             end
-            -- hEntity:SetControllableByPlayer(-1, true)
         end
 
         -- Player Buff
