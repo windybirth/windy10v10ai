@@ -1436,7 +1436,7 @@
 				"13"		"kunkka_torrent"
 				"14"		"kunkka_torrent"
 				"15"		"special_bonus_unique_kunkka_7"
-				"16"		"ku"
+				"16"		""
 				"17"		""
 				"18"		"kunkka_ghostship"
 				"19"		""
@@ -2278,7 +2278,7 @@
 				"31"		"shadow_shaman_voodoo"
 				"32"		"shadow_shaman_shackles"
 				"33"		"shadow_shaman_voodoo"
-				"34"        "shadow_shaman_voodoo
+				"34"        "shadow_shaman_voodoo"
 			}
 		}
 	}
