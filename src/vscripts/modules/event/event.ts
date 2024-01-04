@@ -34,11 +34,15 @@ export class Event {
       return;
     }
 
-    if (keys.is_respawn == 0) {
-      // is human player
-      if (Helper.IsHumanPlayer(npc)) {
-        print(`[Event] OnNpcSpawned SetPlayerProperty ${npc.GetUnitName()}`);
-        Player.SetPlayerProperty(npc as CDOTA_BaseNPC_Hero);
+    // 英雄出生
+    if (npc.IsRealHero() && keys.is_respawn == 0) {
+      // set npc as CDOTA_BaseNPC_Hero
+      const hero = npc as CDOTA_BaseNPC_Hero;
+
+      if (Helper.IsHumanPlayer(hero)) {
+        Player.SetPlayerProperty(hero);
+      } else {
+        // 机器人
       }
     }
   }
