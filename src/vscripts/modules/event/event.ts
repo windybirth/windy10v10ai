@@ -14,7 +14,7 @@ export class Event {
 
     // 更新玩家属性
     if (Helper.IsHumanPlayer(hero)) {
-      if (keys.level % PropertyController.HERO_LEVEL_PER_POINT == 0) {
+      if (keys.level % PropertyController.HERO_LEVEL_PER_POINT === 0) {
         print(`[Event] OnPlayerLevelUp SetPlayerProperty ${hero.GetUnitName()}`);
         Player.SetPlayerProperty(hero);
       }
@@ -35,7 +35,7 @@ export class Event {
     }
 
     // 英雄出生
-    if (npc.IsRealHero() && keys.is_respawn == 0) {
+    if (npc.IsRealHero() && keys.is_respawn === 0) {
       // set npc as CDOTA_BaseNPC_Hero
       const hero = npc as CDOTA_BaseNPC_Hero;
 
