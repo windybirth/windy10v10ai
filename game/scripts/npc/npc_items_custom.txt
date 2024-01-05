@@ -6640,12 +6640,12 @@
 	{
 		"ID"                            "9590"
 		"BaseClass"                     "item_recipe_bfury"
-		"ItemCost"						"0"
+		"ItemCost"						"3500"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bfury_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury;item_bfury;item_bfury;item_bfury"
+			"01"						"item_bfury_2;item_bfury"
 		}
 	}
 
@@ -6660,8 +6660,8 @@
 				"bonus_damage"			"300"
 				"bonus_health_regen"	"40"
 				"bonus_mana_regen"		"20"
-				"cleave_damage_percent"	"350"
-				"cleave_damage_percent_creep"	"350"
+				"cleave_damage_percent"	"210"
+				"cleave_damage_percent_creep"	"210"
 				"quelling_bonus"			"100"
 				"quelling_bonus_ranged"	"50"
 				"cleave_starting_width"			"150"
@@ -6875,8 +6875,8 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_gungir"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		"AbilityCooldown"				"9"
-		"AbilityCastRange"				"2400"
+		"AbilityCooldown"				"12"
+		"AbilityCastRange"				"1500"
 		"AbilityCastPoint"				"0.0"
 		"AbilityManaCost"				"400"
 		"ItemShopTags"					"damage;attack_speed;unique"
@@ -6889,21 +6889,21 @@
 		{
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
-			"chain_chance"			"65"
+			"chain_chance"			"45"
 			"chain_damage"			"550"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
-			"chain_cooldown"		"0.1"
+			"chain_cooldown"		"0.2"
 			"bonus_intellect"		"120"
 			"bonus_hp"				"2000"
-			"duration"				"5.0"
+			"duration"				"3.5"
 			"radius"
 			{
-				"value"		"750"
+				"value"		"650"
 				"affected_by_aoe_increase"	"1"
 			}
-			"active_damage"			"1100"
+			"active_damage"			"900"
 			"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -6968,7 +6968,7 @@
 		{
 			"bonus_strength"		"180"
 			"bonus_damage"			"360"
-			"duration"				"99999"
+			"duration"				"3600"
 			"max_level"				"1"
 			"model_scale"			"0"
 			"magic_resist"			"-100"
@@ -6976,7 +6976,7 @@
 	}
 
 	//=================================================================================================================
-	// 血腥强袭 vladmir ultra
+	// 合金强袭 vladmir ultra
 	//=================================================================================================================
 	"item_recipe_vladmir_ultra"
 	{
@@ -7070,22 +7070,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"120"
+				"bonus_attack_speed"	"80"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"60"
+				"bonus_armor"			"40"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"18"
+				"mana_regen_aura"		"12"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"60"
+				"damage_aura"			"40"
 			}
 			"06"
 			{
@@ -7095,22 +7095,22 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1200"
+				"aura_radius"			"900"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"30"
+				"aura_positive_armor"	"20"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_attack_speed"		"120"
+				"aura_attack_speed"		"80"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-60"
+				"aura_negative_armor"	"-20"
 			}
 		}
 		"Modifiers"
@@ -7223,17 +7223,17 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"160"
+				"bonus_attack_speed"	"120"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"80"
+				"bonus_armor"			"60"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"18"
+				"mana_regen_aura"		"12"
 			}
 			"05"
 			{
@@ -7248,22 +7248,22 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1200"
+				"aura_radius"			"900"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"40"
+				"aura_positive_armor"	"30"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_attack_speed"		"160"
+				"aura_attack_speed"		"120"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-80"
+				"aura_negative_armor"	"-30"
 			}
 		}
 		"Modifiers"
@@ -7374,22 +7374,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"200"
+				"bonus_attack_speed"	"160"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"100"
+				"bonus_armor"			"80"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"18"
+				"mana_regen_aura"		"12"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"60"
+				"damage_aura"			"80"
 			}
 			"06"
 			{
@@ -7404,17 +7404,17 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"50"
+				"aura_positive_armor"	"400"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_attack_speed"		"200"
+				"aura_attack_speed"		"160"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-100"
+				"aura_negative_armor"	"-40"
 			}
 		}
 		"Modifiers"
@@ -7525,22 +7525,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"240"
+				"bonus_attack_speed"	"200"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"120"
+				"bonus_armor"			"100"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"18"
+				"mana_regen_aura"		"12"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"60"
+				"damage_aura"			"100"
 			}
 			"06"
 			{
@@ -7550,22 +7550,22 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1200"
+				"aura_radius"			"900"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"60"
+				"aura_positive_armor"	"100"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_attack_speed"		"240"
+				"aura_attack_speed"		"200"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-120"
+				"aura_negative_armor"	"-40"
 			}
 		}
 		"Modifiers"
@@ -7676,22 +7676,22 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"300"
+				"bonus_attack_speed"	"240"
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"140"
+				"bonus_armor"			"120"
 			}
 			"03"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"18"
+				"mana_regen_aura"		"12"
 			}
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"damage_aura"			"60"
+				"damage_aura"			"120"
 			}
 			"06"
 			{
@@ -7701,22 +7701,22 @@
 			"07"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1200"
+				"aura_radius"			"900"
 			}
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"70"
+				"aura_positive_armor"	"60"
 			}
 			"10"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_attack_speed"		"300"
+				"aura_attack_speed"		"240"
 			}
 			"11"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-140"
+				"aura_negative_armor"	"-50"
 			}
 		}
 		"Modifiers"
@@ -7880,7 +7880,7 @@
 	{
 		"BaseClass"                     "item_shivas_guard"
 		"ID"						    "9608"
-		"AbilityCooldown"				"12"
+		"AbilityCooldown"				"27"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityManaCost"				"100"
@@ -8126,7 +8126,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"100"
-				"bonus_armor"			"-120"
+				"bonus_armor"			"-70"
 				"bonus_intellect"		"100"
 				"duration"				"8"
 				"passive_reflection_constant"			"500"
