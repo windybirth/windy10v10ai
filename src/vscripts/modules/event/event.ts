@@ -1,3 +1,4 @@
+import { AI } from "../../ai/ai";
 import { Player } from "../../api/player";
 import { Helper } from "../helper/helper";
 import { PropertyController } from "../property/property_controller";
@@ -43,6 +44,10 @@ export class Event {
         Player.SetPlayerProperty(hero);
       } else {
         // 机器人
+        // TODO 对所有机器人设置AI
+        if (npc.GetTeamNumber() === DotaTeam.BADGUYS) {
+          AI.EnableAI(hero);
+        }
       }
     }
   }
