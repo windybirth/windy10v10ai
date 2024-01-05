@@ -1,4 +1,4 @@
-import { Move } from "../../ai/action/move";
+import { AI } from "../../ai/ai";
 import { reloadable } from "../../utils/tstl-utils";
 import { CMD } from "./debug-cmd";
 
@@ -9,8 +9,6 @@ export class Debug {
   OnlineDebugWhiteList = [
     136407523, // windy
   ];
-
-  private CreateHero: CDOTA_BaseNPC_Hero[] = [];
 
   constructor() {
     // 工具模式下开启调试
@@ -37,10 +35,8 @@ export class Debug {
     // commands that only work in debug mode below:
     if (!this.DebugEnabled) return;
 
-    const player = PlayerResource.GetPlayer(keys.playerid);
-
     // v 获取当前vector
-    if (cmd === CMD.v) {
+    if (cmd === CMD.V) {
       const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
       const pos = hero.GetAbsOrigin();
       const vectorString = `Vector(${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(
@@ -49,30 +45,15 @@ export class Debug {
       this.log(`当前位置: ${vectorString}`);
     }
 
-    if (cmd === CMD.botcreate) {
-      this.log(`botcreate`);
-      // remove old hero
-      for (const hero of this.CreateHero) {
-        hero.RemoveSelf();
+    if (cmd === CMD.REFRESH_AI) {
+      this.log(`REFRESH_AI`);
+      // find all bad guy heroes by player
+      for (let i = -1; i < 24; i++) {
+        const hero = PlayerResource.GetSelectedHeroEntity(i as PlayerID);
+        if (hero && hero.GetTeamNumber() === DotaTeam.BADGUYS) {
+          AI.EnableAI(hero);
+        }
       }
-      this.CreateHero = [];
-
-      // create hero tinker for test
-      const tinker = CreateHeroForPlayer("npc_dota_hero_tinker", player);
-      tinker.SetAbsOrigin(Vector(-6968, -6406, 384));
-      this.CreateHero.push(tinker);
-    }
-
-    if (cmd === CMD.botmove) {
-      this.log(`botmove`);
-      const tinker = this.CreateHero[0];
-      Move.MoveAround(tinker, tinker.GetAbsOrigin(), 500);
-      // ExecuteOrderFromTable({
-      //   OrderType: UnitOrder.MOVE_TO_POSITION,
-      //   UnitIndex: tinker.GetEntityIndex(),
-      //   Position: Vector(-6968, -6406, 384),
-      //   Queue: false,
-      // });
     }
 
     // 其他的测试指令写在下面
