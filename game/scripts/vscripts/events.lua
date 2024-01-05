@@ -487,11 +487,15 @@ function AIGameMode:OnNPCSpawned(keys)
 
         -- Bots modifier 机器人AI脚本
         if not self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] then
-            if not hEntity:HasModifier("modifier_bot_think_strategy") then
-                hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_strategy", {})
-            end
-            if not hEntity:HasModifier("modifier_bot_think_item_use") then
-                hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_item_use", {})
+            -- TODO 测试后修正
+            -- 如果是天辉 设置
+            if hEntity:GetTeamNumber() == DOTA_TEAM_GOODGUYS then
+                if not hEntity:HasModifier("modifier_bot_think_strategy") then
+                    hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_strategy", {})
+                end
+                if not hEntity:HasModifier("modifier_bot_think_item_use") then
+                    hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_item_use", {})
+                end
             end
             if tBotItemData.wardHeroList[sName] then
                 if not hEntity:HasModifier("modifier_bot_think_ward") then
