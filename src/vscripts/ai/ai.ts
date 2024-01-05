@@ -1,12 +1,15 @@
 import { BaseHeroAIModifier } from "./hero/hero-base";
+import { FSA } from "./mode/FSA";
 
 export class AI {
+  FSA: FSA;
   constructor() {
     // TODO set timer to update AI
+    this.FSA = new FSA();
   }
 
   // enable AI for hero
-  static EnableAI(hero: CDOTA_BaseNPC_Hero) {
+  public EnableAI(hero: CDOTA_BaseNPC_Hero) {
     if (hero.HasModifier(BaseHeroAIModifier.name)) {
       // remove old modifier
       print(`[AI] EnableAI RemoveModifierByName ${hero.GetUnitName()}`);

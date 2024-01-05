@@ -10,8 +10,10 @@ export class ActionAbility {
 
     // if ability is point target
     if (this.IsAbilityBehavior(ability, AbilityBehavior.POINT)) {
+      print(`cast ability ${ability.GetAbilityName()} on point`);
       self.CastAbilityOnTarget(target, ability, self.GetPlayerOwnerID());
     } else if (this.IsAbilityBehavior(ability, AbilityBehavior.AOE)) {
+      print(`cast ability ${ability.GetAbilityName()} on aoe`);
       self.CastAbilityOnPosition(target.GetAbsOrigin(), ability, self.GetPlayerOwnerID());
     }
   }

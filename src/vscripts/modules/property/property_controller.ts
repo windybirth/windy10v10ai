@@ -116,14 +116,15 @@ export class PropertyController {
   // 更新单条属性
   public static setModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
     const name = property.name;
-    print(`[PropertyController] setModifier ${name} origin level ${property.level}`);
     let activeLevel = property.level;
     // 根据英雄等级设置点数
     if (PropertyController.limitPropertyNames.includes(name)) {
       const activeLevelMax = Math.floor(hero.GetLevel() / PropertyController.HERO_LEVEL_PER_POINT);
       activeLevel = Math.min(property.level, activeLevelMax);
-      print(`[PropertyController] setModifier ${name} ${activeLevel} limit`);
     }
+    // print(
+    //   `[PropertyController] setModifier ${name} origin level ${property.level}, activeLevel ${activeLevel}`,
+    // );
 
     // 设置额外技能点
     if (name === "property_skill_points_bonus") {

@@ -1,4 +1,3 @@
-import { AI } from "../../ai/ai";
 import { reloadable } from "../../utils/tstl-utils";
 import { CMD } from "./debug-cmd";
 
@@ -51,7 +50,7 @@ export class Debug {
       for (let i = -1; i < 24; i++) {
         const hero = PlayerResource.GetSelectedHeroEntity(i as PlayerID);
         if (hero && hero.GetTeamNumber() === DotaTeam.BADGUYS) {
-          AI.EnableAI(hero);
+          GameRules.AI.EnableAI(hero);
         }
       }
     }

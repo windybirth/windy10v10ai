@@ -56,8 +56,10 @@ end
 function AIGameMode:EnterDebugMode()
     print("========Enter Debug Mode========")
     self.DebugMode = true
-    GameRules:SetHeroSelectionTime(15)
-    GameRules:SetPreGameTime(30)
+    GameRules:SetCustomGameSetupAutoLaunchDelay(3)
+    GameRules:SetHeroSelectionTime(3)
+    GameRules:SetStrategyTime(3)
+    GameRules:SetPreGameTime(10)
 end
 
 function AIGameMode:InitGameOptions()
@@ -134,8 +136,6 @@ function AIGameMode:PreGameOptions()
     self.fPlayerGoldXpMultiplier = self.fPlayerGoldXpMultiplier or PLAYER_GOLD_XP_MULTIPLIER
     self.fBotGoldXpMultiplier = self.fBotGoldXpMultiplier or BOT_GOLD_XP_MULTIPLIER
 
-    self.iGoldPerTick = self.iGoldPerTick or GOLD_PER_TICK
-    self.iGoldTickTime = self.iGoldTickTime or GOLD_TICK_TIME
     self.iRespawnTimePercentage = self.iRespawnTimePercentage or 1
     self.iMaxLevel = self.iMaxLevel or MAX_LEVEL
 
@@ -148,8 +148,19 @@ function AIGameMode:PreGameOptions()
     self.bSameHeroSelection = self.bSameHeroSelection or 1
     self.bFastCourier = self.bFastCourier or 1
     self.fGameStartTime = 0
-    GameRules:SetGoldPerTick(self.iGoldPerTick)
-    GameRules:SetGoldTickTime(self.iGoldTickTime)
+
+    -- FIXME 测试代码
+    if IsInToolsMode() then
+        self.fPlayerGoldXpMultiplier = 2
+        self.fBotGoldXpMultiplier = 2
+        self.iTowerPower = 9
+        self.iTowerEndure = 9
+        self.bFastCourier = 1
+        self.bSameHeroSelection = 1
+    end
+
+    GameRules:SetGoldPerTick(GOLD_PER_TICK)
+    GameRules:SetGoldTickTime(GOLD_TICK_TIME)
     GameRules:SetUseUniversalShopMode(true)
     GameRules:SetFilterMoreGold(true)
 
