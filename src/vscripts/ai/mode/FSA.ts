@@ -1,6 +1,7 @@
 import { ModeBase } from "./mode-base";
 import { ModeEnum } from "./mode-enum";
 import { ModeLaning } from "./mode-laning";
+import { ModePush } from "./mode-push";
 
 export class FSA {
   // 切换模式的阈值
@@ -9,6 +10,7 @@ export class FSA {
   ModeList: ModeBase[] = [];
   constructor() {
     this.ModeList.push(new ModeLaning());
+    this.ModeList.push(new ModePush());
   }
 
   GetMode(currentMode: ModeEnum, hero: CDOTA_BaseNPC): ModeEnum {

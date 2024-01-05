@@ -1,3 +1,4 @@
+import { AI } from "../../ai/AI";
 import { reloadable } from "../../utils/tstl-utils";
 import { CMD } from "./debug-cmd";
 
@@ -46,7 +47,7 @@ export class Debug {
 
     if (cmd === CMD.REFRESH_AI) {
       this.log(`REFRESH_AI`);
-      // find all bad guy heroes by player
+      GameRules.AI = new AI();
       for (let i = -1; i < 24; i++) {
         const hero = PlayerResource.GetSelectedHeroEntity(i as PlayerID);
         if (hero && hero.GetTeamNumber() === DotaTeam.BADGUYS) {

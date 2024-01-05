@@ -4,7 +4,6 @@ import { FSA } from "./mode/FSA";
 export class AI {
   FSA: FSA;
   constructor() {
-    // TODO set timer to update AI
     this.FSA = new FSA();
   }
 

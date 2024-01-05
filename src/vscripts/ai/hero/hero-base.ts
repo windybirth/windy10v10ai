@@ -4,10 +4,10 @@ import { HeroHelper } from "./hero-helper";
 
 @registerModifier()
 export class BaseHeroAIModifier extends BaseModifier {
+  // FIXME: 为了方便测试，这里设置为2秒
+  protected readonly ThinkInterval: number = 2;
   // 当前状态
-  protected CurrentMode: ModeEnum = ModeEnum.RUNE;
-  // 执行状态
-  protected readonly MaxActionInterval: number = 10;
+  protected mode: ModeEnum = ModeEnum.RUNE;
 
   // 技能
   protected ability_1: CDOTABaseAbility | undefined;
@@ -29,7 +29,7 @@ export class BaseHeroAIModifier extends BaseModifier {
     this.ability_utli = hero.GetAbilityByIndex(5);
 
     // 初始化Think
-    this.StartIntervalThink(0.3);
+    this.StartIntervalThink(this.ThinkInterval);
   }
 
   Think(): void {
@@ -37,14 +37,11 @@ export class BaseHeroAIModifier extends BaseModifier {
       return;
     }
 
-    this.CurrentMode = GameRules.AI.FSA.GetMode(this.CurrentMode, this.GetParent());
+    this.mode = GameRules.AI.FSA.GetMode(this.mode, this.GetParent());
+    print(`[AI] HeroBase Think ${this.mode}`);
   }
 
   NoAction(): boolean {
-    if (IsClient()) {
-      return true;
-    }
-
     if (HeroHelper.NotActionable(this.GetParent())) {
       return true;
     }

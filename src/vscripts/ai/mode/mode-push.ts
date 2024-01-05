@@ -17,6 +17,8 @@ export class ModePush extends ModeBase {
       desire += 0.2;
     }
 
+    print(`[AI] ModePush desire ${desire}`);
+
     return desire;
   }
 }
