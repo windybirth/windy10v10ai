@@ -6640,12 +6640,12 @@
 	{
 		"ID"                            "9590"
 		"BaseClass"                     "item_recipe_bfury"
-		"ItemCost"						"3500"
+		"ItemCost"						"1500"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bfury_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury_2;item_bfury"
+			"01"						"item_bfury_2;item_bfury_2"
 		}
 	}
 
@@ -6853,9 +6853,9 @@
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
-		"ID"							"9598"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"9598"
 		"BaseClass"						"item_recipe_gungir"
-		"ItemCost"						"0"
+		"ItemCost"						"2000"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_gungir_ultra"
@@ -6867,7 +6867,7 @@
 
 	"item_gungir_ultra"
 	{
-		"ID"							"9599"														// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"							"9599"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -7175,7 +7175,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_2"
+						"ScriptFile"	"items/item_vladmir_ultra"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7328,7 +7328,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_2"
+						"ScriptFile"	"items/item_vladmir_ultra"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7479,7 +7479,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_2"
+						"ScriptFile"	"items/item_vladmir_ultra"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7630,7 +7630,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_2"
+						"ScriptFile"	"items/item_vladmir_ultra"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7781,7 +7781,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_2"
+						"ScriptFile"	"items/item_vladmir_ultra"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
