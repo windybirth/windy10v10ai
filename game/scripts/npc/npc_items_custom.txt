@@ -7405,7 +7405,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"400"
+				"aura_positive_armor"	"40"
 			}
 			"10"
 			{
@@ -7556,7 +7556,7 @@
 			"09"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"100"
+				"aura_positive_armor"	"50"
 			}
 			"10"
 			{
