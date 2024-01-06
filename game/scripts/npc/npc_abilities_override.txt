@@ -397,14 +397,14 @@
 	"axe_culling_blade"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 70 60 50"
+		"AbilityCooldown"				"90 80 70 60"
 		"AbilityManaCost"				"100 125 150 175"
 		"AbilityValues"
 		{
 			"damage"
 			{
 				"value"			"275 375 475 575"
-				"special_bonus_unique_axe_5"	"+250"
+				"special_bonus_unique_axe_5"	"+225"
 			}
 			"speed_bonus"				"20 25 30 35"
 			"armor_bonus"				"20 25 30 35"
