@@ -1344,7 +1344,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bat_reduction"			"0.2"
+				"bat_reduction"			"0.3"
 			}
 		}
 	}
@@ -1788,7 +1788,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"350"
+		"ItemCost"						"800"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1817,7 +1817,7 @@
 		"AbilityTextureName"			"item_sphere_2"
 
 		"AbilityCastRange"				"900"
-		"AbilityCooldown"				"8.0"
+		"AbilityCooldown"				"6.0"
 		"AbilitySharedCooldown"			"sphere"
 
 		"AbilityValues"
@@ -1825,7 +1825,7 @@
 				"bonus_all_stats"		"20"
 				"bonus_health_regen"	"12"
 				"bonus_mana_regen"		"9"
-				"block_cooldown"		"8.0"
+				"block_cooldown"		"6.0"
 				"upgrade_absorb_duration"		"10.0"
 				"damage_absorb"		"300"
 				"bonus_damage"			"20"
@@ -1873,8 +1873,8 @@
 
 		"AbilityValues"
 		{
-			"bonus_spell_amp"		"66"
 			"bonus_damage"			"666"
+			"bonus_spell_amp"		"66"
 			"bonus_damage_percent"	"100"
 		}
 		"Modifiers"
@@ -6200,6 +6200,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"AbilityCastPoint"	"0.0"
 		"AbilityCooldown"	"16"
+		"AbilitySharedCooldown"			"lotus_orb"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"	"300"
@@ -8031,22 +8032,22 @@
 		"AbilityTextureName"            "mjollnir_ultra"
 		"AbilityValues"
 		{
-			"bonus_damage"			"150"
-			"bonus_attack_speed"	"540"
+			"bonus_damage"			"80"
+			"bonus_attack_speed"	"270"
 			"static_duration"		"30.0"
-			"static_chance"			"65"
+			"static_chance"			"45"
 			"static_strikes"		"8"
-			"static_damage"			"650"
+			"static_damage"			"450"
 			"static_primary_radius"	"800"
 			"static_seconary_radius""1200"
 			"static_radius"			"1200"
-			"static_cooldown"		"0.1"
-			"chain_chance"			"75"
-			"chain_damage"			"750"
+			"static_cooldown"		"0.2"
+			"chain_chance"			"65"
+			"chain_damage"			"400"
 			"chain_strikes"			"12"
 			"chain_radius"			"800"
 			"chain_delay"			"0.2"
-			"chain_cooldown"		"0.1"
+			"chain_cooldown"		"0.2"
 			"max_charges"			"0"
 			"illusion_multiplier_pct"	"150"
 		}
@@ -8060,8 +8061,7 @@
 		"BaseClass"                     "item_recipe_bloodstone"
 		"ID"						    "9615"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"1600"
-		"ItemShopTags"					""
+		"ItemCost"						"1000"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bloodstone_ultra"
 		"ItemRequirements"

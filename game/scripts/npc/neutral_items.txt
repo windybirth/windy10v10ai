@@ -196,7 +196,7 @@
 			"item_seer_stone"				  "1" //先哲之石
 			"item_mirror_shield"		 	  "1" //神镜盾
 			"item_force_field"				  "1" //秘术师铠甲
-			"item_pirate_hat"				  "1" //海盗帽
+			"item_pirate_hat_custom"		  "1" //海盗帽
 			"item_giants_ring"				  "1" //巨人戒
 			"item_unwavering_condition"		  "1" //坚毅之件
 			"item_book_of_shadows"			  "1" //暗影邪典

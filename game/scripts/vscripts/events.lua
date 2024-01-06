@@ -556,24 +556,24 @@ function AIGameMode:OnPlayerLevelUp(keys)
     end)
 
     -- Set Ability Points
-    local hero = EntIndexToHScript(keys.player):GetAssignedHero()
-    local level = keys.level
+    -- local hero = EntIndexToHScript(keys.player):GetAssignedHero()
+    -- local level = keys.level
 
-    for i, v in ipairs(tSkillCustomNameList) do
-        if v == hero:GetName() then
-            for _, lv in ipairs(tAPLevelList) do
-                if lv == level then
-                    print("-----------------debug-----------------", hero:GetName() .. "level:" .. level .. " Add AP")
-                    -- Save current unspend AP
-                    local unspendAP = hero:GetAbilityPoints()
-                    hero:SetAbilityPoints(1 + unspendAP)
-                    break
-                end
-            end
+    -- for i, v in ipairs(tSkillCustomNameList) do
+    --     if v == hero:GetName() then
+    --         for _, lv in ipairs(tAPLevelList) do
+    --             if lv == level then
+    --                 print("-----------------debug-----------------", hero:GetName() .. "level:" .. level .. " Add AP")
+    --                 -- Save current unspend AP
+    --                 local unspendAP = hero:GetAbilityPoints()
+    --                 hero:SetAbilityPoints(1 + unspendAP)
+    --                 break
+    --             end
+    --         end
 
-            break
-        end
-    end
+    --         break
+    --     end
+    -- end
 end
 
 function AIGameMode:OnItemPickedUp(event)
