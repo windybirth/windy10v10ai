@@ -17,16 +17,29 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected ability_5: CDOTABaseAbility | undefined;
   protected ability_utli: CDOTABaseAbility | undefined;
 
+  protected hero: CDOTA_BaseNPC_Hero;
+  protected heroState = {
+    currentHealth: 0,
+    maxHealth: 0,
+    currentMana: 0,
+    maxMana: 0,
+    currentLevel: 0,
+  };
+
+  protected aroundEnemyHeroes: CDOTA_BaseNPC[] = [];
+  protected aroundEnemyCreeps: CDOTA_BaseNPC[] = [];
+  protected aroundEnemyTowers: CDOTA_BaseNPC[] = [];
+
   Init() {
-    const hero = this.GetParent();
-    print(`[AI] HeroBase OnCreated ${hero.GetUnitName()}`);
+    this.hero = this.GetParent() as CDOTA_BaseNPC_Hero;
+    print(`[AI] HeroBase OnCreated ${this.hero.GetUnitName()}`);
     // 初始化技能
-    this.ability_1 = hero.GetAbilityByIndex(0);
-    this.ability_2 = hero.GetAbilityByIndex(1);
-    this.ability_3 = hero.GetAbilityByIndex(2);
-    this.ability_4 = hero.GetAbilityByIndex(3);
-    this.ability_5 = hero.GetAbilityByIndex(4);
-    this.ability_utli = hero.GetAbilityByIndex(5);
+    this.ability_1 = this.hero.GetAbilityByIndex(0);
+    this.ability_2 = this.hero.GetAbilityByIndex(1);
+    this.ability_3 = this.hero.GetAbilityByIndex(2);
+    this.ability_4 = this.hero.GetAbilityByIndex(3);
+    this.ability_5 = this.hero.GetAbilityByIndex(4);
+    this.ability_utli = this.hero.GetAbilityByIndex(5);
 
     // 初始化Think
     this.StartIntervalThink(this.ThinkInterval);
@@ -37,12 +50,11 @@ export class BaseHeroAIModifier extends BaseModifier {
       return;
     }
 
-    this.mode = GameRules.AI.FSA.GetMode(this.mode, this.GetParent());
-    print(`[AI] HeroBase Think ${this.mode}`);
+    this.mode = GameRules.AI.FSA.GetMode(this.mode, this.hero);
   }
 
   NoAction(): boolean {
-    if (HeroHelper.NotActionable(this.GetParent())) {
+    if (HeroHelper.NotActionable(this.hero)) {
       return true;
     }
 
