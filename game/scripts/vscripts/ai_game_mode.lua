@@ -43,7 +43,8 @@ function AIGameMode:InitGameMode()
     AIGameMode:LinkLuaModifiers()
     AIGameMode:InitBotRecordTable()
     if IsInToolsMode() then
-        self:EnterDebugMode()
+        print("========Enter Debug Mode========")
+        self.DebugMode = true
     end
     print("DOTA 2 AI Wars Loaded.")
 end
@@ -53,27 +54,18 @@ function AIGameMode:InitBotRecordTable()
     AIGameMode.BotRecordSuccessiveDeathTable = {}
 end
 
-function AIGameMode:EnterDebugMode()
-    print("========Enter Debug Mode========")
-    self.DebugMode = true
-    GameRules:SetCustomGameSetupAutoLaunchDelay(3)
-    GameRules:SetHeroSelectionTime(3)
-    GameRules:SetStrategyTime(3)
-    GameRules:SetPreGameTime(10)
-end
-
 function AIGameMode:InitGameOptions()
-    GameRules:SetCustomGameSetupAutoLaunchDelay(AUTO_LAUNCH_DELAY)
-    GameRules:LockCustomGameSetupTeamAssignment(LOCK_TEAM_SETUP)
-    GameRules:EnableCustomGameSetupAutoLaunch(ENABLE_AUTO_LAUNCH)
-    GameRules:SetHeroSelectionTime(HERO_SELECTION_TIME)
-    GameRules:SetPreGameTime(PRE_GAME_TIME)
-    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, RADIANT_PLAYER_COUNT)
-    GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, DIRE_PLAYER_COUNT)
-    GameRules:SetStrategyTime(STRATEGY_TIME)
-    GameRules:SetShowcaseTime(SHOWCASE_TIME)
-    GameRules:SetCustomGameEndDelay(GAME_END_DELAY)
-    GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
+    -- GameRules:SetCustomGameSetupAutoLaunchDelay(AUTO_LAUNCH_DELAY)
+    -- GameRules:LockCustomGameSetupTeamAssignment(LOCK_TEAM_SETUP)
+    -- GameRules:EnableCustomGameSetupAutoLaunch(ENABLE_AUTO_LAUNCH)
+    -- GameRules:SetHeroSelectionTime(HERO_SELECTION_TIME)
+    -- GameRules:SetPreGameTime(PRE_GAME_TIME)
+    -- GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, RADIANT_PLAYER_COUNT)
+    -- GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, DIRE_PLAYER_COUNT)
+    -- GameRules:SetStrategyTime(STRATEGY_TIME)
+    -- GameRules:SetShowcaseTime(SHOWCASE_TIME)
+    -- GameRules:SetCustomGameEndDelay(GAME_END_DELAY)
+    -- GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
 
     -- 游戏选择项目初始化
     GameRules.GameOption = LoadKeyValues("scripts/kv/game_option.kv")

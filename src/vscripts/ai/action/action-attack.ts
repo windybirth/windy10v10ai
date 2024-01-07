@@ -4,7 +4,13 @@ export class ActionAttack {
     if (this.IsInAttackRange(hero, target)) {
       // perform attack order
       print(`[AI] Attack ${hero.GetUnitName()} to ${target.GetUnitName()}`);
-      hero.PerformAttack(target, true, true, true, false, true, false, false);
+
+      ExecuteOrderFromTable({
+        OrderType: UnitOrder.ATTACK_TARGET,
+        UnitIndex: hero.GetEntityIndex(),
+        TargetIndex: target.GetEntityIndex(),
+        Queue: false,
+      });
       return;
     } else {
       // move to target

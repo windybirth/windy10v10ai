@@ -6,10 +6,10 @@ import { HeroHelper } from "./hero-helper";
 
 @registerModifier()
 export class BaseHeroAIModifier extends BaseModifier {
-  // FIXME: 为了方便测试，这里设置为2秒
-  protected readonly ThinkInterval: number = 2;
+  protected readonly ThinkInterval: number = 0.3;
+  protected readonly ThinkIntervalTool: number = 2;
 
-  protected readonly FindRadius: number = 1;
+  protected readonly FindRadius: number = 1600;
   // 当前状态
   protected mode: ModeEnum = ModeEnum.RUNE;
 
@@ -46,7 +46,11 @@ export class BaseHeroAIModifier extends BaseModifier {
     this.ability_utli = this.hero.GetAbilityByIndex(5);
 
     // 初始化Think
-    this.StartIntervalThink(this.ThinkInterval);
+    if (IsInToolsMode()) {
+      this.StartIntervalThink(this.ThinkIntervalTool);
+    } else {
+      this.StartIntervalThink(this.ThinkInterval);
+    }
   }
 
   Think(): void {
@@ -54,6 +58,7 @@ export class BaseHeroAIModifier extends BaseModifier {
       return;
     }
 
+    this.FindAround();
     this.ThinkMode();
   }
 
@@ -81,7 +86,6 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   ThinkRune(): void {
-    print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()}`);
     if (this.aroundEnemyHeroes.length > 0) {
       this.ThinkAttack();
       return;
@@ -90,7 +94,6 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   ThinkAttack(): void {
     print(`[AI] HeroBase ThinkAttack ${this.hero.GetUnitName()}`);
-
     if (this.aroundEnemyHeroes.length === 0) {
       return;
     }
