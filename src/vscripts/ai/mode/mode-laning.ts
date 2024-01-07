@@ -8,7 +8,7 @@ export class ModeLaning extends ModeBase {
     // if time is less than 0:00, return 0
     const currentTime = GameRules.GetDOTATime(false, false);
     let desire = 0;
-    if (currentTime < 30) {
+    if (currentTime < 0) {
       desire = 0;
     } else if (currentTime < 600) {
       // 每过一分钟，减少0.1的desire
