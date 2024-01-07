@@ -32,6 +32,7 @@ tBotItemData.purchaseItemList = {
 		'item_jump_jump_jump',
 		'item_blade_mail_ultra',
 		'item_shivas_guard_2',
+		'item_recipe_shivas_guard_ultra',
 		'item_vladmir_2',
 		'item_recipe_vladmir_ultra_2',
 		'item_recipe_vladmir_ultra_3',
@@ -113,6 +114,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_blade_mail_ultra',
 		'item_shivas_guard_2',
+		'item_recipe_shivas_guard_ultra',
 	},
 	npc_dota_hero_bane = {
 		'item_magic_wand',
@@ -133,7 +135,7 @@ tBotItemData.purchaseItemList = {
 		'item_refresher',
 		'item_recipe_refresh_core',
 		'item_hallowed_scepter',
-		'item_shivas_guard_2',
+		'item_shivas_guard_ultra',
 	},
 	npc_dota_hero_bounty_hunter = {
 		'item_magic_wand',
@@ -656,6 +658,7 @@ tBotItemData.purchaseItemList = {
 		'item_necronomicon_staff',
 		'item_sacred_six_vein',
 		'item_shivas_guard_2',
+		'item_recipe_shivas_guard_ultra',
 	},
 	npc_dota_hero_ogre_magi = {
 		'item_magic_wand',
