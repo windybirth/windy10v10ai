@@ -43,7 +43,7 @@ export class Event {
         Player.SetPlayerProperty(hero);
       } else {
         // 机器人
-        // TODO 对所有机器人设置AI
+        // FIXME 对所有机器人设置AI
         if (npc.GetTeamNumber() === DotaTeam.BADGUYS) {
           GameRules.AI.EnableAI(hero);
         }

@@ -2,7 +2,7 @@ export class GameConfig {
   constructor() {
     SendToServerConsole("dota_max_physical_items_purchase_limit 9999"); // 用来解决物品数量限制问题
 
-    GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, 5); // 设置天辉队伍人数上限
+    GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.GOODGUYS, 10); // 设置天辉队伍人数上限
     GameRules.SetCustomGameTeamMaxPlayers(DotaTeam.BADGUYS, 10); // 设置夜魇队伍人数上限
     GameRules.LockCustomGameSetupTeamAssignment(false); // 锁定队伍分配
     GameRules.EnableCustomGameSetupAutoLaunch(true); // 是否自动开始游戏

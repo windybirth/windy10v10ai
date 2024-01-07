@@ -7,7 +7,7 @@ import { HeroHelper } from "./hero-helper";
 @registerModifier()
 export class BaseHeroAIModifier extends BaseModifier {
   protected readonly ThinkInterval: number = 0.3;
-  protected readonly ThinkIntervalTool: number = 2;
+  protected readonly ThinkIntervalTool: number = 0.3;
 
   protected readonly FindRadius: number = 1600;
   // 当前状态
