@@ -1,4 +1,5 @@
 import { BaseModifier, registerModifier } from "../../utils/dota_ts_adapter";
+import { ActionAttack } from "../action/action-attack";
 import { ActionFind } from "../action/action-find";
 import { ModeEnum } from "../mode/mode-enum";
 import { HeroHelper } from "./hero-helper";
@@ -62,6 +63,9 @@ export class BaseHeroAIModifier extends BaseModifier {
     this.aroundEnemyBuildings = ActionFind.FindEnemyBuildings(this.hero, this.FindRadius);
   }
 
+  // ---------------------------------------------------------
+  // Think Mode
+  // ---------------------------------------------------------
   ThinkMode(): void {
     this.mode = GameRules.AI.FSA.GetMode(this.mode, this.hero);
     switch (this.mode) {
@@ -78,13 +82,23 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   ThinkRune(): void {
     print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()}`);
+    if (this.aroundEnemyHeroes.length > 0) {
+      this.ThinkAttack();
+      return;
+    }
   }
 
   ThinkAttack(): void {
     print(`[AI] HeroBase ThinkAttack ${this.hero.GetUnitName()}`);
-    // use ability
 
-    // attack
+    if (this.aroundEnemyHeroes.length === 0) {
+      return;
+    }
+
+    const target = this.aroundEnemyHeroes[0];
+    if (target) {
+      ActionAttack.Attack(this.hero, target);
+    }
   }
 
   ThinkLaning(): void {
