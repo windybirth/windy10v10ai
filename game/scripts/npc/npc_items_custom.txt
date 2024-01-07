@@ -6315,7 +6315,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"80000"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"80.0"
 
@@ -6730,7 +6730,7 @@
 		"ItemResult"					"item_rapier_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_rapier;item_rapier;item_rapier;item_rapier"
+			"01"						"item_rapier;item_excalibur"
 		}
 	}
 

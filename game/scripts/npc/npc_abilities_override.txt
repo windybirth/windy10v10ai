@@ -4648,6 +4648,7 @@
 	// 风暴双雄
 	"arc_warden_tempest_double"
 	{
+		"AbilityCastRange"              "80000"
 		"MaxLevel" "4"
 		"AbilityCooldown"				"40 35 30 25"
 		"AbilityValues"

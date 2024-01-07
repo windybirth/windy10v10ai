@@ -1367,6 +1367,7 @@
 	//点金
 	"item_hand_of_midas"
 	{
+		"AbilityCastRange"              "80000"
 		"AbilityCharges"				"4"
 	}
 	// 跳刀卷轴
