@@ -1608,29 +1608,29 @@
 
 
 		// item_bfury_ultra 救世狂战
-		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>神器·救世狂战</font>"
-		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>被动：斩断世界线</h1>普通攻击时对目标周围最远%cleave_distance%距离的锥形区域内敌人造成%cleave_damage_percent%%%物理伤害。对非英雄单位造成%cleave_damage_percent_creep%%%物理伤害。（仅近战有效）"
+		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>Artifact: Worldbreaker</font>"
+		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>Passive: Worldsplitter</h1>Normal attacks cleave in a cone, dealing %cleave_damage_percent%%% physical damage to enemies within %cleave_distance% range. Deals %cleave_damage_percent_creep%%% physical damage to non-hero units. (Melee Only)"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Lore"                    "Have you heard that six battle fury can save the world?"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_health_regen"		"+$hp_regen"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_mana_regen"		"+$mana_regen"
-		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"你玩过曾经的限时强化版水刀吗？"
+		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"Have you played the limited-time enhanced Tidebringer?"
 
-		// item_gungir_ultra 捆仙索
-		"DOTA_Tooltip_ability_item_gungir_ultra"						"<font color='#e03e2e'>神器·捆仙索</font>"
-		"DOTA_Tooltip_ability_item_gungir_ultra_Description"						"<h1>主动：缚仙</h1>缠绕目标%radius%范围内所有敌人，持续%duration%秒，并造成%active_damage%点伤害。<br><br>施法距离：%abilitycastrange%\n\n<h1>被动：仙雷</h1>攻击有%chain_chance%%%几率释放一道仙雷，在%chain_radius%范围内%chain_strikes%个目标之间跳跃，每次造成%chain_damage%点魔法伤害。触发仙雷时无视闪避。"
-		"DOTA_Tooltip_ability_item_gungir_ultra_Lore"								"大胆妖孽，还不束手就擒！"
+		// item_gungir_ultra Immortal Coil
+		"DOTA_Tooltip_ability_item_gungir_ultra"						"<font color='#e03e2e'>Artifact: Immortal Coil</font>"
+		"DOTA_Tooltip_ability_item_gungir_ultra_Description"						"<h1>Active: Binding Chains</h1>Entangles all enemies within %radius% range, dealing %active_damage% damage over %duration% seconds.<br><br>Cast Range: %abilitycastrange%\n\n<h1>Passive: Celestial Thunder</h1>Attacks have a %chain_chance%%% chance to release a celestial thunder that jumps between %chain_strikes% targets within %chain_radius% range, dealing %chain_damage% magic damage. Celestial thunder ignores evasion."
+		"DOTA_Tooltip_ability_item_gungir_ultra_Lore"								"Bold villain, surrender now!"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_intellect"					"+$int"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_attack_speed"				"+$attack"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_hp"						"+$health"
 
-		// item_black_king_bar_ultra 永恒黑黄杖
-		"DOTA_Tooltip_Ability_item_black_king_bar_ultra"			"<font color='#e03e2e'>神器·永恒黑黄杖</font>"
-		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Description"				"<h1>主动：永久天神下凡</h1>获得减益免疫状态。同时-%magic_resist%%%魔法抗性，并且免疫纯粹和反弹伤害。持续时间内敌方技能的负面效果不会生效。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span> \n<h1>被动：力量的代价</h1>过于强大力量总会有它的代价，至于是什么，这不重要，重要的是你无敌了。"
-		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Lore"						"那么代价是什么呢？"
-		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note0"						"死亡摧毁，休想白嫖。"
-		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note1"						"假魔免也是魔免，别看不起人。"
+		// item_black_king_bar_ultra Eternal Black and Gold Scepter
+		"DOTA_Tooltip_Ability_item_black_king_bar_ultra"			"<font color='#e03e2e'>Artifact: Eternal Black and Gold Scepter</font>"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Description"				"<h1>Active: Eternal Ascension</h1>Grants spell immunity and -%magic_resist%%% magic resistance, and immunity to pure and reflected damage. During the duration, negative effects from enemy abilities do not apply.<br><br>Duration: %duration%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Weak Dispel</span> \n<h1>Passive: The Price of Strength</h1>Great power always comes with a price, but what that price is doesn't matter, what matters is that you are invincible."
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Lore"						"So what is the price?"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note0"						"Death destroys, no free rides."
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note1"						"Fake spell immunity is still spell immunity, don't underestimate it."
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_bonus_damage"				"+$damage"
 
