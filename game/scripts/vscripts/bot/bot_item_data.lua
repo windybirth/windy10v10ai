@@ -31,6 +31,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
 		'item_blade_mail_ultra',
+		'item_shivas_guard_2',
 		'item_vladmir_2',
 		'item_recipe_vladmir_ultra_2',
 		'item_recipe_vladmir_ultra_3',
@@ -111,6 +112,7 @@ tBotItemData.purchaseItemList = {
 		'item_jump_jump_jump',
 		'item_moon_shard_datadriven',
 		'item_blade_mail_ultra',
+		'item_shivas_guard_2',
 	},
 	npc_dota_hero_bane = {
 		'item_magic_wand',
@@ -587,7 +589,6 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_abyssal_blade_v2',
 		'item_wasp_despotic',
-		'item_bfury_2',
 		'item_jump_jump_jump',
 	},
 	-- 未启用
@@ -654,6 +655,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_refresh_core',
 		'item_necronomicon_staff',
 		'item_sacred_six_vein',
+		'item_shivas_guard_2',
 	},
 	npc_dota_hero_ogre_magi = {
 		'item_magic_wand',
