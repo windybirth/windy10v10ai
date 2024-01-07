@@ -1586,7 +1586,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2225"
+		"ItemCost"						"2475"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1623,53 +1623,17 @@
 			"AbilityCastRange"              "900"
 
 
-			"AbilitySpecial"
+			"AbilityValues"
 			{
-					"01"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"bonus_attack_speed"	"40"
-					}
-					"02"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"bonus_armor"			"20"
-					}
-					"03"
-					{
-							"var_type"				"FIELD_FLOAT"
 							"mana_regen_aura"		"6"
-					}
-					"05"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"damage_aura"			"20"
-					}
-					"06"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"vampiric_aura"			"25"
-					}
-					"07"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"aura_radius"			"900"
-					}
-					"09"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"aura_positive_armor"	"10"
-					}
-					"10"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"aura_attack_speed"		"40"
-					}
-					"11"
-					{
-							"var_type"				"FIELD_INTEGER"
 							"aura_negative_armor"	"-10"
-					}
 			}
 
 			"Modifiers"
@@ -5137,7 +5101,6 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			// TODO
 				"bonus_intellect"		"30"
 				"bonus_strength"		"30"
 				"bonus_agility"			"30"
@@ -5548,7 +5511,7 @@
 		"AbilityCastRange"				"1100"
 		"AbilityCastPoint"				"0.0"
 
-		"AbilityManaCost"				"400"
+		"AbilityManaCost"				"350"
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
@@ -7021,10 +6984,10 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"300"
-				"bonus_health_regen"	"40"
-				"bonus_mana_regen"		"20"
-				"cleave_damage_percent"	"210"
-				"cleave_damage_percent_creep"	"210"
+				"bonus_health_regen"	"30"
+				"bonus_mana_regen"		"15"
+				"cleave_damage_percent"	"100"
+				"cleave_damage_percent_creep"	"120"
 				"quelling_bonus"			"100"
 				"quelling_bonus_ranged"	"50"
 				"cleave_starting_width"			"150"
@@ -7063,10 +7026,10 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"BaseClass"						"item_gungir"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ALLIES_YES"
-		"AbilityCooldown"				"12"
-		"AbilityCastRange"				"1500"
+		"AbilityCooldown"				"16"
+		"AbilityCastRange"				"1200"
 		"AbilityCastPoint"				"0.0"
-		"AbilityManaCost"				"400"
+		"AbilityManaCost"				"600"
 		"ItemShopTags"					"damage;attack_speed;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
@@ -7078,17 +7041,17 @@
 			"bonus_damage"			"180"
 			"bonus_attack_speed"	"120"
 			"chain_chance"			"45"
-			"chain_damage"			"550"
+			"chain_damage"			"450"
 			"chain_strikes"			"8"
 			"chain_radius"			"1200"
 			"chain_delay"			"0.2"
 			"chain_cooldown"		"0.2"
-			"bonus_intellect"		"120"
-			"bonus_hp"				"2000"
+			"bonus_intellect"		"60"
+			"bonus_hp"				"1000"
 			"duration"				"3.5"
 			"radius"
 			{
-				"value"		"650"
+				"value"		"500"
 				"affected_by_aoe_increase"	"1"
 			}
 			"active_damage"			"900"
@@ -7119,8 +7082,8 @@
 		"FightRecapLevel"				"2"
 		"BaseClass"						"item_black_king_bar"
 		"AbilityTextureName"			"item_black_king_bar_ultra"
-		"AbilityCooldown"				"0"
-		"AbilityManaCost"				"0"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"300"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AllowedInBackpack"             "0"
 		"ItemDroppable"                 "0"
@@ -7128,9 +7091,9 @@
 
 		"AbilityValues"
 		{
-			"bonus_strength"		"180"
-			"bonus_damage"			"360"
-			"duration"				"3600"
+			"bonus_strength"		"120"
+			"bonus_damage"			"120"
+			"duration"				"10"
 			"max_level"				"1"
 			"model_scale"			"0"
 			"magic_resist"			"-100"
@@ -7160,13 +7123,13 @@
 		"ID"							"9702"
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
-		"ItemCost"						"0"
+		"ItemCost"						"9800"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_vladmir_ultra_2"
 		"ItemRequirements"
 		{
-			"01"						"item_vladmir_ultra;item_assault"
+			"01"						"item_vladmir_ultra"
 		}
 	}
 	"item_recipe_vladmir_ultra_3"
@@ -7175,13 +7138,13 @@
 		"ID"							"9703"
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
-		"ItemCost"						"0"
+		"ItemCost"						"9800"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_vladmir_ultra_3"
 		"ItemRequirements"
 		{
-			"01"						"item_vladmir_ultra_2;item_assault"
+			"01"						"item_vladmir_ultra_2"
 		}
 	}
 	"item_recipe_vladmir_ultra_4"
@@ -7190,13 +7153,13 @@
 		"ID"							"9704"
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
-		"ItemCost"						"0"
+		"ItemCost"						"9800"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_vladmir_ultra_4"
 		"ItemRequirements"
 		{
-			"01"						"item_vladmir_ultra_3;item_assault"
+			"01"						"item_vladmir_ultra_3"
 		}
 	}
 	"item_recipe_vladmir_ultra_5"
@@ -7205,13 +7168,13 @@
 		"ID"							"9705"
 		"Model"							"models/props_gameplay/recipe.mdl"
 		"AbilityTextureName"			"item_recipe_vladmir_2"
-		"ItemCost"						"0"
+		"ItemCost"						"9800"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_vladmir_ultra_5"
 		"ItemRequirements"
 		{
-			"01"						"item_vladmir_ultra_4;item_assault"
+			"01"						"item_vladmir_ultra_4"
 		}
 	}
 	"item_vladmir_ultra"
@@ -7226,53 +7189,17 @@
 		"AbilityCastRange"              "1200"
 		"UpgradesItems"					"item_vladmir_ultra_2;item_vladmir_ultra_3;item_vladmir_ultra_4;item_vladmir_ultra_5"
 		"UpgradeRecipe"					"item_recipe_vladmir_ultra_2"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"80"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"40"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
 				"mana_regen_aura"		"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"damage_aura"			"40"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"150"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"25"
 				"aura_radius"			"900"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_positive_armor"	"20"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_attack_speed"		"80"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_negative_armor"	"-20"
-			}
 		}
 		"Modifiers"
 		{
@@ -7336,7 +7263,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_ultra"
+						"ScriptFile"	"items/item_vladmir_2"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7379,54 +7306,19 @@
 		"AbilityCastRange"              "1200"
 		"UpgradesItems"					"item_vladmir_ultra_3;item_vladmir_ultra_4;item_vladmir_ultra_5"
 		"UpgradeRecipe"					"item_recipe_vladmir_ultra_3"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"120"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"60"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"mana_regen_aura"		"18"
 				"damage_aura"			"60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"150"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"25"
 				"aura_radius"			"900"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_positive_armor"	"30"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_attack_speed"		"120"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_negative_armor"	"-30"
-			}
 		}
+
 		"Modifiers"
 		{
 			"modifier_item_vladmir_ultra_2"
@@ -7489,7 +7381,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_ultra"
+						"ScriptFile"	"items/item_vladmir_2"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7530,53 +7422,17 @@
 		"AbilityTextureName"			"item_vladmir_ultra"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AbilityCastRange"              "1200"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"160"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"80"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"mana_regen_aura"		"24"
 				"damage_aura"			"80"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"150"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_radius"			"1200"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"400"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"25"
+				"aura_radius"			"900"
+				"aura_positive_armor"	"40"
 				"aura_attack_speed"		"160"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_negative_armor"	"-40"
-			}
 		}
 		"Modifiers"
 		{
@@ -7640,7 +7496,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_ultra"
+						"ScriptFile"	"items/item_vladmir_2"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7681,53 +7537,17 @@
 		"AbilityTextureName"			"item_vladmir_ultra"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AbilityCastRange"              "1200"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"200"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"100"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"mana_regen_aura"		"30"
 				"damage_aura"			"100"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"150"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"25"
 				"aura_radius"			"900"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_positive_armor"	"100"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"aura_positive_armor"	"50"
 				"aura_attack_speed"		"200"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-40"
-			}
+				"aura_negative_armor"	"-50"
 		}
 		"Modifiers"
 		{
@@ -7791,7 +7611,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_ultra"
+						"ScriptFile"	"items/item_vladmir_2"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7832,53 +7652,17 @@
 		"AbilityTextureName"			"item_vladmir_ultra"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AbilityCastRange"              "1200"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_attack_speed"	"240"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_armor"			"120"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"mana_regen_aura"		"12"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"mana_regen_aura"		"36"
 				"damage_aura"			"120"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"vampiric_aura"			"150"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"vampiric_aura"			"25"
 				"aura_radius"			"900"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_positive_armor"	"60"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"aura_attack_speed"		"240"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"aura_negative_armor"	"-50"
-			}
+				"aura_negative_armor"	"-60"
 		}
 		"Modifiers"
 		{
@@ -7942,7 +7726,7 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	"items/item_vladmir_ultra"
+						"ScriptFile"	"items/item_vladmir_2"
 						"Function"		"VampiricAuraApply"
 						"attack_damage"	"%attack_damage"
 					}
@@ -7981,12 +7765,12 @@
 		"BaseClass"                     "item_recipe_shivas_guard"
 		"ID"						    "9607"
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"1500"
+		"ItemCost"						"0"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_shivas_guard_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_shivas_guard;item_shivas_guard_2"
+			"01"						"item_shivas_guard_2;item_shivas_guard_2"
 		}
 	}
 	"item_shivas_guard_ultra"
@@ -7996,17 +7780,18 @@
 		"AbilityCooldown"				"27"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"500"
 		"AbilityTextureName"            "shivas_guard_ultra"
 		"AbilityValues"
 		{
-			"bonus_intellect"		"80"
-			"bonus_strength"		"80"
-			"bonus_agility"			"80"
-			"bonus_hp_regen"		"80"
+			"bonus_intellect"		"50"
+			"bonus_strength"		"50"
+			"bonus_agility"			"50"
+			"bonus_hp_regen"		"30"
 			"bonus_armor"			"80"
-			"aura_radius"			"1800"
-			"aura_attack_speed"		"-500"
+
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"-200"
 			"blast_damage"			"1000"
 			"blast_movement_speed"	"-100"
 			"blast_debuff_duration"	"6.0"
@@ -8016,10 +7801,10 @@
 				"affected_by_aoe_increase"	"1"
 			}
 			"blast_speed"			"600"
-			"hp_regen_degen_aura"	"99"
+			"hp_regen_degen_aura"	"90"
 			"illusion_multiplier_pct"	"150"
 			"spell_amp"			"100"
-			"resist_debuff_duration"	"20.0"
+			"resist_debuff_duration"	"16.0"
 		}
 	}
 	//=================================================================================================================
@@ -8047,26 +7832,26 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
-		"AbilityCastRange"				"1800"
-		"AbilityCooldown"				"10.0"
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"15.0"
 		"AbilitySharedCooldown"			"orchid"
-		"AbilityManaCost"				"100"
+		"AbilityManaCost"				"300"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"ShouldBeSuggested"				"1"
 		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
 		"AbilityTextureName"            "bloodthorn_ultra"
 		"AbilityValues"
 		{
-				"bonus_intellect"			"100"
-				"bonus_attack_speed"		"300"
-				"bonus_mana_regen"			"30"
-				"bonus_health_regen"		"65"
+				"bonus_intellect"			"30"
+				"bonus_attack_speed"		"200"
+				"bonus_mana_regen"			"8"
+				"bonus_health_regen"		"16"
 				"silence_duration"			"5"
-				"silence_damage_percent"	"600"
-				"bonus_damage"				"200"
+				"silence_damage_percent"	"120"
+				"bonus_damage"				"40"
 				"duration"					"6"
 				"spell_amp_debuff"			"70"
-				"proc_damage"				"600"
+				"proc_damage"				"120"
 				"proc_chance"				"40"
 		}
 	}
@@ -8083,7 +7868,7 @@
 		"ItemResult"					"item_glimmer_cape_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_glimmer_cape;item_glimmer_cape;item_glimmer_cape;item_glimmer_cape;item_glimmer_cape"
+			"01"						"item_glimmer_cape;item_glimmer_cape;item_glimmer_cape;item_glimmer_cape"
 		}
 	}
 	"item_glimmer_cape_ultra"
@@ -8096,8 +7881,8 @@
 		"FightRecapLevel"				"1"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCastRange"				"600"
-		"AbilityCooldown"				"60"
-		"AbilityManaCost"				"90"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"500"
 		"ItemShopTags"					""
 		"ShouldBeSuggested"				"1"
 		"ItemDroppable"                 "0"
@@ -8108,8 +7893,8 @@
 			"initial_fade_delay"				"0.5"
 			"secondary_fade_delay"				"0.5"
 			"active_movement_speed"		"100"
-			"duration"					"1000"
-			"bonus_magical_armor"			"70"
+			"duration"					"50"
+			"bonus_magical_armor"			"80"
 			"barrier_block"					"5000"
 		}
 	}

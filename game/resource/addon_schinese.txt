@@ -1773,8 +1773,8 @@
 		"DOTA_Tooltip_ability_item_gungir_ultra_Lore"								"大胆妖孽，还不束手就擒！"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_intellect"					"+$int"
-		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_strength"					"+$str"
-		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_agility"					"+$agi"
+		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_item_gungir_ultra_bonus_hp"						"+$health"
 
 		// item_black_king_bar_ultra 永恒黑黄杖
 		"DOTA_Tooltip_Ability_item_black_king_bar_ultra"			"<font color='#e03e2e'>神器·永恒黑黄杖</font>"
@@ -1786,13 +1786,13 @@
 		"DOTA_Tooltip_ability_item_black_king_bar_ultra_bonus_damage"				"+$damage"
 
 		// item_vladmir_ultra 合金强袭
-		"DOTA_Tooltip_ability_item_vladmir_ultra"                               "<font color='#e03e2e'>神器·合金强袭装甲</font>"
+		"DOTA_Tooltip_ability_item_vladmir_ultra"                               "<font color='#e03e2e'>神器·合金强袭装甲★</font>"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_Description"							"<h1>被动：合金强袭光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲。<br>削弱附近敌军%aura_negative_armor%点护甲（不包含建筑物）。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_Lore"								"在吸收了亡者之血后，这件盔甲提高整支军队的护甲和攻击速度。"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_general_aura"				"合金强袭"
-		"DOTA_Tooltip_modifier_item_vladmir_ultra_general_aura_Description"	"获得150%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_ultra_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_building_aura"				"合金强袭"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_enemy_aura"				"合金强袭"
@@ -1800,13 +1800,13 @@
 		"DOTA_Tooltip_Ability_item_philosophers_stone_bonus_mana"				"-$mana"
 
 		// item_vladmir_ultra_2 钛合金强袭
-		"DOTA_Tooltip_ability_item_vladmir_ultra_2"                               "<font color='#e03e2e'>神器·钛合金强袭装甲</font>"
+		"DOTA_Tooltip_ability_item_vladmir_ultra_2"                               "<font color='#e03e2e'>神器·钛合金强袭装甲★★</font>"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_2_Description"							"<h1>被动：钛合金强袭光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲。<br>削弱附近敌军%aura_negative_armor%点护甲（不包含建筑物）。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_2_Lore"								"在吸收了亡者之血后，这件盔甲提高整支军队的护甲和攻击速度。"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_2_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_2_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_general_aura"				"钛合金强袭"
-		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_general_aura_Description"	"获得150%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_building_aura"				"钛合金强袭"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_2_enemy_aura"				"钛合金强袭"
@@ -1814,13 +1814,13 @@
 		"DOTA_Tooltip_Ability_item_philosophers_stone_bonus_mana"				"-$mana"
 
 		// item_vladmir_ultra_3 超钛合金强袭
-		"DOTA_Tooltip_ability_item_vladmir_ultra_3"                               "<font color='#e03e2e'>神器·超钛合金强袭装甲</font>"
+		"DOTA_Tooltip_ability_item_vladmir_ultra_3"                               "<font color='#e03e2e'>神器·超钛合金强袭装甲★★★</font>"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_3_Description"							"<h1>被动：超钛强袭光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲。<br>削弱附近敌军%aura_negative_armor%点护甲（不包含建筑物）。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_3_Lore"								"在吸收了亡者之血后，这件盔甲提高整支军队的护甲和攻击速度。"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_3_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_3_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_general_aura"				"超钛强袭"
-		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_general_aura_Description"	"获得150%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_building_aura"				"超钛强袭"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_3_enemy_aura"				"超钛强袭"
@@ -1828,13 +1828,13 @@
 		"DOTA_Tooltip_Ability_item_philosophers_stone_bonus_mana"				"-$mana"
 
 		// item_vladmir_ultra_4 钨钢合金强袭
-		"DOTA_Tooltip_ability_item_vladmir_ultra_4"                               "<font color='#e03e2e'>神器·钨钢合金强袭装甲</font>"
+		"DOTA_Tooltip_ability_item_vladmir_ultra_4"                               "<font color='#e03e2e'>神器·钨钢合金强袭装甲★★★★</font>"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_4_Description"							"<h1>被动：钨钢强袭光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲。<br>削弱附近敌军%aura_negative_armor%点护甲（不包含建筑物）。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_4_Lore"								"在吸收了亡者之血后，这件盔甲提高整支军队的护甲和攻击速度。"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_4_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_4_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_general_aura"				"钨钢强袭"
-		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_general_aura_Description"	"获得150%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_building_aura"				"钨钢强袭"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_4_enemy_aura"				"钨钢强袭"
@@ -1842,13 +1842,13 @@
 		"DOTA_Tooltip_Ability_item_philosophers_stone_bonus_mana"				"-$mana"
 
 		// item_vladmir_ultra_5 超钨钢合金强袭
-		"DOTA_Tooltip_ability_item_vladmir_ultra_5"                               "<font color='#e03e2e'>神器·超钨钢合金强袭装甲</font>"
+		"DOTA_Tooltip_ability_item_vladmir_ultra_5"                               "<font color='#e03e2e'>神器·超钨钢合金强袭装甲★★★★★</font>"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_5_Description"							"<h1>被动：超钨钢强袭光环</h1>向周围队友提供%vampiric_aura%%%吸血，%damage_aura%%%攻击力加成，%mana_regen_aura%点/秒魔法恢复。<br>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲。<br>削弱附近敌军%aura_negative_armor%点护甲（不包含建筑物）。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_5_Lore"								"在吸收了亡者之血后，这件盔甲提高整支军队的护甲和攻击速度。"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_5_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_ultra_5_bonus_armor"							"+$armor"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_general_aura"				"超钨钢强袭"
-		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_general_aura_Description"	"获得150%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_building_aura"				"超钨钢强袭"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 		"DOTA_Tooltip_modifier_item_vladmir_ultra_5_enemy_aura"				"超钨钢强袭"
