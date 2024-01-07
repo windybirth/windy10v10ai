@@ -97,11 +97,23 @@ export class BaseHeroAIModifier extends BaseModifier {
     if (this.aroundEnemyHeroes.length === 0) {
       return;
     }
-
     const target = this.aroundEnemyHeroes[0];
-    if (target) {
-      ActionAttack.Attack(this.hero, target);
+    if (!target) {
+      return;
     }
+
+    if (this.IsInAbilityPhase()) {
+      print(`[AI] HeroBase ThinkAttack 正在施法中 ${this.hero.GetUnitName()}`);
+      return;
+    }
+
+    // TODO 使用技能
+
+    if (this.IsInAttackPhase()) {
+      print(`[AI] HeroBase ThinkAttack 正在攻击中 ${this.hero.GetUnitName()}`);
+      return;
+    }
+    ActionAttack.Attack(this.hero, target);
   }
 
   ThinkLaning(): void {
@@ -122,6 +134,40 @@ export class BaseHeroAIModifier extends BaseModifier {
     }
 
     return false;
+  }
+
+  // ---------------------------------------------------------
+  // Check
+  // ---------------------------------------------------------
+  IsInAbilityPhase(): boolean {
+    if (this.hero.IsChanneling()) {
+      return true;
+    }
+
+    if (this.ability_1 && this.ability_1.IsInAbilityPhase()) {
+      return true;
+    }
+    if (this.ability_2 && this.ability_2.IsInAbilityPhase()) {
+      return true;
+    }
+    if (this.ability_3 && this.ability_3.IsInAbilityPhase()) {
+      return true;
+    }
+    if (this.ability_4 && this.ability_4.IsInAbilityPhase()) {
+      return true;
+    }
+    if (this.ability_5 && this.ability_5.IsInAbilityPhase()) {
+      return true;
+    }
+    if (this.ability_utli && this.ability_utli.IsInAbilityPhase()) {
+      return true;
+    }
+
+    return false;
+  }
+
+  IsInAttackPhase(): boolean {
+    return this.hero.IsAttacking();
   }
 
   // ---------------------------------------------------------

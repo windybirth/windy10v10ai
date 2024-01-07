@@ -9,7 +9,7 @@ export class ActionAttack {
         OrderType: UnitOrder.ATTACK_TARGET,
         UnitIndex: hero.GetEntityIndex(),
         TargetIndex: target.GetEntityIndex(),
-        Queue: true,
+        Queue: false,
       });
       return;
     } else {
