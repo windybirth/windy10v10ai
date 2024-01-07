@@ -1,4 +1,5 @@
 import { BaseModifier, registerModifier } from "../../utils/dota_ts_adapter";
+import { ActionFind } from "../action/action-find";
 import { ModeEnum } from "../mode/mode-enum";
 import { HeroHelper } from "./hero-helper";
 
@@ -6,6 +7,8 @@ import { HeroHelper } from "./hero-helper";
 export class BaseHeroAIModifier extends BaseModifier {
   // FIXME: 为了方便测试，这里设置为2秒
   protected readonly ThinkInterval: number = 2;
+
+  protected readonly FindRadius: number = 1;
   // 当前状态
   protected mode: ModeEnum = ModeEnum.RUNE;
 
@@ -28,7 +31,7 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   protected aroundEnemyHeroes: CDOTA_BaseNPC[] = [];
   protected aroundEnemyCreeps: CDOTA_BaseNPC[] = [];
-  protected aroundEnemyTowers: CDOTA_BaseNPC[] = [];
+  protected aroundEnemyBuildings: CDOTA_BaseNPC[] = [];
 
   Init() {
     this.hero = this.GetParent() as CDOTA_BaseNPC_Hero;
@@ -50,7 +53,50 @@ export class BaseHeroAIModifier extends BaseModifier {
       return;
     }
 
+    this.ThinkMode();
+  }
+
+  FindAround(): void {
+    this.aroundEnemyHeroes = ActionFind.FindEnemyHeroes(this.hero, this.FindRadius);
+    this.aroundEnemyCreeps = ActionFind.FindEnemyCreeps(this.hero, this.FindRadius);
+    this.aroundEnemyBuildings = ActionFind.FindEnemyBuildings(this.hero, this.FindRadius);
+  }
+
+  ThinkMode(): void {
     this.mode = GameRules.AI.FSA.GetMode(this.mode, this.hero);
+    switch (this.mode) {
+      case ModeEnum.RUNE:
+        this.ThinkRune();
+        break;
+      case ModeEnum.ATTACK:
+        this.ThinkAttack();
+        break;
+      default:
+        break;
+    }
+  }
+
+  ThinkRune(): void {
+    print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()}`);
+  }
+
+  ThinkAttack(): void {
+    print(`[AI] HeroBase ThinkAttack ${this.hero.GetUnitName()}`);
+    // use ability
+
+    // attack
+  }
+
+  ThinkLaning(): void {
+    print(`[AI] HeroBase ThinkLaning ${this.hero.GetUnitName()}`);
+  }
+
+  ThinkGanking(): void {
+    print(`[AI] HeroBase ThinkGanking ${this.hero.GetUnitName()}`);
+  }
+
+  ThinkPush(): void {
+    print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()}`);
   }
 
   NoAction(): boolean {
