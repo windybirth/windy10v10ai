@@ -25,16 +25,16 @@ export class ModeRetreat extends ModeBase {
           heroAI.GetHero(),
         );
 
-        const towerBufferRange = 200;
+        const towerBufferRange = 600;
         const distanceThanRangeWithBuffer = distanceThanRange - towerBufferRange;
 
-        // 靠近防御塔攻击范围+200以内时，每减少100，desire增加0.1
+        // 靠近防御塔攻击范围+400以内时，每减少100，desire增加0.1
         if (distanceThanRangeWithBuffer <= 0) {
-          desire += Math.floor(distanceThanRangeWithBuffer / 100) * 0.1;
+          desire += Math.floor(-distanceThanRangeWithBuffer / 100) * 0.1;
         }
-        // 防御塔攻击范围内时，desire额外增加0.5
+        // 进塔范围内，desire为1
         if (distanceThanRange <= 0) {
-          desire += 0.5;
+          desire += 0.4;
         }
       }
     }

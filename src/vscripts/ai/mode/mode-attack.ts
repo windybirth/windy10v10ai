@@ -13,6 +13,9 @@ export class ModeAttack extends ModeBase {
     if (heroAI.mode === ModeEnum.RETREAT) {
       desire -= 0.4;
     }
+    if (heroAI.mode === ModeEnum.ATTACK) {
+      desire += 0.1;
+    }
 
     if (dotaTime < 1) {
       // 0:00
@@ -24,13 +27,11 @@ export class ModeAttack extends ModeBase {
             nearestTower,
             heroAI.GetHero(),
           );
-          print("distanceToTowerRange: " + distanceToTowerRange);
-          if (distanceToTowerRange > 200) {
-            desire += 0.8;
+          if (distanceToTowerRange > 400) {
+            desire += 0.61;
           }
         } else {
-          print("no nearest tower");
-          desire += 0.8;
+          desire += 0.65;
         }
       }
     }
