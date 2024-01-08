@@ -1,8 +1,9 @@
 import { BaseModifier, registerModifier } from "../../utils/dota_ts_adapter";
 import { ActionAttack } from "../action/action-attack";
 import { ActionFind } from "../action/action-find";
+import { ActionMove } from "../action/action-move";
 import { ModeEnum } from "../mode/mode-enum";
-import { HeroHelper } from "./hero-helper";
+import { HeroUtil } from "./hero-util";
 
 @registerModifier()
 export class BaseHeroAIModifier extends BaseModifier {
@@ -12,13 +13,13 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected readonly FindRadius: number = 1600;
 
   protected hero: CDOTA_BaseNPC_Hero;
-  public get Hero(): CDOTA_BaseNPC_Hero {
+  public GetHero(): CDOTA_BaseNPC_Hero {
     return this.hero;
   }
 
   // 当前状态
   protected mode: ModeEnum = ModeEnum.RUNE;
-  public get Mode(): ModeEnum {
+  public GetMode(): ModeEnum {
     return this.mode;
   }
 
@@ -62,6 +63,7 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   Think(): void {
+    this.hero = this.GetParent() as CDOTA_BaseNPC_Hero;
     if (this.NoAction()) {
       return;
     }
@@ -70,10 +72,24 @@ export class BaseHeroAIModifier extends BaseModifier {
     this.ThinkMode();
   }
 
-  FindAround(): void {
-    this.aroundEnemyHeroes = ActionFind.FindEnemyHeroes(this.hero, this.FindRadius);
-    this.aroundEnemyCreeps = ActionFind.FindEnemyCreeps(this.hero, this.FindRadius);
-    this.aroundEnemyBuildings = ActionFind.FindEnemyBuildings(this.hero, this.FindRadius);
+  DontRushTower(): boolean {
+    const tower = this.FindNearestEnemyBuilding();
+    if (!tower) {
+      return false;
+    }
+
+    const isInTowerRange = ActionAttack.IsInAttackRange(tower, this.hero);
+    if (!isInTowerRange) {
+      return false;
+    }
+
+    // go away from tower
+    print(`[AI] HeroBase DontRushTower ${this.hero.GetUnitName()}`);
+    const towerPos = tower.GetAbsOrigin();
+    const heroPos = this.hero.GetAbsOrigin();
+    const direction = heroPos.__sub(towerPos).Normalized();
+    ActionMove.MoveHeroToDirection(this.hero, direction, 100);
+    return true;
   }
 
   // ---------------------------------------------------------
@@ -81,6 +97,7 @@ export class BaseHeroAIModifier extends BaseModifier {
   // ---------------------------------------------------------
   ThinkMode(): void {
     this.mode = GameRules.AI.FSA.GetMode(this);
+    print(`[AI] HeroBase ThinkMode ${this.hero.GetUnitName()} mode ${this.mode}`);
     switch (this.mode) {
       case ModeEnum.RUNE:
         this.ThinkRune();
@@ -88,12 +105,23 @@ export class BaseHeroAIModifier extends BaseModifier {
       case ModeEnum.ATTACK:
         this.ThinkAttack();
         break;
+      case ModeEnum.LANING:
+        this.ThinkLaning();
+        break;
+      case ModeEnum.GANKING:
+        this.ThinkGanking();
+        break;
+      case ModeEnum.PUSH:
+        this.ThinkPush();
+        break;
       default:
+        print(`[AI] HeroBase ThinkMode ${this.hero.GetUnitName()} mode ${this.mode} not found`);
         break;
     }
   }
 
   ThinkRune(): void {
+    print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()}`);
     if (this.aroundEnemyHeroes.length > 0) {
       this.ThinkAttack();
       return;
@@ -101,11 +129,11 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   ThinkAttack(): void {
-    print(`[AI] HeroBase ThinkAttack ${this.hero.GetUnitName()}`);
-    if (this.aroundEnemyHeroes.length === 0) {
+    if (this.DontRushTower()) {
       return;
     }
-    const target = this.aroundEnemyHeroes[0];
+    print(`[AI] HeroBase ThinkAttack ${this.hero.GetUnitName()}`);
+    const target = this.FindNearestEnemyHero();
     if (!target) {
       return;
     }
@@ -126,6 +154,9 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   ThinkLaning(): void {
     print(`[AI] HeroBase ThinkLaning ${this.hero.GetUnitName()}`);
+    if (this.DontRushTower()) {
+      return;
+    }
   }
 
   ThinkGanking(): void {
@@ -137,7 +168,7 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   NoAction(): boolean {
-    if (HeroHelper.NotActionable(this.hero)) {
+    if (HeroUtil.NotActionable(this.hero)) {
       return true;
     }
 
@@ -176,6 +207,43 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   IsInAttackPhase(): boolean {
     return this.hero.IsAttacking();
+  }
+
+  // ---------------------------------------------------------
+  // private
+  // ---------------------------------------------------------
+
+  private FindAround(): void {
+    this.aroundEnemyHeroes = ActionFind.FindEnemyHeroes(this.hero, this.FindRadius);
+    this.aroundEnemyCreeps = ActionFind.FindEnemyCreeps(this.hero, this.FindRadius);
+    this.aroundEnemyBuildings = ActionFind.FindEnemyBuildings(this.hero, this.FindRadius);
+  }
+
+  private FindNearestEnemyHero(): CDOTA_BaseNPC | undefined {
+    if (this.aroundEnemyHeroes.length === 0) {
+      return undefined;
+    }
+
+    const target = this.aroundEnemyHeroes[0];
+    return target;
+  }
+
+  private FindNearestEnemyCreep(): CDOTA_BaseNPC | undefined {
+    if (this.aroundEnemyCreeps.length === 0) {
+      return undefined;
+    }
+
+    const target = this.aroundEnemyCreeps[0];
+    return target;
+  }
+
+  private FindNearestEnemyBuilding(): CDOTA_BaseNPC | undefined {
+    if (this.aroundEnemyBuildings.length === 0) {
+      return undefined;
+    }
+
+    const target = this.aroundEnemyBuildings[0];
+    return target;
   }
 
   // ---------------------------------------------------------

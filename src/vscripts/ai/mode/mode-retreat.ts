@@ -6,7 +6,7 @@ export class ModeRetreat extends ModeBase {
   mode: ModeEnum = ModeEnum.RETREAT;
 
   GetDesire(heroAI: BaseHeroAIModifier): number {
-    const curretHealthPercentage = heroAI.Hero.GetHealthPercent();
+    const curretHealthPercentage = heroAI.GetHero().GetHealthPercent();
     // 血量低于50%时，desire从0开始递增至1
     let desire = 0;
     if (curretHealthPercentage < 50) {

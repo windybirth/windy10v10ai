@@ -19,7 +19,7 @@ export class FSA {
   }
 
   GetMode(heroAI: BaseHeroAIModifier): ModeEnum {
-    const currentMode = heroAI.Mode;
+    const currentMode = heroAI.GetMode();
     let maxDesire = 0;
     let desireMode: ModeEnum | undefined;
     for (const mode of this.ModeList) {
@@ -35,7 +35,7 @@ export class FSA {
     }
 
     if (maxDesire > FSA.MODE_SWITCH_THRESHOLD) {
-      print(`[AI] hero ${heroAI.Hero.GetUnitName()} desire to switch mode to ${desireMode}`);
+      print(`[AI] hero ${heroAI.GetHero().GetUnitName()} desire to switch mode to ${desireMode}`);
       return desireMode!;
     } else {
       return currentMode;

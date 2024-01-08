@@ -19,9 +19,9 @@ export class ActionAttack {
     }
   }
 
-  static IsInAttackRange(hero: CDOTA_BaseNPC_Hero, target: CDOTA_BaseNPC): boolean {
-    const attackRange = hero.GetBaseAttackRange();
-    const distance = hero.GetRangeToUnit(target);
+  static IsInAttackRange(attacker: CDOTA_BaseNPC, target: CDOTA_BaseNPC): boolean {
+    const attackRange = attacker.GetBaseAttackRange();
+    const distance = attacker.GetRangeToUnit(target);
     return distance <= attackRange;
   }
 }

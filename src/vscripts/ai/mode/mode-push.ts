@@ -14,7 +14,7 @@ export class ModePush extends ModeBase {
     desire = Math.min(desire, 0.8);
 
     // if hero level > 6, desire + 0.2
-    if (heroAI.Hero.GetLevel() > 6) {
+    if (heroAI.GetHero().GetLevel() > 6) {
       desire += 0.2;
     }
 
