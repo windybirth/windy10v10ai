@@ -7,7 +7,7 @@ export class ModePush extends ModeBase {
 
   GetDesire(heroAI: BaseHeroAIModifier): number {
     // if time is less than 0:00, return 0
-    const currentTime = GameRules.GetDOTATime(false, false);
+    const currentTime = heroAI.gameTime;
     let desire = 0;
     // 每过一分钟，增加0.1的desire
     desire = Math.floor(currentTime / 60) * 0.1;

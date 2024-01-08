@@ -1,4 +1,5 @@
 import { BaseHeroAIModifier } from "../hero/hero-base";
+import { ModeAttack } from "./mode-attack";
 import { ModeBase } from "./mode-base";
 import { ModeEnum } from "./mode-enum";
 import { ModeLaning } from "./mode-laning";
@@ -12,21 +13,19 @@ export class FSA {
 
   ModeList: ModeBase[] = [];
   constructor() {
-    this.ModeList.push(new ModeRune());
     this.ModeList.push(new ModeLaning());
-    this.ModeList.push(new ModePush());
+    this.ModeList.push(new ModeAttack());
+    // TODO ganking
     this.ModeList.push(new ModeRetreat());
+    this.ModeList.push(new ModeRune());
+    this.ModeList.push(new ModePush());
   }
 
   GetMode(heroAI: BaseHeroAIModifier): ModeEnum {
-    const currentMode = heroAI.GetMode();
+    const currentMode = heroAI.mode;
     let maxDesire = 0;
     let desireMode: ModeEnum | undefined;
     for (const mode of this.ModeList) {
-      if (mode.mode === currentMode) {
-        continue;
-      }
-
       const desire = mode.GetDesire(heroAI);
       if (desire > maxDesire) {
         maxDesire = desire;
@@ -34,8 +33,10 @@ export class FSA {
       }
     }
 
-    if (maxDesire > FSA.MODE_SWITCH_THRESHOLD) {
-      print(`[AI] hero ${heroAI.GetHero().GetUnitName()} desire to switch mode to ${desireMode}`);
+    if (maxDesire >= FSA.MODE_SWITCH_THRESHOLD) {
+      if (desireMode !== currentMode) {
+        print(`[AI] hero ${heroAI.GetHero().GetUnitName()} desire to switch mode to ${desireMode}`);
+      }
       return desireMode!;
     } else {
       return currentMode;

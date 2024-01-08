@@ -5,12 +5,12 @@ import { ModeEnum } from "./mode-enum";
 export class ModeRune extends ModeBase {
   mode: ModeEnum = ModeEnum.RUNE;
 
-  GetDesire(_heroAI: BaseHeroAIModifier): number {
-    const currentTime = GameRules.GetDOTATime(false, false);
+  GetDesire(heroAI: BaseHeroAIModifier): number {
+    const currentTime = heroAI.gameTime;
     if (currentTime > 0) {
       return 0;
     } else {
-      return 0.8;
+      return 0.6;
     }
   }
 }

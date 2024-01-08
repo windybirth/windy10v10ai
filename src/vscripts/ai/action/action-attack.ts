@@ -20,8 +20,18 @@ export class ActionAttack {
   }
 
   static IsInAttackRange(attacker: CDOTA_BaseNPC, target: CDOTA_BaseNPC): boolean {
+    return this.GetDistanceToAttackRange(attacker, target) <= 0;
+  }
+
+  /**
+   * 小于等于0表示在攻击范围内
+   * @returns distance - attackRange
+   */
+  static GetDistanceToAttackRange(attacker: CDOTA_BaseNPC, target: CDOTA_BaseNPC): number {
     const attackRange = attacker.GetBaseAttackRange();
-    const distance = attacker.GetRangeToUnit(target);
-    return distance <= attackRange;
+    const attackerCollision = attacker.GetHullRadius();
+    const targetCollision = target.GetHullRadius();
+    const distance = attacker.GetRangeToUnit(target) - attackerCollision - targetCollision;
+    return distance - attackRange;
   }
 }
