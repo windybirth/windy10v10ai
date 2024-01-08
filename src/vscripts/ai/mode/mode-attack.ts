@@ -7,5 +7,6 @@ export class ModeAttack extends ModeBase {
 
   GetDesire(_heroAI: BaseHeroAIModifier): number {
     // TODO: implement
+    return 0;
   }
 }

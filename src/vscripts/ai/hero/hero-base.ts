@@ -80,7 +80,7 @@ export class BaseHeroAIModifier extends BaseModifier {
   // Think Mode
   // ---------------------------------------------------------
   ThinkMode(): void {
-    this.mode = GameRules.AI.FSA.GetMode(this.mode, this.hero);
+    this.mode = GameRules.AI.FSA.GetMode(this);
     switch (this.mode) {
       case ModeEnum.RUNE:
         this.ThinkRune();
