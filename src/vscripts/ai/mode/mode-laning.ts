@@ -1,10 +1,11 @@
+import { BaseHeroAIModifier } from "../hero/hero-base";
 import { ModeBase } from "./mode-base";
 import { ModeEnum } from "./mode-enum";
 
 export class ModeLaning extends ModeBase {
   mode: ModeEnum = ModeEnum.LANING;
 
-  GetDesire(_hero: CDOTA_BaseNPC): number {
+  GetDesire(_heroAI: BaseHeroAIModifier): number {
     // if time is less than 0:00, return 0
     const currentTime = GameRules.GetDOTATime(false, false);
     let desire = 0;

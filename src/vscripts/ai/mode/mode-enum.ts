@@ -10,7 +10,7 @@ export enum ModeEnum {
   /**
    * 游走 ROAM
    */
-  GANKING = 3,
+  // GANKING = 3,
   /**
    * 逃跑
    */

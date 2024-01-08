@@ -10,8 +10,17 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected readonly ThinkIntervalTool: number = 0.3;
 
   protected readonly FindRadius: number = 1600;
+
+  protected hero: CDOTA_BaseNPC_Hero;
+  public get Hero(): CDOTA_BaseNPC_Hero {
+    return this.hero;
+  }
+
   // 当前状态
   protected mode: ModeEnum = ModeEnum.RUNE;
+  public get Mode(): ModeEnum {
+    return this.mode;
+  }
 
   // 技能
   protected ability_1: CDOTABaseAbility | undefined;
@@ -21,7 +30,6 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected ability_5: CDOTABaseAbility | undefined;
   protected ability_utli: CDOTABaseAbility | undefined;
 
-  protected hero: CDOTA_BaseNPC_Hero;
   protected heroState = {
     currentHealth: 0,
     maxHealth: 0,
