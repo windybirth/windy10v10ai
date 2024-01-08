@@ -489,7 +489,7 @@
 		{
 			"radius"
 				{
-					"value"		"1100"
+					"value"		"900"
 				}
 				"armor_reduction_pct"	    "100 100 100 100 100"
 				"magic_resistance_pct"		"100 100 100 100 100"
