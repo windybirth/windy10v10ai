@@ -3931,6 +3931,8 @@
 	// 巨浪
 	"tidehunter_gush"
 	{
+		"LinkedAbility"                 "dark_seer_vacuum"
+		"AbilityDraftPreAbility"        "dark_seer_vacuum"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12"
 		"AbilityDuration"				"4.0"
@@ -3964,22 +3966,23 @@
 	"tidehunter_kraken_shell"
 	{
 		"MaxLevel" "5"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"damage_reduction"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_reduction"		"20 40 60 80 100"
-				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_4"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"				"40 80 120 160 200"
 			}
-			"02"
+			"damage_cleanse"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_cleanse"		"600 550 500 450 400"
-				"LinkedSpecialBonus"	"special_bonus_unique_tidehunter_6"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"		"600 550 500 450 400"
+				"special_bonus_unique_tidehunter_6"	"-100"
+
+			}
+			"damage_reset_interval"	"7.0"
+			"bonus_reduction_per_stack"
+			{
+				"value"				"0"
+				"special_bonus_unique_tidehunter_4"	"+40"
 			}
 		}
 	}
@@ -4034,6 +4037,41 @@
 				"special_bonus_unique_tidehunter_7"	"+0.8"
 			}
 		}
+	}
+	"tidehunter_arm_of_the_deep"
+	{
+		"AbilityCooldown"				"10"
+		"AbilityValues"
+		{
+			"projectile_width"				"150"
+			"damage_pct"					"100"
+			"duration_pct"					"100"
+			"range_pct"						"100"
+		}
+	}
+	// 真空（来自黑贤）
+	"dark_seer_vacuum"
+	{
+		"LinkedAbility"                 "tidehunter_gush"
+		"AbilityDraftPreAbility"        "tidehunter_gush"
+		"MaxLevel"                      "5"
+		"AbilityCastRange"				"500 600 700 800 900"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCooldown"				"30 25 20 15 10"
+		"AbilityManaCost"				"60 90 120 150 180"
+		"AbilityValues"
+		{
+				"radius"
+				{
+					"value"		"350 450 550 650 750"
+					"LinkedSpecialBonus"	"special_bonus_unique_dark_seer_2"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"				"0.3 0.4 0.6 0.8 1.0"
+				"damage"				"140 260 380 500 620"
+				"radius_tree"				"150"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 	//=================================================================================================================
 	// Ability: Tiny 小小
@@ -4500,6 +4538,8 @@
 	// 法力损毁
 	"antimage_mana_break"
 	{
+		"LinkedAbility"              "brewmaster_drunken_brawler"
+		"AbilityDraftPreAbility"     "brewmaster_drunken_brawler"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
@@ -4507,22 +4547,50 @@
 			"mana_per_hit"			"25 30 35 40 45"
 			"mana_per_hit_pct"
 			{
-				"value"		"1.6 2.4 3.2 4 4.8"
-				"special_bonus_unique_antimage_7"	"+1"
+				"value"		"2.0 3.0 4.0 5.0 6.0"
+				"special_bonus_unique_antimage_7"	"+2"
 			}
-			"move_slow"				"25 30 35 40 45"
+			"move_slow"				"25 30 40 50 60"
+		}
+	}
+	// 醉拳（来自酒仙）
+	"brewmaster_drunken_brawler"
+	{
+		"LinkedAbility"              "antimage_mana_break"
+		"AbilityDraftPreAbility"     "antimage_mana_break"
+		"MaxLevel"              "5"
+		"AbilityValues"
+		{
+			"dodge_chance"		"10 20 30 40 50"
+			"crit_chance"				"50"
+			"active_multiplier"
+			{
+				"value"						"3.5"
+				"special_bonus_unique_brewmaster_8"		"+1"
+			}
+			"crit_multiplier"			"120 150 200 250 300"
+			"attack_speed"	"20 30 40 50 60"
+			"magic_resist"	"5 10 15 20 25"
+			"armor"		"3 5 7 9 11"
+			"movespeed"				"10 15 20 25 30"
+			"slow_duration"				"2"
+			"bonus_move_speed"		"5 7 9 11 13"
+			"bonus_status_resist"	"10 20 30 40 50"
+
 		}
 	}
 	// 闪烁
 	"antimage_blink"
 	{
+		"LinkedAbility"              "visage_gravekeepers_cloak"
+		"AbilityDraftPreAbility"     "visage_gravekeepers_cloak"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
 				{
 					"value"			"14 12 10 8 6"
-					"special_bonus_unique_antimage"	"-1"
+					"special_bonus_unique_antimage"	"-2"
 				}
 				"AbilityCastRange"
 				{
@@ -4536,7 +4604,7 @@
 	"antimage_counterspell"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15 12 9 6 3"
+		"AbilityCooldown"				"10 8 6 4 2"
 		"AbilityManaCost"				"40 45 50 55 60"
 		"AbilityValues"
 		{
@@ -4547,6 +4615,65 @@
 			}
 		}
 	}
+	// 陵卫斗篷（来自死灵龙）
+	"visage_gravekeepers_cloak"
+	{
+		"LinkedAbility"              "antimage_blink"
+		"AbilityDraftPreAbility"     "antimage_blink"
+		"MaxLevel" "5"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"max_layers"						"9"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"damage_reduction"					"8 12 16 20 30"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"recovery_time"						"6 5 4 3 2"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"minimum_damage"					"0"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"radius"							"900"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"max_damage_reduction"					"100"
+			}
+			"07"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"shard_hp_restoration_pct"				"100"
+				"RequiresShard"						"1"
+			}
+			"08"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"shard_cooldown"				"40"
+				"RequiresShard"						"1"
+			}
+			"09"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"shard_manacost"				"125"
+				"RequiresShard"						"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
 	// 法力虚空
 	"antimage_mana_void"
 	{
@@ -4556,18 +4683,18 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"			"60"
+				"value"			"50"
 				"special_bonus_unique_antimage_2"	"-40"
 			}
 			"mana_void_damage_per_mana"
 			{
-				"value"				"0.9 1.0 1.1 1.2"
-				"special_bonus_unique_antimage_6"	"+0.2"
+				"value"				"1.0 2.0 3.0 4.0"
+				"special_bonus_unique_antimage_6"	"+1.0"
 			}
 			"mana_void_ministun"
 			{
-				"value"					"0.3"
-				"special_bonus_unique_antimage_8" "+0.7"
+				"value"					"0.5"
+				"special_bonus_unique_antimage_8" "+1.0"
 			}
 		}
 	}
@@ -8548,6 +8675,8 @@
 	// 叠油
 	"batrider_sticky_napalm"
 	{
+		"LinkedAbility"                 "dark_seer_ion_shell"
+		"AbilityDraftPreAbility"        "dark_seer_ion_shell"
 		"MaxLevel" "5"
 		"AbilityCastRange"				"550 600 650 700 750"
 		"AbilityValues"
@@ -8567,6 +8696,45 @@
 				"RequiresShard"			"1"
 			}
 		}
+	}
+	// 离子烫(来自黑贤)
+	"dark_seer_ion_shell"
+	{
+		"LinkedAbility"                 "batrider_sticky_napalm"
+		"AbilityDraftPreAbility"        "batrider_sticky_napalm"
+		"MaxLevel" "5"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"										"400"
+			}
+			"damage_per_second"
+			{
+				"value"										"80 100 120 140 160"
+				"special_bonus_unique_dark_seer"			"+50"
+			}
+			"duration"
+			{
+				"value"										"21 24 27 30"
+				"special_bonus_unique_dark_seer_15"						"+15"
+			}
+
+			"tick_interval"									"0.1"
+
+			"AbilityCharges"
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_14"						"+2"
+			}
+			"bonus_health"
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_6"						"+1500"
+			}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 燃烧弹
 	"batrider_flamebreak"

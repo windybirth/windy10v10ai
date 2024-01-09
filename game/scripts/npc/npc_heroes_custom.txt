@@ -424,6 +424,18 @@
 		"AttackRate"    "1.7"
 	}
 
+	"npc_dota_hero_tidehunter"
+	{
+		"Ability2"      "dark_seer_vacuum"
+		"Ability5"      "tidehunter_arm_of_the_deep"
+		"Ability7"		"tidehunter_kraken_shell"
+	}
+
+	"npc_dota_hero_batrider"
+	{
+		"Ability5"      "dark_seer_ion_shell"
+	}
+
 	"npc_dota_hero_tinker"
 	{
 		"Ability6"		"tinker_rearm_lua"
@@ -625,8 +637,8 @@
 	}
     "npc_dota_hero_antimage"
 	{
-		"Ability4"		"generic_hidden"
-		"Ability5"		"generic_hidden"
+		"Ability4"		"brewmaster_drunken_brawler"
+		"Ability5"		"visage_gravekeepers_cloak"
 	}
 	"npc_dota_hero_axe"
 	{
