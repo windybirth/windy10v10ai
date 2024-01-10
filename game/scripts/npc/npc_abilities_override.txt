@@ -2007,11 +2007,72 @@
 			}
 		}
 	}
+	// 陵卫斗篷（来自死灵龙）
+	"visage_gravekeepers_cloak"
+	{
+		"LinkedAbility"              "legion_commander_moment_of_courage"
+		"AbilityDraftPreAbility"     "legion_commander_moment_of_courage"
+		"MaxLevel" "5"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"max_layers"						"9"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"damage_reduction"					"8 12 16 20 30"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"recovery_time"						"6 5 4 3 2"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"minimum_damage"					"0"
+			}
+			"05"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"radius"							"900"
+			}
+			"06"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"max_damage_reduction"					"100"
+			}
+			"07"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"shard_hp_restoration_pct"				"100"
+				"RequiresShard"						"1"
+			}
+			"08"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"shard_cooldown"				"40"
+				"RequiresShard"						"1"
+			}
+			"09"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"shard_manacost"				"125"
+				"RequiresShard"						"1"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
 	// 勇气之霎
 	"legion_commander_moment_of_courage"
 	{
+		"LinkedAbility"              "visage_gravekeepers_cloak"
+		"AbilityDraftPreAbility"     "visage_gravekeepers_cloak"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"1.4 1.1 0.8 0.5 0.2"
+		"AbilityCooldown"				"1.2 0.9 0.6 0.3 0.1"
 		"AbilityValues"
 		{
 			"buff_duration"				"1.0"
@@ -2049,6 +2110,73 @@
             }
         }
     }
+	// 决斗
+	"legion_commander_duel"
+	{
+		"MaxLevel" "4"
+		"AbilityCastRange"				"200 250 300 350"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0.0"
+		"AbilityValues"
+		{
+			"duration"				"3.75 4.5 5.25 6.0"
+			"duration_scepter"
+			{
+				"value"			"5.5 6.5 7.5 8.5"
+				"RequiresScepter"	"1"
+			}
+			"reward_damage"
+			{
+				"value"			"20 30 40 50"
+				"special_bonus_shard"	"+20"
+			}
+			"victory_range"			"1200"
+			"scepter_damage_reduction_pct"
+			{
+				"value"				"50"
+				"RequiresScepter"						"1"
+			}
+			"AbilityCooldown"
+			{
+				"value"					"55 50 45 40"
+				"special_bonus_scepter"			"-20"
+			}
+			"shard_duel_damage_bonus"
+			{
+				"value"			"20"
+				"RequiresShard"	"1"
+			}
+
+		}
+	}
+	// 静如古墓（维萨吉a杖）
+	"visage_silent_as_the_grave"
+	{
+		"AbilityCooldown"				"20.0"
+		"AbilityManaCost"				"100"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"bonus_duration"						"8"
+			}
+			"02"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"bonus_damage"						"50"
+			}
+			"03"
+			{
+				"var_type"							"FIELD_FLOAT"
+				"invis_duration"					"35.0"
+			}
+			"04"
+			{
+				"var_type"							"FIELD_INTEGER"
+				"movespeed_bonus"					"30"
+			}
+		}
+	}
 	//=================================================================================================================
 	// Ability: Lifestealer 噬魂鬼/小狗
 	//=================================================================================================================
@@ -2370,6 +2498,8 @@
 	// 健体术
 	"marci_guardian"
 	{
+		"LinkedAbility"                 "broodmother_insatiable_hunger"
+		"AbilityDraftPreAbility"        "broodmother_insatiable_hunger"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"28 24 20 16 12"
 		"AbilityManaCost"				"70 80 90 100 110"
@@ -2389,15 +2519,57 @@
 			}
 		}
 	}
+	// 极度饥渴
+	"broodmother_insatiable_hunger"
+	{
+		"LinkedAbility"                 "marci_guardian"
+		"AbilityDraftPreAbility"        "marci_guardian"
+		"MaxLevel"                      "5"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.1 0"
+		"AbilityCooldown"				"40 35 30 25 20"
+		"AbilityValues"
+		{
+			"bonus_damage"
+			{
+				"value"					"50 60 70 80 100"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"lifesteal_pct"
+			{
+				"value"				"40 60 80 100"
+			}
+			"creep_lifesteal_reduction_pct"		"40"
+			"duration"
+			{
+				"value"		"10 12 14 16 18"
+				"special_bonus_shard"	"+2"
+			}
+			"bat_bonus"
+			{
+				"value"				"0.3"
+				"special_bonus_unique_broodmother_1" "+0.3"
+			}
+			"shard_damage_per_tick"
+			{
+				"value"						"8"
+				"special_bonus_shard"		"+4"
+			}
+			"shard_damage_tick_interval"
+			{
+					"value"				"1"
+					"RequiresShard"		"1"
+			}
+		}
+	}
 	// 怒券破
 	"marci_unleash"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 70 60 50"
+		"AbilityCooldown"				"70 60 50 40"
 		"AbilityManaCost"				"100 125 150 175"
 		"AbilityValues"
 		{
-				"charges_per_flurry"	"3 4 5 6"
+				"charges_per_flurry"	"10 20 30 40"
 				"flurry_bonus_attack_speed"	"700 975 1325 1600"
 				"time_between_flurries"	"1.0"
 				"pulse_damage"			"50 100 150 200"
@@ -4561,8 +4733,8 @@
 		"MaxLevel"              "5"
 		"AbilityValues"
 		{
-			"dodge_chance"		"10 20 30 40 50"
-			"crit_chance"				"50"
+			"dodge_chance"		"10 15 20 25 30"
+			"crit_chance"				"30"
 			"active_multiplier"
 			{
 				"value"						"3.5"
@@ -4571,19 +4743,18 @@
 			"crit_multiplier"			"120 150 200 250 300"
 			"attack_speed"	"20 30 40 50 60"
 			"magic_resist"	"5 10 15 20 25"
-			"armor"		"3 5 7 9 11"
+			"armor"		"3 6 9 12 15"
 			"movespeed"				"10 15 20 25 30"
 			"slow_duration"				"2"
 			"bonus_move_speed"		"5 7 9 11 13"
-			"bonus_status_resist"	"10 20 30 40 50"
-
+			"bonus_status_resist"	"10 15 20 25 30"
 		}
 	}
 	// 闪烁
 	"antimage_blink"
 	{
-		"LinkedAbility"              "visage_gravekeepers_cloak"
-		"AbilityDraftPreAbility"     "visage_gravekeepers_cloak"
+		"LinkedAbility"              "brewmaster_cinder_brew"
+		"AbilityDraftPreAbility"     "brewmaster_cinder_brew"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
@@ -4600,6 +4771,36 @@
 				"min_blink_range"		"200"
 		}
 	}
+	// 余烬佳酿（酒仙）
+	"brewmaster_cinder_brew"
+	{
+		"LinkedAbility"              "antimage_blink"
+		"AbilityDraftPreAbility"     "antimage_blink"
+		"MaxLevel"                      "5"
+		"AbilityCooldown"				"22 19 16 13 10"
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value"		"10"
+				"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_5"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"total_damage"
+			{
+				"value"			"80 160 240 320 400"
+				"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_5"
+				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+			}
+			"movement_slow"				"24 28 32 36 40"
+			"radius"
+			{	"value"			"400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"extra_duration"					"3"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+	}
 	// 法术反制
 	"antimage_counterspell"
 	{
@@ -4614,65 +4815,6 @@
 				"special_bonus_unique_antimage_4"	"+20"
 			}
 		}
-	}
-	// 陵卫斗篷（来自死灵龙）
-	"visage_gravekeepers_cloak"
-	{
-		"LinkedAbility"              "antimage_blink"
-		"AbilityDraftPreAbility"     "antimage_blink"
-		"MaxLevel" "5"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"max_layers"						"9"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"damage_reduction"					"8 12 16 20 30"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"recovery_time"						"6 5 4 3 2"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"minimum_damage"					"0"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"radius"							"900"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"max_damage_reduction"					"100"
-			}
-			"07"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"shard_hp_restoration_pct"				"100"
-				"RequiresShard"						"1"
-			}
-			"08"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"shard_cooldown"				"40"
-				"RequiresShard"						"1"
-			}
-			"09"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"shard_manacost"				"125"
-				"RequiresShard"						"1"
-			}
-		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	// 法力虚空
 	"antimage_mana_void"
@@ -5690,7 +5832,7 @@
 	{
 		"LinkedAbility"                 "marci_unleash_final"
 		"AbilityDraftPreAbility"        "marci_unleash_final"
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilityCooldown"				"90"
 		"AbilityManaCost"				"250 300 350 400"
 		"AbilitySpecial"
@@ -5719,7 +5861,7 @@
 	{
 		"LinkedAbility"                 "juggernaut_omni_slash"
 		"AbilityDraftPreAbility"        "juggernaut_omni_slash"
-		"MaxLevel"                      "5"
+		"MaxLevel"                      "4"
 		"BaseClass"                     "marci_unleash"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -5729,13 +5871,13 @@
 		"AbilitySound"					"Hero_Marci.Unleash.Cast"
 		"HasScepterUpgrade"				"1"
 		"AbilityCastPoint"				"0"
-		"AbilityCooldown"				"90 80 70 60 50"
-		"AbilityManaCost"				"100 125 150 175 200"
+		"AbilityCooldown"				"80 70 60 50"
+		"AbilityManaCost"				"125 150 175 200"
 		"AbilityValues"
 		{
 			"duration"				"8"
-			"charges_per_flurry"	"10 15 20 25 30"
-			"flurry_bonus_attack_speed"	"700 1000 1300 1600 1900"
+			"charges_per_flurry"	"15 20 25 30"
+			"flurry_bonus_attack_speed"	"700 1000 1300 1600"
 			"time_between_flurries"	"1.5"
 			"pulse_radius"
 			{
@@ -5749,7 +5891,7 @@
 				"CalculateSpellDamageTooltip" "1"
 			}
 			"pulse_move_slow_pct"	"30.0"
-			"pulse_attack_slow_pct"	"60.0 70.0 80.0 90.0 100.0"
+			"pulse_attack_slow_pct"	"60.0 70.0 80.0 90.0"
 			"max_time_window_per_hit"	"1.0"
 			"bonus_movespeed"
 			{
@@ -6420,19 +6562,35 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage"			"-70 -65 -60 -55 -50"
+				"outgoing_damage"			"-70 -50 -30 -15 0"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_4"
 			}
 			"03"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"outgoing_damage_tooltip"	"30 35 40 45 50"
+				"outgoing_damage_tooltip"	"30 50 70 85 100"
 				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren_4"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"incoming_damage"			"-80"
 			}
 			"05"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"tooltip_incoming_damage_total_pct"			"300"
+				"tooltip_incoming_damage_total_pct"			"20"
+			}
+			"06"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"images_count"				"3 3 3 3 3"
+				"LinkedSpecialBonus"		"special_bonus_unique_naga_siren"
+			}
+			"07"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"invuln_duration"			"0.5"
 			}
 		}
 	}
@@ -6471,12 +6629,19 @@
 	// 激流
 	"naga_siren_rip_tide"
 	{
+		"LinkedAbility"                 "phantom_lancer_phantom_edge"
+		"AbilityDraftPreAbility"        "phantom_lancer_phantom_edge"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
+			"hits"
+			{
+				"value"											"4"
+				"special_bonus_unique_naga_siren_3"				"-2"
+			}
 			"armor_reduction"
 			{
-				"value"					"-2 -4 -6 -8 -10"
+				"value"					"-4 -8 -12 -16 -20"
 			}
 			"damage"
 			{
@@ -6528,9 +6693,39 @@
 			"02"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"crit"			"120"
+				"crit"			"200"
 			}
 		}
+	}
+	// 幻影冲锋（幻影长矛手）
+	"phantom_lancer_phantom_edge"
+	{
+		"LinkedAbility"                 "naga_siren_rip_tide"
+		"AbilityDraftPreAbility"        "naga_siren_rip_tide"
+		"MaxLevel"                      "5"
+		"AbilityCooldown"				"12 9 6 3 0"
+		"AbilityValues"
+		{
+				"min_distance"		"0"
+				"max_distance"
+				{
+					"value"				"1000 1500 2000 2500 3000"
+					"LinkedSpecialBonus"		"special_bonus_unique_phantom_lancer"
+				}
+				"bonus_speed"		"1000"
+				"bonus_agility"
+				{
+					"value"				"20 30 40 50 60"
+					"special_bonus_unique_phantom_lancer_phantom_rush_agility"			"10"
+
+				}
+				"agility_duration"
+				{
+					"value"			"5"
+					"special_bonus_unique_phantom_lancer_2"		"+2.5"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	//=================================================================================================================
 	// Ability: Nevermore 影魔/SF
@@ -8445,6 +8640,8 @@
 	// 连击
 	"weaver_geminate_attack"
 	{
+		"LinkedAbility"                 "chen_penitence"
+		"AbilityDraftPreAbility"        "chen_penitence"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"8 6.5 5 3.5 2"
 		"AbilitySpecial"
@@ -8454,6 +8651,45 @@
 				"var_type"				"FIELD_INTEGER"
 				"bonus_damage"			"15 30 45 60 75"
 				"LinkedSpecialBonus"	"special_bonus_unique_weaver_2"
+			}
+		}
+	}
+	// 赎罪（陈）
+	"chen_penitence"
+	{
+		"LinkedAbility"                 "weaver_geminate_attack"
+		"AbilityDraftPreAbility"        "weaver_geminate_attack"
+		"MaxLevel" "5"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCastPoint"				"0.3 0.3 0.2 0.1 0"
+		"AbilityCastRange"				"2000"
+		"AbilityCooldown"				"14.0 13.0 12.0 11.0 10.0"
+		"AbilityValues"
+		{
+			"duration"				"8 10 12 14 16"
+			"speed"					"2000"
+			"bonus_movement_speed"
+			{
+				"value"	"-12 -20 -30 -40 -50"
+			}
+			"bonus_attack_speed"	"20 40 60 80 100"
+			"damage"
+			{
+				"value"					"225"
+			}
+			"self_attack_range_bonus"			"50 150 250 350 450"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	"special_bonus_unique_weaver_5"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"2"
+				"ad_linked_abilities"			"weaver_geminate_attack"
 			}
 		}
 	}
@@ -9552,6 +9788,8 @@
 	// 幻影之拥
 	"grimstroke_ink_creature"
 	{
+		"LinkedAbility"                 "visage_soul_assumption"
+		"AbilityDraftPreAbility"        "visage_soul_assumption"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"22 19 16 13 10"
 		"AbilityManaCost"				"120 140 160 180 200"
@@ -9585,6 +9823,41 @@
 				"pop_damage"				"280 360 440 520 600"
 			}
 		}
+	}
+	// 灵魂超度（维萨吉）
+	"visage_soul_assumption"
+	{
+		"LinkedAbility"                 "grimstroke_ink_creature"
+		"AbilityDraftPreAbility"        "grimstroke_ink_creature"
+		"MaxLevel"                      "5"
+		"AbilityCastPoint"				"0.2 0.2 0.2 0.1 0"
+		"AbilityCooldown"				"2"
+		"AbilityCastRange"				"1500"
+		"AbilityValues"
+		{
+				"bolt_speed"				"2000"
+				"soul_base_damage"			"80"
+				"soul_charge_damage"
+				{
+					"value"			"80"
+					"LinkedSpecialBonus"		"special_bonus_unique_visage_4"
+				}
+				"stack_limit"				"4 6 8 10 12"
+				"stack_duration"			"10.0"
+				"damage_limit"
+				{
+					"value"			"200"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+				}
+				"radius"
+				{
+					"value"			"2500"
+					"affected_by_aoe_increase"	"1"
+				}
+				"damage_min"				"2.0"
+				"damage_max"				"3000.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 墨涌
 	"grimstroke_spirit_walk"
@@ -10743,6 +11016,8 @@
 	// 虚妄之诺
 	"oracle_false_promise"
 	{
+		"LinkedAbility"                 "chen_hand_of_god"
+		"AbilityDraftPreAbility"        "chen_hand_of_god"
 		"MaxLevel" "4"
 		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityManaCost"				"100 150 200 250"
@@ -10767,6 +11042,40 @@
 			{
 				"value"							"100 125 150 175"
 				"special_bonus_shard"			"+25"
+			}
+		}
+	}
+	// 上帝之手（陈）
+	"chen_hand_of_god"
+	{
+		"LinkedAbility"                 "oracle_false_promise"
+		"AbilityDraftPreAbility"        "oracle_false_promise"
+		"MaxLevel"                      "5"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0.0"
+		"AbilityCooldown"				"50 40 30 20"
+		"AbilityManaCost"				"200 300 400 500"
+		"AbilityValues"
+		{
+			"heal_amount"
+			{
+				"value"							"700 1000 1300 1600"
+				"special_bonus_unique_chen_2"	"+200"
+			}
+			"hot_duration"	"10"
+			"heal_per_second"
+			{
+				"value"							"40 60 80 100"
+				"special_bonus_unique_chen_2"	"+10"
+			}
+			"ancient_creeps_scepter"
+			{
+				"value"	"1 2 3 4"
+				"RequiresShard"			"1"
+			}
+			"does_purge"
+			{
+				"value"				"0"
+				"special_bonus_unique_chen_12"		"+1"
 			}
 		}
 	}

@@ -492,7 +492,14 @@
 
 	"npc_dota_hero_naga_siren"
 	{
-		"Ability5"		"naga_siren_crit"
+		"Ability7"		"naga_siren_crit"
+		"Ability5"      "phantom_lancer_phantom_edge"
+	}
+
+	"npc_dota_hero_grimstroke"
+	{
+		"Ability5"      "visage_soul_assumption"
+		"Ability10"     "special_bonus_unique_visage_3"
 	}
 
 	"npc_dota_hero_keeper_of_the_light"
@@ -520,6 +527,8 @@
 
 	"npc_dota_hero_legion_commander"
     {
+		"Ability4"      "visage_silent_as_the_grave"
+		"Ability5"      "visage_gravekeepers_cloak"
         "Ability10"		"special_bonus_unique_legion_commander_2"
         "Ability11"		"special_bonus_strength_12"
         "Ability12"		"special_bonus_unique_legion_commander_6"
@@ -638,7 +647,7 @@
     "npc_dota_hero_antimage"
 	{
 		"Ability4"		"brewmaster_drunken_brawler"
-		"Ability5"		"visage_gravekeepers_cloak"
+		"Ability5"		"brewmaster_cinder_brew"
 	}
 	"npc_dota_hero_axe"
 	{
@@ -1270,6 +1279,12 @@
 			}
 		}
 	}
+
+	"npc_dota_hero_marci"
+	{
+		"Ability4"      "broodmother_insatiable_hunger"
+	}
+
 	"npc_dota_hero_juggernaut"
 	{
 		"DisableWearables" 			"1"
@@ -1840,6 +1855,7 @@
 	}
 	"npc_dota_hero_oracle"
 	{
+		"Ability12"     "special_bonus_unique_chen_12"
 		"Bot"
 		{
 			"Build"
@@ -2597,6 +2613,7 @@
 	}
 	"npc_dota_hero_weaver"
 	{
+		"Ability4"       "chen_penitence"
 		"AttackRate"     "1.6"
 		"MovementSpeed"  "290"
 	}
