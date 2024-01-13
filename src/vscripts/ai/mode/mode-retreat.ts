@@ -16,8 +16,8 @@ export class ModeRetreat extends ModeBase {
     const curretHealthPercentage = heroAI.GetHero().GetHealthPercent();
     desire = (100 - curretHealthPercentage) / 100;
 
-    // 游戏开始前，在防御塔攻击范围内，desire为1
-    if (heroAI.gameTime < 300) {
+    // 英雄小于6级，在防御塔攻击范围内，desire为1
+    if (heroAI.GetHero().GetLevel() < 6) {
       const nearestTower = heroAI.FindNearestEnemyBuildingsInvulnerable();
       if (nearestTower) {
         const distanceThanRange = ActionAttack.GetDistanceToAttackRange(
@@ -28,7 +28,7 @@ export class ModeRetreat extends ModeBase {
         const towerBufferRange = 600;
         const distanceThanRangeWithBuffer = distanceThanRange - towerBufferRange;
 
-        // 靠近防御塔攻击范围+400以内时，每减少100，desire增加0.1
+        // 靠近防御塔攻击范围+600以内时，每减少100，desire增加0.1
         if (distanceThanRangeWithBuffer <= 0) {
           desire += Math.floor(-distanceThanRangeWithBuffer / 100) * 0.1;
         }

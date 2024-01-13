@@ -13,28 +13,44 @@ export class ModeAttack extends ModeBase {
     if (heroAI.mode === ModeEnum.RETREAT) {
       desire -= 0.4;
     }
-    if (heroAI.mode === ModeEnum.ATTACK) {
+    if (heroAI.mode === ModeEnum.LANING) {
+      desire -= 0.1;
+    }
+    if (heroAI.mode === ModeEnum.PUSH) {
       desire += 0.1;
     }
+    if (heroAI.mode === ModeEnum.ATTACK) {
+      desire += 0.2;
+    }
 
-    if (dotaTime < 1) {
-      // 0:00
-      const nearestHero = heroAI.FindNearestEnemyHero();
-      if (nearestHero) {
-        const nearestTower = heroAI.FindNearestEnemyBuildingsInvulnerable();
-        if (nearestTower) {
-          const distanceToTowerRange = ActionAttack.GetDistanceToAttackRange(
-            nearestTower,
-            heroAI.GetHero(),
-          );
-          if (distanceToTowerRange > 400) {
-            desire += 0.61;
-          }
-        } else {
-          desire += 0.65;
-        }
+    if (dotaTime < 180) {
+      if (this.HasEnemyNotNearTower(heroAI)) {
+        desire += 0.7;
       }
     }
     return desire;
+  }
+
+  HasEnemyNotNearTower(heroAI: BaseHeroAIModifier): boolean {
+    const nearestHero = heroAI.FindNearestEnemyHero();
+    if (!nearestHero) {
+      return false;
+    }
+    const nearestTower = heroAI.FindNearestEnemyBuildingsInvulnerable();
+    if (nearestTower) {
+      const isNearestHeroInTowerRange = ActionAttack.IsInAttackRange(nearestTower, nearestHero);
+      if (isNearestHeroInTowerRange) {
+        return false;
+      }
+
+      const distanceToTowerRange = ActionAttack.GetDistanceToAttackRange(
+        nearestTower,
+        heroAI.GetHero(),
+      );
+      if (distanceToTowerRange < 400) {
+        return false;
+      }
+    }
+    return true;
   }
 }
