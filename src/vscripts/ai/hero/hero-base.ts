@@ -135,10 +135,9 @@ export class BaseHeroAIModifier extends BaseModifier {
   ThinkRetreat(): void {
     const enemyTower = this.FindNearestEnemyTowerInvulnerable();
     if (enemyTower) {
-      print(`[AI] HeroBase ThinkRetreat ${this.hero.GetUnitName()} 撤退`);
-      const direction = HeroUtil.GetDirectionAwayFromEnemies(this.hero, enemyTower);
-      ActionMove.MoveHeroToDirection(this.hero, direction, 100);
-      return;
+      if (ActionMove.GetAwayFromTower(this.hero, enemyTower)) {
+        return;
+      }
     }
   }
 
@@ -150,9 +149,8 @@ export class BaseHeroAIModifier extends BaseModifier {
     const enemyHero = this.FindNearestEnemyHero();
     const enemyBuild = this.FindNearestEnemyBuildings();
     if (enemyBuild) {
-      // TODO 偷塔保护时 不A塔
-      if (enemyBuild.HasModifier("backdoor_protection")) {
-        print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()} 塔有保护，不攻击`);
+      if (enemyBuild.HasModifier("modifier_backdoor_protection_active")) {
+        print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()} 偷塔保护，不攻击`);
         return;
       }
       const distanceToBuild = HeroUtil.GetDistanceToAttackRange(this.hero, enemyBuild);
@@ -168,6 +166,17 @@ export class BaseHeroAIModifier extends BaseModifier {
         return;
       }
     }
+  }
+
+  ThinkPushKillCreep(): void {
+    // TODO 攻击小兵，技能清兵，根据英雄继承后实装
+    // const enemyCreep = this.FindNearestEnemyCreep();
+    // if (enemyCreep) {
+    //   if (ActionAttack.Attack(this.hero, enemyCreep)) {
+    //     print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()} 攻击小兵`);
+    //     return;
+    //   }
+    // }
   }
 
   NoAction(): boolean {
