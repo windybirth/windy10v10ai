@@ -2120,6 +2120,7 @@
 				"value"				"10"
 				"ad_linked_abilities"			"legion_commander_duel"
 			}
+		}
 	}
 	// 决斗
 	"legion_commander_duel"
