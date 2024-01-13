@@ -234,10 +234,10 @@ function InitN4Setting() {
 }
 function InitN5Setting() {
   $("#player_gold_xp_multiplier_dropdown").SetSelected("1.5");
-  $("#bot_gold_xp_multiplier_dropdown").SetSelected("10");
+  $("#bot_gold_xp_multiplier_dropdown").SetSelected("15");
 
-  $("#tower_power_dropdown").SetSelected("9");
-  $("#tower_endure_dropdown").SetSelected("9");
+  $("#tower_power_dropdown").SetSelected("10");
+  $("#tower_endure_dropdown").SetSelected("10");
 
   $("#starting_gold_player_dropdown").SetSelected("3000");
   $("#starting_gold_bot_dropdown").SetSelected("5000");
@@ -312,7 +312,7 @@ function OnGameOptionsChange() {
       seasonPointMulti = "1.8";
       break;
     case 5:
-      seasonPointMulti = "2.0";
+      seasonPointMulti = "3.0";
       break;
     case 6:
       seasonPointMulti = "3.0";

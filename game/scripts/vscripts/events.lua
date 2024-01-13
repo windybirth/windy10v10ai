@@ -981,7 +981,7 @@ function AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
     elseif difficulty == 4 then
         points = points * 1.8
     elseif difficulty == 5 then
-        points = points * 2.0
+        points = points * 3.0
     elseif difficulty == 6 then
         points = points * 3.0
     end

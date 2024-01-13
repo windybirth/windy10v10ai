@@ -2110,6 +2110,17 @@
             }
         }
     }
+	"special_bonus_unique_legion_commander"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"10"
+				"ad_linked_abilities"			"legion_commander_duel"
+			}
+	}
 	// 决斗
 	"legion_commander_duel"
 	{
@@ -2126,8 +2137,8 @@
 			}
 			"reward_damage"
 			{
-				"value"			"20 30 40 50"
-				"special_bonus_shard"	"+20"
+				"value"			"10 20 30 40"
+				"special_bonus_shard"	"+10"
 			}
 			"victory_range"			"1200"
 			"scepter_damage_reduction_pct"
@@ -2142,7 +2153,7 @@
 			}
 			"shard_duel_damage_bonus"
 			{
-				"value"			"20"
+				"value"			"10"
 				"RequiresShard"	"1"
 			}
 
@@ -2569,7 +2580,7 @@
 		"AbilityManaCost"				"100 125 150 175"
 		"AbilityValues"
 		{
-				"charges_per_flurry"	"10 20 30 40"
+				"charges_per_flurry"	"15 20 25 30"
 				"flurry_bonus_attack_speed"	"700 975 1325 1600"
 				"time_between_flurries"	"1.0"
 				"pulse_damage"			"50 100 150 200"
