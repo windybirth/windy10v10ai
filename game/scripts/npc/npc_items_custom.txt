@@ -2487,7 +2487,7 @@
 			"07"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_base"    "-6"
+				"aura_damage_reduction_base"    "-15"
 			}
 			"08"
 			{
@@ -2502,7 +2502,7 @@
 			"10"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_buff"    "-9"
+				"aura_damage_reduction_buff"    "-60"
 			}
 			"11"
 			{
@@ -4372,7 +4372,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2100"
+		"ItemCost"						"1200"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -4585,7 +4585,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2550"
+		"ItemCost"						"3450"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -4789,6 +4789,7 @@
 		"ItemRequirements"
 		{
 			"01"						"item_wasp_despotic;item_wasp_callous"
+			"02"                        "item_wasp_despotic;item_butterfly_2"
 		}
 	}
 
@@ -6580,10 +6581,10 @@
 		"ID"                            "9600"
 		"BaseClass"                     "item_minotaur_horn"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"				"90.0"
+		"AbilityCooldown"				"60.0"
 		"AbilityManaCost"				"250"
 
-		"ItemCost"						"10000"
+		"ItemCost"						"4000"
 		"ItemPurchasable"				"1"
 		"ItemSellable"				    "1"
 		"ItemIsNeutralDrop"				"0"
@@ -6596,6 +6597,158 @@
 		{
 			"bonus_strength"			"60"
 			"duration"					"10"
+		}
+	}
+
+	//=================================================================================================================
+	// 圣斧2 Parasma 2
+	//=================================================================================================================
+	"item_recipe_devastator_2"
+	{
+		"BaseClass"                     "item_recipe_devastator"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_devastator_2"
+		"ItemRequirements"
+		{
+			"01"						"item_devastator;item_devastator"
+		}
+	}
+	"item_devastator_2"
+	{
+		"BaseClass"                     "item_devastator"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCooldown"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"bonus_intellect"		"90"
+				"bonus_attack_speed"	"80"
+				"bonus_armor"			"32"
+				"bonus_mana_regen"		"4.5"
+				"projectile_speed"		"300"
+				"int_damage_multiplier"	"3"
+				"slow"	"50"
+				"slow_duration"	"4"
+				"active_mres_reduction"		"70"
+				"passive_cooldown"		"0"
+		}
+	}
+
+	//=================================================================================================================
+	// 大炮2 Recipe: Greater Crit
+	//=================================================================================================================
+	"item_recipe_greater_crit_2"
+	{
+		"BaseClass"                     "item_recipe_greater_crit"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_greater_crit_2"
+		"ItemRequirements"
+		{
+			"01"						"item_greater_crit;item_greater_crit;item_greater_crit"
+		}
+	}
+
+	"item_greater_crit_2"
+	{
+		"BaseClass"                     "item_greater_crit"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_damage"			"300"
+			"crit_chance"			"66.7"
+			"crit_multiplier"		"400"
+		}
+	}
+
+	//=================================================================================================================
+	// 大鞋2 Guardian Greaves
+	//=================================================================================================================
+	"item_recipe_guardian_greaves_2"
+	{
+		"BaseClass"                     "item_recipe_guardian_greaves"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_guardian_greaves_2"
+		"ItemRequirements"
+		{
+			"01"						"item_guardian_greaves;item_guardian_greaves"
+		}
+	}
+
+	"item_guardian_greaves_2"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"		"16"
+			"mana_regen"		"6"
+			"aura_health_regen"		"10"
+			"aura_armor"		"12"
+			"aura_mana_regen"		"1.5"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"		"58"
+			"aura_mana_regen_bonus"		"20"
+			"aura_armor_bonus"			"32"
+			"aura_bonus_threshold"	"100"
+			"replenish_health"		"1400"
+			"replenish_mana"		"800"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"2"
+		}
+	}
+
+	//=================================================================================================================
+	// 蝴蝶2 Recipe: Butterfly
+	//=================================================================================================================
+	"item_recipe_butterfly_2"
+	{
+		"BaseClass"                     "item_recipe_butterfly"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly_2"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly;item_butterfly"
+		}
+	}
+
+	"item_butterfly_2"
+	{
+		"BaseClass"                     "item_butterfly"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_agility"			"99"
+			"bonus_evasion"			"99"
+			"bonus_attack_speed_pct"	"60"
+			"bonus_damage"	"100"
 		}
 	}
 

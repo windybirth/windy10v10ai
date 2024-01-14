@@ -77,6 +77,10 @@
 		"item"		"item_claymore"
 		"item"		"item_mithril_hammer"
 		"item"      "item_ethereal_blade_ultra"
+		"item"      "item_devastator_2"
+		"item"      "item_guardian_greaves_2"
+		"item"      "item_greater_crit_2"
+		"item"      "item_butterfly_2"
 	}
 
 	"misc"

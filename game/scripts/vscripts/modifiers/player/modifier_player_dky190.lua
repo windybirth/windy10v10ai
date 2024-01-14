@@ -6,8 +6,8 @@ function modifier_player_dky190:GetTexture() return "player/dky190_1" end
 
 function modifier_player_dky190:OnCreated()
     self.icd = 40
-    self.icastrange = 400
-    self.ikangxing = 40
+    self.icastrange = 200
+    self.ikangxing = -20
     self.imovespeed = 200
     self.ipctmanaregen = 3
 end
