@@ -8464,7 +8464,7 @@
 		"ItemShopTags"					""
 		"ItemQuality"					""
 		"ItemAliases"					""
-		"ItemPurchasable"				"1"
+		"ItemPurchasable"				"0"
 		"ItemSellable"				    "1"
 		"ShouldBeInitiallySuggested"	"1"
 		"AbilityValues"
