@@ -1891,20 +1891,6 @@
 		"DOTA_Tooltip_modifier_item_mjollnir_ultra_static"				"雷神重锤雷电冲击"
 		"DOTA_Tooltip_modifier_item_mjollnir_ultra_static_Description"	"受到攻击时有%dMODIFIER_PROPERTY_TOOLTIP%%%几率对攻击者和附近其他%dMODIFIER_PROPERTY_TOOLTIP%个敌方单位发出闪电攻击。"
 
-		// item_bloodstone_ultra 神圣血精石
-	    "DOTA_Tooltip_ability_item_bloodstone_ultra"						"<font color='#e03e2e'>神器·神圣血精石</font>"
-	    "DOTA_Tooltip_ability_item_bloodstone_ultra_Description"						"<h1>主动：血之契约</h1>血精石的技能吸血效果提升%lifesteal_multiplier%倍，并且造成伤害的相同百分比将转化为魔法。持续%buff_duration%秒。"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_Lore"								"血精石鲜红的色彩在战场上绝对不会被看错，拥有者似乎有无限的生命力和精力。"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_Note0"							"使用血之契约会使自身精疲力竭，持续40秒，在此期间无法再次享受血之契约的效果。"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_bonus_aoe"						"+$aoe_bonus"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_bonus_health"						"+$health"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_bonus_mana"						"+$mana"
-		"DOTA_Tooltip_ability_item_bloodstone_ultra_spell_lifesteal"					"%+$spell_lifesteal"
-		"DOTA_Tooltip_modifier_item_bloodstone_ultra_active"							"血之契约"
-		"DOTA_Tooltip_modifier_item_bloodstone_ultra_active_Description"				"每秒恢复%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点生命。"
-		"DOTA_Tooltip_modifier_item_bloodstone_ultra_drained"							"精疲力竭"
-		"DOTA_Tooltip_modifier_item_bloodstone_ultra_drained_Description"				"血之契约的加成效果不会施加给精疲力竭的单位。"
-
 		// item_blade_mail_ultra 天地同寿
 		"DOTA_Tooltip_Ability_item_blade_mail_ultra"	"<font color='#e03e2e'>神器·天地同寿</font>"
 		"DOTA_Tooltip_ability_item_blade_mail_ultra_Description"						"<h1>主动：自爆卡车</h1>%duration%秒内，反弹所有来源的伤害提升%active_reflection_pct%%%。\n<h1>被动：伤害反弹</h1>每次受到攻击时，反弹%passive_reflection_constant% + 所受攻击伤害的%passive_reflection_pct%%%。"

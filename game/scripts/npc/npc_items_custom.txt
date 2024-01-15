@@ -6782,7 +6782,7 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"1"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
-		"AbilityChannelTime"			"1"
+		"AbilityChannelTime"			"0.5"
 		"AbilityCastRange"				"1200"
 		"AbilityCooldown"				"16"
 		"AbilityManaCost"				"100"
@@ -6801,7 +6801,7 @@
 				"burn_dps_units"		"250"
 				"burn_slow"			"100"
 				"burn_duration"		"6"
-				"stun_duration"		"1.5"
+				"stun_duration"		"2.5"
 				"burn_interval"				"1.0"
 				"land_time"				".5"
 				"impact_radius"
@@ -8354,13 +8354,13 @@
 				"bonus_attack_speed"		"300"
 				"bonus_mana_regen"			"30"
 				"bonus_health_regen"		"65"
-				"silence_duration"			"5"
+				"silence_duration"			"10"
 				"silence_damage_percent"	"600"
 				"bonus_damage"				"200"
-				"duration"					"6"
+				"duration"					"10"
 				"spell_amp_debuff"			"70"
 				"proc_damage"				"600"
-				"proc_chance"				"40"
+				"proc_chance"				"100"
 		}
 	}
 
@@ -8417,48 +8417,6 @@
 			"chain_cooldown"		"0.2"
 			"max_charges"			"0"
 			"illusion_multiplier_pct"	"150"
-		}
-	}
-
-	//=================================================================================================================
-	// 神圣血精石 bloodstone ultra
-	//=================================================================================================================
-	"item_recipe_bloodstone_ultra"
-	{
-		"BaseClass"                     "item_recipe_bloodstone"
-		"ID"						    "9615"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"1000"
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_bloodstone_ultra"
-		"ItemRequirements"
-		{
-			"01"						"item_bloodstone;item_bloodstone_v2"
-		}
-	}
-	"item_bloodstone_ultra"
-	{
-		"BaseClass"                     "item_bloodstone"
-		"ID"						    "9616"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"FightRecapLevel"				"3"
-		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"20.0"
-		"AbilityManaCost"				"0"
-		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"AllowedInBackpack"				"1"
-		"ShouldBeSuggested"				"1"
-		"AbilityTextureName"            "bloodstone_ultra"
-		"AbilityValues"
-		{
-			"bonus_aoe"				"450"
-			"bonus_health"			"10000"
-			"bonus_mana"			"10000"
-			"spell_lifesteal"		"300"
-			"buff_duration"			"12"
-			"lifesteal_multiplier"	"10"
-			"hp_cost"				"0"
 		}
 	}
 
@@ -8633,7 +8591,7 @@
 				"duration"				"30"
 				"blast_agility_multiplier"			"4.5"
 				"blast_damage_base"			"500"
-				"duration_ally"				"99999"
+				"duration_ally"				"30"
 				"ethereal_damage_bonus"	"-100"
 				"projectile_speed"	"1275"
 		}

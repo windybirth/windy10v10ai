@@ -229,7 +229,6 @@
 		"item"		"item_excalibur"
 		"item"      "item_radiance_ultra"
 		"item"      "item_bloodthorn_ultra"
-		"item"      "item_bloodstone_ultra"
 		"item"      "item_mjollnir_ultra"
 		"item"      "item_blade_mail_ultra"
 		"item"      "item_satanic_ultra"

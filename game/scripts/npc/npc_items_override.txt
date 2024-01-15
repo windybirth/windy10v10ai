@@ -1400,12 +1400,12 @@
         "AbilityTextureName"			"item_bloodstone_v2"
 		"AbilityValues"
 		{
-				"bonus_aoe"				"150"
-				"bonus_health"			"1200"
-				"bonus_mana"			"1200"
-				"spell_lifesteal"		"50"
-				"buff_duration"			"6"
-				"lifesteal_multiplier"	"2.5"
+				"bonus_aoe"				"300"
+				"bonus_health"			"3000"
+				"bonus_mana"			"3000"
+				"spell_lifesteal"		"100"
+				"buff_duration"			"10"
+				"lifesteal_multiplier"	"3.5"
 				"hp_cost"				"0"
 		}
 	}
@@ -1481,8 +1481,8 @@
 		"ItemPurchasable"				"1"
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"240.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"120.0"
 		"IsObsolete"					"0"
 
 		"AbilitySpecial"
@@ -1875,7 +1875,7 @@
 		{
 				"bonus_movement_speed"	"65"
 				"bonus_armor"			"0"
-				"bonus_health_regen"	"21"
+				"bonus_health_regen"	"28"
 				"heal_duration"			"20.0"
 				"heal_amount"			"250"
 				"heal_interval"			"0.334"
@@ -1903,7 +1903,7 @@
 				"affected_by_aoe_increase"	"1"
 			}
 			"bonus_movement_speed"	"90"
-			"bonus_health_regen"	"45"
+			"bonus_health_regen"	"56"
 			"bonus_ms_duration"		"2.0"
 		}
 	}

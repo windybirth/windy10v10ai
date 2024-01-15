@@ -461,7 +461,7 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"80"		// 39
+		"BountyGoldMin"				"78"		// 39
 		"BountyGoldMax"				"90"		// 45
 
 		// Status
@@ -489,8 +489,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"150"		// 78
-		"BountyGoldMax"				"160"		// 82
+		"BountyGoldMin"				"156"		// 78
+		"BountyGoldMax"				"164"		// 82
 
 		// Status
 		//----------------------------------------------------------------
@@ -518,7 +518,7 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"80"		// 39
+		"BountyGoldMin"				"78"		// 39
 		"BountyGoldMax"				"90"		// 45
 
 		// Movement
@@ -551,8 +551,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"150"		// 78
-		"BountyGoldMax"				"160"		// 82
+		"BountyGoldMin"				"156"		// 78
+		"BountyGoldMax"				"164"		// 82
 
 		// Movement
 		//----------------------------------------------------------------
@@ -585,8 +585,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"150"		// 78
-		"BountyGoldMax"				"160"		// 82
+		"BountyGoldMin"				"156"		// 78
+		"BountyGoldMax"				"164"		// 82
 
 		// Movement
 		//----------------------------------------------------------------
@@ -620,8 +620,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"90"		// 44
-		"BountyGoldMax"				"100"		// 51
+		"BountyGoldMin"				"88"		// 44
+		"BountyGoldMax"				"102"		// 51
 
 		// Movement
 		//----------------------------------------------------------------
@@ -651,8 +651,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"150"		// 78
-		"BountyGoldMax"				"160"		// 82
+		"BountyGoldMin"				"156"		// 78
+		"BountyGoldMax"				"164"		// 82
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"3000"		// 1500
@@ -679,12 +679,47 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"80"		// 39
+		"BountyGoldMin"				"78"		// 39
 		"BountyGoldMax"				"90"		// 45
 
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"1800"		// 900
 		"StatusHealthRegen"			"5"			// 2
+	}
+
+	"npc_dota_neutral_kobold"
+	{
+		"BountyXP"					"21" //14
+		"BountyGoldMin"				"6"  //3
+		"BountyGoldMax"				"10" //5
+	}
+
+	"npc_dota_neutral_kobold_tunneler"
+	{
+		"BountyXP"					"26"		//17
+		"BountyGoldMin"				"24"		//12
+		"BountyGoldMax"				"28"		//14
+	}
+
+	"npc_dota_neutral_kobold_taskmaster"
+	{
+		"BountyXP"					"45"		//30
+		"BountyGoldMin"				"38"		//19
+		"BountyGoldMax"				"42"		//21
+	}
+
+	"npc_dota_neutral_centaur_outrunner"
+	{
+		"BountyXP"					"48"		//32
+		"BountyGoldMin"				"32"		//16
+		"BountyGoldMax"				"36"		//18
+	}
+
+	"npc_dota_neutral_centaur_khan"
+	{
+		"BountyXP"					"135"		//90
+		"BountyGoldMin"				"108"		//54
+		"BountyGoldMax"				"120"		//60
 	}
 }

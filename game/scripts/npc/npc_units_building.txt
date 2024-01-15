@@ -714,7 +714,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"40000"			// 4500
+		"StatusHealth"				"80000"			// 4500
 		"StatusHealthRegen"			"20"			// 12
 		"Ability1"                  "tower_elder_titan_natural_order"
 	}
@@ -743,7 +743,7 @@
 
 		// Status
 		//----------------------------------------------------------------
-		"StatusHealth"				"40000"			// 4500
+		"StatusHealth"				"80000"			// 4500
 		"StatusHealthRegen"			"20"			// 12
 		"Ability1"                  "tower_elder_titan_natural_order"
 	}
@@ -759,8 +759,8 @@
 		"AttackDamageMin"			"390"		// 290
 		"AttackDamageMax"			"410"		// 310
 		"AttackRate"				"0.03"		// 0.15
-		"AttackAcquisitionRange"	"1400"		// 1200
-		"AttackRange"				"1400"		// 1200
+		"AttackAcquisitionRange"	"1700"		// 1200
+		"AttackRange"				"1700"		// 1200
 		"ProjectileSpeed"			"1800"		// 1400
 	}
 }
