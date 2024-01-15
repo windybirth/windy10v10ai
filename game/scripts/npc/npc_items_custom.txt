@@ -6764,7 +6764,7 @@
 		"ItemResult"					"item_meteor_hammer_2"
 		"ItemRequirements"
 		{
-			"01"						"item_crown;item_kaya"
+			"01"						"item_meteor_hammer;item_meteor_hammer;item_meteor_hammer"
 		}
 	}
 
@@ -6773,7 +6773,7 @@
 		"BaseClass"                     "item_meteor_hammer"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"				"1"
 		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
 		"AbilityChannelTime"			"1"

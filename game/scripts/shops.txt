@@ -25,6 +25,7 @@
 		"item"      "item_dragon_ball_5"
 		"item"      "item_dragon_ball_6"
 		"item"      "item_dragon_ball_7"
+		"item"      "item_meteor_hammer_2"
 	}
 
 	"attributes"
