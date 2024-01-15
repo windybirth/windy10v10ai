@@ -1880,9 +1880,9 @@
 				"heal_amount"			"250"
 				"heal_interval"			"0.334"
 				"break_time"			"0"
-				"break_count"			"0"
-				"break_threshold"		"20"
-				"broken_movement_speed"	"40"
+				"break_count"			"999"
+				"break_threshold"		"0"
+				"broken_movement_speed"	"65"
 		}
 	}
 

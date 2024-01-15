@@ -6856,6 +6856,7 @@
 		"MaxLevel" "4"
 		"AbilityDamage"					"80 120 160 200"
 		"AbilityManaCost"				"175 200 225 250"
+		"AbilityCastPoint"              "1.33 0.99 0.67 0.33"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
