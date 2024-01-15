@@ -31,12 +31,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
 		'item_blade_mail_ultra',
-		'item_shivas_guard_2',
-		'item_vladmir_2',
-		'item_recipe_vladmir_ultra_2',
-		'item_recipe_vladmir_ultra_3',
-		'item_recipe_vladmir_ultra_4',
-		'item_recipe_vladmir_ultra_5',
+		'item_radiance_ultra',
 	},
 	npc_dota_hero_arc_warden = {
 		'item_wings_of_haste',
@@ -112,7 +107,6 @@ tBotItemData.purchaseItemList = {
 		'item_jump_jump_jump',
 		'item_moon_shard_datadriven',
 		'item_blade_mail_ultra',
-		'item_shivas_guard_2',
 	},
 	npc_dota_hero_bane = {
 		'item_magic_wand',
@@ -331,11 +325,6 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_jump_jump_jump',
 		'item_excalibur',
-		'item_vladmir_2',
-		'item_recipe_vladmir_ultra_2',
-		'item_recipe_vladmir_ultra_3',
-		'item_recipe_vladmir_ultra_4',
-		'item_recipe_vladmir_ultra_5',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_magic_wand',
@@ -655,7 +644,6 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_refresh_core',
 		'item_necronomicon_staff',
 		'item_sacred_six_vein',
-		'item_shivas_guard_2',
 	},
 	npc_dota_hero_ogre_magi = {
 		'item_magic_wand',
@@ -943,7 +931,6 @@ tBotItemData.purchaseItemList = {
 		'item_infernal_desolator',
 		'item_wasp_callous',
 		'item_sacred_six_vein',
-		'item_vladmir_2',
 	},
 	npc_dota_hero_skeleton_king = {
 		'item_magic_wand',
@@ -1043,7 +1030,6 @@ tBotItemData.purchaseItemList = {
 		'item_skadi_ultra',
 		'item_vladmir_2',
 		'item_wasp_despotic',
-		'item_vladmir_2',
 	},
 	npc_dota_hero_viper = {
 		'item_magic_wand',
