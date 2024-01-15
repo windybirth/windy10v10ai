@@ -1836,4 +1836,35 @@
     {
         "AllowedInBackpack"				"0"
     }
+
+	"item_meteor_hammer"
+	{
+		"AbilityCooldown"               "18"
+		"AbilityValues"
+		{
+				"bonus_strength"		"9"
+				"bonus_agility"		"9"
+				"bonus_intellect"			"36"
+				"spell_amp"			"15"
+				"mana_regen_multiplier"		"120"
+				"spell_lifesteal_amp"	"36"
+
+				"burn_dps_buildings"		"75"
+				"burn_dps_units"		"75"
+				"burn_slow"			"30"
+				"burn_duration"		"6"
+				"stun_duration"		"0.5"
+				"burn_interval"				"1.0"
+				"land_time"				".5"
+				"impact_radius"
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"max_duration"		"3"
+				"impact_damage_buildings"		"135"
+				"impact_damage_units"		"195"
+				"enemy_particles_visible"		"0"
+		}
+	}
 }

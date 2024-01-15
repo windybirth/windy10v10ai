@@ -6800,7 +6800,7 @@
 				"land_time"				".5"
 				"impact_radius"
 				{
-					"value"		"800"
+					"value"		"600"
 					"affected_by_aoe_increase"	"1"
 				}
 				"max_duration"		"4"
