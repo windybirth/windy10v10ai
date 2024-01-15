@@ -6753,6 +6753,64 @@
 	}
 
 	//=================================================================================================================
+	// 天碍震星 Recipe: Meteor Hammer
+	//=================================================================================================================
+	"item_recipe_meteor_hammer_2"
+	{
+		"BaseClass"                     "item_recipe_meteor_hammer"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_meteor_hammer_2"
+		"ItemRequirements"
+		{
+			"01"						"item_crown;item_kaya"
+		}
+	}
+
+	"item_meteor_hammer_2"
+	{
+		"BaseClass"                     "item_meteor_hammer"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"AbilityChannelTime"			"1"
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"16"
+		"AbilityManaCost"				"100"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"bonus_strength"		"30"
+				"bonus_agility"		"30"
+				"bonus_intellect"			"120"
+				"spell_amp"			"50"
+				"mana_regen_multiplier"		"300"
+				"spell_lifesteal_amp"	"120"
+
+				"burn_dps_buildings"		"250"
+				"burn_dps_units"		"250"
+				"burn_slow"			"100"
+				"burn_duration"		"6"
+				"stun_duration"		"1.5"
+				"burn_interval"				"1.0"
+				"land_time"				".5"
+				"impact_radius"
+				{
+					"value"		"800"
+					"affected_by_aoe_increase"	"1"
+				}
+				"max_duration"		"4"
+				"impact_damage_buildings"		"180"
+				"impact_damage_units"		"260"
+				"enemy_particles_visible"		"0"
+		}
+	}
+
+	//=================================================================================================================
     // 神器救世狂战 bfury ultra
     //=================================================================================================================
 	"item_recipe_bfury_ultra"
