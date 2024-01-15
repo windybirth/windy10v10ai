@@ -5410,6 +5410,12 @@
 		"ItemRequirements"
 		{
 			"01"						"item_overwhelming_blink;item_swift_blink;item_arcane_blink"
+			"02"                        "item_overwhelming_blink_2;item_swift_blink"
+			"03"                        "item_overwhelming_blink_2;item_arcane_blink"
+			"04"                        "item_overwhelming_blink;item_swift_blink_2"
+			"05"                        "item_swift_blink_2;item_arcane_blink"
+			"06"                        "item_overwhelming_blink;item_arcane_blink_2"
+			"07"                        "item_swift_blink;item_arcane_blink_2"
 		}
 	}
 
@@ -6807,6 +6813,188 @@
 				"impact_damage_buildings"		"180"
 				"impact_damage_units"		"260"
 				"enemy_particles_visible"		"0"
+		}
+	}
+
+	//=================================================================================================================
+	// 大战鼓鞋
+	//=================================================================================================================
+	"item_recipe_boots_of_bearing_2"
+	{
+		"BaseClass"                     "item_recipe_boots_of_bearing"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_boots_of_bearing_2"
+		"ItemRequirements"
+		{
+			"01"						"item_boots_of_bearing;item_boots_of_bearing"
+		}
+	}
+
+	"item_boots_of_bearing_2"
+	{
+		"BaseClass"                     "item_boots_of_bearing"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemPermanent"					"1"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"15.0"
+		//"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"aura_movement_speed"	"60"
+			"bonus_str"				"24"
+			"bonus_int"				"24"
+			"bonus_attack_speed_pct"	"150"
+			"bonus_movement_speed_pct"	"40"
+			"duration"				"9"
+			"radius"
+			{
+				"value"				"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_movement_speed"	"150"
+			"bonus_health_regen"	"90"
+			"bonus_ms_duration"		"4"
+		}
+	}
+
+	//=================================================================================================================
+	// 大力跳
+	//=================================================================================================================
+	"item_overwhelming_blink_2"
+	{
+		"BaseClass"                     "item_overwhelming_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"
+				"blink_damage_cooldown"	"2.0"
+				"blink_range_clamp"		"1440"
+				"bonus_strength"		"50"
+				"radius"
+				{
+					"value"	"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"movement_slow"		"100"
+				"attack_slow"		"100"
+				"duration"		"6"
+				"damage_base"			"200"
+				"damage_pct_instant"		"100"
+				"damage_pct_over_time"		"200"
+		}
+	}
+
+	//=================================================================================================================
+	// 大敏跳
+	//=================================================================================================================
+	"item_swift_blink_2"
+	{
+		"BaseClass"                     "item_swift_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"
+				"blink_damage_cooldown"	"2.0"
+				"blink_range_clamp"		"1440"
+				"bonus_agility"		"50"
+				"bonus_movement"		"80"
+				"bonus_agi_active"		"70"
+				"duration"		"7"
+		}
+	}
+
+	//=================================================================================================================
+	// 大智跳
+	//=================================================================================================================
+	"item_arcane_blink_2"
+	{
+		"BaseClass"                     "item_arcane_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"2100"
+		"AbilityOvershootCastRange"     "1780"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"3.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"2100"
+				"blink_damage_cooldown"	"0.0"
+				"blink_range_clamp"		"1780"
+				"bonus_intellect"		"50"
+				"heal_amount"			"600"
+				"mana_amount"			"300"
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Arcane Blink
+	//=================================================================================================================
+	"item_recipe_arcane_blink_2"
+	{
+		"BaseClass"                     "item_recipe_arcane_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_arcane_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_arcane_blink;item_arcane_blink"
+		}
+	}
+
+	//=================================================================================================================
+	//  Recipe: Swift Blink
+	//=================================================================================================================
+	"item_recipe_swift_blink_2"
+	{
+		"BaseClass"                     "item_recipe_swift_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_swift_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_swift_blink;item_swift_blink"
+		}
+	}
+
+	//=================================================================================================================
+	// Recipe: Overwhelming Blink
+	//=================================================================================================================
+	"item_recipe_overwhelming_blink_2"
+	{
+		"BaseClass"                     "item_recipe_overwhelming_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overwhelming_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_overwhelming_blink;item_overwhelming_blink"
 		}
 	}
 

@@ -1867,4 +1867,44 @@
 				"enemy_particles_visible"		"0"
 		}
 	}
+
+	"item_tranquil_boots"
+	{
+		"AbilityCooldown"				"0.0"
+		"AbilityValues"
+		{
+				"bonus_movement_speed"	"65"
+				"bonus_armor"			"0"
+				"bonus_health_regen"	"21"
+				"heal_duration"			"20.0"
+				"heal_amount"			"250"
+				"heal_interval"			"0.334"
+				"break_time"			"0"
+				"break_count"			"0"
+				"break_threshold"		"20"
+				"broken_movement_speed"	"40"
+		}
+	}
+
+	"item_boots_of_bearing"
+	{
+		"AbilityCooldown"				"20.0"
+		"AbilityValues"
+		{
+			"aura_movement_speed"	"30"
+			"bonus_str"				"12"
+			"bonus_int"				"12"
+			"bonus_attack_speed_pct"	"75"
+			"bonus_movement_speed_pct"	"21"
+			"duration"				"9"
+			"radius"
+			{
+				"value"				"1400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_movement_speed"	"90"
+			"bonus_health_regen"	"45"
+			"bonus_ms_duration"		"2.0"
+		}
+	}
 }
