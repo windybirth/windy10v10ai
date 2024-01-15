@@ -580,10 +580,10 @@
 			"bonus_strength"			"40"       //10
             "radius"
 			{
-				"value"				"450"          //275
+				"value"				"375"          //275
 				"affected_by_aoe_increase"	"1"
 			}
-            "flop_damage"               "450"      //150
+            "flop_damage"               "350"      //150
 	        "slow_duration"             "3.0"      //1.5
 	        "slow"           			"-100"     //-100
 	        "max_bounces"				"3"        //2
@@ -1239,7 +1239,7 @@
 	//点金
 	"item_hand_of_midas"
 	{
-		"AbilityCharges"				"4"
+		"AbilityCharges"				"3"
 	}
 	// 跳刀卷轴
 	"item_recipe_overwhelming_blink"
