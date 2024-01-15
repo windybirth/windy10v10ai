@@ -1019,7 +1019,7 @@
 			"burn_duration"		    "6"    //6
 			"stun_duration"		    "2.4"  //1.6
 			"burn_interval"			"1.0"  //1.0
-			"land_time"				"0.5"    //1
+			"land_time"				"1"    //1 不能修改，会导致动画消失
 			"impact_radius"
 			{
 				"value"			"425"      //315
