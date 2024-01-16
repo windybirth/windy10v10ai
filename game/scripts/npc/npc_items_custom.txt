@@ -5300,7 +5300,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_radius"			"200"
+				"attack_radius"			"300"
 			}
 			"04"
 			{
@@ -5376,7 +5376,7 @@
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_radius"			"200"
+				"attack_radius"			"400"
 			}
 			"04"
 			{
