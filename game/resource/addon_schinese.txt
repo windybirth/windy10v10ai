@@ -1104,7 +1104,7 @@
 		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect_Description"		"正在将伤害反弹给攻击单位"
 
         // item_radiance_2
-		"DOTA_Tooltip_Ability_item_radiance_2"				"辉耀2"
+		"DOTA_Tooltip_Ability_item_radiance_2"				"圣焰之光"
 		"DOTA_Tooltip_ability_item_radiance_2_Description"						"<h1>开关：辉耀灼烧</h1>开启后，辉耀灼烧每秒对敌军造成%aura_damage%点魔法伤害，并且物理攻击有%blind_pct%%%几率不会命中。幻象每秒造成%aura_damage_illusions%点魔法伤害。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"一把神圣的武器，剑身的耀眼光芒能将敌人化为灰烬。"
 		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
@@ -1226,7 +1226,7 @@
 		"DOTA_Tooltip_ability_item_aeon_pendant_cooldown_duration"					"冷却时间："
 
         // item_monkey_king_bar_2 定海神针
-		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"定海神针"
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"<font color='#FFCC66'>定海神针</font>"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"当年孙悟空从东海龙王敖广的海底宝库中偷出来的趁手的兵器。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
@@ -1664,7 +1664,7 @@
 		"DOTA_Tooltip_ability_item_refresh_core_Lore"					"位于法术技艺核心的，是只有身负异能之人才能感知的光带。"
 
 		// item_black_king_bar_real 真·黑黄杖
-		"DOTA_Tooltip_Ability_item_black_king_bar_real"			                    "<font color='#e03e2e'>神器·真黑黄杖</font>"
+		"DOTA_Tooltip_Ability_item_black_king_bar_real"			                    "<font color='#e03e2e'>真·黑黄杖</font>"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Description"					"<h1>主动：魔免</h1>免疫大部分魔法。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Lore"						"真正的黑黄杖回来了。"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Note0"						"重复购买不刷新冷却。"
@@ -1672,15 +1672,15 @@
 		"DOTA_Tooltip_ability_item_black_king_bar_real_bonus_strength"				"+$str"
 
 		// item_rapier_ultra 诅咒圣剑
-		"DOTA_Tooltip_ability_item_rapier_ultra"                        "<font color='#e03e2e'>神器·诅咒圣剑</font>"
-		"DOTA_Tooltip_Ability_item_rapier_ultra_Description"            "<h1>被动：克敌机先</h1>攻击不会因闪避或其他效果而落空。\n<h1>被动：<font color='#e03e2e'>力量的代价</font></h1>过于强大力量总会有它的代价。<br><font color='#e03e2e'>死亡有90%概率摧毁。</font>"
+		"DOTA_Tooltip_ability_item_rapier_ultra"                        "<font color='#e03e2e'>诅咒圣剑</font>"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_Description"            "<h1>被动：<font color='#a74abd'>永恒之力</font></h1>受到来自战争之神的神秘力量庇护，获得<font color='#f15b47'>%bonus_damage_percent%%%</font>基础攻击力加成，不能出售或销毁。\n<h1>被动：克敌机先</h1>攻击不会因闪避或其他效果而落空。\n<h1>被动：<font color='#e03e2e'>力量的代价</font></h1>过于强大力量总会有它的代价。<br><font color='#e03e2e'>死亡有%ruin_chance_tooltip%%%概率摧毁。</font>"
 		"DOTA_Tooltip_ability_item_rapier_ultra_Lore"					"死亡摧毁。"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_spell_amp"           "%+$spell_amp"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_Note0"					"至于能不能幸免于难，施主且行且珍惜。"
 
 		// item_bfury_ultra 救世狂战
-		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>神器·救世狂战</font>"
+		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>救世狂战</font>"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>被动：斩断世界线</h1>知道Sccc斩断世界线的那一刀吗？普通攻击时对目标周围最远%cleave_distance%距离的锥形区域内敌人造成%cleave_damage_percent%%%物理伤害。对非英雄单位造成%cleave_damage_percent_creep%%%物理伤害。（仅近战有效）"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Lore"                    "你听说过六狂战拯救世界的故事吗？"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
@@ -1689,7 +1689,7 @@
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"你玩过曾经的限时强化版水刀吗？"
 
 		// item_bloodthorn_ultra 变态辣
-		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>神器·变态辣</font>"
+		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>变态辣</font>"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Description"                      "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击会额外造成%proc_damage%点伤害，并且拥有克敌机先效果。<br><br>施法距离：%abilitycastrange%\n\n<h1>被动：穿刺</h1>每次攻击有%proc_chance%%%几率无视闪避并造成额外%proc_damage%点魔法伤害。"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "辣死你辣死你"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_intellect"                  "+$int"
@@ -1703,6 +1703,6 @@
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_bonuses"				"<b><font color='#7d7d7d'>奖励</font></b>：+30% 血棘致命一击"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_description"			"灵魂撕裂10名敌方英雄。"
 		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff"                       "血棘"
-		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "被沉默并受到60%%的额外伤害，伤害在效果结束时结算，类型为魔法伤害。\n受到所有攻击时还会受到额外伤害，并且攻击不会落空。"
+		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "被沉默并受到120%%的额外伤害，伤害在效果结束时结算，类型为魔法伤害。\n受到所有攻击时还会受到额外伤害，并且攻击不会落空。"
 	}
 }

@@ -1458,7 +1458,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"500"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1485,7 +1485,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"9600"
+		"ItemCost"						"8600"
 		"ItemShopTags"					"damage"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"radiance"
@@ -1499,7 +1499,7 @@
 				"aura_damage"			"120"
 				"aura_damage_illusions"	"80"
 				"upgrade_day_vision"	"250"
-				"evasion"				"20"
+				"evasion"				"24"
 				"blind_pct"				"20"
 				"aura_radius"			"700"
 		}
@@ -1852,12 +1852,12 @@
 		"ItemResult"					"item_excalibur"
 		"ItemRequirements"
 		{
-			"01"						"item_rapier;item_rapier;item_monkey_king_bar_2"
+			"01"						"item_monkey_king_bar_2;item_rapier;item_rapier"
 		}
 	}
 
 	//=================================================================================================================
-	// Excalibur
+	// Excalibur EX咖喱棒
 	//=================================================================================================================
 	"item_excalibur"
 	{
@@ -1870,6 +1870,7 @@
 
 		"ItemKillable"					"0"
 		"ItemSellable"					"0"
+		"AllowedInBackpack"				"0"
 
 		"AbilityValues"
 		{
@@ -1914,22 +1915,15 @@
 		"AbilityCastRange"				"900"
 		"AbilityCooldown"				"2.0"
 
-		"ItemCost"						"450"
+		"ItemCost"						"600"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_bonus"			"30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_bonus_ranged"	"22"
-			}
+				"damage_bonus"			"40"
+				"damage_bonus_ranged"	"25"
+				"quelling_range_tooltip"			"900"
 		}
 	}
 
@@ -2784,7 +2778,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Recipe: Monkey King Bar 金箍棒
+	// Monkey King Bar Upgrade 大金箍棒 定海神针
 	//=================================================================================================================
 	"item_recipe_monkey_king_bar_2"
 	{
@@ -2810,9 +2804,6 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Monkey King Bar
-	//=================================================================================================================
 	"item_monkey_king_bar_2"
 	{
 		// General
@@ -3497,7 +3488,7 @@
 		"AbilityTextureName"			"item_recipe_silver_edge_2"
 
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"450"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3506,7 +3497,7 @@
 		"ItemResult"					"item_silver_edge_2"
 		"ItemRequirements"
 		{
-			"01"						"item_silver_edge;item_relic;item_relic"
+			"01"						"item_silver_edge;item_relic"
 		}
 	}
 
@@ -3627,7 +3618,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4600"
+		"ItemCost"						"5000"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3654,7 +3645,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"14000"
+		"ItemCost"						"16000"
 		"ItemShopTags"					"damage;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"infernal Desolator"
@@ -3667,7 +3658,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_damage"			"260"
+			"bonus_damage"			"300"
 			"corruption_armor"		"-20"
 			"corruption_duration"	"9.0"
 			"bonus_damage_per_kill"	"5"
@@ -4192,7 +4183,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Recipe: Hurricane Pike 2 黄金魔龙枪Ultimate
+	// Hurricane Pike 2 黄金魔龙枪 Ultimate
 	//=================================================================================================================
 	"item_recipe_hurricane_pike_2"
 	{
@@ -4205,7 +4196,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
+		"ItemCost"						"3550"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -4218,9 +4209,6 @@
 		}
 	}
 
-    //=================================================================================================================
-	// Hurricane Pike 2 黄金魔龙枪Ultimate
-	//=================================================================================================================
 	"item_hurricane_pike_2"
 	{
 		"ID"							"3051"
@@ -5359,7 +5347,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1700"
+		"ItemCost"						"1650"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5387,7 +5375,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"12000"
+		"ItemCost"						"9200"
 		"ItemShopTags"					"damage;attack_speed"
 		"ItemQuality"					"arcane"
 		"ItemAliases"					"shotgun"
@@ -5597,7 +5585,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2900"
+		"ItemCost"						"3100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5638,11 +5626,11 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"120"
-				"corruption_armor"		"-10"
+				"corruption_armor"		"-12"
 				"corruption_duration"	"8.0"
 				"bonus_damage_per_kill"	"3"
 				"bonus_damage_per_assist"	"2"
-				"max_damage"			"50"
+				"max_damage"			"60"
 		}
 	}
 
@@ -5728,7 +5716,7 @@
 		"AbilityTextureName"			"item_recipe_bfury_2"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"2700"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5737,7 +5725,7 @@
 		"ItemResult"					"item_bfury_2"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury;item_relic;item_cornucopia;item_quelling_blade_2_datadriven"
+			"01"						"item_bfury;item_cornucopia;item_quelling_blade_2_datadriven"
 		}
 	}
 	//=================================================================================================================
@@ -5761,7 +5749,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"9950"
+		"ItemCost"						"8600"
 		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bf;battle fury"
@@ -5770,68 +5758,22 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_damage"			"120"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
 				"bonus_health_regen"	"15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"6"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"70"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent_creep"	"60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"bonus_mana_regen"		"5"
+				"cleave_damage_percent"	"80"
+				"cleave_damage_percent_creep"	"80"
 				"quelling_bonus"			"50"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"quelling_bonus_ranged"	"30"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
+
 				"cleave_starting_width"			"150"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"cleave_ending_width"			"360"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"cleave_distance"			"650"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"upgraded_cleave_bonus"			"25"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"upgraded_damage_bonus"			"15"
-			}
 		}
 	}
 
@@ -6670,15 +6612,19 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ID"							"9595"
 		"AbilityTextureName"			"item_rapier_ultra"
+
 		"ItemDroppable"                 "0"
 		"ItemKillable"					"0"
 		"ItemSellable"					"0"
-		"AllowedInBackpack"             "0"
+		"AllowedInBackpack"				"0"
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"1666"
-			"bonus_spell_amp"		"166"
+			"bonus_damage"			"1000"
+			"bonus_spell_amp"		"100"
+			"bonus_damage_percent"	"100"
+
+			"ruin_chance_tooltip"	"66"
 		}
 		"Modifiers"
 		{
@@ -6693,6 +6639,7 @@
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%bonus_spell_amp"
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%bonus_damage_percent"
 				}
 
 				"States"
@@ -6710,12 +6657,12 @@
 	{
 		"ID"                            "9590"
 		"BaseClass"                     "item_recipe_bfury"
-		"ItemCost"						"1500"
+		"ItemCost"						"1200"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bfury_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury_2;item_bfury_2"
+			"01"						"item_bfury_2;item_relic"
 		}
 	}
 
@@ -6727,13 +6674,14 @@
 		"AbilityTextureName"            "bfury_ultra"
 		"AbilityValues"
 		{
-				"bonus_damage"			"300"
+				"bonus_damage"			"180"
 				"bonus_health_regen"	"30"
-				"bonus_mana_regen"		"15"
+				"bonus_mana_regen"		"10"
 				"cleave_damage_percent"	"100"
 				"cleave_damage_percent_creep"	"120"
 				"quelling_bonus"			"100"
-				"quelling_bonus_ranged"	"50"
+				"quelling_bonus_ranged"	"60"
+
 				"cleave_starting_width"			"150"
 				"cleave_ending_width"			"650"
 				"cleave_distance"			"1200"
@@ -6749,7 +6697,7 @@
 
 
 	//=================================================================================================================
-	// 变态辣 bloodthorn ultra
+	// 变态辣 大血棘 bloodthorn ultra
 	//=================================================================================================================
 	"item_recipe_bloodthorn_ultra"
 	{
@@ -6783,17 +6731,17 @@
 		"AbilityTextureName"            "bloodthorn_ultra"
 		"AbilityValues"
 		{
-				"bonus_intellect"			"30"
+				"bonus_intellect"			"60"
 				"bonus_attack_speed"		"200"
-				"bonus_mana_regen"			"8"
+				"bonus_mana_regen"			"10"
 				"bonus_health_regen"		"16"
 				"silence_duration"			"5"
 				"silence_damage_percent"	"120"
-				"bonus_damage"				"40"
+				"bonus_damage"				"60"
 				"duration"					"6"
 				"spell_amp_debuff"			"70"
 				"proc_damage"				"120"
-				"proc_chance"				"40"
+				"proc_chance"				"50"
 		}
 	}
 }

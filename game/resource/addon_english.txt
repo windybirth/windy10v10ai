@@ -948,7 +948,7 @@
 		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect_Description"		"Returning damage to attacking units."
 
         // item_radiance_2
-		"DOTA_Tooltip_Ability_item_radiance_2"				"RADIANCE Upgrade"
+		"DOTA_Tooltip_Ability_item_radiance_2"				"Radiance of Light"
 		"DOTA_Tooltip_ability_item_radiance_2_Description"						"<h1>Toggle: Burn</h1> When active, scorches enemies for %aura_damage% magical damage per second, and causes them to miss %blind_pct%%% of their attacks. Illusions deal %aura_damage_illusions% magical damage per second.<br><br>Radius: %aura_radius%"
 		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"A divine weapon that causes damage and a bright burning effect that lays waste to nearby enemies."
 		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
@@ -1070,7 +1070,7 @@
 		"DOTA_Tooltip_ability_item_aeon_pendant_cooldown_duration"					"COOLDOWN:"
 
         // item_monkey_king_bar_2 定海神针
-		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"Re: Monkey King Bar"
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"<font color='#FFCC66'>Monkey King Bar Ultra</font>"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>Passive: Pierce</h1>Grants each attack a %bonus_chance%%% chance to pierce through evasion and deal %bonus_chance_damage% bonus magical damage."
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"A powerful staff used by a master warrior."
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
@@ -1522,14 +1522,14 @@
 
 		// item_rapier_ultra 诅咒圣剑
 		"DOTA_Tooltip_ability_item_rapier_ultra"                        "<font color='#e03e2e'>Cursed Rapier</font>"
-		"DOTA_Tooltip_Ability_item_rapier_ultra_Description"            "<h1><h1>Passive: True Strike</h1>Attacks will not miss due to evasion or other effects.\n<h1>Passive: <font color='#e03e2e'>Price of power</font></h1>Very great power always has its very great price. <br><font color='#e03e2e'>It has 90% to be ruined at death.</font>"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_Description"            "<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Gaining <font color='#f15b47'>%bonus_damage_percent%%%</font> base damage bonus, Cannot be sold or destroyed.\n<h1>Passive: True Strike</h1>Attacks will not miss due to evasion or other effects.\n<h1>Passive: <font color='#e03e2e'>Price of power</font></h1>Very great power always has its very great price. <br><font color='#e03e2e'>It has %ruin_chance_tooltip%%% to be ruined at death.</font>"
 		"DOTA_Tooltip_ability_item_rapier_ultra_Lore"					"Ruined at death."
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bonus_spell_amp"           "%+$spell_amp"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_Note0"					"So, will you be the lucky dog?"
 
 		// item_bfury_ultra 救世狂战
-		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>Artifact: Worldbreaker</font>"
+		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>Worldbreaker</font>"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>Passive: Worldsplitter</h1>Normal attacks cleave in a cone, dealing %cleave_damage_percent%%% physical damage to enemies within %cleave_distance% range. Deals %cleave_damage_percent_creep%%% physical damage to non-hero units. (Melee Only)"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Lore"                    "Have you heard that six battle fury can save the world?"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
@@ -1539,7 +1539,7 @@
 
 
 		// item_bloodthorn_ultra 变态辣
-		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>Artifact: Bloodthorn</font>"
+		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>Bloodthorn Ultra</font>"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Description"                      "<h1>Active: Soul Rend</h1>Silences the target for %silence_duration% seconds. After the silence ends, %silence_damage_percent%%% of the damage taken during the silence will be dealt as additional magic damage.<br><br>All attacks against the target deal an additional %proc_damage% damage and have True Strike.<br><br>Cast Range: %abilitycastrange%\n\n<h1>Passive: Pierce</h1>Each attack has a %proc_chance%%% chance to ignore evasion and deal %proc_damage% additional magic damage."
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "Spicy to death"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_intellect"                  "+$int"
@@ -1553,6 +1553,6 @@
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_bonuses"				"<b><font color='#7d7d7d'>Upgrade</font></b>: +30% Bloodthorn Critical Strike"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_description"			"Soul Rend 10 enemy heroes."
 		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff"                       "Bloodthorn"
-		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "Silenced and takes 60%% additional damage, which is dealt as magic damage when the effect ends.\nAlso takes additional damage from all attacks and attacks cannot miss."
+		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "Silenced and takes 120%% additional damage, which is dealt as magic damage when the effect ends.\nAlso takes additional damage from all attacks and attacks cannot miss."
 	}
 }
