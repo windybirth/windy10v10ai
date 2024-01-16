@@ -461,8 +461,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"78"		// 39
-		"BountyGoldMax"				"90"		// 45
+		"BountyGoldMin"				"74"		// 37
+		"BountyGoldMax"				"86"		// 43
 
 		// Status
 		//----------------------------------------------------------------
@@ -489,8 +489,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"156"		// 78
-		"BountyGoldMax"				"164"		// 82
+		"BountyGoldMin"				"152"		// 76
+		"BountyGoldMax"				"160"		// 80
 
 		// Status
 		//----------------------------------------------------------------
@@ -518,8 +518,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"78"		// 39
-		"BountyGoldMax"				"90"		// 45
+		"BountyGoldMin"				"74"		// 37
+		"BountyGoldMax"				"86"		// 43
 
 		// Movement
 		//----------------------------------------------------------------
@@ -551,8 +551,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"156"		// 78
-		"BountyGoldMax"				"164"		// 82
+		"BountyGoldMin"				"152"		// 76
+		"BountyGoldMax"				"160"		// 80
 
 		// Movement
 		//----------------------------------------------------------------
@@ -585,8 +585,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"156"		// 78
-		"BountyGoldMax"				"164"		// 82
+		"BountyGoldMin"				"152"		// 76
+		"BountyGoldMax"				"160"		// 80
 
 		// Movement
 		//----------------------------------------------------------------
@@ -620,8 +620,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"88"		// 44
-		"BountyGoldMax"				"102"		// 51
+		"BountyGoldMin"				"84"		// 42
+		"BountyGoldMax"				"98"		// 49
 
 		// Movement
 		//----------------------------------------------------------------
@@ -651,8 +651,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"186"		// 124
-		"BountyGoldMin"				"156"		// 78
-		"BountyGoldMax"				"164"		// 82
+		"BountyGoldMin"				"152"		// 76
+		"BountyGoldMax"				"160"		// 80
 		// Status
 		//----------------------------------------------------------------
 		"StatusHealth"				"3000"		// 1500
@@ -679,8 +679,8 @@
 		// Bounty
 		//----------------------------------------------------------------
 		"BountyXP"					"142"		// 95
-		"BountyGoldMin"				"78"		// 39
-		"BountyGoldMax"				"90"		// 45
+		"BountyGoldMin"				"74"		// 37
+		"BountyGoldMax"				"86"		// 43
 
 		// Status
 		//----------------------------------------------------------------
@@ -722,4 +722,181 @@
 		"BountyGoldMin"				"108"		//54
 		"BountyGoldMax"				"120"		//60
 	}
+
+	"npc_dota_neutral_fel_beast"
+	{
+		"BountyXP"					"39"		//26
+		"BountyGoldMin"				"32"		//16
+		"BountyGoldMax"				"36"		//18
+	}
+
+	"npc_dota_neutral_polar_furbolg_champion"
+	{
+		"BountyXP"					"99"		//66
+		"BountyGoldMin"				"60"		//30
+		"BountyGoldMax"				"76"		//38
+	}
+
+	"npc_dota_neutral_polar_furbolg_ursa_warrior"
+	{
+		"BountyXP"					"135"		//90
+		"BountyGoldMin"				"124"		//62
+		"BountyGoldMax"				"132"		//66
+	}
+
+	"npc_dota_neutral_warpine_raider"
+	{
+		"BountyXP"					"114"		//76
+		"BountyGoldMin"				"96"		//48
+		"BountyGoldMax"				"100"		//50
+	}
+
+	"npc_dota_neutral_mud_golem"
+	{
+		"BountyXP"					"48"		//32
+		"BountyGoldMin"				"44"		//22
+		"BountyGoldMax"				"48"		//24
+	}
+
+	"npc_dota_neutral_mud_golem_split"
+	{
+		"BountyXP"					"27"		//18
+		"BountyGoldMin"				"12"		//6
+		"BountyGoldMax"				"20"		//10
+	}
+
+	"npc_dota_neutral_mud_golem_split_doom"
+	{
+		"BountyXP"					"27"		//18
+		"BountyGoldMin"				"12"		//6
+		"BountyGoldMax"				"20"		//10
+	}
+
+	"npc_dota_neutral_ogre_mauler"
+	{
+		"BountyXP"					"48"		//32
+		"BountyGoldMin"				"44"		//22
+		"BountyGoldMax"				"52"		//26
+	}
+
+	"npc_dota_neutral_ogre_magi"
+	{
+		"BountyXP"					"72"		//48
+		"BountyGoldMin"				"56"		//28
+		"BountyGoldMax"				"64"		//32
+	}
+
+	"npc_dota_neutral_giant_wolf"
+	{
+		"BountyXP"					"60"		//40
+		"BountyGoldMin"				"36"		//18
+		"BountyGoldMax"				"44"		//22
+	}
+
+	"npc_dota_neutral_alpha_wolf"
+	{
+		"BountyXP"					"90"		//60
+		"BountyGoldMin"				"64"		//32
+		"BountyGoldMax"				"68"		//34
+	}
+
+	"npc_dota_neutral_wildkin"
+	{
+		"BountyXP"					"39"		//26
+		"BountyGoldMin"				"32"		//16
+		"BountyGoldMax"				"36"		//18
+	}
+
+	"npc_dota_neutral_enraged_wildkin"
+	{
+		"BountyXP"					"135"		//90
+		"BountyGoldMin"				"116"		//58
+		"BountyGoldMax"				"128"		//64
+	}
+
+	"npc_dota_neutral_satyr_soulstealer"
+	{
+		"BountyXP"					"69"		//46
+		"BountyGoldMin"				"40"		//20
+		"BountyGoldMax"				"48"		//24
+	}
+
+	"npc_dota_neutral_satyr_hellcaller"
+	{
+		"BountyXP"					"135"		//90
+		"BountyGoldMin"				"120"		//60
+		"BountyGoldMax"				"132"		//66
+	}
+
+	"npc_dota_neutral_gnoll_assassin"
+	{
+		"BountyXP"					"45"		//30
+		"BountyGoldMin"				"32"		//16
+		"BountyGoldMax"				"36"		//18
+	}
+
+	"npc_dota_neutral_ghost"
+	{
+		"BountyXP"					"63"		//42
+		"BountyGoldMin"				"46"		//23
+		"BountyGoldMax"				"50"		//25
+	}
+
+	"npc_dota_wraith_ghost"
+	{
+		"BountyXP"					"21"		//14
+		"BountyGoldMin"				"24"		//12
+		"BountyGoldMax"				"26"		//13
+	}
+
+	"npc_dota_neutral_dark_troll"
+	{
+		"BountyXP"					"63"		//42
+		"BountyGoldMin"				"34"		//17
+		"BountyGoldMax"				"38"		//19
+	}
+
+	"npc_dota_neutral_dark_troll_warlord"
+	{
+		"BountyXP"					"135"		//90
+		"BountyGoldMin"				"80"		//40
+		"BountyGoldMax"				"92"		//46
+	}
+
+	"npc_dota_neutral_satyr_trickster"
+	{
+		"BountyXP"					"36"		//24
+		"BountyGoldMin"				"24"		//12
+		"BountyGoldMax"				"28"		//14
+	}
+
+	"npc_dota_neutral_forest_troll_berserker"
+	{
+		"BountyXP"					"42"		//28
+		"BountyGoldMin"				"36"		//18
+		"BountyGoldMax"				"40"		//20
+	}
+
+	"npc_dota_neutral_forest_troll_high_priest"
+	{
+		"BountyXP"					"42"		//28
+		"BountyGoldMin"				"36"		//18
+		"BountyGoldMax"				"40"		//20
+	}
+
+	"npc_dota_neutral_harpy_scout"
+	{
+		"BountyXP"					"39"		//26
+		"BountyGoldMin"				"28"		//14
+		"BountyGoldMax"				"32"		//16
+	}
+
+	"npc_dota_neutral_harpy_storm"
+	{
+		"BountyXP"					"63"		//42
+		"BountyGoldMin"				"50"		//25
+		"BountyGoldMax"				"52"		//27
+	}
+
+
 }
