@@ -5779,7 +5779,7 @@
 
 
 	//=================================================================================================================
-	// Recipe:orb_of_the_brine 苍蓝魔珠图纸
+	// Recipe:orb_of_the_brine 苍洋魔珠图纸
 	//=================================================================================================================
 	"item_recipe_orb_of_the_brine"
 	{
@@ -5791,7 +5791,7 @@
 		"AbilityTextureName"			"item_recipe_orb_of_the_brine"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3050"
+		"ItemCost"						"3500"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5842,14 +5842,12 @@
 			"bonus_mana"			"500"
 			"heal_increase"			"50"
 
-			"bubble_duration"		"1.25"
+			"bubble_duration"		"1.5"
 			"bubble_move_speed"		"350"
-			"bubble_heal_per_tick"	"300"
-			"bubble_mana_per_tick"	"300"
-			"heal_tick_interval"	"0.5"
+			"heal_tick_interval"	"0.1"
 
-			"bubble_total_heal_tip"	"1200"
-			"bubble_total_mana_tip"	"1200"
+			"bubble_total_heal_tip"	"1500"
+			"bubble_total_mana_tip"	"1500"
 		}
 	}
 
