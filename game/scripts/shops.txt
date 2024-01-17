@@ -20,6 +20,11 @@
 		"item"		"item_candy_candy"
 		"item"		"item_consumable_gem"
 		"item"		"item_cheese"
+		"item"      "item_famango"
+		"item"      "item_refresher_shard"
+		"item"      "item_dragon_ball_5"
+		"item"      "item_dragon_ball_6"
+		"item"      "item_dragon_ball_7"
 	}
 
 	"attributes"
@@ -46,6 +51,10 @@
 		"item"		"item_tome_of_strength_for_lottery"
 		"item"		"item_tome_of_agility_for_lottery"
 		"item"		"item_tome_of_intelligence_for_lottery"
+		"item"      "item_wish_1"
+		"item"      "item_wish_2"
+		"item"      "item_wish_3"
+		"item"      "item_wish_4"
 	}
 
 	"weapons_armor"
@@ -208,6 +217,14 @@
 		"item"		"item_wasp_golden"
 		"item"		"item_excalibur"
 		"item"		"item_rapier_ultra"			// 诅咒圣剑
+		"item"      "item_devastator_2"
+		"item"      "item_greater_crit_2"
+		"item"      "item_guardian_greaves_2"
+		"item"      "item_butterfly_2"
+		"item"      "item_satanic_ultra"
+		"item"      "item_glimmer_cape_ultra"
+		"item"      "item_ethereal_blade_ultra"
+		"item"      
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
@@ -240,6 +257,14 @@
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
 		"item"		"item_tome_of_luoshu"
+		"item"      "item_meteor_hammer_2"
+		"item"      "item_overwhelming_blink_2"
+		"item"      "item_swift_blink_2"
+		"item"      "item_arcane_blink_2"
+		"item"      "item_boots_of_bearing_2"
+		"item"      "item_sphere_ultra"
+		"item"      "item_black_king_bar_ultra"
+		"item"      "item_spirit_vessel_ultra"
 	}
 
 	"sideshop1"
