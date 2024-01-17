@@ -1404,11 +1404,14 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
 			"bonus_damage"			"60"
 			"bonus_armor"			"40"
-			"passive_reflection_constant"	"80"
+			"bonus_intellect"		"0"
+			"duration"				"5.5"
+			"passive_reflection_constant"			"80"
+			"passive_reflection_pct"			"25"
 			"active_reflection_pct"			"100"
 		}
 	}
@@ -2409,7 +2412,7 @@
 		"ItemAliases"                   "armor of insight"
 		"ItemDeclarations"              "DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-		"AbilityCooldown"               "60.0"
+		"AbilityCooldown"               "30.0"
 		"AbilityManaCost"               "300"
 
 		// Special
