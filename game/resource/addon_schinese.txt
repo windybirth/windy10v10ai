@@ -1545,10 +1545,11 @@
 		"DOTA_Tooltip_modifier_gungir_2_debuff_Description"				"被缠绕时无法移动。"
 
 		"DOTA_Tooltip_Ability_item_satanic_2"				"真红·撒旦之邪力"
-		"DOTA_Tooltip_ability_item_satanic_2_Description"							"<h1>主动：不洁狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成的伤害回复%lifesteal_percent%%%的生命值。"
+		"DOTA_Tooltip_ability_item_satanic_2_Description"							"<h1>主动：不洁狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成伤害的一定百分比回复生命值。攻击非英雄单位的吸血效果降低%creep_lifesteal_reduction_pct%%%。"
 		"DOTA_Tooltip_ability_item_satanic_2_Lore"								"无穷的力量，需要你付出灵魂作为代价。"
 		"DOTA_Tooltip_ability_item_satanic_2_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_satanic_2_bonus_damage"						"+$damage"
+		"DOTA_Tooltip_ability_item_satanic_2_lifesteal_percent"					"%+$lifesteal"
 
 		// 大狂战
 		"DOTA_Tooltip_Ability_item_bfury_2"				"超级狂战斧"

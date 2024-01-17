@@ -1363,7 +1363,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2300"
+		"ItemCost"						"1900"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1372,7 +1372,7 @@
 		"ItemResult"					"item_blade_mail_2"
 		"ItemRequirements"
 		{
-			"01"						"item_blade_mail;item_platemail"
+			"01"						"item_blade_mail;item_platemail;item_platemail"
 		}
 	}
 
@@ -1395,7 +1395,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"100"
-		"ItemCost"						"5800"
+		"ItemCost"						"6800"
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bm;blade mail;blademail"
@@ -1404,43 +1404,15 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"40"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"20"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"bonus_damage"			"60"
+				"bonus_armor"			"40"
 				"bonus_intellect"		"0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
 				"duration"				"5.5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"passive_reflection_constant"			"60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"passive_reflection_constant"			"80"
 				"passive_reflection_pct"			"25"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"active_reflection_pct"			"85"
-			}
+				"active_reflection_pct"			"100"
 		}
 	}
 
@@ -1586,7 +1558,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2225"
+		"ItemCost"						"2275"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1623,53 +1595,17 @@
 			"AbilityCastRange"              "900"
 
 
-			"AbilitySpecial"
+			"AbilityValues"
 			{
-					"01"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"bonus_attack_speed"	"40"
-					}
-					"02"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"bonus_armor"			"20"
-					}
-					"03"
-					{
-							"var_type"				"FIELD_FLOAT"
-							"mana_regen_aura"		"6"
-					}
-					"05"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"damage_aura"			"20"
-					}
-					"06"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"vampiric_aura"			"25"
-					}
-					"07"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_radius"			"900"
-					}
-					"09"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_positive_armor"	"10"
-					}
-					"10"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_attack_speed"		"40"
-					}
-					"11"
-					{
-							"var_type"				"FIELD_INTEGER"
-							"aura_negative_armor"	"-10"
-					}
+					"bonus_attack_speed"	"40"
+					"bonus_armor"			"20"
+					"mana_regen_aura"		"6"
+					"damage_aura"			"20"
+					"vampiric_aura"			"25"
+					"aura_radius"			"900"
+					"aura_positive_armor"	"10"
+					"aura_attack_speed"		"60"
+					"aura_negative_armor"	"-10"
 			}
 
 			"Modifiers"
@@ -2701,7 +2637,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1650"
+		"ItemCost"						"850"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2729,7 +2665,7 @@
 
 		"AbilityCooldown"				"60.0 65.0 70.0 75.0 80.0"
 
-		"ItemCost"						"3100"
+		"ItemCost"						"6000"
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"ad;aeon disk"
@@ -2738,43 +2674,15 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"bonus_health"			"800"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"600"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"bonus_mana"			"800"
 				"health_threshold_pct"			"60"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"status_resistance"			"80"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
 				"buff_duration"		"3"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"max_level"		"5"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_FLOAT"
 				"cooldown_duration"		"60.0 65.0 70.0 75.0 80.0"
-			}
 		}
 	}
 	//=================================================================================================================
@@ -3189,7 +3097,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"600"
+		"ItemCost"						"1100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3216,7 +3124,7 @@
 
 		"AbilityValues"
 		{
-				"bonus_all_stats"		"50"
+				"bonus_all_stats"		"60"
 				"bonus_health"			"600"
 				"bonus_mana"			"600"
 				"cold_slow_melee"		"-60"
@@ -3224,7 +3132,7 @@
 				"cold_slow_ranged"	"-75"
 				"cold_attack_slow_ranged"	"-80"
 				"cold_duration"	"4.0"
-				"heal_reduction"	"65"
+				"heal_reduction"	"80"
 		}
 	}
 
@@ -5083,7 +4991,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Recipe: Shiva's Guard 雅典娜的守护图纸
+	// Shiva's Guard 雅典娜的守护 大希瓦
 	//=================================================================================================================
 	"item_recipe_shivas_guard_2"
 	{
@@ -5102,9 +5010,6 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Shiva's Guard 雅典娜的守护
-	//=================================================================================================================
 	"item_shivas_guard_2"
 	{
 		// General
@@ -5116,7 +5021,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
 		"AbilityCooldown"				"27"
 		"AbilityCastRange"				"900"
-		"AbilityManaCost"				"350"
+		"AbilityManaCost"				"300"
 		"ItemCost"						"9850"
 		"AbilitySharedCooldown"			"shivas_guard"
 		"AbilityTextureName"			"item_shivas_guard_2"
@@ -5131,12 +5036,12 @@
 				"bonus_hp_regen"		"15"
 				"bonus_armor"			"40"
 
-				"blast_damage"			"400"
+				"blast_damage"			"600"
 				"blast_movement_speed"	"-60"
 				"blast_debuff_duration"	"4.0"
 				"blast_radius"
 				{
-					"value"		"1200"
+					"value"		"900"
 					"affected_by_aoe_increase"	"1"
 				}
 				"blast_speed"			"500"
@@ -5485,8 +5390,8 @@
 			"meteor_burn_dps"		"100"
 		}
 	}
-    //=================================================================================================================
-	// Recipe: gungir_2 风暴之锤卷轴
+	//=================================================================================================================
+	// gungir_2 风暴之锤
 	//=================================================================================================================
 	"item_recipe_gungir_2"
 	{
@@ -5511,10 +5416,6 @@
 			"01"						"item_gungir;item_mjollnir"
 		}
 	}
-
-	//=================================================================================================================
-	// gungir_2 风暴之锤
-	//=================================================================================================================
 	"item_gungir_2"
 	{
 		// General
@@ -5539,7 +5440,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"11600"
+		"ItemCost"						"12600"
 		"ItemShopTags"					"damage;attack_speed;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
@@ -5553,7 +5454,7 @@
 				"bonus_damage"			"60"
 				"bonus_attack_speed"	"120"
 				"chain_chance"			"40"
-				"chain_damage"			"240"
+				"chain_damage"			"360"
 				"chain_strikes"			"12"
 				"chain_radius"			"750"
 				"chain_delay"			"0.15"
@@ -5635,7 +5536,7 @@
 	}
 
 	//=================================================================================================================
-	// Recipe:Satanic 2 撒旦2图纸
+	// Satanic 2 撒旦2
 	//=================================================================================================================
 	"item_recipe_satanic_2"
 	{
@@ -5660,10 +5561,6 @@
 			"01"						"item_satanic;item_satanic"
 		}
 	}
-
-	//=================================================================================================================
-	// Satanic 2 撒旦2
-	//=================================================================================================================
 	"item_satanic_2"
 	{
 		// General
@@ -5693,11 +5590,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"bonus_strength"		"50"
-				"bonus_damage"			"50"
-				"lifesteal_percent"		"50"
+				"bonus_strength"		"60"
+				"bonus_damage"			"60"
+				"lifesteal_percent"		"60"
 				"creep_lifesteal_reduction_pct"	"80"
-				"unholy_lifesteal_percent"	"250"
+				"unholy_lifesteal_percent"	"240"
 				"unholy_lifesteal_total_tooltip"	"300"
 				"unholy_duration"		"6.0"
 		}
@@ -5902,7 +5799,7 @@
 			"bonus_all_stats"			"50"
 			"status_resistance"			"30"
 			"spell_amp"					"30"
-			"bonus_base_damage_percent"	"30"
+			"bonus_base_damage_percent"	"50"
 			"bonus_cast_range"			"200"
 		}
 	}
@@ -6655,7 +6552,7 @@
 	{
 		"ID"                            "9590"
 		"BaseClass"                     "item_recipe_bfury"
-		"ItemCost"						"1200"
+		"ItemCost"						"800"
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_bfury_ultra"
 		"ItemRequirements"

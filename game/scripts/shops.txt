@@ -166,8 +166,8 @@
 	{
 		"item"		"item_vanguard"
 		"item"		"item_solar_crest"			// 炎阳纹章
+		"item"		"item_aeon_pendant"			// 大盘子（咸鱼之王）
 		"item"		"item_blade_mail_2"
-		"item"		"item_aeon_pendant"
 		"item"		"item_eternal_shroud"
 		"item"		"item_crimson_guard"
 		"item"		"item_insight_armor"
