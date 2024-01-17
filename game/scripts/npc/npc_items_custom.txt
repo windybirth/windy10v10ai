@@ -1363,7 +1363,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2300"
+		"ItemCost"						"1900"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1372,7 +1372,7 @@
 		"ItemResult"					"item_blade_mail_2"
 		"ItemRequirements"
 		{
-			"01"						"item_blade_mail;item_platemail"
+			"01"						"item_blade_mail;item_platemail;item_platemail"
 		}
 	}
 
@@ -1395,7 +1395,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"				"100"
-		"ItemCost"						"5800"
+		"ItemCost"						"6800"
 		"ItemShopTags"					"damage;armor;int;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bm;blade mail;blademail"
@@ -1406,41 +1406,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"40"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"20"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_intellect"		"0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"5.5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"passive_reflection_constant"			"60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"passive_reflection_pct"			"25"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"active_reflection_pct"			"85"
-			}
+			"bonus_damage"			"60"
+			"bonus_armor"			"40"
+			"passive_reflection_constant"	"80"
+			"active_reflection_pct"			"100"
 		}
 	}
 
@@ -1458,7 +1427,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"800"
+		"ItemCost"						"500"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1485,7 +1454,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"9600"
+		"ItemCost"						"8600"
 		"ItemShopTags"					"damage"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"radiance"
@@ -1499,8 +1468,8 @@
 				"aura_damage"			"120"
 				"aura_damage_illusions"	"80"
 				"upgrade_day_vision"	"250"
-				"evasion"				"20"
-				"blind_pct"				"20"
+				"evasion"				"24"
+				"blind_pct"				"24"
 				"aura_radius"			"700"
 		}
 	}
@@ -1586,7 +1555,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2475"
+		"ItemCost"						"2275"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -1632,7 +1601,7 @@
 							"vampiric_aura"			"25"
 							"aura_radius"			"900"
 							"aura_positive_armor"	"10"
-							"aura_attack_speed"		"40"
+							"aura_attack_speed"		"60"
 							"aura_negative_armor"	"-10"
 			}
 
@@ -1878,22 +1847,15 @@
 		"AbilityCastRange"				"900"
 		"AbilityCooldown"				"2.0"
 
-		"ItemCost"						"450"
+		"ItemCost"						"600"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_bonus"			"30"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_bonus_ranged"	"22"
-			}
+			"damage_bonus"			"40"
+			"damage_bonus_ranged"	"25"
+			"quelling_range_tooltip"			"900"
 		}
 	}
 
@@ -2671,7 +2633,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1650"
+		"ItemCost"						"850"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -2699,7 +2661,7 @@
 
 		"AbilityCooldown"				"60.0 65.0 70.0 75.0 80.0"
 
-		"ItemCost"						"3100"
+		"ItemCost"						"6000"
 		"ItemShopTags"					"str;regen_health;health_pool"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"ad;aeon disk"
@@ -2718,7 +2680,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_mana"			"600"
+				"bonus_mana"			"800"
 			}
 			"03"
 			{
@@ -3162,7 +3124,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"600"
+		"ItemCost"						"1100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3461,7 +3423,7 @@
 		"AbilityTextureName"			"item_recipe_silver_edge_2"
 
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"450"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3470,7 +3432,7 @@
 		"ItemResult"					"item_silver_edge_2"
 		"ItemRequirements"
 		{
-			"01"						"item_silver_edge;item_relic;item_relic"
+			"01"						"item_silver_edge;item_relic"
 		}
 	}
 
@@ -3591,7 +3553,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"4600"
+		"ItemCost"						"5000"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -3618,7 +3580,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"14000"
+		"ItemCost"						"16000"
 		"ItemShopTags"					"damage;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"infernal Desolator"
@@ -3631,12 +3593,12 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_damage"			"260"
+			"bonus_damage"			"300"
 			"corruption_armor"		"-20"
 			"corruption_duration"	"9.0"
 			"bonus_damage_per_kill"	"5"
 			"bonus_damage_per_assist"	"2"
-			"max_damage"			"100"
+			"max_damage"			"900"
 		}
 	}
 
@@ -4169,7 +4131,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3500"
+		"ItemCost"						"3550"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5324,7 +5286,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1700"
+		"ItemCost"						"1650"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5352,7 +5314,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"12000"
+		"ItemCost"						"9200"
 		"ItemShopTags"					"damage;attack_speed"
 		"ItemQuality"					"arcane"
 		"ItemAliases"					"shotgun"
@@ -5522,7 +5484,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"11600"
+		"ItemCost"						"12600"
 		"ItemShopTags"					"damage;attack_speed;unique"
 		"ItemQuality"					"artifact"
 		"ItemAliases"					"gleipnir;gliepnir;glaypnir"
@@ -5536,7 +5498,7 @@
 				"bonus_damage"			"60"
 				"bonus_attack_speed"	"120"
 				"chain_chance"			"40"
-				"chain_damage"			"240"
+				"chain_damage"			"360"
 				"chain_strikes"			"12"
 				"chain_radius"			"750"
 				"chain_delay"			"0.15"
@@ -5549,7 +5511,7 @@
 					"value"		"450"
 					"affected_by_aoe_increase"	"1"
 				}
-				"active_damage"			"450"
+				"active_damage"			"720"
 				"illusion_multiplier_pct"	"150"
 		}
 	}
@@ -5568,7 +5530,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"2900"
+		"ItemCost"						"3100"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5609,11 +5571,11 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"120"
-				"corruption_armor"		"-10"
+				"corruption_armor"		"-12"
 				"corruption_duration"	"8.0"
 				"bonus_damage_per_kill"	"3"
 				"bonus_damage_per_assist"	"2"
-				"max_damage"			"50"
+				"max_damage"			"360"
 		}
 	}
 
@@ -5675,11 +5637,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"bonus_strength"		"50"
-				"bonus_damage"			"50"
-				"lifesteal_percent"		"50"
+				"bonus_strength"		"60"
+				"bonus_damage"			"60"
+				"lifesteal_percent"		"60"
 				"creep_lifesteal_reduction_pct"	"80"
-				"unholy_lifesteal_percent"	"250"
+				"unholy_lifesteal_percent"	"240"
 				"unholy_lifesteal_total_tooltip"	"300"
 				"unholy_duration"		"6.0"
 		}
@@ -5698,7 +5660,7 @@
 		"AbilityTextureName"			"item_recipe_bfury_2"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"0"
+		"ItemCost"						"2700"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5707,7 +5669,7 @@
 		"ItemResult"					"item_bfury_2"
 		"ItemRequirements"
 		{
-			"01"						"item_bfury;item_relic;item_cornucopia;item_quelling_blade_2_datadriven"
+			"01"						"item_bfury;item_cornucopia;item_quelling_blade_2_datadriven"
 		}
 	}
 	//=================================================================================================================
@@ -5731,7 +5693,7 @@
 
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"9950"
+		"ItemCost"						"8600"
 		"ItemShopTags"					"damage;health_regen;mana_regen;hard_to_tag"
 		"ItemQuality"					"epic"
 		"ItemAliases"					"bf;battle fury"
@@ -5740,68 +5702,12 @@
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_damage"			"120"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_health_regen"	"15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bonus_mana_regen"		"6"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent"	"70"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_damage_percent_creep"	"60"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"quelling_bonus"			"50"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"quelling_bonus_ranged"	"30"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_starting_width"			"150"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_ending_width"			"360"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"cleave_distance"			"650"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"upgraded_cleave_bonus"			"25"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"upgraded_damage_bonus"			"15"
-			}
+			"bonus_mana_regen"		"5"
+			"cleave_damage_percent"	"80"
+			"cleave_damage_percent_creep"	"80"
+
 		}
 	}
 
@@ -5819,7 +5725,7 @@
 		"AbilityTextureName"			"item_recipe_orb_of_the_brine"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3050"
+		"ItemCost"						"3500"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -5872,12 +5778,10 @@
 
 			"bubble_duration"		"1.5"
 			"bubble_move_speed"		"350"
-			"bubble_heal_per_tick"	"300"
-			"bubble_mana_per_tick"	"300"
 			"heal_tick_interval"	"0.1"
 
-			"bubble_total_heal_tip"	"1200"
-			"bubble_total_mana_tip"	"1200"
+			"bubble_total_heal_tip"	"1500"
+			"bubble_total_mana_tip"	"1500"
 		}
 	}
 
@@ -5929,10 +5833,10 @@
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"			"50"
-			"status_resistance"			"30"
-			"spell_amp"					"30"
-			"bonus_base_damage_percent"	"30"
+			"bonus_all_stats"			"100"
+			"status_resistance"			"50"
+			"spell_amp"					"100"
+			"bonus_base_damage_percent"	"100"
 			"bonus_cast_range"			"200"
 		}
 	}
@@ -6715,8 +6619,8 @@
 			"aura_mana_regen_bonus"		"20"
 			"aura_armor_bonus"			"32"
 			"aura_bonus_threshold"	"100"
-			"replenish_health"		"1400"
-			"replenish_mana"		"800"
+			"replenish_health"		"14000"
+			"replenish_mana"		"8000"
 			"replenish_radius"
 			{
 				"value"		"1800"
@@ -6753,7 +6657,7 @@
 		{
 			"bonus_agility"			"99"
 			"bonus_evasion"			"99"
-			"bonus_attack_speed_pct"	"60"
+			"bonus_attack_speed_pct"	"100"
 			"bonus_damage"	"100"
 		}
 	}
@@ -6882,7 +6786,7 @@
 				"blink_range"			"1800"
 				"blink_damage_cooldown"	"2.0"
 				"blink_range_clamp"		"1440"
-				"bonus_strength"		"50"
+				"bonus_strength"		"100"
 				"radius"
 				{
 					"value"	"1200"
@@ -6891,9 +6795,9 @@
 				"movement_slow"		"100"
 				"attack_slow"		"100"
 				"duration"		"6"
-				"damage_base"			"200"
-				"damage_pct_instant"		"100"
-				"damage_pct_over_time"		"200"
+				"damage_base"			"400"
+				"damage_pct_instant"		"200"
+				"damage_pct_over_time"		"400"
 		}
 	}
 

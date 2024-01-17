@@ -1833,5 +1833,100 @@
 		// item_wish_1 愿望4
 		"DOTA_Tooltip_Ability_item_wish_4"				"<font color='#FFFF00'>愿望4</font>"
 		"DOTA_Tooltip_ability_item_wish_4_Description"		"<h1>被动：许愿</h1>“我想要空间之力”你对神龙这样说道"
+
+		// 圣斧2
+		"DOTA_Tooltip_ability_item_devastator_2"                            "神圣斧"
+		"DOTA_Tooltip_ability_item_devastator_2_Description"				"<h1>被动：巫师之刃</h1>使下次攻击具有克敌机先效果，并且会施加毒素，持续%slow_duration%秒，减缓%slow%%%移动速度，并且每秒造成%int_damage_multiplier%倍智力值的伤害。\n\n<h1>被动：法力腐蚀</h1>攻击会降低敌人%active_mres_reduction%%%魔法抗性，持续%passive_cooldown%秒。"
+		"DOTA_Tooltip_ability_item_devastator_2_Lore"						"极具毁灭性。"
+		"DOTA_Tooltip_ability_item_devastator_2_bonus_attack_speed"				"+$attack"
+		"DOTA_Tooltip_ability_item_devastator_2_bonus_armor"					"+$armor"
+		"DOTA_Tooltip_ability_item_devastator_2_bonus_intellect"				"+$int"
+		"DOTA_Tooltip_ability_item_devastator_2_projectile_speed"			"+$projectile_speed"
+
+		// 大炮2
+		"DOTA_Tooltip_ability_item_greater_crit_2"                              "合金大炮"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Description"					"<h1>被动：致命一击</h1>普通攻击有%crit_chance%%%几率造成%crit_multiplier%%%伤害。"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Note0" 						"致命一击对建筑无效。"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Lore"							"双持威力，更上一层楼"
+		"DOTA_Tooltip_ability_item_greater_crit_2_bonus_damage"					"+$damage"
+
+		// 大鞋2
+		"DOTA_Tooltip_ability_item_guardian_greaves_2"                      "超凡径甲"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Description"			"<h1>主动：修复</h1>使周围友军回复%replenish_health%点生命和%replenish_mana%点魔法，并移除施法者身上大部分的负面效果。<br><br>作用范围：%replenish_radius%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：卫士光环</h1> 为周围友军提供%aura_health_regen%点/秒生命恢复，%aura_mana_regen%点/秒魔法恢复和%aura_armor%点护甲。如果友方英雄的生命值低于%aura_bonus_threshold%%%，光环效果将提升至%aura_health_regen_bonus%点/秒生命恢复，%aura_mana_regen_bonus%点/秒魔法恢复和%aura_armor_bonus%点护甲。<br><br>作用范围：%aura_radius%\n多个鞋类物品提供的移动速度加成不叠加。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_movement"			"+$move_speed"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_mana_regen"				"+$mana_regen"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_mres"				"%+$spell_resist"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Lore"						"为了向全能之神致敬所打造的众多圣器之一。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Note0"				"光环效果仅对英雄有效。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Note1"				"卫士胫甲的冷却时间内回复不能作用于已经被修复或梅肯斯姆的回复作用过的单位。"
+		"DOTA_Tooltip_modifier_item_guardian_greaves_2_aura"		"守护光环"
+		"DOTA_Tooltip_modifier_item_guardian_greaves_2_aura_Description"	"提供%fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点/秒生命恢复和%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲。"
+
+		// 蝴蝶2
+		"DOTA_Tooltip_ability_item_butterfly_2"                                     "迅敏蝴蝶"
+		"DOTA_Tooltip_ability_item_butterfly_2_Note0"								"与其他闪避效果为非线性叠加。"
+		"DOTA_Tooltip_ability_item_butterfly_2_Lore"								"只有最强大最老练的战士才能携带蝴蝶，但它也提供无可比拟的战斗灵活力作为回报。"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_attack_speed_pct"				"%+$attack_pct"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_damage"				"+$damage"
+
+		// 锤子2
+		"DOTA_Tooltip_ability_item_meteor_hammer_2"                               "天碍震星锤"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_Description"                   "<h1>主动：陨星锤</h1> 持续施法 - 成功施法后召唤一颗陨石，打击%impact_radius%范围内敌人，造成%stun_duration%秒眩晕和冲击伤害。对敌方单位和建筑造成持续伤害，持续%burn_duration%秒。非建筑单位在烧灼期间还会被减速%burn_slow%%%。<BR><BR>对建筑冲击伤害：%impact_damage_buildings%<BR>对建筑持续伤害：%burn_dps_buildings%<BR><BR>对非建筑冲击伤害：%impact_damage_units%<BR>对非建筑持续伤害：%burn_dps_units%<BR><BR>持续施法时间：%max_duration%秒<BR>落地时间：%land_time%秒"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_lore"                   "一柄带有魔力的战锤，铸造所用的金属发掘自被流星雨摧毁的村庄废墟之内。"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_spell_amp"						"%+技能增强"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_mana_regen_multiplier"				"%+魔法恢复增强"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_spell_lifesteal_amp"				"%+技能吸血增强"
+		"DOTA_Tooltip_modifier_item_meteor_hammer_2_burn"						"陨星锤烧灼"
+		"DOTA_Tooltip_modifier_item_meteor_hammer_2_burn_Description"			"被减速，持续受到%dMODIFIER_PROPERTY_TOOLTIP%点伤害，伤害间隔为%dMODIFIER_PROPERTY_TOOLTIP2%秒。"
+
+		// 大战鼓鞋
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2"                          "冲锋战鞋"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_Description"					"<h1>主动：坚韧</h1>为周围友军提供+%bonus_attack_speed_pct%攻速加成和+%bonus_movement_speed_pct%%%移动速度加成，持续%duration%秒。而且最初%bonus_ms_duration%秒友军不受减速效果影响。<br><br>作用范围：%radius%\n\n<h1>被动：迅捷光环</h1>为周围友军提供%aura_movement_speed%移动速度加成。<br><br>作用范围：%radius%"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_Lore"						"这双华丽的靴子是为一个古代的先驱打造，是他率先敢于将石堂城的荣光散播到国土的初始边界之外。"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_int"					"+$int"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_movement_speed"			"+$move_speed"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_health_regen"			"+$hp_regen"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_aura"				"迅捷光环"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_aura_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%。"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active"				"坚韧"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+
+		// 力量跳2
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2"                            "泰森闪光"
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2_Description"			    "<h1>主动：泰森闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后，%radius%范围内所有敌人受到%damage_base% + %damage_pct_instant%%%力量值的瞬时伤害，并且额外持续受到总计为%damage_pct_over_time%%%力量值的伤害，被减缓%movement_slow%%%移动速度，降低%attack_slow%攻击速度，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，盛势闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Lore"                    "令人生畏的匕首，在混沌之喉中打造，凡人之手几乎无法企及。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note0"                    "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note1"					"如果盛势闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_bonus_strength"			"+$str"
+        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff"			        "盛势闪光"
+        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff_Description"      "受到持续伤害。移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+
+		// 敏捷跳2
+		"DOTA_Tooltip_ability_item_swift_blink_2"                               "博尔特闪光"
+		"DOTA_Tooltip_ability_item_swift_blink_2_Description"         			"<h1>主动：博尔特闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后获得%bonus_movement%%%移动速度加成和相位移动状态，+%bonus_agi_active%点敏捷，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，迅疾闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Lore"                           "一把聪颖的战刃，可以预见佩戴者的动向并加以实现。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note0"                           "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note1"					        "如果迅疾闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_bonus_agility"			        "+$agi"
+		"DOTA_Tooltip_modifier_item_swift_blink_2_buff"         			"迅疾闪光"
+		"DOTA_Tooltip_modifier_item_swift_blink_2_buff_Description"       "敏捷提升%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%并且英雄拥有相位移动状态。"
+
+		// 智力跳2
+		"DOTA_Tooltip_ability_item_arcane_blink_2"                              "爱因斯坦闪光"
+		"DOTA_Tooltip_ability_item_arcane_blink_2_Description"         			"<h1>主动：爱因斯坦闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后回复%heal_amount%点生命和%mana_amount%点魔法。<br><br>受到来自敌方英雄或肉山的攻击时，秘奥闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Lore"                          "让人精神焕发的工具，可以帮忙分担施展奥术耗费的精力。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note0"                          "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note1"      					"如果秘奥闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_bonus_intellect"                "+$int"
+		"DOTA_Tooltip_modifier_item_arcane_blink_2_buff"         			"秘奥闪光"
+        "DOTA_Tooltip_modifier_item_arcane_blink_2_buff_Description"      "施法距离提升%dMODIFIER_PROPERTY_CAST_RANGE_BONUS%%%。"
 	}
 }
