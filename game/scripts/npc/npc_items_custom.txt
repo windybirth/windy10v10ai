@@ -5704,10 +5704,18 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
+			"bonus_damage"			"120"
+			"bonus_health_regen"	"15"
 			"bonus_mana_regen"		"5"
 			"cleave_damage_percent"	"80"
 			"cleave_damage_percent_creep"	"80"
-
+			"quelling_bonus"			"50"
+			"quelling_bonus_ranged"	"30"
+			"cleave_starting_width"			"150"
+			"cleave_ending_width"			"360"
+			"cleave_distance"			"650"
+			"upgraded_cleave_bonus"			"25"
+			"upgraded_damage_bonus"			"15"
 		}
 	}
 
