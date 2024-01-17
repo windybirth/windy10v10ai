@@ -7345,6 +7345,56 @@
 	}
 
 	//=================================================================================================================
+	// 零度之甲 shivas guard ultra
+	//=================================================================================================================
+	"item_recipe_shivas_guard_ultra"
+	{
+		"BaseClass"                     "item_recipe_shivas_guard"
+		"ID"						    "9607"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"1500"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_shivas_guard_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_shivas_guard;item_shivas_guard_2"
+		}
+	}
+	"item_shivas_guard_ultra"
+	{
+		"BaseClass"                     "item_shivas_guard"
+		"ID"						    "9608"
+		"AbilityCooldown"				"27"
+		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityManaCost"				"100"
+		"AbilityTextureName"            "shivas_guard_ultra"
+		"AbilityValues"
+		{
+			"bonus_intellect"		"80"
+			"bonus_strength"		"80"
+			"bonus_agility"			"80"
+			"bonus_hp_regen"		"80"
+			"bonus_armor"			"80"
+			"aura_radius"			"1800"
+			"aura_attack_speed"		"-500"
+			"blast_damage"			"1000"
+			"blast_movement_speed"	"-100"
+			"blast_debuff_duration"	"6.0"
+			"blast_radius"
+			{
+				"value"		"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"blast_speed"			"600"
+			"hp_regen_degen_aura"	"99"
+			"illusion_multiplier_pct"	"150"
+			"spell_amp"			"100"
+			"resist_debuff_duration"	"20.0"
+		}
+	}
+
+	//=================================================================================================================
 	// 永恒虚灵刀
 	//=================================================================================================================
 	"item_recipe_ethereal_blade_ultra"
