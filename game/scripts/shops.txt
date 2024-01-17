@@ -224,7 +224,7 @@
 		"item"      "item_satanic_ultra"
 		"item"      "item_glimmer_cape_ultra"
 		"item"      "item_ethereal_blade_ultra"
-		"item"      
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts

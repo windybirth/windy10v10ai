@@ -1839,7 +1839,7 @@
 
 	"item_meteor_hammer"
 	{
-		"AbilityCooldown"               "18"
+		"AbilityCooldown"               "20"
 		"AbilityValues"
 		{
 				"bonus_strength"		"9"
