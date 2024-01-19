@@ -6,7 +6,7 @@ function modifier_player_miao:GetTexture() return "player/xingguang" end
 
 function modifier_player_miao:OnCreated()
     self.icd = 40
-    self.icastrange = 400
+    self.icastrange = 600
     self.ikangxing = 40
     self.imovespeed = 200
     self.ipctmanaregen = 3

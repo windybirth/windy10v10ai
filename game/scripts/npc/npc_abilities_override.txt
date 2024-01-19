@@ -5589,7 +5589,7 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_FacelessVoid.Chronosphere"
-		"AbilityCastRange"				"500"
+		"AbilityCastRange"				"80000"
 		"AbilityCastPoint"				"0"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityCooldown"				"180"
@@ -5599,7 +5599,7 @@
 		{
 			"radius"
 			{
-				"value"		"99999"
+				"value"		"1000"
 				"affected_by_aoe_increase"	"1"
 			}
 			"duration"				"5"

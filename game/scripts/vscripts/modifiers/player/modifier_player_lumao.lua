@@ -7,9 +7,9 @@ function modifier_player_lumao:GetTexture() return "player/lumao" end
 function modifier_player_lumao:OnCreated()
     self.icd = 40
     self.icastrange = 400
-    self.ikangxing = 40
+    self.ikangxing = 50
     self.imovespeed = 200
-    self.ipctmanaregen = 3
+    self.ipctmanaregen = 4
 end
 
 

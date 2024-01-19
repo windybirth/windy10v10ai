@@ -9,7 +9,7 @@ function modifier_player_aoliao:OnCreated()
     self.icastrange = 400
     self.ikangxing = 40
     self.imovespeed = 200
-    self.ipctmanaregen = 3
+    self.ipctmanaregen = 300
 end
 
 

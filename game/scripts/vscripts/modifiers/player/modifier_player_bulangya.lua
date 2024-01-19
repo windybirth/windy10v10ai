@@ -5,10 +5,10 @@ function modifier_player_bulangya:RemoveOnDeath() return false end
 function modifier_player_bulangya:GetTexture() return "player/bulangya" end
 
 function modifier_player_bulangya:OnCreated()
-    self.icd = 20
-    self.icastrange = 400
+    self.icd = 40
+    self.icastrange = 600
     self.ikangxing = 40
-    self.imovespeed = 200
+    self.imovespeed = 300
     self.ipctmanaregen = 3
 end
 
