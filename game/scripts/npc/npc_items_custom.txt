@@ -3175,7 +3175,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_agility"
 		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"15000"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -3206,7 +3206,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_intelligence"
 		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"15000"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -3237,7 +3237,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_strength"
 		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"15000"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -5270,7 +5270,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_percent"		"30"
+				"attack_percent"		"60"
 			}
 		}
 	}
@@ -5346,7 +5346,7 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"attack_percent"		"50"
+				"attack_percent"		"100"
 			}
 		}
 	}
@@ -5809,7 +5809,7 @@
 		"AbilityTextureName"			"item_recipe_tome_of_luoshu"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"5000"
+		"ItemCost"						"3333"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -6259,7 +6259,7 @@
         "BaseClass"					"item_lua"
         "ScriptFile"                    		"items/item_tome_of_agility_for_lottery"
         "AbilityTextureName"		    		"tome_of_agility"
-        "ItemCost"					"6000"
+        "ItemCost"					"5000"
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "ItemAliases"					"agility tome;agi"
         "ItemShopTags"					"consumable"
@@ -6299,7 +6299,7 @@
         "BaseClass"					"item_lua"
         "ScriptFile"                    		"items/item_tome_of_intelligence_for_lottery"
         "AbilityTextureName"		   		"tome_of_intelligence"
-        "ItemCost"					"6000"
+        "ItemCost"					"5000"
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "ItemAliases"					"intelligence tome;int"
         "ItemShopTags"					"consumable"
@@ -6339,7 +6339,7 @@
         "BaseClass"					"item_lua"
         "ScriptFile"                    		"items/item_tome_of_strength_for_lottery"
         "AbilityTextureName"		    		"tome_of_strength"
-        "ItemCost"					"6000"
+        "ItemCost"					"5000"
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
         "ItemAliases"					"strength tome;str"
         "ItemShopTags"					"consumable"
@@ -6675,10 +6675,10 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-			"bonus_agility"			"99"
+			"bonus_agility"			"200"
 			"bonus_evasion"			"99"
 			"bonus_attack_speed_pct"	"100"
-			"bonus_damage"	"100"
+			"bonus_damage"	"200"
 		}
 	}
 
@@ -6688,7 +6688,7 @@
 	"item_recipe_meteor_hammer_2"
 	{
 		"BaseClass"                     "item_recipe_meteor_hammer"
-		"ItemCost"						"0"
+		"ItemCost"						"1000"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_meteor_hammer_2"
@@ -6730,7 +6730,7 @@
 				"land_time"				".5"
 				"impact_radius"
 				{
-					"value"		"600"
+					"value"		"400"
 					"affected_by_aoe_increase"	"1"
 				}
 				"max_duration"		"4"
@@ -6874,9 +6874,6 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Recipe: Arcane Blink
-	//=================================================================================================================
 	"item_recipe_arcane_blink_2"
 	{
 		"BaseClass"                     "item_recipe_arcane_blink"
@@ -6890,9 +6887,6 @@
 		}
 	}
 
-	//=================================================================================================================
-	//  Recipe: Swift Blink
-	//=================================================================================================================
 	"item_recipe_swift_blink_2"
 	{
 		"BaseClass"                     "item_recipe_swift_blink"
@@ -6906,9 +6900,6 @@
 		}
 	}
 
-	//=================================================================================================================
-	// Recipe: Overwhelming Blink
-	//=================================================================================================================
 	"item_recipe_overwhelming_blink_2"
 	{
 		"BaseClass"                     "item_recipe_overwhelming_blink"
@@ -6919,6 +6910,153 @@
 		"ItemRequirements"
 		{
 			"01"						"item_overwhelming_blink;item_overwhelming_blink"
+		}
+	}
+
+	//=================================================================================================================
+	// 强袭
+	//=================================================================================================================
+	"item_recipe_assault_2"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_2"
+		"ItemRequirements"
+		{
+			"01"						"item_assault;item_assault"
+		}
+	}
+
+	"item_assault_2"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"120"
+			"bonus_armor"			"40"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"120"
+			"aura_positive_armor"	"20"
+			"aura_negative_armor"	"-20"
+		}
+	}
+
+	"item_recipe_assault_3"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_3"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_2;item_assault_2"
+		}
+	}
+
+	"item_assault_3"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"240"
+			"bonus_armor"			"80"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"240"
+			"aura_positive_armor"	"40"
+			"aura_negative_armor"	"-40"
+		}
+	}
+
+	"item_recipe_assault_4"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_4"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_3;item_assault_3"
+		}
+	}
+
+	"item_assault_4"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"480"
+			"bonus_armor"			"160"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"480"
+			"aura_positive_armor"	"80"
+			"aura_negative_armor"	"-80"
+		}
+	}
+
+	"item_recipe_assault_5"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_5"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_4;item_assault_4"
+		}
+	}
+
+	"item_assault_5"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"960"
+			"bonus_armor"			"320"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"960"
+			"aura_positive_armor"	"160"
+			"aura_negative_armor"	"-160"
 		}
 	}
 
