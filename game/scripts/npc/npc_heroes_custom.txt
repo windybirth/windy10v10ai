@@ -492,6 +492,7 @@
 
 	"npc_dota_hero_naga_siren"
 	{
+		"MovementSpeed" "550"
 		"Ability7"		"naga_siren_crit"
 		"Ability5"      "phantom_lancer_phantom_edge"
 	}

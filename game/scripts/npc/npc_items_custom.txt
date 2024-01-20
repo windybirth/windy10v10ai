@@ -2437,12 +2437,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"bonus_armor"			"20"
+				"bonus_armor"			"40"
 			}
 			"05"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"magical_resis"      	"25"
+				"magical_resis"      	"40"
 			}
 			"06"
 			{
@@ -2457,7 +2457,7 @@
 			"08"
 			{
 				"var_type"              "FIELD_INTEGER"
-				"aura_magical_resis_buff"		"10"
+				"aura_magical_resis_buff"		"20"
 			}
 			"09"
 			{
@@ -2467,12 +2467,12 @@
 			"10"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"aura_damage_reduction_buff"    "-60"
+				"aura_damage_reduction_buff"    "-50"
 			}
 			"11"
 			{
 				"var_type"                      "FIELD_INTEGER"
-				"duration"                      "9"
+				"duration"                      "7"
 			}
 		}
 
@@ -3435,7 +3435,7 @@
 		"ItemResult"					"item_silver_edge_2"
 		"ItemRequirements"
 		{
-			"01"						"item_silver_edge;item_relic"
+			"01"						"item_silver_edge;item_hyperstone;item_hyperstone"
 		}
 	}
 
@@ -3465,8 +3465,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_damage" "166"
-			"bonus_attack_speed"	"40"
+			"bonus_damage" "200"
+			"bonus_attack_speed"	"400"
 			"bonus_strength"		"0"
 			"bonus_intellect"			"0"
 			"bonus_mana_regen"		"0"
@@ -3474,7 +3474,7 @@
 			"windwalk_movement_speed"	"30"
 			"windwalk_fade_time"	"0.3"
 			"windwalk_bonus_damage"	"600"
-			"backstab_duration"		"8"
+			"backstab_duration"		"12"
 			"visibility_radius"		"1025"
 		}
 	}
@@ -5975,17 +5975,17 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_damage"			"25"
-			"bonus_attack_speed"	"35"
-			"bonus_armor"			"9"
-			"bonus_health_regen"	"10"
-			"unholy_bonus_damage"	"45"
-			"unholy_bonus_attack_speed"	"15"
-			"unholy_bonus_strength"	"35"
-			"unholy_bonus_armor"	"8"
-			"unholy_bonus_slow_resistance"	"35"
+			"bonus_damage"			"50"
+			"bonus_attack_speed"	"100"
+			"bonus_armor"			"18"
+			"bonus_health_regen"	"20"
+			"unholy_bonus_damage"	"90"
+			"unholy_bonus_attack_speed"	"50"
+			"unholy_bonus_strength"	"70"
+			"unholy_bonus_armor"	"16"
+			"unholy_bonus_slow_resistance"	"70"
 			"unholy_health_drain_per_second"	"25"
-			"toggle_cooldown"		"0.036f"
+			"toggle_cooldown"		"0.036"
 		}
 	}
 	//=================================================================================================================
@@ -6040,17 +6040,17 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_damage"			"35"
-			"bonus_attack_speed"	"45"
-			"bonus_armor"			"12"
-			"bonus_health_regen"	"15"
-			"unholy_bonus_damage"	"55"
-			"unholy_bonus_attack_speed"	"30"
-			"unholy_bonus_strength"	"45"
-			"unholy_bonus_armor"	"12"
-			"unholy_bonus_slow_resistance"	"45"
+			"bonus_damage"			"70"
+			"bonus_attack_speed"	"180"
+			"bonus_armor"			"24"
+			"bonus_health_regen"	"30"
+			"unholy_bonus_damage"	"110"
+			"unholy_bonus_attack_speed"	"120"
+			"unholy_bonus_strength"	"90"
+			"unholy_bonus_armor"	"24"
+			"unholy_bonus_slow_resistance"	"90"
 			"unholy_health_drain_per_second"	"5"
-			"toggle_cooldown"		"0.036f"
+			"toggle_cooldown"		"0.036"
 		}
 	}
 	//=================================================================================================================

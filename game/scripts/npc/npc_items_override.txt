@@ -1296,7 +1296,7 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"140"
-			"spell_lifesteal"		"80"
+			"spell_lifesteal"		"300"
 			"manacost_per_hit"		"15"
 		}
 	}
@@ -1401,9 +1401,9 @@
 		"AbilityValues"
 		{
 				"bonus_aoe"				"300"
-				"bonus_health"			"3000"
-				"bonus_mana"			"3000"
-				"spell_lifesteal"		"100"
+				"bonus_health"			"5000"
+				"bonus_mana"			"5000"
+				"spell_lifesteal"		"1000"
 				"buff_duration"			"10"
 				"lifesteal_multiplier"	"3.5"
 				"hp_cost"				"0"
