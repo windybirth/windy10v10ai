@@ -7024,42 +7024,6 @@
 		}
 	}
 
-	"item_recipe_assault_5"
-	{
-		"BaseClass"                     "item_recipe_assault"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
-		"ItemShopTags"					""
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_assault_5"
-		"ItemRequirements"
-		{
-			"01"						"item_assault_4;item_assault_3"
-		}
-	}
-
-	"item_assault_5"
-	{
-		"BaseClass"                     "item_assault"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityCastRange"				"1200"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"ac;assault cuirass"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"AbilityValues"
-		{
-			"bonus_attack_speed"	"960"
-			"bonus_armor"			"320"
-			"aura_radius"			"1200"
-			"aura_attack_speed"		"960"
-			"aura_positive_armor"	"160"
-			"aura_negative_armor"	"-160"
-		}
-	}
-
 	//=================================================================================================================
     // 神器救世狂战 bfury ultra
     //=================================================================================================================

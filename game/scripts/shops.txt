@@ -222,7 +222,7 @@
 		"item"      "item_guardian_greaves_2"
 		"item"      "item_butterfly_2"
 		"item"      "item_satanic_ultra"
-		"item"      "item_assault_5"
+		"item"      "item_assault_4"
 		"item"      "item_ethereal_blade_ultra"
 		"item"      "item_shivas_guard_ultra"
 	}

@@ -314,14 +314,46 @@
 			}
 		}
 	}
+
+	"abyssal_underlord_dark_portal"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING "
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilitySound"					"Hero_Undying.Tombstone"
+		"MaxLevel"						"3"
+		"HasScepterUpgrade"				"1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCastGestureSlot"		"DEFAULT"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"60 60 60"
+		"AbilityManaCost"				"200"
+		"AbilityValues"
+		{
+			"duration"				"20.0"
+			"damage_reduction"		"30 40 50"
+			"bonus_ms"				"10 20 30"
+			"buff_duration"			"10.0 15.0 20.0"
+			"minimum_distance"		"2000"
+			"spawn_pit_on_cast"
+			{
+				"special_bonus_scepter"	"+1"
+			}
+			"warp_channel_duration"			"1.5"
+			"distance_from_fountain"		"1425"
+		}
+	}
+
 	// 黑暗之门
 	"abyssal_underlord_dark_rift"
     {
-        "AbilityCooldown"				"60"
+        "AbilityCooldown"				"20"
         "AbilityValues"
         {
             "radius"						"0"
-            "teleport_delay"				"5.0 4.0 3.0"
+            "teleport_delay"				"3.0 2.0 1.0"
         }
     }
 	//=================================================================================================================
