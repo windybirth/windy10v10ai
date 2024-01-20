@@ -2664,6 +2664,7 @@
 	}
 	"npc_dota_hero_zuus"
 	{
+		"Ability4"		"clinkz_burning_barrage"
 		"Bot"
 		{
 			"Build"
