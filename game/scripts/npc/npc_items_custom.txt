@@ -6998,7 +6998,7 @@
 		"ItemResult"					"item_assault_4"
 		"ItemRequirements"
 		{
-			"01"						"item_assault_3;item_assault"
+			"01"						"item_assault_3;item_assault_2"
 		}
 	}
 
@@ -7034,7 +7034,7 @@
 		"ItemResult"					"item_assault_5"
 		"ItemRequirements"
 		{
-			"01"						"item_assault_4;item_assault"
+			"01"						"item_assault_4;item_assault_3"
 		}
 	}
 
