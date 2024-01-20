@@ -5976,11 +5976,11 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"50"
-			"bonus_attack_speed"	"100"
+			"bonus_attack_speed"	"70"
 			"bonus_armor"			"18"
 			"bonus_health_regen"	"20"
 			"unholy_bonus_damage"	"90"
-			"unholy_bonus_attack_speed"	"50"
+			"unholy_bonus_attack_speed"	"30"
 			"unholy_bonus_strength"	"70"
 			"unholy_bonus_armor"	"16"
 			"unholy_bonus_slow_resistance"	"70"
@@ -6041,11 +6041,11 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"70"
-			"bonus_attack_speed"	"180"
+			"bonus_attack_speed"	"90"
 			"bonus_armor"			"24"
 			"bonus_health_regen"	"30"
 			"unholy_bonus_damage"	"110"
-			"unholy_bonus_attack_speed"	"120"
+			"unholy_bonus_attack_speed"	"60"
 			"unholy_bonus_strength"	"90"
 			"unholy_bonus_armor"	"24"
 			"unholy_bonus_slow_resistance"	"90"
@@ -6962,7 +6962,7 @@
 		"ItemResult"					"item_assault_3"
 		"ItemRequirements"
 		{
-			"01"						"item_assault_2;item_assault_2"
+			"01"						"item_assault_2;item_assault"
 		}
 	}
 
@@ -6998,7 +6998,7 @@
 		"ItemResult"					"item_assault_4"
 		"ItemRequirements"
 		{
-			"01"						"item_assault_3;item_assault_3"
+			"01"						"item_assault_3;item_assault"
 		}
 	}
 
@@ -7034,7 +7034,7 @@
 		"ItemResult"					"item_assault_5"
 		"ItemRequirements"
 		{
-			"01"						"item_assault_4;item_assault_4"
+			"01"						"item_assault_4;item_assault"
 		}
 	}
 
@@ -7295,11 +7295,11 @@
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 		"AllowedInBackpack"             "0"
 		"ItemDroppable"                 "0"
-		"ItemSellable"					"0"
+		"ItemSellable"					"1"
 
 		"AbilityValues"
 		{
-			"bonus_strength"		"180"
+			"bonus_strength"		"360"
 			"bonus_damage"			"360"
 			"duration"				"3600"
 			"max_level"				"1"
