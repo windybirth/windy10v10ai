@@ -1,4 +1,7 @@
 export class ActionItem {
+  // ---------------------------------------------------------
+  // Item build 购买物品
+  // ---------------------------------------------------------
   static BuyItem(hero: CDOTA_BaseNPC_Hero, itemName: string, checkSame: boolean = true): boolean {
     if (checkSame) {
       const item = hero.FindItemInInventory(itemName);
@@ -33,28 +36,59 @@ export class ActionItem {
     hero.SellItem(item);
   }
 
-  // Use item
-  static UseTeleportScroll(hero: CDOTA_BaseNPC_Hero, pos: Vector) {
-    const item = hero.FindItemInInventory("item_tpscroll");
-    if (item) {
-      hero.CastAbilityOnPosition(pos, item, hero.GetPlayerOwnerID());
+  // ---------------------------------------------------------
+  // Item usage 使用物品
+  // ---------------------------------------------------------
+  static UseItemOnTarget(
+    hero: CDOTA_BaseNPC_Hero,
+    itemName: string,
+    target: CDOTA_BaseNPC | undefined,
+  ): boolean {
+    if (target === undefined) {
+      return false;
     }
-  }
-
-  static UseItemOnPosition(hero: CDOTA_BaseNPC_Hero, itemName: string, pos: Vector): boolean {
-    const item = hero.FindItemInInventory(itemName);
+    const item = this.FindItemInInventoryUseable(hero, itemName);
     if (!item) {
-      print(`[AI] ERROR UseItemOnPosition ${itemName} failed, not found`);
       return false;
     }
-    if (this.IsItemCastable(hero, item) === false) {
-      return false;
-    }
-    hero.CastAbilityOnPosition(pos, item, hero.GetPlayerOwnerID());
+    hero.CastAbilityOnTarget(target, item, hero.GetPlayerOwnerID());
+    print(`[AI] UseItemOnPosition ${itemName} on ${target.GetUnitName()}`);
     return true;
   }
 
-  static IsItemCastable(hero: CDOTA_BaseNPC_Hero, item: CDOTA_Item): boolean {
+  static UseItemOnPosition(hero: CDOTA_BaseNPC_Hero, itemName: string, pos: Vector): boolean {
+    const item = this.FindItemInInventoryUseable(hero, itemName);
+    if (!item) {
+      return false;
+    }
+    hero.CastAbilityOnPosition(pos, item, hero.GetPlayerOwnerID());
+    print(`[AI] UseItemOnPosition ${itemName} on ${pos.x}, ${pos.y}, ${pos.z}`);
+    return true;
+  }
+
+  /**
+   * 寻找可用的物品
+   */
+  static FindItemInInventoryUseable(
+    hero: CDOTA_BaseNPC_Hero,
+    itemName: string,
+  ): CDOTA_Item | undefined {
+    const item = hero.FindItemInInventory(itemName);
+    if (!item) {
+      return undefined;
+    }
+    const itemSlot = item.GetItemSlot();
+    // 如果在备用物品栏中 则不可用
+    if (itemSlot >= InventorySlot.SLOT_7 && itemSlot <= InventorySlot.SLOT_9) {
+      return undefined;
+    }
+    if (this.IsItemCastable(hero, item) === false) {
+      return undefined;
+    }
+    return item;
+  }
+
+  private static IsItemCastable(hero: CDOTA_BaseNPC_Hero, item: CDOTA_Item): boolean {
     if (item.GetCooldownTimeRemaining() > 0) {
       return false;
     }
