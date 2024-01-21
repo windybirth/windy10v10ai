@@ -59,7 +59,7 @@ export class Debug {
       }
     }
 
-    if (cmd.startsWith("-getItemByName")) {
+    if (cmd.startsWith("-getUseableItemByName")) {
       const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
       if (!hero) return;
       const itemName = args[0];

@@ -126,9 +126,16 @@ export class BaseHeroAIModifier extends BaseModifier {
   // Item usage
   // ---------------------------------------------------------
   UseItemSelf(): boolean {
-    // TODO 确认备用背包里的物品是否会被使用
     const creep = this.FindNearestEnemyCreep();
-    if (ActionItem.UseItemOnTarget(this.hero, "item_hand_of_midas", creep)) {
+    if (
+      ActionItem.UseItemOnTarget(this.hero, "item_hand_of_group", creep, (target) => {
+        // 点金手目标不能是远古
+        if (target.IsAncient()) {
+          return false;
+        }
+        return true;
+      })
+    ) {
       return true;
     }
 

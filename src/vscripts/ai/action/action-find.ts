@@ -7,7 +7,7 @@ export class ActionFind {
   }
 
   static FindEnemyCreeps(self: CDOTA_BaseNPC_Hero, radius: number): CDOTA_BaseNPC[] {
-    const enemies = this.FindEnemies(self, radius, UnitTargetType.BASIC);
+    const enemies = this.FindEnemies(self, radius, UnitTargetType.CREEP);
 
     return enemies;
   }

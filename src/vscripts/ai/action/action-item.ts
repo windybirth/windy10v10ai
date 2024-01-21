@@ -1,3 +1,5 @@
+import { ActionAbility } from "./action-ability";
+
 export class ActionItem {
   // ---------------------------------------------------------
   // Item build 购买物品
@@ -43,6 +45,7 @@ export class ActionItem {
     hero: CDOTA_BaseNPC_Hero,
     itemName: string,
     target: CDOTA_BaseNPC | undefined,
+    condition?: (target: CDOTA_BaseNPC, item: CDOTA_Item) => boolean,
   ): boolean {
     if (target === undefined) {
       return false;
@@ -51,8 +54,20 @@ export class ActionItem {
     if (!item) {
       return false;
     }
+
+    // 检测是否满足条件
+    if (condition && condition(target, item) === false) {
+      return false;
+    }
+    // 检测是否在施法范围内
+    const distance = hero.GetRangeToUnit(target);
+    const castRange = ActionAbility.GetFullCastRange(hero, item);
+    if (distance > castRange) {
+      return false;
+    }
+
     hero.CastAbilityOnTarget(target, item, hero.GetPlayerOwnerID());
-    print(`[AI] UseItemOnPosition ${itemName} on ${target.GetUnitName()}`);
+    print(`[AI] UseItemOnTarget ${itemName} on ${target.GetUnitName()}`);
     return true;
   }
 
@@ -61,6 +76,8 @@ export class ActionItem {
     if (!item) {
       return false;
     }
+
+    // TODO 检测是否在施法范围内
     hero.CastAbilityOnPosition(pos, item, hero.GetPlayerOwnerID());
     print(`[AI] UseItemOnPosition ${itemName} on ${pos.x}, ${pos.y}, ${pos.z}`);
     return true;
@@ -80,9 +97,11 @@ export class ActionItem {
     const itemSlot = item.GetItemSlot();
     // 如果在备用物品栏中 则不可用
     if (itemSlot >= InventorySlot.SLOT_7 && itemSlot <= InventorySlot.SLOT_9) {
+      print(`[AI] FindItemInInventoryUseable ${itemName} failed, in backup slot`);
       return undefined;
     }
     if (this.IsItemCastable(hero, item) === false) {
+      print(`[AI] FindItemInInventoryUseable ${itemName} failed, not castable`);
       return undefined;
     }
     return item;
@@ -92,7 +111,11 @@ export class ActionItem {
     if (item.GetCooldownTimeRemaining() > 0) {
       return false;
     }
-    // check mana
+    // 确认有足够的充能
+    if (item.GetCurrentCharges() === 0) {
+      return false;
+    }
+    // 确认魔法值足够
     const manaCost = item.GetManaCost(-1);
     if (manaCost > hero.GetMana()) {
       return false;
