@@ -6002,7 +6002,7 @@
 			"unholy_bonus_armor"	"12"
 			"unholy_bonus_slow_resistance"	"45"
 			"unholy_health_drain_per_second"	"5"
-			"toggle_cooldown"		"0.036f"
+			"toggle_cooldown"		"0.036"
 		}
 	}
 	//=================================================================================================================
