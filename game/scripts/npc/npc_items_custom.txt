@@ -6988,42 +6988,6 @@
 		}
 	}
 
-	"item_recipe_assault_4"
-	{
-		"BaseClass"                     "item_recipe_assault"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
-		"ItemShopTags"					""
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_assault_4"
-		"ItemRequirements"
-		{
-			"01"						"item_assault_3;item_assault_2"
-		}
-	}
-
-	"item_assault_4"
-	{
-		"BaseClass"                     "item_assault"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"AbilityCastRange"				"1200"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
-		"ItemQuality"					"epic"
-		"ItemAliases"					"ac;assault cuirass"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ShouldBeSuggested"				"1"
-		"AbilityValues"
-		{
-			"bonus_attack_speed"	"480"
-			"bonus_armor"			"160"
-			"aura_radius"			"1200"
-			"aura_attack_speed"		"480"
-			"aura_positive_armor"	"80"
-			"aura_negative_armor"	"-80"
-		}
-	}
-
 	//=================================================================================================================
     // 神器救世狂战 bfury ultra
     //=================================================================================================================
@@ -7202,6 +7166,45 @@
 			"bonus_health_regen"	"12"
 			"bonus_mana_regen"		"6.0"
 			"bonus_damage"			"20"
+		}
+	}
+
+	//=================================================================================================================
+	// 神器力量法则碎片 power
+	//=================================================================================================================
+	"item_recipe_power"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9632"
+		"AbilityTextureName"			"item_recipe_power"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_power"
+		"ItemRequirements"
+		{
+			"01"						"item_moon_shard_datadriven;item_dodo_desolator"
+		}
+	}
+
+	"item_power"
+	{
+		"BaseClass"						"item_lua"
+		"ID"							"9633"
+		"ScriptFile"					"items/item_power"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+		"AbilityTextureName" 			"item_power"
+		"ItemShopTags"					"damage;attack_speed"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"crigan_blade"
+		"AbilityValues"
+		{
+			"bonus_damage"				"240"
+			"bonus_attack_speed"		"240"
+			"armor_penetration"			"20"
+			"armor_penetration_pct"		"100"
 		}
 	}
 

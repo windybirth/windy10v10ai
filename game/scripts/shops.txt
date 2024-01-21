@@ -194,7 +194,7 @@
 
 	"weapons"
 	{
-		"item"		"item_basher"
+		"item"		"item_power"
 		"item"		"item_nullifier"			// 否决
 		"item"		"item_greater_crit"			// 大炮
 		"item"		"item_armlet_pro_max"		// 小鸡臂章
@@ -222,7 +222,7 @@
 		"item"      "item_guardian_greaves_2"
 		"item"      "item_butterfly_2"
 		"item"      "item_satanic_ultra"
-		"item"      "item_assault_4"
+		"item"      "item_assault_3"
 		"item"      "item_ethereal_blade_ultra"
 		"item"      "item_shivas_guard_ultra"
 	}
