@@ -543,7 +543,7 @@
 	}
     "generic_gold_bag_fountain"
     {
-		"MaxLevel"						"5"
+		"MaxLevel"						"6"
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -611,7 +611,7 @@
             "03"
             {
                 "var_type"              "FIELD_FLOAT"
-                "think_interval"        "0.25 0.15 0.075 0.05 0.037" // 3 5 10 15 20
+                "think_interval"        "0.75 0.25 0.15 0.075 0.05 0.037" // 1 3 5 10 15 20
             }
         }
     }
