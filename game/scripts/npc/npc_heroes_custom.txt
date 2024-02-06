@@ -1201,6 +1201,11 @@
 			}
 		}
 	}
+	"npc_dota_hero_grimstroke"
+	{
+		"Ability7"				"grimstroke_dark_portrait"
+		"Ability4"              "visage_soul_assumption"
+	}
 	"npc_dota_hero_huskar"
 	{
 		"Ability4"		"huskar_inner_vitality"

@@ -3539,6 +3539,8 @@
 	// 霹雳铁手
 	"snapfire_lil_shredder"
 	{
+		"LinkedAbility"                 "chen_penitence"
+		"AbilityDraftPreAbility"        "chen_penitence"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"24 20 16 12 8"
 		"AbilityDuration"				"6"
@@ -3557,6 +3559,8 @@
 	// 赎罪（来自陈）
 	"chen_penitence"
 	{
+		"LinkedAbility"                 "snapfire_lil_shredder"
+		"AbilityDraftPreAbility"        "snapfire_lil_shredder"
 		"MaxLevel"                      "5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCastPoint"				"0.0"// 0.3
@@ -9238,6 +9242,8 @@
 	// 幻影之拥
 	"grimstroke_ink_creature"
 	{
+		"LinkedAbility"                 "visage_soul_assumption"
+		"AbilityDraftPreAbility"        "visage_soul_assumption"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"22 19 16 13 10"
 		"AbilityManaCost"				"120 140 160 180 200"
@@ -9271,6 +9277,42 @@
 				"pop_damage"				"280 360 440 520 600"
 			}
 		}
+	}
+	// 灵魂超度（来自维萨吉）
+	"visage_soul_assumption"
+	{
+		"LinkedAbility"                 "grimstroke_ink_creature"
+		"AbilityDraftPreAbility"        "grimstroke_ink_creature"
+		"MaxLevel"                      "5"
+		"AbilityCastPoint"				"0.0"// 0.2
+		"AbilityCooldown"				"3"// 4
+		"AbilityManaCost"				"110"
+		"AbilityCastRange"				"1200"// 1000
+		"AbilityValues"
+		{
+				"bolt_speed"				"1000"
+				"soul_base_damage"			"40"// 20
+				"soul_charge_damage"
+				{
+					"value"			"210"// 70
+					"LinkedSpecialBonus"		"special_bonus_unique_visage_4"
+				}
+				"stack_limit"				"4 6 8 10 12"// 3 4 5 6
+				"stack_duration"			"10.0"// 6
+				"damage_limit"
+				{
+					"value"			"200"// 100
+					"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+				}
+				"radius"
+				{
+					"value"			"1800"
+					"affected_by_aoe_increase"	"1"
+				}
+				"damage_min"				"2.0"
+				"damage_max"				"3000.0"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 墨涌
 	"grimstroke_spirit_walk"
@@ -9340,6 +9382,18 @@
 				"var_type"				"FIELD_INTEGER"
 				"images_movespeed_bonus"			"150"
 			}
+		}
+	}
+	//缚魂
+	"grimstroke_soul_chain"
+	{
+		"MaxLevel"                      "4"
+		"AbilityCooldown"				"70 60 50 40"
+		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityManaCost"				"150 200 250 300"
+		"AbilityValues"
+		{
+			"chain_duration"		"8.0 10.0 12.0 14.0"// 6 7 8
 		}
 	}
 	//=================================================================================================================
