@@ -623,8 +623,8 @@
 	}
     "npc_dota_hero_antimage"
 	{
-		"Ability4"		"generic_hidden"
-		"Ability5"		"generic_hidden"
+		"Ability4"		"brewmaster_cinder_brew"
+		"Ability5"		"brewmaster_drunken_brawler"
 	}
 	"npc_dota_hero_axe"
 	{
