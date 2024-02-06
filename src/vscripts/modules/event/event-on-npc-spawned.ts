@@ -55,6 +55,10 @@ export class EventOnNpcSpawned {
       if (abilityGoldBag) {
         abilityGoldBag.SetLevel(this.roshanNumber);
       }
+      const abilitySeasonPointBag = creep.FindAbilityByName("generic_season_point_bag_fountain");
+      if (abilitySeasonPointBag) {
+        abilitySeasonPointBag.SetLevel(this.roshanNumber);
+      }
 
       if (this.roshanNumber < 5) {
         this.roshanNumber++;

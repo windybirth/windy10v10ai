@@ -545,6 +545,12 @@ function AIGameMode:OnItemPickedUp(event)
         hHero:ModifyGoldFiltered(iGold, true, DOTA_ModifyGold_RoshanKill)
         SendOverheadEventMessage(hHero, OVERHEAD_ALERT_GOLD, hHero, iGold * AIGameMode:GetPlayerGoldXpMultiplier(event.PlayerID), nil)
     end
+
+    if event.PlayerID ~= nil and item ~= nil and hHero ~= nil and item:GetAbilityName() == "item_bag_of_season_point" then
+        local iPoint = item:GetLevelSpecialValueFor("bonus_season_point", AIGameMode.playerNumber)
+        AIGameMode.playerBonusSeasonPoint[event.PlayerID] = AIGameMode.playerBonusSeasonPoint[event.PlayerID] + iPoint
+        SendOverheadEventMessage(hHero, OVERHEAD_ALERT_SHARD , hHero, iPoint, nil)
+    end
 end
 
 function AIGameMode:SetUnitShareMask(data)
@@ -789,6 +795,8 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
                         mostTowerKill_2 = towerKills
                     end
 
+                    -- 追加奖励赛季积分
+                    playerInfo.points = playerInfo.points + AIGameMode.playerBonusSeasonPoint[playerID]
                 end
 
                 data.players[playerID] = playerInfo
