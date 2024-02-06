@@ -23,7 +23,6 @@ export class EventEntityKilled {
       // delay to remove item item_bag_of_gold and item_bag_of_season_point on map
       Timers.CreateTimer(this.removeGoldBagDelay, () => {
         const goldBags = Entities.FindAllByClassname("dota_item_drop") as CDOTA_Item_Physical[];
-        DeepPrintTable(goldBags);
         for (const goldBag of goldBags) {
           const itemName = goldBag.GetContainedItem().GetName();
           if (itemName === "item_bag_of_gold" || itemName === "item_bag_of_season_point") {

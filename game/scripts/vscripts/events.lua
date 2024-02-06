@@ -549,7 +549,7 @@ function AIGameMode:OnItemPickedUp(event)
     if event.PlayerID ~= nil and item ~= nil and hHero ~= nil and item:GetAbilityName() == "item_bag_of_season_point" then
         local iPoint = item:GetLevelSpecialValueFor("bonus_season_point", AIGameMode.playerNumber)
         AIGameMode.playerBonusSeasonPoint[event.PlayerID] = AIGameMode.playerBonusSeasonPoint[event.PlayerID] + iPoint
-        SendOverheadEventMessage(hHero, OVERHEAD_ALERT_SHARD , hHero, iPoint, nil)
+        SendOverheadEventMessage(hHero, OVERHEAD_ALERT_SHARD , hHero, AIGameMode:FilterSeasonPoint(iPoint, DOTA_TEAM_GOODGUYS), nil)
     end
 end
 
@@ -911,7 +911,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
     end
     -- filter points
     for _, playerInfo in pairs(data.players) do
-        playerInfo.points = AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
+        playerInfo.points = AIGameMode:FilterSeasonPoint(playerInfo.points, winnerTeamId)
     end
 
     local sTable = "ending_stats"
@@ -922,8 +922,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
 end
 
 
-function AIGameMode:FilterSeasonPoint(playerInfo, winnerTeamId)
-    local points = playerInfo.points
+function AIGameMode:FilterSeasonPoint(points, winnerTeamId)
 
     if AIGameMode:IsInvalidGame() then
         return 0
