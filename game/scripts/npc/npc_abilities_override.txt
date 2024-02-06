@@ -327,14 +327,33 @@
 			}
 		}
 	}
+	// 开门
+	"abyssal_underlord_dark_portal"
+	{
+		"AbilityCooldown"				"80 60 40"
+		"AbilityValues"
+		{
+				"duration"				"20.0"
+				"damage_reduction"		"14 22 30"
+				"bonus_ms"				"10 20 30"
+				"buff_duration"			"5.0 6.0 7.0"
+				"minimum_distance"		"2000"
+				"spawn_pit_on_cast"
+				{
+					"special_bonus_scepter"	"+1"
+				}
+				"warp_channel_duration"			"3.5"
+				"distance_from_fountain"		"1425"
+		}
+	}
 	// 黑暗之门
 	"abyssal_underlord_dark_rift"
     {
-        "AbilityCooldown"				"60"
+        "AbilityCooldown"				"40"
         "AbilityValues"
         {
             "radius"						"0"
-            "teleport_delay"				"5.0 4.0 3.0"
+            "teleport_delay"				"2.5 2.0 1.5"
         }
     }
 	//=================================================================================================================
@@ -1528,6 +1547,11 @@
 		{
 				"rock_damage"			"150 200 250 300 350"
 				"duration"			"2.5 3 3.5 4 5"
+				"AbilityCooldown"
+				{
+					"value"		"13"
+					"special_bonus_unique_earth_spirit_5"	"-4"// 2 天赋等级20变25增加数值
+				}
 		}
 	}
 	// 放石头
@@ -1546,12 +1570,33 @@
 		"AbilityCooldown"				"65 55 45 35"
 		"AbilityValues"
 		{
-			"cast_radius"			"450"
+			"cast_radius"			"600"// 450 反正没人玩多给点
 			"damage_per_second"
 			{
 				"value"									"160 240 320 400"
-				"special_bonus_unique_earth_spirit_8"			"+25%"
+				"special_bonus_unique_earth_spirit_8"			"+50%"// 30
 			}
+		}
+	}
+	// 变石头
+	"earth_spirit_petrify"
+	{
+		"AbilityCastRange"				"350"// 175 变对面
+		"AbilityCooldown"				"25"// 45 救人
+		"AbilityValues"
+		{
+				"duration"		"2.4"
+				"damage"
+				{
+					"value"			"450"
+					"CalculateSpellDamageTooltip" "1"
+				}
+				"aoe"
+				{
+					"value"		"450"
+					"affected_by_aoe_increase"	"1"
+				}
+				"ally_cast_range"	"800"// 救人
 		}
 	}
 	//=================================================================================================================
@@ -2147,8 +2192,8 @@
 	// a杖变狼
 	"lycan_wolf_bite"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"70 65 60 55 50"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"75 70 65 60"// 同步大招
 		"AbilityValues"
 		{
 			"lifesteal_percent"		"40"
@@ -2181,12 +2226,12 @@
 		{
 			"bonus_damage"
 			{
-				"value"			"30 40 50 60 70"
-				"special_bonus_unique_lycan_4"	"+30"
+				"value"			"10 20 30 40 50"// 即使90胜率，选择率不高，其实可以不改
+				"special_bonus_unique_lycan_4"	"+25"
 			}
 			"bonus_hp_regen"
 			{
-				"value"			"6 7 8 9 10"
+				"value"			"10 15 20 25 30"// 这倒是可以多给点，反正廉价
 			}
 		}
 	}
@@ -3805,7 +3850,7 @@
 			"05"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"strength_bonus"		"2 4 6 8 10"
+				"strength_bonus"		"3 6 9 12 15"
 			}
 		}
 	}
@@ -3813,18 +3858,18 @@
 	"sven_warcry"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"24 22 20 18 16"
+		"AbilityCooldown"				"35 30 25 20 15"
 		"AbilityManaCost"				"40 45 50 55 60"
 		"AbilityValues"
 		{
 				"movespeed"
 				{
-					"value"		"14 18 22 28 34"
+					"value"		"10 14 18 22 26"
 					"LinkedSpecialBonus"		"special_bonus_unique_sven_6"
 				}
 				"bonus_armor"
 				{
-					"value"		"9 12 15 19 24"
+					"value"		"6 9 12 15 18"
 					"LinkedSpecialBonus"		"special_bonus_unique_sven_7"
 				}
 		}
@@ -3833,14 +3878,14 @@
 	"sven_gods_strength"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"90"
+		"AbilityCooldown"				"100"// 原版，刚好续不上，有真空期
 		"AbilityManaCost"				"150 200 250 300"
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"gods_strength_damage"		"130 170 210 250"
+				"gods_strength_damage"		"110 140 170 200"// 削弱
 				"LinkedSpecialBonus"		"special_bonus_unique_sven_2"
 			}
 		}
@@ -5377,7 +5422,7 @@
 		{
 			"rocket_damage"
 			{
-				"value"				"10 15 20 25 30"
+				"value"				"20 30 40 50 60"
 				"LinkedSpecialBonus"		"special_bonus_unique_gyrocopter_3"
 			}
 		}
@@ -5404,6 +5449,12 @@
 			{
 				"value"			"0.5"
 				"RequiresShard"				"1"
+			}
+			"shard_radius"
+			{
+				"value"			"1400"// 飞行速度加快，相应加大范围
+				"RequiresShard"				"1"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -5469,7 +5520,7 @@
 					"value"	"90 80 70 60"
 					"special_bonus_unique_gyrocopter_5"	"-30"
 				}
-				"damage"					"250 400 550 700"
+				"damage"					"300 500 700 900"
 		}
 	}
 	//=================================================================================================================
@@ -5492,12 +5543,25 @@
 			"base_damage_pct"
 			{
 				"value"		"100"
-				"CalculateSpellDamageTooltip"	"0"
+				"CalculateSpellDamageTooltip"	"1"// 计算技能增强，乘算原因可能会导致胸针流特别变态
 			}
 			"bounce_count"
 			{
-				"value"			"2 4 6 8 10"
+				"value"			"4 6 8 10 12"// 相当于加一级
 				"LinkedSpecialBonus"		"special_bonus_unique_hoodwink_acorn_shot_bounces"
+			}
+		}
+	}
+	// 栗子点数天赋
+	"special_bonus_unique_hoodwink_acorn_shot_charges"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"						"FIELD_INTEGER"
+				"value"							"3"
+				"ad_linked_abilities"			"hoodwink_acorn_shot"
 			}
 		}
 	}
@@ -6669,11 +6733,11 @@
 			"base_shield"	"0"
 			"hero_shield"
 			{
-				"value"	"50 100 150 200"
-				"special_bonus_unique_pangolier_shield_crash_herostacks"		"+100"
+				"value"	"200 400 600 800"// 盾不计算双抗，稍高点
+				"special_bonus_unique_pangolier_shield_crash_herostacks"		"+200"
 
 			}
-			"hero_stacks"
+			"hero_stacks"// 之前百分比减伤版本的东西，现在没用了
 			{
 				"value"					"16"
 				"special_bonus_unique_pangolier_shield_crash_herostacks"		"+4"
@@ -6681,7 +6745,7 @@
 			"rolling_thunder_cooldown"
 			{
 				"value"						"0"
-				"special_bonus_unique_pangolier_2"	"+3"
+				"special_bonus_unique_pangolier_2"	"+2"
 			}
 			"slow"	"20 25 30 35 40"
 			"slow_duration"	"3"
@@ -6760,12 +6824,12 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT" // used after any break in the roll (start/jump/bounce)
-				"turn_rate_boosted"		"360"
+				"turn_rate_boosted"		"1440"// 当初限时强化的转向速度，很合适
 			}
 			"05"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"turn_rate"				"240"
+				"turn_rate"				"1080"// 同上
 			}
 			"06"
 			{
@@ -7089,21 +7153,21 @@
 		{
 			"damage_multiplier"
 			{
-				"value"		"1.4 1.8 2.2 2.6"
+				"value"		"0.8 1.2 1.6 2.0"
 				"LinkedSpecialBonus"		"special_bonus_unique_riki_1"
 				"CalculateSpellDamageTooltip"	"0"
 				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
 			}
 
-			"fade_delay"					"4 3 2 1"
-			"bonus_xp_kill"					"150 250 350 450"
+			"fade_delay"					"4 3 2 1.5"
+			"bonus_xp_kill"					"100"
 		}
 	}
 	// 绝杀秘技
 	"riki_tricks_of_the_trade"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"18 16 14 12 10"
+		"AbilityCooldown"				"18 17 16 14 12"
 		"AbilityValues"
 		{
 			"radius"
@@ -7113,7 +7177,7 @@
 			}
 			"attack_count"	"4"
 			"damage_pct"	"40"
-			"agility_pct"	"55 70 85 100 115"
+			"agility_pct"	"70 80 90 100 110"
 			"scepter_duration"
 			{
 				"value"			"2"
@@ -7121,7 +7185,7 @@
 			}
 			"scepter_attacks"
 			{
-				"value"		"5"
+				"value"		"4"
 				"RequiresScepter"		"1"
 			}
 			"scepter_cast_range"
@@ -9851,6 +9915,7 @@
 	// 冲击波
 	"keeper_of_the_light_illuminate"
 	{
+		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
 		"MaxLevel" "5"
 		"AbilityManaCost"				"100 125 150 175 200"
 		"AbilityValues"
@@ -9954,6 +10019,7 @@
 	// 大招状态下冲击波
 	"keeper_of_the_light_spirit_form_illuminate"
 	{
+		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
 		"MaxLevel" "5"
 		"AbilityManaCost"				"100 125 150 175 200"
 		"AbilityValues"
@@ -9980,6 +10046,29 @@
 			}
 
 		}
+	}
+	//灵光
+	"keeper_of_the_light_will_o_wisp"
+	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCooldown"				"40"
+		"AbilityValues"
+		{
+				"on_count"					"10"
+				"radius"
+				{
+					"value"					"725"
+					"affected_by_aoe_increase"	"1"
+				}
+				"hit_count"					"14"
+				"wisp_damage"				"75"
+				"off_duration"				"0.5"
+				"on_duration"				"1.0"
+				"off_duration_initial"		"0.5"
+				"fixed_movement_speed"		"240"
+				"bounty"		"100"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	//=================================================================================================================
 	// Ability: Leshrac 拉席克/老鹿
@@ -10302,29 +10391,31 @@
 	"lion_impale"
 	{
 		"MaxLevel" "5"
+		"AbilityCastRange"				"750"// +100
 		"AbilityManaCost"				"90 110 130 150 170"
 		"AbilityValues"
 		{
 			"damage"
 			{
 				"value"			"105 170 235 300 365"
-				"special_bonus_unique_lion_3"	"+135"
+				"special_bonus_unique_lion_3"	"+260"// 天赋10级调到20，加点数值
 			}
-			"duration"			"1.3 1.6 1.9 2.2 2.5"
+			"duration"			"1.4 1.7 2.0 2.5 3.0"
 		}
 	}
 	// 变羊
 	"lion_voodoo"
 	{
+		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
 		"MaxLevel" "5"
-		"AbilityCastRange"				"650"
+		"AbilityCastRange"				"750"// +100
 		"AbilityManaCost"				"100 125 150 175 200"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
 				"value"				"20 18 16 14 12"
-				"special_bonus_unique_lion_5"	"-3"
+				"special_bonus_unique_lion_5"	"-4.5"
 			}
 			"duration"					"2 2.4 2.8 3.2 3.6"
 		}
@@ -10333,12 +10424,12 @@
 	"lion_mana_drain"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15 13 11 9 7"
+		"AbilityCooldown"				"14 12 8 6 4"
 		"AbilityValues"
 		{
 				"mana_per_second"
 				{
-					"value"		"20 40 60 120 180"
+					"value"		"50 100 150 200 250"
 				}
 				"movespeed"
 				{
@@ -10364,7 +10455,7 @@
 				"damage_per_kill"
 				{
 					"value"				"30"
-					"special_bonus_unique_lion_8"	"+20"
+					"special_bonus_unique_lion_8"	"+30"// 20天赋调25，加点数值
 					"CalculateSpellDamageTooltip"	"0"
 				}
 				"grace_period"				"5"
@@ -10867,16 +10958,53 @@
 			"bonus_movement_speed"		"-30 -40 -50 -60 -70"
 		}
 	}
+	// 守卫
+	"pugna_nether_ward"
+	{
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"base_damage"				"50 70 90 110"
+			"mana_multiplier"
+			{
+				"value"			"2.0 3.0 4.0 5.0"
+				"special_bonus_unique_pugna_3"		"+10.0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+			}
+			"mana_regen"				"0"
+			"attacks_to_destroy"
+			{
+				"value"				"4 4 4 4"
+				"special_bonus_unique_pugna_6"		"+95"
+			}
+			"spell_damage_reduction"
+			{
+				"value"						"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+			}
+			"AbilityCastRange"
+			{
+				"value"									"150"
+				"special_bonus_shard"					"=350"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
 	// 生命汲取
 	"pugna_life_drain"
 	{
+		"SpellImmunityType" 		"SPELL_IMMUNITY_ENEMIES_YES"// 吸魔免，似乎对于魔晶群吸无效
 		"MaxLevel" "4"
 		"AbilityManaCost"				"125 175 225 275"
 		"AbilityValues"
 		{
 			"health_drain"
 			{
-				"value"					"200 275 350 425"// x1.5
+				"value"					"250 500 750 1000"// 测试服500 1000 1500 2000觉得差不多
 				"CalculateSpellDamageTooltip"	"1"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
 			}
@@ -11745,7 +11873,7 @@
 	"tinker_laser"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"950"
+		"AbilityCastRange"				"1050"
 		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityManaCost"				"110 130 150 170 190"
 		"AbilitySpecial"

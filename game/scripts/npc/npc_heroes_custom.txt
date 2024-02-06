@@ -324,7 +324,7 @@
 		"AttributeIntelligenceGain"		"1.4"
 
 		"MovementCapabilities"			"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"					"315"
+		"MovementSpeed"					"365"
 		"MovementTurnRate"				"0.8"
 
 		"VisionDaytimeRange"			"1000"
@@ -382,7 +382,7 @@
 
 	"npc_dota_hero_abyssal_underlord"
 	{
-		"Ability6"		"abyssal_underlord_dark_rift"
+		"Ability5"		"abyssal_underlord_dark_rift"
 	}
 
 	"npc_dota_hero_life_stealer"
@@ -415,6 +415,8 @@
 	"npc_dota_hero_hoodwink"
 	{
 		"AttackRate"    "1.7"
+		"Ability16"					"special_bonus_unique_hoodwink_sharpshooter_damage"
+		"Ability14"					"special_bonus_unique_hoodwink_acorn_shot_charges"
 	}
 
 	"npc_dota_hero_obsidian_destroyer"
@@ -485,6 +487,12 @@
 	"npc_dota_hero_naga_siren"
 	{
 		"Ability5"		"naga_siren_crit"
+	}
+
+	"npc_dota_hero_night_stalker"
+	{
+		"VisionDaytimeRange"		"1200"// 800
+		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，上限4000
 	}
 
 	"npc_dota_hero_keeper_of_the_light"
@@ -1168,6 +1176,11 @@
 			}
 		}
 	}
+	"npc_dota_hero_earth_spirit"
+	{
+		"Ability16"		"special_bonus_unique_earth_spirit_5"
+		"Ability15"		"special_bonus_unique_earth_spirit_2"
+	}
 	"npc_dota_hero_furion"
 	{
 		"Bot"
@@ -1474,6 +1487,14 @@
 	}
 	"npc_dota_hero_lion"
 	{
+		"Ability10"		"special_bonus_unique_lion_6"
+		"Ability15"		"special_bonus_unique_lion_3"
+		"Ability12"		"special_bonus_unique_lion_5"
+		"Ability13"		"special_bonus_unique_lion_11"
+		"Ability17"		"special_bonus_unique_lion_8"
+		"Ability11"		"special_bonus_unique_lion_10"
+		"Ability16"		"special_bonus_unique_lion_manadrain_damage"
+		"Ability14"		"special_bonus_unique_lion_4"
 		"Bot"
 		{
 			"Build"
@@ -1743,6 +1764,11 @@
 	}
 	"npc_dota_hero_ogre_magi"
 	{
+		"AttackRate"                "1.4"
+		"AttributeBaseStrength"		"23"
+		"AttributeStrengthGain"		"5.2"
+		"AttributeBaseAgility"		"14"
+		"AttributeAgilityGain"		"3.0"
 		"Bot"
 		{
 			"Build"
