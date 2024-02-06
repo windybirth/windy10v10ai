@@ -1,7 +1,7 @@
 import { Player } from "../../api/player";
 import { PlayerHelper } from "../../helper/player-helper";
 
-export class EventOnNpcSpawned {
+export class EventNpcSpawned {
   private roshanNumber = 1;
   constructor() {}
 
