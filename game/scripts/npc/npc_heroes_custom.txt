@@ -422,6 +422,12 @@
 		"AttackRate"    "1.7"
 	}
 
+	"npc_dota_hero_crystal_maiden"
+	{
+		"Ability5"      "visage_silent_as_the_grave"
+		"Ability8"      "visage_gravekeepers_cloak"
+	}
+
 	"npc_dota_hero_tinker"
 	{
 		"Ability6"		"tinker_rearm_lua"
