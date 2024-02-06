@@ -1826,6 +1826,8 @@
 	}
 	"npc_dota_hero_oracle"
 	{
+		"Ability5"      "chen_hand_of_god"
+		"Ability12"     "special_bonus_unique_chen_12"
 		"Bot"
 		{
 			"Build"
