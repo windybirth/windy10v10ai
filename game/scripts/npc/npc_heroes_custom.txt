@@ -712,6 +712,10 @@
 			}
 		}
 	}
+	"npc_dota_hero_batrider"
+	{
+		"Ability5"      "dark_seer_ion_shell"
+	}
 	"npc_dota_hero_bounty_hunter"
 	{
 		"Bot"

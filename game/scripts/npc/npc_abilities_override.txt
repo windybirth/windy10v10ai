@@ -8451,8 +8451,10 @@
 	// 叠油
 	"batrider_sticky_napalm"
 	{
+		"LinkedAbility"                 "dark_seer_ion_shell"
+		"AbilityDraftPreAbility"        "dark_seer_ion_shell"
 		"MaxLevel" "5"
-		"AbilityCastRange"				"550 600 650 700 750"
+		"AbilityCastRange"				"700 750 800 850 900"// +150
 		"AbilityValues"
 		{
 			"damage"
@@ -8470,6 +8472,46 @@
 				"RequiresShard"			"1"
 			}
 		}
+	}
+	// 离子烫（来自黑贤）无敌的叠油离子烫我滴朋友
+	"dark_seer_ion_shell"
+	{
+		"LinkedAbility"                 "batrider_sticky_napalm"
+		"AbilityDraftPreAbility"        "batrider_sticky_napalm"
+		"MaxLevel"                      "5"
+		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"										"275"
+				"special_bonus_unique_dark_seer_5"			"+50"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage_per_second"
+			{
+				"value"										"30 50 70 90 110"
+				"special_bonus_unique_dark_seer"			"+50"
+			}
+			"duration"
+			{
+				"value"										"21 24 27 30 33"
+				"special_bonus_unique_dark_seer_15"						"+15"
+			}
+
+			"tick_interval"									"0.15"// 0.2
+			"AbilityCharges"
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_14"						"+2"
+			}
+			"bonus_health"
+			{
+				"value"										"0"
+				"special_bonus_unique_dark_seer_6"						"+500"// 250
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 燃烧弹
 	"batrider_flamebreak"
@@ -8521,8 +8563,8 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"				"70"
-				"special_bonus_unique_batrider_6"			"-10"
+				"value"				"80 70 60 50"// 给喵星人一个面子
+				"special_bonus_unique_batrider_6"			"-20"
 			}
 
 		}
