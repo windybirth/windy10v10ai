@@ -1210,6 +1210,10 @@
 		"Ability7"				"grimstroke_dark_portrait"
 		"Ability4"              "visage_soul_assumption"
 	}
+	"npc_dota_hero_gyrocopter"
+	{
+		"Ability4"              "phantom_lancer_phantom_edge"
+	}
 	"npc_dota_hero_huskar"
 	{
 		"Ability4"		"huskar_inner_vitality"
@@ -1962,6 +1966,10 @@
 				"34"		"pudge_flesh_heap"
 			}
 		}
+	}
+	"npc_dota_hero_queenofpain"
+	{
+		"Ability4"      "dark_seer_vacuum"
 	}
 	"npc_dota_hero_razor"
 	{
