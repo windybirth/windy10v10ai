@@ -1,4 +1,5 @@
 import { AI } from "../../ai/AI";
+import { ActionItem } from "../../ai/action/action-item";
 import { reloadable } from "../../utils/tstl-utils";
 import { CMD } from "./debug-cmd";
 
@@ -36,9 +37,20 @@ export class Debug {
     // commands that only work in debug mode below:
     if (!this.DebugEnabled) return;
 
+    if (cmd === CMD.G) {
+      const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
+      if (!hero) return;
+      // 获得金钱经验技能升满
+      hero.SetGold(99999, false);
+      hero.AddExperience(100000, ModifyXpReason.UNSPECIFIED, false, true);
+      // refresh teleport
+      hero.GetItemInSlot(15)?.EndCooldown();
+    }
+
     // v 获取当前vector
     if (cmd === CMD.V) {
       const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
+      if (!hero) return;
       const pos = hero.GetAbsOrigin();
       const vectorString = `Vector(${Math.floor(pos.x)}, ${Math.floor(pos.y)}, ${Math.floor(
         pos.z,
@@ -57,14 +69,27 @@ export class Debug {
       }
     }
 
+    if (cmd.startsWith("-getUseableItemByName")) {
+      const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
+      if (!hero) return;
+      const itemName = args[0];
+      const item = ActionItem.FindItemInInventoryUseable(hero, itemName);
+      if (!item) {
+        this.log(`没有找到物品: ${itemName}`);
+        return;
+      } else {
+        this.log(`找到物品: ${itemName}`);
+      }
+    }
+
     // 其他的测试指令写在下面
-    if (cmd.startsWith("get_key_v3")) {
+    if (cmd.startsWith("-get_key_v3")) {
       const version = args[0];
       const key = GetDedicatedServerKeyV3(version);
       this.log(`${version}: ${key}`);
     }
 
-    if (cmd.startsWith("get_key_v2")) {
+    if (cmd.startsWith("-get_key_v2")) {
       const version = args[0];
       const key = GetDedicatedServerKeyV2(version);
       this.log(`${version}: ${key}`);

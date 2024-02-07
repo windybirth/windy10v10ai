@@ -16,7 +16,9 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected continueActionEndTime: number = 0;
 
   protected readonly FindRadius: number = 1600;
-  protected readonly PushNoAttactTowerIfHeroInDistance: number = 300;
+  protected readonly PushNoAttactTowerHeroDistanceBuff: number = 300;
+  protected readonly CastRange: number = 600;
+
   public readonly PushLevel: number = 10;
 
   protected hero: CDOTA_BaseNPC_Hero;
@@ -35,6 +37,8 @@ export class BaseHeroAIModifier extends BaseModifier {
   protected ability_4: CDOTABaseAbility | undefined;
   protected ability_5: CDOTABaseAbility | undefined;
   protected ability_utli: CDOTABaseAbility | undefined;
+
+  // 物品
 
   protected heroState = {
     currentHealth: 0,
@@ -87,15 +91,54 @@ export class BaseHeroAIModifier extends BaseModifier {
   // ---------------------------------------------------------
   // Need Override
   // ---------------------------------------------------------
+  /**
+   * 因自身而进行的施法
+   */
+  CastSelf(): boolean {
+    if (this.UseItemSelf()) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * 因敌人而进行的施法
+   */
   CastEnemy(): boolean {
     return false;
   }
 
+  /**
+   * 因队友而进行的施法
+   */
   CastTeam(): boolean {
     return false;
   }
 
+  /**
+   * 因小兵而进行的施法
+   */
   CastCreep(): boolean {
+    return false;
+  }
+
+  // ---------------------------------------------------------
+  // Item usage
+  // ---------------------------------------------------------
+  UseItemSelf(): boolean {
+    const creep = this.FindNearestEnemyCreep();
+    if (
+      ActionItem.UseItemOnTarget(this.hero, "item_hand_of_group", creep, (target) => {
+        // 点金手目标不能是远古
+        if (target.IsAncient()) {
+          return false;
+        }
+        return true;
+      })
+    ) {
+      return true;
+    }
+
     return false;
   }
 
@@ -126,9 +169,6 @@ export class BaseHeroAIModifier extends BaseModifier {
         break;
       case ModeEnum.LANING:
         this.ActionLaning();
-        break;
-      case ModeEnum.GANKING:
-        this.ActionGanking();
         break;
       case ModeEnum.PUSH:
         this.ActionPush();
@@ -163,17 +203,31 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   ActionLaning(): void {
-    // TODO
+    if (this.CastSelf()) {
+      return;
+    }
+    if (this.CastEnemy()) {
+      return;
+    }
+    if (this.CastTeam()) {
+      return;
+    }
+    // TODO 对线期攻击小兵，技能清兵，根据英雄继承后实装
   }
 
   ActionAttack(): void {
-    // const target = this.FindNearestEnemyHero();
-    // if (!target) {
-    //   return;
-    // }
-    // // TODO 使用技能
-    // // 攻击
-    // ActionAttack.Attack(this.hero, target);
+    if (this.CastSelf()) {
+      return;
+    }
+    if (this.CastEnemy()) {
+      return;
+    }
+    if (this.CastTeam()) {
+      return;
+    }
+    if (this.CastCreep()) {
+      return;
+    }
   }
 
   ActionRetreat(): void {
@@ -204,23 +258,20 @@ export class BaseHeroAIModifier extends BaseModifier {
     }
   }
 
-  ActionGanking(): void {
-    // TODO
-  }
-
   ActionPush(): void {
+    if (this.CastSelf()) {
+      return;
+    }
     if (this.CastEnemy()) {
       return;
     }
-
     if (this.CastTeam()) {
       return;
     }
-
+    // 推塔
     if (this.ForceAttackTower()) {
       return;
     }
-
     if (this.CastCreep()) {
       return;
     }
@@ -241,12 +292,12 @@ export class BaseHeroAIModifier extends BaseModifier {
     if (enemyHero) {
       // if hero in attack range
       const distanceToAttackHero = HeroUtil.GetDistanceToAttackRange(this.hero, enemyHero);
-      if (distanceToAttackHero <= 0) {
+      if (distanceToAttackHero <= this.PushNoAttactTowerHeroDistanceBuff) {
         return false;
       }
 
       const distanceToHero = HeroUtil.GetDistanceToHero(this.hero, enemyHero);
-      if (distanceToHero <= this.PushNoAttactTowerIfHeroInDistance) {
+      if (distanceToHero <= this.CastRange) {
         return false;
       }
     }
@@ -312,7 +363,7 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   // ---------------------------------------------------------
-  // Find
+  // Find unit
   // ---------------------------------------------------------
 
   private FindAround(): void {
