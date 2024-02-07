@@ -430,6 +430,11 @@
 		"Ability8"      "visage_gravekeepers_cloak"
 	}
 
+	"npc_dota_hero_tidehunter"
+	{
+		"Ability5"      "tidehunter_arm_of_the_deep"
+	}
+
 	"npc_dota_hero_tinker"
 	{
 		"Ability6"		"tinker_rearm_lua"
