@@ -8787,18 +8787,18 @@
 		{
 			"base_mana_regen"
 			{
-				"value"					"1 2 3 4 5"
-				"special_bonus_unique_crystal_maiden_4" 	"+1.0"
+				"value"					"1 1.5 2 2.5 3"		// 0.4 0.6 0.8 1.0
+				"special_bonus_unique_crystal_maiden_4" 	"+0.5"
 			}
 			"proximity_mana_regen_tooltip"
 			{
-				"value"										"3 5 7 9 11"
-				"special_bonus_unique_crystal_maiden_4" 	"+2.0"
+				"value"										"3 4.5 6 7.5 9"
+				"special_bonus_unique_crystal_maiden_4" 	"+1.5"
 			}
 			"self_mana_regen_tooltip"
 			{
-				"value"										"6 9 12 15 18"
-				"special_bonus_unique_crystal_maiden_4" 	"+3.0"
+				"value"										"7 10.5 14 17.5 21"
+				"special_bonus_unique_crystal_maiden_4" 	"+3.5"
 			}
 		}
 	}
@@ -8809,17 +8809,17 @@
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-			"AbilityCooldown"				"60"// -30
+			"AbilityCooldown"				"75"	// 90
 			"AbilityManaCost"				"200 400 600 800"
 			"damage"
 			{
-				"value"										"210 340 500 660"// （x2）应该比之前限时强化少很多，那次强化的有点变态
+				"value"										"140 260 380 500"// 105 170 250 330（x1.5）
 				"special_bonus_unique_crystal_maiden_3"		"+100"// （x2）
 			}
 			"shard_self_movement_speed_slow_pct"
 			{
 				"value"						"0"
-				"special_bonus_scepter"		"-40"// -75 减少移速损失，降低对大莲花的依赖
+				"special_bonus_scepter"		"-50"// -75 减少移速损失，降低对大莲花的依赖
 				"RequiresScepter"				"1"
 			}
 		}
@@ -8827,28 +8827,13 @@
 	// 静如古墓（来自死灵龙）
 	"visage_silent_as_the_grave"
 	{
-		"AbilityCooldown"				"20.0"// 当作隐刀用，cd同步到隐刀
+		"AbilityCooldown"				"40.0"	// 45.0
 		"AbilitySpecial"
 		{
-			"01"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"bonus_duration"						"10"//4 buff持续覆盖大招
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"bonus_damage"						"25"
-			}
 			"03"
 			{
 				"var_type"							"FIELD_FLOAT"
-				"invis_duration"					"35.0"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"movespeed_bonus"					"20"
+				"invis_duration"					"15.0"	// 35.0	buff持续覆盖大招
 			}
 		}
 	}

@@ -39,7 +39,6 @@ export class ModeRetreat extends ModeBase {
       }
     }
     if (isNear3Tower) {
-      print("[AI] hero is near 3 tower, not retreat");
       // is In tower4 attack range
       for (const building of buildings) {
         if (building.GetUnitName().includes("fort") || building.GetUnitName().includes("tower4")) {
