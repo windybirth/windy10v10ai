@@ -7198,7 +7198,7 @@
 		"AbilityTextureName" 			"item_power"
 		"ItemShopTags"					"damage;attack_speed"
 		"ItemQuality"					"artifact"
-		"ItemAliases"					"crigan_blade"
+		"ItemAliases"					"power"
 		"AbilityValues"
 		{
 			"bonus_damage"				"240"
