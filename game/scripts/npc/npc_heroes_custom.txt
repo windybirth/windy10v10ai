@@ -1226,8 +1226,8 @@
 	}
 	"npc_dota_hero_grimstroke"
 	{
-		"Ability7"				"grimstroke_dark_portrait"
 		"Ability4"              "visage_soul_assumption"
+		"Ability7"				"grimstroke_dark_portrait"
 	}
 	"npc_dota_hero_gyrocopter"
 	{
@@ -1765,10 +1765,8 @@
 	"npc_dota_hero_ogre_magi"
 	{
 		"AttackRate"                "1.4"
-		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"5.2"
-		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"3.0"
+		"AttributeStrengthGain"		"5.2"	// 4.2
+		"AttributeAgilityGain"		"2.0"	// 1.5
 		"Bot"
 		{
 			"Build"
