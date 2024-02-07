@@ -1221,8 +1221,8 @@
 		// Ability Values		//------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"magic_res"					"8 12 16 20 24"
-			"status_res"				"8 12 16 20 24"
+			"magic_res"					"20 25 30 35 40"
+			"status_res"				"20 25 30 35 40"
 		}
 	}
 
@@ -1939,13 +1939,13 @@
 		{
 			"damage"
 			{
-				"value"						"100 150 200 300 400"
+				"value"						"100 200 300 400 500"
 				"special_bonus_unique_yukari_01_damage"	"+100"
 			}
 			"stun_duration"
 			{
-				"value"						"0.4"
-				"special_bonus_unique_yukari_01_stun" "+0.6"
+				"value"						"0.7"
+				"special_bonus_unique_yukari_01_stun" "+0.8"
 			}
 			"speed"			"1200"
 			"radius"		"150"
@@ -2002,13 +2002,13 @@
 		{
 			"damage_per_second"
 			{
-				"value"						"50 75 100 150 200"
+				"value"						"50 100 150 200 250"
 				"special_bonus_unique_yukari_tentacles_damage"	"+50"
 			}
-			"radius"	"400"
+			"radius"	"500"
 			"duration"	"4"
-			"root"		"-40"
-			"tick_rate"	"0.5"
+			"root"		"-60"
+			"tick_rate"	"0.4"
 			"intelligence_per_second"	"0.2"
 		}
 	}
@@ -2237,24 +2237,24 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"	"1"
 		// Ability General
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
-		"MaxLevel"	"5"
+		"MaxLevel"	"4"// 这是个大招
 		"RequiredLevel"	"6"
 		"LevelsBetweenUpgrades"	"5"
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
 		// Ability Resource
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"	"120"
-		"AbilityManaCost"	"200 300 400 500 600"
+		"AbilityCooldown"	"100"
+		"AbilityManaCost"	"300 400 500 600"
 		"AbilityDuration"	"0.6875 0.6875 0.6875 0.6875"
 		// Damage
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"		"200 275 350 425 500"
+		"AbilityDamage"		"375 450 525 600"
 		// Ability Casting
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"	"2000"
@@ -2294,7 +2294,7 @@
 			"06"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"stun_time"	"1.2 1.4 1.6 1.8 2.0"
+				"stun_time"	"1.6 1.9 2.2 2.5"
 			}
 		}
 	}
