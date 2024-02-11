@@ -6585,7 +6585,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ID"							"9595"
 		"AbilityTextureName"			"item_rapier_ultra"
-		"ItemCost"						"6000"
+		"ItemCost"						"36000"
 
 		"ItemDroppable"                 "1"
 		"ItemKillable"					"0"

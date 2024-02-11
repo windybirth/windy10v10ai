@@ -1,6 +1,7 @@
 export class EventEntityKilled {
   private readonly removeGoldBagDelay = 20;
   private roshanDropItemList: string[] = ["item_dragon_ball_6", "item_dragon_ball_7"];
+  private roshanDropItemChance = 75;
 
   OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
     const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
@@ -42,7 +43,7 @@ export class EventEntityKilled {
       print(`[EventEntityKilled] OnCreepKilled roshanDropItemList is empty`);
       return;
     }
-    if (RandomInt(0, 100) >= 60) {
+    if (RandomInt(0, 100) <= this.roshanDropItemChance) {
       const itemIndex = RandomInt(0, this.roshanDropItemList.length - 1);
       const itemName = this.roshanDropItemList[itemIndex];
       const item = CreateItem(itemName, undefined, undefined);

@@ -1805,7 +1805,6 @@
 
 		// item_radar_of_dragon 龙珠雷达
 		"DOTA_Tooltip_Ability_item_radar_of_dragon"				"<font color='#FFFF00'>龙珠雷达</font>"
-		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>一星到五星珠在每一级中立代币中选取得到，六星珠在商店购买得到，七星珠由二代及以后的肉山掉落得到。愿望一共有四种，在商店可以找到。"
-
+		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>一星到五星珠在每一级中立代币中选取得到，六星珠，七星珠由肉山随机掉落得到。愿望一共有四种，在商店可以找到。"
 	}
 }
