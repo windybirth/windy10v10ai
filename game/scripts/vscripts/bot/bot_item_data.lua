@@ -52,7 +52,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_ultimate_scepter_2',
 		'item_sheepstick',
 		'item_black_king_bar_2',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 		'item_wasp_despotic',
 		'item_refresher',
 		'item_recipe_refresh_core',
@@ -138,7 +138,7 @@ tBotItemData.purchaseItemList = {
 		'item_blue_fantasy',
 		'item_undying_heart',
 		'item_abyssal_blade_v2',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 		'item_wasp_despotic',
 	},
 	npc_dota_hero_bloodseeker = {
@@ -207,7 +207,7 @@ tBotItemData.purchaseItemList = {
 		'item_infernal_desolator',
 		'item_moon_shard_datadriven',
 		'item_abyssal_blade_v2',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 	},
 	npc_dota_hero_crystal_maiden = {
 		-- 出门装
@@ -316,7 +316,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_wasp_callous',
 		'item_jump_jump_jump',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_magic_wand',
@@ -432,7 +432,7 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_wasp_despotic',
 		'item_wasp_callous',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 	},
 	npc_dota_hero_lich = {
 		'item_magic_wand',
@@ -550,7 +550,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_wasp_callous',
 		'item_wasp_despotic',
 		'item_skadi_2',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 	},
 	npc_dota_hero_meepo = {
 		'item_magic_wand',
@@ -715,7 +715,7 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_satanic',
 		'item_wasp_despotic',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 		'item_satanic',
 	},
 	npc_dota_hero_pudge = {
@@ -887,7 +887,7 @@ tBotItemData.purchaseItemList = {
 		'item_satanic',
 		'item_skadi_2',
 		'item_shotgun_v2',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 		'item_satanic',
 	},
 	npc_dota_hero_sven = {
@@ -1032,7 +1032,7 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_black_king_bar_2',
 		'item_wasp_despotic',
-		'item_rapier_ultra_bot',
+		'item_excalibur',
 	},
 	npc_dota_hero_warlock = {
 		'item_magic_wand',
