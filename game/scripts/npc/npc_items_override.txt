@@ -81,7 +81,7 @@
 		"AbilityCooldown"				"0"
 		"ItemCost"						"2000"	// 1000
 		"ItemStockInitial"				"1"
-		"ItemStockMax"					"3"
+		"ItemStockMax"					"1"
 		"ItemStockTime"					"300"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "1"
@@ -1140,7 +1140,7 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"180.0"
+		"ItemInitialStockTime"			"210.0"
 	}
 	"item_refresher"
 	{
@@ -1323,6 +1323,27 @@
 		}
 	}
 	//=================================================================================================================
+	// 白银之锋 大隐刀
+	//=================================================================================================================
+	"item_recipe_silver_edge"
+	{
+		"ItemCost"						"450"// 恶魔刀锋换成振奋宝石，价格不变
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_silver_edge"
+		"ItemRequirements"
+		{
+			"01"						"item_invis_sword*;item_hyperstone"
+		}
+	}
+	"item_silver_edge"
+	{
+		"AbilityValues"
+		{
+			"bonus_damage" "20"// 去除恶魔刀锋的攻击
+			"bonus_attack_speed"	"95"// 增加振奋宝石的攻速
+		}
+	}
+	//=================================================================================================================
 	// 鱼叉（加强） harpoon
 	//=================================================================================================================
 	"item_recipe_harpoon"
@@ -1344,7 +1365,7 @@
 			"bonus_intellect"		"15"
 			"bonus_mana_regen"		"2.0"
 
-			"passive_cooldown"		"3"
+			"passive_cooldown"		"1"
 			"movement_slow"			"100"
 			"slow_duration"			"1.5"
 		}

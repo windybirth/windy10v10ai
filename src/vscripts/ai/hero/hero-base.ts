@@ -192,7 +192,7 @@ export class BaseHeroAIModifier extends BaseModifier {
         buildingName.includes("tower2") ||
         buildingName.includes("tower3")
       ) {
-        print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()} 返回基地`);
+        // print(`[AI] HeroBase ThinkRune ${this.hero.GetUnitName()} 返回基地`);
         const item = this.hero.FindItemInInventory("item_tpscroll");
         if (item) {
           item.EndCooldown();
@@ -244,7 +244,7 @@ export class BaseHeroAIModifier extends BaseModifier {
       return;
     }
     if (ActionMove.GetAwayFromTower(this.hero, enemyTower)) {
-      print(`[AI] HeroBase ThinkRetreatGetAwayFromTower ${this.hero.GetUnitName()} 撤退`);
+      // print(`[AI] HeroBase ThinkRetreatGetAwayFromTower ${this.hero.GetUnitName()} 撤退`);
       if (this.gameTime > this.continueActionEndTime) {
         return;
       }
@@ -303,7 +303,6 @@ export class BaseHeroAIModifier extends BaseModifier {
     }
 
     if (ActionAttack.Attack(this.hero, enemyBuild)) {
-      print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()} 攻击建筑`);
       return true;
     }
     return false;

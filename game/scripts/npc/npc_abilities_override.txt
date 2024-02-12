@@ -744,20 +744,13 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"radius"
-				{
-					"value"			"700"
-					"affected_by_aoe_increase"	"1"
-				}
 				"quill_base_damage"		"25 45 65 85 105"
 				"quill_stack_damage"
 				{
 					"value"			"28 30 32 34 36"
 					"LinkedSpecialBonus"	"special_bonus_unique_bristleback_2"
 				}
-				"quill_stack_duration"	"20.0"
 				"max_damage"			"550"
-				"projectile_speed"		"2400"
 		}
 	}
 	// 钢毛后背
@@ -2378,19 +2371,17 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"28 24 20 16 12"
 		"AbilityManaCost"				"70 80 90 100 110"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
+			"lifesteal_pct"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"lifesteal_pct"			"30 34 38 42 46 50 54"
-				"LinkedSpecialBonus"	"special_bonus_unique_marci_guardian_lifesteal"
+				"value"			"10 15 20 25 30"
+				"special_bonus_unique_marci_guardian_lifesteal"	"+10"
 			}
-			"03"
+			"bonus_damage"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_damage"		"40 60 80 100 120 140 160"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"				"10 20 40 80 160"	// 6 12 24 48
+				"special_bonus_unique_marci_guardian_damage"			"+65"
 			}
 		}
 	}
@@ -3880,13 +3871,12 @@
 		"MaxLevel" "4"
 		"AbilityCooldown"				"100"// 原版，刚好续不上，有真空期
 		"AbilityManaCost"				"150 200 250 300"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"gods_strength_damage"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"gods_strength_damage"		"110 140 170 200"// 削弱
-				"LinkedSpecialBonus"		"special_bonus_unique_sven_2"
+				"value"		"100 130 160 190"
+				"special_bonus_unique_sven_2"		"+50"
 			}
 		}
 	}
@@ -4657,12 +4647,6 @@
 					"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_5"
 					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
 				}
-				"total_damage"
-				{
-					"value"			"120 240 360 480 600"//80 160 240 320
-					"LinkedSpecialBonus"		"special_bonus_unique_brewmaster_5"
-					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
-				}
 				"movement_slow"				"24 28 32 36 40"
 				"radius"
 				{	"value"			"400"
@@ -5418,6 +5402,7 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"7 6.5 6 5.5 5"
 		"AbilityDuration"				"3"
+		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
 			"rocket_damage"
@@ -7170,6 +7155,11 @@
 		"AbilityCooldown"				"18 17 16 14 12"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"		"18 16 14 12 10"
+				"special_bonus_unique_riki_6"		"-2"
+			}
 			"radius"
 			{
 				"value"		"450"
@@ -8797,23 +8787,23 @@
 			}
 			"self_mana_regen_tooltip"
 			{
-				"value"										"6 9 12 15 18"
-				"special_bonus_unique_crystal_maiden_4" 	"+3.0"
+				"value"										"7 10.5 14 17.5 21"
+				"special_bonus_unique_crystal_maiden_4" 	"+3.5"
 			}
 		}
 	}
 	// 极寒领域
 	"crystal_maiden_freezing_field"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 暂时无视魔免
+		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// FIXME 暂时无视魔免
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-			"AbilityCooldown"				"60"// -30
+			"AbilityCooldown"				"75"	// 90
 			"AbilityManaCost"				"200 400 600 800"
 			"damage"
 			{
-				"value"										"210 340 500 660"// （x2）应该比之前限时强化少很多，那次强化的有点变态
+				"value"										"140 260 380 500"// 105 170 250 330（x1.5）
 				"special_bonus_unique_crystal_maiden_3"		"+100"// （x2）
 			}
 			"shard_self_movement_speed_slow_pct"
@@ -9504,28 +9494,22 @@
 		"MaxLevel" "5"
 		"AbilityCastRange"				"1600"
 		"AbilityCooldown"				"11 9 7 5 3"
-		"AbilityManaCost"				"120 130 140 150 160"
-		"AbilitySpecial"
+		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityValues"
 		{
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"310 370 430 490 550"
-				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage_per_target"	"40 50 60 90 120"
-				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"movement_slow_pct"		"30 40 50 60 70"
-			}
+				"damage"
+				{
+					"value"		"100 160 220 280 340"
+					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
+					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+				}
+				"bonus_damage_per_target"
+				{
+					"value"	"25 40 55 70 85"		// 20 30 40 50
+					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
+					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+				}
+				"movement_slow_pct"		"40 50 60 70 80"
 		}
 	}
 	// 幻影之拥
@@ -9535,36 +9519,46 @@
 		"AbilityDraftPreAbility"        "visage_soul_assumption"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"22 19 16 13 10"
-		"AbilityManaCost"				"120 140 160 180 200"
-		"AbilitySpecial"
+		"AbilityManaCost"				"80 100 120 140 160"
+		"AbilityValues"
 		{
-			"03"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"latch_duration"			"3"
-			}
-		    "04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"destroy_attacks"			"10 12 14 16 18"
-				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_4"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
+				"latch_duration"			"3"		// 5
+				"destroy_attacks"
+				{
+					"value"			"10 12 14 16 18"
+					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_4"
+				}
 				"hero_attack_multiplier"	"2"
-			}
-			"06"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage_per_second"			"40 50 60 70 80"
-				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_8"
-			}
-			"10"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"pop_damage"				"280 360 440 520 600"
-			}
+				"damage_per_second"
+				{
+					"value"			"20 30 40 50 60"
+					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_8"
+				}
+				"pop_damage"				"200 280 360 440 520"		// 120 200 280 360
+		}
+	}
+	// 灵魂超度（来自维萨吉）
+	"visage_soul_assumption"
+	{
+		"LinkedAbility"                 "grimstroke_ink_creature"
+		"AbilityDraftPreAbility"        "grimstroke_ink_creature"
+		"MaxLevel"                      "5"
+		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityValues"
+		{
+				"soul_base_damage"			"20 30 40 50 60"	// 20
+				"soul_charge_damage"
+				{
+					"value"			"200"	// 70
+					"LinkedSpecialBonus"		"special_bonus_unique_visage_4"
+				}
+				"stack_limit"				"2 3 4 5 6"
+				"stack_duration"			"12.0"// 6
+				"damage_limit"
+				{
+					"value"			"400"	// 100
+					"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+				}
 		}
 	}
 	// 灵魂超度（来自维萨吉）
@@ -9607,32 +9601,18 @@
 	"grimstroke_spirit_walk"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"450 550 650 750 850"
 		"AbilityCooldown"				"24 21 18 15 12"
 		"AbilityManaCost"				"120 130 140 150 160"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"max_damage"			"180 270 360 450 540"
-				"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_5"
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"max_stun"				"1 1.6 2.2 2.8 3.4"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
+				"max_damage"
+				{
+					"value"		"180 270 360 450 540"
+					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_5"
+				}
+				"max_stun"				"1.3 1.8 2.3 2.8 3.3"
 				"damage_per_tick"		"15 20 25 30 35"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_INTEGER"
 				"tick_dps_tooltip"		"75 100 125 150 175"
-			}
 		}
 	}
 	// 暗绘
@@ -10449,8 +10429,8 @@
 		{
 				"damage"
 				{
-					"value"				"600 725 850 975"
-					"special_bonus_scepter"		"+325"
+					"value"				"600 800 1000 1200"	// 600 725 850 975
+					"special_bonus_scepter"		"+300"
 				}
 				"damage_per_kill"
 				{
@@ -10811,6 +10791,7 @@
 	// 上帝之手（来自陈）
 	"chen_hand_of_god"
 	{
+		"MaxLevel" "4"
 		"LinkedAbility"                 "oracle_false_promise"
 		"AbilityDraftPreAbility"        "oracle_false_promise"
 		"AbilityCooldown"				"70 60 50 40"// 150 130 110 同步cd与完全体虚妄相同

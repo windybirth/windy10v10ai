@@ -441,7 +441,7 @@
 				"bonus_reset_time_roshan"		"15"
 				"damage_per_stack"
 				{
-					"value"					"180 24 28 32 36 40"
+					"value"					"12 14 16 18 20 30"
 					"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 				}
 		}
@@ -474,25 +474,11 @@
 			"mana_per_hit"			"10 20 30 40 50 60"
 			"mana_per_hit_pct"
 			{
-				"value"		"1.0 1.2 1.4 1.6 1.8 2.0"
-				"special_bonus_unique_antimage_7"	"+0.0"
+				"value"		"0.2 0.4 0.6 0.8 1.0 2.0"
 			}
 			"illusion_percentage"		"50"
-			"move_slow"				"10 20 30 40 50 100"
+			"move_slow"				"10 20 30 40 50 60"
 			"slow_duration"			"0.75"
-		}
-	}
-	"tower_elder_titan_natural_order"
-	{
-		"BaseClass"                      "elder_titan_natural_order"
-		"AbilityValues"
-		{
-			"radius"
-				{
-					"value"		"900"
-				}
-				"armor_reduction_pct"	    "100 100 100 100 100"
-				"magic_resistance_pct"		"100 100 100 100 100"
 		}
 	}
 	//=================================================================================================================
@@ -522,7 +508,7 @@
 	//=================================================================================================================
 	"roshan_buff"
 	{
-		"MaxLevel"						"6"
+		"MaxLevel"						"7"
 		"BaseClass"						"ability_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"tower_power"
@@ -532,10 +518,11 @@
 		// 实际生效的数值是2倍
 		"AbilityValues"
 		{
-				"bonus_damage"			"0 100 200 300 400 500"
-				"bonus_armor"			"0 10 20 30 40 50"
-				"bonus_attack_speed"	"0 20 60 100 140 180"
-				"damage_reduction"		"0 -20 -30 -37 -41 -45"	// no damage when -60
+				"bonus_damage"			"100 100 200 300 400 500 600"
+				"bonus_armor"			"20 20 40 60 80 100 120"
+				"bonus_attack_speed"	"30 30 60 100 140 180 220"
+				"damage_reduction"		"-40 -25 -35 -40 -43 -45 -47"	// no damage when -50
+				// 收益预期 https://docs.google.com/spreadsheets/d/1FiBGurpuD74qQgmX8maBof-tkHmbBhai6jm9HcL5ymY/edit#gid=116224814
 		}
 		"Modifiers"
 		{
@@ -557,7 +544,7 @@
 	}
     "generic_gold_bag_fountain"
     {
-		"MaxLevel"						"6"
+		"MaxLevel"						"7"
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -612,14 +599,14 @@
         "AbilityValues"
         {
                 "gold_value"            "0"
-                "duration"              "0.15 0.6 1.2 1.8 2.7 3.6"	 // 1 4 8 12 18 24
-                "think_interval"        "0.15" // 1 3 5 10 15 20
+                "duration"              "0.4 0.8 1.2 1.8 2.4 3.0 3.6"	 // 4 8 12 18 24 30 36
+                "think_interval"        "0.1"
         }
     }
 
     "generic_season_point_bag_fountain"
     {
-		"MaxLevel"						"6"
+		"MaxLevel"						"7"
         // General
         //-------------------------------------------------------------------------------------------------------------
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
@@ -674,8 +661,8 @@
         "AbilityValues"
         {
                 "gold_value"            "0"
-                "duration"              "0.25 0.75 1.0 1.5 2.0 2.5 3.0"	// 1 3 4 6 8 10
-                "think_interval"        "0.25"	// 1 5 7 10 12 15
+                "duration"              "0.4 0.8 1.2 1.8 2.4 3.0 3.6"	 // 4 8 12 18 24 30 36
+                "think_interval"        "0.1"
         }
     }
 	//==============================================================================
@@ -1221,8 +1208,8 @@
 		// Ability Values		//------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"magic_res"					"20 25 30 35 40"
-			"status_res"				"20 25 30 35 40"
+			"magic_res"					"10 15 20 25 30"
+			"status_res"				"10 15 20 25 30"
 		}
 	}
 
@@ -1927,7 +1914,7 @@
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
 		"AnimationPlaybackRate"	"1.5"
 		"AbilityCooldown"	"8"
-		"AbilityManaCost"	"80 100 120 160 200"
+		"AbilityManaCost"	"80 100 120 160 180"
 		"AbilityCastRange"	"%cast_range"
 		"precache"
 		{
@@ -1991,8 +1978,8 @@
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
 		// Ability Resource
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"	"20 19 18 16 14"
-		"AbilityManaCost"	"100 120 140 180 220"
+		"AbilityCooldown"	"20 19 18 17 16"
+		"AbilityManaCost"	"100 120 140 180 200"
 		"AbilityCastRange"	"1200"
 		// Damage
 		// -------------------------------------------------------------------------------------------------------------
@@ -2005,10 +1992,10 @@
 				"value"						"50 100 150 200 250"
 				"special_bonus_unique_yukari_tentacles_damage"	"+50"
 			}
-			"radius"	"500"
+			"radius"	"400"
 			"duration"	"4"
-			"root"		"-60"
-			"tick_rate"	"0.4"
+			"root"		"-40"
+			"tick_rate"	"0.5"
 			"intelligence_per_second"	"0.2"
 		}
 	}
@@ -2242,7 +2229,7 @@
 		// Ability General
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
-		"MaxLevel"	"4"// 这是个大招
+		"MaxLevel"	"4"// 大招
 		"RequiredLevel"	"6"
 		"LevelsBetweenUpgrades"	"5"
 		"AbilityCastPoint"	"0.1"
@@ -2250,11 +2237,11 @@
 		// Ability Resource
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"100"
-		"AbilityManaCost"	"300 400 500 600"
+		"AbilityManaCost"	"200 300 400 500"
 		"AbilityDuration"	"0.6875 0.6875 0.6875 0.6875"
 		// Damage
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityDamage"		"375 450 525 600"
+		"AbilityDamage"		"275 350 425 500"
 		// Ability Casting
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"	"2000"
@@ -2294,7 +2281,7 @@
 			"06"
 			{
 				"var_type"	"FIELD_INTEGER"
-				"stun_time"	"1.6 1.9 2.2 2.5"
+				"stun_time"	"1.5 1.8 2.1 2.4"
 			}
 		}
 	}
