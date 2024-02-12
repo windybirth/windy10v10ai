@@ -2433,10 +2433,10 @@
 		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
-		"RequiredLevel"                 "30"
+		"RequiredLevel"                 "35"
 		"AbilityCooldown"				"180"
 		"AbilityManaCost"				"300"
-		"AbilityCastRange"				"80000"
+		"AbilityCastRange"				"4000"
 		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
 		"AbilityValues"
 		{
@@ -2452,7 +2452,7 @@
 			}
 			"hero_stun_duration"
 			{
-				"value"					"8"
+				"value"					"6"
 			}
 			"pull_duration"			"0.0 0.0 0.0"
 			"stat_buff_duration"
@@ -7232,7 +7232,7 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"RequiredLevel"                 "40"
+		"RequiredLevel"                 "45"
 		"AbilityValues"
 		{
 			"chance"
