@@ -1803,44 +1803,6 @@
 		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_slow"				"虚灵之刃减速"
 		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_slow_Description"	"移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
 
-		// item_blessing_of_dragon 神龙
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_Description"		"恭喜你集齐了七颗龙珠，成功召唤了神龙，现在你可以在商店购买你要许下的愿望。"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_bonus_all_stats"					"+$all"
-
-		// item_blessing_of_dragon_1 神龙赐福·不死
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon_1"				"<font color='#9f5f9f'>神龙赐福·不死</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_1_Description"		"<h1><font color='#9f5f9f'>被动：不死之身</font></h1>字面意思。"
-		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active"			"<font color='#9f5f9f'>不死之身</font>"
-		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active_Description"			"<font color='#FFFF00'>求求你打死我</font>"
-
-		// item_blessing_of_dragon_2 神龙赐福·毁灭
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon_2"				"<font color='#9f5f9f'>神龙赐福·毁灭</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_2_Description"		"<h1>主动：毁灭世界</h1>累了，毁灭吧。"
-
-		// item_blessing_of_dragon_3 神龙赐福·时间
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon_3"				"<font color='#9f5f9f'>神龙赐福·时间</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_3_Description"		"<h1>主动：时间操纵</h1>你掌控了时间，能够随意刷新你的冷却。"
-
-		// item_blessing_of_dragon_4 神龙赐福·空间
-		"DOTA_Tooltip_Ability_item_blessing_of_dragon_4"				"<font color='#9f5f9f'>神龙赐福·空间</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_4_Description"		"<h1>主动：空间折跃</h1>来去自如，来无影去无踪，能够在落点引发空间震。"
-
-		// item_wish_1 愿望1
-		"DOTA_Tooltip_Ability_item_wish_1"				"<font color='#FFFF00'>愿望1</font>"
-		"DOTA_Tooltip_ability_item_wish_1_Description"		"<h1>被动：许愿</h1>“我想要不死之身”你对神龙这样说道"
-
-		// item_wish_2 愿望2
-		"DOTA_Tooltip_Ability_item_wish_2"				"<font color='#FFFF00'>愿望2</font>"
-		"DOTA_Tooltip_ability_item_wish_2_Description"		"<h1>被动：许愿</h1>“我想要毁灭世界”你对神龙这样说道"
-
-		// item_wish_1 愿望3
-		"DOTA_Tooltip_Ability_item_wish_3"				"<font color='#FFFF00'>愿望3</font>"
-		"DOTA_Tooltip_ability_item_wish_3_Description"		"<h1>被动：许愿</h1>“我想要时间之力”你对神龙这样说道"
-
-		// item_wish_1 愿望4
-		"DOTA_Tooltip_Ability_item_wish_4"				"<font color='#FFFF00'>愿望4</font>"
-		"DOTA_Tooltip_ability_item_wish_4_Description"		"<h1>被动：许愿</h1>“我想要空间之力”你对神龙这样说道"
 
 		// 圣斧2
 		"DOTA_Tooltip_ability_item_devastator_2"                            "神圣斧"
@@ -2041,5 +2003,29 @@
 		// item_radar_of_dragon 龙珠雷达
 		"DOTA_Tooltip_Ability_item_radar_of_dragon"				"<font color='#FFFF00'>龙珠雷达</font>"
 		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>一星到五星珠在每一级中立代币中选取得到，六星珠，七星珠由肉山随机掉落得到。愿望一共有四种，在商店可以找到。\n<font color='#e03e2e'>注意：</font>龙珠无法合成时，请回到泉水，尝试从备用背包中移动至主背包或仓库。一星到五星珠无法与他人共享。"
+
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final"						"<font color='#e03e2e'>神技·地爆天星</font>"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_finalDescription"			"马格纳斯改变物质的属性，将附近的敌人都拖拽到他的前方，并且以强力的震击对他们造成伤害和眩晕。"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_Lore"					"作战时愤怒的马格纳斯如同喷发的杰尔拉克山。"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_pull_radius"			"%拖拽范围："
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_polarity_damage"		"%伤害："
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_hero_stun_duration"	"%眩晕时间："
+
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final"								"<font color='#e03e2e'>神技·时间停止</font>"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Description"					"在时空中创造一个泡状遮罩，将所有位于其中的单位定住，并使虚空假面在其内部来去自如。所有技能和物品冷却全部冻结。只有虚空假面和他控制的单位不受影响。在其中的隐形敌人会显形。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Lore"							"当超维视界的裂隙突现之时，所有被其困住的可怜灵魂都将万劫不复。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Note0"							"能够定住所有单位和建筑，不论敌我。除了虚空假面控制的单位。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Note1"							"虚空假面不受任何时间结界的影响。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_radius"						"%作用范围："
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_duration"						"%持续时间："
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_abilitydraft_note"				"虚空假面可以在时间结界内自由移动，不论是否拥有技能“时间结界”，以及拥有该技能的英雄为敌军或盟友。"
+
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike"				"<font color='#e03e2e'>神技·降维打击</font>"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_Description"	"幻影刺客在偶然间得到了神级文明的降维技术，但是没能完全掌握它，发动成功的几率比较低。"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_chance"	"%触发几率："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_crit_min"	"%最低致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_crit_max"	"%最高致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_lifesteal"	"%致命一击吸血："
+
 	}
 }

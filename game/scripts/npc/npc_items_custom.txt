@@ -7292,7 +7292,7 @@
 		"ItemCost"						"4000"
 		"ItemPurchasable"				"1"
 		"ItemSellable"				    "1"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"AbilityTextureName"			"item_black_king_bar"
 		"AbilitySharedCooldown"			"bkb"
 
