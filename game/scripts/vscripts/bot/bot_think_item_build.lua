@@ -31,7 +31,7 @@ local function addTome(k, v)
   for i = 1, amount do
     table.insert(v,"item_tome_of_strength")
     table.insert(v,"item_tome_of_agility")
-    if i % 2 == 0 then
+    if i % 5 == 0 then
       table.insert(v,"item_tome_of_intelligence")
     end
 	end

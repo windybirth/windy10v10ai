@@ -2020,12 +2020,12 @@
 		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_duration"						"持续时间："
 		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_abilitydraft_note"				"虚空假面可以在时间结界内自由移动，不论是否拥有技能“时间结界”，以及拥有该技能的英雄为敌军或盟友。"
 
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike"				"<font color='#e03e2e'>神技·降维打击</font>"
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_Description"	"幻影刺客在偶然间得到了神级文明的降维技术，但是没能完全掌握它，发动成功的几率比较低。"
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_chance"	"%触发几率："
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_crit_min"	"%最低致命一击："
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_crit_max"	"%最高致命一击："
-		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_lifesteal"	"%致命一击吸血："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra"				"<font color='#e03e2e'>神技·降维打击</font>"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra_Description"	"幻影刺客在偶然间得到了神级文明的降维技术，但是没能完全掌握它，发动成功的几率比较低。"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra_chance"	"%触发几率："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra_crit_min"	"%最低致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra_crit_max"	"%最高致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_ultra_lifesteal"	"%致命一击吸血："
 
 	}
 }

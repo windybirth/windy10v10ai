@@ -2289,6 +2289,7 @@
 	// 颠勺
 	"magnataur_horn_toss"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"15"
 		"AbilityManaCost"				"250"
 		"AbilityValues"
@@ -2299,6 +2300,7 @@
 	// 震荡波
 	"magnataur_shockwave"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"11 10 9 8 7"
 		"AbilityManaCost"				"70 80 90 100 110"
@@ -2323,7 +2325,7 @@
 			"pull_duration"				"0.2"
 			"movement_slow"				"75"
 			"slow_duration"				"3"
-			"pull_distance"		"250"
+			"pull_distance"		"150"
 			"basic_slow_duration"
 			{
 				"value"					"1.5"
@@ -2385,6 +2387,7 @@
 	// 两极反转
 	"magnataur_reverse_polarity"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "4"
 		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"150 200 250 300"
@@ -2429,6 +2432,8 @@
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
 		"AbilityCastPoint"				"0.0"
@@ -2442,7 +2447,7 @@
 		{
 			"pull_radius"
 			{
-				"value"	"80000"
+				"value"	"4000"
 				"affected_by_aoe_increase"	"1"
 			}
 			"polarity_damage"
@@ -7228,6 +7233,7 @@
 	// 终极恩赐解脱
 	"chaos_knight_chaos_strike_final"
 	{
+		"MaxLevel"                      "1"
 		"BaseClass"                     "chaos_knight_chaos_strike"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
@@ -12353,11 +12359,12 @@
 	"void_spirit_astral_step"
 	{
 		"MaxLevel" "4"
+		"AbilityCharges"		"4"
 		"AbilityValues"
 		{
 			"radius"
 			{
-				"value"	"400"
+				"value"	"300"
 				"affected_by_aoe_increase"	"1"
 			}
 			"AbilityChargeRestoreTime"
@@ -12366,7 +12373,7 @@
 				"special_bonus_unique_void_spirit_1"	"-4"
 			}
 			"min_travel_distance"	"0"
-			"max_travel_distance"	"1000 2000 3000 4000"
+			"max_travel_distance"	"1000 3000 5000 7000"
 			"pop_damage_delay"
 			{
 				"value"	"1.25"
@@ -12380,19 +12387,6 @@
 			"movement_slow_pct"		"40 60 80"
 		}
 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
-	}
-	// 太虚之径点数
-	"special_bonus_unique_void_spirit_6"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"value"					"4" // (Astral Step Invis)
-				"ad_linked_abilities"		"void_spirit_astral_step"
-			}
-		}
 	}
 	// 太虚之径暴击
 	"special_bonus_unique_void_spirit_8"
