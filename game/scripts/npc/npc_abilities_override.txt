@@ -2366,6 +2366,7 @@
 	// 巨角冲撞
 	"magnataur_skewer"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityValues"
@@ -7245,8 +7246,8 @@
 			{
 				"value"				"3.33"
 			}
-			"crit_min"				"800"
-			"crit_max"				"80000"
+			"crit_min"				"1000"
+			"crit_max"				"10000"
 			"lifesteal"
 			{
 				"value"					"800"

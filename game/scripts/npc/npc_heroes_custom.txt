@@ -1965,6 +1965,7 @@
 				"33"		"phantom_assassin_blur"
 				"34"		"phantom_assassin_blur"
 				"35"        "chaos_knight_chaos_strike_final"
+				"45"        "chaos_knight_chaos_strike_final"
 			}
 		}
 	}
