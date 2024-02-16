@@ -64,7 +64,7 @@ function lockSeasonLevelHero() {
   pick_button.style.brightness = 0.2;
 
   const label = pick_button.GetChild(0);
-  label.text = $.Localize("#pick_button_season_level_text");
+  label.text = "Locked";
   label.style.fontSize = 16;
 }
 
@@ -83,7 +83,6 @@ function isSeasonLevelBiggerThan(level) {
   if (!player) {
     player = GetPlayer();
   }
-  $.Msg("Player Season Level: ", player?.seasonLevel);
   if (player && player.seasonLevel >= level) {
     return true;
   } else {
