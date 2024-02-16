@@ -1,4 +1,4 @@
-const seasonLevelHeroNames = ["dark_seer"];
+const lockHeroNames = ["dark_seer"];
 
 const interval = 0.03;
 
@@ -28,7 +28,7 @@ function PickRandomHero() {
 function PickLocker() {
   const possible_hero_selection = Game.GetLocalPlayerInfo().possible_hero_selection;
 
-  if (seasonLevelHeroNames.includes(possible_hero_selection)) {
+  if (lockHeroNames.includes(possible_hero_selection)) {
     if (isSeasonLevelBiggerThan(15)) {
       unlockHero();
     } else {
