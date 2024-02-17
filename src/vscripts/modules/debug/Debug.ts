@@ -116,7 +116,7 @@ export class Debug {
         // add modifier
         const hero = PlayerResource.GetSelectedHeroEntity(playerId);
         if (hero) {
-          for (let i = 0; i < 10; i++) {
+          for (let i = 0; i < 100; i++) {
             hero.AddNewModifier(hero, undefined, modifierName, {});
           }
         }
@@ -128,7 +128,7 @@ export class Debug {
         // add modifier
         const hero = PlayerResource.GetSelectedHeroEntity(playerId);
         if (hero) {
-          for (let i = 0; i < 10; i++) {
+          for (let i = 0; i < 100; i++) {
             ModifierHelper.applyGlobalModifier(hero, modifierName);
           }
         }
