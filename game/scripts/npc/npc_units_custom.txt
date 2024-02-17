@@ -95,7 +95,7 @@
 
 	"npc_dota_courier"
 	{
-		"StatusHealth"				"15"	// 6
+		"StatusHealth"				"10"	// 6
 		"MovementTurnRate"			"1.0"	// 0.5
 		"VisionDaytimeRange"		"100"	// 350
 		"VisionNighttimeRange"		"100"	// 350
