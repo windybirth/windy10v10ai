@@ -18,6 +18,7 @@ export class ModeRetreat extends ModeBase {
       desire += 0.02 * (60 - curretHealthPercentage);
     }
 
+    // FIXME 修改成被塔攻击
     // 在防御塔攻击范围内
     const nearestTower = heroAI.FindNearestEnemyTowerInvulnerable();
     if (nearestTower) {
