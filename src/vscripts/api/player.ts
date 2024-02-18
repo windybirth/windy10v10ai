@@ -188,7 +188,7 @@ export class Player {
     });
   }
 
-  public IsMember(steamId: number) {
+  public static IsMember(steamId: number) {
     const member = Player.memberList.find((m) => m.steamId === steamId);
     if (member) {
       return member.enable;

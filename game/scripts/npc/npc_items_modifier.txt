@@ -909,17 +909,17 @@
 				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MOVESPEED_MAX"			"3000"
 					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"			"3000"
 					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"		"3000"
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"100"
 				}
 			}
-			"modifier_global_membership"
+			"modifier_global_member"
 			{
 				"Passive"				"1"
-				"IsHidden"				"1"
+				"IsHidden"				"0"
 				"RemoveOnDeath"			"0"
+				"TextureName"			"modifier_global_member"
 				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
