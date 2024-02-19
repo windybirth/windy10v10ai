@@ -53,7 +53,7 @@ export class EventNpcSpawned {
     if (PlayerHelper.IsHumanPlayer(hero)) {
       // 设置会员
       const steamAccountId = PlayerResource.GetSteamAccountID(hero.GetPlayerID());
-      if (Player.IsMember(steamAccountId)) {
+      if (Player.IsMemberStatic(steamAccountId)) {
         ModifierHelper.applyGlobalModifier(hero, "modifier_global_member");
       }
       // 设置玩家属性
