@@ -85,7 +85,7 @@ export class EventNpcSpawned {
         }
       }
 
-      if (this.roshanLevelBase < 5) {
+      if (this.roshanLevelBase < 5 - 1) {
         this.roshanLevelBase++;
       }
     }
