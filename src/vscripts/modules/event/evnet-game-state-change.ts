@@ -23,25 +23,44 @@ export class EventGameStateChange {
   private OnPreGame(): void {
     // 初始化游戏
     print(`[EventGameStateChange] OnPreGame`);
-    const towerPower = GameRules.GameConfig.towerPower;
+
     // 防御塔BUFF
     const towers = Entities.FindAllByClassname("npc_dota_tower") as CDOTA_BaseNPC[];
     for (const tower of towers) {
-      const towerName = tower.GetName();
-      let modifierName = `modifier_global_tower_power_${towerPower}`;
-      if (towerName.includes("tower1")) {
-        if (towerPower > 200) {
-          modifierName = `modifier_global_tower_power_200`;
-        }
-      }
-
-      print(`[EventGameStateChange] OnPreGame ${modifierName}`);
-      ModifierHelper.applyGlobalModifier(tower, modifierName);
+      this.addModifierToTowers(tower);
     }
+    // 兵营BUFF
+    const barracks = Entities.FindAllByClassname("npc_dota_barracks") as CDOTA_BaseNPC[];
+    for (const barrack of barracks) {
+      this.addModifierToTowers(barrack);
+    }
+    const healer = Entities.FindAllByClassname("npc_dota_healer") as CDOTA_BaseNPC[];
+    for (const heal of healer) {
+      this.addModifierToTowers(heal);
+    }
+
     // 基地BUFF
     const bases = Entities.FindAllByClassname("npc_dota_fort") as CDOTA_BaseNPC[];
     for (const base of bases) {
-      ModifierHelper.applyGlobalModifier(base, `modifier_global_tower_power_${towerPower}`);
+      this.addModifierToTowers(base);
     }
+  }
+
+  private addModifierToTowers(building: CDOTA_BaseNPC) {
+    // 防御塔攻击
+    let towerPower = GameRules.GameConfig.towerPower;
+
+    // 1塔最高200%攻击
+    const towerName = building.GetName();
+    if (towerName.includes("tower1")) {
+      if (towerPower > 200) {
+        towerPower = 200;
+      }
+    }
+    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_power_${towerPower}`);
+
+    // 防御塔回血
+    const towerHeal = GameRules.GameConfig.towerHeal;
+    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_heal_${towerHeal}`);
   }
 }

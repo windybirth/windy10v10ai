@@ -132,7 +132,6 @@ function AIGameMode:OnGameStateChanged(keys)
         for k, v in pairs(tTowers) do
             local towerName = v:GetName()
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-            v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
             -- add tower ability
             if string.find(towerName, "tower3") or string.find(towerName, "tower4") then
@@ -146,17 +145,14 @@ function AIGameMode:OnGameStateChanged(keys)
         local barracks = Entities:FindAllByClassname("npc_dota_barracks")
         for k, v in pairs(barracks) do
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-            v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
         end
         local healer = Entities:FindAllByClassname("npc_dota_healer")
         for k, v in pairs(healer) do
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-            v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
         end
         local fort = Entities:FindAllByClassname("npc_dota_fort")
         for k, v in pairs(fort) do
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-            v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
             -- add tower ability
             v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)

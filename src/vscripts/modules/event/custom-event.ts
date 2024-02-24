@@ -18,5 +18,6 @@ export class CustomEvent {
     }
 
     GameRules.GameConfig.towerPower = Number(args.game_options.tower_power);
+    GameRules.GameConfig.towerHeal = Number(args.game_options.tower_heal);
   }
 }

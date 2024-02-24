@@ -117,7 +117,6 @@
 						<Label id="TowerHealTitle" class="GameOptionsLabel" text="#tower_heal" />
 						<DropDown id="tower_heal_dropdown" class="GameOptionsDropdown">
 							<Label text="0" id="0"/>
-							<Label text="1" id="1"/>
 							<Label text="5" id="5"/>
 							<Label text="10" id="10"/>
 							<Label text="20" id="20"/>

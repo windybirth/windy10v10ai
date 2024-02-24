@@ -30,19 +30,6 @@ end
 --------------------------------------------------------------------------------
 -- Tower modifier
 --------------------------------------------------------------------------------
-modifier_tower_heal = class({})
-
-function modifier_tower_heal:IsPurgable() return false end
-function modifier_tower_heal:IsHidden() return true end
-function modifier_tower_heal:IsDebuff() return false end
-
-function modifier_tower_heal:DeclareFunctions() return {MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT} end
-
-function modifier_tower_heal:GetModifierConstantHealthRegen()
-	return self:GetStackCount()
-end
-
-
 modifier_tower_endure = class({})
 
 function modifier_tower_endure:IsPurgable() return false end
