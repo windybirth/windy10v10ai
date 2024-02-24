@@ -46,13 +46,6 @@ function modifier_liu_kick:CheckState()
 
     return state
 end
-function modifier_liu_kick:DeclareFunctions()
-    local funcs = {MODIFIER_PROPERTY_OVERRIDE_ANIMATION}
-    return funcs
-end
-function modifier_liu_kick:GetOverrideAnimation()
-    return ACT_DOTA_OVERRIDE_ABILITY_1
-end
 function modifier_liu_kick:OnCreated(hTable)
     self.caster = self:GetCaster()
     self.parent = self:GetParent()
@@ -105,7 +98,6 @@ function modifier_liu_kick:UpdateHorizontalMotion(me, dt)
 
     if UFilter ~= UF_SUCCESS then
         self:Destroy()
-
         return nil
     end
 
@@ -214,7 +206,6 @@ function modifier_liu_kick:PlayEffects()
             end
         end
     end
-
     -- EmitSoundOnLocationWithCaster(position, "miku.2", self.parent)
 end
 function modifier_liu_kick:Charge(me, dt)
