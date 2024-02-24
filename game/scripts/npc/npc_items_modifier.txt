@@ -909,7 +909,6 @@
 				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_MOVESPEED_LIMIT"			"3000"
 					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"		"3000"
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"100"
 				}
@@ -919,7 +918,7 @@
 				"Passive"				"1"
 				"IsHidden"				"0"
 				"RemoveOnDeath"			"0"
-				"TextureName"			"modifier_global_member"
+				"TextureName"			"member"
 				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
@@ -927,6 +926,18 @@
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"5"
 					"MODIFIER_PROPERTY_HEALTH_BONUS"				"300"
 					"MODIFIER_PROPERTY_MANA_BONUS"					"200"
+				}
+			}
+			"modifier_global_melee_resistance"
+			{
+				"Passive"				"1"
+				"IsHidden"				"0"
+				"RemoveOnDeath"			"0"
+				"TextureName"			"bulldozer"
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"20"
 				}
 			}
 		}

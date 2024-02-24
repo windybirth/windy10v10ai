@@ -199,8 +199,8 @@
 		"DOTA_Tooltip_modifier_tower_endure"						"建筑防御加成"
 		"DOTA_Tooltip_modifier_tower_endure_Description"		"建筑物的最大生命值设为 %dMODIFIER_PROPERTY_TOOLTIP%%%。"
 
-		"DOTA_Tooltip_modifier_melee_resistance"					"威压"
-		"DOTA_Tooltip_modifier_melee_resistance_Description"	"近战英雄额外获得 %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% 状态抗性，%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔法抗性。"
+		"DOTA_Tooltip_modifier_global_melee_resistance"					"威压"
+		"DOTA_Tooltip_modifier_global_melee_resistance_Description"		"近战英雄额外获得 %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔法抗性。"
 
 		"DOTA_Tooltip_ability_creep_buff"								"小兵Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"					"+$damage"

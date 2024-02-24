@@ -442,15 +442,8 @@ function AIGameMode:OnNPCSpawned(keys)
         end
     end
 
-    if sName == "npc_dota_lone_druid_bear" then
-        hEntity:AddNewModifier(hEntity, nil, "modifier_melee_resistance", {})
-    end
 
     if hEntity:IsRealHero() and not hEntity.bInitialized then
-        if hEntity:GetAttackCapability() == DOTA_UNIT_CAP_MELEE_ATTACK or sName == "npc_dota_hero_troll_warlord" or
-                sName == "npc_dota_hero_lone_druid" then
-            hEntity:AddNewModifier(hEntity, nil, "modifier_melee_resistance", {})
-        end
 
         if sName == "npc_dota_hero_sniper" and not self.bSniperScepterThinkerApplierSet then
             require('heroes/hero_sniper/sniper_init')

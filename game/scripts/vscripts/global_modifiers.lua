@@ -27,32 +27,6 @@ local StackToPercentage = function (iStackCount)
 	end
 end
 
-modifier_melee_resistance = class({})
-
-function modifier_melee_resistance:IsPurgable() return false end
-function modifier_melee_resistance:RemoveOnDeath() return false end
-function modifier_melee_resistance:GetTexture() return "bulldozer" end
-
-function modifier_melee_resistance:OnCreated()
-	self.iStatusResist = 20
-	self.iMagicalResist = 10
-end
-
-function modifier_melee_resistance:DeclareFunctions()
-	return {
-		MODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING,
-		MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS
-	}
-end
-
-function modifier_melee_resistance:GetModifierStatusResistanceStacking()
-	return self.iStatusResist
-end
-
-function modifier_melee_resistance:GetModifierMagicalResistanceBonus()
-	return self.iMagicalResist
-end
-
 --------------------------------------------------------------------------------
 -- Tower modifier
 --------------------------------------------------------------------------------

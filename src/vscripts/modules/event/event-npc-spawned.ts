@@ -50,6 +50,14 @@ export class EventNpcSpawned {
 
   // 英雄出生
   private OnRealHeroSpawned(hero: CDOTA_BaseNPC_Hero): void {
+    if (
+      hero.GetAttackCapability() === UnitAttackCapability.MELEE_ATTACK ||
+      hero.GetName() === "npc_dota_hero_troll_warlord" ||
+      hero.GetName() === "npc_dota_hero_lone_druid"
+    ) {
+      ModifierHelper.applyGlobalModifier(hero, "modifier_global_melee_resistance");
+    }
+
     if (PlayerHelper.IsHumanPlayer(hero)) {
       // 设置会员
       const steamAccountId = PlayerResource.GetSteamAccountID(hero.GetPlayerID());

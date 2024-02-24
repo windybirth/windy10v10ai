@@ -203,8 +203,8 @@
 		"DOTA_Tooltip_modifier_tower_endure"						"Buildings Endurance"
 		"DOTA_Tooltip_modifier_tower_endure_Description"		"The building's max health is set to %dMODIFIER_PROPERTY_TOOLTIP%%%."
 
-		"DOTA_Tooltip_modifier_melee_resistance"					"Bulldozer"
-		"DOTA_Tooltip_modifier_melee_resistance_Description"	"Melee heroes have %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% extra status resistance, %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% extra magic resistance."
+		"DOTA_Tooltip_modifier_global_melee_resistance"					"Bulldozer"
+		"DOTA_Tooltip_modifier_global_melee_resistance_Description"	"Melee heroes have %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% extra magic resistance."
 
 		"DOTA_Tooltip_ability_creep_buff"								"Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"					"+$damage"
