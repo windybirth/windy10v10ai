@@ -73,22 +73,6 @@ function modifier_tower_endure:OnTooltip()
 end
 
 
-modifier_tower_power = class({})
-
-function modifier_tower_power:IsPurgable() return false end
-function modifier_tower_power:IsDebuff() return false end
-function modifier_tower_power:GetTexture() return "tower_power" end
-
-function modifier_tower_power:DeclareFunctions()
-	return {
-		MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE,
-	}
-end
-
-function modifier_tower_power:GetModifierBaseDamageOutgoing_Percentage()
-	return 100*StackToPercentage(self:GetStackCount())-100
-end
-
 -------------------------------------------------
 -- NPC Think
 -------------------------------------------------

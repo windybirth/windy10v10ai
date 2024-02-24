@@ -131,16 +131,6 @@ function AIGameMode:OnGameStateChanged(keys)
         local iTowerLevel = math.max(self.iGameDifficulty, 1)
         for k, v in pairs(tTowers) do
             local towerName = v:GetName()
-            if string.find(towerName, "tower1") then
-                -- 一塔攻击最高200%
-                if self.iTowerPower > 7 then
-                    v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(7)
-                else
-                    v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iTowerPower)
-                end
-            else
-                v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iTowerPower)
-            end
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
             v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
@@ -165,7 +155,6 @@ function AIGameMode:OnGameStateChanged(keys)
         end
         local fort = Entities:FindAllByClassname("npc_dota_fort")
         for k, v in pairs(fort) do
-            v:AddNewModifier(v, nil, "modifier_tower_power", {}):SetStackCount(self.iTowerPower)
             v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
             v:AddNewModifier(v, nil, "modifier_tower_heal", {}):SetStackCount(self.iTowerHeal)
 
@@ -618,7 +607,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
     data.options = {
         playerGoldXpMultiplier = tostring(self.fPlayerGoldXpMultiplier),
         botGoldXpMultiplier = tostring(self.fBotGoldXpMultiplier),
-        towerPower = AIGameMode:StackToPercentage(self.iTowerPower),
+        towerPower = self.iTowerPower.."%",
         towerEndure = AIGameMode:StackToPercentage(self.iTowerEndure)
     }
     -- send to api server
