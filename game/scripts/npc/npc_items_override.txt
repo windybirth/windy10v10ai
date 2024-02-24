@@ -204,7 +204,7 @@
 		// chance_bounty_rune + chance_other_item * 3 = 100
 		"AbilityValues"
 		{
-			"bonus_health"			"300" //75
+			"bonus_health"			"300" //90
 			"chance_bounty_rune"	"40"  //16
 			"chance_other_item"		"20"  //28
 			"kobold_duration"		"40"  //60
@@ -212,19 +212,19 @@
 	}
 	"item_arcane_ring" //小秘法
 	{
-		"AbilityCooldown"				"30.0"//60
+		"AbilityCooldown"				"30.0"	//60
 		"AbilityValues"
 		{
-				"bonus_intelligence"	"14"  //7
-				"bonus_armor"			"6"   //2
-				"mana_restore"			"300" //75
+				"bonus_intelligence"	"12"	//7
+				"bonus_armor"			"6"		//2
+				"mana_restore"			"300"	//75
 		}
 	}
 	"item_mysterious_hat" //仙灵饰品
 	{
 		"AbilityValues"
 		{
-				"bonus_health"			"300"			// 75
+				"bonus_health"			"250"			// 50
 				"spell_amp"				"10"			// 5
 				"manacost_reduction"	"10"			// 5
 		}
@@ -242,9 +242,9 @@
 	{
 		"AbilityValues"
 		{
-			"shield"	"500" //100
-			"restore_time"			"4" //5
-			"bonus_hp_regen"	"10" //5
+			"shield"	"500"			//100
+			"restore_time"			"4"	//8
+			"bonus_hp_regen"	"5" 	//2
 		}
 	}
 	"item_seeds_of_serenity" //宁静种籽
@@ -418,8 +418,8 @@
 		"AbilityCooldown"				"8" //11
 		"AbilityValues"
 		{
-				"bonus_health_regen"			"8"	//3
-				"bonus_mana_regen"			"5"		//2.5
+				"bonus_health_regen"			"6"	//2.75
+				"bonus_mana_regen"			"4"		//2
 				"duration"			"5"				//4
 				"speed"			"36"				//18
 		}
@@ -592,7 +592,7 @@
 		"AbilityCooldown"				"12" //12
 		"AbilityValues"
 		{
-				"armor_bonus"			"12"  //6
+				"armor_bonus"			"16"  //8
 				"move_speed"			"50" //30
 				"active_armor"			"36" //12
 				"active_duration"		"8"  //8
@@ -1012,15 +1012,15 @@
 			"duration"			"9"  //6
 		}
 	}
-	"item_giants_ring" //巨人戒
+	"item_giants_ring" //巨人之戒
 	{
 		"AbilityValues"
 		{
-			"bonus_strength"			"80" //35
-			"movement_speed"			"100" //50
-			"model_scale"			    "0"   //50
-			"pct_str_damage_per_second"	"120" //100
-			"damage_radius"			    "200" //100
+			"bonus_strength"			"60"	//30
+			"movement_speed"			"90"	//45
+			"model_scale"			    "30"	//50
+			"pct_str_damage_per_second"	"120"	//100
+			"damage_radius"			    "200"	//100
 		}
 	}
 	"item_ex_machina"  //机械之心
@@ -1067,9 +1067,9 @@
 		"AbilityCooldown"				"45.0"  //75
 		"AbilityValues"
 		{
-				"bonus_health"			"3000"  //300
-				"heal"		            "5000" //1000
-				"health_threshold"		"20"   //20
+				"bonus_health"			"5000"	//500
+				"heal"		            "5000"	//1250
+				"health_threshold"		"20"	//20
 		}
 	}
 	"item_woodland_striders" //丛林靴
@@ -1626,7 +1626,7 @@
 			"bonus_strength"		"4 8"		// 2 4
 			"bonus_intellect"		"4 8"		// 2 4
 			"bonus_attack_speed"	"9 18"		// 5 10
-			"bonus_armor"			"4 8"		// 2 4
+			"bonus_armor"			"3.5 7"		// 1.75 3.5
 			"clock_time"			"3"			// 25
 		}
 	}
