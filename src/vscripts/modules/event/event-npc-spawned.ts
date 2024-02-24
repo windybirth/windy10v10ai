@@ -17,7 +17,9 @@ export class EventNpcSpawned {
     "generic_season_point_bag_fountain",
   ];
 
-  constructor() {}
+  constructor() {
+    ListenToGameEvent("npc_spawned", (keys) => this.OnNpcSpawned(keys), this);
+  }
 
   // 单位出生
   public OnNpcSpawned(keys: GameEventProvidedProperties & NpcSpawnedEvent): void {

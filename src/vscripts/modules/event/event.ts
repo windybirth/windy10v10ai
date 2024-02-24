@@ -3,18 +3,17 @@ import { PlayerHelper } from "../../helper/player-helper";
 import { PropertyController } from "../property/property_controller";
 import { EventEntityKilled } from "./event-entity-killed";
 import { EventNpcSpawned } from "./event-npc-spawned";
+import { EventGameStateChange } from "./evnet-game-state-change";
 
 export class Event {
   EventNpcSpawned: EventNpcSpawned;
   EventEntityKilled: EventEntityKilled;
+  EventGameStateChange: EventGameStateChange;
   constructor() {
     this.EventNpcSpawned = new EventNpcSpawned();
     this.EventEntityKilled = new EventEntityKilled();
+    this.EventGameStateChange = new EventGameStateChange();
     ListenToGameEvent("dota_player_gained_level", (keys) => this.OnPlayerLevelUp(keys), this);
-    ListenToGameEvent("npc_spawned", (keys) => this.EventNpcSpawned.OnNpcSpawned(keys), this);
-    ListenToGameEvent("game_rules_state_change", () => this.OnGameStateChanged(), this);
-    // entity_killed
-    ListenToGameEvent("entity_killed", (keys) => this.EventEntityKilled.OnEntityKilled(keys), this);
   }
 
   OnPlayerLevelUp(keys: GameEventProvidedProperties & DotaPlayerGainedLevelEvent): void {
@@ -30,12 +29,6 @@ export class Event {
         print(`[Event] OnPlayerLevelUp SetPlayerProperty ${hero.GetUnitName()}`);
         Player.SetPlayerProperty(hero);
       }
-    }
-  }
-
-  OnGameStateChanged(): void {
-    const state = GameRules.State_Get();
-    if (state === GameState.GAME_IN_PROGRESS) {
     }
   }
 }
