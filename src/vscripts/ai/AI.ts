@@ -1,5 +1,6 @@
 import { BaseHeroAIModifier } from "./hero/hero-base";
 import { LionAIModifier } from "./hero/hero-lion";
+import { ViperAIModifier } from "./hero/hero-viper";
 import { FSA } from "./mode/FSA";
 
 export class AI {
@@ -16,6 +17,9 @@ export class AI {
     // if hero is npc_dota_hero_lion, return LionAIModifier.name
     if (hero.GetUnitName() === "npc_dota_hero_lion") {
       return LionAIModifier.name;
+    }
+    if (hero.GetUnitName() === "npc_dota_hero_viper") {
+      return ViperAIModifier.name;
     }
 
     return BaseHeroAIModifier.name;

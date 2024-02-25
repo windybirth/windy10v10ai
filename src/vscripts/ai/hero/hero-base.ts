@@ -73,7 +73,8 @@ export class BaseHeroAIModifier extends BaseModifier {
     }
 
     this.FindAround();
-    this.ThinkMode();
+    // update state
+    this.mode = GameRules.AI.FSA.GetMode(this);
     if (this.gameTime < this.continueActionEndTime) {
       print(`[AI] HeroBase Think break 持续动作中 ${this.hero.GetUnitName()}`);
       return;
@@ -119,6 +120,9 @@ export class BaseHeroAIModifier extends BaseModifier {
    * 因小兵而进行的施法
    */
   CastCreep(): boolean {
+    if (this.UseAbilityCreep()) {
+      return true;
+    }
     return false;
   }
 
@@ -153,13 +157,13 @@ export class BaseHeroAIModifier extends BaseModifier {
     return false;
   }
 
-  // ---------------------------------------------------------
-  // Think Mode
-  // ---------------------------------------------------------
-  ThinkMode(): void {
-    this.mode = GameRules.AI.FSA.GetMode(this);
+  UseAbilityCreep(): boolean {
+    return false;
   }
 
+  // ---------------------------------------------------------
+  // Action Mode
+  // ---------------------------------------------------------
   ActionMode(): void {
     switch (this.mode) {
       case ModeEnum.RUNE:
@@ -217,7 +221,9 @@ export class BaseHeroAIModifier extends BaseModifier {
     if (this.CastTeam()) {
       return;
     }
-    // TODO 对线期攻击小兵，技能清兵，根据英雄继承后实装
+    if (this.CastCreep()) {
+      return;
+    }
   }
 
   ActionAttack(): void {
@@ -284,10 +290,6 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   // 强制A塔
   ForceAttackTower(): boolean {
-    if (this.IsInAttackPhase()) {
-      print(`[AI] HeroBase Think break 正在攻击中 ${this.hero.GetUnitName()}`);
-      return false;
-    }
     const enemyBuild = this.FindNearestEnemyBuildings();
     if (!enemyBuild) {
       return false;
@@ -297,6 +299,10 @@ export class BaseHeroAIModifier extends BaseModifier {
       return false;
     }
 
+    if (this.IsInAttackPhase()) {
+      print(`[AI] HeroBase Think break 正在攻击中 ${this.hero.GetUnitName()}`);
+      return false;
+    }
     const enemyHero = this.FindNearestEnemyHero();
     if (enemyHero) {
       // if hero in attack range

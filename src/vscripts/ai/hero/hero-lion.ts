@@ -5,22 +5,41 @@ import { BaseHeroAIModifier } from "./hero-base";
 @registerModifier()
 export class LionAIModifier extends BaseHeroAIModifier {
   override UseAbilityEnemy(): boolean {
-    if (ActionAbility.CastAbilityOnEnemyHero(this, this.ability_2)) {
+    // 变羊
+    if (ActionAbility.CastAbilityOnEnemyHero(this, "lion_voodoo")) {
       return true;
     }
-    if (ActionAbility.CastAbilityOnEnemyHero(this, this.ability_1)) {
+    // 裂地尖刺
+    if (ActionAbility.CastAbilityOnEnemyHero(this, "lion_impale")) {
       return true;
     }
-    if (ActionAbility.CastAbilityOnEnemyHero(this, this.ability_3)) {
-      return true;
-    }
+
+    // 死亡一指
     if (
-      ActionAbility.CastAbilityOnEnemyHero(this, this.ability_utli, {
+      ActionAbility.CastAbilityOnEnemyHero(this, "lion_finger_of_death", {
         target: { healthPercentLessThan: 80 },
       })
     ) {
       return true;
     }
+
+    // 法力吸取
+    if (ActionAbility.CastAbilityOnEnemyHero(this, "lion_mana_drain")) {
+      return true;
+    }
+    return false;
+  }
+
+  override UseAbilityCreep(): boolean {
+    // 裂地尖刺
+    if (
+      ActionAbility.CastAbilityOnEnemyCreep(this, "lion_impale", {
+        self: { abilityLevel: 4 },
+      })
+    ) {
+      return true;
+    }
+
     return false;
   }
 }
