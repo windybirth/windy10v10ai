@@ -242,9 +242,24 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   ActionRetreat(): void {
+    if (this.CastSelf()) {
+      return;
+    }
+    if (this.CastTeam()) {
+      return;
+    }
+
     // 撤离动作持续
-    this.continueActionEndTime = this.gameTime + this.continueActionTime;
-    this.ThinkRetreatGetAwayFromTower();
+    const enemyTower = this.FindNearestEnemyTowerInvulnerable();
+    if (enemyTower) {
+      this.continueActionEndTime = this.gameTime + this.continueActionTime;
+      this.ThinkRetreatGetAwayFromTower();
+      return;
+    }
+
+    if (this.CastEnemy()) {
+      return;
+    }
   }
 
   ThinkRetreatGetAwayFromTower(): void {

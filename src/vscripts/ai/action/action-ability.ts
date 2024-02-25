@@ -32,7 +32,7 @@ export class ActionAbility {
     const defaultSelf = {
       manaPercentMoreThan: 50,
       healthPercentMoreThan: 50,
-      level: 3,
+      abilityLevel: 3,
     };
     if (!condition) {
       condition = {
@@ -49,7 +49,7 @@ export class ActionAbility {
           condition.self.healthPercentMoreThan = defaultSelf.healthPercentMoreThan;
         }
         if (!condition.self.abilityLevel) {
-          condition.self.abilityLevel = defaultSelf.level;
+          condition.self.abilityLevel = defaultSelf.abilityLevel;
         }
       }
     }
