@@ -56,13 +56,6 @@ export class BaseHeroAIModifier extends BaseModifier {
   Init() {
     this.hero = this.GetParent() as CDOTA_BaseNPC_Hero;
     print(`[AI] HeroBase OnCreated ${this.hero.GetUnitName()}`);
-    // 初始化技能
-    this.ability_1 = this.hero.GetAbilityByIndex(0);
-    this.ability_2 = this.hero.GetAbilityByIndex(1);
-    this.ability_3 = this.hero.GetAbilityByIndex(2);
-    this.ability_4 = this.hero.GetAbilityByIndex(3);
-    this.ability_5 = this.hero.GetAbilityByIndex(4);
-    this.ability_utli = this.hero.GetAbilityByIndex(5);
 
     // 初始化Think
     if (IsInToolsMode()) {
@@ -85,6 +78,10 @@ export class BaseHeroAIModifier extends BaseModifier {
       print(`[AI] HeroBase Think break 持续动作中 ${this.hero.GetUnitName()}`);
       return;
     }
+    if (this.IsInAbilityPhase()) {
+      print(`[AI] HeroBase Think break 正在施法中 ${this.hero.GetUnitName()}`);
+      return;
+    }
     this.ActionMode();
   }
 
@@ -105,6 +102,9 @@ export class BaseHeroAIModifier extends BaseModifier {
    * 因敌人而进行的施法
    */
   CastEnemy(): boolean {
+    if (this.UseAbilityEnemy()) {
+      return true;
+    }
     return false;
   }
 
@@ -143,19 +143,20 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   // ---------------------------------------------------------
+  // Ability usage
+  // ---------------------------------------------------------
+  UseAbilitySelf(): boolean {
+    return false;
+  }
+
+  UseAbilityEnemy(): boolean {
+    return false;
+  }
+
+  // ---------------------------------------------------------
   // Think Mode
   // ---------------------------------------------------------
   ThinkMode(): void {
-    if (this.IsInAbilityPhase()) {
-      // print(`[AI] HeroBase Think break 正在施法中 ${this.hero.GetUnitName()}`);
-      return;
-    }
-
-    if (this.IsInAttackPhase()) {
-      // print(`[AI] HeroBase Think break 正在攻击中 ${this.hero.GetUnitName()}`);
-      return;
-    }
-
     this.mode = GameRules.AI.FSA.GetMode(this);
   }
 
@@ -183,6 +184,10 @@ export class BaseHeroAIModifier extends BaseModifier {
   }
 
   ActionRune(): void {
+    if (this.hero.GetTeamNumber() === DotaTeam.GOODGUYS) {
+      return;
+    }
+
     // 出高低就 返回基地
     const teamBuildings = ActionFind.FindTeamBuildingsInvulnerable(this.hero, 800);
     for (const building of teamBuildings) {
@@ -279,6 +284,10 @@ export class BaseHeroAIModifier extends BaseModifier {
 
   // 强制A塔
   ForceAttackTower(): boolean {
+    if (this.IsInAttackPhase()) {
+      print(`[AI] HeroBase Think break 正在攻击中 ${this.hero.GetUnitName()}`);
+      return false;
+    }
     const enemyBuild = this.FindNearestEnemyBuildings();
     if (!enemyBuild) {
       return false;
@@ -308,17 +317,6 @@ export class BaseHeroAIModifier extends BaseModifier {
     return false;
   }
 
-  ThinkPushKillCreep(): void {
-    // TODO 攻击小兵，技能清兵，根据英雄继承后实装
-    // const enemyCreep = this.FindNearestEnemyCreep();
-    // if (enemyCreep) {
-    //   if (ActionAttack.Attack(this.hero, enemyCreep)) {
-    //     print(`[AI] HeroBase ThinkPush ${this.hero.GetUnitName()} 攻击小兵`);
-    //     return;
-    //   }
-    // }
-  }
-
   StopAction(): boolean {
     if (HeroUtil.NotActionable(this.hero)) {
       return true;
@@ -334,6 +332,13 @@ export class BaseHeroAIModifier extends BaseModifier {
     if (this.hero.IsChanneling()) {
       return true;
     }
+
+    this.ability_1 = this.hero.GetAbilityByIndex(0);
+    this.ability_2 = this.hero.GetAbilityByIndex(1);
+    this.ability_3 = this.hero.GetAbilityByIndex(2);
+    this.ability_4 = this.hero.GetAbilityByIndex(3);
+    this.ability_5 = this.hero.GetAbilityByIndex(4);
+    this.ability_utli = this.hero.GetAbilityByIndex(5);
 
     if (this.ability_1 && this.ability_1.IsInAbilityPhase()) {
       return true;
