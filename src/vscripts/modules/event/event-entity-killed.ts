@@ -16,9 +16,9 @@ export class EventEntityKilled {
     "item_dragon_ball_7",
   ];
 
-  private dropItemChanceRoshan = 90;
-  private dropItemChanceAncient = 1.5;
-  private dropItemChanceNeutral = 0.5;
+  private dropItemChanceRoshan = 100;
+  private dropItemChanceAncient = 1.0;
+  private dropItemChanceNeutral = 0.1;
 
   OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
     const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
