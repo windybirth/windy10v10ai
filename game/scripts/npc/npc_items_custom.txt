@@ -5838,7 +5838,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"11"
+			"bonus_all_stats"		"111"
 		}
 	}
 	"item_dragon_ball_2"
@@ -5858,7 +5858,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"22"
+			"bonus_all_stats"		"122"
 		}
 	}
 	"item_dragon_ball_3"
@@ -5878,7 +5878,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"33"
+			"bonus_all_stats"		"133"
 		}
 	}
 	"item_dragon_ball_4"
@@ -5898,7 +5898,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"44"
+			"bonus_all_stats"		"144"
 		}
 	}
 	"item_dragon_ball_5"
@@ -5918,7 +5918,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"55"
+			"bonus_all_stats"		"155"
 		}
 	}
 	"item_dragon_ball_6"
@@ -5938,7 +5938,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"66"
+			"bonus_all_stats"		"166"
 		}
 	}
 	"item_dragon_ball_7"
@@ -5958,7 +5958,7 @@
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"77"
+			"bonus_all_stats"		"177"
 		}
 	}
 	"item_wish_1"
@@ -6088,7 +6088,7 @@
 		"ItemDisassembleRule"				"DOTA_ITEM_DISASSEMBLE_NEVER"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"308"
+			"bonus_all_stats"		"999"
 		}
 	}
 	"item_recipe_blessing_of_dragon_1"
