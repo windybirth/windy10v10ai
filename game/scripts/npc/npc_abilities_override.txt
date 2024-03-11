@@ -93,9 +93,9 @@
 	{
 		"AbilityValues"
 		{
-				"bonus_building_damage"		"150"			// 150
-				"incoming_hero_damage_penalty"		"-50"	// -50
-				"incoming_basic_damage_penalty"		"20"	// -30
+				"bonus_building_damage"		"300"			// 150
+				"incoming_hero_damage_penalty"		"-75"	// -50
+				"incoming_basic_damage_penalty"		"40"	// -30
 				"incoming_controlled_unit_penalty"	"-40"	// -40
 		}
 	}
@@ -136,18 +136,18 @@
 			"01"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"activation_time"		"5.0"				// 15.0
+				"activation_time"		"3.0"				// 15.0
 			}
 			"02"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"regen_rate"			"1000"				// 90
+				"regen_rate"			"100000"				// 90
 			}
 			// this is only used for event games
 			"03"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"radius"				"900"				// 900
+				"radius"				"700"				// 900
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"

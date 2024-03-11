@@ -481,6 +481,34 @@
 			"slow_duration"			"0.75"
 		}
 	}
+	"tower_shredder_reactive_armor"
+	{
+		"MaxLevel"						"6"
+		"BaseClass"                     "shredder_reactive_armor"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityValues"
+		{
+			"bonus_armor"				"1.0"
+			"bonus_hp_regen"
+			{
+				"value"					"2 3 4 5 6 12"
+			}
+			"stack_limit"
+			{
+				"value"			"5 10 15 20 25 50"
+			}
+			"stack_duration"
+			{
+				"value"				"30"
+			}
+			"stacks_per_hero_attack"
+			{
+				"value"				"1 2 3 4 5 6"
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+	}
 	//=================================================================================================================
 	// 泉水击退
 	//=================================================================================================================
