@@ -481,7 +481,7 @@
 			"slow_duration"			"0.75"
 		}
 	}
-	"tower_shredder_reactive_armor" // 四塔和基地加入活性护甲
+	"tower_shredder_reactive_armor" // 高地塔、四塔和基地加入活性护甲
 	{
 		"MaxLevel"						"6"
 		"BaseClass"                     "shredder_reactive_armor"
@@ -504,7 +504,7 @@
 			}
 			"stacks_per_hero_attack"
 			{
-				"value"				"1 1 1 2 2 2" // 有利于高伤害少攻击次数短时间拆掉，不利于分身等手段长时间一直磨
+				"value"				"1 1 1 2 2 2" // 有利于高伤害攻击次数少短时间拆掉，不利于分身等手段的长时间一直磨
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
