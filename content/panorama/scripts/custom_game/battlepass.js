@@ -39,7 +39,7 @@ function PlayerDataLoaded(player) {
 
   // 英雄属性
   SetLevelUseable(player);
-  SetPlayerProperty();
+  SetPlayerProperty(player);
 
   $.Msg("BP Loaded!");
 }
@@ -72,7 +72,7 @@ function SwitchToProperty() {
 }
 
 // --------------------------------------------------------------------------------
-
+// 设置数据页面
 function SetLevelUseable(player) {
   const playerProperties = player.properties;
   let levelUsed = 0;
@@ -94,7 +94,9 @@ function SetLevelUseable(player) {
   }
 }
 
-function SetPlayerProperty() {
+// 玩家属性
+function SetPlayerProperty(player) {
+  SetResetPropertyButton(player);
   ClearPlayerProperty();
 
   const panel = $.CreatePanel("Panel", $("#PlayerPropertyContent"), "");
@@ -106,6 +108,36 @@ function SetPlayerProperty() {
 
 function ClearPlayerProperty() {
   $("#PlayerPropertyContent").RemoveAndDeleteChildren();
+}
+
+// 设置重置属性按钮
+function SetResetPropertyButton(player) {
+  const resetUseSeasonPointButton = $("#ResetUseSeasonPoint");
+  if (player.seasonPointTotal >= player.seasonNextLevelPoint) {
+    resetUseSeasonPointButton.SetHasClass("deactivated", false);
+    resetUseSeasonPointButton.SetHasClass("activated", true);
+    resetUseSeasonPointButton.SetPanelEvent("onactivate", () => {
+      OnPlayerPropertyResetActive(resetUseSeasonPointButton, false);
+    });
+  } else {
+    resetUseSeasonPointButton.SetHasClass("deactivated", true);
+    resetUseSeasonPointButton.SetHasClass("activated", false);
+    resetUseSeasonPointButton.SetPanelEvent("onactivate", () => {});
+  }
+
+  const resetUseMemberPointButton = $("#ResetUseMemberPoint");
+  if (player.memberPointTotal >= 1000) {
+    resetUseMemberPointButton.SetHasClass("deactivated", false);
+    resetUseMemberPointButton.SetHasClass("activated-gold", true);
+    resetUseMemberPointButton.SetPanelEvent("onactivate", () => {
+      OnPlayerPropertyResetActive(resetUseMemberPointButton, true);
+    });
+  } else {
+    resetUseMemberPointButton.SetHasClass("deactivated", true);
+    resetUseMemberPointButton.SetHasClass("activated", false);
+    resetUseMemberPointButton.SetHasClass("activated-gold", false);
+    resetUseMemberPointButton.SetPanelEvent("onactivate", () => {});
+  }
 }
 
 function AddPlayerProperty(property) {
@@ -186,6 +218,19 @@ function OnLevelupActive(panel) {
   GameEvents.SendCustomGameEventToServer("player_property_levelup", {
     name: panel.FindChildTraverse("Levelup").name,
     level: panel.FindChildTraverse("Levelup").nextLevel,
+  });
+}
+
+function OnPlayerPropertyResetActive(panel, useMemberPoint) {
+  $.Msg("OnPlayerPropertyResetActive");
+  // disable button
+  panel.SetHasClass("deactivated", true);
+  panel.SetHasClass("activated", false);
+  panel.SetHasClass("activated-gold", false);
+  panel.SetPanelEvent("onactivate", () => {});
+  // send request to server
+  GameEvents.SendCustomGameEventToServer("player_property_reset", {
+    useMemberPoint,
   });
 }
 
