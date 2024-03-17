@@ -59,10 +59,10 @@ function SwitchToData() {
 }
 
 // 属性
-function SetPropertySelected() {
-  $("#BPNavButtonProperty").checked = true;
-  SwitchToProperty();
-}
+// function SetPropertySelected() {
+//   $("#BPNavButtonProperty").checked = true;
+//   SwitchToProperty();
+// }
 
 function SwitchToProperty() {
   $("#BpWindowMainProperty").visible = true;
@@ -76,12 +76,14 @@ function SwitchToProperty() {
 function SetLevelUseable(player) {
   const playerProperties = player.properties;
   let levelUsed = 0;
-  const playerPropertiesValues = Object.values(playerProperties);
+  const playerPropertiesValues = playerProperties ? Object.values(playerProperties) : [];
   for (const property of Player_Property_List) {
     const playerProperty = playerPropertiesValues.find((p) => p.name === property.name);
     if (playerProperty) {
       property.level = playerProperty.level;
       levelUsed += playerProperty.level;
+    } else {
+      property.level = 0;
     }
   }
   const totalLevel = player.memberLevel + player.seasonLevel;
