@@ -1250,18 +1250,14 @@
     //=================================================================================================================
 	"item_recipe_revenants_brooch"
 	{
-		"ItemCost"						"1800"
-		"ItemRequirements"
-		{
-			"01"						"item_relic;item_relic;item_voodoo_mask;item_voodoo_mask" // 明强暗削，成品1w金
-		}
+		"ItemCost"						"4500"
 	}
 	"item_revenants_brooch"
 	{
 		"AbilityValues"
 		{
-				"bonus_damage"			"175"			// 70 x2.5
-				"spell_lifesteal"		"50"			// 20 x2.5 测试服80都吸不动
+				"bonus_damage"			"140"			// 70 x2
+				"spell_lifesteal"		"40"			// 20 x2
 				"manacost_per_hit"		"60"			// 50
 		}
 	}

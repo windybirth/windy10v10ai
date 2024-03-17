@@ -489,18 +489,18 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityValues"
 		{
-			"bonus_armor"				"1.0"
+			"bonus_armor"				"1 2 3 4 5 10"
 			"bonus_hp_regen"
 			{
-				"value"					"2 3 4 5 6 12"
+				"value"					"1 2 3 4 5 10"
 			}
 			"stack_limit"
 			{
-				"value"			"5 10 15 20 25 50"
+				"value"			"5"
 			}
 			"stack_duration"
 			{
-				"value"				"20"
+				"value"				"10"
 			}
 			"stacks_per_hero_attack"
 			{

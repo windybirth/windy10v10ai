@@ -17,10 +17,10 @@ function abyss_sword_rush_night_sword_qi:OnProjectileHit(target, location)
     local caster = self:GetCaster()
     if caster:HasModifier("modifier_abyss_sword_rush_night_sword_qi_spell") then
         caster:AddNewModifier(caster, self, "modifier_abyss_sword_rush_night_sword_qi", {})
-        --胜率太低，暂时改回触发狂战特效 caster:AddNewModifier(caster, self, "modifier_tidehunter_anchor_smash_caster", {})
+        -- 胜率太低，暂时改回触发狂战特效 caster:AddNewModifier(caster, self, "modifier_tidehunter_anchor_smash_caster", {})
         caster:PerformAttack(target, true, true, true, true, false, false, true)
         caster:RemoveModifierByName("modifier_abyss_sword_rush_night_sword_qi")
-        --胜率太低，暂时改回触发狂战特效 caster:RemoveModifierByName("modifier_tidehunter_anchor_smash_caster")
+        -- 胜率太低，暂时改回触发狂战特效 caster:RemoveModifierByName("modifier_tidehunter_anchor_smash_caster")
     else
         if not target then return end
         if target:HasModifier("modifier_abyss_sword_rush_night_sword_qi_enemy") then return end
