@@ -493,7 +493,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"bat_reduction"			"0.2"
+				"bat_reduction"			"0.4" // 给ai小小用的
 			}
 		}
 	}
