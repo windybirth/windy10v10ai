@@ -1134,6 +1134,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_refresh_core',
 		'item_gungir_2',
 		'item_necronomicon_staff',
+		'item_excalibur',
 	},
 }
 

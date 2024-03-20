@@ -5578,7 +5578,7 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"1000"
-			"bonus_spell_amp"		"100"
+			"bonus_spell_amp"		"70"
 			"bonus_damage_percent"	"100"
 
 			"ruin_chance_tooltip"	"66"
