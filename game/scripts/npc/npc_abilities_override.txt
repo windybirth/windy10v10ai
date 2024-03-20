@@ -3381,7 +3381,7 @@
 			"scepter_duration"
 			{
 				"value"						"0"
-				"special_bonus_scepter"			"+3"
+				"special_bonus_scepter"			"+7" // 改回原版，看看卡顿优化之后有没有好一些
 				"RequiresScepter"			"1"
 			}
 			"scepter_aura_radius"
@@ -4233,12 +4233,28 @@
 		"AbilityManaCost"				"200 250 300 350"
 		"AbilityValues"
 		{
-				"duration"						"3.5 4.0 4.5 5.0"
-				"damage"						"100"
+				"duration"						"3 4 5 6"
+				"radius"
+				{
+					"value"		"1200"
+					"LinkedSpecialBonus"			"special_bonus_unique_treant_5"
+					"affected_by_aoe_increase"	"1"
+				}
+				"eyes_radius"
+				{
+					"value"						"1600"
+					"LinkedSpecialBonus"			"special_bonus_unique_treant_5"
+					"affected_by_aoe_increase"	"1"
+				}
+				"damage"
+				{
+					"value"					"170"
+					"CalculateSpellDamageTooltip"	"1"
+				}
 				"AbilityCooldown"
 				{
-					"value"						"100"
-					"special_bonus_unique_treant_14"	"-20"
+					"value"						"120 110 100 90"
+					"special_bonus_unique_treant_14"	"-35"
 				}
 		}
 	}
@@ -4915,9 +4931,8 @@
 		}
 	}
 	// 骨隐步
-	"clinkz_wind_walk"
+	"clinkz_wind_walk" // 原版去掉骷髅兵
 	{
-		"MaxLevel" "4"
 		"AbilityValues"
 		{
 			"skeleton_count"
@@ -5666,7 +5681,7 @@
 	// 真熊形态
 	"lone_druid_true_form"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilitySpecial"
 		{
 			"01"
@@ -7544,9 +7559,11 @@
 		"MaxLevel" "4"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
+		"AbilityCastRange"				"500 1000 2000 3000" // 偷偷加强一下玩具
+		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"35 30 25 20"
+				"hit_point_minimum_pct"		"25 20 15 10" // 换血接淘汰，谁用谁知道
 		}
 	}
 	"special_bonus_unique_terrorblade"
@@ -7644,21 +7661,21 @@
 	// 战斗专注
 	"troll_warlord_battle_trance"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
 		"AbilityManaCost"				"150"
 		"AbilityValues"
         {
 			"trance_duration"		"6"
             "AbilityCooldown"
             {
-                "value"			"90 85 80 75 70"
+                "value"			"85 80 75 70"
                 "special_bonus_unique_troll_warlord_7"		"-15"
             }
-            "lifesteal"			"40 50 60 70 80"
-            "attack_speed"			"140 170 200 230 260"
+            "lifesteal"			"50 60 70 80"
+            "attack_speed"			"170 200 230 260"
             "movement_speed"
             {
-                "value"		"25 30 35 40 45"
+                "value"		"30 35 40 45"
                 "special_bonus_unique_troll_warlord_battle_trance_movespeed"		"+15"
             }
         }
@@ -8963,7 +8980,7 @@
 				"value"				"25 50 75 100 125"
 				"special_bonus_unique_death_prophet_3"	"+75"
 			}
-			"damage_pct"				"2"
+			"damage_pct"				"1 2 3 4 5" // 偷偷加强百分比吸魂
 		}
 	}
 	// 巫术精研
@@ -10791,7 +10808,7 @@
 		"LinkedAbility"                 "dark_seer_vacuum"
 		"AbilityDraftPreAbility"        "dark_seer_vacuum"
 		"MaxLevel" "5"
-		"AbilityCastRange"				"450 500 550 600 650"
+		"AbilityCastRange"				"550 600 650 700 750" // 实战根本放不出来，+100看看
 		"AbilityCooldown"				"16.0 13.0 10.0 7.0 4.0"
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
@@ -10813,7 +10830,7 @@
 		"AbilityDraftPreAbility"        "queenofpain_shadow_strike"
 		"MaxLevel"                      "5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 暂时无视bkb
-		"AbilityCastRange"				"450 500 550 600 650"
+		"AbilityCastRange"				"550 600 650 700 750" // 与镖同步
 		"AbilityCooldown"				"30"
 		"AbilityManaCost"				"60 90 120 150 180"
 
@@ -11447,15 +11464,15 @@
 	"storm_spirit_electric_vortex"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"20 18 16 14 12"
+		"AbilityCooldown"				"18 16 14 12 10" // 好久没见有人玩了，加强一点
 		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
 				"electric_vortex_pull_distance"		"180 220 260 300 340"
 				"AbilityDuration"
 				{
-					"value"				"1.2 1.5 1.8 2.1 2.4"
-					"special_bonus_unique_storm_spirit"	"+0.3"
+					"value"				"1.5 1.8 2.1 2.4 2.7"
+					"special_bonus_unique_storm_spirit"	"+0.6"
 				}
 		}
 	}
@@ -11498,19 +11515,19 @@
 				"ball_lightning_move_speed"			"1400 1850 2300 2750"
 		}
 	}
-	// 球状闪电残影距离
-	"special_bonus_unique_storm_spirit_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"800"
-				"ad_linked_abilities"			"storm_spirit_ball_lightning && storm_spirit_static_remnant"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
+	// 球状闪电残影距离（先改回原版看看卡顿效果）
+	// "special_bonus_unique_storm_spirit_4"
+	// {
+	//	"AbilitySpecial"
+	// 	{
+	// 		"01"
+	// 		{
+	// 			"var_type"					"FIELD_FLOAT"
+	// 			"value"				"800"
+	// 			"ad_linked_abilities"			"storm_spirit_ball_lightning && storm_spirit_static_remnant"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+	// 		}
+	// 	}
+	// }
 	//=================================================================================================================
 	// Ability: Techies 工程师/炸弹人
 	//=================================================================================================================
