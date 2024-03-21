@@ -193,13 +193,63 @@
 				"rune_expire_time"		"120.0"			// 90
 		}
 	}
-	"item_travel_boots"
+	"item_travel_boots" // 飞鞋
 	{
 		"ItemIsNeutralDrop"             "1" // 改到中立格子
 		"AbilityValues"
 		{
 				"tp_cooldown"			"30" // cd与回城卷轴同步
 		}
+	}
+	"item_tier1_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "90"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier2_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "450"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier3_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "810"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier4_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "1170"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier5_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "1530"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
 	}
 	//=================================================================================================================
 	// Custom item Override 中立物品

@@ -290,6 +290,11 @@
 		"item"      "item_wish_2"
 		"item"      "item_wish_3"
 		"item"      "item_wish_4"
+		"item"      "item_tier1_token"
+		"item"      "item_tier2_token"
+		"item"      "item_tier3_token"
+		"item"      "item_tier4_token"
+		"item"      "item_tier5_token"
 
 		"item"      "item_radar_of_dragon"
 		"item"		"item_recipe_greater_famango"
