@@ -136,7 +136,7 @@ tBotItemData.purchaseItemList = {
 		'item_blue_fantasy',
 		'item_ultimate_scepter_2',
 		'item_wasp_callous',
-		'item_abyssal_blade', -- 可以与一闪叠加，分开作用几乎永晕。偷偷恶心一下玩家
+		'item_abyssal_blade', -- 可以与一闪叠加，分开作用几乎永晕
 		'item_abyssal_blade_v2',
 		'item_wasp_despotic',
 		'item_excalibur',
@@ -557,7 +557,6 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_despotic',
 		'item_excalibur',
 		'item_excalibur',
-
 	},
 	npc_dota_hero_meepo = {
 		'item_magic_wand',
@@ -1009,7 +1008,6 @@ tBotItemData.purchaseItemList = {
 		'item_jump_jump_jump',
 		'item_moon_shard_datadriven',
 		'item_excalibur',
-		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_magic_wand',
@@ -1234,7 +1232,6 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_kunkka = {
 		'item_armlet',
-		'item_greater_crit',
 		'item_black_king_bar_2',
 		'item_bfury',
 	},
@@ -1306,7 +1303,6 @@ tBotItemData.sellItemList = {
 		'item_bfury',
 		'item_monkey_king_bar_2',
 		'item_infernal_desolator',
-		'item_greater_crit',
 	},
 	npc_dota_hero_shadow_shaman = {
 		'item_magic_wand',
@@ -1376,7 +1372,6 @@ tBotItemData.sellItemList = {
 		'item_sange_and_yasha',
 		'item_echo_sabre_2',
 		'item_overwhelming_blink',
-		'item_vladmir_2',
 	},
 	npc_dota_hero_zuus = {
 	},
@@ -1463,6 +1458,8 @@ tBotItemData.sellItemCommonList = {
 	'item_sheepstick',
 	'item_phylactery', -- 灵匣
 	'item_hand_of_group', -- 团队之手
+
+	'item_greater_crit', -- 大炮
 }
 
 -- Consume items
