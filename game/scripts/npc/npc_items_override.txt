@@ -373,9 +373,9 @@
 				"bonus_mana"			"400"  //50
 				"max_charges"			"10"  //10
 				"use_cooldown"			"10"  //12
-				"health_regen"			"6.0" //2.0
-				"mana_regen"			"3.0" //1.0
-				"regen_duration"		"8"  //10
+				"health_regen"			"6.0" //2.5
+				"mana_regen"			"3.0" //1.25
+				"regen_duration"		"8"  //8
 		}
 	}
 	"item_faded_broach" //暗淡胸针
@@ -560,7 +560,7 @@
 	{
 		"AbilityValues"
 		{
-			"attack_range_bonus"			"75"		// 100
+			"attack_range_bonus"			"75"		// 75
 			"attack_speed_bonus"			"40"		// 20
 			"magic_resistance_reduction"		"20"	// 15
 		}
@@ -1308,14 +1308,14 @@
     //=================================================================================================================
 	"item_recipe_revenants_brooch"
 	{
-		"ItemCost"						"4500"
+		"ItemCost"						"4100"
 	}
 	"item_revenants_brooch"
 	{
 		"AbilityValues"
 		{
-				"bonus_damage"			"140"			// 70 x2
-				"spell_lifesteal"		"40"			// 20 x2
+				"bonus_damage"			"120"			// 70
+				"spell_lifesteal"		"35"			// 20
 				"manacost_per_hit"		"60"			// 50
 		}
 	}
@@ -1338,7 +1338,7 @@
 	//=================================================================================================================
 	"item_recipe_devastator"
 	{
-		"ItemCost"						"1225"
+		"ItemCost"						"625"
 	}
 	//=================================================================================================================
 	// Parasma
@@ -1348,7 +1348,7 @@
 		"AbilityCooldown"				"6"			// 7
 		"AbilityValues"
 		{
-				"int_damage_multiplier"	"1.25"		// 1
+				"int_damage_multiplier"	"1.00"		// 0.75
 				"slow"	"30"						// 25
 				"slow_duration"	"4"					// 4
 				"active_mres_reduction"		"25"	// 20
@@ -1738,7 +1738,7 @@
 			"bonus_strength"		"4 8"		// 2 4
 			"bonus_agility"			"4 8"		// 2 4
 			"bonus_max_mana_percentage"	"5 10"	// 3 6
-			"bonus_mana_regen"		"3 6"		// 0.75 1.5
+			"bonus_mana_regen"		"3 6"		// 1 2
 			"clock_time"			"3"			// 25
 		}
 	}
