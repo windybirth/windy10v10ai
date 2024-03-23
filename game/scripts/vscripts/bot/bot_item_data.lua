@@ -1377,7 +1377,6 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_tinker = {
 		'item_force_staff_3',
-		'item_phylactery',
 	},
 	npc_dota_hero_tiny = {
 		'item_vanguard',
@@ -1468,9 +1467,9 @@ tBotItemData.sellItemCommonList = {
 	'item_bfury',
 	-- 羊刀
 	'item_sheepstick',
-	'item_phylactery', -- 灵匣
 	'item_hand_of_group', -- 团队之手
 
+	'item_phylactery', -- 灵匣
 	'item_greater_crit', -- 大炮
 }
 
