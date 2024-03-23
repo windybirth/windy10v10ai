@@ -251,6 +251,16 @@
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
+	"item_ex_machina"
+	{
+		"ItemCost"                      "5000"
+		"ItemInitialStockTime"          "1545"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
 	//=================================================================================================================
 	// Custom item Override 中立物品
 	//=================================================================================================================

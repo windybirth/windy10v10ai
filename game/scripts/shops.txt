@@ -298,6 +298,7 @@
 		"item"      "item_tier3_token"
 		"item"      "item_tier4_token"
 		"item"      "item_tier5_token"
+		"item"      "item_ex_machina"
 	}
 
 	"pregame"
