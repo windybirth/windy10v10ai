@@ -204,50 +204,50 @@
 	"item_tier1_token"
 	{
 		"ItemCost"                      "500"
-		"ItemInitialStockTime"          "90"
+		"ItemInitialStockTime"          "105"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"60"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier2_token"
 	{
 		"ItemCost"                      "1000"
-		"ItemInitialStockTime"          "450"
+		"ItemInitialStockTime"          "465"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"60"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier3_token"
 	{
 		"ItemCost"                      "1500"
-		"ItemInitialStockTime"          "810"
+		"ItemInitialStockTime"          "825"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"60"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier4_token"
 	{
 		"ItemCost"                      "2000"
-		"ItemInitialStockTime"          "1170"
+		"ItemInitialStockTime"          "1185"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"60"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier5_token"
 	{
 		"ItemCost"                      "2500"
-		"ItemInitialStockTime"          "1530"
+		"ItemInitialStockTime"          "1545"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"60"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
@@ -1193,7 +1193,7 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"210.0"
+		"ItemInitialStockTime"			"225.0"
 	}
 	"item_refresher"
 	{
@@ -1495,7 +1495,13 @@
 
 	"item_smoke_of_deceit"
 	{
+		"ItemInitialCharges"			"1"
+		"ItemStockMax"					"5"
 		"ItemStockTime"					"180.0"
+		"AbilityValues"
+		{
+			"visibility_radius"		"900"	// 1025
+		}
 	}
 
 	//=================================================================================================================
@@ -1543,7 +1549,7 @@
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"210.0"
+		"ItemInitialStockTime"			"225.0"
 		"IsObsolete"					"0"
 
 		"AbilitySpecial"

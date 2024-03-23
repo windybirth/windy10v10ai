@@ -5290,7 +5290,7 @@
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"210.0"
+		"ItemInitialStockTime"			"225.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -5330,7 +5330,7 @@
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"210.0"
+		"ItemInitialStockTime"			"225.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -5370,7 +5370,7 @@
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
 		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"210.0"
+		"ItemInitialStockTime"			"225.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -6153,7 +6153,6 @@
 		"ItemStockMax"					"1"
 		"ItemStockInitial"				"1"
 		"ItemStockTime"					"600"
-		"ItemInitialStockTime"			"30"
 		"AbilityValues"
 		{
 			"bonus_all_stats"		"1"
@@ -6177,7 +6176,6 @@
 		"ItemStockMax"					"1"
 		"ItemStockInitial"				"1"
 		"ItemStockTime"					"600"
-		"ItemInitialStockTime"			"30"
 		"AbilityValues"
 		{
 			"bonus_all_stats"		"1"
@@ -6201,7 +6199,6 @@
 		"ItemStockMax"					"1"
 		"ItemStockInitial"				"1"
 		"ItemStockTime"					"600"
-		"ItemInitialStockTime"			"30"
 		"AbilityValues"
 		{
 			"bonus_all_stats"		"1"
@@ -6225,7 +6222,6 @@
 		"ItemStockMax"					"1"
 		"ItemStockInitial"				"1"
 		"ItemStockTime"					"600"
-		"ItemInitialStockTime"			"30"
 		"AbilityValues"
 		{
 			"bonus_all_stats"		"1"

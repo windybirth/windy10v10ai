@@ -18,7 +18,7 @@
 
 		"item"		"item_aghanims_shard"
 		"item"		"item_tome_of_knowledge"
-		"item"		"item_consumable_gem"
+		"item"		"item_consumable_gem"				// 幻影宝石
 		"item"		"item_cheese"
 	}
 
@@ -249,10 +249,10 @@
  		//"item"		"item_overwhelming_blink"
  		//"item"		"item_swift_blink"
  		//"item"		"item_arcane_blink"
+		"item"		"item_tome_of_luoshu"
 		"item"		"item_tome_of_strength"
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
-		"item"		"item_tome_of_luoshu"
 	}
 
 	"sideshop1"
