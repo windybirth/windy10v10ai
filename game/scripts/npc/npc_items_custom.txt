@@ -2294,7 +2294,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_agility"
 		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"19999"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -2325,7 +2325,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_intelligence"
 		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"19999"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -2356,7 +2356,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_strength"
 		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"19999"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -4823,7 +4823,7 @@
 		"AbilityTextureName"			"item_recipe_tome_of_luoshu"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"6003"
+		"ItemCost"						"3333"
 		"ItemShopTags"					""
 
 		// Recipe
@@ -4858,7 +4858,7 @@
 		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"AbilityValues"
 		{
-			"bonus_all_stats"			"50"
+			"bonus_all_stats"			"200"
 			"status_resistance"			"30"
 			"spell_amp"					"30"
 			"bonus_base_damage_percent"	"50"
@@ -5289,8 +5289,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"225.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"180.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -5329,8 +5329,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"225.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"180.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -5369,8 +5369,8 @@
 		"ItemDisplayCharges"			"1"
 		"ItemStockMax"					"10"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"225.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"180.0"
 
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
         "AbilitySpecial"
@@ -5525,10 +5525,10 @@
 		"ID"                            "9600"
 		"BaseClass"                     "item_minotaur_horn"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"				"90.0"
+		"AbilityCooldown"				"60.0"
 		"AbilityManaCost"				"250"
 
-		"ItemCost"						"10000"
+		"ItemCost"						"6000"
 		"ItemPurchasable"				"1"
 		"ItemSellable"				    "1"
 		"ItemIsNeutralDrop"				"1"
@@ -5539,7 +5539,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_strength"			"60"
+			"bonus_strength"			"90"
 			"duration"					"10"
 		}
 	}
@@ -5577,9 +5577,9 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"1000"
-			"bonus_spell_amp"		"66"
-			"bonus_damage_percent"	"100"
+			"bonus_damage"			"1500"
+			"bonus_spell_amp"		"100"
+			"bonus_damage_percent"	"150"
 
 			"ruin_chance_tooltip"	"66"
 		}
@@ -5626,9 +5626,9 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"1000"
+			"bonus_damage"			"1500"
 			"bonus_spell_amp"		"100"
-			"bonus_damage_percent"	"100"
+			"bonus_damage_percent"	"150"
 
 			"ruin_chance_tooltip"	"0"
 		}
@@ -6449,6 +6449,776 @@
 		"AbilityValues"
 		{
 			"bonus_all_stats"		"1"
+		}
+	}
+
+	//=================================================================================================================
+	// 大炮2 Recipe: Greater Crit
+	//=================================================================================================================
+	"item_recipe_greater_crit_2"
+	{
+		"BaseClass"                     "item_recipe_greater_crit"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_greater_crit_2"
+		"ItemRequirements"
+		{
+			"01"						"item_greater_crit;item_greater_crit;item_greater_crit"
+		}
+	}
+
+	"item_greater_crit_2"
+	{
+		"BaseClass"                     "item_greater_crit"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_damage"			"300"
+			"crit_chance"			"66.7"
+			"crit_multiplier"		"400"
+		}
+	}
+
+	//=================================================================================================================
+	// 大鞋2 Guardian Greaves
+	//=================================================================================================================
+	"item_recipe_guardian_greaves_2"
+	{
+		"BaseClass"                     "item_recipe_guardian_greaves"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_guardian_greaves_2"
+		"ItemRequirements"
+		{
+			"01"						"item_guardian_greaves;item_guardian_greaves"
+		}
+	}
+
+	"item_guardian_greaves_2"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"20"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"		"24"
+			"mana_regen"		"6"
+			"aura_health_regen"		"10"
+			"aura_armor"		"18"
+			"aura_mana_regen"		"1.5"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"		"58"
+			"aura_mana_regen_bonus"		"20"
+			"aura_armor_bonus"			"32"
+			"aura_bonus_threshold"	"100"
+			"replenish_health"		"7000"
+			"replenish_mana"		"4000"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"2"
+		}
+	}
+
+	//=================================================================================================================
+	// 蝴蝶2 Recipe: Butterfly
+	//=================================================================================================================
+	"item_recipe_butterfly_2"
+	{
+		"BaseClass"                     "item_recipe_butterfly"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_butterfly_2"
+		"ItemRequirements"
+		{
+			"01"						"item_butterfly;item_butterfly"
+		}
+	}
+
+	"item_butterfly_2"
+	{
+		"BaseClass"                     "item_butterfly"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		//"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_agility"			"200"
+			"bonus_evasion"			"99"
+			"bonus_attack_speed_pct"	"100"
+			"bonus_damage"	"200"
+		}
+	}
+
+	//=================================================================================================================
+	// 天碍震星 Recipe: Meteor Hammer
+	//=================================================================================================================
+	"item_recipe_meteor_hammer_2"
+	{
+		"BaseClass"                     "item_recipe_meteor_hammer"
+		"ItemCost"						"1000"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_meteor_hammer_2"
+		"ItemRequirements"
+		{
+			"01"						"item_meteor_hammer;item_meteor_hammer;item_meteor_hammer"
+		}
+	}
+
+	"item_meteor_hammer_2"
+	{
+		"BaseClass"                     "item_meteor_hammer"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_NEVER"
+		"AbilityChannelTime"			"1.0"
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"24"
+		"AbilityManaCost"				"100"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"bonus_strength"		"30"
+				"bonus_agility"		"30"
+				"bonus_intellect"			"120"
+				"spell_amp"			"50"
+				"mana_regen_multiplier"		"300"
+				"spell_lifesteal_amp"	"120"
+
+				"burn_dps_buildings"		"0"
+				"burn_dps_units"		"250"
+				"burn_slow"			"100"
+				"burn_duration"		"6"
+				"stun_duration"		"1.5"
+				"burn_interval"				"1.0"
+				"land_time"				".5"
+				"impact_radius"
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"max_duration"		"4"
+				"impact_damage_buildings"		"0"
+				"impact_damage_units"		"260"
+				"enemy_particles_visible"		"0"
+		}
+	}
+
+	//=================================================================================================================
+	// 大战鼓鞋
+	//=================================================================================================================
+	"item_recipe_boots_of_bearing_2"
+	{
+		"BaseClass"                     "item_recipe_boots_of_bearing"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_boots_of_bearing_2"
+		"ItemRequirements"
+		{
+			"01"						"item_boots_of_bearing;item_boots_of_bearing"
+		}
+	}
+
+	"item_boots_of_bearing_2"
+	{
+		"BaseClass"                     "item_boots_of_bearing"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemPermanent"					"1"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"15.0"
+		//"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"aura_movement_speed"	"60"
+			"bonus_str"				"24"
+			"bonus_int"				"24"
+			"bonus_attack_speed_pct"	"150"
+			"bonus_movement_speed_pct"	"40"
+			"duration"				"9"
+			"radius"
+			{
+				"value"				"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_movement_speed"	"150"
+			"bonus_health_regen"	"90"
+			"bonus_ms_duration"		"4"
+		}
+	}
+
+	//=================================================================================================================
+	// 大力跳
+	//=================================================================================================================
+	"item_overwhelming_blink_2"
+	{
+		"BaseClass"                     "item_overwhelming_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"
+				"blink_damage_cooldown"	"2.0"
+				"blink_range_clamp"		"1440"
+				"bonus_strength"		"100"
+				"radius"
+				{
+					"value"	"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"movement_slow"		"100"
+				"attack_slow"		"100"
+				"duration"		"6"
+				"damage_base"			"600"
+				"damage_pct_instant"		"300"
+				"damage_pct_over_time"		"600"
+		}
+	}
+
+	//=================================================================================================================
+	// 大敏跳
+	//=================================================================================================================
+	"item_swift_blink_2"
+	{
+		"BaseClass"                     "item_swift_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"
+				"blink_damage_cooldown"	"2.0"
+				"blink_range_clamp"		"1440"
+				"bonus_agility"		"50"
+				"bonus_movement"		"80"
+				"bonus_agi_active"		"70"
+				"duration"		"7"
+		}
+	}
+
+	//=================================================================================================================
+	// 大智跳
+	//=================================================================================================================
+	"item_arcane_blink_2"
+	{
+		"BaseClass"                     "item_arcane_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"2100"
+		"AbilityOvershootCastRange"     "1780"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"3.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"2100"
+				"blink_damage_cooldown"	"0.0"
+				"blink_range_clamp"		"1780"
+				"bonus_intellect"		"50"
+				"heal_amount"			"600"
+				"mana_amount"			"300"
+		}
+	}
+
+	"item_recipe_arcane_blink_2"
+	{
+		"BaseClass"                     "item_recipe_arcane_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_arcane_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_arcane_blink;item_arcane_blink"
+		}
+	}
+
+	"item_recipe_swift_blink_2"
+	{
+		"BaseClass"                     "item_recipe_swift_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_swift_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_swift_blink;item_swift_blink"
+		}
+	}
+
+	"item_recipe_overwhelming_blink_2"
+	{
+		"BaseClass"                     "item_recipe_overwhelming_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overwhelming_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_overwhelming_blink;item_overwhelming_blink"
+		}
+	}
+
+	//=================================================================================================================
+	// 强袭
+	//=================================================================================================================
+	"item_recipe_assault_2"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_2"
+		"ItemRequirements"
+		{
+			"01"						"item_assault;item_assault"
+		}
+	}
+
+	"item_assault_2"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"120"
+			"bonus_armor"			"40"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"120"
+			"aura_positive_armor"	"20"
+			"aura_negative_armor"	"-20"
+		}
+	}
+
+	"item_recipe_assault_3"
+	{
+		"BaseClass"                     "item_recipe_assault"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_assault_3"
+		"ItemRequirements"
+		{
+			"01"						"item_assault_2;item_assault"
+		}
+	}
+
+	"item_assault_3"
+	{
+		"BaseClass"                     "item_assault"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityCastRange"				"1200"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"ItemShopTags"					"attack_speed;armor;hard_to_tag"
+		"ItemQuality"					"epic"
+		"ItemAliases"					"ac;assault cuirass"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"	"240"
+			"bonus_armor"			"80"
+			"aura_radius"			"1200"
+			"aura_attack_speed"		"240"
+			"aura_positive_armor"	"40"
+			"aura_negative_armor"	"-40"
+		}
+	}
+//=================================================================================================================
+    // 神器抗魔法球 bfury ultra
+    //=================================================================================================================
+	"item_recipe_sphere_ultra"
+	{
+		"BaseClass"						"item_recipe_sphere"
+		"ID"							"9596"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sphere_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_sphere;item_sphere;item_sphere;item_sphere;item_sphere"
+		}
+	}
+
+	"item_sphere_ultra"
+	{
+		"BaseClass"						"item_sphere"
+		"ID"							"9597"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"900"
+		"AbilityCooldown"				"0.03"
+		"AbilitySharedCooldown"			""
+		"AbilityTextureName"            "sphere_ultra"
+
+		"AbilityValues"
+		{
+				"bonus_all_stats"		"120"
+				"bonus_health_regen"	"72"
+				"bonus_mana_regen"		"54"
+				"block_cooldown"		"10.0"
+				"upgrade_absorb_duration"		"10.0"
+				"damage_absorb"		"300"
+				"bonus_damage"			"120"
+		}
+	}
+
+	//=================================================================================================================
+	// 神器时间法则碎片 refresher shard
+	//=================================================================================================================
+	"item_refresher_shard"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"Model"							"models/props_gameplay/refresher_shard.vmdl"
+		"Effect"						"particles/generic_gameplay/dropped_refresher_shard.vpcf"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"3500"
+		"ItemShopTags"					""
+		"ItemQuality"					"consumable"
+		"ItemPurchasable"				"1"
+		"ItemStackable"					"1"
+		"ItemStockMax"					"3"
+		"ItemStockInitial"				"1"
+		"ItemStockTime"					"90"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemInitialCharges"			"1"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemContributesToNetWorthWhenDropped"	"0"
+		"IsTempestDoubleClonable"		"0"
+		"AbilityValues"
+		{
+			"bonus_health_regen"	"12"
+			"bonus_mana_regen"		"6.0"
+			"bonus_damage"			"20"
+		}
+	}
+//=================================================================================================================
+	// 永恒黑黄杖 black king bar ultra
+	//=================================================================================================================
+	"item_recipe_black_king_bar_ultra"
+	{
+		"ID"							"9601"
+		"BaseClass"						"item_recipe_black_king_bar"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_black_king_bar_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_black_king_bar_2;item_black_king_bar;item_black_king_bar_real"
+		}
+	}
+
+	"item_black_king_bar_ultra"
+	{
+		"ID"							"9602"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"BaseClass"						"item_black_king_bar"
+		"AbilityTextureName"			"item_black_king_bar_ultra"
+		"AbilityCooldown"				"0"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AllowedInBackpack"             "0"
+		"ItemDroppable"                 "0"
+		"ItemSellable"					"1"
+
+		"AbilityValues"
+		{
+			"bonus_strength"		"360"
+			"bonus_damage"			"360"
+			"duration"				"3600"
+			"max_level"				"1"
+			"model_scale"			"0"
+			"magic_resist"			"100"
+		}
+	}
+
+	//=================================================================================================================
+	// 圣人遗骸 spirit vessel ultra
+	//=================================================================================================================
+	"item_recipe_spirit_vessel_ultra"
+	{
+		"BaseClass"                     "item_recipe_spirit_vessel"
+		"ID"						    "9605"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"100"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_spirit_vessel_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_spirit_vessel;item_skadi_2"
+		}
+	}
+	"item_spirit_vessel_ultra"
+	{
+		"BaseClass"                     "item_spirit_vessel"
+		"ID"						    "9606"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
+		"AbilityCastRange"				"3000"
+		"AbilityCooldown"				"0.5"
+		"AbilitySharedCooldown"			"urn"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "spirit_vessel_ultra"
+		"AbilityValues"
+		{
+				"bonus_mana_regen"		"6"
+				"bonus_all_stats"		"40"
+				"bonus_armor"			"20"
+				"bonus_health"			"1000"
+				"soul_radius"			"1800"
+				"soul_initial_charge"	"10"
+				"soul_additional_charges"	"5"
+				"soul_heal_amount"		"200"
+				"soul_damage_amount"	"200"
+				"duration"			"12.0"
+				"hp_regen_reduction_enemy"	"200"
+				"enemy_hp_drain"		"6"
+		}
+	}
+//=================================================================================================================
+	// 撒旦之神力 satanic ultra
+	//=================================================================================================================
+	"item_recipe_satanic_ultra"
+	{
+		"BaseClass"                     "item_recipe_satanic"
+		"ID"						    "9619"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_satanic_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_satanic_2;item_satanic"
+		}
+	}
+	"item_satanic_ultra"
+	{
+		"BaseClass"                     "item_satanic"
+		"ID"						    "9620"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"2"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityCooldown"				"20.0"
+		"ItemShopTags"					"damage;str;armor;unique;hard_to_tag"
+		"ItemQuality"					"artifact"
+		"ItemAliases"					"satanic"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "satanic_ultra"
+		"AbilityValues"
+		{
+			"bonus_strength"		"300"
+			"bonus_damage"			"300"
+			"lifesteal_percent"		"150"
+			"creep_lifesteal_reduction_pct"	"40"
+			"unholy_lifesteal_percent"	"850"
+			"unholy_lifesteal_total_tooltip"	"1000"
+			"unholy_duration"		"10.0"
+		}
+	}
+
+	//=================================================================================================================
+	// 隐形斗篷 glimmer cape ultra
+	//=================================================================================================================
+	"item_recipe_glimmer_cape_ultra"
+	{
+		"BaseClass"                     "item_recipe_glimmer_cape"
+		"ID"						    "9621"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_glimmer_cape_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_glimmer_cape;item_glimmer_cape;item_glimmer_cape;item_glimmer_cape"
+		}
+	}
+	"item_glimmer_cape_ultra"
+	{
+		"BaseClass"                     "item_glimmer_cape"
+		"ID"						    "9622"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_MOVEMENT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityCastRange"				"600"
+		"AbilityCooldown"				"40"
+		"AbilityManaCost"				"90"
+		"ItemShopTags"					""
+		"ShouldBeSuggested"				"1"
+		"ItemDroppable"                 "0"
+		"AllowedInBackpack"             "0"
+		"AbilityTextureName"            "glimmer_cape_ultra"
+		"AbilityValues"
+		{
+			"initial_fade_delay"				"0.5"
+			"secondary_fade_delay"				"0.5"
+			"active_movement_speed"		"100"
+			"duration"					"1000"
+			"bonus_magical_armor"			"70"
+			"barrier_block"					"5000"
+		}
+	}
+
+	//=================================================================================================================
+	// 零度之甲 shivas guard ultra
+	//=================================================================================================================
+	"item_recipe_shivas_guard_ultra"
+	{
+		"BaseClass"                     "item_recipe_shivas_guard"
+		"ID"						    "9607"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ItemCost"						"1500"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_shivas_guard_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_shivas_guard;item_shivas_guard_2"
+		}
+	}
+	"item_shivas_guard_ultra"
+	{
+		"BaseClass"                     "item_shivas_guard"
+		"ID"						    "9608"
+		"AbilityCooldown"				"27"
+		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMY_YES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"AbilityManaCost"				"100"
+		"AbilityTextureName"            "shivas_guard_ultra"
+		"AbilityValues"
+		{
+			"bonus_intellect"		"80"
+			"bonus_strength"		"80"
+			"bonus_agility"			"80"
+			"bonus_hp_regen"		"80"
+			"bonus_armor"			"80"
+			"aura_radius"			"1800"
+			"aura_attack_speed"		"-500"
+			"blast_damage"			"1000"
+			"blast_movement_speed"	"-100"
+			"blast_debuff_duration"	"6.0"
+			"blast_radius"
+			{
+				"value"		"1200"
+				"affected_by_aoe_increase"	"1"
+			}
+			"blast_speed"			"600"
+			"hp_regen_degen_aura"	"99"
+			"illusion_multiplier_pct"	"150"
+			"spell_amp"			"100"
+			"resist_debuff_duration"	"20.0"
+		}
+	}
+
+	//=================================================================================================================
+	// 永恒虚灵刀
+	//=================================================================================================================
+	"item_recipe_ethereal_blade_ultra"
+	{
+		"BaseClass"                     "item_recipe_ethereal_blade"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_ethereal_blade_ultra"
+		"ItemRequirements"
+		{
+			"01"						"item_ethereal_blade;item_ethereal_blade"
+		}
+	}
+	"item_ethereal_blade_ultra"
+	{
+		"BaseClass"                     "item_ethereal_blade"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY | DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP"
+		"FightRecapLevel"				"1"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"AbilityCastRange"				"800"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"11.0"
+		"AbilitySharedCooldown"			"ethereal"
+		"AbilityManaCost"				"100"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityTextureName"            "ethereal_blade_ultra"
+		"AbilityValues"
+		{
+				"bonus_agility"			"40"
+				"bonus_strength"		"40"
+				"bonus_intellect"		"40"
+				"bonus_mana"			"900"
+				"bonus_cast_range"		"500"
+				"bonus_mana_regen"		"30"
+				"blast_movement_slow"	"-100"
+				"duration"				"30"
+				"blast_agility_multiplier"			"4.5"
+				"blast_damage_base"			"500"
+				"duration_ally"				"30"
+				"ethereal_damage_bonus"	"-100"
+				"projectile_speed"	"1275"
 		}
 	}
 }

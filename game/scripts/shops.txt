@@ -103,6 +103,7 @@
 		"item"		"item_reaver"
 		"item"		"item_eagle"
 		"item"		"item_relic"
+		"item"      "item_famango"
 	}
 
 	// Level 1 - Green Recipes
@@ -222,6 +223,14 @@
 		"item"		"item_wasp_golden"
 		"item"		"item_excalibur"
 		"item"		"item_rapier_ultra"			// 诅咒圣剑
+		"item"      "item_meteor_hammer_2"
+		"item"      "item_overwhelming_blink_2"
+		"item"      "item_swift_blink_2"
+		"item"      "item_arcane_blink_2"
+		"item"      "item_boots_of_bearing_2"
+		"item"      "item_sphere_ultra"
+		"item"      "item_black_king_bar_ultra"
+		"item"      "item_spirit_vessel_ultra"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
@@ -253,6 +262,14 @@
 		"item"		"item_tome_of_strength"
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
+		"item"      "item_devastator_2"
+		"item"      "item_greater_crit_2"
+		"item"      "item_guardian_greaves_2"
+		"item"      "item_butterfly_2"
+		"item"      "item_satanic_ultra"
+		"item"      "item_assault_3"
+		"item"      "item_ethereal_blade_ultra"
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	"sideshop1"
