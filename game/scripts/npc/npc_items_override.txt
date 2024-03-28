@@ -123,7 +123,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"health_regen"			"12.0"			// 7.0
+				"health_regen"			"21.0"			// 7.0
 				"buff_duration"			"30.0"			// 16.0
 		}
 	}
@@ -161,8 +161,8 @@
 		"ItemCost"						"80"
 		"AbilityValues"
 		{
-				"bonus_damage"			"6"				// 2
-				"hp_restore"			"240"			// 85
+				"bonus_damage"			"20"				// 2
+				"hp_restore"			"850"			// 85
 		}
 	}
 	"item_blood_grenade" //血腥榴弹
@@ -171,13 +171,14 @@
 		"AbilityHealthCost"				"125"
 
 		"ItemStockInitial"				"3"				// 2
-		"ItemStockTime"					"120"			// 180
+		"ItemStockTime"					"60"			// 180
 		"AbilityValues"
 		{
 			"bonus_health"			"250"				// 50
 
 			"damage_over_time"		"45"				// 15
 			"impact_damage"			"250"				// 50
+			"movespeed_slow"		"-100"
 		}
 	}
 	"item_bottle" //魔瓶
@@ -186,8 +187,8 @@
 		"ItemInitialCharges"			"5"				// 3
 		"AbilityValues"
 		{
-				"health_restore"		"240"			// 110
-				"mana_restore"			"130"			// 60
+				"health_restore"		"2400"			// 110
+				"mana_restore"			"1300"			// 60
 				"restore_time"			"3.5"			// 2.7
 				"max_charges"			"5"				// 3
 				"rune_expire_time"		"120.0"			// 90
@@ -203,51 +204,51 @@
 	}
 	"item_tier1_token"
 	{
-		"ItemCost"                      "500"
-		"ItemInitialStockTime"          "105"
+		"ItemCost"                      "5"
+		"ItemInitialStockTime"          "30"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier2_token"
 	{
-		"ItemCost"                      "1000"
-		"ItemInitialStockTime"          "465"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "330"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier3_token"
 	{
-		"ItemCost"                      "1500"
-		"ItemInitialStockTime"          "825"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "630"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier4_token"
 	{
-		"ItemCost"                      "2000"
-		"ItemInitialStockTime"          "1185"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "930"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier5_token"
 	{
-		"ItemCost"                      "2500"
-		"ItemInitialStockTime"          "1545"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "1230"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
@@ -1085,6 +1086,13 @@
 	{
 		"AbilityCooldown"				"25.0" //25
 		"AbilityManaCost"				"450"  //350
+		"ItemCost"                      "5000"
+		"ItemInitialStockTime"          "1230"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
 		"AbilityValues"
 		{
 				"bonus_armor"			"40"   //20
