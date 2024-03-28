@@ -1087,13 +1087,6 @@
 	{
 		"AbilityCooldown"				"25.0" //25
 		"AbilityManaCost"				"450"  //350
-		"ItemCost"                      "5000"
-		"ItemInitialStockTime"          "1230"
-		"ItemStockInitial"				"0"
-		"ItemStockMax"					"10"
-		"ItemStockTime"					"5"
-		"ItemPurchasable"				"1"
-		"ItemSellable"                  "0"
 		"AbilityValues"
 		{
 				"bonus_armor"			"40"   //20
