@@ -25,7 +25,7 @@ local function RollDrops(hHero)
                         UTIL_RemoveImmediate(hItem)
                         -- Create the item
                         if item_name == "item_excalibur" then
-                            CreateItemLocal(item_name, hHero)
+                            CreateItemLocal("item_excalibur", hHero)
                         end
                     end
                 end

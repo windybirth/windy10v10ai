@@ -325,7 +325,7 @@
 		"AttributeIntelligenceGain"		"1.4"
 
 		"MovementCapabilities"			"DOTA_UNIT_CAP_MOVE_GROUND"
-		"MovementSpeed"					"330"
+		"MovementSpeed"					"365"
 		"MovementTurnRate"				"0.8"
 
 		"VisionDaytimeRange"			"1000"
@@ -393,7 +393,8 @@
 
 	"npc_dota_hero_faceless_void"
 	{
-		"Ability5"		"faceless_void_backtrack"
+		"Ability5"      "faceless_void_chronosphere_final"
+		"Ability7"		"faceless_void_backtrack"
 	}
 
 	"npc_dota_hero_brewmaster"
@@ -429,6 +430,11 @@
 	{
 		"Ability5"      "visage_silent_as_the_grave"
 		"Ability8"      "visage_gravekeepers_cloak"
+	}
+
+	"npc_dota_hero_tidehunter"
+	{
+		"Ability5"      "tidehunter_arm_of_the_deep"
 	}
 
 	"npc_dota_hero_tinker"
@@ -536,6 +542,10 @@
 		"Ability5"      "nyx_assassin_mana_burn"
 	}
 
+	"npc_dota_hero_magnataur"
+	{
+		"Ability5"      "magnataur_reverse_polarity_final"
+	}
 
 	"npc_dota_hero_monkey_king"
 	{
@@ -1227,8 +1237,8 @@
 	}
 	"npc_dota_hero_grimstroke"
 	{
-		"Ability4"              "visage_soul_assumption"
 		"Ability7"				"grimstroke_dark_portrait"
+		"Ability4"              "visage_soul_assumption"
 	}
 	"npc_dota_hero_gyrocopter"
 	{
@@ -1766,8 +1776,10 @@
 	"npc_dota_hero_ogre_magi"
 	{
 		"AttackRate"                "1.4"
-		"AttributeStrengthGain"		"5.2"	// 4.2
-		"AttributeAgilityGain"		"2.0"	// 1.5
+		"AttributeBaseStrength"		"23"
+		"AttributeStrengthGain"		"5.2"
+		"AttributeBaseAgility"		"14"
+		"AttributeAgilityGain"		"3.0"
 		"Bot"
 		{
 			"Build"
@@ -1924,6 +1936,7 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
+		"Ability5"      "chaos_knight_chaos_strike_final"
 		"Bot"
 		{
 			"Build"
@@ -1962,6 +1975,8 @@
 				"32"		"phantom_assassin_stifling_dagger"
 				"33"		"phantom_assassin_blur"
 				"34"		"phantom_assassin_blur"
+				"35"        "chaos_knight_chaos_strike_final"
+				"45"        "chaos_knight_chaos_strike_final"
 			}
 		}
 	}

@@ -5,7 +5,6 @@
 	{
 		"addon_game_name"		"Dota 10v10 AI Wars"
 		"DOTA_GameMode_15"		"Dota 10v10 AI Wars"
-		"DOTA_SHARD"			"勇士积分"
 
 		// /////////////////////////////////////////////////////////////////////////////
 		//
@@ -39,7 +38,7 @@
 		"starting_gold_player"	"玩家初始金钱"
 		"starting_gold_bot"	"电脑初始金钱"
 		"same_hero_selection"  "允许选择相同英雄"
-		// "fast_courier"  "快速信使"
+		"fast_courier"  "快速信使"
 		"radiant_bot_same_multi"  "天辉电脑使用玩家金钱倍率"
 		"hide_chat_team"  "隐藏聊天框"
 		"show_chat_team"  "显示聊天框"
@@ -77,6 +76,13 @@
 
 		// /////////////////////////////////////////////////////////////////////////////
 		//
+		//            Hero Selection
+		//
+		// /////////////////////////////////////////////////////////////////////////////
+		"pick_button_season_level_text"	"赛季等级15级解锁"
+
+		// /////////////////////////////////////////////////////////////////////////////
+		//
 		//            Scoreborad/Ending Screen
 		//
 		// /////////////////////////////////////////////////////////////////////////////
@@ -103,22 +109,21 @@
 		///////////////////////////////////////////////////
 		"data_panel_button"				"玩家主页"
 		"data_panel_member_point"		"会员积分"
-		"data_panel_season_point"		"勇士积分"
+		"data_panel_season_point"		"赛季积分"
 		"data_panel_property_point"		"属性点 (可用/总数)"
 
 		"data_panel_data_button"		"数据"
 		"data_panel_property_button"	"玩家属性"
 
-		"data_panel_season_level"		"勇士等级"
-		"data_panel_season_level_tooltip"		"进行游戏获得勇士积分后，勇士等级将提升。<br>升级后获得属性点，可在<font color='#E8C07D'>玩家属性</font>面板中用于升级英雄属性。<br>每提升一级，升级所需积分增加<font color='#E8C07D'>100</font>点。"
+		"data_panel_season_level"		"赛季等级"
+		"data_panel_season_level_tooltip"		"进行游戏获得赛季积分后，赛季等级将提升。<br>升级后获得属性点，可在<font color='#E8C07D'>玩家属性</font>面板中用于升级英雄属性。<br>每提升一级，升级所需积分增加<font color='#E8C07D'>100</font>点。"
 		"data_panel_member_level"		"会员等级"
 		"data_panel_member_level_tooltip"		"通过会员积分提升会员等级，升级后获得属性点，可在<font color='#E8C07D'>玩家属性</font>面板中用于升级英雄属性。<br>每提升一级，升级所需积分增加<font color='#E8C07D'>50</font>点。"
 		"data_panel_level_progress"		"升级进度"
+		// "data_panel_season_end"			"第三赛季结束时间：2023/9/30"
+		// "data_panel_season_end_tooltip"			"赛季结束后将重置赛季等级<br><font color='#E8C07D'>继承50%</font>赛季积分到下个赛季"
 
-		"reset_property_use_season_point"		"消耗{seasonPoint}勇士积分重置"
-		"reset_property_use_member_point"		"消耗1000会员积分重置"
-
-		"data_panel_player_property_label"		"使用属性点增强英雄，升级后属性及时生效。"
+		"data_panel_player_property_label"		"消耗属性点增强英雄，升级后属性及时生效。"
 		"data_panel_player_property_label_2"		"本地主机无法加点，请使用服务器主机进行游戏。"
 		"data_panel_player_property_label_3"		"英雄每升2级将激活1级属性"
 		"data_panel_player_property_label_3_tooltip"		"英雄将在2，4，6，8，10，12，14，16级时，获得相应效果。<br>如，施法距离点了2次+50时，英雄在2级时获得+25，4级时获得+50的效果。<br>部分属性除外"
@@ -153,7 +158,7 @@
 		"data_panel_player_property_value"				"数值"
 		"data_panel_player_property_level"				"等级"
 		"data_panel_player_property_level_up"			"升级"
-		"data_panel_player_property_level_up_X"			"使用X点属性点升级"
+		"data_panel_player_property_level_up_8"			"使用8点属性点升级"
 
 		///////////////////////////////////////////////////
 		//
@@ -180,7 +185,7 @@
 		//            Leaderboard
 		//
 		///////////////////////////////////////////////////
-		"leaderboard_title"				"勇士排行榜"
+		"leaderboard_title"				"赛季排行榜"
 		"leaderboard_rank"				"排名"
 		"leaderboard_name"				"玩家"
 
@@ -196,26 +201,14 @@
 		//            Creep / Tower
 		//
 		///////////////////////////////////////////////////
-		"DOTA_Tooltip_modifier_global_tower_power_50"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_50_Description"		"建筑物的攻击增加 -%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_100"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_100_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_150"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_150_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_200"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_200_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_250"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_250_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_300"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_300_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
-		"DOTA_Tooltip_modifier_global_tower_power_400"					"建筑攻击加成"
-		"DOTA_Tooltip_modifier_global_tower_power_400_Description"		"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
+		"DOTA_Tooltip_modifier_tower_power"							"建筑攻击加成"
+		"DOTA_Tooltip_modifier_tower_power_Description"			"建筑物的攻击增加 %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%。"
 
-		"DOTA_Tooltip_modifier_tower_endure"							"建筑防御加成"
-		"DOTA_Tooltip_modifier_tower_endure_Description"				"建筑物的最大生命值设为 %dMODIFIER_PROPERTY_TOOLTIP%%%。"
+		"DOTA_Tooltip_modifier_tower_endure"						"建筑防御加成"
+		"DOTA_Tooltip_modifier_tower_endure_Description"		"建筑物的护甲增加 %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%, 最大生命值设为 %dMODIFIER_PROPERTY_TOOLTIP%%%。"
 
-		"DOTA_Tooltip_modifier_global_melee_resistance"					"威压"
-		"DOTA_Tooltip_modifier_global_melee_resistance_Description"		"近战英雄额外获得 %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔法抗性。"
+		"DOTA_Tooltip_modifier_melee_resistance"					"威压"
+		"DOTA_Tooltip_modifier_melee_resistance_Description"	"近战英雄额外获得 %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% 状态抗性，%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔法抗性。"
 
 		"DOTA_Tooltip_ability_creep_buff"								"小兵Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"					"+$damage"
@@ -260,8 +253,8 @@
 		//            会员BUFF
 		//
 		///////////////////////////////////////////////////
-		"DOTA_Tooltip_modifier_global_member"						"<font color='#FFCC66'>★ 会员专属BUFF ★</font>"
-		"DOTA_Tooltip_modifier_global_member_Description"			"- 额外获得 +%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% 攻击力, +%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%% 技能增强, +%dMODIFIER_PROPERTY_HEALTH_BONUS% HP, +%dMODIFIER_PROPERTY_MANA_BONUS% MP.<br/> - 复活时间减少5秒<br/> - 买活CD降低至2分钟<br/>"
+		"DOTA_Tooltip_modifier_membership"						"<font color='#FFCC66'>★ 会员专属BUFF ★</font>"
+		"DOTA_Tooltip_modifier_membership_Description"			"- 额外获得 +%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% 攻击力, +%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%% 技能增强, +%dMODIFIER_PROPERTY_HEALTH_BONUS% HP, +%dMODIFIER_PROPERTY_MANA_BONUS% MP.<br/> - 复活时间减少5秒<br/> - 买活CD降低至2分钟<br/>"
 		"DOTA_Tooltip_modifier_player_lumao"					"<font color='#fc8eac'>★ 大师级撸猫玩家 ★</font>"
 		"DOTA_Tooltip_modifier_player_windy"					"<font color='#0AA1DD'>★ Windy ★</font>"
 		"DOTA_Tooltip_modifier_player_xianyu"					"<font color='#FFCC66'>★ 咸鱼之王 ★</font>"
@@ -924,7 +917,7 @@
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_3"					"+{s:bonus_stun_duration}秒 界王拳击晕时间"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4"					"龟派气功强驱散"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4_description"		"龟派气功会对其中的敌人持续造成强驱散，不会驱散眩晕等Debuff。"
-		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5"					"+{s:bonus_length} 龟派气功光波长度"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5"					"+{s:bonus_regen}% 超级赛亚人恢复"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_6"					"+{s:bonus_channel} 龟派气功持续时间"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_7"					"+{s:bonus_duration}秒 超级赛亚人持续时间"
 
@@ -1000,12 +993,11 @@
 		//
 		// /////////////////////////////////////////////////////////////////////////////
 
-		// item_travel_boots 飞鞋
-		"DOTA_Tooltip_Ability_item_travel_boots"				"远行鞋（中立物品）"
+		// 贤者石
+		"DOTA_Tooltip_ability_item_philosophers_stone_bonus_mana"       "-$mana"
 
 		// bag_of_gold
         "DOTA_Tooltip_ability_item_bag_of_gold"					"金袋"
-        "DOTA_Tooltip_ability_item_bag_of_season_point"			"勇士积分"
 
 		// Tomes
 		"DOTA_Tooltip_Ability_item_tome_of_strength"					"力量之书"
@@ -1060,7 +1052,7 @@
 
         // item_ultimate_scepter_2
 		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed"						"真·阿哈利姆神杖"
-		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"永久获得阿哈利姆神杖加成, 获得生命, 魔法,技能伤害加成。"
+		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"永久获得阿哈利姆神杖加成, +%dMODIFIER_PROPERTY_HEALTH_BONUS% 生命, +%dMODIFIER_PROPERTY_MANA_BONUS% 魔法, +%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%技能伤害。"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2"									"真·阿哈利姆神杖"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"<h1>使用</h1>消耗阿哈利姆神杖永久获得神杖加成, +%bonus_health% 生命, +%bonus_mana% 魔法, +%spell_amp%%%技能伤害。\n<h1>被动：技能升级</h1>提升所有英雄的终极技能或基础技能效果。"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Lore"							"The regalia of a wizard with demigod-like powers."
@@ -1078,7 +1070,7 @@
 
         // wings_of_haste
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"急速之翼"
-		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 移动速度, 攻击速度, 生命恢复, 魔法恢复加成。"
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"永久获得 %dMODIFIER_PROPERTY_MOVESPEED_BONUS_UNIQUE% 移动速度, %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% 攻击速度, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复, %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% 魔法恢复。"
 		"DOTA_Tooltip_ability_item_wings_of_haste"										"急速之翼"
 		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"使用: 消耗急速之翼永久获得 %bonus_movement_speed% 移动速度, %bonus_attack_speed% 攻击速度, %bonus_health_regen% 生命恢复, %bonus_mana_regen% 魔法恢复。"
 		"DOTA_Tooltip_ability_item_wings_of_haste_Lore"								"Wings that grant swift retribution in battle."
@@ -1112,7 +1104,7 @@
 		"DOTA_Tooltip_modifier_item_blade_mail_2_reflect_Description"		"正在将伤害反弹给攻击单位"
 
         // item_radiance_2
-		"DOTA_Tooltip_Ability_item_radiance_2"				"圣焰之光"
+		"DOTA_Tooltip_Ability_item_radiance_2"				"辉耀2"
 		"DOTA_Tooltip_ability_item_radiance_2_Description"						"<h1>开关：辉耀灼烧</h1>开启后，辉耀灼烧每秒对敌军造成%aura_damage%点魔法伤害，并且物理攻击有%blind_pct%%%几率不会命中。幻象每秒造成%aura_damage_illusions%点魔法伤害。<br><br>作用范围：%aura_radius%"
 		"DOTA_Tooltip_ability_item_radiance_2_Lore"								"一把神圣的武器，剑身的耀眼光芒能将敌人化为灰烬。"
 		"DOTA_Tooltip_ability_item_radiance_2_bonus_damage"						"+$damage"
@@ -1234,7 +1226,7 @@
 		"DOTA_Tooltip_ability_item_aeon_pendant_cooldown_duration"					"冷却时间："
 
         // item_monkey_king_bar_2 定海神针
-		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"<font color='#FFCC66'>定海神针</font>"
+		"DOTA_Tooltip_Ability_item_monkey_king_bar_2"			"定海神针"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Description"					"<h1>被动：穿刺</h1>每次攻击均有%bonus_chance%%%几率无视闪避，并造成额外%bonus_chance_damage%点魔法伤害。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_Lore"					"当年孙悟空从东海龙王敖广的海底宝库中偷出来的趁手的兵器。"
 		"DOTA_Tooltip_ability_item_monkey_king_bar_2_bonus_damage"					"+$damage"
@@ -1261,27 +1253,27 @@
 		"DOTA_Tooltip_modifier_item_hallowed_scepter_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%%</font> Spell Amplification"
 
 		// item_dragon_lance_plus 魔龙枪plus
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus"						"魔龙枪 Plus"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒."
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"					   "（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		       "+$agi"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_attack_range"	   "+$attack_range"
-		// "DOTA_Tooltip_Ability_item_recipe_dragon_lance_plus"					"魔龙枪 Plus卷轴"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus"						"魔龙枪 Plus"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒."
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_Lore"					   "（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_agility"		       "+$agi"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_strength"		   "+$str"
+		"DOTA_Tooltip_Ability_item_dragon_lance_plus_bonus_attack_range"	   "+$attack_range"
+		"DOTA_Tooltip_Ability_item_recipe_dragon_lance_plus"					"魔龙枪 Plus卷轴"
 
-		// "DOTA_Tooltip_modifier_item_dragon_lance_plus_active"	                "快速拔枪"
-		// "DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
+		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active"	                "快速拔枪"
+		"DOTA_Tooltip_modifier_item_dragon_lance_plus_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"魔龙枪 Pro Max"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒。"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		   "+$agi"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		   "+$str"
-		// "DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_attack_range"	   "+$attack_range"
-		// "DOTA_Tooltip_Ability_item_recipe_dragon_lance_pro_max"					"魔龙枪 Pro Max卷轴"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max"						"魔龙枪 Pro Max"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Description"			"<h1>主动: 快速拔枪</h1> 关键时刻天赋涌现, 获得 %active_boost% 攻击速度 持续  %active_boost_duration% 秒。"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_Lore"					"（攻击距离）变长和（自身属性）变强是所有人亘古不变的追求"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_agility"		   "+$agi"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_strength"		   "+$str"
+		"DOTA_Tooltip_Ability_item_dragon_lance_pro_max_bonus_attack_range"	   "+$attack_range"
+		"DOTA_Tooltip_Ability_item_recipe_dragon_lance_pro_max"					"魔龙枪 Pro Max卷轴"
 
-		// "DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active"	                "快速拔枪"
-		// "DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
+		"DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active"	                "快速拔枪"
+		"DOTA_Tooltip_modifier_item_dragon_lance_pro_max_active_Description"	    "Grants <font color='#49bf57'>%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%</font> Attack Speed"
 
         // item_hurricane_pike_2 黄金魔龙枪
 		"DOTA_Tooltip_Ability_item_hurricane_pike_2"						"黄金魔龙枪 Ultimate"
@@ -1294,7 +1286,6 @@
 		"DOTA_Tooltip_Ability_item_hurricane_pike_2_bonus_health"					"+$health"
 		"DOTA_Tooltip_Ability_item_hurricane_pike_2_bonus_agility"                  "+$agi"
 		"DOTA_Tooltip_Ability_item_hurricane_pike_2_bonus_strength"                 "+$str"
-		"DOTA_Tooltip_Ability_item_hurricane_pike_2_base_attack_range"              "+$attack_range"
 
 		"DOTA_Tooltip_modifier_item_hurricane_pike_2_active"			"黄金魔龙枪 Ultimate推进效果"
 		"DOTA_Tooltip_modifier_item_hurricane_pike_2_active_Description"	"被黄金魔龙枪 Ultimate推进。"
@@ -1305,7 +1296,7 @@
 
 		// item_skadi_2 冰眼2
 		"DOTA_Tooltip_Ability_item_skadi_2"				"粘妈之眼"
-		"DOTA_Tooltip_ability_item_skadi_2_Description"							"<h1>被动：霜冻攻击</h1>攻击附带霜冻效果，可以降低敌人的移动速度和攻击速度，对敌方远程目标将减缓%cold_slow_ranged%%%移动速度，降低%cold_attack_slow_ranged%%%攻击速度。对敌方近战目标将减缓%cold_slow_melee%%%移动速度，降低%cold_attack_slow_melee%%%攻击速度。另外所有治疗、吸血和恢复效果降低%heal_reduction%%%。持续%cold_duration%秒。"
+		"DOTA_Tooltip_ability_item_skadi_2_Description"							"<h1>被动：霜冻攻击</h1>攻击附带霜冻效果，可以降低敌人的移动速度和攻击速度，并且他们的治疗、生命恢复、吸血和技能吸血效果降低%heal_reduction%%%，持续%cold_duration%秒。对敌方远程目标将减缓%cold_slow_ranged%%%移动速度，降低%cold_attack_slow_ranged%攻击速度。对敌方近战目标将减缓%cold_slow_melee%%%移动速度，降低%cold_attack_slow_melee%攻击速度。"
 		"DOTA_Tooltip_ability_item_skadi_2_Lore"									"极度罕见的古物，可以粘住网络喷子的妈妈。"
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_all_stats"						"+$all"
 		"DOTA_Tooltip_ability_item_skadi_2_bonus_health"							"+$health"
@@ -1553,11 +1544,10 @@
 		"DOTA_Tooltip_modifier_gungir_2_debuff_Description"				"被缠绕时无法移动。"
 
 		"DOTA_Tooltip_Ability_item_satanic_2"				"真红·撒旦之邪力"
-		"DOTA_Tooltip_ability_item_satanic_2_Description"							"<h1>主动：不洁狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成伤害的一定百分比回复生命值。攻击非英雄单位的吸血效果降低%creep_lifesteal_reduction_pct%%%。"
+		"DOTA_Tooltip_ability_item_satanic_2_Description"							"<h1>主动：不洁狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成的伤害回复%lifesteal_percent%%%的生命值。"
 		"DOTA_Tooltip_ability_item_satanic_2_Lore"								"无穷的力量，需要你付出灵魂作为代价。"
 		"DOTA_Tooltip_ability_item_satanic_2_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_satanic_2_bonus_damage"						"+$damage"
-		"DOTA_Tooltip_ability_item_satanic_2_lifesteal_percent"					"%+$lifesteal"
 
 		// 大狂战
 		"DOTA_Tooltip_Ability_item_bfury_2"				"超级狂战斧"
@@ -1645,20 +1635,20 @@
 		// 团队之手
 		"DOTA_Tooltip_Ability_item_recipe_hand_of_group"				                "团队之手（图纸）"
 	    "DOTA_Tooltip_ability_item_hand_of_group"										"团队之手"
-	    "DOTA_Tooltip_ability_item_hand_of_group_description"						    "<h1>主动：点石成金</h1> 立刻炼化一个普通单位，获得 %self_gold% 金钱和 %self_xp% 倍经验值。<br>周围 %group_range% 范围内的友军获得 %group_gold% 金钱和 %group_xp% 倍经验值。<br><br>无法用于远古单位。<br><br>施法距离：%abilitycastrange%"
+	    "DOTA_Tooltip_ability_item_hand_of_group_description"						    "<h1>主动：点石成金</h1> 立刻炼化一个普通单位，获得 %self_gold% 金钱和 %self_xp% 倍经验值。<br>目标周围 %group_range% 范围内的友军获得 %group_gold% 金钱和 %group_xp% 倍经验值。<br><br>无法用于远古单位。<br><br>施法距离：%abilitycastrange%"
 	    "DOTA_Tooltip_ability_item_hand_of_group_attack_speed"			                "+$attack"
 	    "DOTA_Tooltip_ability_item_hand_of_group_Lore" 									"明智的选择，科学的投资。"
 	    "DOTA_Tooltip_ability_item_hand_of_group_Note0"  								"获得的金钱经验，享有倍率加成！"
 
 	    // item_bloodstone_v2 血精神石
 	    "DOTA_Tooltip_ability_item_bloodstone"							"血精神石"
-	    "DOTA_Tooltip_ability_item_bloodstone_v2"						"迷你血精石"
+	    "DOTA_Tooltip_ability_item_bloodstone_v2"						"血精石"
 	    // "DOTA_Tooltip_ability_item_bloodstone_v2_Description"						"<h1>主动：血之契约</h1>血精石的技能吸血效果提升%lifesteal_multiplier%倍，并且造成伤害的相同百分比将转化为魔法。持续%buff_duration%秒。"
         "DOTA_Tooltip_ability_item_bloodstone_v2_Lore"								"这块魔石使人能够从魔法中吸取鲜血..."
 		"DOTA_Tooltip_ability_item_bloodstone_v2_bonus_aoe"							"+$aoe_bonus"
         "DOTA_Tooltip_ability_item_bloodstone_v2_bonus_health"						"+$health"
         "DOTA_Tooltip_ability_item_bloodstone_v2_bonus_mana"						"+$mana"
-        // "DOTA_Tooltip_ability_item_bloodstone_v2_spell_lifesteal"					"%+$spell_lifesteal"
+        "DOTA_Tooltip_ability_item_bloodstone_v2_spell_lifesteal"					"%+$spell_lifesteal"
         "DOTA_Tooltip_modifier_item_bloodstone_v2_amp"					"血之契约"
 
         // item_refresh_core 大刷新
@@ -1673,7 +1663,7 @@
 		"DOTA_Tooltip_ability_item_refresh_core_Lore"					"位于法术技艺核心的，是只有身负异能之人才能感知的光带。"
 
 		// item_black_king_bar_real 真·黑黄杖
-		"DOTA_Tooltip_Ability_item_black_king_bar_real"			                    "<font color='#e03e2e'>真·黑黄杖（中立物品）</font>"
+		"DOTA_Tooltip_Ability_item_black_king_bar_real"			                    "<font color='#e03e2e'>神器·真黑黄杖</font>"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Description"					"<h1>主动：魔免</h1>免疫大部分魔法。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Lore"						"真正的黑黄杖回来了。"
 		"DOTA_Tooltip_ability_item_black_king_bar_real_Note0"						"重复购买不刷新冷却。"
@@ -1697,7 +1687,7 @@
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_Note0"					"傻了吧，我的诅咒圣剑是永久的"
 
 		// item_bfury_ultra 救世狂战
-		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>救世狂战</font>"
+		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>神器·救世狂战</font>"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>被动：斩断世界线</h1>知道Sccc斩断世界线的那一刀吗？普通攻击时对目标周围最远%cleave_distance%距离的锥形区域内敌人造成%cleave_damage_percent%%%物理伤害。对非英雄单位造成%cleave_damage_percent_creep%%%物理伤害。（仅近战有效）"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Lore"                    "你听说过六狂战拯救世界的故事吗？"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
@@ -1705,10 +1695,65 @@
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_mana_regen"		"+$mana_regen"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"你玩过曾经的限时强化版水刀吗？"
 
+		// item_sphere_ultra 抗魔法球
+		"DOTA_Tooltip_ability_item_sphere_ultra"                         "<font color='#e03e2e'>神器·抗魔法球</font>"
+		"DOTA_Tooltip_ability_item_sphere_ultra_Description"				"<h1>被动：法术抵挡</h1>每%block_cooldown%秒被动抵挡一次大部分指向性法术。\n<h1>主动：抵抗转移</h1>将抵挡状态暂时转移给一个友方单位，持续%block_cooldown%秒。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_ability_item_sphere_ultra_Lore"					"就你叫tk是吧？"
+		"DOTA_Tooltip_ability_item_sphere_ultra_bonus_all_stats"						"+$all"
+		"DOTA_Tooltip_ability_item_sphere_ultra_bonus_health_regen"					"+$hp_regen"
+		"DOTA_Tooltip_ability_item_sphere_ultra_bonus_mana_regen"						"+$mana_regen"
+		"DOTA_Tooltip_Ability_item_sphere_ultra_Note0"					"别问，问就是耍赖。"
+
+		// item_refresher_shard 时间法则碎片
+		"DOTA_Tooltip_Ability_item_refresher_shard"						"<font color='#e03e2e'>神器·时间法则碎片</font>"
+		"DOTA_Tooltip_ability_item_refresher_shard_Description"			"<h1>主动：时间本源</h1>重置所有物品和技能的冷却时间。\n<h1>被动：法则碎片特性</h1>可堆叠，属性无法叠加。"
+		"DOTA_Tooltip_ability_item_refresher_shard_bonus_damage"			"+$damage"
+		"DOTA_Tooltip_ability_item_refresher_shard_bonus_mana_regen"		"+$mana_regen"
+		"DOTA_Tooltip_ability_item_refresher_shard_bonus_health_regen"	"+$hp_regen"
+		"DOTA_Tooltip_ability_item_refresher_shard_Lore"					"你们打团费蓝，我打团费钱。"
+		"DOTA_Tooltip_Ability_item_refresher_shard_Note0"					"sorry啊，有钱真的可以为所欲为的。"
+
+		// item_black_king_bar_real 真·黑黄杖
+		"DOTA_Tooltip_Ability_item_black_king_bar_real"			"<font color='#e03e2e'>神器·真黑黄杖</font>"
+		"DOTA_Tooltip_ability_item_black_king_bar_real_Description"					"<h1>主动：魔免</h1>免疫大部分魔法。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>"
+		"DOTA_Tooltip_ability_item_black_king_bar_real_Lore"						"真正的黑黄杖回来了。"
+		"DOTA_Tooltip_ability_item_black_king_bar_real_Note0"						"重复购买不刷新冷却。"
+		"DOTA_Tooltip_ability_item_black_king_bar_real_Note1"						"横扫饥饿，做回自己，10秒真男人。"
+		"DOTA_Tooltip_ability_item_black_king_bar_real_bonus_strength"				"+$str"
+
+		// item_black_king_bar_ultra 永恒黑黄杖
+		"DOTA_Tooltip_Ability_item_black_king_bar_ultra"			"<font color='#e03e2e'>神器·永恒黑黄杖</font>"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Description"				"<h1>主动：永久天神下凡</h1>获得减益免疫状态。同时-%magic_resist%%%魔法抗性，并且免疫纯粹和反弹伤害。持续时间内敌方技能的负面效果不会生效。<br><br>持续时间：%duration%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span> \n<h1>被动：力量的代价</h1>过于强大力量总会有它的代价，至于是什么，这不重要，重要的是你无敌了。"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Lore"						"那么代价是什么呢？"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note0"						"死亡摧毁，休想白嫖。"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_Note1"						"假魔免也是魔免，别看不起人。"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_bonus_strength"				"+$str"
+		"DOTA_Tooltip_ability_item_black_king_bar_ultra_bonus_damage"				"+$damage"
+
+		"DOTA_Tooltip_Ability_item_philosophers_stone_bonus_mana"				"-$mana"
+
+		// item_spirit_vessel_ultra 圣人遗骸
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra"                         "<font color='#e03e2e'>神器·圣人遗骸</font>"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_Description"					"<h1>主动：圣人之光</h1>对敌人使用时，每秒减少%enemy_hp_drain%%%当前生命值，并且生命恢复、治疗、吸血和技能吸血效果降低%hp_regen_reduction_enemy%%%。每秒造成%soul_damage_amount%点伤害。<br><br>对友军使用时，提供%soul_heal_amount%点/秒生命恢复。<br><br>持续%duration%秒。<br><br>每当敌方英雄在%soul_radius%范围内死亡时获得充能。只有最靠近阵亡英雄的灵瓮能得到充能。<br><br>施法距离：%abilitycastrange%"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_lore"					"著名圣人的遗骸，能够释放巨大的能量。"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_bonus_health"                     "+$health"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_bonus_mana_regen"                "+$mana_regen"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_bonus_all_stats"                "+$all"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_bonus_armor"					"+$armor"
+		"DOTA_Tooltip_ability_item_spirit_vessel_ultra_mana_regen"					"+$mana_regen"
+
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_heal"							"圣人遗骸治疗"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_heal_Description"				"每秒治疗%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点生命。"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_damage"							"圣人遗骸伤害"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_damage_Description"				"每秒损失%dMODIFIER_PROPERTY_TOOLTIP%点生命+%dMODIFIER_PROPERTY_TOOLTIP%%%当前生命值。所有治疗效果降低%dMODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE%%%。"
+
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_aura"							"圣人遗骸恢复降低"
+		"DOTA_Tooltip_modifier_item_spirit_vessel_ultra_aura_Description"				"所有治疗效果降低%dMODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE%%%。"
+
 		// item_bloodthorn_ultra 变态辣
-		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>变态辣</font>"
+		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>神器·变态辣</font>"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Description"                      "<h1>主动：灵魂撕裂</h1>使目标沉默%silence_duration%秒，沉默结束后其间所受伤害的%silence_damage_percent%%%将以额外魔法伤害的形式结算。<br><br>所有对目标发动的攻击会额外造成%proc_damage%点伤害，并且拥有克敌机先效果。<br><br>施法距离：%abilitycastrange%\n\n<h1>被动：穿刺</h1>每次攻击有%proc_chance%%%几率无视闪避并造成额外%proc_damage%点魔法伤害。"
-		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "辣死你辣死你"
+		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "一把亵渎之刃，受害者临死前的每次挣扎都会使其砍得更深。"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_intellect"                  "+$int"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_attack_speed"               "+$attack"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_damage"                     "+$damage"
@@ -1720,20 +1765,166 @@
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_bonuses"				"<b><font color='#7d7d7d'>奖励</font></b>：+30% 血棘致命一击"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_description"			"灵魂撕裂10名敌方英雄。"
 		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff"                       "血棘"
-		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "被沉默并受到120%%的额外伤害，伤害在效果结束时结算，类型为魔法伤害。\n受到所有攻击时还会受到额外伤害，并且攻击不会落空。"
+		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "被沉默并受到60%%的额外伤害，伤害在效果结束时结算，类型为魔法伤害。\n受到所有攻击时还会受到额外伤害，并且攻击不会落空。"
 
-		// item_devastator_2 Sacred Parasma 神圣斧
-		"DOTA_Tooltip_Ability_item_devastator_2"				"神圣斧"
+		// item_satanic_ultra 撒旦之神力
+		"DOTA_Tooltip_Ability_item_satanic_ultra"				"<font color='#e03e2e'>神器·撒旦之神力</font>"
+		"DOTA_Tooltip_ability_item_satanic_ultra_Description"							"<h1>主动：神力狂热</h1>吸血效果提升至%unholy_lifesteal_total_tooltip%%%，持续%unholy_duration%秒。<br><br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n<h1>被动：吸血</h1>攻击者每次攻击都将根据造成的伤害回复%lifesteal_percent%%%的生命值。"
+		"DOTA_Tooltip_ability_item_satanic_ultra_Lore"								"感受神的愤怒"
+		"DOTA_Tooltip_ability_item_satanic_ultra_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_satanic_ultra_bonus_damage"						"+$damage"
+
+		// item_glimmer_cape_ultra 隐形斗篷
+		"DOTA_Tooltip_Ability_item_glimmer_cape_ultra"				"<font color='#e03e2e'>神器·隐形斗篷</font>"
+		"DOTA_Tooltip_ability_item_glimmer_cape_ultra_Description"						"<h1>主动:隐身老六</h1> 经过%initial_fade_delay%秒延迟后，自身或者友方目标单位进入隐身状态， 获得%active_movement_speed%%%移动速度加成和可以吸收最多%barrier_block%点伤害的魔法护盾。持续%duration%秒。<br><br>施法距离：%abilitycastrange%<br><br>可以在持续施法时施放。"
+		"DOTA_Tooltip_ability_item_glimmer_cape_ultra_movement_speed"			"+$move_speed"
+		"DOTA_Tooltip_ability_item_glimmer_cape_ultra_bonus_magical_armor"			"%+$spell_resist"
+		"DOTA_Tooltip_ability_item_glimmer_cape_ultra_Lore"					"隐形科技的巅峰之作"
+		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade"					"隐形斗篷"
+		"DOTA_Tooltip_modifier_item_glimmer_cape_ultra_fade_Description"		"吸收魔法伤害。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%%%。"
+
+		// item_ethereal_blade_ultra 永恒虚灵刀
+		"DOTA_Tooltip_Ability_item_ethereal_blade_ultra"				"<font color='#e03e2e'>神器·永恒虚灵之刃</font>"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Description"					"<h1>主动：虚化冲击</h1>发射一道能量波，将目标转变为虚无状态，接下来受到的魔法伤害将会提升%ethereal_damage_bonus%%%，并且无法攻击或被攻击。<br><br>如果目标是敌人还将被减速%blast_movement_slow%%%，并额外受到%blast_agility_multiplier%x[目标的主属性]+%blast_damage_base%点魔法伤害。<br><br>施法距离：%abilitycastrange%<br>持续时间：%duration%秒"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Note0"						"与幽魂权杖共享冷却时间。"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Note1"						"虚无状态下的单位将额外受到%ethereal_damage_bonus%%%的魔法伤害。"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Note2"						"对于全才英雄，他们的主属性数值是所有属性总和的60%%。"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Note3"						"使用回城卷轴或远行鞋不会驱散虚无状态。"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_bonus_agility"				"+$all"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_bonus_mana"                      "+$mana"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_bonus_mana_regen"                "+$mana_regen"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_bonus_cast_range"                "+$cast_range"
+
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_mana_regen_multiplier"		"%+魔法恢复增强"
+		"DOTA_Tooltip_ability_item_ethereal_blade_ultra_Lore"						"一把忽隐忽现的阴森刀刃，可以在物理和魔法两个位面造成伤害。"
+
+		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_ethereal"				"虚化冲击"
+		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_ethereal_Description"	"虚化形态。受到%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_DECREPIFY_UNIQUE%%%法术攻击加成并且不能进行物理攻击或被攻击。"
+		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_slow"				"虚灵之刃减速"
+		"DOTA_Tooltip_modifier_item_ethereal_blade_ultra_slow_Description"	"移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。"
+
+
+		// 圣斧2
+		"DOTA_Tooltip_ability_item_devastator_2"                            "神圣斧"
 		"DOTA_Tooltip_ability_item_devastator_2_Description"				"<h1>被动：巫师之刃</h1>使下次攻击具有克敌机先效果，并且会施加毒素，持续%slow_duration%秒，减缓%slow%%%移动速度，并且每秒造成%int_damage_multiplier%倍智力值的伤害。\n\n<h1>被动：法力腐蚀</h1>攻击会降低敌人%active_mres_reduction%%%魔法抗性，持续%passive_cooldown%秒。"
 		"DOTA_Tooltip_ability_item_devastator_2_Lore"						"极具毁灭性。"
 		"DOTA_Tooltip_ability_item_devastator_2_bonus_attack_speed"				"+$attack"
 		"DOTA_Tooltip_ability_item_devastator_2_bonus_armor"					"+$armor"
 		"DOTA_Tooltip_ability_item_devastator_2_bonus_intellect"				"+$int"
-		"DOTA_Tooltip_ability_item_devastator_2_bonus_mana_regen"				"+$mana_regen"
 		"DOTA_Tooltip_ability_item_devastator_2_projectile_speed"			"+$projectile_speed"
 
-		"DOTA_Tooltip_modifier_devastator_2_debuff"						"法力腐蚀"
-		"DOTA_Tooltip_modifier_devastator_2_debuff_Description"  			"魔法抗性降低%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%%"
+		// 大炮2
+		"DOTA_Tooltip_ability_item_greater_crit_2"                              "合金大炮"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Description"					"<h1>被动：致命一击</h1>普通攻击有%crit_chance%%%几率造成%crit_multiplier%%%伤害。"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Note0" 						"致命一击对建筑无效。"
+		"DOTA_Tooltip_ability_item_greater_crit_2_Lore"							"双持威力，更上一层楼"
+		"DOTA_Tooltip_ability_item_greater_crit_2_bonus_damage"					"+$damage"
+
+		// 大鞋2
+		"DOTA_Tooltip_ability_item_guardian_greaves_2"                      "超凡径甲"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Description"			"<h1>主动：修复</h1>使周围友军回复%replenish_health%点生命和%replenish_mana%点魔法，并移除施法者身上大部分的负面效果。<br><br>作用范围：%replenish_radius%<br>驱散类型：<span class=\"GameplayValues GameplayVariable\">弱驱散</span>\n\n<h1>被动：卫士光环</h1> 为周围友军提供%aura_health_regen%点/秒生命恢复，%aura_mana_regen%点/秒魔法恢复和%aura_armor%点护甲。如果友方英雄的生命值低于%aura_bonus_threshold%%%，光环效果将提升至%aura_health_regen_bonus%点/秒生命恢复，%aura_mana_regen_bonus%点/秒魔法恢复和%aura_armor_bonus%点护甲。<br><br>作用范围：%aura_radius%\n多个鞋类物品提供的移动速度加成不叠加。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_movement"			"+$move_speed"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_mana"				"+$mana"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_mana_regen"				"+$mana_regen"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_bonus_mres"				"%+$spell_resist"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Lore"						"为了向全能之神致敬所打造的众多圣器之一。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Note0"				"光环效果仅对英雄有效。"
+		"DOTA_Tooltip_ability_item_guardian_greaves_2_Note1"				"卫士胫甲的冷却时间内回复不能作用于已经被修复或梅肯斯姆的回复作用过的单位。"
+		"DOTA_Tooltip_modifier_item_guardian_greaves_2_aura"		"守护光环"
+		"DOTA_Tooltip_modifier_item_guardian_greaves_2_aura_Description"	"提供%fMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%点/秒生命恢复和%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲。"
+
+		// 蝴蝶2
+		"DOTA_Tooltip_ability_item_butterfly_2"                                     "迅敏蝴蝶"
+		"DOTA_Tooltip_ability_item_butterfly_2_Note0"								"与其他闪避效果为非线性叠加。"
+		"DOTA_Tooltip_ability_item_butterfly_2_Lore"								"只有最强大最老练的战士才能携带蝴蝶，但它也提供无可比拟的战斗灵活力作为回报。"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_evasion"						"%+$evasion"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_attack_speed_pct"				"%+$attack_pct"
+		"DOTA_Tooltip_ability_item_butterfly_2_bonus_damage"				"+$damage"
+
+		// 锤子2
+		"DOTA_Tooltip_ability_item_meteor_hammer_2"                               "天碍震星锤"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_Description"                   "<h1>主动：陨星锤</h1> 持续施法 - 成功施法后召唤一颗陨石，打击%impact_radius%范围内敌人，造成%stun_duration%秒眩晕和冲击伤害。对敌方单位和建筑造成持续伤害，持续%burn_duration%秒。非建筑单位在烧灼期间还会被减速%burn_slow%%%。<BR><BR>对建筑冲击伤害：%impact_damage_buildings%<BR>对建筑持续伤害：%burn_dps_buildings%<BR><BR>对非建筑冲击伤害：%impact_damage_units%<BR>对非建筑持续伤害：%burn_dps_units%<BR><BR>持续施法时间：%max_duration%秒<BR>落地时间：%land_time%秒"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_lore"                   "一柄带有魔力的战锤，铸造所用的金属发掘自被流星雨摧毁的村庄废墟之内。"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_strength"						"+$str"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_agility"						"+$agi"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_bonus_intellect"					"+$int"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_spell_amp"						"%+技能增强"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_mana_regen_multiplier"				"%+魔法恢复增强"
+		"DOTA_Tooltip_ability_item_meteor_hammer_2_spell_lifesteal_amp"				"%+技能吸血增强"
+		"DOTA_Tooltip_modifier_item_meteor_hammer_2_burn"						"陨星锤烧灼"
+		"DOTA_Tooltip_modifier_item_meteor_hammer_2_burn_Description"			"被减速，持续受到%dMODIFIER_PROPERTY_TOOLTIP%点伤害，伤害间隔为%dMODIFIER_PROPERTY_TOOLTIP2%秒。"
+
+		// 大战鼓鞋
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2"                          "冲锋战鞋"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_Description"					"<h1>主动：坚韧</h1>为周围友军提供+%bonus_attack_speed_pct%攻速加成和+%bonus_movement_speed_pct%%%移动速度加成，持续%duration%秒。而且最初%bonus_ms_duration%秒友军不受减速效果影响。<br><br>作用范围：%radius%\n\n<h1>被动：迅捷光环</h1>为周围友军提供%aura_movement_speed%移动速度加成。<br><br>作用范围：%radius%"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_Lore"						"这双华丽的靴子是为一个古代的先驱打造，是他率先敢于将石堂城的荣光散播到国土的初始边界之外。"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_str"					"+$str"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_int"					"+$int"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_movement_speed"			"+$move_speed"
+		"DOTA_Tooltip_ability_item_boots_of_bearing_2_bonus_health_regen"			"+$hp_regen"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_aura"				"迅捷光环"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_aura_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%。"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active"				"坚韧"
+		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+
+		// 力量跳2
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2"                            "泰森闪光"
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2_Description"			    "<h1>主动：泰森闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后，%radius%范围内所有敌人受到%damage_base% + %damage_pct_instant%%%力量值的瞬时伤害，并且额外持续受到总计为%damage_pct_over_time%%%力量值的伤害，被减缓%movement_slow%%%移动速度，降低%attack_slow%攻击速度，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，盛势闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Lore"                    "令人生畏的匕首，在混沌之喉中打造，凡人之手几乎无法企及。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note0"                    "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note1"					"如果盛势闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_bonus_strength"			"+$str"
+        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff"			        "盛势闪光"
+        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff_Description"      "受到持续伤害。移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+
+		// 敏捷跳2
+		"DOTA_Tooltip_ability_item_swift_blink_2"                               "博尔特闪光"
+		"DOTA_Tooltip_ability_item_swift_blink_2_Description"         			"<h1>主动：博尔特闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后获得%bonus_movement%%%移动速度加成和相位移动状态，+%bonus_agi_active%点敏捷，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，迅疾闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Lore"                           "一把聪颖的战刃，可以预见佩戴者的动向并加以实现。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note0"                           "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note1"					        "如果迅疾闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_bonus_agility"			        "+$agi"
+		"DOTA_Tooltip_modifier_item_swift_blink_2_buff"         			"迅疾闪光"
+		"DOTA_Tooltip_modifier_item_swift_blink_2_buff_Description"       "敏捷提升%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%并且英雄拥有相位移动状态。"
+
+		// 智力跳2
+		"DOTA_Tooltip_ability_item_arcane_blink_2"                              "爱因斯坦闪光"
+		"DOTA_Tooltip_ability_item_arcane_blink_2_Description"         			"<h1>主动：爱因斯坦闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后回复%heal_amount%点生命和%mana_amount%点魔法。<br><br>受到来自敌方英雄或肉山的攻击时，秘奥闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Lore"                          "让人精神焕发的工具，可以帮忙分担施展奥术耗费的精力。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note0"                          "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note1"      					"如果秘奥闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_bonus_intellect"                "+$int"
+		"DOTA_Tooltip_modifier_item_arcane_blink_2_buff"         			"秘奥闪光"
+        "DOTA_Tooltip_modifier_item_arcane_blink_2_buff_Description"      "施法距离提升%dMODIFIER_PROPERTY_CAST_RANGE_BONUS%%%。"
+
+		//  item_shivas_guard_ultra 零度之甲
+		"DOTA_Tooltip_Ability_item_shivas_guard_ultra"				"<font color='#e03e2e'>神器·零度之甲</font>"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_Description"					"<h1>主动：极寒冲击</h1>发出一道寒冷的波动，使敌人受到的技能伤害增加%spell_amp%%%，持续%resist_debuff_duration%秒，对敌人造成%blast_damage%点魔法伤害并减速%blast_movement_speed%%%，持续%blast_debuff_duration%秒。对幻象造成%illusion_multiplier_pct%%%伤害。<br><br>作用范围：%blast_radius%\n\n<h1>被动：霜冷光环</h1>降低敌人%aura_attack_speed%攻击速度，和%hp_regen_degen_aura%%%所有治疗、恢复和吸血效果。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_Lore"							"据说曾经属于某位女神，至今仍保持大部分神力。"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_Note0"							"极寒冲击的扩张速度为%blast_speed%，最大半径为%blast_radius%。"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_Note1"							"极寒冲击将以施放者为中心。"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_Note2" 							"多个霜冷光环效果不会叠加。"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_bonus_intellect"				"+$int"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_bonus_agility"					"+$agi"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_bonus_strength"					"+$str"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_bonus_armor"					"+$armor"
+		"DOTA_Tooltip_ability_item_shivas_guard_ultra_bonus_hp_regen"					"+$hp_regen"
+
+		"DOTA_Tooltip_Ability_item_assault_2"				"强袭2"
+		"DOTA_Tooltip_ability_item_assault_2_Description"							"<h1>被动：强袭光环</h1>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲，削弱附近敌军%aura_negative_armor%点护甲。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_assault_2_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_assault_2_bonus_armor"							"+$armor"
+		"DOTA_Tooltip_Ability_item_assault_3"				"强袭3"
+		"DOTA_Tooltip_ability_item_assault_3_Description"							"<h1>被动：强袭光环</h1>附近友军单位和建筑提升%aura_attack_speed%攻击速度和%aura_positive_armor%点护甲，削弱附近敌军%aura_negative_armor%点护甲。<br><br>作用范围：%aura_radius%"
+		"DOTA_Tooltip_ability_item_assault_3_bonus_attack_speed"					"+$attack"
+		"DOTA_Tooltip_ability_item_assault_3_bonus_armor"							"+$armor"
+
+		"DOTA_Tooltip_Ability_item_power"					"<font color='#e03e2e'>神器·力量法则碎片</font>"
+		"DOTA_Tooltip_Ability_item_power_Description"		"<h1>被动:力量本源</h1>攻击忽略%armor_penetration% + %armor_penetration_pct%%%的敌方护甲"
+		"DOTA_Tooltip_Ability_item_power_bonus_damage"		"+$damage"
+		"DOTA_Tooltip_Ability_item_power_bonus_attack_speed"	"+$attack"
 
 		// item_blessing_of_dragon 神龙
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙</font>"
@@ -1742,55 +1933,55 @@
 
 		// item_blessing_of_dragon_1 神龙赐福·不死
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon_1"				"<font color='#9f5f9f'>神龙赐福·不死</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_1_Description"		"<h1><font color='#9f5f9f'>被动：不死之身</font></h1>字面意思。\n可以分享给队友"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_1_Description"		"<h1><font color='#9f5f9f'>被动：不死之身</font></h1>字面意思。"
 		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active"			"<font color='#9f5f9f'>不死之身</font>"
 		"DOTA_Tooltip_modifier_item_helm_of_the_undying_active_Description"			"<font color='#FFFF00'>求求你打死我</font>"
 
 		// item_blessing_of_dragon_2 神龙赐福·毁灭
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon_2"				"<font color='#9f5f9f'>神龙赐福·毁灭</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_2_Description"		"<h1>主动：毁灭世界</h1>累了，毁灭吧。\n可以分享给队友"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_2_Description"		"<h1>主动：毁灭世界</h1>累了，毁灭吧。"
 
 		// item_blessing_of_dragon_3 神龙赐福·时间
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon_3"				"<font color='#9f5f9f'>神龙赐福·时间</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_3_Description"		"<h1>主动：时间操纵</h1>你掌控了时间，能够随意刷新你的冷却。\n可以分享给队友"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_3_Description"		"<h1>主动：时间操纵</h1>你掌控了时间，能够随意刷新你的冷却。"
 
 		// item_blessing_of_dragon_4 神龙赐福·空间
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon_4"				"<font color='#9f5f9f'>神龙赐福·空间</font>"
-		"DOTA_Tooltip_ability_item_blessing_of_dragon_4_Description"		"<h1>主动：空间折跃</h1>来去自如，来无影去无踪，能够在落点引发空间震。\n可以分享给队友"
+		"DOTA_Tooltip_ability_item_blessing_of_dragon_4_Description"		"<h1>主动：空间折跃</h1>来去自如，来无影去无踪，能够在落点引发空间震。"
 
 		// item_dragon_ball_1 一星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_1"				"<font color='#FFFF00'>一星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_1_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有一颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_1_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有一颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_1_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_2 二星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_2"				"<font color='#FFFF00'>二星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_2_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有两颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_2_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有两颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_2_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_3 三星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_3"				"<font color='#FFFF00'>三星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_3_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有三颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_3_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有三颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_3_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_4 四星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_4"				"<font color='#FFFF00'>四星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_4_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有四颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_4_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有四颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_4_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_5 五星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_5"				"<font color='#FFFF00'>五星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_5_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有五颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_5_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有五颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_5_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_6 六星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_6"				"<font color='#FFFF00'>六星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_6_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有六颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_6_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有六颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_6_bonus_all_stats"					"+$all"
 
 		// item_dragon_ball_7 七星珠
 		"DOTA_Tooltip_Ability_item_dragon_ball_7"				"<font color='#FFFF00'>七星珠</font>"
-		"DOTA_Tooltip_ability_item_dragon_ball_7_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有七颗五角星。集齐七个会有好事发生。\n可以分享给队友。 \n龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。"
+		"DOTA_Tooltip_ability_item_dragon_ball_7_Description"		"一颗玻璃珠，无论从哪个角度看都可以看到里面有七颗五角星。集齐七个会有好事发生。"
 		"DOTA_Tooltip_ability_item_dragon_ball_7_bonus_all_stats"					"+$all"
 
 		// item_wish_1 愿望1
@@ -1811,6 +2002,30 @@
 
 		// item_radar_of_dragon 龙珠雷达
 		"DOTA_Tooltip_Ability_item_radar_of_dragon"				"<font color='#FFFF00'>龙珠雷达</font>"
-		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>龙珠由击杀肉山和中立生物随机掉落得到。愿望一共有四种，在商店可以找到。\n<font color='#e03e2e'>注意：</font>龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。所有龙珠及合成后的装备可以与他人共享。"
+		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>一星到五星珠在每一级中立代币中选取得到，六星珠，七星珠由肉山随机掉落得到。愿望一共有四种，在商店可以找到。\n<font color='#e03e2e'>注意：</font>龙珠无法合成时，请回到泉水，尝试从备用背包中移动至主背包或仓库。一星到五星珠无法与他人共享。"
+
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final"						"<font color='#e03e2e'>神技·地爆天星</font>"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_Description"			"让世界感受痛楚"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_Lore"				"过来吧你。"
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_pull_radius"			"拖拽范围："
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_polarity_damage"		"伤害："
+		"DOTA_Tooltip_ability_magnataur_reverse_polarity_final_hero_stun_duration"	"眩晕时间："
+
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final"								"<font color='#e03e2e'>神技·时间停止</font>"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Description"					"在时空中创造一个泡状遮罩，将所有位于其中的单位定住，并使虚空假面在其内部来去自如。所有技能和物品冷却全部冻结。只有虚空假面和他控制的单位不受影响。在其中的隐形敌人会显形。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Lore"							"当超维视界的裂隙突现之时，所有被其困住的可怜灵魂都将万劫不复。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Note0"							"能够定住所有单位和建筑，不论敌我。除了虚空假面控制的单位。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_Note1"							"虚空假面不受任何时间结界的影响。"
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_radius"						"作用范围："
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_duration"						"持续时间："
+		"DOTA_Tooltip_ability_faceless_void_chronosphere_final_abilitydraft_note"				"虚空假面可以在时间结界内自由移动，不论是否拥有技能“时间结界”，以及拥有该技能的英雄为敌军或盟友。"
+
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final"				"<font color='#e03e2e'>神技·降维打击</font>"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final_Description"	"幻影刺客在偶然间得到了神级文明的降维技术，但是没能完全掌握它，发动成功的几率比较低。"
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final_chance"	"%触发几率："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final_crit_min"	"%最低致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final_crit_max"	"%最高致命一击："
+		"DOTA_Tooltip_ability_chaos_knight_chaos_strike_final_lifesteal"	"%致命一击吸血："
+
 	}
 }

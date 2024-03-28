@@ -95,10 +95,11 @@
 
 	"npc_dota_courier"
 	{
-		"StatusHealth"				"10"	// 6
-		"MovementTurnRate"			"1.0"	// 0.5
-		"VisionDaytimeRange"		"100"	// 350
-		"VisionNighttimeRange"		"100"	// 350
+		"MovementTurnRate"			"1.0" // 0.5
+		"VisionDaytimeRange"		"100" // 350
+		"VisionNighttimeRange"		"100" // 350
+		"StatusHealth"				"9999"
+		"StatusHealthRegen"			"9999"
 	}
 	"npc_dota_roshan"
 	{
