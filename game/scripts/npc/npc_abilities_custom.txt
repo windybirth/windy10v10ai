@@ -441,7 +441,7 @@
 				"bonus_reset_time_roshan"		"15"
 				"damage_per_stack"
 				{
-					"value"					"12 14 16 18 20 30"
+					"value"					"30 14 16 18 20 30"
 					"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 				}
 		}
@@ -496,7 +496,7 @@
 			}
 			"stack_limit"
 			{
-				"value"			"5"
+				"value"			"20"
 			}
 			"stack_duration"
 			{
