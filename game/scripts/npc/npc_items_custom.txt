@@ -7221,6 +7221,586 @@
 				"projectile_speed"	"1275"
 		}
 	}
+
+	//=================================================================================================================
+	// 神器2.0
+	//=================================================================================================================
+	"item_light_part"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "10999"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_light_part"
+		"ItemCost"						"2000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemSellable"				    "0"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"          "630"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+		"Modifiers"
+		{
+			"modifier_item_dragon_ball_1"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"RemoveOnDeath"			"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				}
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_light_part"
+						"Function"			"OnDragonBallPicked"
+					}
+				}
+			}
+		}
+	}
+	"item_dark_part"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dark_part"
+		"ItemCost"						"2000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemSellable"				    "0"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"          "630"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"1"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+		"Modifiers"
+		{
+			"modifier_item_dragon_ball_1"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"RemoveOnDeath"			"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				}
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_dark_part"
+						"Function"			"OnDragonBallPicked"
+					}
+				}
+			}
+		}
+	}
+
+	"item_recipe_mysterious_hat_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11001"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat;item_light_part"
+		}
+	}
+	"item_mysterious_hat_light"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"			"150"
+			"manacost_reduction"			"10"
+		}
+	}
+	"item_recipe_mysterious_hat_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11002"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat;item_dark_part"
+		}
+	}
+	"item_mysterious_hat_dark"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"			"10"
+			"manacost_reduction"			"99"
+		}
+	}
+
+
+	"item_recipe_safety_bubble_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11003"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble;item_light_part"
+		}
+	}
+
+	"item_safety_bubble_light"
+	{
+		"AbilityValues"
+		{
+			"shield"	"10000"			//100
+			"restore_time"		"4"	//8
+			"bonus_hp_regen"	"5" 	//2
+		}
+	}
+
+	"item_recipe_safety_bubble_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11004"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_safety_bubble_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble;item_dark_part"
+		}
+	}
+
+	"item_safety_bubble_dark"
+	{
+		"AbilityValues"
+		{
+			"shield"	"2000"			//100
+			"restore_time"			"0.2"	//8
+			"bonus_hp_regen"	"5" 	//2
+		}
+	}
+
+
+	"item_recipe_grove_bow_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11005"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_grove_bow_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_grove_bow;item_light_part"
+		}
+	}
+	"item_grove_bow_light"
+	{
+		"AbilityValues"
+		{
+			"attack_range_bonus"			"300"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"20"	// 15
+		}
+	}
+	"item_recipe_grove_bow_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11006"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat;item_dark_part"
+		}
+	}
+	"item_grove_bow_dark"
+	{
+		"AbilityValues"
+		{
+			"attack_range_bonus"			"100"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"100"	// 15
+		}
+	}
+
+
+	"item_recipe_gossamer_cape_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11007"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape;item_light_part"
+		}
+	}
+	"item_gossamer_cape_light"
+	{
+		"AbilityCooldown"				"1.5"  //4
+		"AbilityValues"
+		{
+			"movement_speed"			"500"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11008"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape;item_dark_part"
+		}
+	}
+	"item_gossamer_cape_dark"
+	{
+		"AbilityCooldown"				"0.2"  //4
+		"AbilityValues"
+		{
+			"movement_speed"			"100"   //20
+		}
+	}
+
+
+	"item_recipe_specialists_array_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11009"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array;item_light_part"
+		}
+	}
+	"item_specialists_array_light"
+	{
+		"AbilityCooldown"				"0.8"		//8
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"4"		//2
+			"secondary_target_range_bonus"	"450"	//225
+			"proc_bonus_damage"				"3000"	//20
+		}
+	}
+	"item_recipe_specialists_array_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11010"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array;item_dark_part"
+		}
+	}
+	"item_specialists_array_dark"
+	{
+		"AbilityCooldown"				"0.01"		//8
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"10"	//2
+			"secondary_target_range_bonus"	"900"	//225
+			"proc_bonus_damage"				"0"	//20
+		}
+	}
+
+
+	"item_recipe_defiant_shell_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11011"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell;item_light_part"
+		}
+	}
+	"item_defiant_shell_light"
+	{
+		"AbilityValues"
+		{
+			"bonus_armor"				"100" //7
+			"all_stats"			        "100" //7
+			"counter_cooldown"			"1.0" //5
+		}
+	}
+	"item_recipe_defiant_shell_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11012"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell;item_dark_part"
+		}
+	}
+	"item_defiant_shell_dark"
+	{
+		"AbilityValues"
+		{
+			"bonus_armor"				"20" //7
+			"all_stats"			        "20" //7
+			"counter_cooldown"			"0.05" //5
+		}
+	}
+
+
+	"item_recipe_paladin_sword_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11013"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword;item_light_part"
+		}
+	}
+	"item_paladin_sword_light"
+	{
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"100" //16
+			"bonus_spell_lifesteal"	"24"  //8
+			"bonus_amp"			    "100" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11014"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword;item_dark_part"
+		}
+	}
+	"item_paladin_sword_dark"
+	{
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"24" //16
+			"bonus_spell_lifesteal"	"200"  //8
+			"bonus_amp"			    "200" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+
+
+	"item_recipe_ceremonial_robe_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11015"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ceremonial_robe_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ceremonial_robe;item_light_part"
+		}
+	}
+	"item_ceremonial_robe_light"
+	{
+		"AbilityValues"
+		{
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"100"	//10
+			"magic_resistance"		"20"	//10
+		}
+	}
+	"item_recipe_ceremonial_robe_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11016"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ceremonial_robe_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ceremonial_robe;item_dark_part"
+		}
+	}
+	"item_ceremonial_robe_dark"
+	{
+		"AbilityValues"
+		{
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"20"	//10
+			"magic_resistance"		"100"	//10
+		}
+	}
+
+
+	"item_recipe_psychic_headband_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11017"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband;item_light_part"
+		}
+	}
+	"item_psychic_headband_light"
+	{
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityValues"
+		{
+			"intelligence_pct"		"100"	//15
+			"cast_range"			"150"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11018"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband;item_dark_part"
+		}
+	}
+	"item_psychic_headband_dark"
+	{
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityValues"
+		{
+			"intelligence_pct"		"25"	//15
+			"cast_range"			"450"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+
+
+	"item_recipe_timeless_relic_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11019"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic;item_light_part"
+		}
+	}
+	"item_timeless_relic_light"
+	{
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"45"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11020"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic;item_dark_part"
+		}
+	}
+	"item_timeless_relic_dark"
+	{
+		"AbilityValues"
+		{
+			"debuff_amp"		"40"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
 }
 
 

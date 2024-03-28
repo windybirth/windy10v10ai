@@ -14,6 +14,8 @@ export class EventEntityKilled {
     "item_dragon_ball_5",
     "item_dragon_ball_6",
     "item_dragon_ball_7",
+    "item_dark_part",
+    "item_light_part",
   ];
 
   private dropItemChanceRoshan = 100;
