@@ -114,6 +114,157 @@
 				"initial_charges"		"6"
 		}
 	}
+	// 树之祭祀
+	"item_tango"
+	{
+		"ItemStockTime"					"60"
+		"ItemInitialCharges"			"3"
+		"AbilityValues"
+		{
+				"health_regen"			"40.0"
+				"buff_duration"			"30.0"
+				"tooltip_charges"				"3"
+		}
+	}
+	// 净化药水
+	"item_clarity"
+	{
+		"ItemStockMax"					"8"
+		"ItemStockInitial"				"8"
+		"AbilityValues"
+		{
+				"mana_regen"			"12"			// 6
+				"buff_duration"			"25"			// 25
+		}
+	}
+	// 芒果
+	"item_enchanted_mango"
+	{
+		"ItemCost"						"85"			// 65
+
+		"ItemStackableMax"				"4"
+
+		"ItemStockMax"					"8"
+		"ItemStockInitial"				"8"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"hp_regen"		"1.2"
+				"replenish_amount"		"250"
+		}
+	}
+	"item_faerie_fire" //仙灵之火
+	{
+		"ItemCost"						"80"
+		"AbilityValues"
+		{
+				"bonus_damage"			"6"				// 2
+				"hp_restore"			"240"			// 85
+		}
+	}
+	"item_blood_grenade" //血腥榴弹
+	{
+		"ItemCost"						"80"
+		"AbilityHealthCost"				"125"
+
+		"ItemStockInitial"				"3"				// 2
+		"ItemStockTime"					"120"			// 180
+		"AbilityValues"
+		{
+			"bonus_health"			"250"				// 50
+
+			"damage_over_time"		"45"				// 15
+			"impact_damage"			"250"				// 50
+		}
+	}
+	"item_bottle" //魔瓶
+	{
+		"ItemCost"						"800"
+		"ItemInitialCharges"			"5"				// 3
+		"AbilityCooldown"				"0.5"
+		"AbilityCastRange"				"80000"
+		"AbilityValues"
+		{
+			"health_restore"		"1100"
+			"mana_restore"			"600"
+			"health_restore_pct"	"10"
+			"mana_restore_pct"		"10"
+			"restore_time"			"2.7"
+			"max_charges"			"5"
+			"break_on_hero_damage"	"0"
+			"rune_expire_time"		"90.0"
+		}
+	}
+	"item_travel_boots" // 飞鞋
+	{
+		"ItemIsNeutralDrop"             "1" // 改到中立格子
+		"AbilityValues"
+		{
+				"tp_cooldown"			"30" // cd与回城卷轴同步
+		}
+	}
+	"item_tier1_token"
+	{
+		"ItemCost"                      "500"
+		"ItemInitialStockTime"          "105"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier2_token"
+	{
+		"ItemCost"                      "1000"
+		"ItemInitialStockTime"          "465"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier3_token"
+	{
+		"ItemCost"                      "1500"
+		"ItemInitialStockTime"          "825"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier4_token"
+	{
+		"ItemCost"                      "2000"
+		"ItemInitialStockTime"          "1185"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_tier5_token"
+	{
+		"ItemCost"                      "2500"
+		"ItemInitialStockTime"          "1545"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"60"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
+	"item_ex_machina"
+	{
+		"ItemCost"                      "5000"
+		"ItemInitialStockTime"          "1545"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"10"
+		"ItemStockTime"					"5"
+		"ItemPurchasable"				"1"
+		"ItemSellable"                  "0"
+	}
 	//=================================================================================================================
 	// Custom item Override 中立物品
 	//=================================================================================================================
@@ -1146,33 +1297,6 @@
 	{
 		"AbilityManaCost"				"450"	// 350
 		"AbilityCooldown"				"180.0"	// 180.0
-	}
-	"item_bottle"
-	{
-		"AbilityCooldown"				"0.5"
-		"AbilityCastRange"				"80000"
-		"AbilityValues"
-		{
-			"health_restore"		"1100"
-			"mana_restore"			"600"
-			"health_restore_pct"	"10"
-			"mana_restore_pct"		"10"
-			"restore_time"			"2.7"
-			"max_charges"			"3"
-			"break_on_hero_damage"	"0"
-			"rune_expire_time"		"90.0"
-		}
-	}
-	"item_tango"
-	{
-		"ItemStockTime"					"60"
-		"ItemInitialCharges"			"3"
-		"AbilityValues"
-		{
-				"health_regen"			"40.0"
-				"buff_duration"			"30.0"
-				"tooltip_charges"				"3"
-		}
 	}
 	"item_flask"
 	{

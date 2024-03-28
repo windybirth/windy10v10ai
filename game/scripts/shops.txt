@@ -318,6 +318,15 @@
 
 		"item"      "item_radar_of_dragon"
 		"item"		"item_recipe_greater_famango"
+		"item"		"item_travel_boots"					// 飞鞋
+		"item"		"item_black_king_bar_real"			// 真bkb
+
+		"item"      "item_tier1_token"
+		"item"      "item_tier2_token"
+		"item"      "item_tier3_token"
+		"item"      "item_tier4_token"
+		"item"      "item_tier5_token"
+		"item"      "item_ex_machina"
 	}
 
 	"pregame"
