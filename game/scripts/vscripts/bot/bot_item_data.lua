@@ -13,7 +13,7 @@ tBotItemData.purchaseItemList = {
 		'item_bracer',
 		'item_bracer',
 		'item_holy_locket',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_vanguard',
 		'item_echo_sabre',
 		'item_blink',
@@ -52,19 +52,19 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_ultimate_scepter_2',
 		'item_sheepstick',
 		'item_black_king_bar_2',
-		'item_excalibur',
 		'item_wasp_despotic',
 		'item_refresher',
 		'item_recipe_refresh_core',
 		'item_ethereal_blade',
 		'item_null_talisman',
 		'item_recipe_necronomicon_staff',
+		'item_excalibur',
 	},
 	npc_dota_hero_axe = {
 		'item_magic_wand',
 		'item_boots',
-		'item_bracer',				-- 护腕
-		'item_bracer',				-- 护腕
+		'item_bracer', -- 护腕
+		'item_bracer', -- 护腕
 		'item_power_treads',
 		'item_vanguard',
 		'item_blink',
@@ -84,26 +84,26 @@ tBotItemData.purchaseItemList = {
 	npc_dota_hero_spectre = {
 		'item_magic_wand',
 		'item_boots',
-		'item_wraith_band',			-- 系带
-		'item_wraith_band',			-- 系带
+		'item_wraith_band', -- 系带
+		'item_wraith_band', -- 系带
 		'item_power_treads',
 		'item_vanguard',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_blade_mail_2',
-		'item_ultimate_scepter_2',
-		'item_undying_heart',		-- 不朽之心
-		'item_shivas_guard_2',		-- 雅典娜之守护
-		'item_saint_orb',			-- 圣女白莲
 		'item_blue_fantasy',
-		'item_jump_jump_jump',
+		'item_undying_heart', -- 不朽之心
+		'item_saint_orb', -- 圣女白莲
+		'item_ultimate_scepter_2',
 		'item_moon_shard_datadriven',
+		'item_jump_jump_jump',
+		'item_shivas_guard_2', -- 雅典娜之守护
 	},
 	npc_dota_hero_bane = {
 		'item_magic_wand',
 		'item_boots',
-		'item_null_talisman',		-- 挂件
-		'item_null_talisman',		-- 挂件
+		'item_null_talisman', -- 挂件
+		'item_null_talisman', -- 挂件
 		'item_arcane_boots',
 		'item_glimmer_cape',
 		'item_force_staff',
@@ -124,8 +124,8 @@ tBotItemData.purchaseItemList = {
 	npc_dota_hero_bounty_hunter = {
 		'item_magic_wand',
 		'item_boots',
-		'item_wraith_band',			-- 系带
-		'item_wraith_band',			-- 系带
+		'item_wraith_band', -- 系带
+		'item_wraith_band', -- 系带
 		'item_power_treads',
 		'item_orb_of_corrosion',
 		'item_wings_of_haste',
@@ -133,19 +133,19 @@ tBotItemData.purchaseItemList = {
 		'item_echo_sabre_2',
 		-- 'item_aghanims_shard',
 		'item_infernal_desolator',
+		'item_blue_fantasy',
 		'item_ultimate_scepter_2',
 		'item_wasp_callous',
-		'item_blue_fantasy',
-		'item_undying_heart',
+		'item_abyssal_blade', -- 可以与一闪叠加，分开作用几乎永晕
 		'item_abyssal_blade_v2',
-		'item_excalibur',
 		'item_wasp_despotic',
+		'item_excalibur',
 	},
 	npc_dota_hero_bloodseeker = {
 		'item_magic_wand',
 		'item_boots',
-		'item_wraith_band',			-- 系带
-		'item_wraith_band',			-- 系带
+		'item_wraith_band', -- 系带
+		'item_wraith_band', -- 系带
 		'item_power_treads',
 		'item_orb_of_corrosion',
 		'item_vanguard',
@@ -161,18 +161,19 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_abyssal_blade',
 		'item_recipe_abyssal_blade_v2',
 
+		'item_blue_fantasy',
 		'item_monkey_king_bar_2',
 		'item_wasp_callous',
 		'item_infernal_desolator',
 		'item_wasp_despotic',
 		'item_black_king_bar_2',
-		'item_blue_fantasy',
+		'item_excalibur',
 	},
 	npc_dota_hero_bristleback = {
 		'item_magic_wand',
 		'item_boots',
-		'item_bracer',				-- 护腕
-		'item_bracer',				-- 护腕
+		'item_bracer', -- 护腕
+		'item_bracer', -- 护腕
 		'item_power_treads',
 		'item_vanguard',
 		'item_falcon_blade',
@@ -186,6 +187,7 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter_2',
 		'item_saint_orb',
 		'item_undying_heart',
+		'item_bloodstone',
 		'item_moon_shard_datadriven',
 	},
 	npc_dota_hero_chaos_knight = {
@@ -213,13 +215,13 @@ tBotItemData.purchaseItemList = {
 		-- 出门装
 		'item_magic_wand',
 		'item_boots',
-		'item_null_talisman',		-- 挂件
-		'item_null_talisman',		-- 挂件
+		'item_null_talisman', -- 挂件
+		'item_null_talisman', -- 挂件
 		-- 过度
 		'item_glimmer_cape',
 		'item_phase_boots',
 		'item_force_staff',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_wings_of_haste',
 		'item_aether_lens_2',
 		'item_aghanims_shard',
@@ -241,7 +243,7 @@ tBotItemData.purchaseItemList = {
 		-- 出门装
 		'item_magic_wand',
 		'item_boots',
-		'item_null_talisman',		-- 挂件
+		'item_null_talisman', -- 挂件
 		'item_holy_locket',
 		'item_arcane_boots',
 		'item_null_talisman',
@@ -305,7 +307,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_overwhelming_blink',
 		'item_maelstrom',
 		'item_hyperstone',
-        'item_recipe_mjollnir',
+		'item_recipe_mjollnir',
 		'item_gungir',
 		'item_recipe_gungir_2',
 		'item_black_king_bar_2',
@@ -339,6 +341,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_wasp_callous',
 		'item_wasp_despotic',
 		'item_satanic',
+		'item_excalibur',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_magic_wand',
@@ -361,6 +364,7 @@ tBotItemData.purchaseItemList = {
 		'item_undying_heart',
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
+		'item_refresh_core',
 	},
 	npc_dota_hero_jakiro = {
 		'item_magic_wand',
@@ -403,11 +407,11 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_adi_king_plus',
-		'item_wasp_callous',
-		'item_moon_shard_datadriven',
 		'item_blue_fantasy',
 		'item_abyssal_blade_v2',
-		'item_wasp_despotic',
+		'item_moon_shard_datadriven',
+		'item_jump_jump_jump',
+		'item_excalibur',
 	},
 	npc_dota_hero_kunkka = {
 		'item_magic_wand',
@@ -432,6 +436,8 @@ tBotItemData.purchaseItemList = {
 		'item_moon_shard_datadriven',
 		'item_wasp_despotic',
 		'item_wasp_callous',
+		'item_bloodstone',
+		'item_refresh_core',
 		'item_excalibur',
 	},
 	npc_dota_hero_lich = {
@@ -466,7 +472,7 @@ tBotItemData.purchaseItemList = {
 		'item_arcane_boots',
 		'item_glimmer_cape',
 		'item_force_staff',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_ultimate_scepter',
@@ -491,23 +497,26 @@ tBotItemData.purchaseItemList = {
 		'item_arcane_boots',
 		'item_glimmer_cape',
 		'item_force_staff',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_wings_of_haste',
 		'item_blink',
 		'item_aghanims_shard',
+		'item_aether_lens_2', -- 以太之镜2
+		'item_phylactery', -- 灵匣
 		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
 		'item_mystic_staff',
 		'item_recipe_arcane_blink',
-		'item_aether_lens_2',
+		'item_recipe_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_dagon_5',
+
 		'item_gungir_2',
-		'item_refresher',
+		'item_angels_demise', -- 绝刃
+		'item_necronomicon_staff',
 		'item_recipe_refresh_core',
 		'item_hallowed_scepter',
-		'item_necronomicon_staff',
+		'item_refresher',
 	},
 	npc_dota_hero_luna = {
 		'item_magic_wand',
@@ -529,6 +538,7 @@ tBotItemData.purchaseItemList = {
 		'item_skadi_2',
 		'item_wasp_despotic',
 		'item_satanic',
+		'item_excalibur',
 	},
 	npc_dota_hero_medusa = {
 		'item_magic_wand',
@@ -545,12 +555,12 @@ tBotItemData.purchaseItemList = {
 		'item_butterfly',
 		'item_recipe_ultimate_scepter_2',
 		'item_lesser_crit',
+		'item_skadi_2',
 		'item_black_king_bar_2',
 		'item_recipe_wasp_callous',
 		'item_wasp_despotic',
-		'item_skadi_2',
 		'item_excalibur',
-		'item_refresh_core',
+		'item_excalibur',
 	},
 	npc_dota_hero_meepo = {
 		'item_magic_wand',
@@ -574,6 +584,7 @@ tBotItemData.purchaseItemList = {
 		'item_abyssal_blade_v2',
 		'item_wasp_despotic',
 		'item_jump_jump_jump',
+		'item_excalibur',
 	},
 	npc_dota_hero_nevermore = {
 		'item_magic_wand',
@@ -598,6 +609,7 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_despotic',
 		'item_satanic',
 		'item_jump_jump_jump',
+		'item_excalibur',
 	},
 	npc_dota_hero_necrolyte = {
 		'item_magic_wand',
@@ -605,7 +617,7 @@ tBotItemData.purchaseItemList = {
 		'item_null_talisman',
 		'item_null_talisman',
 		'item_holy_locket',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_arcane_boots',
 		'item_glimmer_cape',
 		'item_wings_of_haste',
@@ -633,7 +645,7 @@ tBotItemData.purchaseItemList = {
 		'item_orb_of_corrosion',
 		'item_glimmer_cape',
 		'item_force_staff',
-		'item_hand_of_group',		-- 团队之手
+		'item_hand_of_group', -- 团队之手
 		'item_wings_of_haste',
 		'item_blink',
 		'item_aghanims_shard',
@@ -648,7 +660,8 @@ tBotItemData.purchaseItemList = {
 		'item_refresher',
 		'item_recipe_refresh_core',
 		'item_necronomicon_staff',
-		'item_angels_demise',		-- 绝刃
+		'item_angels_demise', -- 绝刃
+		'item_blue_fantasy',
 	},
 	npc_dota_hero_omniknight = {
 		'item_magic_wand',
@@ -715,8 +728,9 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_satanic',
 		'item_wasp_despotic',
-		'item_excalibur',
 		'item_satanic',
+		'item_excalibur',
+		'item_excalibur',
 	},
 	npc_dota_hero_pudge = {
 		'item_magic_wand',
@@ -772,22 +786,24 @@ tBotItemData.purchaseItemList = {
 		'item_wraith_band',
 		'item_power_treads',
 		'item_wraith_band',
-		'item_falcon_blade',	-- 猎鹰战刃
+		'item_falcon_blade', -- 猎鹰战刃
 		'item_echo_sabre',
 		'item_bfury',
 		'item_wings_of_haste',
 		'item_sange_and_yasha',
 		'item_aghanims_shard',
+		'item_greater_crit',
 		'item_monkey_king_bar_2',
 		'item_infernal_desolator',
 		'item_ultimate_scepter_2',
 		'item_blue_fantasy',
 		'item_satanic',
 		'item_moon_shard_datadriven',
-		'item_wasp_callous',
-		'item_wasp_despotic',
+		'item_angels_demise',
 		'item_abyssal_blade_v2',
 		'item_satanic',
+		'item_excalibur',
+		'item_refresh_core',
 	},
 	npc_dota_hero_shadow_shaman = {
 		'item_magic_wand',
@@ -883,12 +899,13 @@ tBotItemData.purchaseItemList = {
 		'item_hurricane_pike_2',
 		'item_ultimate_scepter_2',
 		'item_infernal_desolator',
+		'item_black_king_bar_2',
 		'item_angels_demise',
 		'item_satanic',
 		'item_skadi_2',
 		'item_shotgun_v2',
-		'item_excalibur',
 		'item_satanic',
+		'item_excalibur',
 	},
 	npc_dota_hero_sven = {
 		'item_magic_wand',
@@ -896,8 +913,8 @@ tBotItemData.purchaseItemList = {
 		'item_bracer',
 		'item_quelling_blade_2_datadriven',
 		'item_power_treads',
-		'item_vanguard',		-- 先锋盾
-		'item_falcon_blade',	-- 猎鹰战刃
+		'item_vanguard', -- 先锋盾
+		'item_falcon_blade', -- 猎鹰战刃
 		'item_mask_of_madness',
 		'item_wings_of_haste',
 		'item_echo_sabre',
@@ -933,13 +950,13 @@ tBotItemData.purchaseItemList = {
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
 		'item_sange_and_yasha',
-		'item_monkey_king_bar_2',
 		'item_adi_king_plus',
+		'item_blue_fantasy',
+		'item_monkey_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_infernal_desolator',
 		'item_saint_orb',
 		'item_moon_shard_datadriven',
-		'item_blue_fantasy',
 		'item_jump_jump_jump',
 	},
 	npc_dota_hero_tinker = {
@@ -956,6 +973,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_dagon',
 		'item_recipe_dagon',
 		'item_recipe_dagon',
+		'item_phylactery', -- 灵匣
 		'item_wings_of_haste',
 		'item_sheepstick',
 		'item_mystic_staff',
@@ -976,8 +994,8 @@ tBotItemData.purchaseItemList = {
 		'item_bracer',
 		'item_quelling_blade_2_datadriven',
 		'item_power_treads',
-		'item_vanguard',		-- 先锋盾
-		'item_falcon_blade',	-- 猎鹰战刃
+		'item_vanguard', -- 先锋盾
+		'item_falcon_blade', -- 猎鹰战刃
 		'item_blink',
 		'item_reaver',
 		'item_recipe_overwhelming_blink',
@@ -994,7 +1012,8 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_despotic',
 		'item_wasp_callous',
 		'item_jump_jump_jump',
-		'item_vladmir_2',
+		'item_moon_shard_datadriven',
+		'item_excalibur',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_magic_wand',
@@ -1019,19 +1038,20 @@ tBotItemData.purchaseItemList = {
 		'item_wraith_band',
 		'item_wraith_band',
 		'item_power_treads',
-		'item_vanguard',		-- 先锋盾
-		'item_falcon_blade',	-- 猎鹰战刃
+		'item_vanguard', -- 先锋盾
+		'item_falcon_blade', -- 猎鹰战刃
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_sange_and_yasha',
 		'item_hurricane_pike_2',
 		'item_ultimate_scepter_2',
-		'item_skadi_2',
+		'item_monkey_king_bar_2',
 		'item_shotgun_v2',
 		'item_wasp_callous',
 		'item_black_king_bar_2',
 		'item_wasp_despotic',
 		'item_excalibur',
+		'item_refresh_core',
 	},
 	npc_dota_hero_warlock = {
 		'item_magic_wand',
@@ -1118,6 +1138,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_refresh_core',
 		'item_gungir_2',
 		'item_necronomicon_staff',
+		'item_excalibur',
 	},
 }
 
@@ -1163,6 +1184,7 @@ tBotItemData.sellItemList = {
 		'item_sange_and_yasha',
 		'item_echo_sabre_2',
 		'item_mjollnir',
+		'item_monkey_king_bar_2',
 		-- local
 		'item_mithril_hammer',
 		'item_recipe_black_king_bar',
@@ -1196,6 +1218,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_drow_ranger = {
 		'item_wraith_band',
 		'item_mask_of_madness',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_force_staff',
@@ -1211,12 +1234,14 @@ tBotItemData.sellItemList = {
 		'item_sange_and_yasha',
 		'item_echo_sabre_2',
 		'item_bfury',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_kunkka = {
 		'item_armlet',
-		'item_greater_crit',
 		'item_black_king_bar_2',
 		'item_bfury',
+		'item_infernal_desolator',
+		'item_silver_edge_2',
 	},
 	npc_dota_hero_lich = {
 	},
@@ -1231,6 +1256,7 @@ tBotItemData.sellItemList = {
 		'item_wraith_band',
 		'item_mask_of_madness',
 		'item_sange_and_yasha',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_medusa = {
 		'item_mask_of_madness',
@@ -1247,11 +1273,14 @@ tBotItemData.sellItemList = {
 		'item_falcon_blade',
 		'item_mask_of_madness',
 		'item_swift_blink',
+		'item_monkey_king_bar_2',
+		'item_jump_jump_jump',
 	},
 	npc_dota_hero_necrolyte = {
 	},
 	npc_dota_hero_ogre_magi = {
 		'item_overwhelming_blink',
+		'item_arcane_blink',
 	},
 	npc_dota_hero_omniknight = {
 		'item_vanguard',
@@ -1263,6 +1292,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_phantom_assassin = {
 		'item_wraith_band',
 		'item_echo_sabre_2',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_pudge = {
 		'item_vanguard',
@@ -1281,6 +1311,9 @@ tBotItemData.sellItemList = {
 		'item_sange_and_yasha',
 		'item_echo_sabre_2',
 		'item_bfury',
+		'item_monkey_king_bar_2',
+		'item_greater_crit',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_shadow_shaman = {
 		'item_magic_wand',
@@ -1303,6 +1336,7 @@ tBotItemData.sellItemList = {
 		'item_mask_of_madness',
 		'item_sange_and_yasha',
 		'item_maelstrom',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_sven = {
 		'item_vanguard',
@@ -1322,6 +1356,7 @@ tBotItemData.sellItemList = {
 		'item_falcon_blade',
 		'item_vanguard',
 		'item_sange_and_yasha',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_warlock = {
 		'item_arcane_boots',
@@ -1342,7 +1377,6 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_tinker = {
 		'item_force_staff_3',
-		'item_phylactery',
 	},
 	npc_dota_hero_tiny = {
 		'item_vanguard',
@@ -1358,7 +1392,7 @@ tBotItemData.sellItemCommonList = {
 	-- Consume
 	'item_tango_single',
 	'item_tango',
-	'item_blood_grenade',	-- 血腥榴弹
+	'item_blood_grenade', -- 血腥榴弹
 	'item_clarity',
 	'item_faerie_fire',
 	'item_enchanted_mango',
@@ -1366,16 +1400,16 @@ tBotItemData.sellItemCommonList = {
 	'item_bottle',
 
 	-- basic
-	'item_orb_of_venom',		-- 淬毒之珠
-	'item_slippers',			-- 敏捷便靴
-	'item_mantle',				-- 智力斗篷
-	'item_gauntlets',			-- 力量手套
-	'item_circlet',				-- 圆环
+	'item_orb_of_venom', -- 淬毒之珠
+	'item_slippers',  -- 敏捷便靴
+	'item_mantle',    -- 智力斗篷
+	'item_gauntlets', -- 力量手套
+	'item_circlet',   -- 圆环
 	'item_branches',
 	'item_magic_stick',
 	'item_recipe_magic_wand',
 	'item_magic_wand',
-	'item_wind_lace',			-- 风灵之纹
+	'item_wind_lace', -- 风灵之纹
 
 	-- 补刀斧
 	'item_quelling_blade',
@@ -1389,13 +1423,13 @@ tBotItemData.sellItemCommonList = {
 	'item_ring_of_basilius',
 
 
-	'item_boots',				-- 草鞋
+	'item_boots',         -- 草鞋
 
-	'item_crown',				-- 王冠
-	'item_bracer',				-- 护腕
-	'item_null_talisman',		-- 挂件
-	'item_wraith_band',			-- 系带
-	'item_orb_of_corrosion',	-- 腐蚀之球
+	'item_crown',         -- 王冠
+	'item_bracer',        -- 护腕
+	'item_null_talisman', -- 挂件
+	'item_wraith_band',   -- 系带
+	'item_orb_of_corrosion', -- 腐蚀之球
 
 	-- 相位
 	'item_phase_boots',
@@ -1433,7 +1467,10 @@ tBotItemData.sellItemCommonList = {
 	'item_bfury',
 	-- 羊刀
 	'item_sheepstick',
-	'item_hand_of_group',		-- 团队之手
+	'item_hand_of_group', -- 团队之手
+
+	'item_phylactery', -- 灵匣
+	'item_greater_crit', -- 大炮
 }
 
 -- Consume items
@@ -1479,25 +1516,25 @@ tBotItemData.wardObserverPostionList = {
 
 	-- 上路
 	Vector(-5856, 827, 0),
-	Vector(2106,6046,0),
-	Vector(-1998,6113,0),
+	Vector(2106, 6046, 0),
+	Vector(-1998, 6113, 0),
 	-- 上野区
 	Vector(-5187, -1619, 0),
-	Vector(-4640,-1056,0),
+	Vector(-4640, -1056, 0),
 	Vector(-4574, 476, 0),
 	Vector(-3815, 1577, 256),
-	Vector(-4620,-1060,384),
-	Vector(0,2598,256),
+	Vector(-4620, -1060, 384),
+	Vector(0, 2598, 256),
 	-- 中路
-	Vector(-1445,-2504,0),
-	Vector(-4526.85,-5406.58,0),
-	Vector(-5916,-3984,0),
-	Vector(-6657,-4427,256),
-	Vector(-5017,-6268,0),
-	Vector(-3545,-6958,0),
-	Vector(1037,-2023,0),
-	Vector(1290,842,0),
-	Vector(-2567,-1743,0),
+	Vector(-1445, -2504, 0),
+	Vector(-4526.85, -5406.58, 0),
+	Vector(-5916, -3984, 0),
+	Vector(-6657, -4427, 256),
+	Vector(-5017, -6268, 0),
+	Vector(-3545, -6958, 0),
+	Vector(1037, -2023, 0),
+	Vector(1290, 842, 0),
+	Vector(-2567, -1743, 0),
 	-- 下野区
 	Vector(2800, -3087, 0),
 	Vector(303, -2584, 0),
@@ -1505,15 +1542,15 @@ tBotItemData.wardObserverPostionList = {
 	Vector(1556, -3169, 0),
 	Vector(-1233, -5087, 0),
 	Vector(187, -4970, 0),
-	Vector(3941,-4017,0),
-	Vector(594,-4149,0),
-	Vector(3876,-4138,0),
-	Vector(1321.6,-2288,256),
-	Vector(1045,-2041,128),
+	Vector(3941, -4017, 0),
+	Vector(594, -4149, 0),
+	Vector(3876, -4138, 0),
+	Vector(1321.6, -2288, 256),
+	Vector(1045, -2041, 128),
 	-- 下路
 	Vector(3443, -5779, 0),
 	Vector(4445, -5124, 0),
-	Vector(6318,-1038,0),
+	Vector(6318, -1038, 0),
 
 	-- 中路河道
 	Vector(-1625, -200, 0),
@@ -1522,8 +1559,8 @@ tBotItemData.wardObserverPostionList = {
 	Vector(-820, -1921, 0),
 	-- roshan
 	Vector(-2142, 1776, 0),
-	Vector(-3790,1583,0),
-	Vector(-2675,3296,0),
+	Vector(-3790, 1583, 0),
+	Vector(-2675, 3296, 0),
 
 	-- 夜魇
 
@@ -1533,26 +1570,26 @@ tBotItemData.wardObserverPostionList = {
 	Vector(-512, 4094, 0),
 	Vector(-2813, 3593, 0),
 	Vector(-844, 3131, 0),
-	Vector(-1040,4370,0),
-	Vector(4488,1319,0),
-	Vector(3825,4127,0),
-	Vector(1082,4354.0),
-	Vector(-3804,4120,0),
+	Vector(-1040, 4370, 0),
+	Vector(4488, 1319, 0),
+	Vector(3825, 4127, 0),
+	Vector(1082, 4354.0),
+	Vector(-3804, 4120, 0),
 	-- 中路
-	Vector(2190,4065,0),
-	Vector(4861,5994,0),
-	Vector(6319,4319,0),
-	Vector(1739,1264),
+	Vector(2190, 4065, 0),
+	Vector(4861, 5994, 0),
+	Vector(6319, 4319, 0),
+	Vector(1739, 1264),
 	-- 下野区
 	Vector(2050, -761, 0),
 	Vector(2781, -1575, 0),
 	Vector(4612, 768, 0),
 	Vector(4024, -1056, 0),
 	Vector(3923, -3441, 0),
-	Vector(3240.6,196.2,0),
-	Vector(4517,1319,0),
-	Vector(3298,-181,256),
-	Vector(6287,-1011,0),
+	Vector(3240.6, 196.2, 0),
+	Vector(4517, 1319, 0),
+	Vector(3298, -181, 256),
+	Vector(6287, -1011, 0),
 	-- 下路
 }
 tBotItemData.wardSentryPostionList = {
@@ -1563,19 +1600,19 @@ tBotItemData.wardSentryPostionList = {
 
 	-- 上路
 	Vector(-6586, -2440, 0),
-	Vector(2106,6046,0),
-	Vector(-1998,6113,0),
+	Vector(2106, 6046, 0),
+	Vector(-1998, 6113, 0),
 	-- 上野区
 	Vector(-4347, -1028, 0),
 	-- 中路
 	Vector(-4511, -2582, 0),
 	Vector(-3345, -4005, 0),
-	Vector(-6119,-6403,0),
-	Vector(-7036,-5603,0),
-	Vector(-2073,-2417,0),
-	Vector(1290,842,0),
-	Vector(1739,1264,0),
-	Vector(-2567,-1743,0),
+	Vector(-6119, -6403, 0),
+	Vector(-7036, -5603, 0),
+	Vector(-2073, -2417, 0),
+	Vector(1290, 842, 0),
+	Vector(1739, 1264, 0),
+	Vector(-2567, -1743, 0),
 	-- 下野区
 	Vector(303, -2584, 0),
 	Vector(-510, -3334, 0),
@@ -1603,13 +1640,13 @@ tBotItemData.wardSentryPostionList = {
 	-- 夜魇
 	Vector(5251, 2947, 0),
 	Vector(3493, 4632, 0),
-	Vector(4861,5994,0),
-	Vector(6319,4319,0),
+	Vector(4861, 5994, 0),
+	Vector(6319, 4319, 0),
 
 	-- 上路
 	Vector(-3300, 5608, 0),
 	Vector(-5735, 4089, 0),
-	Vector(3825,4127,0),
+	Vector(3825, 4127, 0),
 	-- 上野区
 	Vector(-396, 2521, 0),
 	Vector(512, 4094, 0),
@@ -1622,7 +1659,7 @@ tBotItemData.wardSentryPostionList = {
 	Vector(4359, -426, 0),
 	-- 下路
 	Vector(6342, 1735, 0),
-	Vector(6318,-1038),
+	Vector(6318, -1038),
 }
 -- purchase neutral item in order
 tBotItemData.addNeutralItemList = {
@@ -1642,16 +1679,16 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone',
 	},
 	npc_dota_hero_bounty_hunter = {
-		'item_desolator_2',
+		'item_timeless_relic',
 	},
 	npc_dota_hero_bloodseeker = {
-		'item_pirate_hat',
+		'item_giants_ring',
 	},
 	npc_dota_hero_bristleback = {
 		'item_giants_ring',
 	},
 	npc_dota_hero_chaos_knight = {
-		'item_the_leveller',
+		'item_unwavering_condition',
 	},
 	npc_dota_hero_crystal_maiden = {
 		'item_timeless_relic',
@@ -1663,10 +1700,10 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_dragon_knight = {
-		'item_force_field',
+		'item_seer_stone',
 	},
 	npc_dota_hero_drow_ranger = {
-		'item_princes_knife',
+		'item_desolator_2',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_giants_ring',
@@ -1675,10 +1712,10 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_juggernaut = {
-		'item_ninja_gear',
+		'item_unwavering_condition',
 	},
 	npc_dota_hero_kunkka = {
-		'item_minotaur_horn',
+		'item_timeless_relic',
 	},
 	npc_dota_hero_lich = {
 		'item_demonicon',
@@ -1714,7 +1751,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_phantom_assassin = {
-		'item_desolator_2',
+		'item_unwavering_condition',
 	},
 	npc_dota_hero_pudge = {
 		'item_giants_ring',
@@ -1723,7 +1760,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_riki = {
-		'item_desolator_2',
+		'item_unwavering_condition',
 	},
 	npc_dota_hero_sand_king = {
 		'item_giants_ring',
@@ -1738,7 +1775,7 @@ tBotItemData.addNeutralItemList = {
 		'item_ballista',
 	},
 	npc_dota_hero_sven = {
-		'item_pirate_hat',
+		'item_pirate_hat_custom',
 	},
 	npc_dota_hero_tidehunter = {
 		'item_mirror_shield',
@@ -1747,7 +1784,7 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone',
 	},
 	npc_dota_hero_tiny = {
-		'item_pirate_hat',
+		'item_pirate_hat_custom',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_desolator_2',
@@ -1759,13 +1796,13 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_windrunner = {
-		'item_ballista',
+		'item_mirror_shield',
 	},
 	npc_dota_hero_witch_doctor = {
 		'item_spy_gadget',
 	},
 	npc_dota_hero_skeleton_king = {
-		'item_the_leveller',
+		'item_spell_prism',
 	},
 	npc_dota_hero_zuus = {
 		'item_seer_stone',
@@ -1790,4 +1827,3 @@ tBotItemData.addNeutralItemMultiTimeMap = {
 		600,
 	},
 }
-

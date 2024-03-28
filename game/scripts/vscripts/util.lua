@@ -4,6 +4,7 @@ function TsPrint(_, s)
 	end
 	GameRules:SendCustomMessage(s, DOTA_TEAM_GOODGUYS, 0)
 end
+
 function TsPrintTable(_, t, indent, done)
 	if not AIGameMode.DebugMode then
 		return
@@ -75,16 +76,17 @@ end
 function ProcsAroundMagicStick(hUnit)
 	local tUnits =
 		FindUnitsInRadius(
-		hUnit:GetTeamNumber(),
-		hUnit:GetOrigin(),
-		nil,
-		1200,
-		DOTA_UNIT_TARGET_TEAM_ENEMY,
-		DOTA_UNIT_TARGET_HERO,
-		DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_INVULNERABLE + DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS,
-		FIND_ANY_ORDER,
-		false
-	)
+			hUnit:GetTeamNumber(),
+			hUnit:GetOrigin(),
+			nil,
+			1200,
+			DOTA_UNIT_TARGET_TEAM_ENEMY,
+			DOTA_UNIT_TARGET_HERO,
+			DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES + DOTA_UNIT_TARGET_FLAG_INVULNERABLE +
+			DOTA_UNIT_TARGET_FLAG_NOT_ILLUSIONS,
+			FIND_ANY_ORDER,
+			false
+		)
 	for i, v in ipairs(tUnits) do
 		if v:CanEntityBeSeenByMyTeam(hUnit) then
 			for i = 0, 9 do
@@ -107,21 +109,23 @@ function ProcsAroundMagicStick(hUnit)
 	end
 end
 
-function Set (list)
+function Set(list)
 	local set = {}
 	for _, l in ipairs(list) do set[l] = true end
 	return set
 end
 
-function SetMember (list)
+function SetMember(list)
 	local set = {}
-	for _, l in ipairs(list) do set[l] = {enable=1, expireDateString="获取失败"} end
+	for _, l in ipairs(list) do set[l] = { enable = 1, expireDateString = "获取失败" } end
 	return set
 end
-function TsLifeStealOnAttackLanded (_, params, iLifeSteal, hHero, hAbility)
-	LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
+
+function TsLifeStealOnAttackLanded(_, params, iLifeSteal, hHero, hAbility)
+	LifeStealOnTakeDamage(params, iLifeSteal, hHero, hAbility)
 end
-function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
+
+function LifeStealOnTakeDamage(params, iLifeSteal, hHero, hAbility)
 	if IsServer() then
 		local attacker = params.attacker
 		if params.inflictor then
@@ -138,11 +142,12 @@ function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 			end
 			local actual_damage = params.damage
 			local iHeal = actual_damage * iLifeSteal * 0.01
-            attacker:HealWithParams(iHeal,hAbility,true,true,attacker,false)
+			attacker:HealWithParams(iHeal, hAbility, true, true, attacker, false)
 
 			-- Printf("攻击吸血: "..iHeal)
 			-- effect
-			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, attacker)
+			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf",
+				PATTACH_ABSORIGIN_FOLLOW, attacker)
 			ParticleManager:SetParticleControl(lifesteal_pfx, 0, attacker:GetAbsOrigin())
 			ParticleManager:ReleaseParticleIndex(lifesteal_pfx)
 		end
@@ -150,7 +155,7 @@ function LifeStealOnTakeDamage (params, iLifeSteal, hHero, hAbility)
 end
 
 -- FIXME
-function LifeStealOnAttackLanded (params, iLifeSteal, hHero, hAbility)
+function LifeStealOnAttackLanded(params, iLifeSteal, hHero, hAbility)
 	if IsServer() then
 		local attacker = params.attacker
 
@@ -164,10 +169,11 @@ function LifeStealOnAttackLanded (params, iLifeSteal, hHero, hAbility)
 			end
 			local actual_damage = CalculateActualDamage(params, hTarget)
 			local iHeal = actual_damage * iLifeSteal * 0.01
-            attacker:HealWithParams(iHeal,hAbility,true,true,attacker,false)
+			attacker:HealWithParams(iHeal, hAbility, true, true, attacker, false)
 
 			-- effect
-			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, attacker)
+			local lifesteal_pfx = ParticleManager:CreateParticle("particles/generic_gameplay/generic_lifesteal.vpcf",
+				PATTACH_ABSORIGIN_FOLLOW, attacker)
 			ParticleManager:SetParticleControl(lifesteal_pfx, 0, attacker:GetAbsOrigin())
 			ParticleManager:ReleaseParticleIndex(lifesteal_pfx)
 		end
@@ -181,8 +187,8 @@ end
 function SpellLifeSteal(keys, hAbility, ilifeSteal)
 	local hParent = hAbility:GetParent()
 	if keys.attacker == hParent and keys.inflictor and IsEnemy(keys.attacker, keys.unit) and
-			bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_REFLECTION) ~= DOTA_DAMAGE_FLAG_REFLECTION and
-			bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL) ~= DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL then
+		bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_REFLECTION) ~= DOTA_DAMAGE_FLAG_REFLECTION and
+		bit.band(keys.damage_flags, DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL) ~= DOTA_DAMAGE_FLAG_NO_SPELL_LIFESTEAL then
 		local iHeal = keys.damage * (ilifeSteal / 100)
 
 		if keys.unit:IsCreep() then
@@ -190,8 +196,9 @@ function SpellLifeSteal(keys, hAbility, ilifeSteal)
 		end
 
 		-- Printf("法术吸血: "..iHeal)
-		hParent:HealWithParams(iHeal, hAbility:GetAbility(),false,true,hParent,true)
-		local pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf", PATTACH_ABSORIGIN_FOLLOW, hParent)
+		hParent:HealWithParams(iHeal, hAbility:GetAbility(), false, true, hParent, true)
+		local pfx = ParticleManager:CreateParticle("particles/items3_fx/octarine_core_lifesteal.vpcf",
+			PATTACH_ABSORIGIN_FOLLOW, hParent)
 		ParticleManager:ReleaseParticleIndex(pfx)
 	end
 end
@@ -212,14 +219,14 @@ end
 
 print("Util loaded.")
 
-function IsGoodTeamPlayer (playerid)
+function IsGoodTeamPlayer(playerid)
 	if playerid == nil or not PlayerResource:IsValidPlayerID(playerid) then
 		return false
 	end
 	return PlayerResource:GetTeam(playerid) == DOTA_TEAM_GOODGUYS
 end
 
-function IsBadTeamPlayer (playerid)
+function IsBadTeamPlayer(playerid)
 	if playerid == nil or not PlayerResource:IsValidPlayerID(playerid) then
 		return false
 	end
@@ -251,7 +258,7 @@ function SelectEveryValidPlayerDoFunc(func)
 	-- type func = void function(playerID)
 	for playerID = 0, DOTA_MAX_TEAM_PLAYERS - 1 do
 		if PlayerResource:IsValidPlayerID(playerID) and PlayerResource:IsValidPlayer(playerID) and
-				PlayerResource:GetSelectedHeroEntity(playerID) then
+			PlayerResource:GetSelectedHeroEntity(playerID) then
 			func(playerID)
 		end
 	end
@@ -261,10 +268,10 @@ function RefreshItemDataDrivenModifier(item, modifier)
 	local caster = item:GetCaster()
 	local itemName = item:GetName()
 	Timers:CreateTimer(0.1, function()
-		print("Add DataDriven Modifier "..modifier)
+		print("Add DataDriven Modifier " .. modifier)
 		-- get how many item caster has
 		local itemCount = 0
-		for i=0,5 do
+		for i = 0, 5 do
 			local itemInSlot = caster:GetItemInSlot(i)
 			if itemInSlot and itemInSlot:GetName() == itemName then
 				itemCount = itemCount + 1
@@ -273,13 +280,13 @@ function RefreshItemDataDrivenModifier(item, modifier)
 		local modifiers = caster:FindAllModifiersByName(modifier)
 		local modifierCount = #modifiers
 
-		print("itemCount: "..itemCount)
-		print("modifierCount: "..modifierCount)
+		print("itemCount: " .. itemCount)
+		print("modifierCount: " .. modifierCount)
 
 		if itemCount > modifierCount then
 			-- add modifier
 			local statsModifier = CreateItem("item_apply_modifiers", nil, nil)
-			for i=1,itemCount-modifierCount do
+			for i = 1, itemCount - modifierCount do
 				statsModifier:ApplyDataDrivenModifier(caster, caster, modifier, {})
 			end
 			-- Cleanup
@@ -289,7 +296,7 @@ function RefreshItemDataDrivenModifier(item, modifier)
 
 		if itemCount < modifierCount then
 			-- remove modifier
-			for i=1,modifierCount-itemCount do
+			for i = 1, modifierCount - itemCount do
 				modifiers[i]:Destroy()
 			end
 		end

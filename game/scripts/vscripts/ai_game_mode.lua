@@ -34,14 +34,13 @@ function Precache(context)
     PrecacheResource("soundfile", "soundevents/yukari_yakumo.vsndevts", context)
     PrecacheResource("soundfile", "soundevents/hero_themes.vsndevts", context)
     PrecacheResource("soundfile", "soundevents/voscripts/game_sounds_vo_jack.vsndevts", context)
-
 end
 
 function AIGameMode:InitGameMode()
     AIGameMode:InitGameOptions()
     AIGameMode:InitEvents()
     AIGameMode:LinkLuaModifiers()
-    AIGameMode:InitBotRecordTable()
+    AIGameMode:InitGlobalVariables()
     if IsInToolsMode() then
         print("========Enter Debug Mode========")
         self.DebugMode = true
@@ -49,24 +48,13 @@ function AIGameMode:InitGameMode()
     print("DOTA 2 AI Wars Loaded.")
 end
 
-function AIGameMode:InitBotRecordTable()
+function AIGameMode:InitGlobalVariables()
     -- AI连续死亡记录表
     AIGameMode.BotRecordSuccessiveDeathTable = {}
+    self.iGameDifficulty = 0
 end
 
 function AIGameMode:InitGameOptions()
-    -- GameRules:SetCustomGameSetupAutoLaunchDelay(AUTO_LAUNCH_DELAY)
-    -- GameRules:LockCustomGameSetupTeamAssignment(LOCK_TEAM_SETUP)
-    -- GameRules:EnableCustomGameSetupAutoLaunch(ENABLE_AUTO_LAUNCH)
-    -- GameRules:SetHeroSelectionTime(HERO_SELECTION_TIME)
-    -- GameRules:SetPreGameTime(PRE_GAME_TIME)
-    -- GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, RADIANT_PLAYER_COUNT)
-    -- GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, DIRE_PLAYER_COUNT)
-    -- GameRules:SetStrategyTime(STRATEGY_TIME)
-    -- GameRules:SetShowcaseTime(SHOWCASE_TIME)
-    -- GameRules:SetCustomGameEndDelay(GAME_END_DELAY)
-    -- GameRules:GetGameModeEntity():SetFreeCourierModeEnabled(true)
-
     -- 游戏选择项目初始化
     GameRules.GameOption = LoadKeyValues("scripts/kv/game_option.kv")
 end
@@ -106,22 +94,16 @@ function AIGameMode:InitEvents()
 end
 
 function AIGameMode:LinkLuaModifiers()
-    LinkLuaModifier("modifier_courier_speed", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
-    LinkLuaModifier("modifier_melee_resistance", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
-    LinkLuaModifier("modifier_tower_power", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
     LinkLuaModifier("modifier_tower_endure", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
-    LinkLuaModifier("modifier_tower_heal", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
     LinkLuaModifier("modifier_sniper_assassinate_thinker", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
     LinkLuaModifier("modifier_out_of_world", "global_modifiers.lua", LUA_MODIFIER_MOTION_NONE)
 
     LinkLuaModifier("modifier_bot_think_strategy", "bot/bot_think_modifier.lua", LUA_MODIFIER_MOTION_NONE)
     LinkLuaModifier("modifier_bot_think_item_use", "bot/bot_think_modifier.lua", LUA_MODIFIER_MOTION_NONE)
     LinkLuaModifier("modifier_bot_think_ward", "bot/bot_think_modifier.lua", LUA_MODIFIER_MOTION_NONE)
-
 end
 
 function AIGameMode:PreGameOptions()
-
     self.iDesiredRadiant = self.iDesiredRadiant or RADIANT_PLAYER_COUNT
     self.iDesiredDire = self.iDesiredDire or DIRE_PLAYER_COUNT
 
@@ -138,14 +120,7 @@ function AIGameMode:PreGameOptions()
     self.iStartingGoldPlayer = self.iStartingGoldPlayer or 600
     self.iStartingGoldBot = self.iStartingGoldBot or 600
     self.bSameHeroSelection = self.bSameHeroSelection or 1
-    self.bFastCourier = self.bFastCourier or 1
     self.fGameStartTime = 0
-
-    -- FIXME 测试代码
-    if IsInToolsMode() then
-        self.bFastCourier = 1
-        self.bSameHeroSelection = 1
-    end
 
     GameRules:SetGoldPerTick(GOLD_PER_TICK)
     GameRules:SetGoldTickTime(GOLD_TICK_TIME)
@@ -180,8 +155,8 @@ function AIGameMode:PreGameOptions()
 
     if self.iMaxLevel ~= 30 then
         local tLevelRequire = { 0, 180, 510, 990, 1620, 2400, 3240, 4140, 5100, 6120, 7200, 8350, 9650, 11100, 12700,
-                                14450, 16350, 18350, 20450, 22650, 25050, 27650, 30450, 33450, 36950, 40950, 45450,
-                                50450, 55950, 61950 } -- value fixed
+            14450, 16350, 18350, 20450, 22650, 25050, 27650, 30450, 33450, 36950, 40950, 45450,
+            50450, 55950, 61950 } -- value fixed
         local iRequireLevel = tLevelRequire[30]
         for i = 31, self.iMaxLevel do
             iRequireLevel = iRequireLevel + i * 200
@@ -249,7 +224,7 @@ function AIGameMode:PreGameOptions()
 
     self.PreGameOptionsSet = true
 
-    -- 肉山奖励赛季积分
+    -- 肉山奖励勇士积分 初始化
     self.playerBonusSeasonPoint = {}
     for i = 0, 23 do
         self.playerBonusSeasonPoint[i] = 0
@@ -259,7 +234,7 @@ end
 ------------------------------------------------------------------
 --                        Gold/XP Filter                        --
 ------------------------------------------------------------------
-GOLD_REASON_FILTER = Set{
+GOLD_REASON_FILTER = Set {
     DOTA_ModifyGold_Unspecified,
     DOTA_ModifyGold_Death,
     DOTA_ModifyGold_Buyback,

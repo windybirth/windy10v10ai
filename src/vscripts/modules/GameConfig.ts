@@ -1,4 +1,7 @@
 export class GameConfig {
+  towerPower = 100;
+  towerHeal = 0;
+
   constructor() {
     SendToServerConsole("dota_max_physical_items_purchase_limit 9999"); // 用来解决物品数量限制问题
 
@@ -13,7 +16,7 @@ export class GameConfig {
     GameRules.SetHeroSelectPenaltyTime(20); // 选择英雄超时惩罚时间
     GameRules.SetStrategyTime(10); // 选完英雄的策略阶段的持续时间
     GameRules.SetShowcaseTime(0); // 选完英雄进游戏前的展示时间
-    GameRules.SetPreGameTime(30); // 进入游戏后号角吹响前的准备时间
+    GameRules.SetPreGameTime(45); // 进入游戏后号角吹响前的准备时间
     // GameRules.SetPostGameTime(30); // 游戏结束后时长
     // GameRules.SetSameHeroSelectionEnabled(true); // 是否允许选择相同英雄
     // GameRules.SetStartingGold(0); // 设置初始金钱
@@ -56,11 +59,11 @@ export class GameConfig {
 
     if (IsInToolsMode()) {
       print("[GameConfig] IsInToolsMode set");
-      // GameRules.SetCustomGameSetupAutoLaunchDelay(5);
-      // GameRules.SetHeroSelectionTime(5);
+      // GameRules.SetCustomGameSetupAutoLaunchDelay(10);
+      GameRules.SetHeroSelectionTime(5);
       GameRules.SetHeroSelectPenaltyTime(5); // 选择英雄超时惩罚时间
       GameRules.SetStrategyTime(5);
-      // GameRules.SetPreGameTime(10);
+      // GameRules.SetPreGameTime(300);
     }
   }
 }
