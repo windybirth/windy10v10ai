@@ -7801,6 +7801,112 @@
 			"spell_amp"			"100"	// 15
 		}
 	}
+
+
+	"item_recipe_ascetic_cap_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11021"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap;item_light_part"
+		}
+	}
+	"item_ascetic_cap_light"
+	{
+		"AbilityCooldown"		"5.0"  //25
+		"AbilityValues"
+		{
+			"status_resistance"	"40"	//40
+			"slow_resistance"	"40"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11022"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap;item_dark_part"
+		}
+	}
+	"item_ascetic_cap_dark"
+	{
+		"AbilityCooldown"		"20.0"  //25
+		"AbilityValues"
+		{
+			"status_resistance"	"100"	//40
+			"slow_resistance"	"100"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+
+
+	"item_trickster_cloak_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11023"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak;item_light_part"
+		}
+	}
+	"item_trickster_cloak_light"
+	{
+		"AbilityCooldown"				"15.0" //25
+		"AbilityValues"
+		{
+				"evasion"			"100" //17
+				"magic_resistance"	"34" //17
+				"duration"			"10"  //6
+		}
+	}
+	"item_trickster_cloak_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11024"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak;item_dark_part"
+		}
+	}
+	"item_trickster_cloak_dark"
+	{
+		"AbilityCooldown"				"15.0" //25
+		"AbilityValues"
+		{
+				"evasion"			"34" //17
+				"magic_resistance"	"100" //17
+				"duration"			"10"  //6
+		}
+	}
+
+
+	"item_recipe_ancient_guardian_light"
+	"item_ancient_guardian"
+	"item_ancient_guardian"
+	"item_ancient_guardian"
 }
 
 
