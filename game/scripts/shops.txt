@@ -318,6 +318,7 @@
 		"item"      "item_ex_machina"
 		"item"      "item_light_part"
 		"item"      "item_dark_part"
+		"item"      "item_exchange"
 	}
 
 	"pregame"
