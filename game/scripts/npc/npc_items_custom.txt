@@ -8612,6 +8612,68 @@
 			"bonus_armor"			"60"
 		}
 	}
+
+
+	"item_recipe_ballista_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11041"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ballista_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista;item_light_part"
+		}
+	}
+	"item_ballista_light"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemSellable"				"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"600"
+			"knockback_distance"		"90"
+			"knockback_duration"		"0.2"
+			"bonus_damage"		        "150"
+		}
+	}
+	"item_recipe_ballista_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11042"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ballista_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista;item_dark_part"
+		}
+	}
+	"item_ballista_dark"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemSellable"				"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"250"
+			"knockback_distance"		"15"
+			"knockback_duration"		"0.1"
+			"bonus_damage"		        "900"
+		}
+	}
 }
 
 
