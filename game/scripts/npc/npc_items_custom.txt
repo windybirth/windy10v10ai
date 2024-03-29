@@ -6451,6 +6451,109 @@
 			"bonus_all_stats"		"1"
 		}
 	}
+
+
+	//=================================================================================================================
+	// 神器2.0升级
+	//=================================================================================================================
+	"item_light_part"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "10999"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_light_part"
+		"ItemCost"						"5000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemSellable"				    "0"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"          "2130"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"30"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		""
+		}
+		"Modifiers"
+		{
+			"modifier_item_dragon_ball_1"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"RemoveOnDeath"			"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				}
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_light_part"
+						"Function"			"OnDragonBallPicked"
+					}
+				}
+			}
+		}
+	}
+	"item_dark_part"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11000"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"            "item_dark_part"
+		"ItemCost"						"5000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemShopTags"					""
+		"ItemQuality"					""
+		"ItemAliases"					""
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemSellable"				    "0"
+        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"          "2130"
+		"ItemStockInitial"				"0"
+		"ItemStockMax"					"5"
+		"ItemStockTime"					"30"
+		"AbilityValues"
+		{
+			"bonus_all_stats"		"1"
+		}
+		"Modifiers"
+		{
+			"modifier_item_dragon_ball_1"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"RemoveOnDeath"			"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
+				}
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"		"items/item_dark_part"
+						"Function"			"OnDragonBallPicked"
+					}
+				}
+			}
+		}
+	}
 }
 
 
