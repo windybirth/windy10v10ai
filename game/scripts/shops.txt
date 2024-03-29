@@ -263,6 +263,9 @@
 		"item"		"item_tome_of_strength"
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
+		"item"      "item_overwhelming_blink_2"
+		"item"      "item_swift_blink_2"
+		"item"      "item_arcane_blink_2"
 	}
 
 	"sideshop1"

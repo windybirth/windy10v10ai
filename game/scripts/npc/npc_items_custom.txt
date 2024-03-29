@@ -5818,6 +5818,134 @@
 	}
 
 	//=================================================================================================================
+	// 大力跳
+	//=================================================================================================================
+	"item_overwhelming_blink_2" //FIXME 所有升级跳刀的距离可能都要砍一点，过了红利期之后
+	{
+		"BaseClass"                     "item_overwhelming_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"//1200
+				"blink_damage_cooldown"	"2.0"//3.0
+				"blink_range_clamp"		"1440"//960
+				"bonus_strength"		"100"//25 没啥特色就多给点力量吧
+				"radius"
+				{
+					"value"	"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"movement_slow"		"100"//50
+				"attack_slow"		"100"//50
+				"duration"		"6"//6
+				"damage_base"			"300"//100
+				"damage_pct_instant"		"150"//50
+				"damage_pct_over_time"		"300"//100
+		}
+	}
+
+	//=================================================================================================================
+	// 大敏跳
+	//=================================================================================================================
+	"item_swift_blink_2"
+	{
+		"BaseClass"                     "item_swift_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"1800"//1200
+				"blink_damage_cooldown"	"2.0"//3.0
+				"blink_range_clamp"		"1440"//960
+				"bonus_agility"		"50"//25
+				"bonus_movement"		"80"//40
+				"bonus_agi_active"		"70"//35
+				"duration"		"7"//6
+		}
+	}
+
+	//=================================================================================================================
+	// 大智跳
+	//=================================================================================================================
+	"item_arcane_blink_2"
+	{
+		"BaseClass"                     "item_arcane_blink"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
+		"AbilityCastRange"				"2100"
+		"AbilityOvershootCastRange"     "1780"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"4.0"
+		"AbilityManaCost"				"0"
+		"AbilitySharedCooldown"			"blink"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"AbilityValues"
+		{
+				"blink_range"			"2100"//1400
+				"blink_damage_cooldown"	"0.0"//3.0
+				"blink_range_clamp"		"1780"//960
+				"bonus_intellect"		"50"//25
+				"heal_amount"			"400"//200
+				"mana_amount"			"200"//100
+		}
+	}
+
+	"item_recipe_arcane_blink_2"
+	{
+		"BaseClass"                     "item_recipe_arcane_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_arcane_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_arcane_blink;item_arcane_blink"
+		}
+	}
+
+	"item_recipe_swift_blink_2"
+	{
+		"BaseClass"                     "item_recipe_swift_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_swift_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_swift_blink;item_swift_blink"
+		}
+	}
+
+	"item_recipe_overwhelming_blink_2"
+	{
+		"BaseClass"                     "item_recipe_overwhelming_blink"
+		"ItemCost"						"0"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_overwhelming_blink_2"
+		"ItemRequirements"
+		{
+			"01"						"item_overwhelming_blink;item_overwhelming_blink"
+		}
+	}
+
+	//=================================================================================================================
 	// 龙珠系列 dragon ball blessing of dragon
 	//=================================================================================================================
 	"item_dragon_ball_1"
@@ -6472,7 +6600,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "0"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1530"// 体验阶段25分钟买
+		"ItemInitialStockTime"          "1230"// 体验阶段20分钟买（或调高爆率，30分钟买）
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
 		"ItemStockTime"					"30"
@@ -6523,7 +6651,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "0"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1530"// 体验阶段25分钟买
+		"ItemInitialStockTime"          "1230"// 体验阶段20分钟买（或调高爆率，30分钟买）
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
 		"ItemStockTime"					"30"
