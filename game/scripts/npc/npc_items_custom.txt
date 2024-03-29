@@ -6472,7 +6472,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "0"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "2130"
+		"ItemInitialStockTime"          "1530"// 体验阶段25分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
 		"ItemStockTime"					"30"
@@ -6523,7 +6523,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "0"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "2130"
+		"ItemInitialStockTime"          "1530"// 体验阶段25分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
 		"ItemStockTime"					"30"
@@ -6574,7 +6574,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "2130"
+		"ItemInitialStockTime"          "30"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
 		"ItemStockTime"					"30"
@@ -6632,7 +6632,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6665,7 +6665,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6698,7 +6698,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6731,7 +6731,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6765,7 +6765,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6794,7 +6794,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6823,7 +6823,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6852,7 +6852,7 @@
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -6860,6 +6860,23 @@
 			"spell_amp"			"100"	// 15
 		}
 	}
+	"item_timeless_relic_ai"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"0"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
+
 
 	//光暗不羁甲壳
 	"item_recipe_defiant_shell_light"
@@ -6884,7 +6901,7 @@
 		"ItemCost"						"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"AbilityValues"
 		{
 			"bonus_armor"				"100" //7
@@ -6914,7 +6931,7 @@
 		"ItemCost"						"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"AbilityValues"
 		{
 			"bonus_armor"				"20" //7
@@ -6944,7 +6961,7 @@
 		"ItemCost"						"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"AbilityValues"
 		{
 			"bonus_armor"				"100" //7
@@ -6974,7 +6991,7 @@
 		"ItemCost"						"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"AbilityValues"
 		{
 			"bonus_armor"				"20" //7
@@ -7006,7 +7023,7 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7035,7 +7052,7 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7064,7 +7081,7 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7093,7 +7110,7 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7115,7 +7132,7 @@
 			"01"                        "item_pirate_hat;item_light_part"
 		}
 	}
-	"item_pirate_hat_light"
+	"	"
 	{
 		"BaseClass" "item_pirate_hat"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
@@ -7127,12 +7144,12 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_attack_speed"			"450"
-			"bonus_ms"						"150"
+			"bonus_attack_speed"			"500"
+			"bonus_ms"						"200"
 		}
 	}
 	"item_recipe_pirate_hat_dark"
@@ -7158,7 +7175,7 @@
 		"ScriptFile"				"items/item_pirate_hat_dark"
 		"ItemCost"					"0"
 		"ItemPurchasable"			"0"
-		"ItemIsNeutralDrop"				"1"
+		"ItemIsNeutralDrop"				"0"
 		"AbilitySpecial"
 		{
 			"01"
@@ -7198,7 +7215,7 @@
 		"ItemCost"						"0"
 		"ItemPurchasable"				"0"
 		"ItemSellable"					"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7229,7 +7246,7 @@
 		"ScriptFile"				"items/item_pirate_hat_dark_1"
 		"ItemCost"					"0"
 		"ItemPurchasable"			"0"
-		"ItemIsNeutralDrop"				"0"
+		"ItemIsNeutralDrop"				"1"
 		"AbilitySpecial"
 		{
 			"01"

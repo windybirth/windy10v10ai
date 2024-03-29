@@ -103,6 +103,16 @@
 		"item"		"item_reaver"
 		"item"		"item_eagle"
 		"item"		"item_relic"
+		"item"      "item_specialists_array_light"
+		"item"      "item_specialists_array_dark"
+		"item"		"item_timeless_relic_light"
+		"item"		"item_timeless_relic_dark"
+		"item"	    "item_defiant_shell_light"
+		"item"	    "item_defiant_shell_dark"
+		"item"      "item_ex_machina_light"
+		"item"      "item_ex_machina_dark"
+		"item"      "item_pirate_hat_light"
+		"item"      "item_pirate_hat_dark"
 	}
 
 	// Level 1 - Green Recipes
