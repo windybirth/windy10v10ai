@@ -7260,7 +7260,7 @@
 			"01"                        "item_pirate_hat;item_light_part"
 		}
 	}
-	"	"
+	"item_pirate_hat_light"
 	{
 		"BaseClass" "item_pirate_hat"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
