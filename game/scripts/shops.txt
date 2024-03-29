@@ -300,6 +300,7 @@
 		"item"      "item_tier5_token"
 		"item"      "item_light_part"
 		"item"      "item_dark_part"
+		"item"	    "item_exchange"
 	}
 
 	"pregame"
