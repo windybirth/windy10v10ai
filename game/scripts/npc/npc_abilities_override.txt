@@ -1973,11 +1973,12 @@
             "01"
             {
                 "var_type"					"FIELD_FLOAT"
-                "value"				"3.0"
+                "value"				"3.0"	// 1.5
             }
         }
     }
 	// 决斗
+	// FIXME 改成4级
 	"legion_commander_duel"
 	{
 		"AbilityValues"
