@@ -1836,17 +1836,20 @@
 		"DOTA_Tooltip_ability_item_radar_of_dragon_Description"		"<h1>被动：指引</h1>龙珠由击杀肉山和中立生物随机掉落得到。愿望一共有四种，在商店可以找到。\n<font color='#e03e2e'>注意：</font>龙珠无法合成时，请尝试从备用背包中移动至主背包或仓库，或扔下再捡起。所有龙珠及合成后的装备可以与他人共享。"
 
 		// item_light_part 圣光组件
-		"DOTA_Tooltip_Ability_item_light_part"				"圣光组件"
+		"DOTA_Tooltip_Ability_item_light_part"					"圣光组件"
 		"DOTA_Tooltip_ability_item_light_part_Description"		"可以用来将装备进行圣光改造。"
+		"DOTA_Tooltip_Ability_item_light_part_Lore"				"击杀肉山和中立生物时，有几率随机掉落。"
 
 		// item_dark_part 暗影组件
-		"DOTA_Tooltip_Ability_item_dark_part"				"暗影组件"
+		"DOTA_Tooltip_Ability_item_dark_part"					"暗影组件"
 		"DOTA_Tooltip_ability_item_dark_part_Description"		"可以用来将装备进行暗影改造。"
+		"DOTA_Tooltip_Ability_item_dark_part_Lore"				"击杀肉山和中立生物时，有几率随机掉落。"
 
 		// item_exchange 光暗装备转换器
 		"DOTA_Tooltip_Ability_item_exchange"				"光暗装备的中立转换器"
 		"DOTA_Tooltip_ability_item_exchange_Description"	"光暗装备的中立转换器，可以将光暗装备转为中立装备，使之能够装备在中立装备栏。"
 
+		// 神器2.0
 		// item_specialists_array_light 圣光·行家阵列
 		"DOTA_Tooltip_Ability_item_specialists_array_light"				"<font color='#FFFF00'>圣光·行家阵列</font>"
 		"DOTA_Tooltip_Ability_item_specialists_array_light_all_stats"					"+$all"

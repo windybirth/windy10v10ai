@@ -79,10 +79,10 @@
 
 	"misc"
 	{
-		"item"		"item_ring_of_regen"
-		"item"		"item_sobi_mask"
-		"item"		"item_magic_stick"
-		"item"		"item_fluffy_hat"
+		// "item"		"item_ring_of_regen"
+		// "item"		"item_sobi_mask"
+		// "item"		"item_magic_stick"
+		// "item"		"item_fluffy_hat"
 		"item"		"item_wind_lace"
 		"item"		"item_cloak"
 		"item"		"item_boots"
