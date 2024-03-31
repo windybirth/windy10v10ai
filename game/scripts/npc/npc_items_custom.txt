@@ -5553,14 +5553,14 @@
 		"ID"							"9594"
 		"Model"							"models/props_gameplay/recipe.vmdl"
         "AbilityTextureName" 			"item_recipe_rapier_ultra"
-		"ItemCost"						"1400"
+		"ItemCost"						"1200"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_rapier_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_excalibur;item_dark_part;item_dark_part"
-			"02"						"item_excalibur;item_light_part;item_dark_part"
+			"01"						"item_excalibur;item_light_part;item_dark_part"
+			"02"						"item_excalibur;item_dark_part;item_dark_part"
 			"03"						"item_excalibur;item_light_part;item_light_part"
 		}
 	}
@@ -5610,44 +5610,44 @@
 	}
 
 	//=================================================================================================================
-    // ai专用神器诅咒圣剑 rapier ultra bot
+    // 解放的诅咒圣剑 rapier ultra bot
     //=================================================================================================================
-	"item_recipe_rapier_ultra_bot"
-	{
-		"BaseClass"						"item_datadriven"
-		"ID"							"9596"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-        "AbilityTextureName" 			"item_recipe_rapier_ultra"
-		"ItemCost"						"1400"
-		"ItemShopTags"					""
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_rapier_ultra_bot"
-		"ItemRequirements"
-		{
-			"01"						"item_rapier_ultra;item_dark_part;item_dark_part"
-			"02"						"item_rapier_ultra;item_light_part;item_dark_part"
-			"03"						"item_rapier_ultra;item_light_part;item_light_part"
-		}
-	}
+	// "item_recipe_rapier_ultra_bot"
+	// {
+	// 	"BaseClass"						"item_datadriven"
+	// 	"ID"							"9597"
+	// 	"Model"							"models/props_gameplay/recipe.vmdl"
+    //     "AbilityTextureName" 			"item_recipe_rapier_ultra"
+	// 	"ItemCost"						"1400"
+	// 	"ItemShopTags"					""
+	// 	"ItemRecipe"					"1"
+	// 	"ItemResult"					"item_rapier_ultra_bot"
+	// 	"ItemRequirements"
+	// 	{
+	// 		"01"						"item_rapier_ultra;item_dark_part;item_dark_part"
+	// 		"02"						"item_rapier_ultra;item_light_part;item_dark_part"
+	// 		"03"						"item_rapier_ultra;item_light_part;item_light_part"
+	// 	}
+	// }
 	"item_rapier_ultra_bot"
 	{
 		"BaseClass"						"item_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"							"9595"
+		"ID"							"9596"
 		"AbilityTextureName"			"item_rapier_ultra"
-		"ItemCost"						"39000"
+		"ItemCost"						"8282"
 
 		"ItemDroppable"                 "1"
 		"ItemKillable"					"0"
 		"ItemPurchasable"				"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
 		"AllowedInBackpack"				"1"
 
 		"AbilityValues"
 		{
-			"bonus_damage"			"1200"
-			"bonus_spell_amp"		"120"
-			"bonus_damage_percent"	"120"
+			"bonus_damage"			"1"
+			"bonus_spell_amp"		"1"
+			"bonus_damage_percent"	"1"
 
 			"ruin_chance_tooltip"	"0"
 		}
@@ -6617,7 +6617,7 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemInitialStockTime"          "1545"// 25分钟买
 		"ItemStockInitial"				"0"
@@ -6639,7 +6639,7 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemInitialStockTime"          "1545"// 25分钟买
 		"ItemStockInitial"				"0"
