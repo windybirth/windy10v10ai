@@ -38,26 +38,43 @@ export class EventGameStateChange {
     return maxGold;
   }
 
+  // 获取电脑英雄的平均经济
+  private GetAIAverageGold(): number {
+    let totalGold = 0;
+    let totalAI = 0;
+    for (let i = 0; i < PlayerResource.GetPlayerCount(); i++) {
+      if (PlayerResource.IsValidPlayer(i) && PlayerResource.IsFakeClient(i)) {
+        const gold = PlayerResource.GetGold(i);
+        totalGold += gold;
+        totalAI++;
+      }
+    }
+    return totalGold / totalAI;
+  }
+
   // 计算加多少钱
-  private CalculateAddGold(hero: CDOTA_BaseNPC_Hero): number {
+  private CalculateAddGold(_hero: CDOTA_BaseNPC_Hero): number {
     // 获取电脑英雄的经济
-    const gold = hero.GetGold();
+    const gold = this.GetAIAverageGold();
 
     const playerMaxGold = this.GetPlayerMaxGold();
 
     const gameTime = GameRules.GetGameTime();
+
     print(
       `[CalculateAddGold] gameTime: ${gameTime}, playerMaxGold: ${playerMaxGold}, gold: ${gold}`,
     );
     // 如果玩家的经济比电脑的经济高，给电脑加钱
-    if (playerMaxGold > gold) {
-      return playerMaxGold - gold + (playerMaxGold / gameTime) * 60;
-    }
-    return 1000;
+    // if (playerMaxGold > gold) {
+    //   return playerMaxGold - gold + (playerMaxGold / gameTime) * 120;
+    // }
+    return playerMaxGold - gold + (playerMaxGold / gameTime) * 120;
   }
 
-  // 给电脑加钱
+  // 如果是N6，给电脑加钱
   private AddGoldToAI(): void {
+    // 获取游戏难度
+    const gameDifficulty = GameRules.GetCustomGameDifficulty();
     // 获取所有AI
     for (let i = 0; i < PlayerResource.GetPlayerCount(); i++) {
       // 是电脑
@@ -72,10 +89,12 @@ export class EventGameStateChange {
       }
     }
 
-    // 每隔2分钟给电脑加钱
-    Timers.CreateTimer(120, () => {
-      this.AddGoldToAI();
-    });
+    // 如果是难6，每隔2分钟给电脑加钱
+    if (gameDifficulty === 6) {
+      Timers.CreateTimer(2 * 60, () => {
+        this.AddGoldToAI();
+      });
+    }
   }
 
   private OnGameInProgress(): void {}
