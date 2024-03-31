@@ -7602,7 +7602,7 @@
 	"item_gossamer_cape_dark"
 	{
 		"BaseClass" "item_gossamer_cape"
-		"AbilityCooldown"				"0.2"  //4
+		"AbilityCooldown"				"0.4"  //4
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
