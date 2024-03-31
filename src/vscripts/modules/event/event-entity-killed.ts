@@ -50,6 +50,46 @@ export class EventEntityKilled {
       // TODO 调整经验金钱奖励
       // 获取游戏时间
       const gameTime = GameRules.GetGameTime();
+      //当游戏进行到5分钟时，每2分钟获取经济最高的玩家的经济，获取ai的平均经济，对ai发放的金钱为经济最高的玩家的经济与ai的平均经济的差值，并对ai发放金钱
+      if (gameTime > 300 && gameTime % 120 === 0) {
+        // 获取经济最高的玩家的经济
+        let maxGold = 0;
+        let maxPlayer: CDOTAPlayer | undefined;
+        for (let i = 0; i < DOTALimits_t.DOTA_MAX_TEAM_PLAYERS; i++) {
+          const player = PlayerResource.GetPlayer(i);
+          if (player && PlayerHelper.IsHumanPlayer(player)) {
+            const playerGold = PlayerResource.GetGold(i);
+            if (playerGold > maxGold) {
+              maxGold = playerGold;
+              maxPlayer = player;
+            }
+          }
+        }
+
+        // 获取ai的平均经济
+        let aiGold = 0;
+        let aiCount = 0;
+        for (let i = 0; i < DOTALimits_t.DOTA_MAX_TEAM_PLAYERS; i++) {
+          const player = PlayerResource.GetPlayer(i);
+          if (player && !PlayerHelper.IsHumanPlayer(player)) {
+            aiGold += PlayerResource.GetGold(i);
+            aiCount++;
+          }
+        }
+        const aiAverageGold = aiGold / aiCount;
+
+        // 对ai发放金钱
+        if (maxPlayer) {
+          for (let i = 0; i < DOTALimits_t.DOTA_MAX_TEAM_PLAYERS; i++) {
+            const player = PlayerResource.GetPlayer(i);
+            if (player && !PlayerHelper.IsHumanPlayer(player)) {
+              const playerGold = PlayerResource.GetGold(i);
+              const gold = maxGold - aiAverageGold + (maxGold / gameTime) * 60;
+              PlayerResource.SetGold(i, playerGold + gold, false);
+            }
+          }
+        }
+      }
 
       hero.AddExperience(xp, ModifyXpReason.CREEP_KILL, false, false);
       hero.ModifyGold(gold, true, ModifyGoldReason.CREEP_KILL);
