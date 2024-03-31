@@ -40,8 +40,20 @@ export class EventEntityKilled {
     }
   }
 
-  private OnHeroKilled(_hero: CDOTA_BaseNPC_Hero): void {
+  private OnHeroKilled(hero: CDOTA_BaseNPC_Hero): void {
     // FIXME 重写lua的OnHeroKilled
+    // 电脑被击杀时，如果是玩家击杀的，奖励额外经验金钱
+    if (!PlayerHelper.IsHumanPlayer(hero)) {
+      const gold = 1000;
+      const xp = 1000;
+
+      // TODO 调整经验金钱奖励
+      // 获取游戏时间
+      const gameTime = GameRules.GetGameTime();
+
+      hero.AddExperience(xp, ModifyXpReason.CREEP_KILL, false, false);
+      hero.ModifyGold(gold, true, ModifyGoldReason.CREEP_KILL);
+    }
   }
 
   private OnCreepKilled(
