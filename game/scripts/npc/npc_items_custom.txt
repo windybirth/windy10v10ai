@@ -5553,13 +5553,15 @@
 		"ID"							"9594"
 		"Model"							"models/props_gameplay/recipe.vmdl"
         "AbilityTextureName" 			"item_recipe_rapier_ultra"
-		"ItemCost"						"4400"
+		"ItemCost"						"400"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
 		"ItemResult"					"item_rapier_ultra"
 		"ItemRequirements"
 		{
-			"01"						"item_excalibur;item_rapier"
+			"01"						"item_excalibur;item_light_part;item_dark_part"
+			"02"						"item_excalibur;item_light_part;item_light_part"
+			"03"						"item_excalibur;item_dark_part;item_dark_part"
 		}
 	}
 
@@ -5610,17 +5612,34 @@
 	//=================================================================================================================
     // ai专用神器诅咒圣剑 rapier ultra bot
     //=================================================================================================================
+	"item_recipe_rapier_ultra_bot"
+	{
+		"BaseClass"						"item_datadriven"
+		"ID"							"9598"
+		"Model"							"models/props_gameplay/recipe.vmdl"
+        "AbilityTextureName" 			"item_recipe_rapier_ultra"
+		"ItemCost"						"400"
+		"ItemShopTags"					""
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_rapier_ultra_bot"
+		"ItemRequirements"
+		{
+			"01"						"item_rapier_ultra;item_light_part;item_dark_part"
+			"02"						"item_rapier_ultra;item_light_part;item_light_part"
+			"03"						"item_rapier_ultra;item_dark_part;item_dark_part"
+		}
+	}
 	"item_rapier_ultra_bot"
 	{
 		"BaseClass"						"item_datadriven"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"							"9595"
+		"ID"							"9599"
 		"AbilityTextureName"			"item_rapier_ultra"
 		"ItemCost"						"39000"
 
 		"ItemDroppable"                 "1"
 		"ItemKillable"					"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				    "0"
 		"AllowedInBackpack"				"1"
 
@@ -5742,12 +5761,12 @@
 				"bonus_mana_regen"			"10"
 				"bonus_health_regen"		"16"
 				"silence_duration"			"5"
-				"silence_damage_percent"	"150"	// 120
+				"silence_damage_percent"	"300"	// 120
 				"bonus_damage"				"60"
 				"duration"					"6"
 				"spell_amp_debuff"			"70"
-				"proc_damage"				"120"
-				"proc_chance"				"80"
+				"proc_damage"				"300"
+				"proc_chance"				"100"
 		}
 	}
 
