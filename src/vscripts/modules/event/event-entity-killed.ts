@@ -11,7 +11,7 @@ export class EventEntityKilled {
   private dropItemListArtifactPart: string[] = ["item_light_part", "item_dark_part"];
 
   private dropItemChanceRoshanArtifactPart = 100;
-  private dropItemChanceCreepArtifactPart = 1.0;
+  private dropItemChanceCreepArtifactPart = 2.0;
 
   // 龙珠
   private dropItemListDragonBall: string[] = [
@@ -22,13 +22,11 @@ export class EventEntityKilled {
     "item_dragon_ball_5",
     "item_dragon_ball_6",
     "item_dragon_ball_7",
-    "item_dark_part",
-    "item_light_part",
   ];
 
   private dropItemChanceRoshan = 100;
-  private dropItemChanceAncient = 1.0;
-  private dropItemChanceNeutral = 0.15;
+  private dropItemChanceAncient = 1.5;
+  private dropItemChanceNeutral = 0.3;
 
   OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
     const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
