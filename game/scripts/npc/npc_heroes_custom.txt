@@ -2390,6 +2390,12 @@
 	{
 	    "Ability5"		"spirit_breaker_empowering_haste"
 	}
+	"npc_dota_hero_storm_spirit"
+	{
+		"AttackRate"		"1.0"
+		"Ability4"			"batrider_flaming_lasso"
+		"Ability17"			"special_bonus_unique_batrider_6"
+	}
 	"npc_dota_hero_sven"
 	{
 		"AttackRate"		"1.700000"

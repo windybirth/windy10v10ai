@@ -11523,14 +11523,17 @@
 				"electric_vortex_pull_distance"		"180 220 260 300 340"
 				"AbilityDuration"
 				{
-					"value"				"1.2 1.5 1.8 2.1 2.4"	// 0.9 1.3 1.7 2.1
-					"special_bonus_unique_storm_spirit"	"+0.3"
+					"value"				"1.8 2.2 2.6 3.0 3.4"	// 0.9 1.3 1.7 2.1
+					"special_bonus_unique_storm_spirit"	"+0.6"
 				}
 		}
 	}
 	// 电子狂欢
 	"storm_spirit_electric_rave"
 	{
+		"AbilityCooldown"		"10.0"
+		"AbilityManaCost"		"100"
+		"AbilityDamage"			"75130200""
 		"AbilityValues"
 		{
 			"radius"
@@ -11538,7 +11541,7 @@
 				"value"		"750"
 				"affected_by_aoe_increase"	"1"
 			}
-			"charges"				"9"
+			"charges"				"50"
 			"duration"				"20"
 		}
 	}
