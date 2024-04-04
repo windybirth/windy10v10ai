@@ -616,7 +616,7 @@
 		"AbilityValues"
 		{
 			"duration"						"45"
-			"hawk_base_max_health"			"200 250 300 350 400"
+			"hawk_base_max_health"			"300 450 600 750 900"
 			"hawk_base_movespeed"			"420"
 			"hawk_base_gold_bounty"			"60"
 			"hawk_base_vision_range"		"800 900 1000 1100 1200"
@@ -624,16 +624,12 @@
 			{
 				"value"						"60"
 				"special_bonus_shard"		"-10"
-
 			}
-		}
-	}
-	// 战鹰俯冲
-	"beastmaster_hawk_dive"
-	{
-		"AbilityValues"
-		{
-			"damage"		"350"
+			"dive_damage"
+			{
+				"value"		"60 120 180 240 300"
+				"special_bonus_unique_beastmaster_2" "+30"
+			}
 		}
 	}
 	"special_bonus_unique_beastmaster_5"
@@ -1962,6 +1958,7 @@
 			}
 		}
 	}
+	// 强攻提供{s:value}秒 减益免疫
 	"special_bonus_unique_legion_commander_8"
     {
         "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
@@ -1973,10 +1970,34 @@
             "01"
             {
                 "var_type"					"FIELD_FLOAT"
-                "value"				"2.5"
+                "value"				"3.0"	// 1.5
             }
         }
     }
+	// 决斗
+	"legion_commander_duel"
+	{
+		"MaxLevel" "4"
+		"AbilityValues"
+		{
+			"duration"				"3.75 4.5 5.25 6.0"
+			"duration_scepter"
+			{
+				"value"			"5.5 6.5 7.5 8.5"
+				"RequiresScepter"	"1"
+			}
+			"reward_damage"
+			{
+				"value"			"10 20 30 40"
+				"special_bonus_shard"	"+8"
+			}
+			"AbilityCooldown"
+			{
+				"value"					"60 55 50 45"
+				"special_bonus_scepter"			"-20"
+			}
+		}
+	}
 	//=================================================================================================================
 	// Ability: Lifestealer 噬魂鬼/小狗
 	//=================================================================================================================
@@ -3210,6 +3231,11 @@
 				"whirling_damage"			"120 160 200 260 320"
 				"tree_damage_scale"			"15 25 35 45 55"
 				"duration"					"15"
+				"stat_loss_pct"
+				{
+					"value"			"12 14 16 18 20"// 13 英雄特色理应加强
+					"special_bonus_unique_timbersaw_5"	"10"// 从15级天赋上调至25级天赋
+				}
 		}
 	}
 	// 伐木链锯
@@ -3248,6 +3274,32 @@
 				"value"			"12 22 32 42 52"
 				"special_bonus_unique_timbersaw_2"			"+8"
 			}
+			"AbilityCooldown"
+			{
+				"value"  		"30"// 45
+				"RequiresScepter"				"1"
+			}
+			"initial_shield"
+			{
+				"value"  		"400"// 200 不如安全泡泡
+				"RequiresScepter"				"1"
+			}
+			"shield_per_sec"
+			{
+				"value"  		"200"// 100 相当于无法被减治疗只能被否决的回血
+				"RequiresScepter"				"1"
+			}
+			"shield_per_sec_per_enemy"
+			{
+				"value"  		"150"// 75 相当于无法被减治疗只能被否决的回血
+				"RequiresScepter"				"1"
+			}
+			"max_shield"
+			{
+				"value"		"2400"// 800 十个人
+				"RequiresScepter"				"1"
+
+			}
 		}
 	}
 	// 锯齿飞轮
@@ -3257,8 +3309,8 @@
 		"AbilityManaCost"				"75 125 175 225"
 		"AbilityValues"
 		{
-				"pass_damage"			"110 155 200 245"
-				"damage_per_second"		"50 75 100 125"
+				"pass_damage"			"150 200 250 300"
+				"damage_per_second"		"50 100 150 200"
 				"mana_per_second"		"14 22 30 38"
 		}
 	}
@@ -3268,8 +3320,8 @@
 		"AbilityManaCost"				"75 125 175 225"
 		"AbilityValues"
 		{
-				"pass_damage"			"110 155 200 245"
-				"damage_per_second"		"50 75 100 125"
+				"pass_damage"			"150 200 250 300"
+				"damage_per_second"		"50 100 150 200"
 				"mana_per_second"		"14 22 30 38"
 		}
 	}
@@ -5881,7 +5933,7 @@
 				"value"								"2 2.6 3.2 3.8 4.4 5.0" 	// 2 2.4 2.8 3.2 3.6 4.0
 				"special_bonus_unique_medusa_6"		"+2.5"				// +1.7
 			}
-			"absorption_pct"						"94"		// 98
+			"absorption_pct"						"90"		// 98
 			"bonus_mana"			"100 200 300 400 600 800"
 		}
 	}
@@ -7530,6 +7582,7 @@
 	"terrorblade_sunder"
 	{
 		"MaxLevel" "4"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
 		"AbilityCastRange"				"500 1000 1500 2000" // FIXME 暂时加强
@@ -8130,6 +8183,33 @@
 				"special_bonus_unique_viper_8"		"-50%"
 			}
 		}
+	}
+	// 极恶俯冲
+	"viper_nose_dive"
+	{
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"600"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"				"1000"// 500
+				"affected_by_aoe_increase"	"1"
+			}
+			"corrosive_radius"
+			{
+				"value"			"1800"// 1200
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"							"0.1"
+			"effect_duration"						"4"
+			"dive_speed"
+			{
+				"value"			"2000"// 500
+			}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_VIPER_DIVE"
+		"AbilityCastGestureSlot"	"DEFAULT"
 	}
 	//=================================================================================================================
 	// Ability: Weaver 编织者/蚂蚁
