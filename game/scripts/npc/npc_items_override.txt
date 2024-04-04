@@ -119,13 +119,24 @@
 	"item_tango"
 	{
 		"ItemCost"						"100"			// 90
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60"
 		"AbilityValues"
 		{
 				"health_regen"			"21.0"			// 7.0
-				"buff_duration"			"30.0"			// 16.0
+				"buff_duration"			"60.0"			// 16.0
+				"break_on_hero_damage"	"0"
+		}
+	}
+	"item_flask" // 大药
+	{
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60"
+		"AbilityValues"
+		{
+				"buff_duration"			"10"
+				"health_regen"			"300"
+				"break_on_hero_damage"	"0"
 		}
 	}
 	// 净化药水
@@ -137,6 +148,7 @@
 		{
 				"mana_regen"			"12"			// 6
 				"buff_duration"			"25"			// 25
+				"break_on_hero_damage"	"0"
 		}
 	}
 	// 芒果
@@ -190,8 +202,11 @@
 		{
 				"health_restore"		"2400"			// 110
 				"mana_restore"			"1300"			// 60
+				"health_restore_pct"	"7"
+				"mana_restore_pct"		"7"
 				"restore_time"			"3.5"			// 2.7
 				"max_charges"			"5"				// 3
+				"break_on_hero_damage"	"0"
 				"rune_expire_time"		"120.0"			// 90
 		}
 	}
@@ -200,7 +215,7 @@
 		"ItemIsNeutralDrop"             "1" // 改到中立格子
 		"AbilityValues"
 		{
-				"tp_cooldown"			"30" // cd与回城卷轴同步
+				"tp_cooldown"			"10" // cd与回城卷轴同步
 		}
 	}
 	"item_tier1_token"

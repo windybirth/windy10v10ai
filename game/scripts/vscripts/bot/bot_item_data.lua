@@ -1732,7 +1732,7 @@ tBotItemData.addNeutralItemList = {
 		'item_defiant_shell_ai_1',
 	},
 	npc_dota_hero_medusa = {
-		'item_mysterious_hat_ai',
+		'item_mysterious_hat_ai_1',
 	},
 	npc_dota_hero_meepo = {
 		'item_minotaur_horn',
@@ -1747,7 +1747,7 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone',
 	},
 	npc_dota_hero_omniknight = {
-		'item_ceremonial_robe_ai',
+		'item_ceremonial_robe_ai_1',
 	},
 	npc_dota_hero_oracle = {
 		'item_spell_prism',

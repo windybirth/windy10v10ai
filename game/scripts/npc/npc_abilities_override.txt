@@ -7585,11 +7585,11 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
-		"AbilityCastRange"				"500 1000 1500 2000" // FIXME 暂时加强
+		"AbilityCastRange"				"500 1000 2000 80000" // FIXME 暂时加强
 		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"25 20 15 10" // 35 30 25
+				"hit_point_minimum_pct"		"20 15 10 1" // 35 30 25
 		}
 	}
 	"special_bonus_unique_terrorblade"

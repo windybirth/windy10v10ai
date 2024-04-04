@@ -6503,57 +6503,6 @@
 	}
 
 	//=================================================================================================================
-	// 大鞋2 Guardian Greaves
-	//=================================================================================================================
-	"item_recipe_guardian_greaves_2"
-	{
-		"BaseClass"                     "item_recipe_guardian_greaves"
-		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ItemCost"						"0"
-		"ItemShopTags"					""
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_guardian_greaves_2"
-		"ItemRequirements"
-		{
-			"01"						"item_guardian_greaves;item_guardian_greaves"
-		}
-	}
-
-	"item_guardian_greaves_2"
-	{
-		"BaseClass"                     "item_guardian_greaves"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"FightRecapLevel"				"1"
-		"AbilityCooldown"				"20"
-		"AbilityManaCost"				"0"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"ItemAlertable"					"1"
-		"ShouldBeSuggested"				"1"
-		"AbilityValues"
-		{
-			"bonus_movement"		"200"
-			"bonus_armor"		"24"
-			"mana_regen"		"6"
-			"aura_health_regen"		"10"
-			"aura_armor"		"18"
-			"aura_mana_regen"		"1.5"
-			"aura_radius"			"1800"
-			"aura_health_regen_bonus"		"58"
-			"aura_mana_regen_bonus"		"20"
-			"aura_armor_bonus"			"32"
-			"aura_bonus_threshold"	"100"
-			"replenish_health"		"7000"
-			"replenish_mana"		"4000"
-			"replenish_radius"
-			{
-				"value"		"1800"
-				"affected_by_aoe_increase"	"1"
-			}
-			"max_health_pct_heal_amount"		"2"
-		}
-	}
-
-	//=================================================================================================================
 	// 蝴蝶2 Recipe: Butterfly
 	//=================================================================================================================
 	"item_recipe_butterfly_2"
@@ -7242,8 +7191,9 @@
 	}
 
 	//=================================================================================================================
-	// 神器2.0
+	// 神器2.0升级
 	//=================================================================================================================
+	//圣光组件
 	"item_light_part"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7257,42 +7207,15 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "2130"
+		"ItemInitialStockTime"          "945"// 25分钟买
 		"ItemStockInitial"				"0"
-		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
-		"AbilityValues"
-		{
-			"bonus_all_stats"		""
-		}
-		"Modifiers"
-		{
-			"modifier_item_dragon_ball_1"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"		"items/item_light_part"
-						"Function"			"OnDragonBallPicked"
-					}
-				}
-			}
-		}
+		"ItemStockMax"					"3"
+		"ItemStockTime"					"10"
 	}
+
+	//暗影组件
 	"item_dark_part"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7306,42 +7229,15 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "2130"
+		"ItemInitialStockTime"          "945"// 25分钟买
 		"ItemStockInitial"				"0"
-		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
-		"AbilityValues"
-		{
-			"bonus_all_stats"		"1"
-		}
-		"Modifiers"
-		{
-			"modifier_item_dragon_ball_1"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"		"items/item_dark_part"
-						"Function"			"OnDragonBallPicked"
-					}
-				}
-			}
-		}
+		"ItemStockMax"					"3"
+		"ItemStockTime"					"10"
 	}
+
+	//中立转换器
 	"item_exchange"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7355,43 +7251,997 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "0"
+		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
 		"ItemInitialStockTime"          "30"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"30"
+		"ItemStockTime"					"10"
+	}
+
+	//光暗行家阵列
+	"item_recipe_specialists_array_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11009"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array;item_light_part"
+		}
+	}
+	"item_specialists_array_light"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"1.5"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_specialists_array_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_all_stats"		"0"
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"4"		//2
+			"secondary_target_range_bonus"	"225"	//225
+			"proc_bonus_damage"				"2000"	//20
 		}
-		"Modifiers"
+	}
+	"item_recipe_specialists_array_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11010"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_dark"
+		"ItemRequirements"
 		{
-			"modifier_item_exchange"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"		"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"			"%bonus_all_stats"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"		"%bonus_all_stats"
-				}
-				"OnCreated"
-				{
-					"RunScript"
-					{
-						"ScriptFile"		"items/item_exchange"
-						"Function"			"OnDragonBallPicked"
-					}
-				}
-			}
+			"01"                        "item_specialists_array;item_dark_part"
+		}
+	}
+	"item_specialists_array_dark"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"0.03"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_specialists_array_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"10"	//2
+			"secondary_target_range_bonus"	"450"	//225
+			"proc_bonus_damage"				"200"	//20
+		}
+	}
+	"item_recipe_specialists_array_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12009"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array_light;item_exchange"
+		}
+	}
+	"item_specialists_array_light_1"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"1.5"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_specialists_array_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"4"		//2
+			"secondary_target_range_bonus"	"225"	//225
+			"proc_bonus_damage"				"2000"	//20
+		}
+	}
+	"item_recipe_specialists_array_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12010"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array_dark;item_exchange"
+		}
+	}
+	"item_specialists_array_dark_1"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"0.03"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_specialists_array_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"10"	//2
+			"secondary_target_range_bonus"	"450"	//225
+			"proc_bonus_damage"				"200"	//20
+		}
+	}
+	"item_recipe_specialists_array_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13011"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array_light;item_dark_part"
+			"02"						"item_specialists_array_dark;item_light_part"
+		}
+	}
+	"item_specialists_array_ai"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"0.03"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"10"	//2
+			"secondary_target_range_bonus"	"450"	//225
+			"proc_bonus_damage"				"2000"	//20
+		}
+	}
+	"item_recipe_specialists_array_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13012"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_specialists_array_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_specialists_array_ai;item_exchange"
+			"02"						"item_specialists_array_light_1;item_dark_part"
+			"03"						"item_specialists_array_dark_1;item_light_part"
+		}
+	}
+	"item_specialists_array_ai_1"
+	{
+		"BaseClass" "item_specialists_array"
+		"AbilityCooldown"				"0.03"		//8
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"all_stats"						"30"	//7
+			"bonus_damage"					"90"	//12
+			"count"							"10"	//2
+			"secondary_target_range_bonus"	"450"	//225
+			"proc_bonus_damage"				"2000"	//20
 		}
 	}
 
+	//光暗永恒遗物
+	"item_recipe_timeless_relic_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11019"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic;item_light_part"
+		}
+	}
+	"item_timeless_relic_light"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_timeless_relic_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"45"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11020"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic;item_dark_part"
+		}
+	}
+	"item_timeless_relic_dark"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_timeless_relic_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"40"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12019"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic_light;item_exchange"
+		}
+	}
+	"item_timeless_relic_light_1"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_timeless_relic_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"45"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11020"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic_dark;item_exchange"
+		}
+	}
+	"item_timeless_relic_dark_1"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_timeless_relic_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"40"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13021"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic_light;item_dark_part"
+			"02"						"item_timeless_relic_dark;item_light_part"
+		}
+	}
+	"item_timeless_relic_ai"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
+	"item_recipe_timeless_relic_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13022"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_timeless_relic_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_timeless_relic_ai;item_exchange"
+			"02"						"item_timeless_relic_light_1;item_dark_part"
+			"03"						"item_timeless_relic_dark_1;item_light_part"
+		}
+	}
+	"item_timeless_relic_ai_1"
+	{
+		"BaseClass" "item_timeless_relic"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"debuff_amp"		"120"	// 20
+			"spell_amp"			"100"	// 15
+		}
+	}
+
+
+	//光暗不羁甲壳
+	"item_recipe_defiant_shell_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11011"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell;item_light_part"
+		}
+	}
+	"item_defiant_shell_light"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_defiant_shell_light"
+		"AbilityValues"
+		{
+			"bonus_armor"				"100" //7
+			"all_stats"			        "100" //7
+			"counter_cooldown"			"1.0" //5
+		}
+	}
+	"item_recipe_defiant_shell_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11012"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell;item_dark_part"
+		}
+	}
+	"item_defiant_shell_dark"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_defiant_shell_dark"
+		"AbilityValues"
+		{
+			"bonus_armor"				"20" //7
+			"all_stats"			        "20" //7
+			"counter_cooldown"			"0.15" //5
+		}
+	}
+	"item_recipe_defiant_shell_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11011"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell_light;item_exchange"
+		}
+	}
+	"item_defiant_shell_light_1"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_defiant_shell_light"
+		"AbilityValues"
+		{
+			"bonus_armor"				"100" //7
+			"all_stats"			        "100" //7
+			"counter_cooldown"			"1.0" //5
+		}
+	}
+	"item_recipe_defiant_shell_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11012"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell_dark;item_exchange"
+		}
+	}
+	"item_defiant_shell_dark_1"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_defiant_shell_dark"
+		"AbilityValues"
+		{
+			"bonus_armor"				"20" //7
+			"all_stats"			        "20" //7
+			"counter_cooldown"			"0.15" //5
+		}
+	}
+	"item_recipe_defiant_shell_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13013"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell_light;item_dark_part"
+			"02"						"item_defiant_shell_dark;item_light_part"
+		}
+	}
+	"item_defiant_shell_ai"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"AbilityValues"
+		{
+			"bonus_armor"				"100" //7
+			"all_stats"			        "100" //7
+			"counter_cooldown"			"0.15" //5
+		}
+	}
+	"item_recipe_defiant_shell_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13014"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_defiant_shell_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_defiant_shell_ai;item_exchange"
+			"02"						"item_defiant_shell_light_1;item_dark_part"
+			"03"						"item_defiant_shell_dark_1;item_light_part"
+		}
+	}
+	"item_defiant_shell_ai_1"
+	{
+		"BaseClass" "item_defiant_shell"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemCost"						"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemSellable"					"0"
+		"AbilityValues"
+		{
+			"bonus_armor"				"100" //7
+			"all_stats"			        "100" //7
+			"counter_cooldown"			"0.15" //5
+		}
+	}
+
+	//光暗机械之心
+	"item_recipe_ex_machina_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11039"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina;item_light_part"
+		}
+	}
+	"item_ex_machina_light"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"20.0"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ex_machina_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"60"
+		}
+	}
+	"item_recipe_ex_machina_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11040"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina;item_dark_part"
+		}
+	}
+	"item_ex_machina_dark"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"2.5"
+		"AbilityManaCost"				"450"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ex_machina_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"40"
+		}
+	}
+	"item_recipe_ex_machina_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12039"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina_light;item_exchange"
+		}
+	}
+	"item_ex_machina_light_1"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"20.0"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ex_machina_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"60"
+		}
+	}
+	"item_recipe_ex_machina_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12040"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina_dark;item_exchange"
+		}
+	}
+	"item_ex_machina_dark_1"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"2.5"
+		"AbilityManaCost"				"450"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ex_machina_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"40"
+		}
+	}
+	"item_recipe_ex_machina_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13041"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina_light;item_dark_part"
+			"02"						"item_ex_machina_dark;item_light_part"
+		}
+	}
+	"item_ex_machina_ai"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"2.5"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"60"
+		}
+	}
+	"item_recipe_ex_machina_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13042"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ex_machina_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ex_machina_ai;item_exchange"
+			"02"						"item_ex_machina_light_1;item_dark_part"
+			"03"						"item_ex_machina_dark_1;item_light_part"
+		}
+	}
+	"item_ex_machina_ai_1"
+	{
+		"BaseClass" "item_ex_machina"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityCooldown"				"2.5"
+		"AbilityManaCost"				"0"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_armor"			"60"
+		}
+	}
+
+	//光暗海盗帽
+	"item_recipe_pirate_hat_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11037"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat;item_light_part"
+		}
+	}
+	"item_pirate_hat_light"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"250"
+		"AbilityCooldown"				"10.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.5"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_pirate_hat_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"600"
+			"bonus_ms"						"400"
+		}
+	}
+	"item_recipe_pirate_hat_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11038"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat;item_dark_part"
+		}
+	}
+	"item_pirate_hat_dark"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"80000"
+		"AbilityCooldown"				"1.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.1"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_pirate_hat_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"200"
+			"bonus_ms"						"30"
+		}
+	}
+	"item_recipe_pirate_hat_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12037"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat_light;item_exchange"
+		}
+	}
+	"item_pirate_hat_light_1"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"250"
+		"AbilityCooldown"				"10.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.5"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_pirate_hat_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"600"
+			"bonus_ms"						"400"
+		}
+	}
+	"item_recipe_pirate_hat_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12038"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat_dark;item_exchange"
+		}
+	}
+	"item_pirate_hat_dark_1"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"80000"
+		"AbilityCooldown"				"1.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.1"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_pirate_hat_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"200"
+			"bonus_ms"						"30"
+		}
+	}
+	"item_recipe_pirate_hat_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13039"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat_light;item_dark_part"
+			"02"						"item_pirate_hat_dark;item_light_part"
+		}
+	}
+	"item_pirate_hat_ai"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"80000"
+		"AbilityCooldown"				"1.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.1"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"600"
+			"bonus_ms"						"400"
+		}
+	}
+	"item_recipe_pirate_hat_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13040"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_pirate_hat_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_pirate_hat_ai;item_exchange"
+			"02"						"item_pirate_hat_light_1;item_dark_part"
+			"03"						"item_pirate_hat_dark_1;item_light_part"
+		}
+	}
+	"item_pirate_hat_ai_1"
+	{
+		"BaseClass" "item_pirate_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
+		"AbilityCastRange"				"80000"
+		"AbilityCooldown"				"1.0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityChannelTime"			"0.1"
+		"ItemCost"						"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_attack_speed"			"600"
+			"bonus_ms"						"400"
+		}
+	}
+
+	// 光暗仙灵饰品
 	"item_recipe_mysterious_hat_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7411,13 +8261,15 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mysterious_hat_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
 			"bonus_health"			"2500"
-			"spell_amp"			"150"
+			"spell_amp"				"120"
 			"manacost_reduction"			"10"
 		}
 	}
@@ -7440,18 +8292,145 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mysterious_hat_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
 			"bonus_health"			"2500"
-			"spell_amp"			"10"
-			"manacost_reduction"			"95"
+			"spell_amp"				"10"
+			"manacost_reduction"			"85"
+		}
+	}
+	"item_recipe_mysterious_hat_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12001"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat_light;item_exchange"
+		}
+	}
+	"item_mysterious_hat_light_1"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mysterious_hat_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"				"120"
+			"manacost_reduction"			"10"
+		}
+	}
+	"item_recipe_mysterious_hat_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12002"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat_dark;item_exchange"
+		}
+	}
+	"item_mysterious_hat_dark_1"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mysterious_hat_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"				"10"
+			"manacost_reduction"			"85"
+		}
+	}
+	"item_recipe_mysterious_hat_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13001"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat_light;item_dark_part"
+			"02"						"item_mysterious_hat_dark;item_light_part"
+		}
+	}
+	"item_mysterious_hat_ai"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"				"120"
+			"manacost_reduction"			"85"
+		}
+	}
+	"item_recipe_mysterious_hat_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13002"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mysterious_hat_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mysterious_hat_ai;item_exchange"
+			"02"						"item_mysterious_hat_light_1;item_dark_part"
+			"03"						"item_mysterious_hat_dark_1;item_light_part"
+		}
+	}
+	"item_mysterious_hat_ai_1"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_health"			"2500"
+			"spell_amp"				"120"
+			"manacost_reduction"			"85"
 		}
 	}
 
-
+	// 光暗安全泡泡
 	"item_recipe_safety_bubble_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7459,30 +8438,30 @@
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_mysterious_hat_light"
+		"ItemResult"                    "item_safety_bubble_light"
 		"ItemRequirements"
 		{
 			"01"                        "item_safety_bubble;item_light_part"
 		}
 	}
-
 	"item_safety_bubble_light"
 	{
 		"BaseClass" "item_safety_bubble"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_safety_bubble_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"shield"	"10000"			//100
-			"restore_time"		"4"	//8
-			"bonus_hp_regen"	"5" 	//2
+			"shield"			"8000"
+			"restore_time"		"4"
+			"bonus_hp_regen"	"5"
 		}
 	}
-
 	"item_recipe_safety_bubble_dark"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7496,25 +8475,151 @@
 			"01"                        "item_safety_bubble;item_dark_part"
 		}
 	}
-
 	"item_safety_bubble_dark"
 	{
 		"BaseClass" "item_safety_bubble"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_safety_bubble_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"shield"	"2000"			//100
-			"restore_time"			"0.2"	//8
-			"bonus_hp_regen"	"5" 	//2
+			"shield"				"2000"
+			"restore_time"			"0.4"
+			"bonus_hp_regen"		"50"
+		}
+	}
+	"item_recipe_safety_bubble_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12003"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_safety_bubble_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble_light;item_exchange"
+		}
+	}
+	"item_safety_bubble_light_1"
+	{
+		"BaseClass" "item_safety_bubble"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_safety_bubble_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"shield"			"8000"
+			"restore_time"		"4"
+			"bonus_hp_regen"	"5"
+		}
+	}
+	"item_recipe_safety_bubble_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12004"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_safety_bubble_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble_dark;item_exchange"
+		}
+	}
+	"item_safety_bubble_dark_1"
+	{
+		"BaseClass" "item_safety_bubble"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_safety_bubble_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"shield"				"2000"
+			"restore_time"			"0.4"
+			"bonus_hp_regen"		"50"
+		}
+	}
+	"item_recipe_safety_bubble_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13003"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_safety_bubble_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble_light;item_dark_part"
+			"02"						"item_safety_bubble_dark;item_light_part"
+		}
+	}
+	"item_safety_bubble_ai"
+	{
+		"BaseClass" "item_safety_bubble"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"shield"				"8000"
+			"restore_time"			"0.4"
+			"bonus_hp_regen"		"50"
+		}
+	}
+	"item_recipe_safety_bubble_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13004"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_safety_bubble_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_safety_bubble_ai;item_exchange"
+			"02"						"item_safety_bubble_light_1;item_dark_part"
+			"03"						"item_safety_bubble_dark_1;item_light_part"
+		}
+	}
+	"item_safety_bubble_ai_1"
+	{
+		"BaseClass" "item_safety_bubble"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"shield"				"8000"
+			"restore_time"			"0.4"
+			"bonus_hp_regen"		"50"
 		}
 	}
 
-
+	// 光暗林野长弓
 	"item_recipe_grove_bow_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7536,8 +8641,10 @@
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
 		"DisplayOverheadAlertOnReceived" "0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_grove_bow_light"
 		"AbilityValues"
 		{
 			"attack_range_bonus"			"300"		// 75
@@ -7552,10 +8659,10 @@
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_mysterious_hat_dark"
+		"ItemResult"                    "item_grove_bow_dark"
 		"ItemRequirements"
 		{
-			"01"                        "item_mysterious_hat;item_dark_part"
+			"01"                        "item_grove_bow;item_dark_part"
 		}
 	}
 	"item_grove_bow_dark"
@@ -7566,8 +8673,10 @@
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
 		"DisplayOverheadAlertOnReceived" "0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_grove_bow_dark"
 		"AbilityValues"
 		{
 			"attack_range_bonus"			"100"		// 75
@@ -7575,256 +8684,137 @@
 			"magic_resistance_reduction"		"100"	// 15
 		}
 	}
-
-
-	"item_recipe_gossamer_cape_light"
+	"item_recipe_grove_bow_light_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11007"
+		"ID"						    "12005"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_gossamer_cape_light"
+		"ItemResult"                    "item_grove_bow_light_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_gossamer_cape;item_light_part"
+			"01"                        "item_grove_bow_light;item_exchange"
 		}
 	}
-	"item_gossamer_cape_light"
+	"item_grove_bow_light_1"
 	{
-		"BaseClass" "item_gossamer_cape"
-		"AbilityCooldown"				"1.5"  //4
+		"BaseClass" "item_grove_bow"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"DisplayOverheadAlertOnReceived" "0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_grove_bow_light"
 		"AbilityValues"
 		{
-			"movement_speed"			"500"   //20
+			"attack_range_bonus"			"300"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"20"	// 15
 		}
 	}
-	"item_recipe_gossamer_cape_dark"
+	"item_recipe_grove_bow_dark_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11008"
+		"ID"						    "12006"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_gossamer_cape_dark"
+		"ItemResult"                    "item_grove_bow_dark_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_gossamer_cape;item_dark_part"
+			"01"                        "item_grove_bow_dark;item_exchange"
 		}
 	}
-	"item_gossamer_cape_dark"
+	"item_grove_bow_dark_1"
 	{
-		"BaseClass" "item_gossamer_cape"
-		"AbilityCooldown"				"0.4"  //4
+		"BaseClass" "item_grove_bow"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"DisplayOverheadAlertOnReceived" "0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_grove_bow_dark"
 		"AbilityValues"
 		{
-			"movement_speed"			"100"   //20
+			"attack_range_bonus"			"100"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"100"	// 15
 		}
 	}
-
-
-	"item_recipe_specialists_array_light"
+	"item_recipe_grove_bow_ai"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11009"
+		"ID"						    "13007"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_specialists_array_light"
+		"ItemResult"					"item_grove_bow_ai"
 		"ItemRequirements"
 		{
-			"01"                        "item_specialists_array;item_light_part"
+			"01"                        "item_grove_bow_light;item_dark_part"
+			"02"						"item_grove_bow_dark;item_light_part"
 		}
 	}
-	"item_specialists_array_light"
+	"item_grove_bow_ai"
 	{
-		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"1.0"		//8
+		"BaseClass" "item_grove_bow"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemCost"						"20000"
+		"ItemIsNeutralDrop"				"0"
+		"DisplayOverheadAlertOnReceived" "0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"AbilityValues"
 		{
-			"all_stats"						"30"	//7
-			"bonus_damage"					"90"	//12
-			"count"							"4"		//2
-			"secondary_target_range_bonus"	"450"	//225
-			"proc_bonus_damage"				"3000"	//20
+			"attack_range_bonus"			"300"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"100"	// 15
 		}
 	}
-	"item_recipe_specialists_array_dark"
+	"item_recipe_grove_bow_ai_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11010"
+		"ID"						    "13008"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_specialists_array_dark"
+		"ItemResult"					"item_grove_bow_ai_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_specialists_array;item_dark_part"
+			"01"                        "item_grove_bow_ai;item_exchange"
+			"02"						"item_grove_bow_light_1;item_dark_part"
+			"03"						"item_grove_bow_dark_1;item_light_part"
 		}
 	}
-	"item_specialists_array_dark"
+	"item_grove_bow_ai_1"
 	{
-		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.01"		//8
+		"BaseClass" "item_grove_bow"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"ItemCost"						"20000"
+		"ItemIsNeutralDrop"				"1"
+		"DisplayOverheadAlertOnReceived" "0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"AbilityValues"
 		{
-			"all_stats"						"30"	//7
-			"bonus_damage"					"90"	//12
-			"count"							"10"	//2
-			"secondary_target_range_bonus"	"900"	//225
-			"proc_bonus_damage"				"0"	//20
+			"attack_range_bonus"			"300"		// 75
+			"attack_speed_bonus"			"200"		// 20
+			"magic_resistance_reduction"		"100"	// 15
 		}
 	}
 
-
-	"item_recipe_defiant_shell_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11011"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_defiant_shell_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_defiant_shell;item_light_part"
-		}
-	}
-	"item_defiant_shell_light"
-	{
-		"BaseClass" "item_defiant_shell"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemCost"						"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"ItemSellable"					"0"
-		"AbilityValues"
-		{
-			"bonus_armor"				"100" //7
-			"all_stats"			        "100" //7
-			"counter_cooldown"			"1.0" //5
-		}
-	}
-	"item_recipe_defiant_shell_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11012"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_specialists_array_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_defiant_shell;item_dark_part"
-		}
-	}
-	"item_defiant_shell_dark"
-	{
-		"BaseClass" "item_defiant_shell"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemCost"						"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"ItemSellable"					"0"
-		"AbilityValues"
-		{
-			"bonus_armor"				"20" //7
-			"all_stats"			        "20" //7
-			"counter_cooldown"			"0.05" //5
-		}
-	}
-
-
-	"item_recipe_paladin_sword_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11013"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_paladin_sword_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_paladin_sword;item_light_part"
-		}
-	}
-	"item_paladin_sword_light"
-	{
-		"BaseClass" "item_paladin_sword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"100" //16
-			"bonus_spell_lifesteal"	"24"  //8
-			"bonus_amp"			    "100" //14
-			"creep_lifesteal_reduction_pct"	"0" //40
-		}
-	}
-	"item_recipe_paladin_sword_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11014"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_paladin_sword_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_paladin_sword;item_dark_part"
-		}
-	}
-	"item_paladin_sword_dark"
-	{
-		"BaseClass" "item_paladin_sword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"24" //16
-			"bonus_spell_lifesteal"	"200"  //8
-			"bonus_amp"			    "200" //14
-			"creep_lifesteal_reduction_pct"	"0" //40
-		}
-	}
-
-
+	// 光暗祭礼长袍
 	"item_recipe_ceremonial_robe_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -7844,8 +8834,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ceremonial_robe_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7874,8 +8866,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ceremonial_robe_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -7885,326 +8879,137 @@
 			"magic_resistance"		"100"	//10
 		}
 	}
-
-
-	"item_recipe_psychic_headband_light"
+	"item_recipe_ceremonial_robe_light_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11017"
+		"ID"						    "12015"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_psychic_headband_light"
+		"ItemResult"                    "item_ceremonial_robe_light_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_psychic_headband;item_light_part"
+			"01"                        "item_ceremonial_robe_light;item_exchange"
 		}
 	}
-	"item_psychic_headband_light"
+	"item_ceremonial_robe_light_1"
 	{
-		"BaseClass" "item_psychic_headband"
-		"AbilityCastRange"				"1200"	//600
-		"AbilityCooldown"				"4.0"	//20
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"BaseClass" "item_ceremonial_robe"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ceremonial_robe_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"intelligence_pct"		"100"	//15
-			"cast_range"			"150"	//100
-			"push_length"			"600"	//400
-			"push_duration"			"0.3"	//0.3
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"100"	//10
+			"magic_resistance"		"20"	//10
 		}
 	}
-	"item_recipe_psychic_headband_dark"
+	"item_recipe_ceremonial_robe_dark_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11018"
+		"ID"						    "12016"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_psychic_headband_dark"
+		"ItemResult"                    "item_ceremonial_robe_dark_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_psychic_headband;item_dark_part"
+			"01"                        "item_ceremonial_robe_dark;item_exchange"
 		}
 	}
-	"item_psychic_headband_dark"
+	"item_ceremonial_robe_dark_1"
 	{
-		"BaseClass" "item_psychic_headband"
-		"AbilityCastRange"				"1200"	//600
-		"AbilityCooldown"				"4.0"	//20
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
-		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
-		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"BaseClass" "item_ceremonial_robe"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ceremonial_robe_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"intelligence_pct"		"25"	//15
-			"cast_range"			"450"	//100
-			"push_length"			"600"	//400
-			"push_duration"			"0.3"	//0.3
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"20"	//10
+			"magic_resistance"		"100"	//10
 		}
 	}
-
-
-	"item_recipe_timeless_relic_light"
+	"item_recipe_ceremonial_robe_ai"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11019"
+		"ID"						    "13017"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_timeless_relic_light"
+		"ItemResult"					"item_ceremonial_robe_ai"
 		"ItemRequirements"
 		{
-			"01"                        "item_timeless_relic;item_light_part"
+			"01"                        "item_ceremonial_robe_light;item_dark_part"
+			"02"						"item_ceremonial_robe_dark;item_light_part"
 		}
 	}
-	"item_timeless_relic_light"
+	"item_ceremonial_robe_ai"
 	{
-		"BaseClass" "item_timeless_relic"
+		"BaseClass" "item_ceremonial_robe"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"debuff_amp"		"120"	// 20
-			"spell_amp"			"45"	// 15
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"100"	//10
+			"magic_resistance"		"100"	//10
 		}
 	}
-	"item_recipe_timeless_relic_dark"
+	"item_recipe_ceremonial_robe_ai_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11020"
+		"ID"						    "13018"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_timeless_relic_dark"
+		"ItemResult"					"item_ceremonial_robe_ai_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_timeless_relic;item_dark_part"
+			"01"                        "item_ceremonial_robe_ai;item_exchange"
+			"02"						"item_ceremonial_robe_light_1;item_dark_part"
+			"03"						"item_ceremonial_robe_dark_1;item_light_part"
 		}
 	}
-	"item_timeless_relic_dark"
+	"item_ceremonial_robe_ai_1"
 	{
-		"BaseClass" "item_timeless_relic"
+		"BaseClass" "item_ceremonial_robe"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"debuff_amp"		"40"	// 20
-			"spell_amp"			"100"	// 15
+			"bonus_mana"			"900"	//300
+			"aura_radius"			"1200"	//1200
+			"status_resistance"		"100"	//10
+			"magic_resistance"		"100"	//10
 		}
 	}
 
-
-	"item_recipe_ascetic_cap_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11021"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ascetic_cap_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_ascetic_cap;item_light_part"
-		}
-	}
-	"item_ascetic_cap_light"
-	{
-		"BaseClass" "item_ascetic_cap"
-		"AbilityCooldown"				"5.0"  //25
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"AbilityManaCost"				"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"status_resistance"	"40"	//40
-			"slow_resistance"	"40"	//40
-			"bonus_health"		"2500"	//250
-			"duration"		"5"			//5
-			"hp_regen"		"40"		//20
-		}
-	}
-	"item_recipe_ascetic_cap_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11022"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ascetic_cap_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_ascetic_cap;item_dark_part"
-		}
-	}
-	"item_ascetic_cap_dark"
-	{
-		"BaseClass" "item_ascetic_cap"
-		"AbilityCooldown"		"20.0"  //25
-		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"				"0"
-		"ItemIsNeutralDrop"		"0"
-		"ItemPurchasable"		"0"
-		"ItemSellable"			"0"
-		"AbilityManaCost"		"0"
-		"Model"					"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"status_resistance"	"100"	//40
-			"slow_resistance"	"100"	//40
-			"bonus_health"		"2500"	//250
-			"duration"		"5"			//5
-			"hp_regen"		"40"		//20
-		}
-	}
-
-
-	"item_recipe_trickster_cloak_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11023"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_trickster_cloak_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_trickster_cloak;item_light_part"
-		}
-	}
-	"item_trickster_cloak_light"
-	{
-		"BaseClass" "item_trickster_cloak"
-		"AbilityCooldown"				"15.0" //25
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-				"evasion"			"100" //17
-				"magic_resistance"	"34" //17
-				"duration"			"10"  //6
-		}
-	}
-	"item_recipe_trickster_cloak_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11024"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_trickster_cloak_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_trickster_cloak;item_dark_part"
-		}
-	}
-	"item_trickster_cloak_dark"
-	{
-		"BaseClass" "item_trickster_cloak"
-		"AbilityCooldown"				"15.0" //25
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-				"evasion"			"34" //17
-				"magic_resistance"	"100" //17
-				"duration"			"10"  //6
-		}
-	}
-
-
-	"item_recipe_ancient_guardian_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11025"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ancient_guardian_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_ancient_guardian;item_light_part"
-		}
-	}
-	"item_ancient_guardian_light"
-	{
-		"BaseClass" "item_ancient_guardian"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"extra_bonus_damage"	"500"    //50
-			"bonus_damage"			"1000"    //50
-			"radius"				"2000"  //2000
-		}
-	}
-	"item_recipe_ancient_guardian_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11026"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ancient_guardian_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_ancient_guardian;item_dark_part"
-		}
-	}
-	"item_ancient_guardian_dark"
-	{
-		"BaseClass" "item_ancient_guardian"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"					"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"extra_bonus_damage"	"2500"    //50
-			"bonus_damage"			"100"    //50
-			"radius"				"2000"  //2000
-		}
-	}
-
-
+	// 光暗浩劫巨锤
 	"item_recipe_havoc_hammer_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -8225,13 +9030,15 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_havoc_hammer_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"50" //16
-			"bonus_strength"		"50" //16
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
 			"range"
 			{
 				"value"						"500" //400
@@ -8266,13 +9073,15 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_havoc_hammer_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"50" //16
-			"bonus_strength"		"50" //16
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
 			"range"
 			{
 				"value"						"1000" //400
@@ -8282,12 +9091,1567 @@
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.2"  //0.2
-			"pull_distance"				"1000"  //100
+			"pull_distance"				"700"  //100
 			"nuke_base_dmg"		"350"          //175
 			"nuke_str_dmg"		"2.0"          //1.5
 		}
 	}
+	"item_recipe_havoc_hammer_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12027"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_havoc_hammer_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_havoc_hammer_light;item_exchange"
+		}
+	}
+	"item_havoc_hammer_light_1"
+	{
+		"BaseClass" "item_havoc_hammer"
+		"AbilityCooldown"				"2.5"	//10
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_havoc_hammer_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
+			"range"
+			{
+				"value"						"500" //400
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow"		"75"                   //50
+			"slow_duration"		"3"            //3
+			"angle"						"360"  //360
+			"knockback_duration"		"0.2"  //0.2
+			"pull_distance"				"100"  //100
+			"nuke_base_dmg"		"350"          //175
+			"nuke_str_dmg"		"2.0"          //1.5
+		}
+	}
+	"item_recipe_havoc_hammer_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12028"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_havoc_hammer_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_havoc_hammer_dark;item_exchange"
+		}
+	}
+	"item_havoc_hammer_dark_1"
+	{
+		"BaseClass" "item_havoc_hammer"
+		"AbilityCooldown"				"8.0"	//10
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_havoc_hammer_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
+			"range"
+			{
+				"value"						"1000" //400
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow"		"100"                   //50
+			"slow_duration"		"3"            //3
+			"angle"						"360"  //360
+			"knockback_duration"		"0.2"  //0.2
+			"pull_distance"				"700"  //100
+			"nuke_base_dmg"		"350"          //175
+			"nuke_str_dmg"		"2.0"          //1.5
+		}
+	}
+	"item_recipe_havoc_hammer_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13029"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_havoc_hammer_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_havoc_hammer_light;item_dark_part"
+			"02"						"item_havoc_hammer_dark;item_light_part"
+		}
+	}
+	"item_havoc_hammer_ai"
+	{
+		"BaseClass" "item_havoc_hammer"
+		"AbilityCooldown"				"2.5"	//10
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"20000"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"160" //16
+			"bonus_strength"		"160" //16
+			"range"
+			{
+				"value"						"1000" //400
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow"		"75"                   //50
+			"slow_duration"		"3"            //3
+			"angle"						"360"  //360
+			"knockback_duration"		"0.2"  //0.2
+			"pull_distance"				"700"  //100
+			"nuke_base_dmg"		"350"          //175
+			"nuke_str_dmg"		"3.0"          //1.5
+		}
+	}
+	"item_recipe_havoc_hammer_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13030"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_havoc_hammer_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_havoc_hammer_ai;item_exchange"
+			"02"						"item_havoc_hammer_light_1;item_dark_part"
+			"03"						"item_havoc_hammer_dark_1;item_light_part"
+		}
+	}
+	"item_havoc_hammer_ai_1"
+	{
+		"BaseClass" "item_havoc_hammer"
+		"AbilityCooldown"				"2.5"	//10
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"20000"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"160" //16
+			"bonus_strength"		"160" //16
+			"range"
+			{
+				"value"						"1000" //400
+				"affected_by_aoe_increase"	"1"
+			}
+			"slow"		"75"                   //50
+			"slow_duration"		"3"            //3
+			"angle"						"360"  //360
+			"knockback_duration"		"0.2"  //0.2
+			"pull_distance"				"700"  //100
+			"nuke_base_dmg"		"350"          //175
+			"nuke_str_dmg"		"3.0"          //1.5
+		}
+	}
 
+	// 光暗极
+	"item_recipe_apex_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11033"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_apex_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex;item_light_part"
+		}
+	}
+	"item_apex_light"
+	{
+		"BaseClass" "item_apex"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_apex_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"primary_stat"			 	"300"  //70
+			"primary_stat_universal"	"150"  //25
+		}
+	}
+	"item_recipe_apex_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11034"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_apex_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex;item_dark_part"
+		}
+	}
+	"item_apex_dark"
+	{
+		"BaseClass" "item_pupils_gift"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_apex_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"secondary_stats"			"500" //15
+		}
+	}
+	"item_recipe_apex_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12033"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_apex_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex_light;item_exchange"
+		}
+	}
+	"item_apex_light_1"
+	{
+		"BaseClass" "item_apex"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_apex_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"primary_stat"			 	"300"  //70
+			"primary_stat_universal"	"150"  //25
+		}
+	}
+	"item_recipe_apex_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12034"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_apex_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex_dark;item_exchange"
+		}
+	}
+	"item_apex_dark_1"
+	{
+		"BaseClass" "item_pupils_gift"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_apex_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"secondary_stats"			"500" //15
+		}
+	}
+	"item_recipe_apex_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13035"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_apex_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex_light;item_dark_part"
+			"02"						"item_apex_dark;item_light_part"
+		}
+	}
+	"item_apex_ai"
+	{
+		"BaseClass" "item_circlet"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"            "item_apex"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"bonus_all_stats"		"400"
+		}
+	}
+	"item_recipe_apex_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13036"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_apex_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_apex_ai;item_exchange"
+			"02"						"item_apex_light_1;item_dark_part"
+			"03"						"item_apex_dark_1;item_light_part"
+		}
+	}
+	"item_apex_ai_1"
+	{
+		"BaseClass" "item_circlet"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"            "item_apex"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"bonus_all_stats"		"400"
+		}
+	}
+
+	// 光暗蛛丝斗篷
+	"item_recipe_gossamer_cape_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11007"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape;item_light_part"
+		}
+	}
+	"item_gossamer_cape_light"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"1.5"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_gossamer_cape_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"400"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11008"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape;item_dark_part"
+		}
+	}
+	"item_gossamer_cape_dark"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"0.4"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_gossamer_cape_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"100"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12007"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape_light;item_exchange"
+		}
+	}
+	"item_gossamer_cape_light_1"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"1.5"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_gossamer_cape_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"400"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12008"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_gossamer_cape_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape_dark;item_exchange"
+		}
+	}
+	"item_gossamer_cape_dark_1"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"0.4"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_gossamer_cape_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"100"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13009"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_gossamer_cape_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape_light;item_dark_part"
+			"02"						"item_gossamer_cape_dark;item_light_part"
+		}
+	}
+	"item_gossamer_cape_ai"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"0.4"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"500"   //20
+		}
+	}
+	"item_recipe_gossamer_cape_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13010"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_gossamer_cape_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_gossamer_cape_ai;item_exchange"
+			"02"						"item_gossamer_cape_light_1;item_dark_part"
+			"03"						"item_gossamer_cape_dark_1;item_light_part"
+		}
+	}
+	"item_gossamer_cape_ai_1"
+	{
+		"BaseClass" "item_gossamer_cape"
+		"AbilityCooldown"				"0.4"  //4
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"movement_speed"			"500"   //20
+		}
+	}
+
+	//光暗骑士剑
+	"item_recipe_paladin_sword_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11013"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword;item_light_part"
+		}
+	}
+	"item_paladin_sword_light"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_paladin_sword_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"200" //16
+			"bonus_spell_lifesteal"	"24"  //8
+			"bonus_amp"			    "100" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11014"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword;item_dark_part"
+		}
+	}
+	"item_paladin_sword_dark"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_paladin_sword_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"24" //16
+			"bonus_spell_lifesteal"	"200"  //8
+			"bonus_amp"			    "200" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12013"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword_light;item_exchange"
+		}
+	}
+	"item_paladin_sword_light_1"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_paladin_sword_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"200" //16
+			"bonus_spell_lifesteal"	"24"  //8
+			"bonus_amp"			    "100" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12014"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword_dark;item_exchange"
+		}
+	}
+	"item_paladin_sword_dark_1"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_paladin_sword_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"24" //16
+			"bonus_spell_lifesteal"	"200"  //8
+			"bonus_amp"			    "200" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13015"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_paladin_sword_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword_light;item_dark_part"
+			"02"						"item_paladin_sword_dark;item_light_part"
+		}
+	}
+	"item_paladin_sword_ai"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"200" //16
+			"bonus_spell_lifesteal"	"200"  //8
+			"bonus_amp"			    "200" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+	"item_recipe_paladin_sword_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13016"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_paladin_sword_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword_ai;item_exchange"
+			"02"						"item_paladin_sword_light_1;item_dark_part"
+			"03"						"item_paladin_sword_dark_1;item_light_part"
+		}
+	}
+	"item_paladin_sword_ai_1"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"200" //16
+			"bonus_lifesteal"		"200" //16
+			"bonus_spell_lifesteal"	"200"  //8
+			"bonus_amp"			    "200" //14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+
+	// 光暗通灵头带
+	"item_recipe_psychic_headband_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11017"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband;item_light_part"
+		}
+	}
+	"item_psychic_headband_light"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_psychic_headband_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"100"	//15
+			"cast_range"			"150"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11018"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband;item_dark_part"
+		}
+	}
+	"item_psychic_headband_dark"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_psychic_headband_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"25"	//15
+			"cast_range"			"450"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12017"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband_light;item_exchange"
+		}
+	}
+	"item_psychic_headband_light_1"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_psychic_headband_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"100"	//15
+			"cast_range"			"150"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12018"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_psychic_headband_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband_dark;item_exchange"
+		}
+	}
+	"item_psychic_headband_dark_1"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_psychic_headband_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"25"	//15
+			"cast_range"			"450"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13019"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_psychic_headband_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband_light;item_dark_part"
+			"02"						"item_psychic_headband_dark;item_light_part"
+		}
+	}
+	"item_psychic_headband_ai"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"100"	//15
+			"cast_range"			"450"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+	"item_recipe_psychic_headband_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13020"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_psychic_headband_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_psychic_headband_ai;item_exchange"
+			"02"						"item_psychic_headband_light_1;item_dark_part"
+			"03"						"item_psychic_headband_dark_1;item_light_part"
+		}
+	}
+	"item_psychic_headband_ai_1"
+	{
+		"BaseClass" "item_psychic_headband"
+		"AbilityCastRange"				"1200"	//600
+		"AbilityCooldown"				"4.0"	//20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"intelligence_pct"		"100"	//15
+			"cast_range"			"450"	//100
+			"push_length"			"600"	//400
+			"push_duration"			"0.3"	//0.3
+		}
+	}
+
+	// 光暗简朴短帽
+	"item_recipe_ascetic_cap_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11021"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap;item_light_part"
+		}
+	}
+	"item_ascetic_cap_light"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"				"5.0"  //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"AbilityManaCost"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ascetic_cap_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"40"	//40
+			"slow_resistance"	"40"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11022"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap;item_dark_part"
+		}
+	}
+	"item_ascetic_cap_dark"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"		"20.0"  //25
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"				"0"
+		"ItemIsNeutralDrop"		"0"
+		"ItemPurchasable"		"1"
+		"ItemSellable"			"0"
+		"AbilityManaCost"		"0"
+		"ItemDisassembleRule"	"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"	"item_ascetic_cap_dark"
+		"Model"					"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"100"	//40
+			"slow_resistance"	"100"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12021"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap_light;item_exchange"
+		}
+	}
+	"item_ascetic_cap_light_1"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"				"5.0"  //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"AbilityManaCost"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ascetic_cap_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"40"	//40
+			"slow_resistance"	"40"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12022"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ascetic_cap_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap_dark;item_exchange"
+		}
+	}
+	"item_ascetic_cap_dark_1"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"		"20.0"  //25
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"				"0"
+		"ItemIsNeutralDrop"		"0"
+		"ItemPurchasable"		"1"
+		"ItemSellable"			"0"
+		"AbilityManaCost"		"0"
+		"ItemDisassembleRule"	"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"	"item_ascetic_cap_dark"
+		"Model"					"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"100"	//40
+			"slow_resistance"	"100"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13023"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ascetic_cap_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap_light;item_dark_part"
+			"02"						"item_ascetic_cap_dark;item_light_part"
+		}
+	}
+	"item_ascetic_cap_ai"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"				"5.0"  //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"AbilityManaCost"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"100"	//40
+			"slow_resistance"	"100"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+	"item_recipe_ascetic_cap_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13024"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ascetic_cap_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ascetic_cap_ai;item_exchange"
+			"02"						"item_ascetic_cap_light_1;item_dark_part"
+			"03"						"item_ascetic_cap_dark_1;item_light_part"
+		}
+	}
+	"item_ascetic_cap_ai_1"
+	{
+		"BaseClass" "item_ascetic_cap"
+		"AbilityCooldown"				"5.0"  //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"AbilityManaCost"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"status_resistance"	"100"	//40
+			"slow_resistance"	"100"	//40
+			"bonus_health"		"2500"	//250
+			"duration"		"5"			//5
+			"hp_regen"		"40"		//20
+		}
+	}
+
+	// 光暗欺诈师斗篷
+	"item_recipe_trickster_cloak_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11023"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak;item_light_part"
+		}
+	}
+	"item_trickster_cloak_light"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"12.5" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_trickster_cloak_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"100" //17
+				"magic_resistance"	"34" //17
+				"duration"			"10"  //6
+		}
+	}
+	"item_recipe_trickster_cloak_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11024"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak;item_dark_part"
+		}
+	}
+	"item_trickster_cloak_dark"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"20.0" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_trickster_cloak_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"34" //17
+				"magic_resistance"	"100" //17
+				"duration"			"8"  //6
+		}
+	}
+	"item_recipe_trickster_cloak_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12023"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak_light;item_exchange"
+		}
+	}
+	"item_trickster_cloak_light_1"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"12.5" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_trickster_cloak_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"100" //17
+				"magic_resistance"	"34" //17
+				"duration"			"10"  //6
+		}
+	}
+	"item_recipe_trickster_cloak_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12024"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_trickster_cloak_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak_dark;item_exchange"
+		}
+	}
+	"item_trickster_cloak_dark_1"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"20.0" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_trickster_cloak_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"34" //17
+				"magic_resistance"	"100" //17
+				"duration"			"8"  //6
+		}
+	}
+	"item_recipe_trickster_cloak_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13025"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_trickster_cloak_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak_light;item_dark_part"
+			"02"						"item_trickster_cloak_dark;item_light_part"
+		}
+	}
+	"item_trickster_cloak_ai"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"12.5" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"100" //17
+				"magic_resistance"	"100" //17
+				"duration"			"10"  //6
+		}
+	}
+	"item_recipe_trickster_cloak_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13026"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_trickster_cloak_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_trickster_cloak_ai;item_exchange"
+			"02"						"item_trickster_cloak_light_1;item_dark_part"
+			"03"						"item_trickster_cloak_dark_1;item_light_part"
+		}
+	}
+	"item_trickster_cloak_ai_1"
+	{
+		"BaseClass" "item_trickster_cloak"
+		"AbilityCooldown"				"12.5" //25
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"item_disassemble_rule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+				"evasion"			"100" //17
+				"magic_resistance"	"100" //17
+				"duration"			"10"  //6
+		}
+	}
+
+	// 光暗遗迹守卫者
+	"item_recipe_ancient_guardian_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11025"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ancient_guardian_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian;item_light_part"
+		}
+	}
+	"item_ancient_guardian_light"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ancient_guardian_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"500"    //50
+			"bonus_damage"			"1000"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+	"item_recipe_ancient_guardian_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11026"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ancient_guardian_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian;item_dark_part"
+		}
+	}
+	"item_ancient_guardian_dark"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ancient_guardian_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"2500"    //50
+			"bonus_damage"			"100"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+	"item_recipe_ancient_guardian_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12027"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ancient_guardian_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian_light;item_exchange"
+		}
+	}
+	"item_ancient_guardian_light_1"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ancient_guardian_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"500"    //50
+			"bonus_damage"			"1000"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+	"item_recipe_ancient_guardian_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12028"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ancient_guardian_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian_dark;item_exchange"
+		}
+	}
+	"item_ancient_guardian_dark_1"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ancient_guardian_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"2500"    //50
+			"bonus_damage"			"100"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+	"item_recipe_ancient_guardian_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13027"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ancient_guardian_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian_light;item_dark_part"
+			"02"						"item_ancient_guardian_dark;item_light_part"
+		}
+	}
+	"item_ancient_guardian_ai"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"2500"    //50
+			"bonus_damage"			"1000"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+	"item_recipe_ancient_guardian_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13028"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ancient_guardian_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ancient_guardian_ai;item_exchange"
+			"02"						"item_ancient_guardian_light_1;item_dark_part"
+			"03"						"item_ancient_guardian_dark_1;item_light_part"
+		}
+	}
+	"item_ancient_guardian_ai_1"
+	{
+		"BaseClass" "item_ancient_guardian"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"extra_bonus_damage"	"2500"    //50
+			"bonus_damage"			"1000"    //50
+			"radius"				"2000"  //2000
+		}
+	}
+
+	// 光暗智灭
 	"item_recipe_mind_breaker_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -8304,12 +10668,14 @@
 	"item_mind_breaker_light"
 	{
 		"BaseClass" "item_mind_breaker"
-		"AbilityCooldown"		"0.4"  //12
+		"AbilityCooldown"		"0.0"  //12
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mind_breaker_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8338,8 +10704,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mind_breaker_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8348,8 +10716,137 @@
 			"duration"		"3.0"  //2
 		}
 	}
+	"item_recipe_mind_breaker_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12029"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mind_breaker_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mind_breaker_light;item_exchange"
+		}
+	}
+	"item_mind_breaker_light_1"
+	{
+		"BaseClass" "item_mind_breaker"
+		"AbilityCooldown"		"0.0"  //12
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mind_breaker_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"magic_damage"	"120"  //45
+			"attack_speed"	"60"   //30
+			"duration"		"4.0"  //2
+		}
+	}
+	"item_recipe_mind_breaker_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12030"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_mind_breaker_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mind_breaker_dark;item_exchange"
+		}
+	}
+	"item_mind_breaker_dark_1"
+	{
+		"BaseClass" "item_mind_breaker"
+		"AbilityCooldown"		"8"  //12
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mind_breaker_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"magic_damage"	"1200"  //45
+			"attack_speed"	"300"   //30
+			"duration"		"3.0"  //2
+		}
+	}
+	"item_recipe_mind_breaker_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13031"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_mind_breaker_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_mind_breaker_light;item_dark_part"
+			"02"						"item_mind_breaker_dark;item_light_part"
+		}
+	}
+	"item_mind_breaker_ai"
+	{
+		"BaseClass" "item_mind_breaker"
+		"AbilityCooldown"		"0.0"  //12
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"magic_damage"	"1200"  //45
+			"attack_speed"	"300"   //30
+			"duration"		"4.0"  //2
+		}
+	}
+	"item_recipe_mind_breaker_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13032"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_mind_breaker_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_mind_breaker_ai;item_exchange"
+			"02"						"item_mind_breaker_light_1;item_dark_part"
+			"03"						"item_mind_breaker_dark_1;item_light_part"
+		}
+	}
+	"item_mind_breaker_ai_1"
+	{
+		"BaseClass" "item_mind_breaker"
+		"AbilityCooldown"		"0.0"  //12
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"				"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"magic_damage"	"1200"  //45
+			"attack_speed"	"300"   //30
+			"duration"		"4.0"  //2
+		}
+	}
 
-
+	// 光暗先哲之石
 	"item_recipe_seer_stone_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -8372,8 +10869,10 @@
 		"AbilityCastRange"				"0"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_seer_stone_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8410,8 +10909,10 @@
 		"AbilityCastRange"				"0"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_seer_stone_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8426,65 +10927,169 @@
 			"duration"			"9"  //6
 		}
 	}
-
-
-	"item_recipe_apex_light"
+	"item_recipe_seer_stone_light_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11033"
+		"ID"						    "12031"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_apex_light"
+		"ItemResult"                    "item_seer_stone_light_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_apex;item_light_part"
+			"01"                        "item_seer_stone_light;item_exchange"
 		}
 	}
-	"item_apex_light"
+	"item_seer_stone_light_1"
 	{
-		"BaseClass" "item_apex"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "item_seer_stone"
+		"AbilityCooldown"				"24"  //60
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"0"
 		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_seer_stone_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"primary_stat"			 	"350"  //70
-			"primary_stat_universal"	"175"  //25
+			"cast_range_bonus"		"400"  //350
+			"vision_bonus"			"4000"  //350
+			"mana_regen"			"40"   //10
+			"radius"
+			{
+				"value"		"4000"          //800
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"			"12"  //6
 		}
 	}
-	"item_recipe_apex_dark"
+	"item_recipe_seer_stone_dark_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11034"
+		"ID"						    "12032"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_apex_dark"
+		"ItemResult"                    "item_seer_stone_dark_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_apex;item_dark_part"
+			"01"                        "item_seer_stone_dark;item_exchange"
 		}
 	}
-	"item_apex_dark"
+	"item_seer_stone_dark_1"
 	{
-		"BaseClass" "item_pupils_gift"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass" "item_seer_stone"
+		"AbilityCooldown"				"30"  //60
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"0"
 		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_seer_stone_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"secondary_stats"			"500" //15
+			"cast_range_bonus"		"1000"  //350
+			"vision_bonus"			"700"  //350
+			"mana_regen"			"20"   //10
+			"radius"
+			{
+				"value"		"1200"          //800
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"			"9"  //6
+		}
+	}
+	"item_recipe_seer_stone_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13033"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_seer_stone_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_seer_stone_light;item_dark_part"
+			"02"						"item_seer_stone_dark;item_light_part"
+		}
+	}
+	"item_seer_stone_ai"
+	{
+		"BaseClass" "item_seer_stone"
+		"AbilityCooldown"				"24"  //60
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"0"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"cast_range_bonus"		"1000"  //350
+			"vision_bonus"			"4000"  //350
+			"mana_regen"			"40"   //10
+			"radius"
+			{
+				"value"		"4000"          //800
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"			"12"  //6
+		}
+	}
+	"item_recipe_seer_stone_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13034"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_seer_stone_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_seer_stone_ai;item_exchange"
+			"02"						"item_seer_stone_light_1;item_dark_part"
+			"03"						"item_seer_stone_dark_1;item_light_part"
+		}
+	}
+	"item_seer_stone_ai_1"
+	{
+		"BaseClass" "item_seer_stone"
+		"AbilityCooldown"				"24"  //60
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"FightRecapLevel"				"1"
+		"AbilityCastRange"				"0"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"cast_range_bonus"		"1000"  //350
+			"vision_bonus"			"4000"  //350
+			"mana_regen"			"40"   //10
+			"radius"
+			{
+				"value"		"4000"          //800
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"			"12"  //6
 		}
 	}
 
-
+	// 光暗秘术师铠甲
 	"item_recipe_force_field_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -8505,8 +11110,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_force_field_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8538,8 +11145,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
+		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_force_field_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8548,140 +11157,152 @@
 			"self_armor"				"20"	//5
 			"self_mres"					"30"	//20
 			"bonus_aoe_mres"			"30"	//20
-			"active_reflection_pct"		"160"	//40
+			"active_reflection_pct"		"120"	//40
 		}
 	}
-
-
-	"item_recipe_pirate_hat_light"
+	"item_recipe_force_field_light_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11037"
+		"ID"						    "12035"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_pirate_hat_light"
+		"ItemResult"                    "item_force_field_light_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_pirate_hat;item_light_part"
+			"01"                        "item_force_field_light;item_exchange"
 		}
 	}
-	"item_pirate_hat_light"
+	"item_force_field_light_1"
 	{
-		"BaseClass" "item_pirate_hat"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
-		"AbilityCastAnimation"			"ACT_DOTA_GENERIC_CHANNEL_1"
-		"AbilityCastRange"				"250"
-		"AbilityCooldown"				"2.0"
-		"AbilityCastPoint"				"0.0"
-		"AbilityChannelTime"			"0.1"
-		"ItemCost"						"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"bonus_attack_speed"			"450"
-			"bonus_ms"						"150"
-		}
-	}
-	"item_recipe_pirate_hat_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11038"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_pirate_hat_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_pirate_hat;item_dark_part"
-		}
-	}
-	"item_pirate_hat_dark"
-	{
-		"ID"						"12000"
-		"BaseClass"					"item_lua"
-		"AbilityTextureName"		"pirate_hat"
-		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"Model"						"models/props_gameplay/neutral_box.vmdl"
-		"ScriptFile"				"items/item_pirate_hat_dark"
-		"ItemCost"					"0"
-		"ItemPurchasable"			"0"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"300"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"bat_reduction"			"0.4"
-			}
-		}
-	}
-
-
-	"item_recipe_ex_machina_light"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11039"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ex_machina_light"
-		"ItemRequirements"
-		{
-			"01"                        "item_ex_machina;item_light_part"
-		}
-	}
-	"item_ex_machina_light"
-	{
-		"BaseClass" "item_ex_machina"
+		"BaseClass" "item_force_field"
+		"AbilityCooldown"				"5"  //20
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"				"20.0"
-		"AbilityManaCost"				"0"
 		"ItemCost"						"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_force_field_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_armor"			"50"
+			"bonus_aoe_radius"			"1800"	//1200
+			"bonus_aoe_armor"			"40"	//5
+			"self_armor"				"40"	//5
+			"self_mres"					"40"	//20
+			"bonus_aoe_mres"			"40"	//20
+			"active_reflection_pct"		"40"	//40
 		}
 	}
-	"item_recipe_ex_machina_dark"
+	"item_recipe_force_field_dark_1"
 	{
 		"BaseClass"                     "item_datadriven"
-		"ID"						    "11040"
+		"ID"						    "12036"
 		"ItemCost"                      "0"
 		"ItemShopTags"					""
 		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_ex_machina_dark"
+		"ItemResult"                    "item_force_field_dark_1"
 		"ItemRequirements"
 		{
-			"01"                        "item_ex_machina;item_dark_part"
+			"01"                        "item_force_field_dark;item_exchange"
 		}
 	}
-	"item_ex_machina_dark"
+	"item_force_field_dark_1"
 	{
-		"BaseClass" "item_ex_machina"
+		"BaseClass" "item_force_field"
+		"AbilityCooldown"				"20"  //20
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"AbilityCooldown"				"2.5"
-		"AbilityManaCost"				"450"
 		"ItemCost"						"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_force_field_dark"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_armor"			"60"
+			"bonus_aoe_radius"			"1800"	//1200
+			"bonus_aoe_armor"			"20"	//5
+			"self_armor"				"20"	//5
+			"self_mres"					"30"	//20
+			"bonus_aoe_mres"			"30"	//20
+			"active_reflection_pct"		"120"	//40
+		}
+	}
+	"item_recipe_force_field_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13037"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_force_field_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_force_field_light;item_dark_part"
+			"02"						"item_force_field_dark;item_light_part"
+		}
+	}
+	"item_force_field_ai"
+	{
+		"BaseClass" "item_force_field"
+		"AbilityCooldown"				"5"  //20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_aoe_radius"			"1800"	//1200
+			"bonus_aoe_armor"			"40"	//5
+			"self_armor"				"40"	//5
+			"self_mres"					"40"	//20
+			"bonus_aoe_mres"			"40"	//20
+			"active_reflection_pct"		"120"	//40
+		}
+	}
+	"item_recipe_force_field_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13038"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_force_field_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_force_field_ai;item_exchange"
+			"02"						"item_force_field_light_1;item_dark_part"
+			"03"						"item_force_field_dark_1;item_light_part"
+		}
+	}
+	"item_force_field_ai_1"
+	{
+		"BaseClass" "item_force_field"
+		"AbilityCooldown"				"5"  //20
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_aoe_radius"			"1800"	//1200
+			"bonus_aoe_armor"			"40"	//5
+			"self_armor"				"40"	//5
+			"self_mres"					"40"	//20
+			"bonus_aoe_mres"			"40"	//20
+			"active_reflection_pct"		"120"	//40
 		}
 	}
 
-
+	// 光暗弩炮
 	"item_recipe_ballista_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -8701,8 +11322,10 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ballista_light"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
@@ -8731,18 +11354,668 @@
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"0"
-		"ItemSellable"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ballista_dark"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
 			"attack_range_bonus"		"250"
-			"knockback_distance"		"15"
+			"knockback_distance"		"0"
+			"knockback_duration"		"0.0"
+			"bonus_damage"		        "1000"
+		}
+	}
+	"item_recipe_ballista_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12041"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ballista_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_light;item_exchange"
+		}
+	}
+	"item_ballista_light_1"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ballista_light"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"600"
+			"knockback_distance"		"90"
+			"knockback_duration"		"0.2"
+			"bonus_damage"		        "150"
+		}
+	}
+	"item_recipe_ballista_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12042"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_ballista_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_dark;item_exchange"
+		}
+	}
+	"item_ballista_dark_1"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_ballista_dark"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"250"
+			"knockback_distance"		"10"
 			"knockback_duration"		"0.1"
-			"bonus_damage"		        "900"
+			"bonus_damage"		        "1000"
+		}
+	}
+	"item_recipe_ballista_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13043"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ballista_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_light;item_dark_part"
+			"02"						"item_ballista_dark;item_light_part"
+		}
+	}
+	"item_ballista_ai"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"600"
+			"knockback_distance"		"10"
+			"knockback_duration"		"0.3"
+			"bonus_damage"		        "1000"
+		}
+	}
+	"item_recipe_ballista_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13044"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ballista_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_ai;item_exchange"
+			"02"						"item_ballista_light_1;item_dark_part"
+			"03"						"item_ballista_dark_1;item_light_part"
+		}
+	}
+	"item_ballista_ai_1"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"600"
+			"knockback_distance"		"10"
+			"knockback_duration"		"0.3"
+			"bonus_damage"		        "1000"
+		}
+	}
+
+	// 光暗臂章
+	"item_recipe_armlet_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11045"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_armlet_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_pro_max;item_light_part"
+		}
+	}
+	"item_armlet_light"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityValues"
+		{
+			"bonus_damage"			"90"
+			"bonus_attack_speed"	"90"
+			"bonus_armor"			"36"
+			"bonus_health_regen"	"30"
+			"unholy_bonus_damage"	"110"
+			"unholy_bonus_attack_speed"	"60"
+			"unholy_bonus_strength"	"150"
+			"unholy_bonus_armor"	"24"
+			"unholy_bonus_slow_resistance"	"45"
+			"unholy_health_drain_per_second"	"5"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+	"item_recipe_armlet_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11046"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_armlet_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_pro_max;item_dark_part"
+		}
+	}
+	"item_armlet_dark"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityValues"
+		{
+			"bonus_damage"			"45"
+			"bonus_attack_speed"	"45"
+			"bonus_armor"			"18"
+			"bonus_health_regen"	"900"
+			"unholy_bonus_damage"	"55"
+			"unholy_bonus_attack_speed"	"30"
+			"unholy_bonus_strength"	"75"
+			"unholy_bonus_armor"	"12"
+			"unholy_bonus_slow_resistance"	"100"
+			"unholy_health_drain_per_second"	"4900"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+	"item_recipe_armlet_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12045"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_armlet_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_light;item_exchange"
+		}
+	}
+	"item_armlet_light_1"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemIsNeutralDrop"				"1"
+		"AbilityValues"
+		{
+			"bonus_damage"			"90"
+			"bonus_attack_speed"	"90"
+			"bonus_armor"			"36"
+			"bonus_health_regen"	"30"
+			"unholy_bonus_damage"	"110"
+			"unholy_bonus_attack_speed"	"60"
+			"unholy_bonus_strength"	"150"
+			"unholy_bonus_armor"	"24"
+			"unholy_bonus_slow_resistance"	"45"
+			"unholy_health_drain_per_second"	"5"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+	"item_recipe_armlet_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12046"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_armlet_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_dark;item_exchange"
+		}
+	}
+	"item_armlet_dark_1"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemIsNeutralDrop"				"1"
+		"AbilityValues"
+		{
+			"bonus_damage"			"45"
+			"bonus_attack_speed"	"45"
+			"bonus_armor"			"18"
+			"bonus_health_regen"	"900"
+			"unholy_bonus_damage"	"55"
+			"unholy_bonus_attack_speed"	"30"
+			"unholy_bonus_strength"	"75"
+			"unholy_bonus_armor"	"12"
+			"unholy_bonus_slow_resistance"	"100"
+			"unholy_health_drain_per_second"	"4900"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+	"item_recipe_armlet_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13047"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_armlet_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_light;item_dark_part"
+			"02"						"item_armlet_dark;item_light_part"
+		}
+	}
+	"item_armlet_ai"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityValues"
+		{
+			"bonus_damage"			"90"
+			"bonus_attack_speed"	"90"
+			"bonus_armor"			"36"
+			"bonus_health_regen"	"900"
+			"unholy_bonus_damage"	"110"
+			"unholy_bonus_attack_speed"	"60"
+			"unholy_bonus_strength"	"150"
+			"unholy_bonus_armor"	"24"
+			"unholy_bonus_slow_resistance"	"100"
+			"unholy_health_drain_per_second"	"6900"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+	"item_recipe_armlet_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13048"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_armlet_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_armlet_ai;item_exchange"
+			"02"						"item_armlet_light_1;item_dark_part"
+			"03"						"item_armlet_dark_1;item_light_part"
+		}
+	}
+	"item_armlet_ai_1"
+	{
+		"BaseClass" 					"item_armlet"
+		"AbilityCooldown"				"0.0"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemIsNeutralDrop"				"1"
+		"AbilityValues"
+		{
+			"bonus_damage"			"90"
+			"bonus_attack_speed"	"90"
+			"bonus_armor"			"36"
+			"bonus_health_regen"	"900"
+			"unholy_bonus_damage"	"110"
+			"unholy_bonus_attack_speed"	"60"
+			"unholy_bonus_strength"	"150"
+			"unholy_bonus_armor"	"24"
+			"unholy_bonus_slow_resistance"	"100"
+			"unholy_health_drain_per_second"	"6900"
+			"toggle_cooldown"		"0.036"
+		}
+	}
+
+	// 光暗卫士径甲
+	"item_recipe_guardian_greaves_light"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11049"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_guardian_greaves_light"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves;item_light_part"
+		}
+	}
+	"item_guardian_greaves_light"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_guardian_greaves_light"
+		"AbilityValues"
+		{
+			"bonus_movement"		"100"
+			"bonus_armor"			"20"
+			"mana_regen"			"10"
+			"aura_health_regen"		"50"
+			"aura_armor"			"20"
+			"aura_mana_regen"		"30"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"	"150"
+			"aura_mana_regen_bonus"	"60"
+			"aura_armor_bonus"		"40"
+			"aura_bonus_threshold"	"75"
+			"replenish_health"		"2000"
+			"replenish_mana"		"1000"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"10"
+		}
+	}
+	"item_recipe_guardian_greaves_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11050"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_guardian_greaves_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves;item_dark_part"
+		}
+	}
+	"item_guardian_greaves_dark"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_guardian_greaves_dark"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"			"40"
+			"mana_regen"			"20"
+			"aura_health_regen"		"25"
+			"aura_armor"			"10"
+			"aura_mana_regen"		"15"
+			"aura_radius"			"900"
+			"aura_health_regen_bonus"	"50"
+			"aura_mana_regen_bonus"	"30"
+			"aura_armor_bonus"		"20"
+			"aura_bonus_threshold"	"25"
+			"replenish_health"		"1000"
+			"replenish_mana"		"500"
+			"replenish_radius"
+			{
+				"value"		"900"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"3"
+		}
+	}
+	"item_recipe_guardian_greaves_light_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12049"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_guardian_greaves_light_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves_light;item_exchange"
+		}
+	}
+	"item_guardian_greaves_light_1"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_guardian_greaves_light"
+		"AbilityValues"
+		{
+			"bonus_movement"		"100"
+			"bonus_armor"			"20"
+			"mana_regen"			"10"
+			"aura_health_regen"		"50"
+			"aura_armor"			"20"
+			"aura_mana_regen"		"30"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"	"150"
+			"aura_mana_regen_bonus"	"60"
+			"aura_armor_bonus"		"40"
+			"aura_bonus_threshold"	"75"
+			"replenish_health"		"2000"
+			"replenish_mana"		"1000"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"10"
+		}
+	}
+	"item_recipe_guardian_greaves_dark_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "12050"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_guardian_greaves_dark_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves_dark;item_exchange"
+		}
+	}
+	"item_guardian_greaves_dark_1"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemIsNeutralDrop"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_guardian_greaves_dark"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"			"40"
+			"mana_regen"			"20"
+			"aura_health_regen"		"25"
+			"aura_armor"			"10"
+			"aura_mana_regen"		"15"
+			"aura_radius"			"900"
+			"aura_health_regen_bonus"	"50"
+			"aura_mana_regen_bonus"	"30"
+			"aura_armor_bonus"		"20"
+			"aura_bonus_threshold"	"25"
+			"replenish_health"		"1000"
+			"replenish_mana"		"500"
+			"replenish_radius"
+			{
+				"value"		"900"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"3"
+		}
+	}
+	"item_recipe_guardian_greaves_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13051"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_guardian_greaves_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves_light;item_dark_part"
+			"02"						"item_guardian_greaves_dark;item_light_part"
+		}
+	}
+	"item_guardian_greaves_ai"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"			"40"
+			"mana_regen"			"20"
+			"aura_health_regen"		"50"
+			"aura_armor"			"20"
+			"aura_mana_regen"		"30"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"	"200"
+			"aura_mana_regen_bonus"	"60"
+			"aura_armor_bonus"		"40"
+			"aura_bonus_threshold"	"100"
+			"replenish_health"		"3000"
+			"replenish_mana"		"1500"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"10"
+		}
+	}
+	"item_recipe_guardian_greaves_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13052"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_guardian_greaves_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_guardian_greaves_ai;item_exchange"
+			"02"						"item_guardian_greaves_light_1;item_dark_part"
+			"03"						"item_guardian_greaves_dark_1;item_light_part"
+		}
+	}
+	"item_guardian_greaves_ai_1"
+	{
+		"BaseClass"                     "item_guardian_greaves"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"FightRecapLevel"				"1"
+		"AbilityCooldown"				"10"
+		"AbilityManaCost"				"0"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemAlertable"					"1"
+		"ShouldBeSuggested"				"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemIsNeutralDrop"				"1"
+		"AbilityValues"
+		{
+			"bonus_movement"		"200"
+			"bonus_armor"			"40"
+			"mana_regen"			"20"
+			"aura_health_regen"		"50"
+			"aura_armor"			"20"
+			"aura_mana_regen"		"30"
+			"aura_radius"			"1800"
+			"aura_health_regen_bonus"	"200"
+			"aura_mana_regen_bonus"	"60"
+			"aura_armor_bonus"		"40"
+			"aura_bonus_threshold"	"100"
+			"replenish_health"		"3000"
+			"replenish_mana"		"1500"
+			"replenish_radius"
+			{
+				"value"		"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_health_pct_heal_amount"		"10"
 		}
 	}
 }
-
-
-
