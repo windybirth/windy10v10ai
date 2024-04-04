@@ -959,6 +959,8 @@ tBotItemData.purchaseItemList = {
 		'item_saint_orb',
 		'item_moon_shard_datadriven',
 		'item_jump_jump_jump',
+		'item_excalibur',
+		'item_refresh_core',
 	},
 	npc_dota_hero_tinker = {
 		'item_clarity',
@@ -1376,6 +1378,8 @@ tBotItemData.sellItemList = {
 		'item_sange_and_yasha',
 		'item_echo_sabre_2',
 		'item_overwhelming_blink',
+		'item_monkey_king_bar_2',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_tinker = {
 		'item_force_staff_3',
@@ -1675,13 +1679,13 @@ tBotItemData.addNeutralItemList = {
 		'item_timeless_relic_ai_1',
 	},
 	npc_dota_hero_spectre = {
-		'item_force_field',
+		'item_force_field_ai_1',
 	},
 	npc_dota_hero_bane = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_bounty_hunter = {
-		'item_timeless_relic_ai_1',
+		'item_ceremonial_robe_ai_1',
 	},
 	npc_dota_hero_bloodseeker = {
 		'item_giants_ring',
@@ -1723,7 +1727,7 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_lina = {
-		'item_spell_prism',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_lion = {
 		'item_timeless_relic_ai_1',
@@ -1741,10 +1745,10 @@ tBotItemData.addNeutralItemList = {
 		'item_desolator_2',
 	},
 	npc_dota_hero_necrolyte = {
-		'item_mirror_shield',
+		'item_trickster_cloak_ai_1',
 	},
 	npc_dota_hero_ogre_magi = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_omniknight = {
 		'item_ceremonial_robe_ai_1',
@@ -1768,13 +1772,13 @@ tBotItemData.addNeutralItemList = {
 		'item_giants_ring',
 	},
 	npc_dota_hero_shadow_shaman = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_skywrath_mage = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_sniper = {
-		'item_ballista',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_sven = {
 		'item_pirate_hat_custom',
@@ -1783,16 +1787,16 @@ tBotItemData.addNeutralItemList = {
 		'item_mirror_shield',
 	},
 	npc_dota_hero_tinker = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_tiny = {
-		'item_pirate_hat_custom',
+		'item_trickster_cloak_ai_1',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_desolator_2',
 	},
 	npc_dota_hero_viper = {
-		'item_princes_knife',
+		'item_apex_ai_1',
 	},
 	npc_dota_hero_warlock = {
 		'item_demonicon',
@@ -1807,7 +1811,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_zuus = {
-		'item_seer_stone',
+		'item_seer_stone_ai_1',
 	},
 }
 
