@@ -5839,7 +5839,7 @@
 	//=================================================================================================================
 	// 大力跳
 	//=================================================================================================================
-	"item_overwhelming_blink_2" //FIXME 所有升级跳刀的距离可能都要砍一点，过了红利期之后
+	"item_overwhelming_blink_2"
 	{
 		"BaseClass"                     "item_overwhelming_blink"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
@@ -5854,21 +5854,21 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-				"blink_range"			"1800"//1200
-				"blink_damage_cooldown"	"2.0"//3.0
-				"blink_range_clamp"		"1440"//960
-				"bonus_strength"		"100"//25 没啥特色就多给点力量吧
+				"blink_range"			"1600"	//1200
+				"blink_damage_cooldown"	"2.0"	//3.0
+				"blink_range_clamp"		"1440"	//960
+				"bonus_strength"		"50"	//25
 				"radius"
 				{
-					"value"	"1200"
+					"value"	"1200"				// 800
 					"affected_by_aoe_increase"	"1"
 				}
-				"movement_slow"		"100"//50
+				"movement_slow"		"80"//50
 				"attack_slow"		"100"//50
 				"duration"		"6"//6
-				"damage_base"			"300"//100
-				"damage_pct_instant"		"150"//50
-				"damage_pct_over_time"		"300"//100
+				"damage_base"			"200"//100
+				"damage_pct_instant"		"100"//50
+				"damage_pct_over_time"		"200"//100
 		}
 	}
 
@@ -5889,13 +5889,13 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-				"blink_range"			"1800"//1200
-				"blink_damage_cooldown"	"2.0"//3.0
-				"blink_range_clamp"		"1440"//960
-				"bonus_agility"		"50"//25
-				"bonus_movement"		"80"//40
-				"bonus_agi_active"		"70"//35
-				"duration"		"7"//6
+				"blink_range"			"1600"	//1200
+				"blink_damage_cooldown"	"2.0"	//3.0
+				"blink_range_clamp"		"1440"	//960
+				"bonus_agility"			"50"	//25
+				"bonus_movement"		"60"	//40
+				"bonus_agi_active"		"70"	//35
+				"duration"		"7"	//6
 		}
 	}
 
@@ -5916,12 +5916,12 @@
 		"ShouldBeSuggested"				"1"
 		"AbilityValues"
 		{
-				"blink_range"			"2100"//1400
-				"blink_damage_cooldown"	"0.0"//3.0
-				"blink_range_clamp"		"1780"//960
-				"bonus_intellect"		"50"//25
-				"heal_amount"			"400"//200
-				"mana_amount"			"200"//100
+				"blink_range"			"1800"	//1400
+				"blink_damage_cooldown"	"0.0"	//3.0
+				"blink_range_clamp"		"1780"	//960
+				"bonus_intellect"		"50"	//25
+				"heal_amount"			"400"	//200
+				"mana_amount"			"300"	//100
 		}
 	}
 

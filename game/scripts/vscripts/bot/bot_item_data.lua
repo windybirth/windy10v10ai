@@ -977,13 +977,13 @@ tBotItemData.purchaseItemList = {
 		'item_phylactery', -- 灵匣
 		'item_wings_of_haste',
 		'item_sheepstick',
-		'item_mystic_staff',
-		'item_recipe_arcane_blink',
+		'item_arcane_blink',
 		'item_ultimate_scepter',
 		'item_necronomicon_staff',
 		'item_recipe_ultimate_scepter_2',
 		'item_hallowed_scepter',
-		'item_angels_demise',
+		'item_angels_demise', -- 绝刃
+		'item_arcane_blink',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_refresher',
@@ -1379,6 +1379,7 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_tinker = {
 		'item_force_staff_3',
+		'item_blink',
 	},
 	npc_dota_hero_tiny = {
 		'item_vanguard',
