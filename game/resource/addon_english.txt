@@ -1746,38 +1746,45 @@
 
 		// item_timeless_relic_light 圣光·永恒遗物
 		"DOTA_Tooltip_Ability_item_timeless_relic_light"				"<font color='#FFFF00'>Light Timeless Relic</font>"
-		"DOTA_Tooltip_ability_item_timeless_relic_light_Description"				"Increases spell damage and duration of negative status effects."
-		"DOTA_Tooltip_ability_item_timeless_relic_light_Lore"				"A pristine discovery unearthed from the ruins of an ancient wizard academy."
+		"DOTA_Tooltip_ability_item_timeless_relic_light_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_light_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
 		"DOTA_Tooltip_ability_item_timeless_relic_light_debuff_amp"				"%+$debuff_amp"
 		"DOTA_Tooltip_ability_item_timeless_relic_light_spell_amp"				"%+Spell Amplification"
 
 		// item_timeless_relic_dark 暗影·永恒遗物
 		"DOTA_Tooltip_Ability_item_timeless_relic_dark"				"<font color='#8A2BE2'>Dark Timeless Relic</font>"
-		"DOTA_Tooltip_ability_item_timeless_relic_dark_Description"				"Increases spell damage and duration of negative status effects."
-		"DOTA_Tooltip_ability_item_timeless_relic_dark_Lore"				"A pristine discovery unearthed from the ruins of an ancient wizard academy."
+		"DOTA_Tooltip_ability_item_timeless_relic_dark_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_dark_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
 		"DOTA_Tooltip_ability_item_timeless_relic_dark_debuff_amp"				"%+$debuff_amp"
 		"DOTA_Tooltip_ability_item_timeless_relic_dark_spell_amp"				"%+Spell Amplification"
 
-		// item_timeless_relic_light_1 圣光·永恒遗物
+		// item_timeless_relic_light_1 圣光·永恒遗物（中立）
 		"DOTA_Tooltip_Ability_item_timeless_relic_light_1"				"<font color='#FFFF00'>Light Timeless Relic</font>"
-		"DOTA_Tooltip_ability_item_timeless_relic_light_1_Description"				"Increases spell damage and duration of negative status effects."
-		"DOTA_Tooltip_ability_item_timeless_relic_light_1_Lore"				"A pristine discovery unearthed from the ruins of an ancient wizard academy."
+		"DOTA_Tooltip_ability_item_timeless_relic_light_1_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_light_1_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
 		"DOTA_Tooltip_ability_item_timeless_relic_light_1_debuff_amp"				"%+$debuff_amp"
 		"DOTA_Tooltip_ability_item_timeless_relic_light_1_spell_amp"				"%+Spell Amplification"
 
-		// item_timeless_relic_dark_1 暗影·永恒遗物
+		// item_timeless_relic_dark_1 暗影·永恒遗物（中立）
 		"DOTA_Tooltip_Ability_item_timeless_relic_dark_1"				"<font color='#8A2BE2'>Dark Timeless Relic</font>"
-		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_Description"				"Increases spell damage and duration of negative status effects."
-		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_Lore"				"A pristine discovery unearthed from the ruins of an ancient wizard academy."
+		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
 		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_debuff_amp"				"%+$debuff_amp"
 		"DOTA_Tooltip_ability_item_timeless_relic_dark_1_spell_amp"				"%+Spell Amplification"
 
 		// item_timeless_relic_ai 光暗·永恒遗物
-		"DOTA_Tooltip_Ability_item_timeless_relic_ai"				"<font color='#00FF00'>Light and Dark Timeless Relic</font>"
-		"DOTA_Tooltip_ability_item_timeless_relic_ai_Description"				"Increases spell damage and duration of negative status effects."
-		"DOTA_Tooltip_ability_item_timeless_relic_ai_Lore"				"A pristine discovery unearthed from the ruins of an ancient wizard academy."
+		"DOTA_Tooltip_Ability_item_timeless_relic_ai"				"<font color='#00FF00'>Light</font> <font color='#8A2BE2'>Dark</font> Timeless Relic"
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
 		"DOTA_Tooltip_ability_item_timeless_relic_ai_debuff_amp"				"%+$debuff_amp"
 		"DOTA_Tooltip_ability_item_timeless_relic_ai_spell_amp"				"%+Spell Amplification"
+
+		// item_timeless_relic_ai_1 光暗·永恒遗物（中立）
+		"DOTA_Tooltip_Ability_item_timeless_relic_ai_1"				"<font color='#00FF00'>Light</font> <font color='#8A2BE2'>Dark</font> Timeless Relic (Neutral)"
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_1_Description"				"Increases all outgoing spell damage and debuff duration."
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_1_Lore"				"An unmarred discovery from the excavated ruins of an ancient wizard's academy."
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_1_debuff_amp"				"%+$debuff_amp"
+		"DOTA_Tooltip_ability_item_timeless_relic_ai_1_spell_amp"				"%+Spell Amplification"
 
 		// item_defiant_shell_light 圣光·不羁甲壳
 		"DOTA_Tooltip_Ability_item_defiant_shell_light"				"<font color='#FFFF00'>Light Defiant Shell</font>"

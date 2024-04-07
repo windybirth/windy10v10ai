@@ -1732,7 +1732,7 @@ tBotItemData.addNeutralItemList = {
 		'item_defiant_shell_ai_1',
 	},
 	npc_dota_hero_medusa = {
-		'item_mysterious_hat_ai',
+		'item_mysterious_hat_ai_1',
 	},
 	npc_dota_hero_meepo = {
 		'item_minotaur_horn',
