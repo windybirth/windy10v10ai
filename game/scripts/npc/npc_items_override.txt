@@ -824,7 +824,7 @@
 	}
 	"item_specialists_array" //行家阵列
 	{
-		"AbilityCooldown"				"0.8"		//8
+		"AbilityCooldown"				"1.5"		//8
 		"AbilityValues"
 		{
 			"all_stats"						"30"	//7

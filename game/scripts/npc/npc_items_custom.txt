@@ -6610,7 +6610,7 @@
 		"ID"						    "10999"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"            "item_light_part"
-		"ItemCost"						"5000"
+		"ItemCost"						"6000"
 		"ItemIsNeutralDrop"				"0"
 		"ItemShopTags"					""
 		"ItemQuality"					""
@@ -6619,10 +6619,10 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1545"// 25分钟买
+		"ItemInitialStockTime"          "1485"// 24分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"120"
 	}
 
 	//暗影组件
@@ -6632,7 +6632,7 @@
 		"ID"						    "11000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"            "item_dark_part"
-		"ItemCost"						"5000"
+		"ItemCost"						"6000"
 		"ItemIsNeutralDrop"				"0"
 		"ItemShopTags"					""
 		"ItemQuality"					""
@@ -6641,10 +6641,10 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1545"// 25分钟买
+		"ItemInitialStockTime"          "1485"// 24分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
-		"ItemStockTime"					"60"
+		"ItemStockTime"					"120"
 	}
 
 	//中立转换器
@@ -6730,7 +6730,7 @@
 			"bonus_damage"					"90"	//12
 			"count"							"4"		//2
 			"secondary_target_range_bonus"	"225"	//225
-			"proc_bonus_damage"				"2000"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 	"item_recipe_specialists_array_dark"
@@ -6749,7 +6749,7 @@
 	"item_specialists_array_dark"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.03"		//8
+		"AbilityCooldown"				"0.1"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
@@ -6762,7 +6762,7 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"10"	//2
+			"count"							"8"		//2
 			"secondary_target_range_bonus"	"450"	//225
 			"proc_bonus_damage"				"200"	//20
 		}
@@ -6798,7 +6798,7 @@
 			"bonus_damage"					"90"	//12
 			"count"							"4"		//2
 			"secondary_target_range_bonus"	"225"	//225
-			"proc_bonus_damage"				"2000"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 	"item_recipe_specialists_array_dark_1"
@@ -6817,7 +6817,7 @@
 	"item_specialists_array_dark_1"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.03"		//8
+		"AbilityCooldown"				"0.1"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"1"
@@ -6830,7 +6830,7 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"10"	//2
+			"count"							"8"		//2
 			"secondary_target_range_bonus"	"450"	//225
 			"proc_bonus_damage"				"200"	//20
 		}
@@ -6852,7 +6852,7 @@
 	"item_specialists_array_ai"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.03"		//8
+		"AbilityCooldown"				"0.1"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
@@ -6864,9 +6864,9 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"10"	//2
+			"count"							"8"		//2
 			"secondary_target_range_bonus"	"450"	//225
-			"proc_bonus_damage"				"2000"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 	"item_recipe_specialists_array_ai_1"
@@ -6887,7 +6887,7 @@
 	"item_specialists_array_ai_1"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.03"		//8
+		"AbilityCooldown"				"0.1"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"1"
@@ -6899,9 +6899,9 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"10"	//2
+			"count"							"8"		//2
 			"secondary_target_range_bonus"	"450"	//225
-			"proc_bonus_damage"				"2000"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 
