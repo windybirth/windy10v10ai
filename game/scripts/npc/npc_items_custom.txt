@@ -8226,7 +8226,7 @@
 			"magic_resistance"		"100"	//10
 		}
 	}
-	"item_ceremonial_robe_ai"
+	"item_ceremonial_robe_ai_1"
 	{
 		"BaseClass" "item_ceremonial_robe"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
