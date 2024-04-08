@@ -4322,6 +4322,7 @@
 	// 抽力量
 	"undying_decay"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 可能会超模，实战再看
 		"MaxLevel" "5"
 		"AbilityCooldown"				"8 7 6 5 4"
 		"AbilityManaCost"				"100 110 120 130 140"
@@ -4330,8 +4331,26 @@
 			"decay_damage"
 			{
 				"value"		"40 80 120 160 200"
-				"special_bonus_unique_undying_8" "+50"
+				"special_bonus_unique_undying_8" "+100"
 			}
+			"str_steal"
+			{
+				"value"		"4"
+				"special_bonus_scepter" "+12"// 4
+			}
+			"decay_duration"
+			{
+				"value"		"60"// 40
+			}
+			"radius"
+			{
+				"value"		"300 350 400 450 500"
+				"affected_by_aoe_increase"	"1"
+			}
+
+			"str_scale_up"	"2"
+			"creep_damage_multiplier"	"2.0"
+			"shard_buff_duration"		"40"
 		}
 	}
 	// 噬魂
@@ -7589,7 +7608,7 @@
 		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"25 20 15 10" // 35 30 25
+				"hit_point_minimum_pct"		"20 15 10 5" // 35 30 25 FIXME 调低配合暗臂章的
 		}
 	}
 	"special_bonus_unique_terrorblade"

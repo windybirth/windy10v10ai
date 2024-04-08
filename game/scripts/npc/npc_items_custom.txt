@@ -5844,8 +5844,8 @@
 		"BaseClass"                     "item_overwhelming_blink"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
-		"AbilityCastRange"				"1800"
-		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastRange"				"1600"
+		"AbilityOvershootCastRange"     "1200"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"10.0"
 		"AbilityManaCost"				"0"
@@ -5856,7 +5856,7 @@
 		{
 				"blink_range"			"1600"	//1200
 				"blink_damage_cooldown"	"2.0"	//3.0
-				"blink_range_clamp"		"1440"	//960
+				"blink_range_clamp"		"1300"	//960
 				"bonus_strength"		"50"	//25
 				"radius"
 				{
@@ -5879,8 +5879,8 @@
 	{
 		"BaseClass"                     "item_swift_blink"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
-		"AbilityCastRange"				"1800"
-		"AbilityOvershootCastRange"     "1440"
+		"AbilityCastRange"				"1600"
+		"AbilityOvershootCastRange"     "1200"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"10.0"
 		"AbilityManaCost"				"0"
@@ -5891,7 +5891,7 @@
 		{
 				"blink_range"			"1600"	//1200
 				"blink_damage_cooldown"	"2.0"	//3.0
-				"blink_range_clamp"		"1440"	//960
+				"blink_range_clamp"		"1300"	//960
 				"bonus_agility"			"50"	//25
 				"bonus_movement"		"60"	//40
 				"bonus_agi_active"		"70"	//35
@@ -5906,8 +5906,8 @@
 	{
 		"BaseClass"                     "item_arcane_blink"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
-		"AbilityCastRange"				"2100"
-		"AbilityOvershootCastRange"     "1780"
+		"AbilityCastRange"				"1800"
+		"AbilityOvershootCastRange"     "1500"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"4.0"
 		"AbilityManaCost"				"0"
@@ -5918,7 +5918,7 @@
 		{
 				"blink_range"			"1800"	//1400
 				"blink_damage_cooldown"	"0.0"	//3.0
-				"blink_range_clamp"		"1780"	//960
+				"blink_range_clamp"		"1600"	//960
 				"bonus_intellect"		"50"	//25
 				"heal_amount"			"400"	//200
 				"mana_amount"			"300"	//100
