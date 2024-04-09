@@ -11255,8 +11255,11 @@
 	}
 
 	// 混沌散魂剑
-	"item_recipe_disperser"
+	"item_recipe_disperser_chaos"
 	{
+		"BaseClass"					"item_datadriven"
+		"ID"						"11047"
+		"ItemCost"					"0"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
@@ -11306,8 +11309,11 @@
 			"phase_movement_speed"		"100"
 		}
 	}
-	"item_recipe_disperser_1"
+	"item_recipe_disperser_chaos_1"
 	{
+		"BaseClass"					"item_datadriven"
+		"ID"						"12047"
+		"ItemCost"					"0"
 		"Model"							"models/props_gameplay/recipe.vmdl"
 		"ItemShopTags"					""
 		"ItemRecipe"					"1"
