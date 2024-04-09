@@ -4322,6 +4322,7 @@
 	// 抽力量
 	"undying_decay"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"8 7 6 5 4"
 		"AbilityManaCost"				"100 110 120 130 140"
@@ -4331,6 +4332,22 @@
 			{
 				"value"		"40 80 120 160 200"
 				"special_bonus_unique_undying_8" "+50"
+			}
+			"str_steal"
+			{
+				"value"		"4"
+				"special_bonus_scepter" "+16"
+			}
+
+			"decay_duration"
+			{
+				"value"		"80"
+			}
+
+			"radius"
+			{
+				"value"		"300 350 400 450 500"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -4393,7 +4410,7 @@
 	"undying_flesh_golem"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"100"
+		"AbilityCooldown"				"75 70 65 60"
 		"AbilityManaCost"				"100 125 150 175"
 		"AbilityValues"
 		{
@@ -11515,6 +11532,7 @@
 	// 电子涡流
 	"storm_spirit_electric_vortex"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"18 16 14 12 10"	// 20 18 16 14
 		"AbilityManaCost"				"60 70 80 90 100"
@@ -11533,7 +11551,6 @@
 	{
 		"AbilityCooldown"		"10.0"
 		"AbilityManaCost"		"100"
-		"AbilityDamage"			"75130200""
 		"AbilityValues"
 		{
 			"radius"
@@ -11548,6 +11565,7 @@
 	// 超负荷
 	"storm_spirit_overload"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
@@ -11580,6 +11598,19 @@
 				"var_type"					"FIELD_FLOAT"
 				"value"				"800"	// 500
 				"ad_linked_abilities"			"storm_spirit_ball_lightning && storm_spirit_static_remnant"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+	// 超负荷弹射
+	"special_bonus_unique_storm_spirit_7"
+	{
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"8"
+				"ad_linked_abilities"			"storm_spirit_overload"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}

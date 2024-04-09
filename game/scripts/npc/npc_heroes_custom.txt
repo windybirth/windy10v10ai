@@ -547,6 +547,7 @@
     "npc_dota_hero_spectre"
     {
 		// spectre_haunt_single 只有3级
+		"Ability16"		"special_bonus_cooldown_reduction_20"
         "Bot"
         {
             "Build"
@@ -580,7 +581,7 @@
                 "27"		"special_bonus_unique_spectre_desolate_radius"
                 "28"		"special_bonus_unique_spectre_2"
                 "29"		"special_bonus_hp_350"
-                "30"		"special_bonus_unique_spectre_4"
+                "30"		"special_bonus_cooldown_reduction_20"
                 "31"		"spectre_haunt_single"
                 "32"		"spectre_haunt_single"
                 "33"		"spectre_haunt_single"
