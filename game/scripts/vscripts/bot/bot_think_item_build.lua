@@ -5,8 +5,6 @@
 
 
 local function addTome(k, v)
-  table.insert(v, "item_tome_of_luoshu")
-
   local amount = 2
   if AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6 then
     for i, vItem in ipairs(v) do
@@ -17,7 +15,21 @@ local function addTome(k, v)
         print("add item_rapier_ultra_bot" .. k)
       end
     end
-    amount = 20
+    amount = 4 -- 主属性4本，副属性各2本
+  end
+  for i = 1, amount do
+    table.insert(v, "item_tome_of_strength")
+    table.insert(v, "item_tome_of_agility")
+    if i % 2 == 0 then
+      table.insert(v, "item_tome_of_intelligence")
+    end
+  end
+
+  table.insert(v, "item_tome_of_luoshu")
+
+  local amount = 2
+  if AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6 then
+    amount = 16
   elseif AIGameMode.fBotGoldXpMultiplier >= 5 then
     amount = 10
   elseif AIGameMode.fBotGoldXpMultiplier >= 4 then
