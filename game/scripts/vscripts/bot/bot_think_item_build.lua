@@ -5,7 +5,7 @@
 
 
 local function addTome(k, v)
-  local amount = 2
+  -- N6替换诅咒圣剑
   if AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6 then
     for i, vItem in ipairs(v) do
       if vItem == "item_excalibur" then
@@ -15,16 +15,13 @@ local function addTome(k, v)
         print("add item_rapier_ultra_bot" .. k)
       end
     end
-    amount = 4 -- 主属性4本，副属性各2本
-  end
-  for i = 1, amount do
-    table.insert(v, "item_tome_of_strength")
-    table.insert(v, "item_tome_of_agility")
-    if i % 2 == 0 then
-      table.insert(v, "item_tome_of_intelligence")
-    end
   end
 
+  -- 一组属性书
+  table.insert(v, "item_tome_of_strength")
+  table.insert(v, "item_tome_of_agility")
+  table.insert(v, "item_tome_of_intelligence")
+  -- 洛书
   table.insert(v, "item_tome_of_luoshu")
 
   local amount = 2
