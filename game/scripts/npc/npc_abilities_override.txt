@@ -4336,21 +4336,8 @@
 			"str_steal"
 			{
 				"value"		"4"
-				"special_bonus_scepter" "+12"// 4
+				"special_bonus_scepter" "+8"// 4
 			}
-			"decay_duration"
-			{
-				"value"		"60"// 40
-			}
-			"radius"
-			{
-				"value"		"300 350 400 450 500"
-				"affected_by_aoe_increase"	"1"
-			}
-
-			"str_scale_up"	"2"
-			"creep_damage_multiplier"	"2.0"
-			"shard_buff_duration"		"40"
 		}
 	}
 	// 噬魂
@@ -7604,11 +7591,11 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
-		"AbilityCastRange"				"500 1000 1500 2000" // FIXME 暂时加强
+		"AbilityCastRange"				"600 800 1000 1200"	// 475
 		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"20 15 10 5" // 35 30 25 FIXME 调低配合暗臂章的
+				"hit_point_minimum_pct"		"20 15 10 5" // FIXME 调低配合暗臂章的 35 30 25
 		}
 	}
 	"special_bonus_unique_terrorblade"
