@@ -138,6 +138,19 @@ function BotItemThink:UseActiveItem(hHero)
         end
     end
 
+    if BotItemThink:IsItemCanUse(tUsableItems, "item_arcane_blink_2") then
+        if hHero:GetHealthPercent() > 20 then
+            local iRange = GetFullCastRange(hHero, tUsableItems["item_arcane_blink_2"])
+            local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, iRange)
+            if #tAllHeroes > 0 then
+                local hTarget = tAllHeroes[1]
+                if BotItemThink:UseItemOnPostion(tUsableItems, hHero, "item_arcane_blink_2", hTarget) then
+                    return true
+                end
+            end
+        end
+    end
+
     -- 风暴之锤
     if BotItemThink:IsItemCanUse(tUsableItems, "item_gungir_2") then
         local iRange = GetFullCastRange(hHero, tUsableItems["item_gungir_2"])

@@ -606,7 +606,6 @@ tBotItemData.purchaseItemList = {
 		'item_monkey_king_bar_2',
 		'item_skadi_2',
 		'item_wasp_despotic',
-		'item_satanic_2',
 		'item_jump_jump_jump',
 		'item_excalibur',
 		'item_paladin_sword_ai',
@@ -978,6 +977,7 @@ tBotItemData.purchaseItemList = {
 		'item_phylactery', -- 灵匣
 		'item_wings_of_haste',
 		'item_sheepstick',
+		'item_arcane_blink',
 		'item_arcane_blink',
 		'item_ultimate_scepter',
 		'item_necronomicon_staff',
