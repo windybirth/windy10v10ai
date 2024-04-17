@@ -155,10 +155,11 @@
 	"item_enchanted_mango"
 	{
 		"ItemCost"						"100"			// 65
+		"ItemStockTime"					"0.1"
 
 		"ItemStackableMax"				"99999"
 
-		"ItemStockMax"					"8"
+		"ItemStockMax"					"99"
 		"ItemStockInitial"				"8"
 
 		// Special
@@ -1541,7 +1542,7 @@
 	//=================================================================================================================
 	"item_ward_observer"
 	{
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"80000"
 		"ItemStockTime"					"90.0"	// 135.0
 	}
 	//=================================================================================================================
@@ -1549,8 +1550,7 @@
 	//=================================================================================================================
 	"item_ward_sentry"
 	{
-
-
+		"AbilityCastRange"				"80000"
 		"ItemCost"						"40"
 		"ItemStockMax"					"20"
 		"ItemStockInitial"				"3"

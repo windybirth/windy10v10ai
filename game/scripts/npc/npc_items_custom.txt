@@ -7208,7 +7208,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1605"// 26分钟买
+		"ItemInitialStockTime"          "900"// 26分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
 		"ItemStockTime"					"120"
@@ -7230,7 +7230,7 @@
 		"ItemKillable"					"0"
 		"ItemSellable"				    "1"
         "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1605"// 26分钟买
+		"ItemInitialStockTime"          "900"// 26分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
 		"ItemStockTime"					"120"
