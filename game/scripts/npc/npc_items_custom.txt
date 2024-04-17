@@ -7889,7 +7889,7 @@
 		"AbilityValues"
 		{
 			"shield"				"8000"
-			"restore_time"			"0.8"
+			"restore_time"			"1"
 			"bonus_hp_regen"		"50"
 		}
 	}
@@ -7921,7 +7921,7 @@
 		"AbilityValues"
 		{
 			"shield"				"8000"
-			"restore_time"			"0.8"
+			"restore_time"			"1"
 			"bonus_hp_regen"		"50"
 		}
 	}

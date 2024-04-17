@@ -651,8 +651,6 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_ultimate_scepter',
 		'item_recipe_ultimate_scepter_2',
-		'item_mystic_staff',
-		'item_recipe_arcane_blink',
 		'item_aether_lens_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',

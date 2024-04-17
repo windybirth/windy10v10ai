@@ -4277,7 +4277,7 @@
 				}
 				"damage"
 				{
-					"value"					"0" // 85 fixme 由于部分玩家恶意野区种树抢野，破坏队友游戏体验，在想出解决方案前暂且移除伤害，加长控制时间
+					"value"					"10" // FIXME 85 由于部分玩家恶意野区种树抢野，破坏队友游戏体验，暂且移除伤害，加长控制时间
 					"CalculateSpellDamageTooltip"	"1"
 				}
 				"AbilityCooldown"
