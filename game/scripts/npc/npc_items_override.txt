@@ -1226,7 +1226,7 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"225.0"
+		"ItemInitialStockTime"			"165.0"
 	}
 	"item_refresher"
 	{
@@ -1533,7 +1533,7 @@
 		"ItemStockTime"					"60.0" // or 150
 		"AbilityValues"
 		{
-			"visibility_radius"		"700"	// 1025
+			"visibility_radius"		"600"	// 1025
 		}
 	}
 
@@ -1543,7 +1543,7 @@
 	"item_ward_observer"
 	{
 		"AbilityCastRange"				"80000"
-		"ItemStockTime"					"90.0"	// 135.0
+		"ItemStockTime"					"60.0"	// 135.0
 	}
 	//=================================================================================================================
 	// Sentry Ward
@@ -1580,8 +1580,8 @@
 		"ItemPurchasable"				"1"
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"225.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"165.0"
 		"IsObsolete"					"0"
 
 		"AbilitySpecial"
