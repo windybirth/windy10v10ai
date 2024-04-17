@@ -7211,7 +7211,7 @@
 		"ItemInitialStockTime"          "900"// 26分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"10"
 	}
 
 	//暗影组件
@@ -7233,7 +7233,7 @@
 		"ItemInitialStockTime"          "900"// 26分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"10"
 	}
 
 	//中立转换器
