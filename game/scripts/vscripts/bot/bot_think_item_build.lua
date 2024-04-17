@@ -5,9 +5,7 @@
 
 
 local function addTome(k, v)
-  table.insert(v, "item_tome_of_luoshu")
-
-  local amount = 2
+  -- N6替换诅咒圣剑
   if AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6 then
     for i, vItem in ipairs(v) do
       if vItem == "item_excalibur" then
@@ -17,7 +15,18 @@ local function addTome(k, v)
         print("add item_rapier_ultra_bot" .. k)
       end
     end
-    amount = 20
+  end
+
+  -- 一组属性书
+  table.insert(v, "item_tome_of_strength")
+  table.insert(v, "item_tome_of_agility")
+  table.insert(v, "item_tome_of_intelligence")
+  -- 洛书
+  table.insert(v, "item_tome_of_luoshu")
+
+  local amount = 2
+  if AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6 then
+    amount = 16
   elseif AIGameMode.fBotGoldXpMultiplier >= 5 then
     amount = 10
   elseif AIGameMode.fBotGoldXpMultiplier >= 4 then
@@ -489,7 +498,7 @@ end
 
 -- 加钱
 function BotThink:AddMoney(hHero)
-  local iAddBase = AIGameMode.playerNumber * 1.5
+  local iAddBase = AIGameMode.playerNumber * 2
   local GameTime = GameRules:GetDOTATime(false, false)
   local totalGold = PlayerResource:GetTotalEarnedGold(hHero:GetPlayerID())
 

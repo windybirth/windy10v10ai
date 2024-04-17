@@ -4262,7 +4262,7 @@
 		"AbilityManaCost"				"200 250 300 350"
 		"AbilityValues"
 		{
-				"duration"						"3 4 5 6"
+				"duration"						"4 6 8 10" // 3 4 5
 				"radius"
 				{
 					"value"		"900"
@@ -4277,7 +4277,7 @@
 				}
 				"damage"
 				{
-					"value"					"85 120 155 190" // 85
+					"value"					"10" // FIXME 85 由于部分玩家恶意野区种树抢野，破坏队友游戏体验，暂且移除伤害，加长控制时间
 					"CalculateSpellDamageTooltip"	"1"
 				}
 				"AbilityCooldown"
@@ -4322,7 +4322,7 @@
 	// 抽力量
 	"undying_decay"
 	{
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 可能会超模，实战再看
 		"MaxLevel" "5"
 		"AbilityCooldown"				"8 7 6 5 4"
 		"AbilityManaCost"				"100 110 120 130 140"
@@ -4331,7 +4331,12 @@
 			"decay_damage"
 			{
 				"value"		"40 80 120 160 200"
-				"special_bonus_unique_undying_8" "+50"
+				"special_bonus_unique_undying_8" "+100"
+			}
+			"str_steal"
+			{
+				"value"		"4"
+				"special_bonus_scepter" "+8"// 4
 			}
 			"str_steal"
 			{
@@ -7602,11 +7607,11 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
-		"AbilityCastRange"				"500 1000 2000 80000" // FIXME 暂时加强
+		"AbilityCastRange"				"600 800 1000 1200"	// 475
 		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"20 15 10 1" // 35 30 25
+				"hit_point_minimum_pct"		"20 15 10 5" // FIXME 调低配合暗臂章的 35 30 25
 		}
 	}
 	"special_bonus_unique_terrorblade"
