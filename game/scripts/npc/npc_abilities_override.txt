@@ -2960,7 +2960,7 @@
 	// 肉钩
 	"pudge_meat_hook"
 	{
-		"AbilityCastRange"				"2000"
+		"AbilityCastRange"				"3000"
 		"MaxLevel"						"5"
 		"AbilityValues"
 		{
@@ -2969,7 +2969,8 @@
 				"value"									"150 220 290 360 430"
 				"special_bonus_unique_pudge_7"			"+140"
 			}
-			"hook_distance"								"1800"
+			"hook_speed"								"3300.0"
+			"hook_distance"								"3000"
 			"AbilityCooldown"
 			{
 				"value"								"18 16 14 12 10"
@@ -4262,7 +4263,7 @@
 		"AbilityManaCost"				"200 250 300 350"
 		"AbilityValues"
 		{
-				"duration"						"4 6 8 10" // 3 4 5
+				"duration"						"8 12 16 20" // 3 4 5
 				"radius"
 				{
 					"value"		"900"
@@ -4282,7 +4283,7 @@
 				}
 				"AbilityCooldown"
 				{
-					"value"						"120 110 100 90"
+					"value"						"100 90 80 70"
 					"special_bonus_unique_treant_14"	"-30"
 				}
 		}
@@ -4336,23 +4337,7 @@
 			"str_steal"
 			{
 				"value"		"4"
-				"special_bonus_scepter" "+8"// 4
-			}
-			"str_steal"
-			{
-				"value"		"4"
-				"special_bonus_scepter" "+16"
-			}
-
-			"decay_duration"
-			{
-				"value"		"80"
-			}
-
-			"radius"
-			{
-				"value"		"300 350 400 450 500"
-				"affected_by_aoe_increase"	"1"
+				"special_bonus_scepter" "+16"// 4
 			}
 		}
 	}
@@ -5819,7 +5804,61 @@
 			"damage_reduction_percent"
 			{
 				"value"							"50 45 40 35 30"
-				"special_bonus_unique_luna_7"	"-10"
+				"special_bonus_unique_luna_7"	"-20"
+			}
+			"rotating_glaives"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+8"
+			}
+
+			"rotating_glaives_hit_radius"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+250"
+			}
+
+			"rotating_glaives_movement_radius"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+175"
+			}
+
+			"rotating_glaives_damage_reduction"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+25"
+			}
+
+			"rotating_glaives_speed"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+160"
+			}
+
+
+			"rotating_glaives_duration"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+15"
+			}
+
+			"rotating_glaives_collision_damage"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+100"
+			}
+
+			"AbilityCooldown"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+25"
+			}
+
+			"AbilityManaCost"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"+25"
 			}
 		}
 	}
@@ -7607,11 +7646,11 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
 		"AbilityManaCost"				"100 75 50 25"
-		"AbilityCastRange"				"600 800 1000 1200"	// 475
+		"AbilityCastRange"				"1000 2000 3000 4000"	// 475
 		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"20 15 10 5" // FIXME 调低配合暗臂章的 35 30 25
+				"hit_point_minimum_pct"		"10 7 5 1" // FIXME 调低配合暗臂章的 35 30 25
 		}
 	}
 	"special_bonus_unique_terrorblade"
@@ -8586,6 +8625,17 @@
 				"value"			"50 75 100 125 150"
 				"CalculateSpellDamageTooltip" "1"
 			}
+			"knockback_distance"
+			{
+				"value"				"250"
+				"special_bonus_unique_batrider_3"	"+150"
+				"affected_by_aoe_increase"	"1"
+			}
+			"napalm_stacks"
+			{
+				"value"				"0"
+				"special_bonus_unique_batrider_2"	"+5"
+			}
 			"damage_per_second"
 			{
 				"value"			"20 30 40 50 60"
@@ -8614,7 +8664,7 @@
 		"AbilityManaCost"				"150 175 200 225"
 		"AbilityValues"
 		{
-			"duration"				"2.25 2.75 3.25 3.75"
+			"duration"				"3.25 3.75 4.25 4.75"
 			"damage"
 			{
 				"value"			"100 200 300 400"
@@ -8623,7 +8673,7 @@
 			"AbilityCooldown"
 			{
 				"value"				"60"// 给喵星人一个面子
-				"special_bonus_unique_batrider_6"			"-20"
+				"special_bonus_unique_batrider_6"			"-30"
 			}
 
 		}
@@ -11587,6 +11637,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityDamage"					"8 12 16 24"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0"
 		"AbilityValues"
 		{
 				"ball_lightning_initial_mana_percentage"		"4.5"

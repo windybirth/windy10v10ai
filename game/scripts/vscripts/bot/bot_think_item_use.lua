@@ -202,13 +202,6 @@ function BotItemThink:UseActiveItem(hHero)
         end
     end
 
-    -- item_force_field_ai_1
-    if hHero:GetHealthPercent() < 90 then
-        if BotItemThink:UseItemNoTarget(tUsableItems, hHero, "item_force_field_ai_1") then
-            return true
-        end
-    end
-
     -- item_magic_scepter 小仙云
     if BotItemThink:UseItemNoTarget(tUsableItems, hHero, "item_magic_scepter") then
         return true

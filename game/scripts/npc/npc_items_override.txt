@@ -154,9 +154,9 @@
 	// 芒果
 	"item_enchanted_mango"
 	{
-		"ItemCost"						"85"			// 65
+		"ItemCost"						"100"			// 65
 
-		"ItemStackableMax"				"4"
+		"ItemStackableMax"				"99999"
 
 		"ItemStockMax"					"8"
 		"ItemStockInitial"				"8"
@@ -165,17 +165,17 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"hp_regen"		"1.2"
-				"replenish_amount"		"250"
+				"hp_regen"		"10"
+				"replenish_amount"		"500"
 		}
 	}
 	"item_faerie_fire" //仙灵之火
 	{
-		"ItemCost"						"80"
+		"ItemCost"						"100"
 		"AbilityValues"
 		{
-				"bonus_damage"			"20"				// 2
-				"hp_restore"			"850"			// 85
+				"bonus_damage"			"50"				// 2
+				"hp_restore"			"1000"			// 85
 		}
 	}
 	"item_blood_grenade" //血腥榴弹
@@ -311,6 +311,7 @@
 	}
 	"item_mysterious_hat" //仙灵饰品
 	{
+		"ItemPurchasable"				"1"
 		"AbilityValues"
 		{
 				"bonus_health"			"250"			// 50
@@ -1479,10 +1480,10 @@
         "AbilityTextureName"			"item_bloodstone_v2"
 		"AbilityValues"
 		{
-				"bonus_aoe"				"150"
+				"bonus_aoe"				"300"
 				"bonus_health"			"1200"
 				"bonus_mana"			"1200"
-				"spell_lifesteal"		"50"
+				"spell_lifesteal"		"100"
 				"buff_duration"			"6"
 				"lifesteal_multiplier"	"2.5"
 				"hp_cost"				"0"
@@ -1528,10 +1529,10 @@
 	{
 		"ItemInitialCharges"			"2"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120.0" // or 150
+		"ItemStockTime"					"60.0" // or 150
 		"AbilityValues"
 		{
-			"visibility_radius"		"750"	// 1025
+			"visibility_radius"		"700"	// 1025
 		}
 	}
 

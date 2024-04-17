@@ -50,6 +50,29 @@
 
 	"weapons_armor"
 	{
+		"item"		"item_quelling_blade"
+		// "item"		"item_ring_of_protection"
+		"item"		"item_infused_raindrop"				// 凝魂之露
+		// "item"		"item_orb_of_venom"
+		// "item"		"item_blades_of_attack"
+		"item"		"item_gloves"
+		// "item"		"item_chainmail"
+		// "item"		"item_quarterstaff"
+		// "item"		"item_helm_of_iron_will"
+		// "item"		"item_broadsword"
+		// "item"		"item_blitz_knuckles"
+		"item"		"item_javelin"
+		// "item"		"item_claymore"
+		// "item"		"item_mithril_hammer"
+
+		// "item"		"item_ring_of_tarrasque"
+		// "item"		"item_tiara_of_selemene"
+		// "item"		"item_cornucopia"
+		// "item"		"item_energy_booster"
+		// "item"		"item_vitality_booster"
+		// "item"		"item_point_booster"
+		// "item"		"item_talisman_of_evasion"
+		// "item"		"item_platemail"
 		"item"	"item_gossamer_cape_light"
 		"item"	"item_gossamer_cape_dark"
 		"item"	"item_paladin_sword_light"
@@ -78,6 +101,8 @@
 
 	"misc"
 	{
+		"item"		"item_famango"
+		"item"		"item_refresher_shard"
 		// "item"		"item_ring_of_regen"
 		// "item"		"item_sobi_mask"
 		// "item"		"item_magic_stick"
@@ -143,9 +168,9 @@
 		//"item"		"item_pers"
  		"item"		"item_mask_of_madness"
 		"item"		"item_hand_of_group"  //"item"		"item_hand_of_midas"
+		"item"		"item_candy_candy"
 		"item"		"item_wings_of_haste"
 		"item"		"item_moon_shard_datadriven"
-		"item"		"item_candy_candy"
 		"item"		"item_consumable_gem"		// 幻影宝石
 	}
 
@@ -243,14 +268,12 @@
 		"item"		"item_wasp_golden"
 		"item"		"item_excalibur"
 		"item"		"item_rapier_ultra"			// 诅咒圣剑
-		"item"      "item_meteor_hammer_2"
-		"item"      "item_overwhelming_blink_2"
-		"item"      "item_swift_blink_2"
-		"item"      "item_arcane_blink_2"
 		"item"      "item_boots_of_bearing_2"
 		"item"      "item_sphere_ultra"
 		"item"      "item_black_king_bar_ultra"
 		"item"      "item_spirit_vessel_ultra"
+		"item"      "item_meteor_hammer_2"
+		"item"	"item_disperser_chaos"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
@@ -260,29 +283,31 @@
  		"item"		"item_yasha"
  		"item"		"item_kaya"
  		// "item"		"item_maelstrom"
- 		"item"		"item_mjollnir"
+ 		// "item"		"item_mjollnir"				// 大电锤
 		// "item"		"item_dragon_lance_pro_max"
 		"item"		"item_echo_sabre_2"
  		// "item"		"item_diffusal_blade"
-		"item"		"item_blue_fantasy"
- 		"item"		"item_mage_slayer"
+ 		// "item"		"item_mage_slayer"			// 法师克星
  		//"item"		"item_heavens_halberd"
-		"item"		"item_harpoon"
+		"item"		"item_harpoon"				// 鱼叉
+		"item"		"item_blue_fantasy"			// 苍蓝幻想
+ 		"item"		"item_satanic_2"
+ 		"item"		"item_skadi_2"
  		"item"		"item_kaya_and_sange"
  		"item"		"item_sange_and_yasha"
  		"item"		"item_yasha_and_kaya"
 		"item"		"item_sacred_six_vein"
- 		"item"		"item_satanic_2"
- 		"item"		"item_skadi_2"
+		"item"      "item_overwhelming_blink_2"
+		"item"      "item_swift_blink_2"
+		"item"      "item_arcane_blink_2"
 		"item"		"item_jump_jump_jump"
  		//"item"		"item_overwhelming_blink"
  		//"item"		"item_swift_blink"
  		//"item"		"item_arcane_blink"
-		"item"		"item_tome_of_luoshu"
 		"item"		"item_tome_of_strength"
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
-		"item"      "item_devastator_2"
+		"item"		"item_tome_of_luoshu"
 		"item"      "item_greater_crit_2"
 		"item"      "item_guardian_greaves_2"
 		"item"      "item_butterfly_2"
@@ -335,10 +360,9 @@
 		"item"      "item_tier3_token"
 		"item"      "item_tier4_token"
 		"item"      "item_tier5_token"
-		"item"      "item_ex_machina"
 		"item"      "item_light_part"
 		"item"      "item_dark_part"
-		"item"      "item_exchange"
+		"item"	    "item_exchange"
 	}
 
 	"pregame"
@@ -392,3 +416,4 @@
 		"item"		"item_hand_of_midas"				// 迈达斯之手
 	}
 }
+
