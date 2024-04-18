@@ -5214,7 +5214,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_CREEP"
 		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-		"AbilityCastRange"				"600"
+		"AbilityCastRange"				"99999"
 		"AbilityCastPoint"				"0.0"
 
 		"BaseClass"						"item_lua"
@@ -5225,8 +5225,8 @@
 
 		// Charge
 		"AbilityCooldown"				"0"
-		"AbilityCharges"				"2"
-		"AbilityChargeRestoreTime"		"100"
+		"AbilityCharges"				"6"
+		"AbilityChargeRestoreTime"		"60"
 		"ItemInitialCharges"			"1"
 		"ItemRequiresCharges"			"1"
 		"ItemDisplayCharges"			"1"
@@ -5256,9 +5256,9 @@
 			"self_xp"			"4.0"
 			"self_gold"			"400"
 
-			"group_range"		"1800"
-			"group_xp"			"0.8"
-			"group_gold"		"80"
+			"group_range"		"99999"
+			"group_xp"			"2.0"
+			"group_gold"		"200"
 		}
 	}
 
