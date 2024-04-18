@@ -77,24 +77,24 @@ export class PropertyController {
     );
   }
 
-  private static limitPropertyNames = [
-    "property_skill_points_bonus",
-    "property_cast_range_bonus_stacking",
-    "property_spell_amplify_percentage",
-    "property_status_resistance_stacking",
-    "property_evasion_constant",
-    "property_magical_resistance_bonus",
-    "property_incoming_damage_percentage",
-    "property_attack_range_bonus",
-    "property_physical_armor_bonus",
-    "property_preattack_bonus_damage",
-    "property_attackspeed_bonus_constant",
-    "property_stats_strength_bonus",
-    "property_stats_agility_bonus",
-    "property_stats_intellect_bonus",
-    "property_lifesteal",
-    "property_spell_lifesteal",
-  ];
+  // private static limitPropertyNames = [
+  //   "property_skill_points_bonus",
+  //   "property_cast_range_bonus_stacking",
+  //   "property_spell_amplify_percentage",
+  //   "property_status_resistance_stacking",
+  //   "property_evasion_constant",
+  //   "property_magical_resistance_bonus",
+  //   "property_incoming_damage_percentage",
+  //   "property_attack_range_bonus",
+  //   "property_physical_armor_bonus",
+  //   "property_preattack_bonus_damage",
+  //   "property_attackspeed_bonus_constant",
+  //   "property_stats_strength_bonus",
+  //   "property_stats_agility_bonus",
+  //   "property_stats_intellect_bonus",
+  //   "property_lifesteal",
+  //   "property_spell_lifesteal",
+  // ];
 
   // 每N级加点一次
   public static HERO_LEVEL_PER_POINT = 2;
