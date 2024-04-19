@@ -9,9 +9,6 @@ export class EventGameStateChange {
     const state = GameRules.State_Get();
     if (state === GameState.GAME_IN_PROGRESS) {
       this.OnGameInProgress();
-      Timers.CreateTimer(1 * 60, () => {
-        this.OnGameInProgress();
-      });
     } else if (state === GameState.HERO_SELECTION) {
       this.OnHeroSelection();
     } else if (state === GameState.PRE_GAME) {
@@ -21,6 +18,8 @@ export class EventGameStateChange {
 
   // 获取经济最高的玩家的经济
   private GetPlayerMaxGold(): number {
+    const gameTime = GameRules.GetGameTime();
+    print(`[CalculateAddGold] gameTime: ${gameTime}`);
     let maxGold = 0;
     for (let i = 0; i < PlayerResource.GetPlayerCount(); i++) {
       if (PlayerResource.IsValidPlayer(i) && !PlayerResource.IsFakeClient(i)) {
