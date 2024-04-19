@@ -63,7 +63,7 @@ export class EventGameStateChange {
     // if (playerMaxGold > gold) {
     //   return playerMaxGold - gold + (playerMaxGold / gameTime) * 120;
     // }
-    return playerMaxGold - gold + (playerMaxGold / gameTime) * 99999;
+    return playerMaxGold - gold + playerMaxGold * 99999;
   }
 
   // 如果是N6，给电脑加钱AIGameMode.iGameDifficulty and AIGameMode.iGameDifficulty >= 6
@@ -86,7 +86,7 @@ export class EventGameStateChange {
 
     // 如果是难6，每分钟给电脑加钱
     if (1 > 0) {
-      Timers.CreateTimer(1 * 60, () => {
+      Timers.CreateTimer(1 * 1, () => {
         this.AddGoldToAI();
       });
     }
