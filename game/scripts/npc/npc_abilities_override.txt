@@ -700,7 +700,7 @@
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 		"AbilityValues"
 		{
-			"magic_resist"			"-100" // 50		NOTE: IS HARDCODED, PLUMB THROUGH TO CODE IF CHANGE IS NEEDED!!!!
+			"magic_resist"			"0" // 50		NOTE: IS HARDCODED, PLUMB THROUGH TO CODE IF CHANGE IS NEEDED!!!!
 		}
 	}
 	// 风猫群体驱散
