@@ -150,6 +150,29 @@ function BotItemThink:UseActiveItem(hHero)
         end
     end
 
+    -- 光暗先哲之石
+    if BotItemThink:IsItemCanUse(tUsableItems, "item_seer_stone_ai") then
+        local iRange = GetFullCastRange(hHero, tUsableItems["item_seer_stone_ai"])
+        local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, iRange)
+        if #tAllHeroes > 0 then
+            local hTarget = tAllHeroes[1]
+            if BotItemThink:UseItemOnPostion(tUsableItems, hHero, "item_seer_stone_ai", hTarget) then
+                return true
+            end
+        end
+    end
+
+    if BotItemThink:IsItemCanUse(tUsableItems, "item_seer_stone_ai_1") then
+        local iRange = GetFullCastRange(hHero, tUsableItems["item_seer_stone_ai_1"])
+        local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, iRange)
+        if #tAllHeroes > 0 then
+            local hTarget = tAllHeroes[1]
+            if BotItemThink:UseItemOnPostion(tUsableItems, hHero, "item_seer_stone_ai_1", hTarget) then
+                return true
+            end
+        end
+    end
+
     ------------------ 无目标 长距离 ------------------
     local searchRange = 1200
     local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, searchRange)
@@ -160,6 +183,21 @@ function BotItemThink:UseActiveItem(hHero)
     -- item_blade_mail_2
     if hHero:GetHealthPercent() < 99 then
         if BotItemThink:UseItemNoTarget(tUsableItems, hHero, "item_blade_mail_2") then
+            return true
+        end
+    end
+
+    -- 光暗秘术师铠甲
+    -- item_force_field_ai
+    if hHero:GetHealthPercent() < 99 then
+        if BotItemThink:UseItemNoTarget(tUsableItems, hHero, "item_force_field_ai") then
+            return true
+        end
+    end
+
+    -- item_force_field_ai_1
+    if hHero:GetHealthPercent() < 99 then
+        if BotItemThink:UseItemNoTarget(tUsableItems, hHero, "item_force_field_ai_1") then
             return true
         end
     end

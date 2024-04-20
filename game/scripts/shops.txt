@@ -296,7 +296,7 @@
 		"item"		"item_sacred_six_vein"
 		"item"      "item_overwhelming_blink_2"
 		"item"      "item_swift_blink_2"
-		"item"      "item_arcane_blink_2"
+		"item"      "item_arcane_blink"
 		"item"		"item_jump_jump_jump"
  		//"item"		"item_overwhelming_blink"
  		//"item"		"item_swift_blink"
