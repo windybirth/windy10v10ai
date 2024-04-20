@@ -101,7 +101,6 @@
 		"item"	"item_armlet_dark"
 		"item"	"item_guardian_greaves_light"
 		"item"	"item_guardian_greaves_dark"
-		"item"			"item_disperser_chaos"
 	}
 
 	"misc"
@@ -152,6 +151,7 @@
 		"item"      "item_havoc_hammer_dark"
 		"item"      "item_apex_light"
 		"item"      "item_apex_dark"
+		"item"			"item_disperser_chaos"
 	}
 
 	// Level 1 - Green Recipes
