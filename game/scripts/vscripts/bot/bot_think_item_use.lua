@@ -150,29 +150,6 @@ function BotItemThink:UseActiveItem(hHero)
         end
     end
 
-    -- 光暗先哲之石
-    if BotItemThink:IsItemCanUse(tUsableItems, "item_seer_stone_ai") then
-        local iRange = GetFullCastRange(hHero, tUsableItems["item_seer_stone_ai"])
-        local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, iRange)
-        if #tAllHeroes > 0 then
-            local hTarget = tAllHeroes[1]
-            if BotItemThink:UseItemOnPostion(tUsableItems, hHero, "item_seer_stone_ai", hTarget) then
-                return true
-            end
-        end
-    end
-
-    if BotItemThink:IsItemCanUse(tUsableItems, "item_seer_stone_ai_1") then
-        local iRange = GetFullCastRange(hHero, tUsableItems["item_seer_stone_ai_1"])
-        local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, iRange)
-        if #tAllHeroes > 0 then
-            local hTarget = tAllHeroes[1]
-            if BotItemThink:UseItemOnPostion(tUsableItems, hHero, "item_seer_stone_ai_1", hTarget) then
-                return true
-            end
-        end
-    end
-
     ------------------ 无目标 长距离 ------------------
     local searchRange = 1200
     local tAllHeroes = BotThink:FindEnemyHeroesInRangeAndVisible(hHero, searchRange)

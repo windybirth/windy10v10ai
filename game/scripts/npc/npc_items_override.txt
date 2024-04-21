@@ -1444,6 +1444,7 @@
 	{
 		"ItemCost"						"250"
 	}
+	// 大智力跳
 	"item_recipe_arcane_blink"
 	{
 		"ItemCost"						"0"
@@ -1454,12 +1455,11 @@
 			"01"						"item_arcane_blink_2;item_arcane_blink_2"
 		}
 	}
-	// 智力跳大小互换
 	"item_arcane_blink"
 	{
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_OVERSHOOT"
-		"AbilityCastRange"				"1800"
-		"AbilityOvershootCastRange"     "1600"
+		"AbilityCastRange"				"1800"			// If updating this, update AbilityOvershootCastRange to 4/5 of this value
+		"AbilityOvershootCastRange"     "1440"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"4.0"
 		"AbilityManaCost"				"0"
