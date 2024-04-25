@@ -8,6 +8,7 @@ export interface CastCoindition {
   };
   self?: {
     healthPercentMoreThan?: number;
+    healthPercentLessThan?: number;
     manaPercentMoreThan?: number;
     abilityLevel?: number;
     hasScepter?: boolean;
@@ -31,6 +32,7 @@ export class ActionAbility {
     const defaultSelf = {
       manaPercentMoreThan: 50,
       healthPercentMoreThan: 50,
+      healthPercentLessThan: 99,
       abilityLevel: 3,
     };
     if (!condition) {
@@ -46,6 +48,9 @@ export class ActionAbility {
         }
         if (!condition.self.healthPercentMoreThan) {
           condition.self.healthPercentMoreThan = defaultSelf.healthPercentMoreThan;
+        }
+        if (!condition.self.healthPercentLessThan) {
+          condition.self.healthPercentLessThan = defaultSelf.healthPercentLessThan;
         }
         if (!condition.self.abilityLevel) {
           condition.self.abilityLevel = defaultSelf.abilityLevel;
@@ -180,6 +185,11 @@ export class ActionAbility {
     if (condition.self) {
       if (condition.self.healthPercentMoreThan) {
         if (self.GetHealthPercent() < condition.self.healthPercentMoreThan) {
+          return true;
+        }
+      }
+      if (condition.self.healthPercentLessThan) {
+        if (self.GetHealthPercent() < condition.self.healthPercentLessThan) {
           return true;
         }
       }

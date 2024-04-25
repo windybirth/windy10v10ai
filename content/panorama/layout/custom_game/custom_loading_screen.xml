@@ -47,7 +47,7 @@
 							<Label text="4" id="4"/>
 							<Label text="3" id="3"/>
 							<Label text="2" id="2"/>
-							<Label text="1" id="1"/>
+							<Label text="1(填充ai难度增加)" id="1"/>
 						</DropDown>
 					</Panel>
 					<Panel id="DirePlayerNumberMultiplierPanel"	class="GameOptionsSubPanel">

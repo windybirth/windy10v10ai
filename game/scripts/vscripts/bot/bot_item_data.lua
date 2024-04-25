@@ -519,6 +519,7 @@ tBotItemData.purchaseItemList = {
 		'item_refresher',
 	},
 	npc_dota_hero_luna = {
+		'item_aghanims_shard',
 		'item_magic_wand',
 		'item_boots',
 		'item_wraith_band',
@@ -527,7 +528,6 @@ tBotItemData.purchaseItemList = {
 		'item_wraith_band',
 		'item_mask_of_madness',
 		'item_wings_of_haste',
-		'item_aghanims_shard',
 		'item_sange_and_yasha',
 		'item_hurricane_pike_2',
 		'item_monkey_king_bar_2',
