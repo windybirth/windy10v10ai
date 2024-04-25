@@ -341,7 +341,7 @@ tBotItemData.purchaseItemList = {
 		-- 'item_satanic_2',
 		'item_excalibur',
 		'item_paladin_sword_ai',
-		'item_apex_ai',
+		'item_apex_light',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_magic_wand',
@@ -539,7 +539,7 @@ tBotItemData.purchaseItemList = {
 		-- 'item_satanic_2',
 		'item_paladin_sword_ai',
 		'item_excalibur',
-		'item_apex_ai',
+		'item_apex_light',
 	},
 	npc_dota_hero_medusa = {
 		'item_magic_wand',
@@ -1699,7 +1699,7 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_dragon_knight = {
-		'item_apex_ai_1',
+		'item_apex_dark_1',
 	},
 	npc_dota_hero_drow_ranger = {
 		'item_ballista_dark_1',
@@ -1711,7 +1711,7 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_juggernaut = {
-		'item_apex_ai_1',
+		'item_apex_light_1',
 	},
 	npc_dota_hero_kunkka = {
 		'item_timeless_relic_ai_1',
@@ -1759,7 +1759,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_riki = {
-		'item_apex_ai_1',
+		'item_apex_light_1',
 	},
 	npc_dota_hero_sand_king = {
 		'item_ceremonial_robe_ai_1',
@@ -1783,7 +1783,7 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_tiny = {
-		'item_defiant_shell_ai_1',
+		'item_ceremonial_robe_ai_1',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_desolator_2',
