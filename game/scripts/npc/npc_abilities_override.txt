@@ -767,8 +767,8 @@
 	"bristleback_hairball"
 	{
 		"AbilityCastRange"				"1500"
-		"AbilityCastPoint"				"0.1"
-		"AbilityCooldown"				"12"
+		"AbilityCastPoint"				"0.0" // 0.1
+		"AbilityCooldown"				"8" // 13
 		"AbilityValues"
 		{
 				"projectile_speed"		"1200"
@@ -777,8 +777,8 @@
 					"value"		"700"
 					"affected_by_aoe_increase"	"1"
 				}
-				"quill_stacks"		"5"
-				"goo_stacks"		"3"
+				"quill_stacks"		"5" // 1
+				"goo_stacks"		"10" // 2
 		}
 	}
 	// 鼻涕
@@ -835,12 +835,12 @@
 			}
 			"quill_release_threshold"				"300"
 
-			"activation_cooldown"					"20"		// 20
-			"activation_manacost"					"200"		// 100
-			"activation_delay"						"0.5"		// 0.5
-			"activation_num_quill_sprays"			"8"			// 6
-			"activation_spray_interval"				"0.3"		// 0.35
-			"activation_movement_speed_pct"			"-20"
+			"activation_cooldown"					"16"		// 20
+			"activation_manacost"					"250"		// 100
+			"activation_delay"						"0.1"		// 0.5
+			"activation_num_quill_sprays"			"9"			// 6
+			"activation_spray_interval"				"0.15"		// 0.35
+			"activation_movement_speed_pct"			"-30"		// 20
 		}
 	}
 	// 战意
