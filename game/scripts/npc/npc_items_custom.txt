@@ -7740,6 +7740,24 @@
 			"manacost_reduction"			"60"
 		}
 	}
+	"item_mysterious_hat_unrefined"
+	{
+		"BaseClass" "item_mysterious_hat"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"5000" // FIXME 暂定5000
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"1"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_mysterious_hat_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_health"			"0"
+			"spell_amp"				"10"
+			"manacost_reduction"			"40" // FIXME 过阵子砍到25或者更低，然后改成非中立
+		}
+	}
 
 	// 光暗安全泡泡
 	"item_recipe_safety_bubble_light"

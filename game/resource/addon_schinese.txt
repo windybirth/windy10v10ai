@@ -2077,6 +2077,12 @@
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_spell_amp"			"%+技能增强"
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_manacost_reduction"	"%+$manacost_reduction"
 
+		// item_mysterious_hat_unrefined 次品·仙灵饰品
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined"				"仙灵次品（中立）"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_Lore"			"较小的配饰，为了酬谢凡人不经意间流露出的善意而注入了仙灵的好运。"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_spell_amp"			"%+技能增强"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_manacost_reduction"	"%+$manacost_reduction"
+
 		// item_safety_bubble_light 圣光·安全泡泡
 		"DOTA_Tooltip_Ability_item_safety_bubble_light"				"<font color='#FFFF00'>圣光·安全泡泡</font>"
 		"DOTA_Tooltip_ability_item_safety_bubble_light_Description"				"<h1>被动：冒泡</h1>装备的英雄拥有一个可吸收敌方伤害的%shield%点生命的护盾。 %restore_time%秒内没有受到伤害后，护盾将恢复至满血。护盾不会吸收自残伤害。"

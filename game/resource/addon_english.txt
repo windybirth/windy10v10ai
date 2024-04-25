@@ -1951,6 +1951,12 @@
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_spell_amp"			"%+Spell Amplification"
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_manacost_reduction"	"%+$manacost_reduction"
 
+		// item_mysterious_hat_unrefined 次品·仙灵饰品
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined"				"Unrefined Fairy's Trinket (Neutral)"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_Lore"			"A small token imbued with the fortune of the fae in recognition of an intriguing display of mortal kindness."
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_spell_amp"			"%+Spell Amplification"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_manacost_reduction"	"%+$manacost_reduction"
+
 		// item_safety_bubble_light 圣光·安全泡泡
 		"DOTA_Tooltip_Ability_item_safety_bubble_light"				"<font color='#FFFF00'>Light Safety Bubble</font>"
 		"DOTA_Tooltip_ability_item_safety_bubble_light_Description"				"<h1>Passive: Bubbled Up</h1> Equipped Hero has a %shield% HP Barrier. Barrier fully regenerates after not receiving damage for %restore_time% seconds"
