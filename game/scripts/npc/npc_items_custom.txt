@@ -4399,7 +4399,7 @@
 		"ItemResult"					"item_jump_jump_jump"
 		"ItemRequirements"
 		{
-			"01"						"item_overwhelming_blink;item_swift_blink;item_arcane_blink"
+			"01"						"item_overwhelming_blink;item_swift_blink;item_arcane_blink_2"
 		}
 	}
 
