@@ -908,7 +908,7 @@
 	{
 		"AbilityValues"
 		{
-			"extra_bonus_damage"	"400"    //50
+			"extra_bonus_damage"	"500"    //50
 			"bonus_damage"			"100"    //50
 			"radius"				"2000"  //2000
 		}
