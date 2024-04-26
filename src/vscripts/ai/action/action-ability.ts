@@ -17,15 +17,15 @@ export interface CastCoindition {
 }
 
 export class ActionAbility {
-  static CastAbilityOnEnemyHero(
+  static CastAbilityOnFindEnemyHero(
     ai: BaseHeroAIModifier,
     abilityName: string,
     condition?: CastCoindition,
   ): boolean {
-    return this.CastAbilityOnEnemy(ai, abilityName, condition, UnitTargetType.HERO);
+    return this.CastAbilityOnFindEnemy(ai, abilityName, condition, UnitTargetType.HERO);
   }
 
-  static CastAbilityOnEnemyCreep(
+  static CastAbilityOnFindEnemyCreep(
     ai: BaseHeroAIModifier,
     abilityName: string,
     condition?: CastCoindition,
@@ -55,7 +55,7 @@ export class ActionAbility {
       }
     }
 
-    return this.CastAbilityOnEnemy(
+    return this.CastAbilityOnFindEnemy(
       ai,
       abilityName,
       condition,
@@ -65,7 +65,7 @@ export class ActionAbility {
     );
   }
 
-  protected static CastAbilityOnEnemy(
+  protected static CastAbilityOnFindEnemy(
     ai: BaseHeroAIModifier,
     abilityName: string,
     condition: CastCoindition | undefined,
@@ -124,7 +124,6 @@ export class ActionAbility {
       }
     }
 
-    print(`[AI] CastAbilityOnEnemy ${abilityName} on ${target.GetUnitName()}`);
     if (this.IsAbilityBehavior(ability, AbilityBehavior.UNIT_TARGET)) {
       print(`[AI] CastAbilityOnEnemy ${abilityName} on target`);
       hero.CastAbilityOnTarget(target, ability, hero.GetPlayerOwnerID());
@@ -137,6 +136,12 @@ export class ActionAbility {
       print(`[AI] CastAbilityOnEnemy ${abilityName} on position`);
       hero.CastAbilityOnPosition(target.GetAbsOrigin(), ability, hero.GetPlayerOwnerID());
       return true;
+    } else if (this.IsAbilityBehavior(ability, AbilityBehavior.NO_TARGET)) {
+      print(`[AI] CastAbilityOnEnemy ${abilityName} no target`);
+      hero.CastAbilityNoTarget(ability, hero.GetPlayerOwnerID());
+      return true;
+    } else {
+      print(`[AI] ERROR CastAbilityOnEnemy ${abilityName} not found behavior`);
     }
 
     return false;

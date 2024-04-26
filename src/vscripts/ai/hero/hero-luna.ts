@@ -7,7 +7,7 @@ export class LunaAIModifier extends BaseHeroAIModifier {
   override UseAbilityEnemy(): boolean {
     // 环绕月刃
     if (
-      ActionAbility.CastAbilityOnEnemyHero(this, "luna_moon_glaive", {
+      ActionAbility.CastAbilityOnFindEnemyHero(this, "luna_moon_glaive", {
         self: { healthPercentLessThan: 95, hasShard: true },
       })
     ) {
