@@ -12,6 +12,7 @@ export interface CastCoindition {
     manaPercentMoreThan?: number;
     abilityLevel?: number;
     hasScepter?: boolean;
+    hasShard?: boolean;
   };
 }
 
@@ -32,7 +33,6 @@ export class ActionAbility {
     const defaultSelf = {
       manaPercentMoreThan: 50,
       healthPercentMoreThan: 50,
-      healthPercentLessThan: 99,
       abilityLevel: 3,
     };
     if (!condition) {
@@ -48,9 +48,6 @@ export class ActionAbility {
         }
         if (!condition.self.healthPercentMoreThan) {
           condition.self.healthPercentMoreThan = defaultSelf.healthPercentMoreThan;
-        }
-        if (!condition.self.healthPercentLessThan) {
-          condition.self.healthPercentLessThan = defaultSelf.healthPercentLessThan;
         }
         if (!condition.self.abilityLevel) {
           condition.self.abilityLevel = defaultSelf.abilityLevel;
@@ -189,7 +186,7 @@ export class ActionAbility {
         }
       }
       if (condition.self.healthPercentLessThan) {
-        if (self.GetHealthPercent() < condition.self.healthPercentLessThan) {
+        if (self.GetHealthPercent() > condition.self.healthPercentLessThan) {
           return true;
         }
       }
@@ -205,6 +202,11 @@ export class ActionAbility {
       }
       if (condition.self.hasScepter) {
         if (!self.HasScepter()) {
+          return true;
+        }
+      }
+      if (condition.self.hasShard) {
+        if (!self.HasModifier("modifier_item_aghanims_shard")) {
           return true;
         }
       }

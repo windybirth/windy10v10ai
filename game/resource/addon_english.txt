@@ -62,6 +62,9 @@
 		"player_gold_xp_multiplier_2"               "2"
 		"player_gold_xp_multiplier_5"               "5"
 
+		"radiant_player_number_1"		"1  (Easy)"
+		"radiant_player_number_10"		"10 (Hard)"
+
 		"respawn_time_percentage_slow"        "Slow"
 		"respawn_time_percentage_normal"        "Normal"
 		"respawn_time_percentage_fast"         "Fast"

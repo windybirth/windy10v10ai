@@ -7755,7 +7755,7 @@
 		{
 			"bonus_health"			"0"
 			"spell_amp"				"10"
-			"manacost_reduction"			"40" // FIXME 过阵子砍到25或者更低，然后改成非中立
+			"manacost_reduction"			"35" // FIXME 过阵子砍到25或者更低，然后改成非中立
 		}
 	}
 
@@ -8414,7 +8414,7 @@
 			"bonus_strength"		"80" //16
 			"range"
 			{
-				"value"						"900" //400
+				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
 			"slow"		"100"                   //50
@@ -8501,7 +8501,7 @@
 			"bonus_strength"		"80" //16
 			"range"
 			{
-				"value"						"900" //400
+				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
 			"slow"		"100"                   //50
@@ -8544,7 +8544,7 @@
 			"bonus_strength"		"160" //16
 			"range"
 			{
-				"value"						"1000" //400
+				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
 			"slow"		"75"                   //50
@@ -8588,7 +8588,7 @@
 			"bonus_strength"		"160" //16
 			"range"
 			{
-				"value"						"1000" //400
+				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
 			"slow"		"75"                   //50
@@ -10669,7 +10669,7 @@
 		{
 			"attack_range_bonus"		"400"
 			"knockback_distance"		"10"
-			"knockback_duration"		"0.3"
+			"knockback_duration"		"0.1"
 			"bonus_damage"		        "100"
 		}
 	}
@@ -10735,7 +10735,7 @@
 		{
 			"attack_range_bonus"		"400"
 			"knockback_distance"		"10"
-			"knockback_duration"		"0.3"
+			"knockback_duration"		"0.1"
 			"bonus_damage"		        "100"
 		}
 	}
@@ -10801,7 +10801,7 @@
 	// 	{
 	// 		"attack_range_bonus"		"500"
 	// 		"knockback_distance"		"10"
-	// 		"knockback_duration"		"0.3"
+	// 		"knockback_duration"		"0.1"
 	// 		"bonus_damage"		        "300"
 	// 	}
 	// }
@@ -10835,7 +10835,7 @@
 	// 	{
 	// 		"attack_range_bonus"		"500"
 	// 		"knockback_distance"		"10"
-	// 		"knockback_duration"		"0.3"
+	// 		"knockback_duration"		"0.1"
 	// 		"bonus_damage"		        "300"
 	// 	}
 	// }
@@ -10906,10 +10906,10 @@
 			"bonus_armor"			"18"
 			"bonus_health_regen"	"60"
 			"unholy_bonus_damage"	"220"
-			"unholy_bonus_strength"	"400"
+			"unholy_bonus_strength"	"300"
 			"unholy_bonus_armor"	"48"
 			"unholy_bonus_slow_resistance"	"90"
-			"unholy_health_drain_per_second"	"1200"
+			"unholy_health_drain_per_second"	"900"
 			"toggle_cooldown"		"0.036"
 		}
 	}
@@ -10980,10 +10980,10 @@
 			"bonus_armor"			"18"
 			"bonus_health_regen"	"60"
 			"unholy_bonus_damage"	"220"
-			"unholy_bonus_strength"	"400"
+			"unholy_bonus_strength"	"300"
 			"unholy_bonus_armor"	"48"
 			"unholy_bonus_slow_resistance"	"90"
-			"unholy_health_drain_per_second"	"1200"
+			"unholy_health_drain_per_second"	"900"
 			"toggle_cooldown"		"0.036"
 		}
 	}

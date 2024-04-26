@@ -62,6 +62,9 @@
 		"player_gold_xp_multiplier_2"            	"2    (新手)"
 		"player_gold_xp_multiplier_5"               "5    (我要打10个)"
 
+		"radiant_player_number_1"		"1  (简单)"
+		"radiant_player_number_10"		"10 (困难)"
+
 		"respawn_time_percentage_slow"        "较慢"
 		"respawn_time_percentage_normal"        "普通"
 		"respawn_time_percentage_fast"         "快速"

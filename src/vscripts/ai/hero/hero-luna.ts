@@ -8,7 +8,7 @@ export class LunaAIModifier extends BaseHeroAIModifier {
     // 环绕月刃
     if (
       ActionAbility.CastAbilityOnEnemyHero(this, "luna_moon_glaive", {
-        self: { healthPercentLessThan: 95 },
+        self: { healthPercentLessThan: 95, hasShard: true },
       })
     ) {
       return true;

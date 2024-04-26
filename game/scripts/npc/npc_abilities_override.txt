@@ -763,20 +763,12 @@
 	//=================================================================================================================
 	// Ability: Bristleback 钢背兽
 	//=================================================================================================================
-	// 毛球
+	// 毛团
 	"bristleback_hairball"
 	{
-		"AbilityCastRange"				"1500"
-		"AbilityCastPoint"				"0.0" // 0.1
 		"AbilityCooldown"				"8" // 13
 		"AbilityValues"
 		{
-				"projectile_speed"		"1200"
-				"radius"
-				{
-					"value"		"700"
-					"affected_by_aoe_increase"	"1"
-				}
 				"quill_stacks"		"5" // 1
 				"goo_stacks"		"10" // 2
 		}
@@ -839,7 +831,7 @@
 			"activation_manacost"					"250"		// 100
 			"activation_delay"						"0.1"		// 0.5
 			"activation_num_quill_sprays"			"9"			// 6
-			"activation_spray_interval"				"0.15"		// 0.35
+			"activation_spray_interval"				"0.2"		// 0.35
 			"activation_movement_speed_pct"			"-30"		// 20
 		}
 	}
@@ -5916,25 +5908,6 @@
 			{
 				"value"							"0"
 				"special_bonus_shard"			"+30" // 25
-			}
-
-			"rotating_glaives_speed"
-			{
-				"value"							"0"
-				"special_bonus_shard"			"+160" // 160
-			}
-
-
-			"rotating_glaives_duration"
-			{
-				"value"							"0"
-				"special_bonus_shard"			"+7" // 7
-			}
-
-			"rotating_glaives_collision_damage"
-			{
-				"value"							"0"
-				"special_bonus_shard"			"+100" // 100
 			}
 
 			"AbilityCooldown"
@@ -12586,7 +12559,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"65 60 55 50"
-		"AbilityManaCost"				"150 250 350"
+		"AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 			"duration"					"4 5 6 7"

@@ -415,7 +415,7 @@
 		"AbilityCooldown"				"6.0" //15
 		"AbilityValues"
 		{
-				"bonus_all_stats"	"18" //6
+				"bonus_all_stats"	"15" //6
 				"tree_duration"		"30" //20
 		}
 	}
@@ -726,14 +726,13 @@
 	"item_ogre_seal_totem" //食人魔海豹图腾
 	{
 		"AbilityCooldown"				"20.0" //40
-		"AbilityCastPoint"				"0.0"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityValues"
 		{
 			"bonus_strength"			"40"       //10
             "radius"
 			{
-				"value"				"550"          //275
+				"value"				"450"          //275
 				"affected_by_aoe_increase"	"1"
 			}
             "flop_damage"               "350"      //150
@@ -1025,7 +1024,7 @@
 		"AbilityCooldown"				"4.0"  //8
 		"AbilityValues"
 		{
-				"bonus_movement_speed"	"250"  //115
+				"bonus_movement_speed"	"230"  //115
 				"push_length"			"750"  //750
 				"push_duration"			"0.5"  //0.5
 				"hp_regen"			    "90"  //30
@@ -1036,7 +1035,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"200"  //60
-				"corruption_armor"		"-30" //-10
+				"corruption_armor"		"-25" //-10
 				"corruption_duration"	"7.0" //7
 		}
 	}
