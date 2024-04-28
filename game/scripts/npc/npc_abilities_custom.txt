@@ -492,11 +492,11 @@
 			"bonus_armor"				"0 1 2 3 4 5"
 			"bonus_hp_regen"
 			{
-				"value"					"1 2 3 4 5 20"
+				"value"					"1 2 3 4 5 50"
 			}
 			"stack_limit"
 			{
-				"value"			"10"
+				"value"			"8"
 			}
 			"stack_duration"
 			{

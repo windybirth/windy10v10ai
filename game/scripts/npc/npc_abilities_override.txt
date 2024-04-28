@@ -423,7 +423,7 @@
 	{
 		"BaseClass"						"axe_culling_blade"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"20"
+		"RequiredLevel"					"25"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1301,7 +1301,7 @@
 	{
 		"BaseClass"						"doom_bringer_doom"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"20"
+		"RequiredLevel"					"25"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -2405,15 +2405,15 @@
 		{
 			"bonus_damage_pct"
 			{
-				"value"							"20 30 40 50 60"
-				"special_bonus_unique_magnus_2"	"+20"
+				"value"							"10 20 30 40 50"
+				"special_bonus_unique_magnus_2"	"+15"
 			}
 			"cleave_damage_pct"
 			{
 				"value"						"10 20 30 40 50"
-				"special_bonus_unique_magnus_2"	"+20"
+				"special_bonus_unique_magnus_2"	"+15"
 			}
-			"self_multiplier"		"200"
+			"self_multiplier"		"100"
 		}
 	}
 	// 巨角冲撞
@@ -2426,7 +2426,7 @@
 		{
 				"range"
 				{
-					"value"			"900 1200 1500 1800 2100"
+					"value"			"900 1100 1300 1500 1700"
 					"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
 				}
 				"slow_pct"
@@ -2440,20 +2440,13 @@
 	}
 	"special_bonus_unique_magnus_3"
 	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
 		"AbilitySpecial"
 		{
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"900"
-				"ad_linked_abilities"			"magnataur_skewer"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"				"800"
+				"ad_linked_abilities"			"magnataur_skewer"
 			}
 		}
 	}
@@ -2507,7 +2500,7 @@
 			}
 			"hero_stun_duration"
 			{
-				"value"					"8.0"
+				"value"					"6.0"
 			}
 			"pull_duration"			"0.0"
 			"stat_buff_duration"
@@ -7327,7 +7320,7 @@
 	{
 		"BaseClass"						"chaos_knight_chaos_strike"
 		"MaxLevel" "1"
-		"RequiredLevel"					"40"
+		"RequiredLevel"					"35"
 		"include_keys_from"				"chaos_knight_chaos_strike"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilitySound"					"Hero_ChaosKnight.ChaosStrike"
@@ -10727,7 +10720,7 @@
 	{
 		"BaseClass"						"lina_laguna_blade"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"20"
+		"RequiredLevel"					"25"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -10737,14 +10730,14 @@
 		"FightRecapLevel"				"2"
 		"AbilitySound"					"Ability.LagunaBladeImpact"
 		"AbilityDraftUltScepterAbility" "lina_flame_cloak"
-		"AbilityCastRange"				"0"
+		"AbilityCastRange"				"600"
 		"AbilityCastPoint"				"0.0"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
 		"AbilityManaCost"				"800"
 		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
 		"AbilityValues"
 		{
-			"damage"					"3000"
+			"damage"					"2500"
 			"damage_delay"				"0.0"
 			"AbilityCooldown"
 			{
@@ -10948,7 +10941,7 @@
 	{
 		"BaseClass"						"necrolyte_reapers_scythe"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"20"
+		"RequiredLevel"					"25"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -12432,11 +12425,12 @@
 				"movement_slow_pct"		"50 60 70 80"
 		}
 	}
+	// 神太虚之径
 	"void_spirit_astral_step_final"
 	{
 		"BaseClass"						"void_spirit_astral_step"
 		"MaxLevel"						"1"
-		"RequiredLevel"					"30"
+		"RequiredLevel"					"25"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -12458,7 +12452,7 @@
 				"AbilityChargeRestoreTime"
 				{
 					"value"			"20"
-					"special_bonus_unique_void_spirit_1"	"-8"
+					"special_bonus_unique_void_spirit_1"	"-6"
 				}
 				"min_travel_distance"	"0"
 				"max_travel_distance"	"4000"
@@ -12495,7 +12489,7 @@
 			"01"
 			{
 				"var_type"				"FIELD_INTEGER"
-				"value"					"350" // (Astral Step Crit)
+				"value"					"300" // (Astral Step Crit)
 				"ad_linked_abilities"		"void_spirit_astral_step | void_spirit_astral_step_final"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
