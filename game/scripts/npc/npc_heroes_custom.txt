@@ -1598,7 +1598,7 @@
 			}
 		}
 	}
-	"noc_dota_hero_magnataur"
+	"npc_dota_hero_magnataur"
 	{
 		"Ability5"			"magnataur_reverse_polarity_final" // 神技
 	}
