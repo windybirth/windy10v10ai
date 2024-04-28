@@ -7329,6 +7329,9 @@
 		"MaxLevel" "1"
 		"RequiredLevel"					"40"
 		"include_keys_from"				"chaos_knight_chaos_strike"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySound"					"Hero_ChaosKnight.ChaosStrike"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityTextureName"			"phantom_assassin_coup_de_grace"
 		"AbilityValues"
 		{
