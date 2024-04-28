@@ -363,7 +363,7 @@
 	"axe_berserkers_call"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"19 17 15 13 11"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
@@ -375,8 +375,8 @@
 			}
 			"bonus_armor"
 			{
-				"value"							"16 19 22 25 28"
-				"special_bonus_unique_axe_7"	"+10"
+				"value"							"20 25 30 35 40"
+				"special_bonus_unique_axe_7"	"+20"
 			}
 			"duration"				"1.8 2.2 2.6 3.0 3.4"
 		}
@@ -408,7 +408,62 @@
 			"damage"
 			{
 				"value"				"95 120 145 170 195"
-				"special_bonus_unique_axe_4" "+30"
+				"special_bonus_unique_axe_4" "+105"
+			}
+			"radius"
+			{
+				"value"						"500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"trigger_attacks"			"5 4 3 2 1"
+		}
+	}
+	// 神淘汰之刃
+	"axe_culling_blade_final"
+	{
+		"BaseClass"						"axe_culling_blade"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Axe.Culling_Blade_Success"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCooldown"				"30"
+		"AbilityManaCost"				"400"
+		"AbilityCastRange"				"0"
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"			"1500"
+				"special_bonus_unique_axe_5"	"+1000"
+			}
+			"speed_bonus"				"50"
+			"armor_bonus"				"50"
+			"speed_duration"
+			{
+				"value"					"6"
+				"special_bonus_unique_axe_culling_blade_speed_duration"		"+4"
+			}
+
+			"speed_aoe"
+			{
+				"value"						"2000"
+				"affected_by_aoe_increase"	"1"
+			}
+			"charge_speed"				"1200"
+			"armor_per_stack"
+			{
+				"value"					"3"
+				"special_bonus_unique_axe_3"	"+1"
 			}
 		}
 	}
@@ -429,7 +484,7 @@
 			"armor_bonus"				"20 25 30 35"
 			"armor_per_stack"
 			{
-				"value"					"2"
+				"value"					"3"
 				"special_bonus_unique_axe_3"	"+1"
 			}
 		}
@@ -1156,7 +1211,7 @@
 				"value"				"50 100 150 200 250"
 				"LinkedSpecialBonus"	"special_bonus_unique_doom_3"
 			}
-			"armor"					"2 4 6 8 10"
+			"armor"					"4 8 12 16 20"
 			"creep_level"			"6"
 		}
 	}
@@ -1183,8 +1238,9 @@
 	// 阎刃
 	"doom_bringer_infernal_blade"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15 12 9 6 3"
+		"AbilityCooldown"				"10 8 6 4 2"
 		"AbilitySpecial"
 		{
 			"01"
@@ -1195,7 +1251,7 @@
 			"02"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"burn_damage_pct"		"2"
+				"burn_damage_pct"		"3"
 				"LinkedSpecialBonus"	"special_bonus_unique_doom_1"
 			}
 			"03"
@@ -1206,18 +1262,18 @@
 			"04"
 			{
 				"var_type"				"FIELD_FLOAT"
-				"ministun_duration"		"1.0"
+				"ministun_duration"		"1.2"
 			}
 			"05"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"shard_ministun_duration"		"1.5"
+				"shard_ministun_duration"		"1.8"
 				"RequiresShard"					"1"
 			}
 			"06"
 			{
 				"var_type"						"FIELD_FLOAT"
-				"shard_bonus_stun_duration"		"2.0"
+				"shard_bonus_stun_duration"		"2.4"
 				"RequiresShard"					"1"
 			}
 			"07"
@@ -1237,6 +1293,60 @@
 				"var_type"					"FIELD_FLOAT"
 				"value"				"2"
 				"ad_linked_abilities"			"doom_bringer_infernal_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
+		}
+	}
+	// 神末日
+	"doom_bringer_doom_final"
+	{
+		"BaseClass"						"doom_bringer_doom"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_ANCIENTS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"
+		"FightRecapLevel"				"2"
+		"HasScepterUpgrade"				"1"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastRange"				"0"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
+		"AbilityManaCost"				"500"
+		"AbilityValues"
+		{
+			"duration"
+			{
+				"value"								"30"
+			}
+			"damage"
+			{
+				"value"								"300"
+				"special_bonus_unique_doom_5"		"+300"
+			}
+			"deniable_pct"			"50"
+			"AbilityCooldown"
+			{
+				"value"								"180"
+			}
+			"does_break"
+			{
+				"value"										"1"
+				"special_bonus_unique_doom_11"				"+0"
+			}
+			"does_mute"
+			{
+				"value"										"1"
+				"special_bonus_unique_doom_10"				"+0"
+			}
+			"scepter_aura_radius"
+			{
+				"value"										"0"
+				"special_bonus_scepter"						"+800"
+				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -2259,11 +2369,17 @@
 	//=================================================================================================================
 	// Ability: Magnataur 马格纳斯/猛犸
 	//=================================================================================================================
+	"magnataur_horn_toss"
+	{
+		"AbilityCooldown"				"5"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+	}
 	// 震荡波
 	"magnataur_shockwave"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"13 12 11 10 9"
+		"AbilityCooldown"				"9 8 7 6 5"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
@@ -2272,6 +2388,12 @@
 				"value"			"75 150 225 300 375"
 				"special_bonus_unique_magnus"	"+125"
 			}
+			"shock_width"
+			{
+				"value"	"400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"pull_distance"		"300"
 		}
 	}
 	// 授予力量
@@ -2283,27 +2405,28 @@
 		{
 			"bonus_damage_pct"
 			{
-				"value"							"12 20 28 36 44"
-				"special_bonus_unique_magnus_2"	"+10"
+				"value"							"20 30 40 50 60"
+				"special_bonus_unique_magnus_2"	"+20"
 			}
 			"cleave_damage_pct"
 			{
 				"value"						"10 20 30 40 50"
-				"special_bonus_unique_magnus_2"	"+10"
+				"special_bonus_unique_magnus_2"	"+20"
 			}
-			"self_multiplier"		"100"
+			"self_multiplier"		"200"
 		}
 	}
 	// 巨角冲撞
 	"magnataur_skewer"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 20 18 16 14"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityValues"
 		{
 				"range"
 				{
-					"value"			"900 975 1050 1125 1200"
+					"value"			"900 1200 1500 1800 2100"
 					"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
 				}
 				"slow_pct"
@@ -2312,7 +2435,26 @@
 				}
 				"skewer_damage"			"70 140 210 280 350"
 				"tool_attack_slow"				"10 20 30 40 50"
-				"damage_distance_pct"			"6 9 12 15 18"
+				"damage_distance_pct"			"10 20 30 40 50"
+		}
+	}
+	"special_bonus_unique_magnus_3"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"value"				"900"
+				"ad_linked_abilities"			"magnataur_skewer"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
 	// 两极反转
@@ -2328,6 +2470,53 @@
 			{
 				"value"					"2.5 3.0 3.5 4.0"
 				"special_bonus_unique_magnus_5"	"+0.8"
+			}
+		}
+	}
+	// 神两极反转
+	"magnataur_reverse_polarity_final"
+	{
+		"BaseClass"						"magnataur_reverse_polarity"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"25"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
+		"AbilityDraftUltScepterAbility"		"magnataur_horn_toss"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"80"
+		"AbilityManaCost"				"500"
+		"AbilityCastRange"				"1200"
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		"AbilityValues"
+		{
+			"pull_radius"
+			{
+				"value"	"1220"
+				"affected_by_aoe_increase"	"1"
+			}
+			"polarity_damage"
+			{
+				"value"			"500"
+				"CalculateSpellDamageTooltip" "1"
+			}
+			"hero_stun_duration"
+			{
+				"value"					"8.0"
+			}
+			"pull_duration"			"0.0"
+			"stat_buff_duration"
+			{
+				"value"					"50"
+			}
+			"stats_per_stack"
+			{
+				"value"					"50"
 			}
 		}
 	}
@@ -5371,12 +5560,12 @@
 			"range"
 			{
 				"value"				"650 700 750 800 850"
-				"special_bonus_shard"		"+150"
+				"special_bonus_shard"		"+350"
 			}
 			"AbilityCooldown"
 			{
-				"value"										"22 18 14 10 6"
-				"special_bonus_unique_faceless_void_5"		"-1"
+				"value"										"12 10 8 6 4"
+				"special_bonus_unique_faceless_void_5"		"-2"
 			}
 		}
 	}
@@ -5399,7 +5588,7 @@
 		"AbilityDraftPreAbility"		"faceless_void_backtrack"
 		"AbilityValues"
 		{
-				"chance_pct"			"12 16 20 24 28"
+				"chance_pct"			"20 25 30 35 40"
 				"bonus_damage"
 				{
 					"value"				"20 25 30 35 40"
@@ -5410,8 +5599,9 @@
 	// 时间膨胀
 	"faceless_void_time_dilation"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"24 22 20 18 16"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
@@ -5443,6 +5633,43 @@
 					"affected_by_aoe_increase"	"1"
 
 				}
+		}
+	}
+	// 神时间结界
+	"faceless_void_chronosphere_final"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_FacelessVoid.Chronosphere"
+		"BaseClass"						"faceless_void_chronosphere"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"25"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"120"
+		"AbilityManaCost"				"500"
+		"AbilityModifierSupportBonus"	"50"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"duration"				"6"
+			"vision_radius"
+			{
+				"value"	"1500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_attack_speed"
+			{
+				"value"		"700"
+			}
 		}
 	}
 	//=================================================================================================================
@@ -7031,14 +7258,14 @@
 	"phantom_assassin_phantom_strike"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12 10 8 6 4"
+		"AbilityCooldown"				"7 6 5 4 3"
 		"AbilityManaCost"				"35 40 45 50 55"
 		"AbilityValues"
 		{
 			"bonus_attack_speed"
 			{
-				"value"													"75 100 125 150 175"
-				"special_bonus_unique_phantom_assassin_strike_aspd"		"+60"
+				"value"													"150 200 250 300 350"
+				"special_bonus_unique_phantom_assassin_strike_aspd"		"+100"
 			}
 		}
 	}
@@ -7054,6 +7281,23 @@
 				"var_type"					"FIELD_INTEGER"
 				"bonus_evasion"				"20 30 40 50 60"
 				"LinkedSpecialBonus"		"special_bonus_unique_phantom_assassin_3"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"fade_duration"			"0.5"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"scepter_cooldown"			"100"
+				"RequiresScepter"		"1"
+			}
+			"05"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"scepter_fade_duration"			"0.0"
+				"RequiresScepter"		"1"
 			}
 		}
 	}
@@ -7077,6 +7321,29 @@
 		{
 			"crit_bonus"				"200 325 450 575"
 		}
+	}
+	// 神降维打击
+	"chaos_knight_chaos_strike_final"
+	{
+		"BaseClass"						"chaos_knight_chaos_strike"
+		"MaxLevel" "1"
+		"RequiredLevel"					"40"
+		"include_keys_from"				"chaos_knight_chaos_strike"
+		"AbilityTextureName"			"phantom_assassin_coup_de_grace"
+		"AbilityValues"
+		{
+				"chance"
+				{
+					"value"				"3.33"
+				}
+				"crit_min"				"600"
+				"crit_max"				"80000"
+				"lifesteal"
+				{
+					"value"					"1000"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
 	//=================================================================================================================
 	// Ability: Razor 剃刀/电棍/雷泽
@@ -10360,16 +10627,17 @@
 	// 龙破斩
 	"lina_dragon_slave"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
 			"dragon_slave_burn"			"20 30 40 50 60"
 			"dragon_slave_burn_duration"	"3 4 5 6 7"
-			"dragon_slave_damage"		"150 225 300 400 525"
+			"dragon_slave_damage"		"400 500 600 700 800"
 			"AbilityCooldown"
 			{
-				"value"						"11 10 9 8 7"
+				"value"						"10 9 8 7 6"
 				"special_bonus_unique_lina_1"		"-3.5"
 			}
 			"target_crit_multiplier"
@@ -10382,20 +10650,21 @@
 	// 光击阵
 	"lina_light_strike_array"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 9 8 7 6"
+		"AbilityCooldown"				"9 8 7 6 5"
 		"AbilityManaCost"				"100 105 110 115 120"
 		"AbilityValues"
 		{
 				"light_strike_array_aoe"
 				{
-					"value" "300"
+					"value" "400"
 					"affected_by_aoe_increase"	"1"
 				}
 				"light_strike_array_stun_duration"	"1.3 1.6 1.9 2.2 2.5"
 				"light_strike_array_damage"
 				{
-					"value"			"110 160 210 260 310"
+					"value"			"110 200 300 400 500"
 					"LinkedSpecialBonus"		"special_bonus_unique_lina_3"
 				}
 		}
@@ -10416,8 +10685,8 @@
             }
             "fiery_soul_move_speed_bonus"
             {
-                "value"							"1 1.5 2 2.5 3"
-                "special_bonus_unique_lina_2"	"+1"
+                "value"							"1 2 3 4 5"
+                "special_bonus_unique_lina_2"	"+2"
             }
             "fiery_soul_max_stacks"
             {
@@ -10426,11 +10695,74 @@
             "fiery_soul_stack_duration"			"18"
             "bonus_spell_damage"
             {
-                "value"								"10"
-                "special_bonus_shard"		       "+20"
+                "value"								"20"
+                "special_bonus_shard"		       "+40"
             }
         }
     }
+	"lina_flame_cloak"
+	{
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"IsGrantedByScepter"				"1"
+		"MaxLevel"						"1"
+		"AbilityCooldown"				"30"
+		"AbilityCastPoint"				"0.0"
+		"AbilityValues"
+		{
+			"flame_cloak_duration"				"30"
+			"magic_resistance"					"35"
+			"spell_amp"							"70"
+			"visualzdelta"							"100"
+			"zchangespeed"							"350"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCastGestureSlot"		"DEFAULT"
+	}
+	// 神神灭斩
+	"lina_laguna_blade_final"
+	{
+		"BaseClass"						"lina_laguna_blade"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Ability.LagunaBladeImpact"
+		"AbilityDraftUltScepterAbility" "lina_flame_cloak"
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityManaCost"				"800"
+		"AbilityModifierSupportValue"	"0.0"	// Modifier just delays damage
+		"AbilityValues"
+		{
+			"damage"					"3000"
+			"damage_delay"				"0.0"
+			"AbilityCooldown"
+			{
+				"value"								"60"
+				"special_bonus_unique_lina_6"		"-30"
+			}
+			"pierce_immunity"
+			{
+				"value"								"0"
+				"special_bonus_unique_lina_7"		"+1"
+			}
+			"supercharge_duration"	"10"
+			"supercharge_stacks"
+			{
+				"value"				"15"
+				"special_bonus_unique_lina_supercharge_stacks"		"+10"
+			}
+
+
+		}
+	}
 	// 神灭斩
 	"lina_laguna_blade"
 	{
@@ -10541,14 +10873,14 @@
 	"necrolyte_death_pulse"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"7 6.5 6 5.5 5"
-		"AbilityDamage"					"100 160 220 280 340"
-		"AbilityManaCost"				"100 120 140 160 180"
+		"AbilityCooldown"				"8 7 6 5 4"
+		"AbilityDamage"					"250 300 350 400 450"
+		"AbilityManaCost"				"100 150 200 250 300"
 		"AbilityValues"
 		{
 				"heal"
 				{
-					"value"		"60 90 120 150 180"
+					"value"		"50 100 150 200 250"
 					"LinkedSpecialBonus"		"special_bonus_unique_necrophos_4"
 				}
 		}
@@ -10560,7 +10892,7 @@
 			"01"
 			{
 				"var_type"					"FIELD_INTEGER"
-				"value"				"70"
+				"value"				"100"
 				"ad_linked_abilities"			"necrolyte_death_pulse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
@@ -10573,13 +10905,13 @@
 		{
 			"aura_damage"
 			{
-				"value"		"1.2 1.5 1.8 2.1 2.4"
+				"value"		"1.4 1.8 2.2 2.6 3.0"
 				"special_bonus_unique_necrophos_2"		"+0.5"
 				"DamageTypeTooltip"	"DAMAGE_TYPE_NONE"
 				"CalculateSpellDamageTooltip"	"0"
 			}
-			"health_regen"	"4 5 6 7 8"
-			"mana_regen"	"4 5 6 7 8"
+			"health_regen"	"4 8 12 16 20"
+			"mana_regen"	"4 8 12 16 20"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
@@ -10593,8 +10925,8 @@
 			"duration"		"3 3.5 4 4.5 5"
 			"heal_bonus"
 			{
-				"value"			"45 55 60 65 75"
-				"special_bonus_unique_necrophos_sadist_heal_bonus"		"+15"
+				"value"			"60 70 80 90 100"
+				"special_bonus_unique_necrophos_sadist_heal_bonus"		"+30"
 			}
 			"movement_speed"
 			{
@@ -10604,7 +10936,40 @@
 			"AbilityCooldown"
 			{
 				"value"						"28 25 22 19 16"
-				"special_bonus_scepter"		"-0"
+				"special_bonus_scepter"		"-6"
+			}
+		}
+	}
+	// 神死神镰刀
+	"necrolyte_reapers_scythe_final"
+	{
+		"BaseClass"						"necrolyte_reapers_scythe"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"20"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"2"
+		"AbilitySound"					"Hero_Necrolyte.ReapersScythe.Target"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityCooldown"				"90"
+		"AbilityManaCost"				"2000"
+		"AbilityModifierSupportValue"	"0.1"	// Primarily about the damage
+		"AbilityValues"
+		{
+			"damage_per_health"			"2.0"
+			"stun_duration"				"2.0"
+			"hp_per_kill"				"25"
+			"mana_per_kill"				"15"
+			"AbilityCastRange"
+			{
+				"value"						"0"
+				"special_bonus_unique_necrophos_6"				"+0"
 			}
 		}
 	}
@@ -10617,8 +10982,8 @@
 		"AbilityValues"
 		{
 			"damage_per_health"			"0.8 0.85 0.9 0.95"
-			"hp_per_kill"				"4 8 12 16"
-			"mana_per_kill"				"2 4 6 8"
+			"hp_per_kill"				"10 15 20 25"
+			"mana_per_kill"				"6 9 12 15"
 		}
 	}
 	//=================================================================================================================
@@ -12051,8 +12416,8 @@
 				"radius"				"200"
 				"AbilityChargeRestoreTime"
 				{
-					"value"			"24 21 18 16"
-					"special_bonus_unique_void_spirit_1"	"-2"
+					"value"			"20 18 16 14"
+					"special_bonus_unique_void_spirit_1"	"-4"
 				}
 				"min_travel_distance"	"200"
 				"max_travel_distance"	"800 1000 1300 1700"
@@ -12062,6 +12427,74 @@
 					"CalculateSpellDamageTooltip"	"1"
 				}
 				"movement_slow_pct"		"50 60 70 80"
+		}
+	}
+	"void_spirit_astral_step_final"
+	{
+		"BaseClass"						"void_spirit_astral_step"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"30"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_VoidSpirit.AstralStep.Start"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCharges"				"4"
+		"AbilityManaCost"				"200"
+		"AbilityValues"
+		{
+				"radius"
+				{
+					"value"	"350"
+					"affected_by_aoe_increase"	"1"
+				}
+				"AbilityChargeRestoreTime"
+				{
+					"value"			"20"
+					"special_bonus_unique_void_spirit_1"	"-8"
+				}
+				"min_travel_distance"	"0"
+				"max_travel_distance"	"4000"
+				"pop_damage_delay"
+				{
+					"value"	"1.25"
+					"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				}
+				"pop_damage"
+				{
+					"value"					"600"
+					"CalculateSpellDamageTooltip"	"1"
+				}
+				"movement_slow_pct"		"100"
+				"ability_chance_pct"
+				{
+					"value"				"0"
+
+				}
+				"attack_chance_pct"
+				{
+					"value"				"0"
+				}
+		}
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_2"
+	}
+	// 太虚之径暴击天赋
+	"special_bonus_unique_void_spirit_8"
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"				"FIELD_INTEGER"
+				"value"					"350" // (Astral Step Crit)
+				"ad_linked_abilities"		"void_spirit_astral_step | void_spirit_astral_step_final"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+			}
 		}
 	}
 	// 共鸣脉冲

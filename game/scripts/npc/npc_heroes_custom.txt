@@ -393,7 +393,8 @@
 
 	"npc_dota_hero_faceless_void"
 	{
-		"Ability5"		"faceless_void_backtrack"
+		"Ability5"		"faceless_void_chronosphere_final" // 神技
+		"Ability7"		"faceless_void_backtrack"
 	}
 
 	"npc_dota_hero_brewmaster"
@@ -645,6 +646,7 @@
 	}
 	"npc_dota_hero_axe"
 	{
+		"Ability4"			"axe_culling_blade_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1100,6 +1102,10 @@
 			}
 		}
 	}
+	"npc_dota_hero_doom_bringer"
+	{
+		"ability7"			"doom_bringer_doom_final" // 神技
+	}
 	"npc_dota_hero_drow_ranger"
 	{
 		"Bot"
@@ -1447,6 +1453,7 @@
 	}
 	"npc_dota_hero_lina"
 	{
+		"Ability5"		"lina_laguna_blade_final" // 神技
 	    "Ability10"		"special_bonus_unique_lina_3"
         "Ability11"		"special_bonus_unique_lina_1"
         "Ability12"		"special_bonus_unique_lina_2"
@@ -1591,6 +1598,10 @@
 			}
 		}
 	}
+	"noc_dota_hero_magnataur"
+	{
+		"Ability5"			"magnataur_reverse_polarity_final" // 神技
+	}
 	"npc_dota_hero_marci"
 	{
 		"Ability4"          "broodmother_insatiable_hunger"
@@ -1732,6 +1743,7 @@
 	}
 	"npc_dota_hero_necrolyte"
 	{
+		"Ability5"		"necrolyte_reapers_scythe_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1934,6 +1946,7 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
+		"Ability5"		"chaos_knight_chaos_strike_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1972,6 +1985,12 @@
 				"32"		"phantom_assassin_stifling_dagger"
 				"33"		"phantom_assassin_blur"
 				"34"		"phantom_assassin_blur"
+				"35"		""
+				"36"		""
+				"37"		""
+				"38"		""
+				"39"		""
+				"40"		"chaos_knight_chaos_strike_final"
 			}
 		}
 	}
@@ -2555,6 +2574,10 @@
 				"34"		"vengefulspirit_wave_of_terror"
 			}
 		}
+	}
+	"npc_dota_hero_void_spirit"
+	{
+		"Ability4"		"void_spirit_astral_step_final" // 神技
 	}
 	"npc_dota_hero_viper"
 	{
