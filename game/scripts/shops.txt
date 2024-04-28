@@ -149,6 +149,7 @@
 		"item"      "item_havoc_hammer_dark"
 		"item"      "item_apex_light"
 		"item"      "item_apex_dark"
+		"item"			"item_disperser_chaos"
 	}
 
 	// Level 1 - Green Recipes
@@ -172,6 +173,7 @@
 		"item"		"item_wings_of_haste"
 		"item"		"item_moon_shard_datadriven"
 		"item"		"item_consumable_gem"		// 幻影宝石
+		"item"		"item_mysterious_hat_unrefined"
 	}
 
 	// Level 2 - Blue Recipes
@@ -299,7 +301,7 @@
 		"item"		"item_sacred_six_vein"
 		"item"      "item_overwhelming_blink_2"
 		"item"      "item_swift_blink_2"
-		"item"      "item_arcane_blink_2"
+		"item"      "item_arcane_blink"
 		"item"		"item_jump_jump_jump"
  		//"item"		"item_overwhelming_blink"
  		//"item"		"item_swift_blink"

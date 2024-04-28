@@ -62,6 +62,9 @@
 		"player_gold_xp_multiplier_2"            	"2    (新手)"
 		"player_gold_xp_multiplier_5"               "5    (我要打10个)"
 
+		"radiant_player_number_1"		"1  (简单)"
+		"radiant_player_number_10"		"10 (困难)"
+
 		"respawn_time_percentage_slow"        "较慢"
 		"respawn_time_percentage_normal"        "普通"
 		"respawn_time_percentage_fast"         "快速"
@@ -1009,7 +1012,7 @@
 
 		// bag_of_gold
         "DOTA_Tooltip_ability_item_bag_of_gold"					"金袋"
-        "DOTA_Tooltip_ability_item_bag_of_season_point"			"勇士积分"
+        // "DOTA_Tooltip_ability_item_bag_of_season_point"			"勇士积分"
 
 		// Tomes
 		"DOTA_Tooltip_Ability_item_tome_of_strength"					"力量之书"
@@ -1739,6 +1742,39 @@
 		"DOTA_Tooltip_modifier_devastator_2_debuff"						"法力腐蚀"
 		"DOTA_Tooltip_modifier_devastator_2_debuff_Description"  			"魔法抗性降低%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%%"
 
+		// 力量跳2
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2"                            "泰森闪光"
+		"DOTA_Tooltip_ability_item_overwhelming_blink_2_Description"			    "<h1>主动：泰森闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后，%radius%范围内所有敌人受到%damage_base% + %damage_pct_instant%%%力量值的瞬时伤害，并且额外持续受到总计为%damage_pct_over_time%%%力量值的伤害，被减缓%movement_slow%%%移动速度，降低%attack_slow%攻击速度，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，盛势闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Lore"                    "令人生畏的匕首，在混沌之喉中打造，凡人之手几乎无法企及。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note0"                    "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note1"					"如果泰森闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_overwhelming_blink_2_bonus_strength"			"+$str"
+		// 敏捷跳2
+		"DOTA_Tooltip_ability_item_swift_blink_2"                               "博尔特闪光"
+		"DOTA_Tooltip_ability_item_swift_blink_2_Description"         			"<h1>主动：博尔特闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后获得%bonus_movement%%%移动速度加成和相位移动状态，+%bonus_agi_active%点敏捷，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，迅疾闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Lore"                           "一把聪颖的战刃，可以预见佩戴者的动向并加以实现。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note0"                           "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_Note1"					        "如果博尔特闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_swift_blink_2_bonus_agility"			        "+$agi"
+		// 大小智力跳对调
+		// 小智力跳
+		"DOTA_Tooltip_ability_item_arcane_blink_2"                              "秘奥闪光"
+		"DOTA_Tooltip_ability_item_arcane_blink_2_Description"         			"<h1>主动：秘奥闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后回复%heal_amount%点生命和%mana_amount%点魔法。<br><br>受到来自敌方英雄或肉山的攻击时，秘奥闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Lore"                          "让人精神焕发的工具，可以帮忙分担施展奥术耗费的精力。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note0"                          "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_Note1"      					"如果秘奥闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_arcane_blink_2_bonus_intellect"                "+$int"
+		// 大智力跳
+		"DOTA_Tooltip_ability_item_arcane_blink"								"爱因斯坦闪光"
+		"DOTA_Tooltip_ability_item_arcane_blink_Description"         			"<h1>主动：爱因斯坦闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后回复%heal_amount%点生命和%mana_amount%点魔法。<br><br>受到来自敌方英雄或肉山的攻击时，秘奥闪光将在%blink_damage_cooldown%秒内无法使用。"
+        "DOTA_Tooltip_ability_item_arcane_blink_Lore"                          "让人精神焕发的工具，可以帮忙分担施展奥术耗费的精力。"
+        "DOTA_Tooltip_ability_item_arcane_blink_Note0"                          "快速点击两次会将自己往己方泉水方向传送。"
+        "DOTA_Tooltip_ability_item_arcane_blink_Note1"      					"如果爱因斯坦闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
+        "DOTA_Tooltip_ability_item_arcane_blink_bonus_intellect"                "+$int"
+
+		"DOTA_Tooltip_modifier_item_arcane_blink_buff"         			"爱因斯坦闪光"
+        "DOTA_Tooltip_modifier_item_arcane_blink_buff_Description"      "施法距离提升%dMODIFIER_PROPERTY_CAST_RANGE_BONUS%%%。"
+
 		// item_blessing_of_dragon 神龙
 		"DOTA_Tooltip_Ability_item_blessing_of_dragon"				"<font color='#e03e2e'>神龙</font>"
 		"DOTA_Tooltip_ability_item_blessing_of_dragon_Description"		"恭喜你集齐了七颗龙珠，成功召唤了神龙，现在你可以在商店购买你要许下的愿望。"
@@ -1977,36 +2013,6 @@
 		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_aura_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT%。"
 		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active"				"坚韧"
 		"DOTA_Tooltip_modifier_item_boots_of_bearing_2_active_Description"	"移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
-
-		// 力量跳2
-		"DOTA_Tooltip_ability_item_overwhelming_blink_2"                            "泰森闪光"
-		"DOTA_Tooltip_ability_item_overwhelming_blink_2_Description"			    "<h1>主动：泰森闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后，%radius%范围内所有敌人受到%damage_base% + %damage_pct_instant%%%力量值的瞬时伤害，并且额外持续受到总计为%damage_pct_over_time%%%力量值的伤害，被减缓%movement_slow%%%移动速度，降低%attack_slow%攻击速度，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，盛势闪光将在%blink_damage_cooldown%秒内无法使用。"
-        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Lore"                    "令人生畏的匕首，在混沌之喉中打造，凡人之手几乎无法企及。"
-        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note0"                    "快速点击两次会将自己往己方泉水方向传送。"
-        "DOTA_Tooltip_ability_item_overwhelming_blink_2_Note1"					"如果盛势闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
-        "DOTA_Tooltip_ability_item_overwhelming_blink_2_bonus_strength"			"+$str"
-        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff"			        "盛势闪光"
-        "DOTA_Tooltip_modifier_item_overwhelming_blink_2_debuff_Description"      "受到持续伤害。移动速度减缓%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
-
-		// 敏捷跳2
-		"DOTA_Tooltip_ability_item_swift_blink_2"                               "博尔特闪光"
-		"DOTA_Tooltip_ability_item_swift_blink_2_Description"         			"<h1>主动：博尔特闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后获得%bonus_movement%%%移动速度加成和相位移动状态，+%bonus_agi_active%点敏捷，持续%duration%秒。<br><br>受到来自敌方英雄或肉山的攻击时，迅疾闪光将在%blink_damage_cooldown%秒内无法使用。"
-        "DOTA_Tooltip_ability_item_swift_blink_2_Lore"                           "一把聪颖的战刃，可以预见佩戴者的动向并加以实现。"
-        "DOTA_Tooltip_ability_item_swift_blink_2_Note0"                           "快速点击两次会将自己往己方泉水方向传送。"
-        "DOTA_Tooltip_ability_item_swift_blink_2_Note1"					        "如果迅疾闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
-        "DOTA_Tooltip_ability_item_swift_blink_2_bonus_agility"			        "+$agi"
-		"DOTA_Tooltip_modifier_item_swift_blink_2_buff"         			"迅疾闪光"
-		"DOTA_Tooltip_modifier_item_swift_blink_2_buff_Description"       "敏捷提升%dMODIFIER_PROPERTY_STATS_AGILITY_BONUS%点。移动速度提升%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%并且英雄拥有相位移动状态。"
-
-		// 智力跳2
-		"DOTA_Tooltip_ability_item_arcane_blink_2"                              "爱因斯坦闪光"
-		"DOTA_Tooltip_ability_item_arcane_blink_2_Description"         			"<h1>主动：爱因斯坦闪光</h1>传送到最远%blink_range%距离的位置。<br><br>传送后回复%heal_amount%点生命和%mana_amount%点魔法。<br><br>受到来自敌方英雄或肉山的攻击时，秘奥闪光将在%blink_damage_cooldown%秒内无法使用。"
-        "DOTA_Tooltip_ability_item_arcane_blink_2_Lore"                          "让人精神焕发的工具，可以帮忙分担施展奥术耗费的精力。"
-        "DOTA_Tooltip_ability_item_arcane_blink_2_Note0"                          "快速点击两次会将自己往己方泉水方向传送。"
-        "DOTA_Tooltip_ability_item_arcane_blink_2_Note1"      					"如果秘奥闪光传送的距离超过最长施法距离，那么只能传送到最长距离的4/5。"
-        "DOTA_Tooltip_ability_item_arcane_blink_2_bonus_intellect"                "+$int"
-		"DOTA_Tooltip_modifier_item_arcane_blink_2_buff"         			"秘奥闪光"
-        "DOTA_Tooltip_modifier_item_arcane_blink_2_buff_Description"      "施法距离提升%dMODIFIER_PROPERTY_CAST_RANGE_BONUS%%%。"
 
 		//  item_shivas_guard_ultra 零度之甲
 		"DOTA_Tooltip_Ability_item_shivas_guard_ultra"				"<font color='#e03e2e'>神器·零度之甲</font>"
@@ -2276,6 +2282,12 @@
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_bonus_health"			"+$health"
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_spell_amp"			"%+技能增强"
 		"DOTA_Tooltip_Ability_item_mysterious_hat_ai_1_manacost_reduction"	"%+$manacost_reduction"
+
+		// item_mysterious_hat_unrefined 次品·仙灵饰品
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined"				"仙灵次品（中立）"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_Lore"			"较小的配饰，为了酬谢凡人不经意间流露出的善意而注入了仙灵的好运。"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_spell_amp"			"%+技能增强"
+		"DOTA_Tooltip_Ability_item_mysterious_hat_unrefined_manacost_reduction"	"%+$manacost_reduction"
 
 		// item_safety_bubble_light 圣光·安全泡泡
 		"DOTA_Tooltip_Ability_item_safety_bubble_light"				"<font color='#FFFF00'>圣光·安全泡泡</font>"

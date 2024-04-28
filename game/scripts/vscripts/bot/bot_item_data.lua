@@ -340,8 +340,8 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_despotic',
 		-- 'item_satanic_2',
 		'item_excalibur',
-		'item_defiant_shell_ai',
 		'item_paladin_sword_ai',
+		'item_apex_light',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_magic_wand',
@@ -406,10 +406,11 @@ tBotItemData.purchaseItemList = {
 		'item_black_king_bar_2',
 		'item_monkey_king_bar_2',
 		'item_ultimate_scepter_2',
-		'item_adi_king_plus',
+		-- 'item_adi_king_plus',
 		'item_blue_fantasy',
 		'item_abyssal_blade_v2',
 		'item_moon_shard_datadriven',
+		'item_seer_stone_ai',
 		'item_jump_jump_jump',
 		'item_excalibur',
 	},
@@ -518,6 +519,7 @@ tBotItemData.purchaseItemList = {
 		'item_refresher',
 	},
 	npc_dota_hero_luna = {
+		'item_aghanims_shard',
 		'item_magic_wand',
 		'item_boots',
 		'item_wraith_band',
@@ -526,7 +528,6 @@ tBotItemData.purchaseItemList = {
 		'item_wraith_band',
 		'item_mask_of_madness',
 		'item_wings_of_haste',
-		'item_aghanims_shard',
 		'item_sange_and_yasha',
 		'item_hurricane_pike_2',
 		'item_monkey_king_bar_2',
@@ -535,9 +536,10 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_skadi_2',
 		'item_wasp_despotic',
-		'item_satanic_2',
+		-- 'item_satanic_2',
 		'item_paladin_sword_ai',
 		'item_excalibur',
+		'item_apex_light',
 	},
 	npc_dota_hero_medusa = {
 		'item_magic_wand',
@@ -551,16 +553,14 @@ tBotItemData.purchaseItemList = {
 		'item_ultimate_scepter',
 		'item_wings_of_haste',
 		'item_hurricane_pike_2',
-		'item_butterfly',
+		'item_wasp_callous',
 		'item_recipe_ultimate_scepter_2',
-		'item_lesser_crit',
 		'item_skadi_2',
 		'item_black_king_bar_2',
-		'item_recipe_wasp_callous',
+		'item_mind_breaker_ai',
 		'item_wasp_despotic',
 		'item_excalibur',
-		'item_grove_bow_ai',
-		'item_excalibur',
+		'item_refresh_core',
 	},
 	npc_dota_hero_meepo = {
 		'item_magic_wand',
@@ -598,15 +598,12 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_black_king_bar_2',
 		'item_ultimate_scepter_2',
-		'item_blink',
-		'item_eagle',
-		'item_recipe_swift_blink',
-		'item_infernal_desolator',
-		'item_wasp_callous',
-		'item_monkey_king_bar_2',
 		'item_skadi_2',
+		'item_infernal_desolator',
+		'item_monkey_king_bar_2',
+		'item_arcane_blink',
+		'item_wasp_callous',
 		'item_wasp_despotic',
-		'item_jump_jump_jump',
 		'item_excalibur',
 		'item_paladin_sword_ai',
 	},
@@ -724,12 +721,10 @@ tBotItemData.purchaseItemList = {
 		'item_infernal_desolator',
 		'item_ultimate_scepter_2',
 		'item_abyssal_blade_v2',
-		'item_wasp_callous',
-		'item_wasp_despotic',
 		-- 'item_satanic_2',
 		'item_paladin_sword_ai',
 		'item_excalibur',
-		'item_excalibur',
+		'item_refresh_core',
 	},
 	npc_dota_hero_pudge = {
 		'item_magic_wand',
@@ -817,16 +812,14 @@ tBotItemData.purchaseItemList = {
 		'item_blink',
 		'item_ultimate_scepter',
 		'item_recipe_ultimate_scepter_2',
-		'item_mystic_staff',
-		'item_recipe_arcane_blink',
 		'item_aeon_pendant',
 		'item_aether_lens_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_refresher',
 		'item_black_king_bar_2',
+		'item_arcane_blink', -- 大智力跳
 		'item_necronomicon_staff',
-		"item_jump_jump_jump",
 		'item_recipe_refresh_core',
 	},
 	npc_dota_hero_sand_king = {
@@ -976,7 +969,6 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_sheepstick',
 		'item_arcane_blink',
-		'item_arcane_blink',
 		'item_ultimate_scepter',
 		'item_necronomicon_staff',
 		'item_recipe_ultimate_scepter_2',
@@ -986,6 +978,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_arcane_octarine_core',
 		'item_refresher',
 		'item_recipe_refresh_core',
+		'item_psychic_headband_ai',
 	},
 	npc_dota_hero_tiny = {
 		'item_magic_wand',
@@ -1028,8 +1021,9 @@ tBotItemData.purchaseItemList = {
 		'item_wasp_callous',
 		'item_infernal_desolator',
 		'item_skadi_2',
-		'item_vladmir_2',
+		'item_shivas_guard_2',
 		'item_wasp_despotic',
+		'item_excalibur',
 	},
 	npc_dota_hero_viper = {
 		'item_magic_wand',
@@ -1045,6 +1039,7 @@ tBotItemData.purchaseItemList = {
 		'item_hurricane_pike_2',
 		'item_ultimate_scepter_2',
 		'item_monkey_king_bar_2',
+		-- 'item_shotgun_v2',
 		'item_wasp_callous',
 		'item_black_king_bar_2',
 		'item_wasp_despotic',
@@ -1218,6 +1213,7 @@ tBotItemData.sellItemList = {
 		'item_wraith_band',
 		'item_mask_of_madness',
 		'item_monkey_king_bar_2',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_force_staff',
@@ -1260,6 +1256,7 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_medusa = {
 		'item_mask_of_madness',
 		'item_hurricane_pike_2',
+		'item_mind_breaker_ai',
 	},
 	npc_dota_hero_meepo = {
 		'item_wraith_band',
@@ -1274,7 +1271,7 @@ tBotItemData.sellItemList = {
 		'item_mask_of_madness',
 		'item_swift_blink',
 		'item_monkey_king_bar_2',
-		'item_jump_jump_jump',
+		'item_infernal_desolator',
 	},
 	npc_dota_hero_necrolyte = {
 	},
@@ -1291,7 +1288,6 @@ tBotItemData.sellItemList = {
 	npc_dota_hero_phantom_assassin = {
 		'item_wraith_band',
 		'item_echo_sabre_2',
-		'item_infernal_desolator',
 	},
 	npc_dota_hero_pudge = {
 		'item_vanguard',
@@ -1321,7 +1317,6 @@ tBotItemData.sellItemList = {
 		'item_arcane_boots',
 		'item_glimmer_cape',
 		'item_force_staff',
-		'item_arcane_blink',
 	},
 	npc_dota_hero_sand_king = {
 		'item_overwhelming_blink',
@@ -1350,6 +1345,7 @@ tBotItemData.sellItemList = {
 		'item_falcon_blade',
 		'item_vanguard',
 		'item_desolator',
+		'item_monkey_king_bar_2',
 	},
 	npc_dota_hero_viper = {
 		'item_falcon_blade',
@@ -1376,6 +1372,7 @@ tBotItemData.sellItemList = {
 	},
 	npc_dota_hero_tinker = {
 		'item_force_staff_3',
+		'item_dagon_5',
 	},
 	npc_dota_hero_tiny = {
 		'item_vanguard',
@@ -1675,13 +1672,13 @@ tBotItemData.addNeutralItemList = {
 		'item_timeless_relic_ai_1',
 	},
 	npc_dota_hero_spectre = {
-		'item_force_field_ai_1',
+		'item_apex_ai_1',
 	},
 	npc_dota_hero_bane = {
 		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_bounty_hunter = {
-		'item_apex_ai_1',
+		'item_ceremonial_robe_ai_1',
 	},
 	npc_dota_hero_bloodseeker = {
 		'item_giants_ring',
@@ -1702,10 +1699,10 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_dragon_knight = {
-		'item_apex_ai_1',
+		'item_apex_dark_1',
 	},
 	npc_dota_hero_drow_ranger = {
-		'item_desolator_2',
+		'item_ballista_dark_1',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_timeless_relic_ai_1',
@@ -1714,7 +1711,7 @@ tBotItemData.addNeutralItemList = {
 		'item_demonicon',
 	},
 	npc_dota_hero_juggernaut = {
-		'item_apex_ai_1',
+		'item_apex_light_1',
 	},
 	npc_dota_hero_kunkka = {
 		'item_timeless_relic_ai_1',
@@ -1729,10 +1726,10 @@ tBotItemData.addNeutralItemList = {
 		'item_timeless_relic_ai_1',
 	},
 	npc_dota_hero_luna = {
-		'item_defiant_shell_ai_1',
+		'item_ballista_dark_1',
 	},
 	npc_dota_hero_medusa = {
-		'item_mysterious_hat_ai_1',
+		'item_ballista_dark_1',
 	},
 	npc_dota_hero_meepo = {
 		'item_apex_ai_1',
@@ -1753,7 +1750,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_phantom_assassin = {
-		'item_apex_ai_1',
+		'item_desolator_2',
 	},
 	npc_dota_hero_pudge = {
 		'item_giants_ring',
@@ -1762,7 +1759,7 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_riki = {
-		'item_apex_ai_1',
+		'item_apex_light_1',
 	},
 	npc_dota_hero_sand_king = {
 		'item_ceremonial_robe_ai_1',
@@ -1774,7 +1771,7 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_sniper = {
-		'item_ballista_ai_1',
+		'item_ballista_dark_1',
 	},
 	npc_dota_hero_sven = {
 		'item_pirate_hat_custom',
@@ -1786,13 +1783,13 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_tiny = {
-		'item_defiant_shell_ai_1',
+		'item_ceremonial_robe_ai_1',
 	},
 	npc_dota_hero_vengefulspirit = {
 		'item_desolator_2',
 	},
 	npc_dota_hero_viper = {
-		'item_ballista_ai_1',
+		'item_ballista_dark_1',
 	},
 	npc_dota_hero_warlock = {
 		'item_demonicon',
@@ -1807,16 +1804,19 @@ tBotItemData.addNeutralItemList = {
 		'item_spell_prism',
 	},
 	npc_dota_hero_zuus = {
-		'item_seer_stone_ai_1',
+		'item_psychic_headband_ai_1',
 	},
 }
 
 -- default x1
 tBotItemData.addNeutralItemMultiTimeMap = {
 	x1 = {
+		2000, -- 33min
+	},
+	x4 = {
 		1800, -- 30min
 	},
-	x5 = {
+	x6 = {
 		1600, -- 26min
 	},
 	x8 = {
