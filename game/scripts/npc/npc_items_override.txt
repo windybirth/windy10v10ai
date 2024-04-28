@@ -1054,7 +1054,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"200"  //60
-				"corruption_armor"		"-25" //-10
+				"corruption_armor"		"-30" //-10
 				"corruption_duration"	"7.0" //7
 		}
 	}

@@ -2294,7 +2294,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_agility"
 		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"10000"
+		"ItemCost"					"20000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -2325,7 +2325,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_intelligence"
 		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"10000"
+		"ItemCost"					"20000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -2356,7 +2356,7 @@
 		"BaseClass"					"item_lua"
 		"ScriptFile"                    		"items/item_tome_of_strength"
 		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"10000"
+		"ItemCost"					"20000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -2716,7 +2716,7 @@
 		"AbilityValues"
 		{
 			"bonus_damage"			"300"
-			"corruption_armor"		"-20"
+			"corruption_armor"		"-30"
 			"corruption_duration"	"9.0"
 			"bonus_damage_per_kill"	"5"
 			"bonus_damage_per_assist"	"2"
@@ -4589,7 +4589,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"120"
-				"corruption_armor"		"-12"
+				"corruption_armor"		"-20"
 				"corruption_duration"	"8.0"
 				"bonus_damage_per_kill"	"3"
 				"bonus_damage_per_assist"	"2"
@@ -4823,7 +4823,7 @@
 		"AbilityTextureName"			"item_recipe_tome_of_luoshu"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"3333"
+		"ItemCost"						"1"
 		"ItemShopTags"					""
 
 		// Recipe

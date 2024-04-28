@@ -30,9 +30,9 @@ local function addTome(k, v)
   end
 
   -- 一组属性书
-  -- table.insert(v, "item_tome_of_strength")
-  -- table.insert(v, "item_tome_of_agility")
-  -- table.insert(v, "item_tome_of_intelligence")
+  table.insert(v, "item_tome_of_strength")
+  table.insert(v, "item_tome_of_agility")
+  table.insert(v, "item_tome_of_intelligence")
   -- 洛书
   table.insert(v, "item_tome_of_luoshu")
 
