@@ -1646,23 +1646,23 @@
 		{
 			"move_pct_heroes"
 			{
-				"value"		"5 6 7 8 9"
+				"value"		"4 5 6 7 8 9"
 				"special_bonus_unique_elder_titan_bonus_spirit_speed"	"+2"
 			}
 			"damage_creeps"
 			{
-				"value"	"5 10 15 20 25"
+				"value"	"3 5 10 15 20 25"
 				"CalculateSpellDamageTooltip"				"0"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
 			}
 			"damage_heroes"
 			{
-				"value"		"20 35 50 70 90"
+				"value"		"10 20 35 50 70 90"
 				"special_bonus_unique_elder_titan"	"+25"
 				"CalculateSpellDamageTooltip"	"0"
 				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
 			}
-			"armor_heroes"					"2 3 4 5 6"
+			"armor_heroes"					"1 2 3 4 5 6"
 			"scepter_magic_immune_per_hero"
 			{
 				"value"				"1.35"
