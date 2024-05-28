@@ -9551,10 +9551,15 @@
 		"AbilityManaCost"				"50 75 100 125 150"
 		"AbilityValues"
 		{
-			"max_stacks"
+			"barrier"
 			{
-				"value"				"3 6 9 12 15"
-				"special_bonus_unique_furion_teleportation_max_stacks"		"+4"
+				"value"					"50 100 150 200 250"
+				"special_bonus_unique_furion_teleportation_barrier"				"+100"
+			}
+			"AbilityCooldown"
+			{
+				"value"										"70 65 50 35 20"
+				"special_bonus_unique_furion_3"				"-100%"
 			}
 		}
 	}
@@ -9566,23 +9571,26 @@
         {
 			"max_treants"
 			{
-				"value"							"1"
-				"special_bonus_unique_furion_2"	"+1"
+				"value"							"2"
+				"special_bonus_facet_furion_ironwood_treant"			"=1 =1 =1 =1"
 			}
 			"treant_duration"				"30"
 			"treant_health"
 			{
-				"value"								"1000 1500 2000 2500"
+				"value"								"1000 1000 1150 1150"
+				"special_bonus_facet_furion_ironwood_treant"	"=1500 =2000 =2500 =3000"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_damage_min"
 			{
 				"value"					"50 100 150 200"
+				"special_bonus_facet_furion_ironwood_treant"				"+100%"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_damage_max"
 			{
 				"value"					"50 100 150 200"
+				"special_bonus_facet_furion_ironwood_treant"				"+100%"
 				"special_bonus_unique_furion"			"x2.5"
 			}
 			"AbilityCooldown"
