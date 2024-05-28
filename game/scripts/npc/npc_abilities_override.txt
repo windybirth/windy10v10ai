@@ -201,6 +201,7 @@
 				"value"			"100 150 200 250 300"
 				"special_bonus_unique_abaddon"		"+200"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				"special_bonus_facet_abaddon_mephitic_shroud"		"=170 =200 =230 =260 =290"
 			}
 		}
 	}
@@ -213,14 +214,17 @@
 			"movement_speed"
 			{
 				"value"						"10 15 20 25 30"
-				"special_bonus_shard" 		"+10"
 			}
 			"curse_slow"
 			{
 				"value"									"15 30 45 60 75"
 				"special_bonus_unique_abaddon_6"		"+15"
 			}
-			"curse_attack_speed"		"60 80 100 120 140"
+			"curse_attack_speed"
+			{
+				"value"				"30 50 70 90 110"
+				"special_bonus_unique_abaddon_3" "+80"
+			}
 			"curse_dps"
 			{
 				"value" "30 40 50 60 70"
@@ -252,6 +256,32 @@
 			}
 		}
 	}
+	// 畅快淋漓
+	"abaddon_the_quickening"
+	{
+		"AbilityValues"
+		{
+			"cooldown_reduction_creeps"		"0.0"
+			"cooldown_reduction_heroes"		"0.0"
+		}
+	}
+	// TODO 魔霭圣池
+	//全新先天技能。被动，无法升级
+	// 亚巴顿的复活时间加快10%
+	"abaddon_font_of_avernus"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		"Innate"						"1"
+
+		"AbilityValues"
+		{
+			"respawn_reduction"		"10"
+		}
+	}
+
 	//=================================================================================================================
 	// Ability: Abyssal Underlord 孽主/大屁股
 	//=================================================================================================================
