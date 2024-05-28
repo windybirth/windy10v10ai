@@ -11900,7 +11900,7 @@
 	"tinker_defense_matrix"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12"
+		"AbilityCooldown"				"16"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
@@ -11909,7 +11909,11 @@
 				"value"							"180 360 540 720 900"	// 100 180 240 320
 				"special_bonus_unique_tinker_7"	"+125"
 			}
-			"status_resistance"		"10 20 30 40 50"
+			"status_resistance"
+			{
+				"value"															"10 20 30 40 50"
+				"special_bonus_unique_tinker_defense_matrix_status_resistance"	"+10"
+			}
 		}
 	}
 	// 激光
@@ -11921,17 +11925,14 @@
 		"AbilityManaCost"				"110 130 150 170 190"
 		"AbilitySpecial"
 		{
-			"02"
+			"duration"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration_hero"			"3 3.5 4 4.5 5.0"
-				"LinkedSpecialBonus"	"special_bonus_unique_tinker_4"
+				"value"			"3.0 3.5 4.0 4.5 5.0"
 			}
-			"04"
+			"laser_damage"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"laser_damage"			"75 150 225 300 375"
-				"LinkedSpecialBonus"	"special_bonus_unique_tinker"
+				"value" "75 150 225 300 375"
+				"special_bonus_unique_tinker" "+80"
 			}
 		}
 	}
@@ -11951,30 +11952,30 @@
 				"targets"
 				{
 					"value"	"2 3 4 5 6"
-					"LinkedSpecialBonus"	"special_bonus_unique_tinker_6"
 				}
 				"speed"				"900"	// 700
 		}
 	}
 	// 传送
+	// TODO: 重新设计
 	"tinker_keen_teleport"
 	{
+		"MaxLevel"						"4"
 		"AbilityChannelTime"			"4.5 3.5 2.5"
 		"AbilityCastPoint"				"0.0"
 		"LinkedAbility"					"tinker_rearm_lua"
 		"AbilityDraftPreAbility"		"tinker_rearm_lua"
 		"AbilitySpecial"
 		{
-			"04"
+			"channel_time_tooltip"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"channel_time_tooltip"		"4.5 3.5 2.5"
-				"LinkedSpecialBonus"		"special_bonus_unique_tinker_5"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
+				"value"							"4.5 3.5 2.5"
+				"special_bonus_unique_tinker_5" "-0.5"
 			}
 		}
 	}
 	// 再装填
+	// TODO: 重新设计
 	"tinker_rearm_lua"
 	{
 		"LinkedAbility"					"tinker_keen_teleport"
