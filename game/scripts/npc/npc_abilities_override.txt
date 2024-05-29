@@ -8130,7 +8130,6 @@
 		"AbilityCastRange"				"600 640 680 720 760"
 		"AbilityValues"
 		{
-				"duration"						"4"
 				"damage"
 				{
 					"value"					"4 8 12 16 20"
@@ -8160,52 +8159,41 @@
 				"min_damage"
 				{
 					"value"		"15 20 25 30 35"
-					"LinkedSpecialBonus"	"special_bonus_unique_viper_3"
+					"special_bonus_unique_viper_3"	"+40"
 				}
 				"max_damage"
 				{
 					"value"			"35 65 95 125 155"
-					"LinkedSpecialBonus"	"special_bonus_unique_viper_3"
+					"special_bonus_unique_viper_3"	"+40"
 				}
 				"attack_slow"		"30 40 50 60 70"
 				"duration"			"6.5 7 7.5 8 8.5"
 		}
 	}
-	"special_bonus_unique_viper_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"50"
-				"ad_linked_abilities"			"viper_nethertoxin"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
 	// 腐蚀皮肤
 	"viper_corrosive_skin"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "6"
 		"AbilityValues"
 		{
-			"duration"					"4.0"
-			"bonus_attack_speed"		"8 16 24 32 40"
+			"bonus_attack_speed"
+			{
+				"value"								"8 16 24 32 40 42"
+				"special_bonus_unique_viper_6"		"+20"
+			}
 			"bonus_magic_resistance"
 			{
-				"value"								"10 15 20 25 30"
-				"special_bonus_unique_viper_6"		"+20"
+				"value"								"10 15 20 25 30 35"
 			}
 			"damage"
 			{
-				"value"					"8 16 24 32 40"
+				"value"					"8 16 24 32 40 42"
 				"special_bonus_unique_viper_1"	"+20"
 			}
-			"max_range_tooltip"					"1400"
-			"effect_multiplier_distance"
+			"max_range"
 			{
-				"value"						"500"
-				"RequiresScepter"		"1"
+				"value"						"1400"
+				"affected_by_aoe_increase"	"1"
 			}
 			"effect_multiplier"
 			{
@@ -8248,25 +8236,16 @@
 		"AbilityCastRange"				"600"
 		"AbilityValues"
 		{
-			"radius"
-			{
-				"value"				"1000"// 500
-				"affected_by_aoe_increase"	"1"
-			}
 			"corrosive_radius"
 			{
 				"value"			"1800"// 1200
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"							"0.1"
-			"effect_duration"						"4"
 			"dive_speed"
 			{
 				"value"			"2000"// 500
 			}
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_VIPER_DIVE"
-		"AbilityCastGestureSlot"	"DEFAULT"
 	}
 	//=================================================================================================================
 	// Ability: Weaver 编织者/蚂蚁
