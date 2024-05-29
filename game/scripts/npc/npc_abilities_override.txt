@@ -557,7 +557,6 @@
 	// 野性之斧
 	"beastmaster_wild_axes"
 	{
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// 选择率低胜率低，暂时无视魔免（几乎一定会超模）
 		"MaxLevel" "5"
 		"AbilityManaCost"				"50 60 70 80 90"
 		"AbilityValues"
@@ -621,7 +620,6 @@
 		{
 			"duration"						"45"
 			"hawk_base_max_health"			"300 450 600 750 900"
-			"hawk_base_movespeed"			"420"
 			"hawk_base_gold_bounty"			"60"
 			"hawk_base_vision_range"		"800 900 1000 1100 1200"
 			"AbilityCooldown"
@@ -653,10 +651,8 @@
 	// 野性之心
 	"beastmaster_inner_beast"
 	{
-		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"radius"				"1200"
 			"bonus_attack_speed"
 			{
 				"value"									"20 30 40 50 60"
