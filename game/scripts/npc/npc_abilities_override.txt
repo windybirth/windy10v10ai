@@ -192,16 +192,20 @@
 	"abaddon_aphotic_shield"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"95 110 125 140 155"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"				"12 10 8 6 4"
+				"special_bonus_facet_abaddon_mephitic_shroud" "+2"
+			}
 			"damage_absorb"
 			{
-				"value"			"100 150 200 250 300"
+				"value"			"120 160 200 240 280"
+				"special_bonus_facet_abaddon_mephitic_shroud"		"60 100 140 180 220"
 				"special_bonus_unique_abaddon"		"+200"
 				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
-				"special_bonus_facet_abaddon_mephitic_shroud"		"=170 =210 =250 =290 =330"
 			}
 		}
 	}
@@ -211,18 +215,14 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"movement_speed"
-			{
-				"value"						"10 15 20 25 30"
-			}
 			"curse_slow"
 			{
-				"value"									"15 30 45 60 75"
+				"value"									"15 20 25 30 35"
 				"special_bonus_unique_abaddon_6"		"+15"
 			}
 			"curse_attack_speed"
 			{
-				"value"				"30 50 70 90 110"
+				"value"				"20 40 60 80 100"	// x2
 				"special_bonus_unique_abaddon_3" "+80"
 			}
 			"curse_dps"
@@ -256,32 +256,6 @@
 			}
 		}
 	}
-	// 畅快淋漓
-	"abaddon_the_quickening"
-	{
-		"AbilityValues"
-		{
-			"cooldown_reduction_creeps"		"0.0"
-			"cooldown_reduction_heroes"		"0.0"
-		}
-	}
-	// TODO 魔霭圣池
-	//全新先天技能。被动，无法升级
-	// 亚巴顿的复活时间加快10%
-	"abaddon_font_of_avernus"
-	{
-		// General
-		//-------------------------------------------------------------------------------------------------------------
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-		"MaxLevel"						"1"
-		"Innate"						"1"
-
-		"AbilityValues"
-		{
-			"respawn_reduction"		"10"
-		}
-	}
-
 	//=================================================================================================================
 	// Ability: Abyssal Underlord 孽主/大屁股
 	//=================================================================================================================
@@ -3314,7 +3288,6 @@
 	"shredder_whirling_death"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"80"
 		"AbilityCooldown"				"6"
 		"AbilityValues"
 		{
@@ -3322,17 +3295,12 @@
 				"tree_damage_scale"
 				{
 					"value"								"15 25 35 45 55"
-					"special_bonus_unique_timbersaw"	"+75"
+					"special_bonus_unique_timbersaw"	"+100"
 				}
 				"duration"
 				{
 					"value"				"11 12 13 14 15"
 
-				}
-				"stat_loss_pct"
-				{
-					"value"			"12 14 16 18 20"// 13 英雄特色理应加强
-					"special_bonus_unique_timbersaw_5"	"10"// 从15级天赋上调至25级天赋
 				}
 		}
 	}
@@ -3344,13 +3312,29 @@
 		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
-				"range"
+				"AbilityCastRange"
 				{
 					"value"			"750 900 1050 1200 1350"
-					"LinkedSpecialBonus"	"special_bonus_unique_timbersaw_3"
+					"special_bonus_unique_timbersaw_3"	"+75%"
 				}
-				"speed"				"2200 2400 2600 2800 3000"
+				"speed"
+				{
+					"value"			"2200 2400 2600 2800 3000"
+					"special_bonus_unique_timbersaw_3"	"+75%"
+				}
 				"damage"			"50 95 140 185 230"
+				"tree_splinter_damage"
+				{
+					"value"						"0"
+					"special_bonus_facet_shredder_shredder"				"20 40 60 80 100"
+					"RequiresFacet"					"shredder_shredder"
+				}
+				"tree_splinter_slow_pct"
+				{
+					"value"						"0"
+					"special_bonus_facet_shredder_shredder"				"30 40 50 60 70"
+					"RequiresFacet"					"shredder_shredder"
+				}
 		}
 	}
 	// 活性活甲
@@ -3418,29 +3402,17 @@
 				"mana_per_second"		"14 22 30 38"
 		}
 	}
-	// 锯齿飞轮2
-	"shredder_chakram_2"
+	// 锯齿旋轮
+	"shredder_twisted_chakram"
 	{
-		"AbilityManaCost"				"75 125 175 225"
+		"MaxLevel" "4"
+		"AbilityCooldown"				"20 16 12 8"
 		"AbilityValues"
 		{
-				"pass_damage"
-				{
-					"value"						"150 200 250 300"
-					"special_bonus_facet_shredder_second_chakram"	"-30%"
-				}
-				"damage_per_second"
-				{
-					"value"						"50 100 150 200"
-					"special_bonus_facet_shredder_second_chakram"	"-30%"
-				}
-				"mana_per_second"
-				{
-					"value"		"14 22 30 38"
-				}
+				"damage"				"110 155 200 245"
 		}
 	}
-	//暴露疗法
+	// 暴露疗法
 	"shredder_exposure_therapy"
 	{
 		"MaxLevel"						"5"
@@ -4499,7 +4471,7 @@
 			"damage_per_unit"
 			{
 				"value"			"15 25 35 45 55"
-				"special_bonus_unique_undying_6" "+10"
+				"special_bonus_unique_undying_6" "+15"
 			}
 			"max_units"					"30"
 			"radius"
@@ -4513,27 +4485,18 @@
 	// 墓碑
 	"undying_tombstone"
 	{
-		"AbilityCooldown"				"65"
-		"AbilityManaCost"				"208 312 416 520"
 		"AbilityValues"
 		{
 			"zombie_interval"
 			{
-				"value"		"80000"
+				"value"		"10"
 			}
 			"hits_to_destroy_tooltip"
 			{
 				"value"					"7 8 9 10"
 				"special_bonus_unique_undying_5"	"+20"
 			}
-
-			"duration"					"30.0"
-			"tombstone_grab_radius"
-			{
-				"value"	"650"
-				"affected_by_aoe_increase"	"1"
-			}
-			"tombstone_bunker_cd"		"0.33"
+			"health_threshold_pct_tooltip"	"60"	// 40
 		}
 	}
 	"undying_tombstone_zombie_aura"
@@ -4570,9 +4533,14 @@
 			"spawn_zombie_on_attack"
 			{
 				"value"						"0"
-				"special_bonus_facet_undying_rotting_mitts"	"+0"
+				"special_bonus_facet_undying_rotting_mitts"	"+0"	// 1
 			}
 		}
+	}
+	// 挽歌犹唱 复活
+	"undying_ceaseless_dirge"
+	{
+		"AbilityCooldown"				"240"	// 480
 	}
 	//=================================================================================================================
 	// Ability: Wisp 艾欧/小精灵
@@ -5733,7 +5701,6 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"blade_dance_crit_chance"	"35"
 				"blade_dance_crit_mult"
 				{
 					"value"		"180 200 220 240 260"
@@ -5783,7 +5750,7 @@
 		"AbilityManaCost"				"250 300 350 400"
 		"AbilityValues"
 		{
-			"bonus_damage"				"45 50 55 60"
+			"bonus_damage"				"30 40 50 60"
 			"duration"
 			{
 				"value"					"3.0 3.3 3.6 4.0"
@@ -9547,19 +9514,18 @@
 	"furion_teleportation"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"65 55 45 35 25"
 		"AbilityManaCost"				"50 75 100 125 150"
 		"AbilityValues"
 		{
-			"barrier"
-			{
-				"value"					"50 100 150 200 250"
-				"special_bonus_unique_furion_teleportation_barrier"				"+100"
-			}
 			"AbilityCooldown"
 			{
 				"value"										"70 65 50 35 20"
 				"special_bonus_unique_furion_3"				"-100%"
+			}
+			"barrier"
+			{
+				"value"					"50 100 150 200 250"
+				"special_bonus_unique_furion_teleportation_barrier"				"+100"
 			}
 		}
 	}
@@ -11930,8 +11896,8 @@
 		"MaxLevel" "5"
 		"AbilityCastRange"				"1050"
 		"AbilityCooldown"				"22 20 18 16 14"
-		"AbilityManaCost"				"110 130 150 170 190"
-		"AbilitySpecial"
+		"AbilityManaCost"				"95 105 115 125 135"
+		"AbilityValues"
 		{
 			"duration"
 			{
@@ -11964,26 +11930,22 @@
 				"speed"				"900"	// 700
 		}
 	}
-	// 传送
-	// TODO: 重新设计
-	"tinker_keen_teleport"
+	// 机械行军
+	"tinker_march_of_the_machines"
 	{
-		"MaxLevel"						"4"
-		"AbilityChannelTime"			"4.5 3.5 2.5"
-		"AbilityCastPoint"				"0.0"
-		"LinkedAbility"					"tinker_rearm_lua"
-		"AbilityDraftPreAbility"		"tinker_rearm_lua"
-		"AbilitySpecial"
+		"MaxLevel" "5"
+		"AbilityManaCost"				"90 110 130 150 170"
+		"AbilityValues"
 		{
-			"channel_time_tooltip"
+			"damage"				"17 26 35 44 53"
+			"heal_per_second"
 			{
-				"value"							"4.5 3.5 2.5"
-				"special_bonus_unique_tinker_5" "-0.5"
+				"value"									"0"
+				"special_bonus_facet_tinker_repair_bots"	"+16 +24 +32 +40 +48"	// x2
 			}
 		}
 	}
 	// 再装填
-	// TODO: 重新设计
 	"tinker_rearm_lua"
 	{
 		"LinkedAbility"					"tinker_keen_teleport"
