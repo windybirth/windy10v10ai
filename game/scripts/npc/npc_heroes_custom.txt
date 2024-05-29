@@ -1835,8 +1835,7 @@
 	"npc_dota_hero_omniknight"
 	{
 		//"Ability5"		"omniknight_repel" 加强新版二技能的同时暂时移除老版二技能
-		"Ability4"		"omniknight_angelic_flight"
-		"Ability5"		"omniknight_degen_aura"
+		"Ability5"		"omniknight_angelic_flight"
 		"Bot"
 		{
 			"Build"
