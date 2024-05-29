@@ -5068,7 +5068,6 @@
 				"special_bonus_unique_clinkz_7"			"+40"
 			}
 			"duration"						"9"
-			"attack_range_bonus"			"250"
 			"AbilityCooldown"
 			{
 				"value"								"30 25 20 15 15"
@@ -5158,19 +5157,8 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"900"
-		"AbilityCastPoint"				"0.2"
-		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_6"
-		"AbilityCooldown"				"0.0"
-		"AbilityChargeRestoreTime"		"40"
-		"AbilityManaCost"				"60"
 		"AbilityValues"
 		{
-
-			"duration"				"45"
-			"skeleton_count"
-			{
-				"value"					"0"
-			}
 			"AbilityCharges"
 			{
 				"value"				"2 3 4 5 6"
@@ -5181,21 +5169,19 @@
 				"value"				"200 300 400 500 600"
 				"special_bonus_unique_clinkz_8"		"+300"
 			}
-			"skeleton_duration"					"0"
-			"skeleton_health"
-			{
-				"value"					"12"
-
-			}
-			"skeleton_health_tooltip"
-			{
-				"value"					"3"
-
-			}
-			"skeleton_building_damage_reduction"			"25"
-			"attack_rate"			"1.6"
-			"damage_percent"		"20"
 			"creep_level"			"6 6 6 6"
+		}
+	}
+	// 骨头和箭头
+	"clinkz_bone_and_arrow"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"skeleton_duration"
+			{
+				"value"						"15 20 25 30 35"
+			}
 		}
 	}
 	//=================================================================================================================
