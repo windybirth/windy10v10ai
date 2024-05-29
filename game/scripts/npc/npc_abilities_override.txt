@@ -1994,27 +1994,15 @@
 	// 勇气之霎
 	"legion_commander_moment_of_courage"
 	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"1.4 1.1 0.8 0.5 0.2"
+		"MaxLevel" "6"
+		"AbilityCooldown"				"1.4 1.2 1.0 0.8 0.6 0.4"
 		"AbilityValues"
 		{
 			"buff_duration"				"1.0"
 			"hp_leech_percent"
 			{
-				"value"		"55 65 75 85 95"
+				"value"		"55 65 75 85 95 105"
 				"special_bonus_unique_legion_commander_7" "+50"
-			}
-		}
-	}
-	"special_bonus_unique_legion_commander_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
-				"ad_linked_abilities"			"legion_commander_moment_of_courage"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
 			}
 		}
 	}
@@ -2027,11 +2015,10 @@
         "ad_linked_abilities"			"legion_commander_press_the_attack"
         "AbilitySpecial"
         {
-            "01"
-            {
-                "var_type"					"FIELD_FLOAT"
-                "value"				"3.0"	// 1.5
-            }
+			"value"
+			{
+				"value" "3.0"
+			}
         }
     }
 	// 决斗
@@ -2040,11 +2027,10 @@
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-			"duration"				"3.75 4.5 5.25 6.0"
-			"duration_scepter"
+			"duration"
 			{
-				"value"			"5.5 6.5 7.5 8.5"
-				"RequiresScepter"	"1"
+				"value"				"3.75 4.5 5.25 6.0"
+				"special_bonus_scepter"		"+2.25"
 			}
 			"reward_damage"
 			{

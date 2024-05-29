@@ -519,18 +519,6 @@
         "Ability17"		"special_bonus_unique_slark_5"
     }
 
-	"npc_dota_hero_legion_commander"
-    {
-        "Ability10"		"special_bonus_unique_legion_commander_2"
-        "Ability11"		"special_bonus_unique_legion_commander_pta_movespeed"
-        "Ability12"		"special_bonus_unique_legion_commander_6"
-        "Ability17"		"special_bonus_unique_legion_commander_4"
-        "Ability14"		"special_bonus_unique_legion_commander_5"
-        "Ability15"		"special_bonus_unique_legion_commander_3"
-        "Ability16"		"special_bonus_unique_legion_commander"
-        "Ability13"		"special_bonus_unique_legion_commander_8"
-    }
-
 	"npc_dota_hero_nyx_assassin"
 	{
 		"Ability5"      "nyx_assassin_mana_burn"
