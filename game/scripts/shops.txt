@@ -51,11 +51,9 @@
 	"weapons_armor"
 	{
 		"item"		"item_quelling_blade"
-		"item"		"item_quelling_blade_2_datadriven" // 毒瘤之刃
 		// "item"		"item_ring_of_protection"
 		"item"		"item_infused_raindrop"				// 凝魂之露
 		// "item"		"item_orb_of_venom"
-		"item"		"item_blight_stone"
 		// "item"		"item_blades_of_attack"
 		"item"		"item_gloves"
 		// "item"		"item_chainmail"
@@ -75,8 +73,6 @@
 		// "item"		"item_point_booster"
 		// "item"		"item_talisman_of_evasion"
 		// "item"		"item_platemail"
-		"item"	"item_lifesteal" // 吸血面具
-		"item"	"item_voodoo_mask" // 巫毒面具
 		"item"	"item_gossamer_cape_light"
 		"item"	"item_gossamer_cape_dark"
 		"item"	"item_paladin_sword_light"
@@ -105,6 +101,8 @@
 
 	"misc"
 	{
+		"item"		"item_famango"
+		"item"		"item_refresher_shard"
 		// "item"		"item_ring_of_regen"
 		// "item"		"item_sobi_mask"
 		// "item"		"item_magic_stick"
@@ -151,7 +149,6 @@
 		"item"      "item_havoc_hammer_dark"
 		"item"      "item_apex_light"
 		"item"      "item_apex_dark"
-		"item"			"item_disperser_chaos"
 	}
 
 	// Level 1 - Green Recipes
@@ -272,6 +269,12 @@
 		"item"		"item_wasp_golden"
 		"item"		"item_excalibur"
 		"item"		"item_rapier_ultra"			// 诅咒圣剑
+		"item"      "item_boots_of_bearing_2"
+		"item"      "item_sphere_ultra"
+		"item"      "item_black_king_bar_ultra"
+		"item"      "item_spirit_vessel_ultra"
+		"item"      "item_meteor_hammer_2"
+		"item"		"item_disperser_chaos"
 	}
 
 	// Level 4 - Orange / Orb / Artifacts
@@ -306,6 +309,13 @@
 		"item"		"item_tome_of_agility"
 		"item"		"item_tome_of_intelligence"
 		"item"		"item_tome_of_luoshu"
+		"item"      "item_greater_crit_2"
+		"item"      "item_guardian_greaves_2"
+		"item"      "item_butterfly_2"
+		"item"      "item_satanic_ultra"
+		"item"      "item_assault_3"
+		"item"      "item_ethereal_blade_ultra"
+		"item"      "item_shivas_guard_ultra"
 	}
 
 	"sideshop1"
@@ -407,3 +417,4 @@
 		"item"		"item_hand_of_midas"				// 迈达斯之手
 	}
 }
+

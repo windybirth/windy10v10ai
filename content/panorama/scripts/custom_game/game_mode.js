@@ -244,7 +244,7 @@ function InitN5Setting() {
 }
 function InitN6Setting() {
   $("#player_gold_xp_multiplier_dropdown").SetSelected("1.5");
-  $("#bot_gold_xp_multiplier_dropdown").SetSelected("10");
+  $("#bot_gold_xp_multiplier_dropdown").SetSelected("40");
 
   $("#tower_power_dropdown").SetSelected("400");
   $("#tower_endure_dropdown").SetSelected("10");

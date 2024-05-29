@@ -441,7 +441,7 @@
 				"bonus_reset_time_roshan"		"15"
 				"damage_per_stack"
 				{
-					"value"					"12 14 16 18 20 30"
+					"value"					"30 14 16 18 20 30"
 					"LinkedSpecialBonus"			"special_bonus_unique_ursa"
 				}
 		}
@@ -489,14 +489,14 @@
 		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
 		"AbilityValues"
 		{
-			"bonus_armor"				"1 2 3 4 5 10"
+			"bonus_armor"				"0 1 2 3 4 5"
 			"bonus_hp_regen"
 			{
-				"value"					"1 2 3 4 5 10"
+				"value"					"1 2 3 4 5 50"
 			}
 			"stack_limit"
 			{
-				"value"			"5"
+				"value"			"8"
 			}
 			"stack_duration"
 			{

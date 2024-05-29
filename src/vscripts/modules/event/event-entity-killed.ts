@@ -12,7 +12,7 @@ export class EventEntityKilled {
   private dropItemListArtifactPart: string[] = ["item_light_part", "item_dark_part"];
 
   private dropItemChanceRoshanArtifactPart = 100;
-  private dropItemChanceCreepArtifactPart = 1.0;
+  private dropItemChanceCreepArtifactPart = 3.0;
 
   // 龙珠
   private dropItemListDragonBall: string[] = [
@@ -26,8 +26,8 @@ export class EventEntityKilled {
   ];
 
   private dropItemChanceRoshan = 100;
-  private dropItemChanceAncient = 1.0;
-  private dropItemChanceNeutral = 0.15;
+  private dropItemChanceAncient = 2.0;
+  private dropItemChanceNeutral = 0.5;
 
   OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
     const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
@@ -63,8 +63,8 @@ export class EventEntityKilled {
         );
 
         // 神器组件掉落，掉落数量 2 ~ (玩家数量 + 1) 的随机数
-        const maxDropCount = Player.GetPlayerCount() + 1;
-        const dropCount = RandomInt(2, maxDropCount);
+        const maxDropCount = Player.GetPlayerCount() + 7;
+        const dropCount = RandomInt(4, maxDropCount);
         print(`[EventEntityKilled] OnCreepKilled dropCount is ${dropCount}`);
         for (let i = 0; i < dropCount; i++) {
           this.dropItem(

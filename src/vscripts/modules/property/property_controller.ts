@@ -138,6 +138,10 @@ export class PropertyController {
 
   // 更新单条属性
   public static setModifier(hero: CDOTA_BaseNPC_Hero, property: PlayerProperty) {
+    // 测试服属性不生效
+    if (1 > 0) {
+      return;
+    }
     const name = property.name;
     let activeLevel = property.level;
     // 根据英雄等级设置点数

@@ -393,7 +393,8 @@
 
 	"npc_dota_hero_faceless_void"
 	{
-		"Ability5"		"faceless_void_backtrack"
+		"Ability5"		"faceless_void_chronosphere_final" // 神技
+		"Ability7"		"faceless_void_backtrack"
 	}
 
 	"npc_dota_hero_brewmaster"
@@ -509,6 +510,7 @@
 
 	"npc_dota_hero_slark"
     {
+		"Ability5"		"troll_warlord_berserkers_rage"
         "Ability10"		"special_bonus_unique_slark_2"
         "Ability11"		"special_bonus_unique_slark"
         "Ability12"		"special_bonus_lifesteal_15"
@@ -547,7 +549,7 @@
     "npc_dota_hero_spectre"
     {
 		// spectre_haunt_single 只有3级
-		"Ability16"		"special_bonus_cooldown_reduction_20"// FIXME 奥利奥想要好久了，给他玩玩
+		"Ability16"		"special_bonus_cooldown_reduction_20"
         "Bot"
         {
             "Build"
@@ -581,7 +583,7 @@
                 "27"		"special_bonus_unique_spectre_desolate_radius"
                 "28"		"special_bonus_unique_spectre_2"
                 "29"		"special_bonus_hp_350"
-                "30"		"special_bonus_unique_spectre_4"
+                "30"		"special_bonus_cooldown_reduction_20"
                 "31"		"spectre_haunt_single"
                 "32"		"spectre_haunt_single"
                 "33"		"spectre_haunt_single"
@@ -644,6 +646,7 @@
 	}
 	"npc_dota_hero_axe"
 	{
+		"Ability4"			"axe_culling_blade_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -731,6 +734,14 @@
 	"npc_dota_hero_batrider"
 	{
 		"Ability5"      "dark_seer_ion_shell"
+		"Ability10"		"special_bonus_unique_batrider_7"
+		"Ability17"		"special_bonus_unique_batrider_3"
+		"Ability12"		"special_bonus_movement_speed_20"
+		"Ability11"		"special_bonus_unique_batrider_6"
+		"Ability14"		"special_bonus_unique_batrider_1"
+		"Ability13"		"special_bonus_unique_batrider_5"
+		"Ability16"		"special_bonus_unique_batrider_4"
+		"Ability15"		"special_bonus_unique_batrider_2"
 	}
 	"npc_dota_hero_bounty_hunter"
 	{
@@ -1091,6 +1102,10 @@
 			}
 		}
 	}
+	"npc_dota_hero_doom_bringer"
+	{
+		"ability7"			"doom_bringer_doom_final" // 神技
+	}
 	"npc_dota_hero_drow_ranger"
 	{
 		"Bot"
@@ -1438,6 +1453,7 @@
 	}
 	"npc_dota_hero_lina"
 	{
+		"Ability5"		"lina_laguna_blade_final" // 神技
 	    "Ability10"		"special_bonus_unique_lina_3"
         "Ability11"		"special_bonus_unique_lina_1"
         "Ability12"		"special_bonus_unique_lina_2"
@@ -1582,6 +1598,10 @@
 			}
 		}
 	}
+	"npc_dota_hero_magnataur"
+	{
+		"Ability5"			"magnataur_reverse_polarity_final" // 神技
+	}
 	"npc_dota_hero_marci"
 	{
 		"Ability4"          "broodmother_insatiable_hunger"
@@ -1723,6 +1743,7 @@
 	}
 	"npc_dota_hero_necrolyte"
 	{
+		"Ability5"		"necrolyte_reapers_scythe_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1925,6 +1946,7 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
+		"Ability5"		"chaos_knight_chaos_strike_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1963,6 +1985,12 @@
 				"32"		"phantom_assassin_stifling_dagger"
 				"33"		"phantom_assassin_blur"
 				"34"		"phantom_assassin_blur"
+				"35"		""
+				"36"		""
+				"37"		""
+				"38"		""
+				"39"		""
+				"40"		"chaos_knight_chaos_strike_final"
 			}
 		}
 	}
@@ -2244,6 +2272,8 @@
 	"npc_dota_hero_skeleton_king"
 	{
 		// skeleton_king_reincarnation 只有3级
+		"Ability4"		"dazzle_shallow_grave"
+		"Ability5"		"earthshaker_aftershock"
 		"Bot"
 		{
 			"Build"
@@ -2390,6 +2420,12 @@
 	{
 	    "Ability5"		"spirit_breaker_empowering_haste"
 	}
+	"npc_dota_hero_storm_spirit"
+	{
+		"AttackRate"		"1.0"
+		"Ability4"			"batrider_flaming_lasso"
+		"Ability17"			"special_bonus_unique_batrider_6"
+	}
 	"npc_dota_hero_sven"
 	{
 		"AttackRate"		"1.700000"
@@ -2532,6 +2568,10 @@
 				"34"		"vengefulspirit_wave_of_terror"
 			}
 		}
+	}
+	"npc_dota_hero_void_spirit"
+	{
+		"Ability4"		"void_spirit_astral_step_final" // 神技
 	}
 	"npc_dota_hero_viper"
 	{

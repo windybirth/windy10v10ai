@@ -19,8 +19,9 @@
 	"item_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "1000"
 		"ItemSellable"                  "1"
+		"ItemPurchasable"               "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
 		{
@@ -30,7 +31,7 @@
 	"item_great_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "3000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -41,7 +42,7 @@
 	"item_greater_famango"
 	{
 		"AbilityCooldown"				"0"
-		"ItemCost"                      "0"
+		"ItemCost"                      "6000"
 		"ItemSellable"                  "1"
 		"ItemStackable"                 "1"
 		"AbilityValues"
@@ -118,13 +119,24 @@
 	"item_tango"
 	{
 		"ItemCost"						"100"			// 90
-
-		// Special
-		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60"
 		"AbilityValues"
 		{
-				"health_regen"			"12.0"			// 7.0
-				"buff_duration"			"30.0"			// 16.0
+				"health_regen"			"21.0"			// 7.0
+				"buff_duration"			"60.0"			// 16.0
+				"break_on_hero_damage"	"0"
+		}
+	}
+	"item_flask" // 大药
+	{
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60"
+		"AbilityValues"
+		{
+				"buff_duration"			"10"
+				"health_regen"			"300"
+				"break_on_hero_damage"	"0"
 		}
 	}
 	// 净化药水
@@ -136,33 +148,35 @@
 		{
 				"mana_regen"			"12"			// 6
 				"buff_duration"			"25"			// 25
+				"break_on_hero_damage"	"0"
 		}
 	}
 	// 芒果
 	"item_enchanted_mango"
 	{
-		"ItemCost"						"85"			// 65
+		"ItemCost"						"100"			// 65
+		"ItemStockTime"					"0.1"
 
-		"ItemStackableMax"				"4"
+		"ItemStackableMax"				"99999"
 
-		"ItemStockMax"					"8"
+		"ItemStockMax"					"99"
 		"ItemStockInitial"				"8"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"hp_regen"		"1.2"
-				"replenish_amount"		"250"
+				"hp_regen"		"2.1"
+				"replenish_amount"		"500"
 		}
 	}
 	"item_faerie_fire" //仙灵之火
 	{
-		"ItemCost"						"80"
+		"ItemCost"						"100"
 		"AbilityValues"
 		{
-				"bonus_damage"			"6"				// 2
-				"hp_restore"			"240"			// 85
+				"bonus_damage"			"50"				// 2
+				"hp_restore"			"1000"			// 85
 		}
 	}
 	"item_blood_grenade" //血腥榴弹
@@ -171,13 +185,14 @@
 		"AbilityHealthCost"				"125"
 
 		"ItemStockInitial"				"3"				// 2
-		"ItemStockTime"					"120"			// 180
+		"ItemStockTime"					"60"			// 180
 		"AbilityValues"
 		{
 			"bonus_health"			"250"				// 50
 
 			"damage_over_time"		"45"				// 15
 			"impact_damage"			"250"				// 50
+			"movespeed_slow"		"-100"
 		}
 	}
 	"item_bottle" //魔瓶
@@ -186,10 +201,13 @@
 		"ItemInitialCharges"			"5"				// 3
 		"AbilityValues"
 		{
-				"health_restore"		"240"			// 110
-				"mana_restore"			"130"			// 60
+				"health_restore"		"2400"			// 110
+				"mana_restore"			"1300"			// 60
+				"health_restore_pct"	"7"
+				"mana_restore_pct"		"7"
 				"restore_time"			"3.5"			// 2.7
 				"max_charges"			"5"				// 3
+				"break_on_hero_damage"	"0"
 				"rune_expire_time"		"120.0"			// 90
 		}
 	}
@@ -198,56 +216,56 @@
 		"ItemIsNeutralDrop"             "1" // 改到中立格子
 		"AbilityValues"
 		{
-				"tp_cooldown"			"30" // cd与回城卷轴同步
+				"tp_cooldown"			"10" // cd与回城卷轴同步
 		}
 	}
 	"item_tier1_token"
 	{
-		"ItemCost"                      "500"
-		"ItemInitialStockTime"          "165"
+		"ItemCost"                      "5"
+		"ItemInitialStockTime"          "30"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier2_token"
 	{
-		"ItemCost"                      "1000"
-		"ItemInitialStockTime"          "525"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "330"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier3_token"
 	{
-		"ItemCost"                      "1500"
-		"ItemInitialStockTime"          "885"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "630"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier4_token"
 	{
-		"ItemCost"                      "2000"
-		"ItemInitialStockTime"          "1245"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "930"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
 	"item_tier5_token"
 	{
-		"ItemCost"                      "2500"
-		"ItemInitialStockTime"          "1605"
+		"ItemCost"                      "1"
+		"ItemInitialStockTime"          "1230"
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120"
+		"ItemStockTime"					"1"
 		"ItemPurchasable"				"1"
 		"ItemSellable"                  "0"
 	}
@@ -258,11 +276,11 @@
 		{
 			"duration"				"300"
 			"radius"				"750"
-			"health"				"120"// 24
-			"hp_bonus"				"500"// 75
-			"damage_bonus"			"250"// 50
+			"health"				"240"// 24 伟大的喵星人曾说过，太弱了就加个0
+			"hp_bonus"				"750"// 75 伟大的喵星人曾说过，太弱了就加个0
+			"damage_bonus"			"500"// 50 伟大的喵星人曾说过，太弱了就加个0
 			"model_scale"			"25"// 25
-			"buff_linger_duration"		"60"// 45
+			"buff_linger_duration"		"120"// 45 120s确保小兵buff到死
 		}
 	}
 	//=================================================================================================================
@@ -294,6 +312,7 @@
 	}
 	"item_mysterious_hat" //仙灵饰品
 	{
+		"ItemPurchasable"				"1"
 		"AbilityValues"
 		{
 				"bonus_health"			"250"			// 50
@@ -1035,7 +1054,7 @@
 		"AbilityValues"
 		{
 				"bonus_damage"			"200"  //60
-				"corruption_armor"		"-25" //-10
+				"corruption_armor"		"-30" //-10
 				"corruption_duration"	"7.0" //7
 		}
 	}
@@ -1120,11 +1139,11 @@
 	}
 	"item_pirate_hat"  //海盗帽
 	{
-		"AbilityCooldown"				"20.0" //40
+		"AbilityCooldown"				"10.0" //40
 		"AbilityValues"
 		{
-			"bonus_attack_speed"		"200"	//150
-			"bonus_ms"					"30"	//15
+			"bonus_attack_speed"		"450"	//150
+			"bonus_ms"					"150"	//15
 		}
 	}
 	"item_unwavering_condition" //坚毅之件
@@ -1208,12 +1227,21 @@
 	}
 	"item_aghanims_shard"
 	{
-		"ItemInitialStockTime"			"225.0"
+		"ItemInitialStockTime"			"165.0"
 	}
 	"item_refresher"
 	{
 		"AbilityManaCost"				"450"	// 350
 		"AbilityCooldown"				"180.0"	// 180.0
+	}
+	"item_hand_of_midas"
+	{
+		"AbilityCastRange"				"99999"
+		"AbilityCastPoint"				"0.0"
+
+		"AbilityCooldown"				"0"
+		"AbilityCharges"				"6"
+		"AbilityChargeRestoreTime"		"60"
 	}
 	//=================================================================================================================
 	//微光披风（超級加强） Glimmer Cape
@@ -1499,10 +1527,10 @@
         "AbilityTextureName"			"item_bloodstone_v2"
 		"AbilityValues"
 		{
-				"bonus_aoe"				"150"
+				"bonus_aoe"				"300"
 				"bonus_health"			"1200"
 				"bonus_mana"			"1200"
-				"spell_lifesteal"		"50"
+				"spell_lifesteal"		"100"
 				"buff_duration"			"6"
 				"lifesteal_multiplier"	"2.5"
 				"hp_cost"				"0"
@@ -1548,10 +1576,10 @@
 	{
 		"ItemInitialCharges"			"2"
 		"ItemStockMax"					"5"
-		"ItemStockTime"					"120.0" // or 150
+		"ItemStockTime"					"60.0" // or 150
 		"AbilityValues"
 		{
-			"visibility_radius"		"750"	// 1025
+			"visibility_radius"		"600"	// 1025
 		}
 	}
 
@@ -1560,16 +1588,15 @@
 	//=================================================================================================================
 	"item_ward_observer"
 	{
-		"AbilityCastRange"				"600"
-		"ItemStockTime"					"90.0"	// 135.0
+		"AbilityCastRange"				"80000"
+		"ItemStockTime"					"60.0"	// 135.0
 	}
 	//=================================================================================================================
 	// Sentry Ward
 	//=================================================================================================================
 	"item_ward_sentry"
 	{
-
-
+		"AbilityCastRange"				"80000"
 		"ItemCost"						"40"
 		"ItemStockMax"					"20"
 		"ItemStockInitial"				"3"
@@ -1599,8 +1626,8 @@
 		"ItemPurchasable"				"1"
 		"ItemStockMax"					"5"
 		"ItemStockInitial"				"0"
-		"ItemStockTime"					"180.0"
-		"ItemInitialStockTime"			"225.0"
+		"ItemStockTime"					"60.0"
+		"ItemInitialStockTime"			"165.0"
 		"IsObsolete"					"0"
 
 		"AbilitySpecial"
@@ -1863,12 +1890,83 @@
     {
         "AbilityCastRange"				"600"
 		"ItemSellable"					"0"
-        "ItemStockTime"					"240.0"
+        "ItemStockTime"					"60.0"
         "AllowedInBackpack"				"1"
     }
 
     "item_rapier"
     {
-        "AllowedInBackpack"				"1"
+        "AllowedInBackpack"				"0"
     }
+
+	"item_meteor_hammer"
+	{
+		"AbilityCooldown"               "24"
+		"AbilityValues"
+		{
+				"bonus_strength"		"9"
+				"bonus_agility"		"9"
+				"bonus_intellect"			"36"
+				"spell_amp"			"15"
+				"mana_regen_multiplier"		"120"
+				"spell_lifesteal_amp"	"36"
+
+				"burn_dps_buildings"		"75"
+				"burn_dps_units"		"75"
+				"burn_slow"			"30"
+				"burn_duration"		"6"
+				"stun_duration"		"0.5"
+				"burn_interval"				"1.0"
+				"land_time"				"0.5"
+				"impact_radius"
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"max_duration"		"3"
+				"impact_damage_buildings"		"135"
+				"impact_damage_units"		"195"
+				"enemy_particles_visible"		"0"
+		}
+	}
+
+	"item_tranquil_boots"
+	{
+		"AbilityCooldown"				"0.0"
+		"AbilityValues"
+		{
+				"bonus_movement_speed"	"65"
+				"bonus_armor"			"0"
+				"bonus_health_regen"	"28"
+				"heal_duration"			"20.0"
+				"heal_amount"			"250"
+				"heal_interval"			"0.334"
+				"break_time"			"0"
+				"break_count"			"999"
+				"break_threshold"		"0"
+				"broken_movement_speed"	"65"
+		}
+	}
+
+	"item_boots_of_bearing"
+	{
+		"AbilityCooldown"				"20.0"
+		"AbilityValues"
+		{
+			"aura_movement_speed"	"30"
+			"bonus_str"				"12"
+			"bonus_int"				"12"
+			"bonus_attack_speed_pct"	"75"
+			"bonus_movement_speed_pct"	"21"
+			"duration"				"9"
+			"radius"
+			{
+				"value"				"1400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bonus_movement_speed"	"90"
+			"bonus_health_regen"	"56"
+			"bonus_ms_duration"		"2.0"
+		}
+	}
 }

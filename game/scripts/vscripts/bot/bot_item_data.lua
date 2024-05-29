@@ -818,6 +818,7 @@ tBotItemData.purchaseItemList = {
 		'item_recipe_arcane_octarine_core',
 		'item_refresher',
 		'item_black_king_bar_2',
+		'item_shivas_guard_2',
 		'item_arcane_blink', -- 大智力跳
 		'item_necronomicon_staff',
 		'item_recipe_refresh_core',
