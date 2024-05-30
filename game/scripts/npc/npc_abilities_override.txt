@@ -7487,7 +7487,7 @@
 		{
 				"bonus_attack_range"
 				{
-					"value"		"80 130 180 230 280	330"
+					"value"		"80 130 180 230 280 330"
 					"special_bonus_unique_templar_assassin_8"	"+120"
 				}
 				"attack_spill_range"
@@ -7833,12 +7833,14 @@
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
-			"magic_missile_speed"	"1350"
-			"magic_missile_stun"	"1.1 1.2 1.3 1.4 1.5"
+			"magic_missile_stun"
+			{
+				"value"			"1.1 1.2 1.3 1.4 1.5"
+				"special_bonus_unique_vengeful_spirit_1"	"+0.3"
+			}
 			"magic_missile_damage"
 			{
 				"value"	"90 180 270 360 450"
-				"special_bonus_unique_vengeful_spirit_1"	"+250"
 			}
 			"AbilityCastRange"
 			{
@@ -7851,32 +7853,18 @@
 	"vengefulspirit_command_aura"
 	{
 		"MaxLevel" "5"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"bonus_base_damage"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"bonus_base_damage"	"10 16 22 28 34"
-				"LinkedSpecialBonus"	"special_bonus_unique_vengeful_spirit_2"
-			}
-		}
-	}
-	"special_bonus_unique_vengeful_spirit_2"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"						"20"
-				"ad_linked_abilities"			"vengefulspirit_command_aura"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value" "10 16 22 28 34"
+				"special_bonus_unique_vengeful_spirit_2" "+16"
 			}
 		}
 	}
 	// 恐怖波动
 	"vengefulspirit_wave_of_terror"
 	{
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 14 12 10 8"
 		"AbilityManaCost"				"20 30 40 50 60"
@@ -7887,20 +7875,8 @@
 				"armor_reduction"
 				{
 					"value"			"-4 -6 -8 -10 -12"
-					"LinkedSpecialBonus"	"special_bonus_unique_vengeful_spirit_4"
+					"special_bonus_unique_vengeful_spirit_4" "+-5"
 				}
-		}
-	}
-	"special_bonus_unique_vengeful_spirit_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"-8"
-				"ad_linked_abilities"			"vengefulspirit_wave_of_terror"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 移形换位
