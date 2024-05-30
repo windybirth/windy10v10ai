@@ -7280,7 +7280,8 @@
 				"slow_movement_speed"
 				{
 					"value"		"-16 -20 -24 -30 -36"
-					"LinkedSpecialBonus"	"special_bonus_unique_sniper_5"
+					"special_bonus_facet_sniper_scattershot"	"=-30 =-40 =-50 =-60"
+					"special_bonus_unique_sniper_5" "-10"
 				}
 				"radius"
 				{
@@ -7290,7 +7291,7 @@
 				"shrapnel_damage"
 				{
 					"value"			"40 55 70 85 100"
-					"LinkedSpecialBonus"	"special_bonus_unique_sniper_1"
+					"special_bonus_facet_sniper_scattershot"	"x4"
 				}
 		}
 	}
@@ -7313,18 +7314,16 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityManaCost"				"50"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"slow"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"bonus_attack_range"			"50 100 150 200 250"
-				"LinkedSpecialBonus"			"special_bonus_unique_sniper_6"
+				"value"								"45 40 35 30 25"
 			}
-			"03"
+			"bonus_armor"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"slow"			"45 40 35 30 25"
+				"value"												"5 10 15 20 25"
+				"special_bonus_unique_sniper_take_aim_armor"		"+15"
 			}
 		}
 	}
@@ -7339,20 +7338,9 @@
 		"AbilityValues"
 		{
 				"projectile_speed"			"2500 2500 2500 5000"
-				"abilitycastpoint"
-				{
-					"value"					""
-					"LinkedSpecialBonus"	"special_bonus_unique_sniper_4"
-					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
-				}
 				"scepter_stun_duration"
 				{
 					"value" "0.8 1.0 1.2 1.4"
-					"RequiresScepter"		"1"
-				}
-				"scepter_cast_point"
-				{
-					"value" "0.5"
 					"RequiresScepter"		"1"
 				}
 		}
