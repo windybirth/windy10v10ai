@@ -171,6 +171,20 @@ export class Debug {
         }
       });
     }
+
+    // 重置技能
+    if (cmd === "-resetAbility") {
+      PlayerHelper.ForEachPlayer((playerId) => {
+        const hero = PlayerResource.GetSelectedHeroEntity(playerId);
+        if (!hero) return;
+        for (let i = 0; i < 16; i++) {
+          const ability = hero.GetAbilityByIndex(i);
+          if (ability) {
+            ability.SetLevel(0);
+          }
+        }
+      });
+    }
   }
 
   log(message: string) {
