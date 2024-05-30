@@ -3024,7 +3024,6 @@
 			"mana_burn"
 			{
 				"value"				"50 80 110 140 170"
-				"special_bonus_unique_clockwerk_8"		"+90"
 			}
 			"magic_barrier"
 			{
@@ -3039,7 +3038,6 @@
 			"leash"
 			{
 				"value"			"0"
-				"special_bonus_unique_clockwerk_2"	"+1"
 			}
 		}
 	}
@@ -3063,29 +3061,17 @@
 			}
 		}
 	}
-	// 钩
+	// 发射钩爪
 	"rattletrap_hookshot"
 	{
 		"MaxLevel" "4"
 		"AbilityCastRange"				"2000 2500 3000 3500"
 		"AbilityCooldown"				"50.0 40.0 30.0 20.0"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"03"
-			{
-				"var_type"			"FIELD_FLOAT"
 				"duration"			"1.2 1.4 1.6 1.8"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"speed"				"4000 5000 6000 7000"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
 				"damage"			"100 200 200 400"
-			}
 		}
 	}
 	//=================================================================================================================
