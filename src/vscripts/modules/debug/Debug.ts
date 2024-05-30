@@ -59,6 +59,19 @@ export class Debug {
       });
     }
 
+    if (cmd === CMD.L_ALL) {
+      // loop 35 times time 1s
+      for (let i = 0; i < 35; i++) {
+        Timers.CreateTimer(i, () => {
+          PlayerHelper.ForEachPlayer((playerId) => {
+            const hero = PlayerResource.GetSelectedHeroEntity(playerId);
+            if (!hero) return;
+            hero.HeroLevelUp(true);
+          });
+        });
+      }
+    }
+
     // v 获取当前vector
     if (cmd === CMD.V) {
       const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);

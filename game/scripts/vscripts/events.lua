@@ -57,7 +57,7 @@ function AIGameMode:InitHeroSelection()
         math.randomseed(math.floor(Time() * 1000000))
         -- 随机英雄列表
         print("[AIGameMode] Random hero list")
-        self:ArrayShuffle(tBotNameList)
+        -- self:ArrayShuffle(tBotNameList)
 
         if self.iGameDifficulty == 6 then
             print("[AIGameMode] Use all star hero list start")
