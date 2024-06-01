@@ -69,6 +69,7 @@ function AIGameMode:InitHeroSelection()
             self:ArrayShuffle(tBotAllStar)
         end
 
+        GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
         local sDifficulty = "unfair"
         if self.iDesiredDire > iPlayerNumDire then
             for i = 1, self.iDesiredDire - iPlayerNumDire do
@@ -80,8 +81,7 @@ function AIGameMode:InitHeroSelection()
                 Tutorial:AddBot(self:GetFreeHeroName(true), "", sDifficulty, true)
             end
         end
-        GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
-        Tutorial:StartTutorialMode()
+        -- Tutorial:StartTutorialMode()
         for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
             if PlayerResource:IsValidPlayer(i) then
                 if not self.tHumanPlayerList[i] then
@@ -465,7 +465,7 @@ function AIGameMode:OnNPCSpawned(keys)
 end
 
 function AIGameMode:OnPlayerLevelUp(keys)
-    local iEntIndex = PlayerResource:GetPlayer(keys.player - 1):GetAssignedHero():entindex()
+    local iEntIndex = PlayerResource:GetPlayer(keys.PlayerID):GetAssignedHero():entindex()
     local iLevel = keys.level
     -- Set DeathXP 击杀经验
     Timers:CreateTimer(0.5, function()
