@@ -5870,7 +5870,7 @@
 	// 冷血动物
 	"medusa_cold_blooded"
 	{
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"8"	// 12
 		"AbilityValues"
 		{
 			"damage"		"200"
