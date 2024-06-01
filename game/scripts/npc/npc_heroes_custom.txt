@@ -391,11 +391,6 @@
         "Ability17"		"special_bonus_attack_damage_150"
     }
 
-	"npc_dota_hero_faceless_void"
-	{
-		"Ability5"		"faceless_void_backtrack"
-	}
-
 	"npc_dota_hero_brewmaster"
 	{
 		"Ability4"		"brewmaster_drunken_haze"
