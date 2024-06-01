@@ -6475,7 +6475,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
-					"special_bonus_unique_nevermore_7"	"+100" // 30 现在是25级天赋
+					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
 	}
@@ -6494,7 +6494,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
-					"special_bonus_unique_nevermore_7"	"+100" // 30 现在是25级天赋
+					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
 	}
@@ -6513,7 +6513,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
-					"special_bonus_unique_nevermore_7"	"+100" // 30 现在是25级天赋
+					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
 	}
@@ -6525,13 +6525,12 @@
 		{
 			"necromastery_damage_per_soul"
 			{
-				"value"					"2 4 5 6 7"
+				"value"					"2 3 4 5 6"
 				"special_bonus_unique_nevermore_1"			"+3"
 			}
 			"necromastery_max_souls"
 			{
-				"value"						"10 15 20 25 30"
-				"special_bonus_scepter"		"+10"
+				"value"						"25"	// 20
 			}
 		}
 	}
@@ -6553,7 +6552,7 @@
 			"kill_buff_duration"
 			{
 				"value"						"0"
-				"special_bonus_facet_nevermore_lasting_presence"	"+1800" // 60
+				"special_bonus_facet_nevermore_lasting_presence"	"+180" // 60
 			}
 		}
 	}
@@ -6561,12 +6560,11 @@
 	"nevermore_frenzy"
 	{
 		"Maxlevel"						"5"
-		"AbilityCooldown"				"16.0"
 		"AbilityValues"
 		{
 			"bonus_attack_speed"
 			{
-				"value"			"50 75 100 125 150"
+				"value"			"40 60 80 100 120"
 			}
 			"cast_speed_pct"
 			{
@@ -6578,7 +6576,7 @@
 				"value"													"0"
 				"special_bonus_unique_nevermore_frenzy_castspeed"		"=160" // =140
 			}
-			"soul_cost"				"0" // 5 fixme偷偷改成0，实战之后看情况加
+			"soul_cost"				"2"
 		}
 	}
 	// 魂之挽歌
