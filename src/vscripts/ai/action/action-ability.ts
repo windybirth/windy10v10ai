@@ -71,6 +71,7 @@ export interface CastCoindition {
      */
     autoCastOn?: boolean;
   };
+  debug?: boolean;
 }
 
 export class ActionAbility {
@@ -148,11 +149,19 @@ export class ActionAbility {
     // 判断施法条件是否满足
     if (condition?.self) {
       if (this.IsConditionSelfBreak(condition, hero)) {
+        // FIXME debug
+        if (condition?.debug) {
+          print(`[AI] CastAbilityOnEnemy ${abilityName} self break`);
+        }
         return false;
       }
     }
     if (condition?.ability) {
       if (this.IsConditionAbilityBreak(condition, ability)) {
+        // FIXME debug
+        if (condition?.debug) {
+          print(`[AI] CastAbilityOnEnemy ${abilityName} ability break`);
+        }
         return false;
       }
     }
@@ -176,10 +185,18 @@ export class ActionAbility {
       flagFilter = flagFilter + flagFilterExtra;
     }
     const findRange = condition?.target?.range ?? this.GetFullCastRange(hero, ability);
+    // FIXME debug
+    if (condition?.debug) {
+      print(`[AI] CastAbilityOnEnemy ${abilityName} findRange ${findRange}`);
+    }
     const enemies = ActionFind.FindEnemies(hero, findRange, typeFilter, flagFilter, FindOrder.ANY);
     const target = this.FindTargetWithCondition(condition, enemies, hero);
 
     if (!target) {
+      // FIXME debug
+      if (condition?.debug) {
+        print(`[AI] CastAbilityOnEnemy ${abilityName} target not found`);
+      }
       return false;
     }
 
@@ -307,6 +324,10 @@ export class ActionAbility {
   ): CDOTA_BaseNPC | undefined {
     if (condition?.target?.count) {
       if (units.length < condition.target.count) {
+        // FIXME debug
+        if (condition?.debug) {
+          print(`[AI] FindTargetWithCondition count ${units.length} < ${condition.target.count}`);
+        }
         return undefined;
       }
     }
