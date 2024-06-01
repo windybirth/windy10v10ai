@@ -5062,13 +5062,28 @@
 		"AbilityManaCost"				"9 10 11 12 13"
 		"AbilityValues"
 		{
-			"frost_arrows_movement_speed"	"-10 -25 -40 -55 -70"
+			"frost_arrows_movement_speed"	"-10 -20 -30 -40 -50"
 			"damage"
 			{
 				"value"						"12 24 36 48 60"
-				"special_bonus_unique_drow_ranger_2"			"+15"
+				"special_bonus_unique_drow_ranger_2"			"+30"
 				"CalculateSpellDamageTooltip"	"0"
 			}
+		}
+	}
+	// 狂风
+	"drow_ranger_wave_of_silence"
+	{
+		"MaxLevel" "5"
+		"AbilityValues"
+		{
+				"silence_duration"	"3 4 5 6 7"
+				"knockback_duration"		"0.6 0.7 0.8 0.9 1.0"
+				"AbilityCooldown"
+				{
+					"value"											"19 17 15 13 11"
+					"special_bonus_unique_drow_ranger_7"			"-2"
+				}
 		}
 	}
 	// 数箭齐发
