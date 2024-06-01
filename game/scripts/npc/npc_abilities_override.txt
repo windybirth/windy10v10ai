@@ -12252,11 +12252,6 @@
 				"value"		"700 800 900 1000 1100"
 				"affected_by_aoe_increase"	"1"
 			}
-			"targets"
-			{
-				"value" "1"
-				"special_bonus_unique_zeus"	"+1"
-			}
 			"AbilityCooldown"
 			{
 				"value"				"22 20 18 16 14"
