@@ -7330,13 +7330,22 @@
 		{
 			"slow"
 			{
-				"value"								"45 40 35 30 25"
+				"value"								"40"	// 65
 			}
 			"bonus_armor"
 			{
 				"value"												"5 10 15 20 25"
-				"special_bonus_unique_sniper_take_aim_armor"		"+15"
+				"special_bonus_unique_sniper_take_aim_armor"		"+25"	// 15
 			}
+		}
+	}
+	// 基恩瞄准镜
+	"sniper_keen_scope"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"bonus_range"				"100 150 200 250 300"
 		}
 	}
 	// 暗杀
