@@ -14,7 +14,7 @@ function item_saint_orb:OnSpellStart()
 	tar:AddNewModifier(caster, self, "modifier_item_lotus_orb_active", { duration = dur }) --原版莲花
 end
 
---被动 无法被减速 恢复效果增加
+--被动 恢复效果增加
 modifier_item_saint_orb_passive = class({})
 function modifier_item_saint_orb_passive:IsDebuff() return false end
 
@@ -26,8 +26,10 @@ function modifier_item_saint_orb_passive:IsPurgeException() return false end
 
 function modifier_item_saint_orb_passive:RemoveOnDeath() return false end
 
-function modifier_item_saint_orb_passive:GetAttributes() return MODIFIER_ATTRIBUTE_PERMANENT +
-	MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE end
+function modifier_item_saint_orb_passive:GetAttributes()
+	return MODIFIER_ATTRIBUTE_PERMANENT +
+		MODIFIER_ATTRIBUTE_MULTIPLE + MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE
+end
 
 function modifier_item_saint_orb_passive:DeclareFunctions()
 	return
@@ -40,6 +42,7 @@ function modifier_item_saint_orb_passive:DeclareFunctions()
 	}
 end
 
+-- 无法被减速
 -- function modifier_item_saint_orb_passive:CheckState()
 -- 		return {
 -- 			[MODIFIER_STATE_UNSLOWABLE]	= true
@@ -103,7 +106,7 @@ function modifier_item_saint_orb_buff:OnCreated()
 		self:GetParent():Purge(false, true, false, false, false)
 		local pos = self:GetParent():GetAbsOrigin()
 		local fx = ParticleManager:CreateParticle(
-		"particles/units/heroes/hero_templar_assassin/templar_assassin_refraction.vpcf", PATTACH_CUSTOMORIGIN_FOLLOW,
+			"particles/units/heroes/hero_templar_assassin/templar_assassin_refraction.vpcf", PATTACH_CUSTOMORIGIN_FOLLOW,
 			self:GetParent())
 		ParticleManager:SetParticleControl(fx, 0, pos)
 		ParticleManager:SetParticleControlEnt(fx, 1, self:GetParent(), PATTACH_ABSORIGIN_FOLLOW, "attach_hitloc",
