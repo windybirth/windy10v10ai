@@ -11524,7 +11524,6 @@
 				"static_remnant_damage"
 				{
 					"value"		"180 240 300 360 420"	// 120 180 240 300
-					"LinkedSpecialBonus"	"special_bonus_unique_storm_spirit_5"
 				}
 		}
 	}
@@ -11553,9 +11552,7 @@
 		{
 			"overload_damage"
 			{
-				"var_type"						"FIELD_INTEGER"
 				"value"			"25 50 75 100 125"
-				"special_bonus_unique_storm_spirit_6"	"+24"
 			}
 			"shard_activation_charges"
 			{
@@ -11594,32 +11591,6 @@
 		{
 				"ball_lightning_initial_mana_percentage"		"4.5"
 				"ball_lightning_move_speed"			"1400 1850 2300 2750"
-		}
-	}
-	// 球状闪电残影距离（减少单位降低卡顿）
-	"special_bonus_unique_storm_spirit_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"800"	// 500
-				"ad_linked_abilities"			"storm_spirit_ball_lightning && storm_spirit_static_remnant"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
-	// 超负荷弹射天赋
-	"special_bonus_unique_storm_spirit_7"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"4" // 2
-				"ad_linked_abilities"			"storm_spirit_overload"
-			}
 		}
 	}
 	//=================================================================================================================
