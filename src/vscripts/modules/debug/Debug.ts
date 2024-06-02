@@ -203,6 +203,20 @@ export class Debug {
       const sr = hero.GetStatusResistance();
       this.log(`status resistance: ${sr}`);
     }
+    // 造成伤害
+    if (cmd === "-damage") {
+      const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
+      if (!hero) return;
+      const damage = Number(args[0]);
+      ApplyDamage({
+        attacker: hero,
+        victim: hero,
+        damage: damage,
+        damage_type: DamageTypes.PURE,
+        ability: undefined,
+        damage_flags: DamageFlag.NONE,
+      });
+    }
   }
 
   log(message: string) {
