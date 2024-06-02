@@ -2916,12 +2916,6 @@
 				"value"			"7 14 21 28 35"
 				"special_bonus_unique_pudge_1"	"x1.5"
 			}
-			"flesh_heap_strength_buff_amount"
-			{
-				"value"	"1.1 1.4 1.7 2 2.3"
-				"special_bonus_unique_pudge_1"	"x1.5"
-			}
-			"flesh_heap_range"		"450"
 			"duration"	"5 6 7 8 9"
 		}
 	}
