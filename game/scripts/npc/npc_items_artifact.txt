@@ -4701,9 +4701,9 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"		"400"
-			"knockback_distance"		"10"
-			"knockback_duration"		"0.1"
-			"bonus_damage"		        "100"
+			"knockback_distance"		"0"
+			"knockback_duration"		"0.0"
+			"bonus_damage"				"75"
 		}
 	}
 	"item_recipe_ballista_dark"
@@ -4734,9 +4734,9 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"		"250"
-			"knockback_distance"		"0"
-			"knockback_duration"		"0.0"
-			"bonus_damage"		        "300"
+			"knockback_distance"		"10"
+			"knockback_duration"		"0.1"
+			"bonus_damage"				"250"
 		}
 	}
 	"item_recipe_ballista_light_1"
@@ -4767,9 +4767,9 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"		"400"
-			"knockback_distance"		"10"
-			"knockback_duration"		"0.1"
-			"bonus_damage"		        "100"
+			"knockback_distance"		"0"
+			"knockback_duration"		"0.0"
+			"bonus_damage"				"75"
 		}
 	}
 	"item_recipe_ballista_dark_1"
@@ -4800,78 +4800,78 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"		"250"
-			"knockback_distance"		"0"
-			"knockback_duration"		"0.0"
-			"bonus_damage"		        "300"
+			"knockback_distance"		"10"
+			"knockback_duration"		"0.1"
+			"bonus_damage"				"250"
 		}
 	}
-	// "item_recipe_ballista_ai"
-	// {
-	// 	"BaseClass"                     "item_datadriven"
-	// 	"ID"						    "13043"
-	// 	"ItemCost"                      "0"
-	// 	"ItemShopTags"					""
-	// 	"ItemRecipe"                    "1"
-	// 	"ItemResult"					"item_ballista_ai"
-	// 	"ItemRequirements"
-	// 	{
-	// 		"01"                        "item_ballista_light;item_dark_part"
-	// 		"02"						"item_ballista_dark;item_light_part"
-	// 	}
-	// }
-	// "item_ballista_ai"
-	// {
-	// 	"BaseClass" "item_ballista"
-	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	// 	"ItemCost"						"0"
-	// 	"ItemIsNeutralDrop"				"0"
-	// 	"ItemPurchasable"				"1"
-	// 	"ItemSellable"					"0"
-	// 	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	// 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	// 	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	// 	"AbilityValues"
-	// 	{
-	// 		"attack_range_bonus"		"500"
-	// 		"knockback_distance"		"10"
-	// 		"knockback_duration"		"0.1"
-	// 		"bonus_damage"		        "300"
-	// 	}
-	// }
-	// "item_recipe_ballista_ai_1"
-	// {
-	// 	"BaseClass"                     "item_datadriven"
-	// 	"ID"						    "13044"
-	// 	"ItemCost"                      "0"
-	// 	"ItemShopTags"					""
-	// 	"ItemRecipe"                    "1"
-	// 	"ItemResult"					"item_ballista_ai_1"
-	// 	"ItemRequirements"
-	// 	{
-	// 		"01"                        "item_ballista_ai;item_exchange"
-	// 		"02"						"item_ballista_light_1;item_dark_part"
-	// 		"03"						"item_ballista_dark_1;item_light_part"
-	// 	}
-	// }
-	// "item_ballista_ai_1"
-	// {
-	// 	"BaseClass" "item_ballista"
-	// 	"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	// 	"ItemCost"						"0"
-	// 	"ItemIsNeutralDrop"				"1"
-	// 	"ItemPurchasable"				"1"
-	// 	"ItemSellable"					"0"
-	// 	"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-	// 	"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-	// 	"Model"							"models/props_gameplay/neutral_box.vmdl"
-	// 	"AbilityValues"
-	// 	{
-	// 		"attack_range_bonus"		"500"
-	// 		"knockback_distance"		"10"
-	// 		"knockback_duration"		"0.1"
-	// 		"bonus_damage"		        "300"
-	// 	}
-	// }
+	"item_recipe_ballista_ai"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13043"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ballista_ai"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_light;item_dark_part"
+			"02"						"item_ballista_dark;item_light_part"
+		}
+	}
+	"item_ballista_ai"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"400"
+			"knockback_distance"		"0"
+			"knockback_duration"		"0.0"
+			"bonus_damage"				"250"
+		}
+	}
+	"item_recipe_ballista_ai_1"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "13044"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"					"item_ballista_ai_1"
+		"ItemRequirements"
+		{
+			"01"                        "item_ballista_ai;item_exchange"
+			"02"						"item_ballista_light_1;item_dark_part"
+			"03"						"item_ballista_dark_1;item_light_part"
+		}
+	}
+	"item_ballista_ai_1"
+	{
+		"BaseClass" "item_ballista"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"1"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"attack_range_bonus"		"400"
+			"knockback_distance"		"0"
+			"knockback_duration"		"0.0"
+			"bonus_damage"				"250"
+		}
+	}
 
 	// 光暗臂章
 	"item_recipe_armlet_light"
