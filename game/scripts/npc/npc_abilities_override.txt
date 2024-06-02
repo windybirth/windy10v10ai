@@ -11362,7 +11362,6 @@
 	"silencer_curse_of_the_silent"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityManaCost"				"130 135 140 145 150"
 		"AbilityValues"
 		{
@@ -11370,6 +11369,10 @@
 			{
 				"value"							"16 24 32 40 48"
 				"special_bonus_unique_silencer"		"+12"
+			}
+			"AbilityCooldown"
+			{
+				"value"						"22 20 18 16 14"
 			}
 			"movespeed"			"-10 -15 -20 -25 -30"
 		}
@@ -11391,11 +11394,9 @@
 				"value"		"1 1 2 2 3"
 				"special_bonus_shard"		"+1"
 			}
-			"int_steal_duration"		"15 20 25 30 35"
-			"permanent_int_steal_amount"
+			"int_steal_duration"
 			{
-				"value"						"2"
-				"special_bonus_shard"		"+1"
+				"value"			"15 20 25 30 35"
 			}
 		}
 	}
@@ -11405,48 +11406,16 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"22 18 14 10 8"
 		"AbilityManaCost"				"100 105 110 115 120"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"damage"			"120 180 240 300 360"
-			}
-			"02"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"int_multiplier"	"1.2 1.4 1.6 1.8 2.0"
-				"LinkedSpecialBonus"	"special_bonus_unique_silencer_4"
-			}
-			"04"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"duration"	"3 4 5 6 7"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"scepter_radius"		"400"
-				"RequiresScepter"			"1"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"scepter_bonus_damage"		"200"
-				"RequiresScepter"			"1"
-			}
-		}
-	}
-	"special_bonus_unique_silencer_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"0.4"
-				"ad_linked_abilities"			"silencer_last_word"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
+				"damage_per_silence"
+				{
+					"value"			"120 180 240 300 360"
+				}
+				"slow_per_silence"
+				{
+					"value"				"6 9 12 15 18"
+				}
 		}
 	}
 	// 全领域禁默
@@ -11454,10 +11423,24 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"110 100 90 80"
-		"AbilityDuration"				"4.5 5.0 5.5 6.0"
 		"AbilityManaCost"				"200 300 400 500"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
+			"AbilityDuration"
+			{
+				"value"					"4.5 5.25 6.0 6.75"
+				"special_bonus_facet_silencer_reverberating_silence"	"=0"
+			}
+
+			"first_duration"
+			{
+				"special_bonus_facet_silencer_reverberating_silence" "3 3.5 4 4.5"
+			}
+
+			"second_duration"
+			{
+				"special_bonus_facet_silencer_reverberating_silence" "1.5 1.75 2 2.25"
+			}
 		}
 	}
 	//=================================================================================================================
