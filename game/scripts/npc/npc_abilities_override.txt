@@ -7448,12 +7448,10 @@
 				"damage"
 				{
 					"value"			"120 180 240 300 360"
-					"LinkedSpecialBonus"		"special_bonus_unique_spectre_6"
 				}
 				"bonus_movespeed"
 				{
 					"value"			"14 16 18 20 22"
-					"LinkedSpecialBonus"		"special_bonus_unique_spectre_3"
 				}
 		}
 	}
@@ -7500,12 +7498,14 @@
 	// 鬼影重重单体
     "spectre_haunt_single"
     {
-        "AbilityManaCost"				"150 250 350"
+		"MaxLevel"						"4"
+		"AbilityCooldown"				"60 50 40 30"
+        "AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 				"duration"					"5.0"
-				"illusion_damage_outgoing"	"-40 -20 0"
-				"tooltip_outgoing"	"60 80 100"
+				"illusion_damage_outgoing"	"-60 -40 -20 0"
+				"tooltip_outgoing"	"60 80 100 120"
 		}
     }
 	//=================================================================================================================
