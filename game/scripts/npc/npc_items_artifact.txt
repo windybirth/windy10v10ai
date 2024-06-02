@@ -652,9 +652,9 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "1"
-        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1605"// 26分钟买
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"			"1245"// 20分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
 		"ItemStockTime"					"120"
@@ -674,9 +674,9 @@
 		"ItemAliases"					""
 		"ItemPurchasable"				"1"
 		"ItemKillable"					"0"
-		"ItemSellable"				    "1"
-        "ItemShareability"				"ITEM_FULLY_SHAREABLE"
-		"ItemInitialStockTime"          "1605"// 26分钟买
+		"ItemSellable"					"1"
+		"ItemShareability"				"ITEM_FULLY_SHAREABLE"
+		"ItemInitialStockTime"			"1245"// 20分钟买
 		"ItemStockInitial"				"0"
 		"ItemStockMax"					"3"
 		"ItemStockTime"					"120"
@@ -1265,7 +1265,7 @@
 		"BaseClass" "item_ex_machina"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"20.0"
-		"AbilityManaCost"				"0"
+		"AbilityManaCost"				"300"
 		"ItemCost"						"0"
 		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
@@ -1296,7 +1296,7 @@
 		"BaseClass" "item_ex_machina"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"5"
-		"AbilityManaCost"				"500"
+		"AbilityManaCost"				"450"
 		"ItemCost"						"0"
 		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
@@ -1306,7 +1306,7 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_armor"			"40"
+			"bonus_armor"			"30"
 		}
 	}
 	"item_recipe_ex_machina_light_1"
@@ -1327,7 +1327,7 @@
 		"BaseClass" "item_ex_machina"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"20.0"
-		"AbilityManaCost"				"0"
+		"AbilityManaCost"				"300"
 		"ItemCost"						"0"
 		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
@@ -1358,7 +1358,7 @@
 		"BaseClass" "item_ex_machina"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"AbilityCooldown"				"5"
-		"AbilityManaCost"				"500"
+		"AbilityManaCost"				"450"
 		"ItemCost"						"0"
 		"ItemPurchasable"				"1"
 		"ItemSellable"					"0"
@@ -1368,7 +1368,7 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_armor"			"40"
+			"bonus_armor"			"30"
 		}
 	}
 
@@ -2388,7 +2388,7 @@
 	"item_havoc_hammer_light"
 	{
 		"BaseClass" "item_havoc_hammer"
-		"AbilityCooldown"				"2.5"	//10
+		"AbilityCooldown"				"4"	//10
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
@@ -2406,7 +2406,7 @@
 				"value"						"450" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"75"                   //50
+			"slow"		"80"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
@@ -2450,12 +2450,12 @@
 				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"100"                   //50
+			"slow"		"60"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
 			"pull_distance"				"450"  //100
-			"nuke_base_dmg"		"800"          //175
+			"nuke_base_dmg"		"600"          //175
 			"nuke_str_dmg"		"2.0"          //1.5
 		}
 	}
@@ -2475,7 +2475,7 @@
 	"item_havoc_hammer_light_1"
 	{
 		"BaseClass" "item_havoc_hammer"
-		"AbilityCooldown"				"2.5"	//10
+		"AbilityCooldown"				"4"	//10
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"1"
@@ -2493,7 +2493,7 @@
 				"value"						"450" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"75"                   //50
+			"slow"		"80"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
@@ -2537,12 +2537,12 @@
 				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"100"                   //50
+			"slow"		"60"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
 			"pull_distance"				"450"  //100
-			"nuke_base_dmg"		"800"          //175
+			"nuke_base_dmg"		"600"          //175
 			"nuke_str_dmg"		"2.0"          //1.5
 		}
 	}
@@ -2563,7 +2563,7 @@
 	"item_havoc_hammer_ai"
 	{
 		"BaseClass" "item_havoc_hammer"
-		"AbilityCooldown"				"2.5"	//10
+		"AbilityCooldown"				"4"	//10
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"1"
@@ -2573,19 +2573,19 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityValues"
 		{
-			"bonus_damage"			"160" //16
-			"bonus_strength"		"160" //16
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
 			"range"
 			{
 				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"75"                   //50
+			"slow"		"80"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
 			"pull_distance"				"450"  //100
-			"nuke_base_dmg"		"800"          //175
+			"nuke_base_dmg"		"600"          //175
 			"nuke_str_dmg"		"3.0"          //1.5
 		}
 	}
@@ -2607,7 +2607,7 @@
 	"item_havoc_hammer_ai_1"
 	{
 		"BaseClass" "item_havoc_hammer"
-		"AbilityCooldown"				"2.5"	//10
+		"AbilityCooldown"				"4"	//10
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
 		"ItemIsNeutralDrop"				"1"
 		"ItemPurchasable"				"1"
@@ -2617,19 +2617,19 @@
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityValues"
 		{
-			"bonus_damage"			"160" //16
-			"bonus_strength"		"160" //16
+			"bonus_damage"			"80" //16
+			"bonus_strength"		"80" //16
 			"range"
 			{
 				"value"						"600" //400
 				"affected_by_aoe_increase"	"1"
 			}
-			"slow"		"75"                   //50
+			"slow"		"80"                   //50
 			"slow_duration"		"3"            //3
 			"angle"						"360"  //360
 			"knockback_duration"		"0.1"  //0.2
 			"pull_distance"				"450"  //100
-			"nuke_base_dmg"		"800"          //175
+			"nuke_base_dmg"		"600"          //175
 			"nuke_str_dmg"		"3.0"          //1.5
 		}
 	}

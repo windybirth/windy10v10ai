@@ -781,13 +781,13 @@
 					"value"						"450" //400
 					"affected_by_aoe_increase"	"1"
 				}
-				"slow"		"75"                   //50
+				"slow"		"60"                   //50
 				"slow_duration"		"3"            //3
 				"angle"						"360"  //360
 				"knockback_duration"		"0.2"  //0.2
 				"pull_distance"				"100"  //100
 				"nuke_base_dmg"		"350"          //175
-				"nuke_str_dmg"		"2.0"          //1.5
+				"nuke_str_dmg"		"1.5"          //1.5
 		}
 	}
 	"item_titan_sliver" //巨神残铁
@@ -1099,7 +1099,7 @@
 		"AbilityManaCost"				"450"  //350
 		"AbilityValues"
 		{
-				"bonus_armor"			"40"   //20
+				"bonus_armor"			"30"   //20
 		}
 	}
 	"item_force_field"  //秘术师铠甲
