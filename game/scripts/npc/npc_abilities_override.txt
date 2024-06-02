@@ -793,13 +793,11 @@
 			"armor_per_stack"
 			{
 				"value"		"1.5 2.0 2.5 3.0 3.5"
-				"special_bonus_unique_bristleback_4"	"+1.0"
 			}
 			"move_slow_per_stack"	"3 6 9 12 15"
 			"stack_limit"
 			{
-				"value"			"4"
-				"special_bonus_shard"	"+6"
+				"value"			"6"
 			}
 		}
 	}
@@ -813,7 +811,6 @@
 				"quill_stack_damage"
 				{
 					"value"			"28 30 32 34 36"
-					"LinkedSpecialBonus"	"special_bonus_unique_bristleback_2"
 				}
 				"max_damage"			"550"
 		}
@@ -834,8 +831,10 @@
 				"value"			"16 23 30 37 44"				// 16 24 32 40 48
 				"special_bonus_unique_bristleback_6"						"+8"
 			}
-			"quill_release_threshold"				"300"
-
+			"quill_release_threshold"
+			{
+				"value"		"300"
+			}
 			"activation_cooldown"					"16"		// 20
 			"activation_manacost"					"250"		// 100
 			"activation_delay"						"0.1"		// 0.5
@@ -847,42 +846,21 @@
 	// 战意
 	"bristleback_warpath"
 	{
-		"MaxLevel" "4"
-		"AbilitySpecial"
+		"MaxLevel" "5"
+		"AbilityValues"
 		{
-			"01"
+			"damage_per_stack"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"damage_per_stack"					"20 25 30 35"
-				"LinkedSpecialBonus"	"special_bonus_unique_bristleback_3"
+				"value"					"20 25 30 35 40"
 			}
-			"02"
+			"aspd_per_stack"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"move_speed_per_stack"				"3 4 5 6"
+				"value"					"0"
+				"special_bonus_facet_bristleback_berserk"	"=5 =10 =15 =20 =25"
 			}
-			"03"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"stack_duration"				"16.0 18.0 20.0 22.0"
-			}
-			"04"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"max_stacks"					"8 10 12 14"
-			}
-		}
-	}
-	"special_bonus_unique_bristleback_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"25"
-				"ad_linked_abilities"			"bristleback_warpath"
-			}
+			"move_speed_per_stack"		"0 2 3 4 5"
+			"stack_duration"				"12.0 16.0 18.0 20.0 22.0"
+			"max_stacks"					"4 8 10 12 14"
 		}
 	}
 	//=================================================================================================================
