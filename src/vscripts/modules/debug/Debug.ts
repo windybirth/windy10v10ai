@@ -196,6 +196,13 @@ export class Debug {
         }
       }
     }
+    // 获取状态抗性
+    if (cmd === "-getSR") {
+      const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
+      if (!hero) return;
+      const sr = hero.GetStatusResistance();
+      this.log(`status resistance: ${sr}`);
+    }
   }
 
   log(message: string) {
