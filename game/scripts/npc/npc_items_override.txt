@@ -572,7 +572,7 @@
 		"AbilityValues"
 		{
 			"attack_range_bonus"			"75"		// 75
-			"attack_speed_bonus"			"40"		// 20
+			"attack_speed_bonus"			"50"		// 20
 			"magic_resistance_reduction"		"20"	// 15
 		}
 	}
