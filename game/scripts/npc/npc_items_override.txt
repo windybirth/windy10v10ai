@@ -828,7 +828,7 @@
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
 			"count"							"4"		//2
-			"secondary_target_range_bonus"	"450"	//225
+			"secondary_target_range_bonus"	"250"	//225
 			"proc_bonus_damage"				"120"	//20
 		}
 	}

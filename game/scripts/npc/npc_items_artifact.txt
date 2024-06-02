@@ -766,7 +766,7 @@
 			"bonus_damage"					"90"	//12
 			"count"							"4"		//2
 			"secondary_target_range_bonus"	"450"	//225
-			"proc_bonus_damage"				"1400"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 	"item_recipe_specialists_array_dark"
@@ -785,7 +785,7 @@
 	"item_specialists_array_dark"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.1"		//8
+		"AbilityCooldown"				"0.2"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"0"
@@ -798,8 +798,8 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"8"		//2
-			"secondary_target_range_bonus"	"225"	//225
+			"count"							"6"		//2
+			"secondary_target_range_bonus"	"250"	//225
 			"proc_bonus_damage"				"200"	//20
 		}
 	}
@@ -834,7 +834,7 @@
 			"bonus_damage"					"90"	//12
 			"count"							"4"		//2
 			"secondary_target_range_bonus"	"450"	//225
-			"proc_bonus_damage"				"1400"	//20
+			"proc_bonus_damage"				"1200"	//20
 		}
 	}
 	"item_recipe_specialists_array_dark_1"
@@ -853,7 +853,7 @@
 	"item_specialists_array_dark_1"
 	{
 		"BaseClass" "item_specialists_array"
-		"AbilityCooldown"				"0.1"		//8
+		"AbilityCooldown"				"0.2"		//8
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"ItemCost"						"0"
 		"ItemIsNeutralDrop"				"1"
@@ -866,8 +866,8 @@
 		{
 			"all_stats"						"30"	//7
 			"bonus_damage"					"90"	//12
-			"count"							"8"		//2
-			"secondary_target_range_bonus"	"225"	//225
+			"count"							"6"		//2
+			"secondary_target_range_bonus"	"250"	//225
 			"proc_bonus_damage"				"200"	//20
 		}
 	}
