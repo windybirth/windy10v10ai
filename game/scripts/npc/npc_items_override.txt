@@ -97,21 +97,20 @@
 	//=================================================================================================================
 	"item_infused_raindrop"
 	{
-		"AbilityCastPoint"				"0.0"	// 225
 		"AbilityCooldown"				"1.0"
-		"ItemCost"						"800"
+		"ItemCost"						"650"
 		"ItemStockInitial"				"5"
-		"ItemStockMax"					"20"
+		"ItemStockMax"					"8"
 		"ItemStockTime"					"60"
 		"ItemInitialStockTime"			"0"
 		"ItemInitialStockTimeTurbo"		"0"
 		"ItemStackable"					"1"
 		"AbilityValues"
 		{
-				"mana_regen"			"3.5"	// 0.8
+				"mana_regen"			"3.0"	// 0.8
 				"magic_damage_block"	"600"	// 120
 				"min_damage"			"120"	// 75
-				"initial_charges"		"6"
+				"initial_charges"		"8"		// 6
 		}
 	}
 	// 树之祭祀
@@ -130,6 +129,7 @@
 	// 净化药水
 	"item_clarity"
 	{
+		"ItemInitialCharges"			"5"
 		"ItemStockMax"					"8"
 		"ItemStockInitial"				"8"
 		"AbilityValues"
