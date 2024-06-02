@@ -11032,18 +11032,9 @@
 		"AbilityValues"
 		{
 			"damage"					"100 175 250 325 400"
-			"jump_damage_reduction_pct"
-			{
-				"value"			"0"
-				"CalculateSpellDamageTooltip"	"0"
-				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
-			}
 			"attack_damage_reduction"
 			{
 				"value"			"5 15 25 35 45"
-				"LinkedSpecialBonus"		"special_bonus_unique_rubick_2"
-				"CalculateSpellDamageTooltip"	"0"
-				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
 			}
 		}
 	}
@@ -11051,14 +11042,11 @@
 	"rubick_null_field"
 	{
 		"MaxLevel" "5"
-		"LinkedAbility"					"rubick_arcane_supremacy"
-		"AbilityDraftPreAbility"		"rubick_arcane_supremacy"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"magic_damage_reduction_pct"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"magic_damage_reduction_pct"	"10 13 16 19 22"
+				"value" "10 13 16 19 22"
 			}
 		}
 	}
@@ -11068,19 +11056,11 @@
 		"MaxLevel" "5"
 		"LinkedAbility"					"rubick_null_field"
 		"AbilityDraftPreAbility"		"rubick_null_field"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"cast_range"				"50 100 150 200 250"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"spell_amp"			"10 15 20 25 30"
-			}
+			"cast_range"				"50 100 150 200 250"
 		}
+
 	}
 	// 技能窃取
 	"rubick_spell_steal"
@@ -11088,17 +11068,16 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"MaxLevel" "4"
 		"AbilityCooldown"				"16 12 8 4"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"150.0 200.0 250.0 300.0"
+				"value"						"150.0 200.0 250.0 300.0"
 			}
-			"05"
+			"stolen_mana_reduction"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"stolen_debuff_amp"			"10 20 30 40"
+				"value"						"0"
+				"special_bonus_facet_rubick_frugal_filch"	"10 20 30 40""
 			}
 		}
 	}

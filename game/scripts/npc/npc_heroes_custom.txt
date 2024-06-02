@@ -497,11 +497,6 @@
 		"Ability19"		"keeper_of_the_light_spirit_form"
 	}
 
-	"npc_dota_hero_rubick"
-	{
-		"Ability20"		"rubick_null_field"
-	}
-
 	"npc_dota_hero_slark"
     {
         "Ability10"		"special_bonus_unique_slark_2"
