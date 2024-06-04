@@ -497,6 +497,11 @@
 		"Ability19"		"keeper_of_the_light_spirit_form"
 	}
 
+	"npc_dota_hero_rubick"
+	{
+		"Ability20"		"rubick_null_field"
+	}
+
 	"npc_dota_hero_slark"
     {
         "Ability10"		"special_bonus_unique_slark_2"
@@ -1451,14 +1456,6 @@
 	}
 	"npc_dota_hero_lion"
 	{
-		"Ability10"		"special_bonus_unique_lion_6"
-		"Ability15"		"special_bonus_unique_lion_3"
-		"Ability12"		"special_bonus_unique_lion_5"
-		"Ability13"		"special_bonus_unique_lion_11"
-		"Ability17"		"special_bonus_unique_lion_8"
-		"Ability11"		"special_bonus_unique_lion_10"
-		"Ability16"		"special_bonus_unique_lion_2"
-		"Ability14"		"special_bonus_unique_lion_4"
 		"Bot"
 		{
 			"Build"
@@ -1492,7 +1489,7 @@
 				"27"		"special_bonus_unique_lion_6"
 				"28"		"special_bonus_unique_lion_11"
 				"29"		"special_bonus_unique_lion_8"
-				"30"		"special_bonus_unique_lion_manadrain_damage"
+				"30"		"special_bonus_unique_lion_2"
 				"31"		"lion_finger_of_death"
 				"32"		"lion_voodoo"
 				"33"		"lion_mana_drain"
