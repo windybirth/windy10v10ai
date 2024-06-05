@@ -4040,25 +4040,16 @@
 		"AbilityManaCost"				"140 150 160 170 180"
 		"AbilityValues"
 		{
-				"radius"					"355 370 385 400 415"
+				"radius"
+				{
+					"value"			"325 340 355 370 385"
+					"affected_by_aoe_increase"	"1"
+				}
 				"avalanche_damage"
 				{
-					"value"				"150 225 300 400 525"
-					"LinkedSpecialBonus"		"special_bonus_unique_tiny"
+					"value"				"160 240 320 400 480"
+					"special_bonus_unique_tiny"			"+160" // 80 加强法系
 				}
-				"toss_multiplier"		"2"
-		}
-	}
-	"special_bonus_unique_tiny_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
-				"ad_linked_abilities"			"tiny_avalanche"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 投掷
@@ -4070,16 +4061,32 @@
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
-				"duration"				"1.4"
-				"grab_radius"			"300"
-				"radius"				"275"
-				"bonus_damage_pct"		"0"
-				"toss_damage"				"75 150 225 300 400"
-				"AbilityCharges"
-				{
-					"value"				""
-					"LinkedSpecialBonus"	"special_bonus_unique_tiny_2"
-				}
+			"toss_damage"
+			{
+				"value"				"160 240 320 400 480"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"radius"
+			{
+				"value"		"275"
+				"special_bonus_facet_tiny_crash_landing"				"=700" // x1.5 没人选的命石1
+				"affected_by_aoe_increase"	"1"
+			}
+			"land_movement_slow"
+			{
+				"value"						"0"
+				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 没人选的命石1
+			}
+			"land_attack_slow"
+			{
+				"value"						"0"
+				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 没人选的命石1
+			}
+			"bonus_land_damage_pct"
+			{
+				"value"						"0"
+				"special_bonus_facet_tiny_crash_landing"				"50 60 70 80 90" // x2 没人选的命石1
+			}
 		}
 	}
 	// 抓树
@@ -4091,65 +4098,69 @@
 		{
 			"bonus_damage"
 			{
-				"value"							"20 25 30 35 40"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"							"10 20 30 40 50"
+				"special_bonus_unique_tiny_7"		"+70"
 			}
 			"bonus_damage_buildings"
 			{
 				"value"							"40 55 70 85 100"
-				"CalculateSpellDamageTooltip"	"0"
-				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
 			}
 			"splash_pct"				"40 60 80 100 120"
+		}
+	}
+	// 树木连掷
+	"tiny_tree_channel"
+	{
+		"AbilityValues"
+		{
+				"speed"		"1000.0"
+				"range"		"1200"
+				"splash_radius"
+				{
+					"value"		"600" // 400
+					"affected_by_aoe_increase"	"1"
+				}
+				"tree_grab_radius"
+				{
+					"value"		"1400" // 700
+					"affected_by_aoe_increase"	"1"
+				}
+				"interval"		"0.5"
 		}
 	}
 	// 长大
 	"tiny_grow"
 	{
 		"MaxLevel" "4"
-		"LinkedAbility"					"tiny_craggy_exterior"
-		"AbilityDraftPreAbility"		"tiny_craggy_exterior"
 		"AbilityValues"
 		{
 			"bonus_armor"				"10 17 24 31"
-			"bonus_damage"
-			{
-				"value"					"50 110 170 230"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-			"toss_bonus_damage"
-			{
-				"value"					"100 250 400 550"
-				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
-			}
-			"slow_resistance"		"15 30 45 60"
+				"bonus_damage"
+				{
+					"value"					"120 180 240 300"
+				}
+				"attack_speed_reduction"
+				{
+					"value"		"-50" // 30
+					"special_bonus_unique_tiny_6" "+30"// 10 完全体数值不变，破坏前期物理小小节奏，变相加强法系
+				}
+				"toss_bonus_damage"
+				{
+					"value"					"100 250 400 550"
+				}
+				"move_speed"		"25 50 75 100"
 		}
 	}
-	// 崎岖外壳
+	// 崎岖外表（先天随大招升级）
 	"tiny_craggy_exterior"
 	{
-		"AbilitySpecial"
+		"MaxLevel"						"5"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"stun_chance"				"30"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.0"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"150"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"400"
-			}
+			"debuff_duration"						"5"
+			"damage"								"0"
+			"max_stacks"							"10"
+			"damage_reduction_per_stack"					"2 3 4 5 6"
 		}
 	}
 	//=================================================================================================================
