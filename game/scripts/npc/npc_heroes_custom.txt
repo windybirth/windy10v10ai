@@ -490,7 +490,7 @@
 	"npc_dota_hero_night_stalker"
 	{
 		"VisionDaytimeRange"		"1200"// 800
-		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，上限4000
+		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，现在上限是全图
 	}
 
 	"npc_dota_hero_keeper_of_the_light"
