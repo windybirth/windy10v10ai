@@ -482,7 +482,9 @@
 
 	"npc_dota_hero_naga_siren"
 	{
-		"Ability5"		"naga_siren_crit"
+		"Ability8"		"naga_siren_crit"
+		"Ability17"		"special_bonus_unique_naga_siren"
+		"Ability15"		"special_bonus_unique_naga_siren_net_breaks"
 	}
 
 	"npc_dota_hero_night_stalker"
