@@ -9917,8 +9917,8 @@
 		{
 			"total_damage"
 			{
-				"value"				"200 300 400 500 600"
-				"special_bonus_unique_keeper_of_the_light"		"+180"
+				"value"				"185 290 395 500 605"
+				"special_bonus_unique_keeper_of_the_light"		"+200"
 			}
 			"channel_vision_step"		"150 180 210 240 270"
 		}
@@ -9926,59 +9926,82 @@
 	// 法力流失
 	"keeper_of_the_light_mana_leak"
 	{
-		"AbilityCooldown"				"16 14 12 10"
-		"LinkedAbility"					"keeper_of_the_light_chakra_magic"
-		"AbilityDraftPreAbility"		"keeper_of_the_light_chakra_magic"
-		"AbilitySpecial"
+		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
+		"AbilityCooldown"				"16 14 12 10 8"
+		"AbilityCastRange"				"400 500 600 700"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityValues"
 		{
-			"01"
+			"duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"4.0 5.0 6.0 7.0"
+				"value" "4.0 5.0 6.0 7.0 8.0"
 			}
-			"02"
+			"mana_leak_pct"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"mana_leak_pct"				"5.0"
+				"value" "5 6 7 8 9"
 			}
-			"03"
+			"stun_duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.5 2.0 2.5 3.0"
+				"value" "1.5 2.0 2.5 3.0 3.5"
 			}
 		}
+	}
+	// 炎阳之缚
+	"keeper_of_the_light_radiant_bind"
+	{
+		"Maxlevel"						"4"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
+		"AbilityCastRange"				"1000"
+		"AbilityValues"
+		{
+				"magic_resistance"			"20 30 40 50"
+				"stun_duration"
+				{
+					"value"			"0"
+				}
+				"AbilityCooldown"
+				{
+					"value"					"14"
+					"special_bonus_shard"		"=0"
+				}
+				"AbilityChargeRestoreTime"
+				{
+					"value"					"0"
+					"special_bonus_shard"		"=14"
+				}
+				"AbilityCharges"
+				{
+					"value"					"0"
+					"special_bonus_shard"		"=2"
+				}
+
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 查克拉
 	"keeper_of_the_light_chakra_magic"
 	{
-		"AbilityCooldown"				"15 13 11 9"
+		"Maxlevel"						"5"
 		"LinkedAbility"					"keeper_of_the_light_mana_leak"
 		"AbilityDraftPreAbility"		"keeper_of_the_light_mana_leak"
-		"AbilitySpecial"
+		"AbilityCastRange"				"900 1000 1100 1200 1300"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0.1 0.0"
+		"AbilityValues"
 		{
-			"01"
+			"mana_restore"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"mana_restore"			"100 200 300 400"
-				"LinkedSpecialBonus"	"special_bonus_unique_keeper_of_the_light_2"
+				"value"			"75 150 225 300 375"
+				"special_bonus_unique_keeper_of_the_light_2"	"+200"
 			}
-			"02"
+			"cooldown_reduction"	"3 4 5 6 7"
+			"mana_leak_pct"	"4.5 5 5.5 6.0 6.5"
+			"duration"	"5"
+			"AbilityCooldown"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"cooldown_reduction"	"3 4 5 6"
+				"value"			"18 16 14 12 10"
+				"special_bonus_unique_keeper_of_the_light_7"	"-3"
 			}
-		}
-	}
-	"special_bonus_unique_keeper_of_the_light_2"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"300"
-				"ad_linked_abilities"			"keeper_of_the_light_chakra_magic"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
+			"self_bonus"				"25"
 		}
 	}
 	// 灵魂形态
@@ -9986,60 +10009,87 @@
 	{
 		"MaxLevel" "4"
 		"AbilityManaCost"				"75 125 175 225"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"duration"					"1800.0 1800.0 1800.0"
-				"LinkedSpecialBonus"	"special_bonus_unique_keeper_of_the_light_11"
+				"value"				"40.0 40.0 40.0 40.0"
+				"special_bonus_unique_keeper_of_the_light_11"	"+15"
 			}
-			"02"
+			"movement_speed"			"15 20 25 30"
+			"cast_range"			"125 250 375 500"
+			"illuminate_heal"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"movement_speed"			"15 20 25 30"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"cast_range"			"140 210 280 350"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"illuminate_heal"			"50 60 70 80"
+				"value"					"50 60 70 80"
+				"special_bonus_shard"		"+30"
 			}
 		}
 	}
-	// 大招状态下冲击波
-	"keeper_of_the_light_spirit_form_illuminate"
+	// 召回
+	"keeper_of_the_light_recall"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"// 无视魔免
-		"MaxLevel" "5"
-		"AbilityManaCost"				"100 125 150 175 200"
+		"Maxlevel"								"4"
 		"AbilityValues"
 		{
-			"total_damage"
+			"teleport_delay"
 			{
-				"value"				"200 300 400 500 600"
-				"special_bonus_unique_keeper_of_the_light"		"+180"
+				"value"							"6 5 4 3"
 			}
-			"max_channel_time"		"3"
-			"radius"				"400"
-			"range"					"1550"
-			"speed"					"900.0"
-			"vision_radius"			"800 800 800 800"
-			"vision_duration"		"3.34 3.34 3.34 3.34"
-			"channel_vision_radius"	"400"
-			"channel_vision_interval"	"0.5"
-			"channel_vision_duration"	"10.34"
-			"channel_vision_step"		"150 180 210 240 270"
+			"movespeed_bonus_duration"			"4"
+			"ally_movespeed_pct"
+			{
+				"value"							"12 16 20 24"
+			}
 			"AbilityCooldown"
 			{
-				"value"					"11"
-				"special_bonus_unique_keeper_of_the_light_illuminate_cooldown"			"-3"
+				"value"							"21 18 15 12"
+				"special_bonus_shard"			"=0"
 			}
-
+			"AbilityChargeRestoreTime"
+			{
+				"value"							"0 0 0 0"
+				"special_bonus_shard"			"21 18 15 12"
+			}
+			"AbilityCharges"
+			{
+				"value"							"0"
+				"special_bonus_shard"			"=2"
+			}
+		}
+	}
+	// 致盲之光
+	"keeper_of_the_light_blinding_light"
+	{
+		"Maxlevel"						"5"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCastRange"				"400 500 600 700 800"
+		"AbilityCastPoint"				"0.3 0.2 0.1 0.1 0.0"
+		"AbilityManaCost"				"120 130 140 150"
+		"AbilityValues"
+		{
+				"miss_rate"
+				{
+					"value"				"40"
+				"special_bonus_unique_keeper_of_the_light_8" "+40"
+				}
+				"duration"				"4"
+				"radius"
+				{
+					"value"			"425 450 475 500 525"
+					"affected_by_aoe_increase"	"1"
+				}
+				"knockback_duration"	"0.6"
+				"knockback_distance"
+				{
+					"value"		"400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"damage"				"85 130 175 220 265"
+				"AbilityCooldown"
+				{
+					"value"											"25 22 19 16 13"
+					"special_bonus_unique_keeper_of_the_light_5"	"-5"
+				}
 		}
 	}
 	//灵光
