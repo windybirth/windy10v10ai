@@ -3845,7 +3845,7 @@
 	"tusk_ice_shards"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"21.0 19.0 17.0 15.0 13.0"
+		"AbilityCooldown"				"23 20 17 14 11"
 		"AbilityValues"
 		{
 				"shard_damage"
@@ -3861,29 +3861,15 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"21 19 17 15 13"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"snowball_damage"			"80 140 200 260 320"
-				"LinkedSpecialBonus"		"special_bonus_unique_tusk_2"
-			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
+				"snowball_damage"
+				{
+					"value"		"80 140 200 260 320"
+				}
 				"snowball_speed"			"575 600 625 650 675"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"snowball_damage_bonus"		"50 75 100 125 150"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
+				"snowball_damage_bonus"		"40 65 90 115 140"
 				"stun_duration"				"0.6 0.8 1.0 1.2 1.4"
-			}
 		}
 	}
 	// 摔角行家
@@ -3891,42 +3877,82 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"24 21 18 15 12"
-		"AbilitySpecial"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityValues"
 		{
-			"01"
+			"bonus_damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"			"30 55 80 105 130"
-				"LinkedSpecialBonus"		"special_bonus_unique_tusk_3"
+				"value"						"20 45 70 95 120"
+				"special_bonus_unique_tusk_3"		"+30" // 25
+			}
+			"slow_duration"				"1.0" // 0.5
+			"radius"
+			{
+				"value"	"450" // 350
 			}
 		}
 	}
-	"special_bonus_unique_tusk_3"
+	// 酒友（命石2）
+	"tusk_drinking_buddies"
 	{
-		"AbilitySpecial"
+		"Maxlevel"						"5"
+		"AbilityCooldown"				"24 21 18 15 12"
+		"AbilityValues"
 		{
-			"01"
+			"AbilityCastRange"			"900"
+			"buff_duration"				"15.0" // 5
+			"pull_duration"				"0.2"
+
+			"min_distance"				"250"
+			"max_distance"				"1200"
+
+			"movespeed_bonus"			"40" //25
+			"attackdamage_bonus"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"50"
-				"ad_linked_abilities"			"tusk_tag_team"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"								"30 60 90 120 150" // 20 45 70 95
+				"special_bonus_unique_tusk_3"		"+30" // 25
 			}
+		}
+	}
+	// 严寒（先天）
+	"tusk_bitter_chill"
+	{
+		"Maxlevel"			"6"
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"	"450" // 350
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_speed_slow"		"20 40 60 80 100" // 10 20 30 40 50
 		}
 	}
 	// 海象神拳！
 	"tusk_walrus_punch"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"20 16 12 8"
+		"AbilityCooldown"				"20 15 10 5"
 		"AbilityValues"
 		{
-				"bonus_damage"			"50 100 150 200"
+				"bonus_damage"			"50 75 100 125"
 				"crit_multiplier"
 				{
-					"value"				"200 275 350 425"
-					"LinkedSpecialBonus"		"special_bonus_unique_tusk"
+					"value"				"200 250 300 350"
+				"special_bonus_unique_tusk" "+75"
 				}
-				"slow_duration"				"2.0 3.0 4.0 5.0"
+		}
+	}
+	// 普攻触发神拳天赋
+	"special_bonus_unique_tusk_4"
+	{
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "24" // 12
+				"ad_linked_abilities" "tusk_walrus_punch"
+			}
 		}
 	}
 	// 寒冰符印
@@ -3936,29 +3962,24 @@
 		"AbilityCastPoint"				"0.1"
 		"AbilityCooldown"				"30.0"
 		"AbilityManaCost"				"70"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"sigil_radius"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"sigil_radius"				"650"
+				"value" "650"
 			}
-			"02"
+			"sigil_duration"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"sigil_duration"			"25.0"
+				"value" "25"
 			}
-			"03"
+			"move_slow"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"move_slow"					"40"
+				"value" "40"
 			}
-			"04"
+			"attack_slow"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"attack_slow"				"20"
+				"value" "0"
 			}
-
 		}
 	}
 	//=================================================================================================================
