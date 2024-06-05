@@ -11465,16 +11465,6 @@
 		"AbilityValues"
 		{
 				"bolt_damage"			"75 95 115 135 155"
-				"int_multiplier"
-				{
-					"value"		"1.2"
-					"CalculateSpellDamageTooltip"	"1"
-				}
-				"lifesteal_amt"
-				{
-					"value"			"20 30 40 50 60"
-					"special_bonus_unique_skywrath_arcane_bolt_lifesteal"			"+25"
-				}
 		}
 	}
 	// 震荡光弹
@@ -11517,8 +11507,21 @@
 				"damage"
 				{
 					"value"			"800 1200 1600 2000"
-					"LinkedSpecialBonus"	"special_bonus_unique_skywrath_5"
+				"special_bonus_unique_skywrath_5" "+400"
 				}
+		}
+	}
+	// 拨乱反正（先天随大招升级）
+	"skywrath_mage_ruin_and_restoration"
+	{
+		"Maxlevel"		"5"
+		"AbilityValues"
+		{
+			"spell_lifesteal"
+			{
+				"value"		"20 30 40 50 60"
+				"special_bonus_unique_skywrath_arcane_bolt_lifesteal"			"+30"// 15
+			}
 		}
 	}
 	//=================================================================================================================
