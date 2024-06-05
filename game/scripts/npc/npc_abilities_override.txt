@@ -5886,12 +5886,6 @@
 				"value"					"6 9 12 15"
 				"special_bonus_scepter"	"+0 +3 +6 +9"
 			}
-			"beam_interval"
-			{
-				"value"					"0.6 0.6 0.6 0.5"
-				"special_bonus_scepter"	"-0.3"
-			}
-			"beam_interval_scepter"		"0.2" // purely for the tooltip Note, since the scepter tooltip doesn't show this.
 			"hit_count"
 			{
 				"value"					"5"
