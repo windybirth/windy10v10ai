@@ -11421,12 +11421,11 @@
 				"targets"
 				{
 					"value"		"3 5 7 9 11"
-					"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_7"
 				}
 				"damage"
 				{
 					"value"		"140 200 260 320 380"
-					"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_3"
+				"special_bonus_unique_shadow_shaman_3" "+400"
 				}
 		}
 	}
@@ -11440,12 +11439,6 @@
 		"AbilityValues"
 		{
 				"duration"					"2 2.3 2.6 2.9 3.2"
-				"damage_amp"
-				{
-					"value"					"10 15 20 25 30"
-					"special_bonus_unique_shadow_shaman_hex_damage_amp"		"+10"
-				}
-
 		}
 	}
 	// 枷锁
@@ -11454,33 +11447,19 @@
 		"MaxLevel" "5"
 		"AbilityCastRange"				"750"
 		"AbilityChannelTime"			"2.4 3.0 3.6 4.2 4.8"
-		"AbilityCooldown"				"16 15 14 13 12"
+		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityManaCost"				"125 140 155 170 185"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
+			"total_damage"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"total_damage"		"80 160 240 320 400"
-				"LinkedSpecialBonus"	"special_bonus_unique_shadow_shaman_6"
+				"value"					"70 140 210 280 350"
+				"special_bonus_unique_shadow_shaman_6" "+170"
 			}
-			"03"
+			"channel_time"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"channel_time"		"2.4 3.0 3.6 4.2 4.8"
-				"LinkedSpecialBonus"	"special_bonus_unique_shadow_shaman_2"
-			}
-			"05"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"shard_ward_count"		"1"
-				"RequiresShard"			"1"
-			}
-			"06"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"shard_ward_duration"		"5"
-				"RequiresShard"			"1"
+				"value"									"2.4 3.0 3.6 4.2 4.8"
+				"special_bonus_unique_shadow_shaman_2"	"+1.0"
 			}
 		}
 	}
@@ -11489,41 +11468,19 @@
 	{
 		"MaxLevel" "3"
 		"AbilityCooldown"				"140"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"ward_count"
 			{
-				"var_type"			"FIELD_INTEGER"
-				"ward_count"		"2"			// 10
+				"value"							"2"
 			}
-			"02"
+			"bonus_damage"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_tooltip"			"250 425 600"	// 50 85 120
-				"LinkedSpecialBonus"		"special_bonus_unique_shadow_shaman_4"
-				"CalculateSpellDamageTooltip"	"0"
+				"special_bonus_unique_shadow_shaman_4" "+100"
 			}
-			"04"
+			"bonus_attack_range"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"24.0"
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"spawn_radius"			"120"	// 150
-			}
-		}
-	}
-	"special_bonus_unique_shadow_shaman_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"125"		// 25 守卫攻击力
-				"ad_linked_abilities"			"shadow_shaman_mass_serpent_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"special_bonus_unique_shadow_shaman_8" "+200"
 			}
 		}
 	}
