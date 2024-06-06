@@ -574,7 +574,7 @@
 
     "npc_dota_hero_venomancer"
     {
-        "Ability15"		"special_bonus_unique_venomancer_201"
+        "Ability15"		"special_bonus_hp_350"
     }
 
 	"npc_dota_hero_abaddon"
@@ -1211,8 +1211,13 @@
 	}
 	"npc_dota_hero_grimstroke"
 	{
-		"Ability7"				"grimstroke_dark_artistry"
-		"Ability1"              "visage_soul_assumption"
+		"Ability8"				"grimstroke_soul_chain"
+		"Ability6"              "visage_soul_assumption"
+		"AbilityDraftAbilities"
+		{
+			"Ability4"          "visage_soul_assumption" // 没测试，可能有问题
+			"Ability6"			"grimstroke_soul_chain"
+		}
 	}
 	"npc_dota_hero_gyrocopter"
 	{

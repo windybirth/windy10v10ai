@@ -8086,40 +8086,48 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"duration"				"15.0"
-			"strike_damage"			"50 75 100 125 150"
-			"tick_damage"			"25 50 80 110 150"
-			"tick_interval"			"3.0"
-			"movement_slow"			"-50"
-			"radius"				"150"
-			"speed"					"1200 1200 1200 1200"
+			"strike_damage"
+			{
+				"value"					"25 50 75 100 125"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"tick_damage"
+			{
+				"value"					"10 40 70 100 130"
+				"CalculateSpellDamageTooltip"	"1"
+			}
+			"radius"
+			{
+				"value"		"250"
+				"affected_by_aoe_increase"	"1"
+			}
 			"create_wards"
 			{
 				"value"					"0"
-				"special_bonus_unique_venomancer_gale_plagueward"		"+1"
+				"special_bonus_unique_venomancer_gale_plagueward"		"+0"
 			}
 			"AbilityCooldown"
 			{
-				"value"												"18"
+				"value"												"21 20 19 18 17"
 				"special_bonus_unique_venomancer_3"					"-5"
 			}
 		}
 	}
-	// 毒刺
+	// 毒刺（先天可升级）
 	"venomancer_poison_sting"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "6"
 		"AbilityValues"
 		{
 			"duration"				"4"
 			"damage"
 			{
-			    "value" "15 30 45 60 75"
+			    "value" "15 30 45 60 75 90"
 			    "special_bonus_unique_venomancer_201"		"+45"
 			}
 			"movement_speed"
 			{
-				"value"			"-10 -14 -18 -22 -26"
+				"value"			"-10 -14 -18 -22 -26 -30"
 				"special_bonus_unique_venomancer_2"		"-10"
 			}
 			"hp_regen_reduction"
@@ -8129,66 +8137,67 @@
 			}
 		}
 	}
-	"special_bonus_unique_venomancer_201"
-	{
-	    "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-	}
 	// 剧毒蛇棒
 	"venomancer_plague_ward"
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"80 100 120 140 160"
-		"AbilityCooldown"				"40"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"AbilityCooldown"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"40"
-				"LinkedSpecialBonus"		"special_bonus_unique_venomancer_7"
+				"value"			"5.0"
+				"special_bonus_unique_venomancer_8"			"-1"
 			}
-			"02"
+			"can_target"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"ward_hp_tooltip"		"300 450 600 750 900"
-				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+				"value"			"0"
+				"special_bonus_facet_venomancer_plague_carrier"	"=1"
 			}
-			"03"
+			"gold_bounty_pct"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"ward_damage_tooltip"	"20 30 40 50 60"
-				"LinkedSpecialBonus"	"special_bonus_unique_venomancer"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_MULTIPLY"
+				"value"			"100"
+				"special_bonus_facet_venomancer_plague_carrier"	"=20"
 			}
-			"04" // For special bonus at level 25
+
+			"max_charges"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"ward_hp"		"900 1350 1800 2250 2700"
+				"value"			"0"
+				"special_bonus_facet_venomancer_plague_carrier"	"=3"
 			}
-			"05" // For special bonus at level 25
+
+			"duration"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"ward_damage"	"60 90 120 150 180"
+				"value"			"40.0"
+			}
+
+			"ward_multiplier"
+			{
+				"value"								"1.0"
+				"special_bonus_unique_venomancer"	"x2.5"
+			}
+			"ward_model_scale"
+			{
+				"value"								"1.0"
+				"special_bonus_unique_venomancer"	"x1.5"
+			}
+			"ward_hp_tooltip"
+			{
+				"value"							"300 450 600 750 900"
+				"special_bonus_unique_venomancer" "x2.5"
+			}
+			"ward_damage_tooltip"
+			{
+				"value"							"20 30 40 50 60"
+				"special_bonus_unique_venomancer" "x2.5"
+			}
+			"threshold"
+			{
+				"value"							"300 450 600 750 900"
+				"special_bonus_unique_venomancer" "x2.5"
 			}
 		}
 	}
-	"special_bonus_unique_venomancer"
-    {
-        "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilitySpecial"
-        {
-            "01"
-            {
-                "var_type"					"FIELD_FLOAT"
-                "value"				"3"
-                "ad_linked_abilities"			"venomancer_plague_ward"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-            }
-        }
-    }
 	// 恶性瘟疫
 	"venomancer_noxious_plague"
 	{
@@ -8198,23 +8207,27 @@
 		"AbilityCastPoint"				"0.15"
 		"AbilityValues"
 		{
-			"debuff_duration"			"10"
-			"impact_damage"				"150 250 350 450"
+			"debuff_duration"			"10" // 5
+			"impact_damage"				"200 300 400 500"
 			"health_damage"
 			{
-				"value"							"4.5 5.0 5.5 6"
-				"special_bonus_unique_venomancer_4" "1.5"
+				"value"							"3 4 5 6"
+				"special_bonus_unique_venomancer_4" "+1"
 			}
-			"debuff_radius"
-			{
-				"value"		"800"
-				"affected_by_aoe_increase"	"1"
-			}
-			"movement_slow_max"			"50"
+			"movement_slow_max"			"75" // 50
 			"attack_slow"
 			{
 				"value"					"0"
-				"special_bonus_unique_venomancer_5"	"+700"
+				"special_bonus_unique_venomancer_5"	"+400" // 200
+			}
+			"spread_count"
+			{
+				"value"					"2"
+				"special_bonus_facet_venomancer_patient_zero"	"+4"
+			}
+			"impact_damage_reduce"
+			{
+				"special_bonus_facet_venomancer_patient_zero" "100"
 			}
 			"projectile_speed"			"1200"
 		}
@@ -9572,7 +9585,6 @@
 	"grimstroke_dark_artistry"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"1600"
 		"AbilityCooldown"				"11 9 7 5 3"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
@@ -9580,16 +9592,25 @@
 				"damage"
 				{
 					"value"		"100 160 220 280 340"
-					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
-					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+				"special_bonus_unique_grimstroke_2" "+100%"
 				}
 				"bonus_damage_per_target"
 				{
-					"value"	"25 40 55 70 85"		// 20 30 40 50
-					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_2"
-					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_PERCENTAGE_ADD"
+					"value"	"40 50 60 70 80"
+					"special_bonus_facet_grimstroke_fine_art"	"+0 +5 +10 +15 +20"
+				"special_bonus_unique_grimstroke_2" "+100%"
 				}
-				"movement_slow_pct"		"40 50 60 70 80"
+				"movement_slow_pct"		"50 60 70 80 90"
+				"AbilityCastRange"
+				{
+					"value"									"1400"
+					"special_bonus_unique_grimstroke_3"		"+100%"
+				}
+				"projectile_speed"
+				{
+					"value"						"2000"
+					"special_bonus_unique_grimstroke_3"		"+100%"
+				}
 		}
 	}
 	// 幻影之拥
@@ -9607,13 +9628,13 @@
 				"destroy_attacks"
 				{
 					"value"			"10 12 14 16 18"
-					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_4"
+					"special_bonus_unique_grimstroke_4" "+3"
 				}
 				"hero_attack_multiplier"	"2"
 				"damage_per_second"
 				{
 					"value"			"20 30 40 50 60"
-					"LinkedSpecialBonus"		"special_bonus_unique_grimstroke_8"
+					"special_bonus_unique_grimstroke_8" "+90"
 				}
 				"pop_damage"				"200 280 360 440 520"		// 120 200 280 360
 		}
@@ -9632,7 +9653,7 @@
 				"soul_charge_damage"
 				{
 					"value"			"200"	// 70
-					"LinkedSpecialBonus"		"special_bonus_unique_visage_4"
+					"special_bonus_unique_visage_4" "+25" // 这条用不上
 				}
 				"stack_limit"				"2 3 4 5 6"
 				"stack_duration"			"12.0"// 6
@@ -9665,37 +9686,31 @@
 	"grimstroke_dark_portrait"
 	{
 		"AbilityCooldown"				"60"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"illusion_duration"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"illusion_duration"			"30"
+				"value" "25"
 			}
-			"02"
+			"images_do_damage_percent"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_do_damage_percent"	"150"
+				"value" "50"
 			}
-			"03"
+			"images_do_damage_percent_tooltip"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_do_damage_percent_tooltip"			"250"
+				"value" "150"
 			}
-			"04"
+			"images_take_damage_percent"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_take_damage_percent"	"50"
+				"value" "0"
 			}
-			"05"
+			"images_take_damage_percent_tooltip"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_take_damage_percent_tooltip"			"150"
+				"value" "100"
 			}
-			"06"
+			"images_movespeed_bonus"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"images_movespeed_bonus"			"150"
+				"value" "150"
 			}
 		}
 	}
