@@ -772,8 +772,8 @@
 		"AbilityCooldown"				"8" // 13
 		"AbilityValues"
 		{
-				"quill_stacks"		"5" // 1
-				"goo_stacks"		"10" // 2
+				"quill_stacks"		"3" // 1
+				"goo_stacks"		"6" // 2
 		}
 	}
 	// 鼻涕
@@ -787,6 +787,7 @@
 			"armor_per_stack"
 			{
 				"value"		"1.5 2.0 2.5 3.0 3.5"
+				"special_bonus_facet_bristleback_snot_rocket"	"+1.5"
 			}
 			"move_slow_per_stack"	"3 6 9 12 15"
 		}
@@ -821,7 +822,7 @@
 			{
 				"value"		"300"
 			}
-			"activation_cooldown"					"16"		// 20
+			"activation_cooldown"					"16"		// 24
 			"activation_manacost"					"250"		// 100
 			"activation_delay"						"0.2"		// 0.5
 			"activation_num_quill_sprays"			"8"			// 6
@@ -837,6 +838,8 @@
 			"damage_per_stack"
 			{
 				"value"					"5 15 20 25 30"
+				"special_bonus_facet_bristleback_berserk"	"=10" // 5
+				"special_bonus_unique_bristleback_3"	"+20" // 18
 			}
 			"aspd_per_stack"
 			{
@@ -2949,7 +2952,16 @@
 				"value"									"150 220 290 360 430"
 				"special_bonus_unique_pudge_7"			"+140"
 			}
-			"hook_distance"								"1800"
+			"hook_speed"
+			{
+				"value"						"2200.0" // 1600 增长率与距离增长率同步
+				"special_bonus_facet_pudge_flayers_hook"	"+15%"
+			}
+			"hook_distance"
+			{
+				"value"						"1800" // 1300 增长率与钩子速度增长率同步
+				"special_bonus_facet_pudge_flayers_hook"	"+15%"
+			}
 			"AbilityCooldown"
 			{
 				"value"								"18 16 14 12 10"
@@ -2971,6 +2983,7 @@
 				"rot_slow"
 				{
 					"value"				"-14 -20 -26 -32 -38"
+					"special_bonus_unique_pudge_4" "+-17"
 				}
 				"rot_damage"
 				{
@@ -2989,11 +3002,12 @@
 			{
 				"value"					"80 100 120 140"
 				"special_bonus_unique_pudge_3"	"x1.8"
+				"CalculateSpellDamageTooltip"	"1"
 			}
 			"strength_damage"
 			{
 				"value"				"0.3 0.6 0.9 1.2"
-				"special_bonus_unique_pudge_3"	"x1.8"
+				"special_bonus_unique_pudge_3"	"x2.1"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"AbilityCooldown"
@@ -5179,11 +5193,11 @@
 		{
 			"chance"
 			{
-				"value"										"10 20 30 40"
-				"special_bonus_unique_drow_ranger_3"		"+12"
+				"value"										"30 35 40 45" // 30 35 40
+				"special_bonus_unique_drow_ranger_3"		"+15" // 10
 			}
-			"bonus_damage"									"20 40 60 80"
-			"disable_range"									"300"
+			"bonus_damage"									"40 55 70 85" // 40 60 80
+			"disable_range"									"300" // 400
 		}
 	}
 	//=================================================================================================================
@@ -5340,6 +5354,7 @@
 			"AbilityCooldown"
 			{
 				"value"										"22 18 14 10 6"
+				"special_bonus_unique_faceless_void_5"		"-1"
 			}
 		}
 	}
@@ -5347,14 +5362,13 @@
 	"faceless_void_time_lock"
 	{
 		"MaxLevel" "5"
-		"LinkedAbility"					"faceless_void_backtrack"
-		"AbilityDraftPreAbility"		"faceless_void_backtrack"
 		"AbilityValues"
 		{
 				"chance_pct"			"12 16 20 24 28"
 				"bonus_damage"
 				{
-					"value"				"20 25 30 35 40"
+					"value"				"20 25 30 35 40" // 10 15 20 25
+					"special_bonus_unique_faceless_void_3" "+40" // 40
 				}
 		}
 	}
@@ -5385,7 +5399,7 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"attack_projectile_slow"		"25 30 35 40 45"
+			"attack_projectile_slow"		"35 40 45 50 55" // 35 40 45 50
 			"slow_distance_max"
 			{
 				"value"			"750" // 500
@@ -5405,6 +5419,7 @@
 				"vision_radius"
 				{
 					"value"	"600"
+					"affected_by_aoe_increase"	"1"
 				}
 				"bonus_attack_speed"
 				{
@@ -5413,7 +5428,7 @@
 				}
 		}
 	}
-	// 逆转时空（命石2） v社懂个p的逆转时空，还得看我
+	// 逆转时空（命石2）
 	"faceless_void_time_zone"
 	{
 		"MaxLevel" "4"
@@ -5708,7 +5723,10 @@
 		"AbilityValues"
 		{
 				"healing_ward_heal_amount"	"2 3 4 5 6"
-				"healing_ward_aura_radius"	"500"
+				"healing_ward_aura_radius"
+				{
+					"value"		"500"
+				}
 				"healing_ward_movespeed_tooltip"
 				{
 					"value"	"325"
@@ -6026,6 +6044,7 @@
 			"snake_damage"
 			{
 				"value"			"130 175 220 265 310"
+				"special_bonus_unique_medusa_snake_damage"			"+40"
 				"CalculateSpellDamageTooltip" "1"
 			}
 			"snake_mana_steal"					"14 15 16 17 18"
@@ -6042,7 +6061,7 @@
 				"value"								"2 2.6 3.2 3.8 4.4 5.0" 	// 2 2.4 2.8 3.2 3.6 4.0
 				"special_bonus_unique_medusa_6"		"+2.5"				// +1.7
 			}
-			"absorption_pct"						"90"		// 98
+			"absorption_pct"						"95"		// 98
 		}
 	}
 	// 石化凝视
@@ -6538,6 +6557,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
+					"CalculateSpellDamageTooltip"	"0"
 					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
@@ -6557,6 +6577,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
+					"CalculateSpellDamageTooltip"	"0"
 					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
@@ -6576,6 +6597,7 @@
 				"stack_bonus_damage"
 				{
 					"value"				"60 70 80 90 100"
+					"CalculateSpellDamageTooltip"	"0"
 					"special_bonus_unique_nevermore_7"	"+50" // 30
 				}
 		}
@@ -6589,11 +6611,13 @@
 			"necromastery_damage_per_soul"
 			{
 				"value"					"2 3 4 5 6"
+				"CalculateSpellDamageTooltip"	"0"
 				"special_bonus_unique_nevermore_1"			"+3"
 			}
 			"necromastery_max_souls"
 			{
 				"value"						"25"	// 20
+				"special_bonus_scepter"		"+5"
 			}
 		}
 	}
@@ -7531,10 +7555,12 @@
 				"damage"
 				{
 					"value"			"120 180 240 300 360"
+					"special_bonus_unique_spectre_6" "+120" // 80
 				}
 				"bonus_movespeed"
 				{
 					"value"			"14 16 18 20 22"
+					"special_bonus_unique_spectre_3" "+14" // 12
 				}
 		}
 	}
@@ -7553,6 +7579,11 @@
 			{
 				"value"				"200"
 				"special_bonus_unique_spectre_desolate_radius"			"-100"
+			}
+			"only_creep_allies_damage_pct"
+			{
+				"value"						"0"
+				"special_bonus_facet_spectre_forsaken"	"+100" // 60
 			}
 		}
 	}
@@ -7625,18 +7656,16 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12 10 8 6 4"
 		"AbilityManaCost"				"35 40 45 50 55"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"bonus_damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_damage"				"80 140 200 260 320"
+				"value" "70 140 210 280 350"
 			}
-			"02"
+			"bonus_armor"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"bonus_armor"				"-5 -6 -7 -8 -9"
-				"LinkedSpecialBonus"		"special_bonus_unique_templar_assassin_2"
+				"value" "-6 -8 -10 -12 -14"
+				"special_bonus_unique_templar_assassin_2" "+-6"
 			}
 		}
 	}
@@ -7895,7 +7924,7 @@
 			"movement_slow"				"-25 -30 -35 -40 -45"
 			"AbilityCooldown"
 			{
-				"value"				"14 12 10 9 8"
+				"value"				"13 12 11 10 9"
 				"special_bonus_unique_ursa_3"	"=0.25"
 			}
 			"AbilityCharges"
@@ -7905,7 +7934,7 @@
 			}
 			"AbilityChargeRestoreTime"
 			{
-				"value"	"14 12 10 9 8"
+				"value"	"13 12 11 10 9"
 			}
 		}
 	}
@@ -7940,6 +7969,7 @@
 				"damage_per_stack"
 				{
 					"value"					"15 25 35 45 55"
+					"special_bonus_unique_ursa" "+10"
 				}
 		}
 	}
@@ -10508,6 +10538,16 @@
 				}
 		}
     }
+	// 下地狱再上来（先天）
+	"lion_to_hell_and_back"
+	{
+		"AbilityValues"
+		{
+			"duration"					"300" // 90
+			"spell_amp"					"20"
+			"debuff_amp"				"20"
+		}
+	}
 	//=================================================================================================================
 	// Ability: Necrolyte 瘟疫法师/死灵法师
 	//=================================================================================================================
@@ -11175,10 +11215,15 @@
 			"jump_damage_reduction_pct"
 			{
 				"value"			"3"	// 6
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
 			}
 			"attack_damage_reduction"
 			{
 				"value"			"5 15 25 35 45"
+				"CalculateSpellDamageTooltip"	"0"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_NONE"
+				"special_bonus_unique_rubick_2" "+15"
 			}
 		}
 	}
@@ -11538,10 +11583,12 @@
 				"damage_per_silence"
 				{
 					"value"			"30 45 60 75 90"	// 20 30 40 50 60
+					"special_bonus_unique_silencer_4"					"+30"
 				}
 				"slow_per_silence"
 				{
 					"value"				"6 9 12 15 18"
+					"special_bonus_unique_silencer_4"					"+6"
 				}
 		}
 	}
@@ -11666,6 +11713,7 @@
 				"static_remnant_damage"
 				{
 					"value"		"120 180 240 300 360"
+					"special_bonus_unique_storm_spirit_5"	"+100" // 60
 				}
 		}
 	}
@@ -11673,7 +11721,7 @@
 	"storm_spirit_electric_vortex"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"20 18 16 14 12 10"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
@@ -11688,17 +11736,24 @@
 	// 超负荷
 	"storm_spirit_overload"
 	{
-		"SpellImmunityType"						"SPELL_IMMUNITY_ENEMIES_YES" // FIXME 无视bkb看看效果
+		"SpellImmunityType"						"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"overload_damage"
 			{
+				"var_type"						"FIELD_INTEGER"
 				"value"			"25 50 75 100 125"
 			}
 			"shard_activation_charges"
 			{
 				"value"								"5" // 3
+				"affected_by_aoe_increase"	"1"
+				"RequiresShard"						"1"
+			}
+			"shard_activation_charges"
+			{
+				"value"								"6" // 3
 				"RequiresShard"						"1"
 			}
 			"shard_manacost"
@@ -11756,6 +11811,16 @@
 				"value" "3"	// 2
 				"ad_linked_abilities" "storm_spirit_overload"
 			}
+		}
+	}
+	// 看我回蓝（先天）
+	"storm_spirit_galvanized"
+	{
+		"AbilityValues"
+		{
+			"perma_mp_per_kill"		"0.3"
+			"mp_per_kill"			"0.6"
+			"charges_per_ult"		"10"
 		}
 	}
 	//=================================================================================================================
@@ -12356,10 +12421,14 @@
 				"radius"
 				{
 					"value"			"575 600 625 650 675"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"+200"
+					"affected_by_aoe_increase"	"1"
 				}
 				"heal"
 				{
 					"value"			"30 40 50 60 70"
+					"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+					"special_bonus_facet_witch_doctor_voodoo_festeration"	"+10"
 				}
 		}
 	}
@@ -12440,13 +12509,13 @@
 			}
 		}
 	}
-	// 驱邪护符
+	// 驱邪护符（先天）
 	"witch_doctor_gris_gris"
 	{
 		"AbilityValues"
 		{
 			"death_gold_lost_reduction_pct_tooltip"		"100"
-			"gold_tick_interval_tooltip"		"0.1" // 获得1金间隔时间，相当于一个贤者石，白嫖600gpm
+			"gold_tick_interval_tooltip"		"0.1" // 获得1金的间隔时间，相当于一个贤者石，白嫖600gpm
 		}
 	}
 	//=================================================================================================================
@@ -12515,6 +12584,43 @@
 				"value"							"350 500 650 800"
 				"special_bonus_unique_zeus_4"		"+150"
 			}
+		}
+	}
+	// 静电场(先天随大招升级)
+	"zuus_static_field"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+				"damage_health_pct"
+				{
+					"value"								"2.5 3.0 3.5 4.0 4.5"
+					"special_bonus_facet_zuus_livewire"	"=0"
+				}
+
+				"damage_health_pct_max_close"
+				{
+					"value"		"0"
+					"special_bonus_facet_zuus_livewire"	"=4 =5 =6 =7 =8"
+				}
+				"damage_health_pct_min_close"
+				{
+					"value"		"0"
+					"special_bonus_facet_zuus_livewire"	"2"
+				}
+				"distance_threshold_min"
+				{
+					"value"		"0"
+					"special_bonus_facet_zuus_livewire"	"200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"distance_threshold_max"
+				{
+					"value"		"0"
+					"special_bonus_facet_zuus_livewire"	"800" // 1200
+					"affected_by_aoe_increase"	"1"
+				}
+
 		}
 	}
 
