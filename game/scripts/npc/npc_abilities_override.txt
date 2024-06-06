@@ -12067,11 +12067,9 @@
 		{
 			"damage_share_percentage"
 			{
-				"value"						"12 13 14 15 16"
-				"LinkedSpecialBonus"		"special_bonus_unique_warlock_5"
+				"value"						"8 10 12 14 16"
+				"special_bonus_unique_warlock_5" "+4"
 			}
-			"duration"						"19 21 23 25 27"
-			"imp_duration"					"3"
 		}
 	}
 	// 暗言术
@@ -12089,8 +12087,13 @@
 				}
 				"spell_aoe"
 				{
-					"value"					"0"
-					"special_bonus_unique_warlock_3" "450"
+					"value"					"450"
+					"affected_by_aoe_increase"	"1"
+				}
+				"shard_movement_speed_pct"
+				{
+					"value"					"25"
+					"RequiresShard"			"1"
 				}
 		}
 	}
@@ -12104,36 +12107,67 @@
 		{
 			"aoe"
 			{
-				"value"				"500 550 600 650 700"
-				"special_bonus_unique_warlock_upheaval_aoe"			"+75"
+				"value"				"575 600 625 650 675"
+				"special_bonus_unique_warlock_upheaval_aoe"			"+50"
+				"affected_by_aoe_increase"	"1"
 			}
-			"slow_per_second"		"10 15 20 25 30"
-			"duration"				"2.0"
-			"max_slow"				"40 48 56 64 72"
-			"max_damage"			"35 60 85 110 135"
+			"slow_per_second"		"11 14 17 20 23"
+			"duration"				"3.0"
+			"max_slow"				"55 70 85 100 115"
+			"aspd_per_second"		"10"
+			"base_damage"
+			{
+				"special_bonus_unique_warlock_3" "=40"
+			}
+			"damage_per_second"		"10"
+			"max_damage"
+			{
+				"value"		"35 60 85 110 135"
+				"special_bonus_unique_warlock_3" "+40"
+			}
+			"damage_tick_interval"
+			{
+				"value"					"0.33"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
 
-			"imps_interval"				"60"
-			"minor_imp_duration"		"0"
-			"major_imp_duration"		"0"
+			"AbilityCooldown"			"60 50 40 30 20"
+			"imps_interval"				"3600"
+			"minor_imp_duration"		"0.0"
 		}
 	}
 	// 混乱之雨
 	"warlock_rain_of_chaos"
 	{
 		"MaxLevel" "4"
-		"AbilityManaCost"				"250 375 500 625"
+		"AbilityManaCost"				"200 400 600 800"
 		"AbilityValues"
 		{
-			"golem_duration"			"30"
-			"golem_hp"					"1500 2500 3500 4500"
+			"stun_duration"				"1.6" // 0.8
+			"aoe"
+			{
+				"value"			"900" // 600
+				"affected_by_aoe_increase"	"1"
+			}
+			"golem_hp"
+			{
+				"value"					"1500 3000 4500 6000"
+			}
+
 			"golem_dmg"					"100 150 200 250"
-			"golem_armor"				"8 12 14 16"
-			"golem_movement_speed"		"320 340 360 380"
+			"golem_armor"				"10 15 20 25"
+			"golem_movement_speed"		"400 450 500 550"
 			"golem_health_regen"		"25 50 75 100"
 			"golem_gold_bounty"			"100 150 200 250"
+			"stun_delay"				"0.5"
+			"number_of_golems_scepter"
+			{
+				"value"	"2"
+				"RequiresScepter"		"1"
+			}
 			"golem_hp_scepter"
 			{
-				"value"			"1500 2500 3500 4500"
+				"value"			"1500 3000 4500 6000"
 				"RequiresScepter"		"1"
 			}
 			"golem_dmg_scepter"
@@ -12146,17 +12180,62 @@
 				"value"					"100 150 200 250"
 				"RequiresScepter"		"1"
 			}
+			"bonus_magic_resistance"
+			{
+				"value"			"10"
+				"special_bonus_unique_warlock_1"		"+75"
+			}
 			"bonus_armor"
 			{
 				"value"			"0"
-				"special_bonus_unique_warlock_2"		"+40"
+				"special_bonus_unique_warlock_2"		"+75"
 			}
 			"tooltip_golem_armor"
 			{
-				"value"			"8 12 14 16"
-				"special_bonus_unique_warlock_2"		"+40"
+				"value"			"10 15 20 25"
+				"special_bonus_unique_warlock_2"		"+75"
+			}
+			"bonus_slow_resistance"			"80"
+			"tooltip_manahealthboost"
+			{
+				"value"			"0"
+				"special_bonus_facet_warlock_golem"			"+200"
 			}
 		}
+	}
+	// 火焰之拳
+	"warlock_golem_flaming_fists"
+	{
+		"Maxlevel"				"4"
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value" "40 50 60 70"
+			}
+			"radius"
+			{
+				"value" "300 350 400 450"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+	// 永久献祭
+	"warlock_golem_permanent_immolation"
+	{
+		"Maxlevel"						"4"
+		"AbilityValues"
+		{
+			"aura_radius"
+			{
+				"value"		"450"
+				"affected_by_aoe_increase"	"1"
+			}
+			"aura_damage"				"30 50 70 90"
+			"manaboost_scale_mult"		".0"
+		}
+
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	//=================================================================================================================
 	// Ability: Windrunner 风行者

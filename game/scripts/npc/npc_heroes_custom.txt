@@ -2578,6 +2578,7 @@
 	}
 	"npc_dota_hero_warlock"
 	{
+		"Ability4"		"generic_hidden"
 		"Bot"
 		{
 			"Build"
