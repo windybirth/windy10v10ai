@@ -8851,6 +8851,7 @@
 				"special_bonus_facet_crystal_maiden_cold_comfort"		"=80000"
 				"affected_by_aoe_increase"	"1"
 			}
+			// 命石2
 			"mana_battery_mana_pct"
 			{
 				"value"						"0"
@@ -8877,6 +8878,18 @@
 				"value"						"0"
 				"special_bonus_scepter"		"-50"// -75
 				"RequiresScepter"				"1"
+			}
+			// 命石1
+			"self_cast_range_bonus"
+			{
+				"value"													"0"
+				"special_bonus_facet_crystal_maiden_frozen_expanse"		"75 100 125 150"
+			}
+
+			"aoe_bonus"
+			{
+				"value"													"0"
+				"special_bonus_facet_crystal_maiden_frozen_expanse"		"6 11 14 15"
 			}
 		}
 	}
