@@ -12435,7 +12435,11 @@
 		{
 			"duration"			"4"
 			"wind_strength"		"250"
-			"radius"			"1000"
+			"radius"
+			{
+				"value"		"1000"
+				"affected_by_aoe_increase"	"1"
+			}
 		}
 	}
 	// 束缚击
@@ -12444,13 +12448,12 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 14 12 10 8"
 		"AbilityManaCost"				"70 80 90 100 110"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
+			"stun_duration"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.6 2.1 2.6 3.1 3.6"
-				"LinkedSpecialBonus"	"special_bonus_unique_windranger_6"
+				"value" "1.6 2.1 2.6 3.1 3.6"
+				"special_bonus_unique_windranger_6" "+0.75"
 			}
 		}
 	}
@@ -12494,13 +12497,39 @@
 		"AbilityManaCost"				"75 100 125 150"
 		"AbilityValues"
 		{
-				"bonus_attack_speed"			"300 400 500 600"
-				"focusfire_damage_reduction"
-				{
-					"value"						"-12"
-					"LinkedSpecialBonus"		"special_bonus_unique_windranger_8"
-				}
-				"focusfire_fire_on_the_move"	"1"
+			"AbilityDuration"
+			{
+				"value"		"20.0 20.0 20.0"
+				"special_bonus_facet_windrunner_whirlwind"	"=10.0" // 命石2
+			}
+			"bonus_attack_speed"
+			{
+				"value"		"350 425 500 575"
+				"special_bonus_facet_windrunner_whirlwind" "=0"
+			}
+			"attacks_per_second"
+			{
+				"special_bonus_facet_windrunner_whirlwind" 				"8 10 12 14" // 7 9 11 对单相当于攻速拉满
+			}
+			"focusfire_damage_reduction"
+			{
+				"value"						"-30"
+				"special_bonus_unique_windranger_8"		"+30" // 12
+			}
+			"duration_increase_per_kill"
+			{
+				"value"		"0"
+				"special_bonus_unique_windranger_2"		"+3" // 25天赋击杀延续命石2大招时间
+				"RequiresFacet"		"windrunner_whirlwind"
+
+			}
+			"cooldown_reduction_per_kill"
+			{
+				"value"		"0"
+				"special_bonus_unique_windranger_2"		"+18"
+				"RequiresFacet"		"windrunner_tailwind"
+
+			}
 		}
 	}
 	// 举步生风
@@ -12508,8 +12537,8 @@
 	{
 		"AbilityValues"
 		{
-			"min_movespeed"		"300"	// 240
-			"max_movespeed"		"2000"	// 600
+			"min_movespeed"		"350"	// 240
+			"max_movespeed"		"1200"	// 600
 		}
 	}
 	//=================================================================================================================
