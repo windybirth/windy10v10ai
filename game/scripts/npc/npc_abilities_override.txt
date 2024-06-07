@@ -2127,20 +2127,32 @@
 		"AbilityCooldown"				"90.0"
 		"AbilityValues"
 		{
-			"wolf_hp"
+			"AbilityManaCost"
 			{
-				"value"	"325 375 425 475"
-				"special_bonus_unique_lycan_7"	"+500"
+				"value"			"115 120 125 130"
+				"special_bonus_facet_lycan_spirit_wolves" "-50"
 			}
-			"bonus_health"
+			"wolf_duration"
 			{
-				"value"			"0"
-				"special_bonus_unique_lycan_7"	"+500"
+				"value"					"50"
+				"special_bonus_facet_lycan_spirit_wolves"		"=50" // 命石2持续时间
 			}
-			"bonus_damage"
+			// 命石2
+			"health_per_wolf"
 			{
-				"value"			"0"
-				"special_bonus_unique_lycan_3"	"+36"
+				"value"							"100 200 300 400" // 50 100 150 200
+				"special_bonus_unique_lycan_7"	"+400"
+				"RequiresFacet"					"lycan_spirit_wolves"
+			}
+			"damage_per_wolf"
+			{
+				"value"					"10 20 30 40" // 6 12 18 24
+				"special_bonus_unique_lycan_3"	"+10"
+				"RequiresFacet"					"lycan_spirit_wolves"
+			}
+			"death_fx_time"
+			{
+				"special_bonus_facet_lycan_spirit_wolves"					"1.0"
 			}
 		}
 	}
@@ -2151,9 +2163,13 @@
 		"AbilityCooldown"				"75 70 65 60"// 同步大招
 		"AbilityValues"
 		{
-			"lifesteal_percent"		"40"
-			"lifesteal_range"		"1200"
-			"attack_range"		"150"
+			"lifesteal_percent"		"60" // 40
+			"lifesteal_range"
+			{
+				"value"		"1800" // 1200
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_range"		"250" // 150
 		}
 	}
 	// 嗥叫
@@ -2169,8 +2185,16 @@
 				"value"		"25 30 35 40 45"
 				"special_bonus_unique_lycan_6"	"+20"
 			}
-			"armor"			"4 5 6 7 8"
-			"radius"			"2000"
+			"armor"
+			{
+				"value"				"6 8 10 12 14" // 4 5 6 7
+				"special_bonus_unique_lycan_howl_armor"			"+6" // 3
+			}
+			"radius"
+			{
+				"value"		"2000"
+				"affected_by_aoe_increase"	"1"
+			}
 		}
 	}
 	// 野性驱使
@@ -2181,12 +2205,12 @@
 		{
 			"bonus_damage"
 			{
-				"value"			"10 20 30 40 50"// 即使90胜率，选择率不高，其实可以不改
+				"value"			"10 20 30 40 50"
 				"special_bonus_unique_lycan_4"	"+25"
 			}
 			"bonus_hp_regen"
 			{
-				"value"			"10 15 20 25 30"// 这倒是可以多给点，反正廉价
+				"value"			"10 15 20 25 30"
 			}
 		}
 	}
