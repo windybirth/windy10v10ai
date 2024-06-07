@@ -6878,42 +6878,33 @@
 	"pangolier_swashbuckle"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"19 16 13 10 7"
 		"AbilityManaCost"				"75 80 85 90 95"
 		"LinkedAbility"					"pangolier_heartpiercer"
 		"AbilityDraftPreAbility"		"pangolier_heartpiercer"
 		"AbilityValues"
 		{
+				"AbilityCooldown"
+				{
+					"value"				"21 18 15 12 9"
+					"special_bonus_unique_pangolier_4"	"-2.5"
+				}
+				"dash_range"			"400 500 600 700 800"
 				"damage"
 				{
-					"value"		"50 75 100 125 150"
-					"LinkedSpecialBonus"	"special_bonus_unique_pangolier_3"
+					"value"		"30 60 90 120 150"
 					"CalculateSpellDamageTooltip"	"0"
 				}
-				"strikes"
+				"attack_damage"
 				{
-					"value"			"4"
-					"LinkedSpecialBonus"	"special_bonus_unique_pangolier_7"
+					"value"				"0"
+					"special_bonus_unique_pangolier_3"	"+100"
 				}
-		}
-	}
-	"special_bonus_unique_pangolier_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_INTEGER"
-				"value"				"50"
-				"ad_linked_abilities"			"pangolier_swashbuckle"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 甲盾冲击
 	"pangolier_shield_crash"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"16 15 14 13 12"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
@@ -6921,50 +6912,17 @@
 			{
 				"value"					"70 140 210 280 350"
 				"CalculateSpellDamageTooltip"	"1"
+				"special_bonus_unique_pangolier_shield_crash_radius"		"+150"
 			}
 			"base_shield"	"0"
 			"hero_shield"
 			{
 				"value"	"100 200 300 400 500"	// 盾不计算双抗，稍高点
 				"special_bonus_unique_pangolier_shield_crash_herostacks"		"+200"
-
 			}
-			"rolling_thunder_cooldown"
+			"AbilityCooldown"
 			{
-				"value"						"0"
-				"special_bonus_unique_pangolier_2"	"+2"
-			}
-			"slow"	"20 25 30 35 40"
-			"slow_duration"	"3"
-		}
-	}
-	// 穿心攻击
-	"pangolier_heartpiercer"
-	{
-		"MaxLevel" "5"
-		"LinkedAbility"					"pangolier_swashbuckle"
-		"AbilityDraftPreAbility"		"pangolier_swashbuckle"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"chance_pct"			"15"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"2 2.5 3 3.5 4"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"slow_pct"			"-30 -35 -40 -45 -50"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"debuff_delay"			"2.0"
+				"value"					"18 16 14 12 10"
 			}
 		}
 	}
@@ -6974,13 +6932,13 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"chance_pct"			"15"
-			"duration"				"2 2.5 3 3.5 4"
-			"slow"			"0"
+			"chance_pct"			"17"
+			"duration"				"3.5 4 4.5 5 5.5"
+			"attack_slow"			"40 80 120 160 200"
 			"armor"
 			{
-				"value"					"2 4 6 8 10"
-				"special_bonus_unique_pangolier_luckyshot_armor"			"+3"
+				"value"					"3 5 7 9 11"
+				"special_bonus_unique_pangolier_luckyshot_armor"			"+4"
 			}
 		}
 	}
@@ -6988,85 +6946,51 @@
 	"pangolier_gyroshell"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"60 55 50 45"
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityDamage"					"180 260 340 420"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"cast_time_tooltip"		"1.2"
-			}
-			"02"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"tick_interval"			"0.05"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"forward_move_speed"	"800"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT" // used after any break in the roll (start/jump/bounce)
-				"turn_rate_boosted"		"1440"// 当初限时强化的转向速度，很合适
-			}
-			"05"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"turn_rate"				"1080"// 同上
-			}
-			"06"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"radius"				"600"
-			}
-			"07"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"hit_radius"			"300"
-			}
-			"08"
-			{
-				"var_type"				"FIELD_FLOAT"
+				"AbilityCooldown"
+				{
+					"value"			"70 60 50 40"
+					"special_bonus_unique_pangolier_5"	"-20"
+				}
+				"forward_move_speed"
+				{
+					"value"		"650"
+					"special_bonus_facet_pangolier_thunderbolt"	"+200" // 命石2
+				}
+				"turn_rate_boosted"
+				{
+					"value"			"360"
+					"special_bonus_facet_pangolier_thunderbolt"	"+1080" // 命石2 加起来1440参考限时强化数据
+				}
+				"turn_rate"
+				{
+					"value"		"270"
+					"special_bonus_facet_pangolier_thunderbolt"	"+810" // 命石2 加起来1080参考限时强化数据
+				}
+				"radius"
+				{
+					"value"			"600"
+					"affected_by_aoe_increase"	"1"
+				}
+				"hit_radius"
+				{
+					"value"		"300"
+					"affected_by_aoe_increase"	"1"
+				}
 				"bounce_duration"		"0.4"
-			}
-			"09"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.0 1.2 1.4 1.6"
-			}
-			"10"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"knockback_radius"		"150"
-			}
-			"11"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"12.0"
-				"LinkedSpecialBonus"	"special_bonus_unique_pangolier_6"
-			}
-			"12"
-			{
-				"var_type"				"FIELD_FLOAT"
+				"stun_duration"			"0.8 1.0 1.2 1.4"
+				"duration"
+				{
+					"value"		"10"
+					"special_bonus_unique_pangolier_6"	"+2"
+					"special_bonus_facet_pangolier_thunderbolt"	"-2"
+				}
 				"jump_recover_time"		"0.25"
-			}
-		}
-	}
-
-	"special_bonus_unique_pangolier_5"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"			"FIELD_FLOAT"
-				"value"				"10.0"
-				"ad_linked_abilities"			"pangolier_gyroshell"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
+				"shield_crash_cooldown"			"8 6 4 2"
+				"magic_resistance"				"60"
 		}
 	}
     //=================================================================================================================
