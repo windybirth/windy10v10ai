@@ -11080,7 +11080,7 @@
 				"blast_damage"
 				{
 					"value"	"150 270 390 510 630"// （x1.5）
-					"LinkedSpecialBonus"		"special_bonus_unique_pugna_2"
+					"special_bonus_unique_pugna_2" "+160"
 				}
 		}
 	}
@@ -11088,6 +11088,7 @@
 	"pugna_decrepify"
 	{
 		"MaxLevel" "5"
+		"AbilityCastRange"				"550 650 750 850 950" // 475 550 625 700
 		"AbilityCooldown"				"15.0 13.0 11.0 9.0 7.0"
 		"AbilityValues"
 		{
@@ -11098,6 +11099,26 @@
 				"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
 			}
 			"bonus_movement_speed"		"-30 -40 -50 -60 -70"
+		}
+	}
+	//幽冥守卫（疑似不能改等级）
+	"pugna_nether_ward"
+	{
+		"AbilityCooldown"				"30" // 40
+		"AbilityValues"
+		{
+			"radius"
+			{
+				"value"		"1800" // 1400
+				"affected_by_aoe_increase"	"1"
+			}
+			"base_damage"				"50 70 90 110"
+			"mana_multiplier"
+			{
+				"value"			"1 1.5 2.0 2.5" // 1 1.2 1.4 1.6
+				"special_bonus_unique_pugna_3"		"+2.5"
+				"DamageTypeTooltip"			"DAMAGE_TYPE_MAGICAL"
+			}
 		}
 	}
 	// 生命汲取
@@ -11121,6 +11142,18 @@
 			{
 				"value"				"80"	// 75
 				"RequiresShard"		"1"
+			}
+		}
+	}
+	// 毁灭之赏（命石2 爆塔加法强）
+	"pugna_oblivion_savant"
+	{
+		"AbilityValues"
+		{
+			"tower_scale"
+			{
+				"value"			"0"
+				"special_bonus_facet_pugna_rewards_of_ruin"		"15"
 			}
 		}
 	}
