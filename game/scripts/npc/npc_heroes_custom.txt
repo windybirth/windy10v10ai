@@ -2536,6 +2536,7 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
+		"MovementSpeed"	"350"
 		"Bot"
 		{
 			"Build"

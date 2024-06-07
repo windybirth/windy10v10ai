@@ -12537,7 +12537,7 @@
 	{
 		"AbilityValues"
 		{
-			"min_movespeed"		"350"	// 240
+			"min_movespeed"		"350"	// 240 要和模型速度一起改
 			"max_movespeed"		"1200"	// 600
 		}
 	}
