@@ -1683,10 +1683,6 @@
 			}
 		}
 	}
-	"npc_dota_hero_morphling"
-	{
-		"Ability17" "special_bonus_unique_morphling_6"
-	}
 	"npc_dota_hero_necrolyte"
 	{
 		"Bot"

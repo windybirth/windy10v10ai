@@ -6241,8 +6241,7 @@
 			}
 			"AbilityCharges"
 			{
-				"value"	"0"
-				"special_bonus_unique_morphling_6"	"+2"
+				"value"	"2"
 			}
 			"AbilityCooldown"
 			{
@@ -6259,21 +6258,24 @@
 		"AbilityManaCost"				"50 60 70 80 90"
 		"AbilityValues"
 		{
-				"damage_base"					"40 50 60 70 80"
+				"AbilityCooldown"
+				{
+					"value"									"16 14 12 10 8"
+				}
+				"damage_base"
+				{
+					"value"					"55 65 75 85 95"
+					"CalculateSpellDamageTooltip"	"1"
+				}
 				"damage_min"
 				{
-					"value"					"1.0"
+					"value"					"1.0" // 0.5
 					"CalculateSpellDamageTooltip"	"0"
 				}
 				"damage_max"
 				{
-					"value"				"2.0 2.5 3.0 3.5 4.0"
+					"value"				"1.0 2.0 3.0 4.0 5.0" // 1.0 1.5 2.0 2.5
 					"CalculateSpellDamageTooltip"	"0"
-				}
-				"bonus_attributes"
-				{
-					"value"					"3 5 7 9 11"
-					"special_bonus_shard"					"+6"
 				}
 		}
 	}
@@ -6285,34 +6287,20 @@
 		"AbilityManaCost"				"50 60 70 80 90"
 		"AbilityValues"
 		{
+				"AbilityCooldown"
+				{
+					"value"									"16 14 12 10 8"
+				}
 				"stun_min"
 				{
-					"value" "1.0"
-					"special_bonus_unique_morphling_10" "+1"
+					"value" "1.0" // 0.5
+					"special_bonus_unique_morphling_10" "+1.0"
 				}
 				"stun_max"
 				{
-					"value"	"1.2 1.6 2.0 2.4 2.8"
-					"special_bonus_unique_morphling_10"	"+1"
+					"value"	"1.5 2.0 2.5 3.0 3.5" // 1.2 1.6 2.0 2.4
+					"special_bonus_unique_morphling_10"	"+1.0"
 				}
-				"bonus_attributes"
-				{
-					"value"					"3 5 7 9 11"
-					"special_bonus_shard"					"+6"
-				}
-		}
-	}
-	// 属性转换
-	"morphling_morph"
-	{
-		"MaxLevel" "5"
-		"AbilityValues"
-		{
-			"bonus_attributes"
-			{
-				"value"					"3 5 7 9 11"
-				"special_bonus_shard"					"+9"
-			}
 		}
 	}
 	// 转敏捷
@@ -6321,12 +6309,14 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"morph_cooldown"		"0.2 0.1 0.06 0.05 0.04"
-			"morph_rate_tooltip"	"5 10 15 20 25"
+			"points_per_tick"		"1"
+			"morph_cooldown"		"0.2 0.1 0.06 0.04 0.02"
+			"morph_rate_tooltip"	"10 15 20 25 30"
 			"mana_cost"
 			{
 				"value"						"5 10 15 20 25"
 				"special_bonus_unique_morphling_morph_no_manacost"		"-100%"
+				"special_bonus_shard"		"-50%"
 			}
 		}
 	}
@@ -6337,14 +6327,30 @@
 		"AbilityValues"
 		{
 			"points_per_tick"		"1"
-			"morph_cooldown"		"0.2 0.1 0.06 0.05 0.04"
-			"morph_rate_tooltip"	"5 10 15 20 25"
-			"mana_cost"				"5 10 15 20 25"
+			"morph_cooldown"		"0.2 0.1 0.06 0.04 0.02"
+			"morph_rate_tooltip"	"10 15 20 25 30"
+			"mana_cost"
+			{
+				"value"						"5 10 15 20 25"
+				"special_bonus_unique_morphling_morph_no_manacost"		"-100%"
+				"special_bonus_shard"		"-50%"
+			}
 			"castable_while_stunned"
 			{
 				"value"	"0"
 				"special_bonus_shard"	"+1"
 			}
+		}
+	}
+	// 潮落（命石2）
+	"morphling_flow"
+	{
+		"AbilityValues"
+		{
+			"agi_pct_at_max_cooldown_speed"			"175"
+			"agi_pct_at_min_cooldown_speed"			"50"
+			"min_cooldown_speed_pct"			"0"
+			"max_cooldown_speed_pct"			"75" // 60
 		}
 	}
 	// 变形
@@ -6357,28 +6363,71 @@
 		{
             "scepter_stat_steal"
 			{
-				"value"						"25"
+				"value"						"40" // 20
 				"RequiresScepter"			"1"
 			}
 			"scepter_spell_amplify"
 			{
-				"value"						"30"
+				"value"						"50" // 25
 				"RequiresScepter"			"1"
 			}
 			"scepter_attack_speed"
 			{
-				"value"						"75"
+				"value"						"140" // 70
 				"RequiresScepter"			"1"
 			}
 			"scepter_status_resist"
 			{
-				"value"						"45"
+				"value"						"60" // 40
 				"RequiresScepter"			"1"
 			}
-			"scepter_cooldown_reduction"
+			"scepter_additional_stats"
 			{
-				"value"			"20"
+				"value"						"40" // 20
 				"RequiresScepter"			"1"
+			}
+			"scepter_illusion_incoming"
+			{
+				"value"						"50" // 300
+				"RequiresScepter"			"1"
+			}
+		}
+	}
+	// 变形（a杖）
+	"morphling_hybrid"
+	{
+		"MaxLevel" "4"
+		"AbilityCastRange"				"700 800 900 1000"
+		"AbilityCooldown"				"120 100 80 60"
+		"AbilityValues"
+		{
+			"illusion_damage_out_pct"
+			{
+				"value" "0"
+				"CalculateSpellDamageTooltip" "0"
+			}
+			"tooltip_illusion_damage_out_pct"
+			{
+				"value" "100"
+				"CalculateSpellDamageTooltip" "0"
+			}
+			"illusion_incoming_dmg_pct_tooltip"
+			{
+				"value" "50"
+			}
+			"illusion_damage_in_pct"
+			{
+				"value" "-50"
+				"CalculateSpellDamageTooltip" "0"
+			}
+			"illusion_damage_out_pct_scepter"
+			{
+				"value" "-0"
+				"CalculateSpellDamageTooltip" "0"
+			}
+			"duration"
+			{
+				"value" "40"
 			}
 		}
 	}
