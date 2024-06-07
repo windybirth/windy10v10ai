@@ -2621,11 +2621,11 @@
 			}
 		}
 	}
-	"npc_dota_hero_weaver"
-	{
-		"AttackRate"     "1.6"
-		"MovementSpeed"  "290"
-	}
+	// "npc_dota_hero_weaver"
+	// {
+	// 	"AttackRate"     "1.6"
+	// 	"MovementSpeed"  "290"
+	// }
 	"npc_dota_hero_witch_doctor"
 	{
 		"Bot"
