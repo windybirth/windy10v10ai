@@ -6241,7 +6241,7 @@
 			}
 			"AbilityCharges"
 			{
-				"value"	"2"
+				"value"	"0"
 			}
 			"AbilityCooldown"
 			{
@@ -6347,7 +6347,7 @@
 	{
 		"AbilityValues"
 		{
-			"agi_pct_at_max_cooldown_speed"			"175"
+			"agi_pct_at_max_cooldown_speed"			"150" // 175
 			"agi_pct_at_min_cooldown_speed"			"50"
 			"min_cooldown_speed_pct"			"0"
 			"max_cooldown_speed_pct"			"75" // 60
