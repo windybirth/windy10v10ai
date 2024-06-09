@@ -477,7 +477,6 @@
 	"npc_dota_hero_pangolier"
 	{
 		"DisableWearables"	        "1"
-		// "Ability8"					"pangolier_heartpiercer"
 	}
 
 	"npc_dota_hero_naga_siren"
@@ -574,7 +573,7 @@
 
     "npc_dota_hero_venomancer"
     {
-        "Ability15"		"special_bonus_hp_350"
+        "Ability15"		"special_bonus_unique_venomancer_201"
     }
 
 	"npc_dota_hero_abaddon"
@@ -1211,13 +1210,8 @@
 	}
 	"npc_dota_hero_grimstroke"
 	{
-		"Ability8"				"grimstroke_soul_chain"
-		"Ability6"              "visage_soul_assumption"
-		"AbilityDraftAbilities"
-		{
-			"Ability4"          "visage_soul_assumption" // 没测试，可能有问题
-			"Ability6"			"grimstroke_soul_chain"
-		}
+		"Ability5"				"visage_soul_assumption"
+		"Ability8"				"grimstroke_return"
 	}
 	"npc_dota_hero_gyrocopter"
 	{
@@ -2536,7 +2530,7 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
-		"MovementSpeed"	"350"
+		"MovementSpeed"	"320"	// 290
 		"Bot"
 		{
 			"Build"
@@ -2580,7 +2574,7 @@
 	}
 	"npc_dota_hero_warlock"
 	{
-		"Ability4"		"generic_hidden"
+		"Ability4"		"generic_hidden"	// 移除 邪术召唤
 		"Bot"
 		{
 			"Build"
@@ -2622,11 +2616,7 @@
 			}
 		}
 	}
-	// "npc_dota_hero_weaver"
-	// {
-	// 	"AttackRate"     "1.6"
-	// 	"MovementSpeed"  "290"
-	// }
+
 	"npc_dota_hero_witch_doctor"
 	{
 		"Bot"

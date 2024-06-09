@@ -8117,7 +8117,7 @@
 			}
 			"radius"
 			{
-				"value"		"250"
+				"value"		"175"	// 125
 				"affected_by_aoe_increase"	"1"
 			}
 			"create_wards"
@@ -8142,7 +8142,7 @@
 			"damage"
 			{
 			    "value" "15 30 45 60 75 90"
-			    "special_bonus_unique_venomancer_201"		"+45"
+			    "special_bonus_unique_venomancer_201"		"+30"
 			}
 			"movement_speed"
 			{
@@ -8156,6 +8156,12 @@
 			}
 		}
 	}
+	"special_bonus_unique_venomancer_201"
+	{
+        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+	    "BaseClass"					"special_bonus_undefined"
+	}
 	// 剧毒蛇棒
 	"venomancer_plague_ward"
 	{
@@ -8165,41 +8171,10 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"			"5.0"
-				"special_bonus_unique_venomancer_8"			"-1"
-			}
-			"can_target"
-			{
-				"value"			"0"
-				"special_bonus_facet_venomancer_plague_carrier"	"=1"
-			}
-			"gold_bounty_pct"
-			{
-				"value"			"100"
-				"special_bonus_facet_venomancer_plague_carrier"	"=20"
+				"value"			"35"
+				"special_bonus_unique_venomancer_8"			"-5"
 			}
 
-			"max_charges"
-			{
-				"value"			"0"
-				"special_bonus_facet_venomancer_plague_carrier"	"=3"
-			}
-
-			"duration"
-			{
-				"value"			"40.0"
-			}
-
-			"ward_multiplier"
-			{
-				"value"								"1.0"
-				"special_bonus_unique_venomancer"	"x2.5"
-			}
-			"ward_model_scale"
-			{
-				"value"								"1.0"
-				"special_bonus_unique_venomancer"	"x1.5"
-			}
 			"ward_hp_tooltip"
 			{
 				"value"							"300 450 600 750 900"
