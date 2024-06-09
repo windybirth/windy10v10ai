@@ -11552,7 +11552,7 @@
 	"shadow_shaman_shackles"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"750"
+		"AbilityCastRange"				"650"
 		"AbilityChannelTime"			"2.4 3.0 3.6 4.2 4.8"
 		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityManaCost"				"125 140 155 170 185"
@@ -11568,6 +11568,11 @@
 				"value"									"2.4 3.0 3.6 4.2 4.8"
 				"special_bonus_unique_shadow_shaman_2"	"+1.0"
 			}
+			"shard_ward_count"
+			{
+				"value"					"1"
+				"RequiresShard"			"1"
+			}
 		}
 	}
 	// 群蛇守卫
@@ -11579,7 +11584,7 @@
 		{
 			"ward_count"
 			{
-				"value"							"2"
+				"value"							"3"
 			}
 			"bonus_damage"
 			{
@@ -11589,6 +11594,25 @@
 			{
 				"special_bonus_unique_shadow_shaman_8" "+200"
 			}
+			"mega_ward_multiplier_tooltip"
+			{
+				"value"						"0"
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=3"	// =ward_count
+			}
+			"mega_ward_health_tooltip"
+			{
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=2.25"	// =ward_count*0.75
+			}
+		}
+	}
+	// 禽戏 先天技能
+	"shadow_shaman_fowl_play"
+	{
+		"AbilityCooldown"				"90"	// 120
+
+		"AbilityValues"
+		{
+			"damage_reduction_duration"	"1.0" // 0.75
 		}
 	}
 	//=================================================================================================================

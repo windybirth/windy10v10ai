@@ -473,7 +473,6 @@
 	"npc_dota_shadow_shaman_ward_1"
 	{
 		"Ability1"					""			// creep_piercing
-		"Ability2"					"tower_troll_warlord_fervor"
 		// Attack
 		//----------------------------------------------------------------
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -485,7 +484,6 @@
 	"npc_dota_shadow_shaman_ward_2"
 	{
 		"include_keys_from" "npc_dota_shadow_shaman_ward_1"
-		"Ability2"					"tower_troll_warlord_fervor"
 
 		// Attack
 		//----------------------------------------------------------------
@@ -497,7 +495,6 @@
 	"npc_dota_shadow_shaman_ward_3"
 	{
 		"include_keys_from" "npc_dota_shadow_shaman_ward_1"
-		"Ability2"					"tower_troll_warlord_fervor"
 
 		// Attack
 		//----------------------------------------------------------------
