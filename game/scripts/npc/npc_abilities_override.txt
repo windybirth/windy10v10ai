@@ -2113,15 +2113,10 @@
 		"AbilityCooldown"				"90.0"
 		"AbilityValues"
 		{
-			"AbilityManaCost"
-			{
-				"value"			"115 120 125 130"
-				"special_bonus_facet_lycan_spirit_wolves" "-50"
-			}
 			"wolf_duration"
 			{
-				"value"					"50"
-				"special_bonus_facet_lycan_spirit_wolves"		"=50" // 命石2持续时间
+				"value"					"60"
+				"special_bonus_facet_lycan_spirit_wolves"		"=60" // 命石2持续时间
 			}
 			// 命石2
 			"health_per_wolf"
@@ -2132,30 +2127,14 @@
 			}
 			"damage_per_wolf"
 			{
-				"value"					"10 20 30 40" // 6 12 18 24
-				"special_bonus_unique_lycan_3"	"+10"
+				"value"					"12 24 36 48" // 6 12 18 24
+				"special_bonus_unique_lycan_3"	"+12"	// 6
 				"RequiresFacet"					"lycan_spirit_wolves"
 			}
 			"death_fx_time"
 			{
 				"special_bonus_facet_lycan_spirit_wolves"					"1.0"
 			}
-		}
-	}
-	// a杖变狼
-	"lycan_wolf_bite"
-	{
-		"MaxLevel" "4"
-		"AbilityCooldown"				"75 70 65 60"// 同步大招
-		"AbilityValues"
-		{
-			"lifesteal_percent"		"60" // 40
-			"lifesteal_range"
-			{
-				"value"		"1800" // 1200
-				"affected_by_aoe_increase"	"1"
-			}
-			"attack_range"		"250" // 150
 		}
 	}
 	// 嗥叫
@@ -2169,17 +2148,11 @@
 			"attack_damage_reduction"
 			{
 				"value"		"25 30 35 40 45"
-				"special_bonus_unique_lycan_6"	"+20"
 			}
 			"armor"
 			{
 				"value"				"6 8 10 12 14" // 4 5 6 7
 				"special_bonus_unique_lycan_howl_armor"			"+6" // 3
-			}
-			"radius"
-			{
-				"value"		"2000"
-				"affected_by_aoe_increase"	"1"
 			}
 		}
 	}
@@ -2207,14 +2180,25 @@
 		"AbilityCooldown"				"75 70 65 60"
 		"AbilityValues"
 		{
-			"duration"
-			{
-				"value"				"25"
-				"special_bonus_unique_lycan_1"	"+10"
-			}
 			"speed"				"1000"
-			"crit_multiplier"		"175 200 225 250"
-			"health_bonus"		"500 600 700 800"
+			"crit_multiplier"		"160 200 240 280"
+			"health_bonus"		"500 700 900 1100" // x2
+		}
+	}
+	// a杖变狼
+	"lycan_wolf_bite"
+	{
+		"MaxLevel" "4"
+		"AbilityCooldown"				"75 70 65 60"// 同步大招
+		"AbilityValues"
+		{
+			"lifesteal_percent"		"60" // 40
+			"lifesteal_range"
+			{
+				"value"		"1800" // 1200
+				"affected_by_aoe_increase"	"1"
+			}
+			"attack_range"		"250" // 150
 		}
 	}
 	//=================================================================================================================
