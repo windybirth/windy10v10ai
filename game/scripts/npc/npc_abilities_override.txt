@@ -2485,12 +2485,6 @@
 				"value"			"100 200 300 400 500"
 				"affected_by_aoe_increase"	"1"
 			}
-
-			"invisible_damage_pers"
-			{
-				"value"		"0"
-				"special_bonus_facet_night_stalker_blinding_void"	"150" // 50 命石1虚空击中后秒伤，原则上与虚空本身计算cd之后的dps相同
-			}
 		}
 	}
 	// 伤残恐惧
@@ -2512,7 +2506,7 @@
 			"mana_pers_night"
 			{
 				"value"			"0"
-				"special_bonus_scepter"	"1.2" // 相当于点了4点百分比回蓝
+				"special_bonus_scepter"	"2"	// 4
 			}
 			"radius"
 			{
@@ -2537,23 +2531,13 @@
 			}
 			"bonus_attack_speed_night"
 			{
-				"value"			"70 90 110 130 150"
+				"value"			"40 60 80 100 120"
 				"special_bonus_unique_night_stalker_2"	"+100"
 			}
 			"bonus_status_resist_night"
 			{
 				"value"			"0"
 				"special_bonus_unique_night_stalker_hunter_status_resist"	"+50" // x1.5
-			}
-			"shard_hp_restore_pct"
-			{
-				"value"				"45" // x1.5
-				"RequiresShard"		"1"
-			}
-			"shard_mana_restore_pct"
-			{
-				"value"				"45" // x1.5
-				"RequiresShard"		"1"
 			}
 			"shard_cooldown"
 			{
@@ -2562,7 +2546,7 @@
 			}
 			"shard_cast_range"
 			{
-				"value"				"80000" // 全图可吃
+				"value"				"1250" // x10
 				"RequiresShard"		"1"
 			}
 		}
@@ -2582,13 +2566,12 @@
 			}
 		}
 	}
-	// 黑暗之心
+	// 黑暗之心 先天技能
 	"night_stalker_heart_of_darkness"
 	{
 		"AbilityValues"
 		{
-			"hp_regen_during_night_pct"				"120" // 夜晚生命恢复增强，适配暗臂章
-			"hp_regen_during_day_pct"				"20"
+			"hp_regen_during_night_pct"				"80" // 40
 		}
 	}
 	//=================================================================================================================
@@ -2924,7 +2907,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"20 19 18 17 16"
-		"AbilityManaCost"				"35 40 45 50 55"
+		"AbilityManaCost"				"50 60 70 80 90"
 		"AbilityValues"
 		{
 			"damage_block"
@@ -3002,7 +2985,7 @@
 			"strength_damage"
 			{
 				"value"				"0.3 0.6 0.9 1.2"
-				"special_bonus_unique_pudge_3"	"x2.1"
+				"special_bonus_unique_pudge_3"	"x1.8"
 				"CalculateSpellDamageTooltip"	"0"
 			}
 			"AbilityCooldown"
