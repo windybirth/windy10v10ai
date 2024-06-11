@@ -481,7 +481,6 @@
 
 	"npc_dota_hero_naga_siren"
 	{
-		"Ability8"		"naga_siren_crit"
 		"Ability17"		"special_bonus_unique_naga_siren"
 		"Ability15"		"special_bonus_unique_naga_siren_net_breaks"
 	}
@@ -2385,10 +2384,6 @@
 	}
 	"npc_dota_hero_tiny"
 	{
-		"Ability13"		"special_bonus_unique_earthshaker_4"
-		"Ability11"		"special_bonus_unique_earthshaker_6"
-		"Ability16"		"special_bonus_unique_earthshaker_3"
-		"Ability12"		"special_bonus_unique_earthshaker_echo_cd" // 15级和25级对调，破坏物理小小前期节奏，变相加强法系
 		"Bot"
 		{
 			"Build"
