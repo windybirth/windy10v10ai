@@ -6783,7 +6783,7 @@
 		{
 				"AbilityCooldown"
 				{
-					"value"				"21 18 15 12 9"
+					"value"				"20 18 16 14 12"
 					"special_bonus_unique_pangolier_4"	"-2.5"
 				}
 				"dash_range"			"400 500 600 700 800"
@@ -6820,7 +6820,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"					"18 16 14 12 10"
+				"value"					"20 18 16 14 12"
 			}
 		}
 	}
@@ -6850,7 +6850,7 @@
 		{
 				"AbilityCooldown"
 				{
-					"value"			"70 60 50 40"
+					"value"			"90 80 70 60"
 					"special_bonus_unique_pangolier_5"	"-20"
 				}
 				"forward_move_speed"
@@ -6875,20 +6875,11 @@
 				}
 				"hit_radius"
 				{
-					"value"		"300"
+					"value"		"300"	// 150
 					"affected_by_aoe_increase"	"1"
 				}
-				"bounce_duration"		"0.4"
 				"stun_duration"			"0.8 1.0 1.2 1.4"
-				"duration"
-				{
-					"value"		"10"
-					"special_bonus_unique_pangolier_6"	"+2"
-					"special_bonus_facet_pangolier_thunderbolt"	"-2"
-				}
-				"jump_recover_time"		"0.25"
 				"shield_crash_cooldown"			"8 6 4 2"
-				"magic_resistance"				"60"
 		}
 	}
     //=================================================================================================================
@@ -7444,8 +7435,8 @@
 	"spectre_spectral_dagger"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"18 17 16 15 14"
-		"AbilityManaCost"				"150 170 190 210 230"
+		"AbilityCooldown"				"20 19 18 17 16"
+		"AbilityManaCost"				"130 140 150 160 170"
 		"AbilityValues"
 		{
 				"damage"
@@ -7578,8 +7569,7 @@
 				}
 				"attack_spill_range"
 				{
-					"value"							"600 650 700 750 800 850"
-					"special_bonus_unique_templar_assassin_8"	"+120"
+					"value"							"550 600 650 700 750 800"
 				}
 				"attack_spill_pct"			"80 85 90 95 100 105"
 				"spill_movement_slow_pct"
@@ -7865,7 +7855,6 @@
 				"damage_per_stack"
 				{
 					"value"					"15 25 35 45 55"
-					"special_bonus_unique_ursa" "+10"
 				}
 		}
 	}
@@ -7984,12 +7973,12 @@
 		{
 			"strike_damage"
 			{
-				"value"					"25 50 75 100 125"
+				"value"					"50 75 100 125 150"	// 25 50 75 100
 				"CalculateSpellDamageTooltip"	"1"
 			}
 			"tick_damage"
 			{
-				"value"					"10 40 70 100 130"
+				"value"					"40 70 100 130 160"	// 10 40 70 100
 				"CalculateSpellDamageTooltip"	"1"
 			}
 			"radius"
@@ -8091,16 +8080,6 @@
 				"value"					"0"
 				"special_bonus_unique_venomancer_5"	"+400" // 200
 			}
-			"spread_count"
-			{
-				"value"					"2"
-				"special_bonus_facet_venomancer_patient_zero"	"+4"
-			}
-			"impact_damage_reduce"
-			{
-				"special_bonus_facet_venomancer_patient_zero" "100"
-			}
-			"projectile_speed"			"1200"
 		}
 	}
 	// 剧毒新星
