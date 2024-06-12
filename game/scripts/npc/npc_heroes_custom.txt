@@ -493,8 +493,8 @@
 
 	"npc_dota_hero_keeper_of_the_light"
 	{
-		"Ability6"		"keeper_of_the_light_mana_leak"
-		"Ability19"		"keeper_of_the_light_spirit_form"
+		"Ability6"		"keeper_of_the_light_mana_leak"		// 追加技能 法力流失
+		"Ability19"		"keeper_of_the_light_spirit_form"	// 移动 灵魂形态 不需要快捷键
 	}
 
 	"npc_dota_hero_rubick"
