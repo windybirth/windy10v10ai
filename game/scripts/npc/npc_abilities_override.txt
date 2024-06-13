@@ -10182,21 +10182,22 @@
 	"lina_dragon_slave"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"120 130 140 150 160"
+		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
-			"dragon_slave_burn"			"20 30 40 50 60"
-			"dragon_slave_burn_duration"	"3 4 5 6 7"
-			"dragon_slave_damage"		"150 225 300 400 525"
+			"dragon_slave_damage"
+			{
+				"value"							"150 225 300 400 525"
+			}
+			"dragon_slave_burn_damage_tooltip"
+			{
+				"value"							"0"
+				"special_bonus_facet_lina_dot"	"=150 =225 =300 =400 =525"
+			}
 			"AbilityCooldown"
 			{
 				"value"						"11 10 9 8 7"
 				"special_bonus_unique_lina_1"		"-3.5"
-			}
-			"target_crit_multiplier"
-			{
-				"value"					"0"
-				"special_bonus_unique_lina_dragon_slave_crits"		"+250"
 			}
 		}
 	}
@@ -10204,51 +10205,37 @@
 	"lina_light_strike_array"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 9 8 7 6"
-		"AbilityManaCost"				"100 105 110 115 120"
+		"AbilityCooldown"				"11 10 9 8 7"
+		"AbilityManaCost"				"100 115 130 145 160"
 		"AbilityValues"
 		{
-				"light_strike_array_aoe"
-				{
-					"value" "300"
-					"affected_by_aoe_increase"	"1"
-				}
 				"light_strike_array_stun_duration"	"1.3 1.6 1.9 2.2 2.5"
 				"light_strike_array_damage"
 				{
-					"value"			"110 160 210 260 310"
-					"LinkedSpecialBonus"		"special_bonus_unique_lina_3"
+					"value"							"110 160 210 260 310"
+				}
+				"light_strike_array_burn_damage_tooltip"
+				{
+					"value"							"0"
+					"special_bonus_facet_lina_dot"	"=110 =160 =210 =260 =310"
 				}
 		}
 	}
 	// 炽魂
 	"lina_fiery_soul"
     {
-        "MaxLevel"  "5"
-        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "SpellDispellableType"			"SPELL_DISPELLABLE_NO"
-        "HasShardUpgrade"				"1"
+        "MaxLevel"  "6"
         "AbilityValues"
         {
             "fiery_soul_attack_speed_bonus"
             {
-                "value"								"15 20 25 30 35"
+                "value"								"4 8 16 24 32 40"
                 "special_bonus_unique_lina_2"		"+10"
             }
             "fiery_soul_move_speed_bonus"
             {
-                "value"							"1 1.5 2 2.5 3"
+                "value"							"1 1.5 2 2.5 3 3.5"
                 "special_bonus_unique_lina_2"	"+1"
-            }
-            "fiery_soul_max_stacks"
-            {
-                "value"							"10"
-            }
-            "fiery_soul_stack_duration"			"18"
-            "bonus_spell_damage"
-            {
-                "value"								"10"
-                "special_bonus_shard"		       "+20"
             }
         }
     }
@@ -10256,20 +10243,28 @@
 	"lina_laguna_blade"
 	{
 		"MaxLevel" "4"
-		"AbilityManaCost"				"15 300 450 600"
+		"AbilityManaCost"				"150 300 450 600"
 		"AbilityValues"
 		{
-			"damage"					"500 700 900 1100"
+			"damage"
+			{
+				"value"							"500 700 900 1100"
+			}
+			"burn_damage_tooltip"
+			{
+				"value"							"0"
+				"special_bonus_facet_lina_dot"	"=500 =700 =900 =1100"
+			}
 			"AbilityCooldown"
 			{
 				"value"								"70 60 50 40"
 				"special_bonus_unique_lina_6"		"-20"
 			}
-			"supercharge_duration"	"10"
-			"supercharge_stacks"
+			"supercharge_duration"
 			{
-				"value"				"15"
-				"special_bonus_unique_lina_supercharge_stacks"		"+10"
+				"value"								"0"
+				"special_bonus_facet_lina_supercharge"			"+10"	// 5
+				"RequiresFacet"					"lina_supercharge"
 			}
 		}
 	}
