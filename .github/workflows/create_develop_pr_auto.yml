@@ -3,7 +3,28 @@ on:
   push:
 
 jobs:
+  condition_check:
+    runs-on: ubuntu-latest
+    outputs:
+      proceed: ${{ steps.check_condition.outputs.proceed }}
+    steps:
+      - name: Get branch name
+        id: get_branch
+        run: |
+          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+
+      - name: Check condition
+        id: check_condition
+        run: |
+          if [[ "${{ steps.get_branch.outputs.branch }}" == "main" || "${{ steps.get_branch.outputs.branch }}" == "develop" || "${{ steps.get_branch.outputs.branch }}" == "fix-ci" ]]; then
+            echo "proceed=false" >> $GITHUB_OUTPUT
+          else
+            echo "proceed=true" >> $GITHUB_OUTPUT
+          fi
+
   create_pull_request:
+    needs: condition_check
+    if: needs.condition_check.outputs.proceed == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Get branch name
@@ -13,7 +34,7 @@ jobs:
           echo "branch=${GITHUB_REF#refs/heads/}"
 
         # FIXME remove fix-ci
-      - name: Skip if branch is main or develop or fix-ci
+      - name: End workflow is main or develop or fix-ci
         if: ${{ steps.get_branch.outputs.branch == 'main' || steps.get_branch.outputs.branch == 'develop' || steps.get_branch.outputs.branch == 'fix-ci' }}
         run: exit 0
 
