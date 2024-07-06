@@ -8,10 +8,13 @@ jobs:
     steps:
       - name: Get branch name
         id: get_branch
-        run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        run: |
+          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+          echo "branch=${GITHUB_REF#refs/heads/}"
 
-      - name: Skip if branch is main or develop
-        if: ${{ steps.get_branch.outputs.branch == 'main' || steps.get_branch.outputs.branch == 'develop' }}
+        # FIXME remove fix-ci
+      - name: Skip if branch is main or develop or fix-ci
+        if: ${{ steps.get_branch.outputs.branch == 'main' || steps.get_branch.outputs.branch == 'develop' || steps.get_branch.outputs.branch == 'fix-ci' }}
         run: exit 0
 
       - name: Check out code
