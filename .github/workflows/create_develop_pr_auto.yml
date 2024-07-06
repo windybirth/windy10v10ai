@@ -8,18 +8,31 @@ jobs:
     outputs:
       proceed: ${{ steps.check_condition.outputs.proceed }}
     steps:
-      - name: Get branch name
-        id: get_branch
+      - name: Check if PR exists
+        id: check_pr
         run: |
-          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
+          pr_exists=$(gh pr list --base main --head develop --json number -q '.[0].number')
+          echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Check condition
+      - name: Check branch not main or develop
+        id: check_branch
+        run: |
+          branch=$(echo ${GITHUB_REF#refs/heads/})
+          if [ $branch = "main" ] || [ $branch = "develop" ]; then
+            echo "branch_ok=false" >> $GITHUB_OUTPUT
+          else
+            echo "branch_ok=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check branch
         id: check_condition
         run: |
-          if ["${{ steps.get_branch.outputs.branch }}" == "main" || "${{ steps.get_branch.outputs.branch }}" == "develop"]; then
-            echo "proceed=false" >> $GITHUB_OUTPUT
-          else
+          if [ ${{ steps.check_pr.outputs.pr_exists }} = "null" ] && [ ${{ steps.check_branch.outputs.branch_ok }} = "true" ]; then
             echo "proceed=true" >> $GITHUB_OUTPUT
+          else
+            echo "proceed=false" >> $GITHUB_OUTPUT
           fi
 
   create_pull_request:
@@ -32,11 +45,6 @@ jobs:
         run: |
           echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
           echo "branch=${GITHUB_REF#refs/heads/}"
-
-        # FIXME remove fix-ci
-      - name: End workflow is main or develop or fix-ci
-        if: ${{ steps.get_branch.outputs.branch == 'main' || steps.get_branch.outputs.branch == 'develop' || steps.get_branch.outputs.branch == 'fix-ci' }}
-        run: exit 0
 
       - name: Check out code
         uses: actions/checkout@v4
@@ -69,7 +77,6 @@ jobs:
           title: ${{ steps.fetch_issue.outputs.title }}
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
-          committer: windybirth <windybirth@gmail.com>
           reviewers: windybirth
 
       - name: Enable Pull Request Automerge
