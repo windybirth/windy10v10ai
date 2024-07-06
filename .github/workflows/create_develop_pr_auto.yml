@@ -8,6 +8,9 @@ jobs:
     outputs:
       proceed: ${{ steps.check_condition.outputs.proceed }}
     steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
       - name: Check if PR exists
         id: check_pr
         run: |
