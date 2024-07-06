@@ -69,7 +69,7 @@ jobs:
           title: ${{ steps.fetch_issue.outputs.title }}
           branch: ${{ steps.get_branch.outputs.branch }}
           base: develop
-          committer: windybirth
+          committer: windybirth <windybirth@gmail.com>
           reviewers: windybirth
 
       - name: Enable Pull Request Automerge
