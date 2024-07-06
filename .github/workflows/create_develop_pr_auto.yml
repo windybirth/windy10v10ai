@@ -16,7 +16,7 @@ jobs:
       - name: Check condition
         id: check_condition
         run: |
-          if [[ "${{ steps.get_branch.outputs.branch }}" == "main" || "${{ steps.get_branch.outputs.branch }}" == "develop" || "${{ steps.get_branch.outputs.branch }}" == "fix-ci" ]]; then
+          if ["${{ steps.get_branch.outputs.branch }}" == "main" || "${{ steps.get_branch.outputs.branch }}" == "develop"]; then
             echo "proceed=false" >> $GITHUB_OUTPUT
           else
             echo "proceed=true" >> $GITHUB_OUTPUT
