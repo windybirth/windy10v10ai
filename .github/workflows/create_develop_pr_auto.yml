@@ -19,7 +19,7 @@ jobs:
           echo $(gh pr list --base develop --head ${{ github.ref_name }})
           echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.WINDY_PR_PAT }}
 
       - name: Check branch not main or develop
         id: check_branch
@@ -88,7 +88,7 @@ jobs:
             - [ ] #${{ steps.get_issue.outputs.number }}
           base: develop
           reviewers: windybirth
-          token: ${{ secrets.GITHUB_TOKEN }} # 使用 PAT 来创建 PR
+          token: ${{ secrets.WINDY_PR_PAT }}
 
       - name: Enable Pull Request Automerge
         uses: peter-evans/enable-pull-request-automerge@v3
