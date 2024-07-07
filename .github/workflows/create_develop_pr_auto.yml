@@ -14,7 +14,9 @@ jobs:
       - name: Check if PR exists
         id: check_pr
         run: |
-          pr_exists=$(gh pr list --base ${{ github.ref_name }} --head develop --json number -q '.[0].number')
+          pr_exists=$(gh pr list --base main --head develop --json number -q '.[0].number')
+          echo $pr_exists
+          echo $(gh pr list --base main --head develop --json)
           echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +35,7 @@ jobs:
       - name: Check Condition
         id: check_condition
         run: |
-          if [ ${{ steps.check_pr.outputs.pr_exists }} = "" ] && [ ${{ steps.check_branch.outputs.branch_ok }} = "true" ]; then
+          if [ "${{ steps.check_pr.outputs.pr_exists }}" = "" ] && [ ${{ steps.check_branch.outputs.branch_ok }} = "true" ]; then
             echo "proceed=true" >> $GITHUB_OUTPUT
           else
             echo "proceed=false" >> $GITHUB_OUTPUT
@@ -80,6 +82,10 @@ jobs:
         with:
           title: ${{ steps.fetch_issue.outputs.title }}
           branch: ${{ steps.get_branch.outputs.branch }}
+          body: |
+            ## Issue
+
+            - [ ] #${{ steps.get_issue.outputs.number }}
           base: develop
           reviewers: windybirth
 
