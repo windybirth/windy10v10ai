@@ -1,4 +1,5 @@
-name: Create Develop PR auto
+# create pr when windybirth push to feature branch
+name: Auto Create Develop PR
 on:
   push:
 
@@ -8,13 +9,12 @@ jobs:
     outputs:
       proceed: ${{ steps.check_condition.outputs.proceed }}
     steps:
-      - name: Check out code
-        uses: actions/checkout@v4
+      # - name: Check out code
+      #   uses: actions/checkout@v4
 
       - name: Check who triggered the action
         id: check_trigger
         run: |
-          echo "${{ github.actor }}"
           if [ "${{ github.actor }}" = "windybirth" ]; then
             echo "triggered_by_owner=true" >> $GITHUB_OUTPUT
           else
@@ -25,9 +25,8 @@ jobs:
         id: check_pr
         run: |
           pr_exists=$(gh pr list --base develop --head ${{ github.ref_name }} --json number -q '.[0].number')
-          echo $pr_exists
-          echo $(gh pr list --base develop --head ${{ github.ref_name }})
-          echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
+          # echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
+          echo pr_exists= >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -56,25 +55,22 @@ jobs:
     if: needs.condition_check.outputs.proceed == 'true'
     runs-on: ubuntu-latest
     steps:
-      - name: Get branch name
-        id: get_branch
-        run: |
-          echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_OUTPUT
-          echo "branch=${GITHUB_REF#refs/heads/}"
-
-      - name: Check out code
+      - name: Check out base code
         uses: actions/checkout@v4
         with:
           ref: develop
 
       - name: Reset promotion branch
         run: |
-          git fetch origin ${{ steps.get_branch.outputs.branch }}:${{ steps.get_branch.outputs.branch }}
-          git reset --hard ${{ steps.get_branch.outputs.branch }}
+          git fetch origin ${{ github.ref_name }}:${{ github.ref_name }}
+          git reset --hard ${{ github.ref_name }}
 
-      - name: Get issue number from branch name
+      - name: Get related issue number from branch
         id: get_issue
-        run: echo number=$(echo ${GITHUB_REF#refs/heads/feature/} | cut -d'-' -f1) >> $GITHUB_OUTPUT
+        run: |
+          issue_number=$(echo ${{ github.ref_name }} | awk -F'[^0-9]+' '{{print ($1 ~ /^[0-9]+$/ ? $1 : $2)}}')
+          echo $issue_number
+          echo number=$issue_number >> $GITHUB_OUTPUT
 
       - name: Fetch issue details
         id: fetch_issue
@@ -82,7 +78,8 @@ jobs:
           response=$(curl --request GET --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }})
           title=$(echo "$response" | jq -r .title)
           if [ $title = "null" ]; then
-            title=$(echo ${GITHUB_REF#refs/heads/})
+            title=$(echo ${{ github.ref_name }})
+            title=$(echo $title | sed 's/-/ /g')
           fi
           echo title=$title >> $GITHUB_OUTPUT
 
@@ -91,7 +88,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           title: ${{ steps.fetch_issue.outputs.title }}
-          branch: ${{ steps.get_branch.outputs.branch }}
+          branch: ${{ github.ref_name }}
           body: |
             ## Issue
 
