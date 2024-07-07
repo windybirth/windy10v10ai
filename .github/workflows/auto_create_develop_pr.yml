@@ -98,6 +98,7 @@ jobs:
           base: develop
           assignees: windybirth
           token: ${{ secrets.WINDY_PR_PAT }}
+          draft: true
 
       - name: Enable Pull Request Automerge
         uses: peter-evans/enable-pull-request-automerge@v3
