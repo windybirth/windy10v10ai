@@ -25,9 +25,7 @@ jobs:
         id: check_pr
         run: |
           pr_exists=$(gh pr list --base develop --head ${{ github.ref_name }} --json number -q '.[0].number')
-          # TODO revert
-          # echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
-          echo pr_exists= >> $GITHUB_OUTPUT
+          echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -97,9 +95,3 @@ jobs:
           assignees: windybirth
           token: ${{ secrets.WINDY_PR_PAT }}
           draft: true
-
-      - name: Enable Pull Request Automerge
-        uses: peter-evans/enable-pull-request-automerge@v3
-        with:
-          pull-request-number: ${{ steps.cpr.outputs.pull-request-number }}
-          merge-method: squash
