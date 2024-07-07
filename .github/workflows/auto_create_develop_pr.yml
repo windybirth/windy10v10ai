@@ -6,10 +6,9 @@ on:
 jobs:
   condition_check:
     if: |
-      github.ref_type == 'heads'
+      github.actor == 'windybirth'
       && github.ref_name != 'main'
       && github.ref_name != 'develop'
-      && github.actor == 'windybirth'
     runs-on: ubuntu-latest
     outputs:
       proceed: ${{ steps.check_condition.outputs.proceed }}
