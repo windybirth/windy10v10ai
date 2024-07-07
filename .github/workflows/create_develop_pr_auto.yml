@@ -1,4 +1,4 @@
-name: Create develop PR auto
+name: Create Develop PR auto
 on:
   push:
 
@@ -87,7 +87,7 @@ jobs:
 
             - [ ] #${{ steps.get_issue.outputs.number }}
           base: develop
-          reviewers: windybirth
+          assignees: windybirth
           token: ${{ secrets.WINDY_PR_PAT }}
 
       - name: Enable Pull Request Automerge
