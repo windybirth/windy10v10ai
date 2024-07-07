@@ -14,9 +14,9 @@ jobs:
       - name: Check if PR exists
         id: check_pr
         run: |
-          pr_exists=$(gh pr list --base main --head develop --json number -q '.[0].number')
+          pr_exists=$(gh pr list --base fix-ci --head develop --json number -q '.[0].number')
           echo $pr_exists
-          echo $(gh pr list --base main --head develop --json)
+          echo $(gh pr list --base main --head develop)
           echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
