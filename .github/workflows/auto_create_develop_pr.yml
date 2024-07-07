@@ -70,8 +70,6 @@ jobs:
         id: get_issue
         run: |
           issue_number=$(echo ${{ github.ref_name }} | awk -F'[^0-9]+' '{{print ($1 ~ /^[0-9]+$/ ? $1 : $2)}}')
-          # TODO remove echo
-          echo $issue_number
           echo number=$issue_number >> $GITHUB_OUTPUT
 
       - name: Fetch issue details
@@ -94,7 +92,7 @@ jobs:
           body: |
             ## Issue
 
-            - [ ] #${{ steps.get_issue.outputs.number }}
+            - [ ] fix #${{ steps.get_issue.outputs.number }}
           base: develop
           assignees: windybirth
           token: ${{ secrets.WINDY_PR_PAT }}
