@@ -11,6 +11,16 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v4
 
+      - name: Check who triggered the action
+        id: check_trigger
+        run: |
+          echo "${{ github.actor }}"
+          if [ "${{ github.actor }}" = "windybirth" ]; then
+            echo "triggered_by_owner=true" >> $GITHUB_OUTPUT
+          else
+            echo "triggered_by_owner=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Check if PR exists
         id: check_pr
         run: |
@@ -19,7 +29,7 @@ jobs:
           echo $(gh pr list --base develop --head ${{ github.ref_name }})
           echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
         env:
-          GH_TOKEN: ${{ secrets.WINDY_PR_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check branch not main or develop
         id: check_branch
@@ -35,7 +45,7 @@ jobs:
       - name: Check Condition
         id: check_condition
         run: |
-          if [ "${{ steps.check_pr.outputs.pr_exists }}" = "" ] && [ ${{ steps.check_branch.outputs.branch_ok }} = "true" ]; then
+          if [ "${{ steps.check_pr.outputs.pr_exists }}" = "" ] && [ ${{ steps.check_branch.outputs.branch_ok }} = "true" ] && [ ${{ steps.check_trigger.outputs.triggered_by_owner }} = "true" ]; then
             echo "proceed=true" >> $GITHUB_OUTPUT
           else
             echo "proceed=false" >> $GITHUB_OUTPUT
