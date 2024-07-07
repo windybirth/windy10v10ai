@@ -27,7 +27,7 @@ jobs:
           issue_number=$(echo ${{ github.ref_name }} | awk -F'[^0-9]+' '{{print ($1 ~ /^[0-9]+$/ ? $1 : $2)}}')
           echo number=$issue_number >> $GITHUB_OUTPUT
 
-      - name: Fetch issue details
+      - name: Fetch issue title
         id: fetch_issue
         run: |
           response=$(curl --request GET --url https://api.github.com/repos/${{ github.repository }}/issues/${{ steps.get_issue.outputs.number }})
