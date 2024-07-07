@@ -9,8 +9,8 @@ jobs:
     outputs:
       proceed: ${{ steps.check_condition.outputs.proceed }}
     steps:
-      # - name: Check out code
-      #   uses: actions/checkout@v4
+      - name: Check out code
+        uses: actions/checkout@v4
 
       - name: Check who triggered the action
         id: check_trigger
@@ -25,6 +25,7 @@ jobs:
         id: check_pr
         run: |
           pr_exists=$(gh pr list --base develop --head ${{ github.ref_name }} --json number -q '.[0].number')
+          # TODO revert
           # echo pr_exists=$pr_exists >> $GITHUB_OUTPUT
           echo pr_exists= >> $GITHUB_OUTPUT
         env:
@@ -69,6 +70,7 @@ jobs:
         id: get_issue
         run: |
           issue_number=$(echo ${{ github.ref_name }} | awk -F'[^0-9]+' '{{print ($1 ~ /^[0-9]+$/ ? $1 : $2)}}')
+          # TODO remove echo
           echo $issue_number
           echo number=$issue_number >> $GITHUB_OUTPUT
 
