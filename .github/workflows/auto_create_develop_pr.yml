@@ -46,7 +46,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create Pull Request
+      - name: Create Pull Request if not exists
         if: steps.check_pr.outputs.pr_exists == null
         id: cpr
         uses: peter-evans/create-pull-request@v5
