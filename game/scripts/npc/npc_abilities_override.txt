@@ -1984,12 +1984,11 @@
 			"assist_reward_damage"
 			{
 				"value"			"0"
-				"special_bonus_facet_legion_commander_spoils_of_war"	"4 8 12 16"
+				"special_bonus_facet_legion_commander_spoils_of_war"	"5 10 15 20"
 			}
 			"AbilityCooldown"
 			{
 				"value"					"60 55 50 45"
-				"special_bonus_scepter"			"-15"
 			}
 		}
 	}
@@ -3376,8 +3375,8 @@
 			"shard_skeleton_count"
 			{
 				"value"							"0"
-				// 命石：绝冥再生时为每名英雄产生的骷髅兵数量从1/2/3个提升至2/3/4个
-				"special_bonus_facet_skeleton_king_facet_bone_guard"			"2 3 4 5"
+				// 命石：绝冥再生时为每名英雄产生的骷髅兵数量
+				"special_bonus_facet_skeleton_king_facet_bone_guard"			"0"
 			}
 		}
 	}
@@ -7522,9 +7521,6 @@
 			"instances"
 			{
 				"value"						"3 4 5 6 7"
-				"special_bonus_unique_templar_assassin"		"+5"
-				"CalculateSpellDamageTooltip"				"0"
-				"DamageTypeTooltip"							"DAMAGE_TYPE_NONE"
 			}
 			"bonus_damage"
 			{
@@ -9362,6 +9358,15 @@
 		"AbilityValues"
 		{
 			"duration"						"3 4 5 6 7"
+			"sprout_damage"
+			{
+				"value"		"70 140 210 280 350"
+			}
+			"sprout_heal_per_second"
+			{
+				"value"						"0"
+				"special_bonus_facet_furion_soothing_saplings"	"=10 =20 =30 =40 =50"
+			}
 		}
 	}
 	// 传送
@@ -9397,7 +9402,7 @@
 			"treant_duration"				"30"
 			"treant_health"
 			{
-				"value"								"1000 1000 1150 1150"
+				"value"								"750 1000 1250 1500"
 				"special_bonus_facet_furion_ironwood_treant"	"=1500 =2000 =2500 =3000"
 				"special_bonus_unique_furion"			"x2.5"
 			}
@@ -9413,12 +9418,17 @@
 				"special_bonus_facet_furion_ironwood_treant"				"+100%"
 				"special_bonus_unique_furion"			"x2.5"
 			}
+			"treant_movespeed"
+			{
+				"value"						"300 320 340 360"
+				"special_bonus_unique_furion_2"				"+60"
+			}
 			"AbilityCooldown"
 			{
 				"value"				"70"
 				"special_bonus_unique_furion_6"		"-10"
 			}
-        }
+		}
 	}
 	// 自然之怒
 	"furion_wrath_of_nature"
@@ -11775,7 +11785,7 @@
 			"laser_damage"
 			{
 				"value" "75 150 225 300 375"
-				"special_bonus_unique_tinker" "+80"
+				"special_bonus_unique_tinker" "+75"	// 40
 			}
 		}
 	}
