@@ -1678,7 +1678,7 @@
 				"2"		"necrolyte_death_pulse"
 				"3"		"necrolyte_heartstopper_aura"
 				"4"		"necrolyte_death_pulse"
-				"5"		"necrolyte_sadist"
+				"5"		"necrolyte_ghost_shroud"
 				"6"		"necrolyte_reapers_scythe"
 				"7"		"necrolyte_heartstopper_aura"
 				"8"		"necrolyte_death_pulse"
@@ -1689,7 +1689,7 @@
 				"13"		"necrolyte_heartstopper_aura"
 				"14"		"necrolyte_death_pulse"
 				"15"		"special_bonus_unique_necrophos_3"
-				"16"		"necrolyte_sadist"
+				"16"		"necrolyte_ghost_shroud"
 				"17"		""
 				"18"		"necrolyte_reapers_scythe"
 				"19"		""
@@ -1705,9 +1705,9 @@
 				"29"		"special_bonus_unique_necrophos_5"
 				"30"		"special_bonus_unique_necrophos"
 				"31"		"necrolyte_reapers_scythe"
-				"32"		"necrolyte_sadist"
-				"33"		"necrolyte_sadist"
-				"34"		"necrolyte_sadist"
+				"32"		"necrolyte_ghost_shroud"
+				"33"		"necrolyte_ghost_shroud"
+				"34"		"necrolyte_ghost_shroud"
 			}
 		}
 	}

@@ -10353,26 +10353,14 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"7 6.5 6 5.5 5"
 		"AbilityDamage"					"100 160 220 280 340"
-		"AbilityManaCost"				"100 120 140 160 180"
+		"AbilityManaCost"				"115 130 145 160 175"
 		"AbilityValues"
 		{
 				"heal"
 				{
 					"value"		"60 90 120 150 180"
-					"LinkedSpecialBonus"		"special_bonus_unique_necrophos_4"
+				"special_bonus_unique_necrophos_4" "+60"
 				}
-		}
-	}
-	"special_bonus_unique_necrophos_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"70"
-				"ad_linked_abilities"			"necrolyte_death_pulse"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 竭心光环 胜利光环
@@ -10384,26 +10372,29 @@
 			"aura_damage"
 			{
 				"value"		"1.2 1.5 1.8 2.1 2.4"
-				"special_bonus_unique_necrophos_2"		"+0.5"
-				"DamageTypeTooltip"	"DAMAGE_TYPE_NONE"
-				"CalculateSpellDamageTooltip"	"0"
 			}
-			"health_regen"	"4 5 6 7 8"
-			"mana_regen"	"4 5 6 7 8"
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
 	}
-	// 幽魂护罩
+	// 施虐之心
 	"necrolyte_sadist"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"50 75 100 125 150"
+		"AbilityValues"
+		{
+			"health_regen"	"3 4.5 6 7.5 9"
+			"mana_regen"	"3 4.5 6 7.5 9"
+		}
+	}
+	// 幽魂护罩
+	"necrolyte_ghost_shroud"
+	{
+		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"duration"		"3 3.5 4 4.5 5"
 			"heal_bonus"
 			{
-				"value"			"45 55 60 65 75"
+				"value"			"45 55 65 75 85"
 				"special_bonus_unique_necrophos_sadist_heal_bonus"		"+15"
 			}
 			"movement_speed"
@@ -10413,8 +10404,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"						"28 25 22 19 16"
-				"special_bonus_scepter"		"-0"
+				"value"						"24 22 20 18 16"
 			}
 		}
 	}
