@@ -10448,24 +10448,31 @@
 				"value"										"9 10 11 12 13"
 				"special_bonus_unique_outworld_devourer"	"+2"
 			}
-			"mana_cost_percentage"							"30"
+			"mana_cost_percentage"							"30"	// 20
 		}
 	}
 	// 星体禁锢
 	"obsidian_destroyer_astral_imprisonment"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"24 20 16 12 8"
 		"AbilityValues"
 		{
-			"prison_duration"		"2 2.5 3 3.5 4"
-			"damage"				"120 200 280 360 440"
+			"AbilityCooldown"
+			{
+				"value"				"20 18 16 14 12"
+			}
+			"prison_duration"
+			{
+				"value"				"2 2.5 3 3.5 4"
+			}
+			"damage"
+			{
+				"value"				"90 180 270 360 450"
+			}
 			"mana_capacity_steal"
 			{
-				"value"							"13 14 15 16 17"
-				"special_bonus_shard"			"+3"
+				"value"										"12 14 16 18 20"
 			}
-			"mana_capacity_duration"	"30"
 		}
 	}
 	// 精华变迁
@@ -10476,21 +10483,20 @@
 		{
 			"proc_chance"	"30"
 			"mana_restore"	"35 40 45 50 55"
-			"mana_capacity_duration"	"30 40 50 60 70"
 		}
 	}
 	// 神智之蚀
 	"obsidian_destroyer_sanity_eclipse"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"120 110 100 90"
-		"AbilityManaCost"				"200 325 450 575"
+		"AbilityCooldown"				"150 140 130 120"
+		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
 			"base_damage"				"200 300 400 500"
 			"radius"
 			{
-				"value"			"450 550 650 750"
+				"value"			"450 525 600 675"
 				"affected_by_aoe_increase"	"1"
 			}
 		}
