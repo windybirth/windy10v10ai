@@ -5449,7 +5449,7 @@
 	"hoodwink_acorn_shot"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"16 14 12 10 8"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"75 85 95 105 115"
 		"AbilityValues"
 		{
@@ -5506,27 +5506,35 @@
 		"AbilityValues"
 		{
 			"movement_speed_pct"			"20 25 30 35 40"
-			"evasion"						"15 20 25 30 35"
+			"duration"
+			{
+				"value"						"3.5 4.0 4.5 5.0 5.5"
+			}
+			"cast_range"
+			{
+				"value"							"0"
+				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+			}
+			"attack_range"
+			{
+				"value"							"0"
+				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+			}
 		}
 	}
 	// 一箭穿心
 	"hoodwink_sharpshooter"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"45 40 35 30"
-		"AbilityManaCost"				"125 175 225 275"
-		"AbilitySpecial"
+		"AbilityManaCost"				"100 150 200 250"
+		"AbilityValues"
 		{
-			"06"
+			"max_damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"max_damage"				"550 900 1250 1600"
+				"value"				"550 900 1250 1600"
+				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+250"	// 125
 			}
-			"12"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"slow_move_pct"				"30 40 50 60"
-			}
+			"slow_move_pct"				"30 40 50 60"
 		}
 	}
 	//=================================================================================================================
