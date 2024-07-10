@@ -11302,7 +11302,7 @@
 		"AbilityCooldown"				"4.0 3.5 3.0 2.5 2.0"
 		"AbilityValues"
 		{
-				"bolt_damage"			"75 95 115 135 155"
+				"bolt_damage"			"75 100 125 150 175"
 		}
 	}
 	// 震荡光弹
@@ -11310,7 +11310,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"15 14 13 12 11"
-		"AbilityManaCost"				"80 90 100 110 120"
+		"AbilityManaCost"				"80 85 90 95 100"
 		"AbilityValues"
 		{
 				"damage"			"120 180 240 300 360"
@@ -11345,7 +11345,7 @@
 				"damage"
 				{
 					"value"			"800 1200 1600 2000"
-				"special_bonus_unique_skywrath_5" "+400"
+				"special_bonus_unique_skywrath_5" "+600"	// 400
 				}
 		}
 	}
@@ -11566,12 +11566,18 @@
 			"damage_absorb"
 			{
 				"value"							"180 360 540 720 900"	// 100 180 240 320
-				"special_bonus_unique_tinker_7"	"+125"
+				"special_bonus_unique_tinker_7"	"+250"	// 125
 			}
 			"status_resistance"
 			{
 				"value"															"10 20 30 40 50"
 				"special_bonus_unique_tinker_defense_matrix_status_resistance"	"+10"
+			}
+			"barrier_duration"		"30"	// 15
+			"flicker_range"
+			{
+				"value"											"0"
+				"special_bonus_facet_tinker_translocator"	"+700"	// 350
 			}
 		}
 	}
@@ -11579,8 +11585,8 @@
 	"tinker_laser"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"1050"
-		"AbilityCooldown"				"22 20 18 16 14"
+		"AbilityCastRange"				"1200"
+		"AbilityCooldown"				"19 18 17 16 15"
 		"AbilityManaCost"				"95 105 115 125 135"
 		"AbilityValues"
 		{
@@ -11591,7 +11597,7 @@
 			"laser_damage"
 			{
 				"value" "75 150 225 300 375"
-				"special_bonus_unique_tinker" "+75"	// 40
+				"special_bonus_unique_tinker" "+125"	// 40
 			}
 		}
 	}
@@ -11622,11 +11628,11 @@
 		"AbilityManaCost"				"90 110 130 150 170"
 		"AbilityValues"
 		{
-			"damage"				"17 26 35 44 53"
+			"damage"				"30 45 60 75 90"	// 17 26 35 44
 			"heal_per_second"
 			{
 				"value"									"0"
-				"special_bonus_facet_tinker_repair_bots"	"+16 +24 +32 +40 +48"	// x2
+				"special_bonus_facet_tinker_repair_bots"	"+30 +40 +50 +60 +70"	// x2
 			}
 		}
 	}

@@ -2306,7 +2306,6 @@
 	}
 	"npc_dota_hero_sven"
 	{
-		"AttackRate"		"1.700000"
 		"Bot"
 		{
 			"Build"
