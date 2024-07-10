@@ -7130,6 +7130,11 @@
 					"value"			"40 55 70 85 100"
 					"special_bonus_facet_sniper_scattershot"	"x4"
 				}
+				"duration"
+				{
+					"value"		"10.0"
+					"special_bonus_facet_sniper_scattershot"	"=3"	// 1
+				}
 		}
 	}
 	// 爆头
@@ -7141,7 +7146,7 @@
 			"damage"
 			{
 				"value"	"50 80 110 150 200"
-				"special_bonus_unique_sniper_headshot_damage"	"+40"
+				"special_bonus_unique_sniper_headshot_damage"	"+50"
 			}
 		}
 	}
@@ -7159,7 +7164,7 @@
 			}
 			"bonus_armor"
 			{
-				"value"												"5 10 15 20 25"
+				"value"												"10 20 30 40 50"	// x2
 				"special_bonus_unique_sniper_take_aim_armor"		"+25"	// 15
 			}
 		}
@@ -7170,16 +7175,16 @@
 		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"bonus_range"				"100 150 200 250 300"
+			"bonus_range"				"80 160 240 320 400"
 		}
 	}
 	// 暗杀
 	"sniper_assassinate"
 	{
-		"SpellImmunityType"             "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "4"
-		"AbilityCooldown"				"24 20 16 12"
-		"AbilityDamage"					"350 500 650 800"
+		"AbilityCooldown"				"18 16 14 12"
+		"AbilityDamage"					"300 500 700 900"
 		"AbilityManaCost"				"175 225 275 325"
 		"AbilityValues"
 		{
@@ -12192,7 +12197,7 @@
 		{
 			"damage"
 			{
-				"value"					"50 75 100 125 150"
+				"value"					"50 100 150 200 250"	// x2
 				"CalculateSpellDamageTooltip"	"1"
 			}
 			"range"
@@ -12211,12 +12216,13 @@
 	"zuus_arc_lightning"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityManaCost"				"75 80 85 90 95"
 		"AbilityValues"
 		{
 			"arc_damage"
 			{
-				"value"			"110 135 160 185 210"
+				"value"			"90 120 150 180 210"
+				"special_bonus_unique_zeus_2"	"+90"	// 60
 			}
 			"jump_count"			"5 7 9 11 13"
 		}
@@ -12244,8 +12250,8 @@
 		{
 			"damage"
 			{
-				"value"							"350 500 650 800"
-				"special_bonus_unique_zeus_4"		"+150"
+				"value"							"300 475 650 825"
+				"special_bonus_unique_zeus_4"		"+275"	// 150
 			}
 		}
 	}
@@ -12264,6 +12270,12 @@
 				{
 					"value"		"0"
 					"special_bonus_facet_zuus_livewire"	"=4 =5 =6 =7 =8"
+				}
+				"distance_threshold_max"
+				{
+					"value"		"0"
+					"special_bonus_facet_zuus_livewire"	"1600"	// 1200
+					"affected_by_aoe_increase"	"1"
 				}
 		}
 	}
