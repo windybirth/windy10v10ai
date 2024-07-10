@@ -9472,6 +9472,17 @@
 			}
 		}
 	}
+	// 熔炉精灵
+	"invoker_forge_spirit"
+	{
+		"AbilityValues"
+		{
+			"spirit_attack_speed"
+			{
+				"special_bonus_unique_invoker_11" "+100"	// 50
+			}
+		}
+	}
 	// 冰墙
 	"invoker_ice_wall"
 	{
