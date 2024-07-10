@@ -2056,10 +2056,10 @@
 	"lycan_shapeshift"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"75 70 65 60"
+		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
-			"speed"				"1000"
+			"speed"				"850"
 			"crit_multiplier"		"160 200 240 280"
 			"health_bonus"		"500 700 900 1100" // x2
 		}
@@ -2068,7 +2068,7 @@
 	"lycan_wolf_bite"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"75 70 65 60"// 同步大招
+		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
 			"lifesteal_percent"		"60" // 40
