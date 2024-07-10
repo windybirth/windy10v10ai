@@ -5105,40 +5105,28 @@
 	"ember_spirit_searing_chains"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"13 12 11 10 9"
+		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
 				"duration"
 				{
 					"value"		"1.5 2.0 2.5 3.0 3.5"
-					"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_2"
 				}
-				"damage_per_second"				"50 70 90 110 130"
+				"damage_per_second"
+				{
+					"value"				"50 70 90 110 130"
+				}
 				"unit_count"
 				{
 					"value"			"4"
-					"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_7"
 				}
-		}
-	}
-	"special_bonus_unique_ember_spirit_7"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"2"
-				"ad_linked_abilities"			"ember_spirit_searing_chains"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 无影拳
 	"ember_spirit_sleight_of_fist"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"14 12 10 8 6"
 		"AbilityValues"
 		{
 			"radius"
@@ -5148,66 +5136,31 @@
 			}
 			"bonus_hero_damage"
 			{
-				"value"		"45 85 125 165 205"
-				"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_6"
-				"CalculateSpellDamageTooltip"	"0"
-			}
-		}
-	}
-	"special_bonus_unique_ember_spirit_6"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"90"
-				"ad_linked_abilities"			"ember_spirit_sleight_of_fist"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"		"40 80 120 160 200"
 			}
 		}
 	}
 	// 烈火罩
 	"ember_spirit_flame_guard"
 	{
-		"MaxLevel" "5"
-		"AbilityManaCost"				"65 80 95 110 125"
+		"MaxLevel" "6"
+		"AbilityManaCost"				"65 80 95 110 125 140"
 		"AbilityValues"
 		{
-				"duration"						"11 14 17 20 23"
+				"duration"						"10 12 14 16 18 20"
+				"passive_damage_per_second"
+				{
+					"value"			"10 15 20 25 30 35"
+				}
+				"active_damage_per_second"
+				{
+					"value"			"15 25 35 45 55 65"
+				}
 				"absorb_amount"
 				{
-					"value"					"120 270 420 570 720"
-					"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_1"
+					"value"					"120 240 270 420 570 720"
+					"special_bonus_unique_ember_spirit_1"			"+400"	// 200
 				}
-				"damage_per_second"
-				{
-					"value"			"25 35 45 55 65"
-					"LinkedSpecialBonus"			"special_bonus_unique_ember_spirit_3"
-				}
-		}
-	}
-	"special_bonus_unique_ember_spirit_1"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"400"
-				"ad_linked_abilities"			"ember_spirit_flame_guard"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
-	"special_bonus_unique_ember_spirit_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"60"
-				"ad_linked_abilities"			"ember_spirit_flame_guard"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 飞魂
@@ -5232,7 +5185,7 @@
 	{
 		"AbilityValues"
 		{
-				"damage"				"100 200 300 400 500"
+				"damage"				"100 200 300 400"
 		}
 	}
 	//=================================================================================================================
