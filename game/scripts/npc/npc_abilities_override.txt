@@ -11677,9 +11677,8 @@
 			"damage"
 			{
 				"value"			"300 450 600 750 900"
-				"LinkedSpecialBonus"		"special_bonus_unique_techies"
 			}
-			"stun_duration"				"1.0 1.3 1.6 1.9 2.2"
+			"stun_duration"				"0.8 1 1.2 1.4 1.6"
 			"duration"				"0.5"// 0.75 似乎是飞行时间
 		}
 	}
@@ -11691,28 +11690,12 @@
 		"AbilityManaCost"				"100 115 130 145 160"
 		"AbilityValues"
 		{
-				"duration"				"1.2"
-				"countdown"				"2"
-				"radius"
-				{
-					"value"			"250"
-					"special_bonus_unique_techies_2"	"+300"
-				}
 				"damage"
 				{
 					"value"	"150 250 350 450 550"
 				}
 				"slow"					"25 35 45 55 65"
 				"secondary_slow"		"15 25 35 45 55"
-				"secondary_slow_duration"		"2.5"
-				"explosion_radius"
-				{
-					"value"				"300"
-					"special_bonus_unique_techies_2"	"+125"
-				}
-				"speed"					"500.0"
-				"acceleration"			"2000"
-				"pre_chase_time"		"0.1"
 		}
 	}
 	// 活性电击
