@@ -11152,6 +11152,8 @@
 	"shadow_shaman_mass_serpent_ward"
 	{
 		"MaxLevel" "3"
+		"RequiredLevel"					"8"
+		"LevelsBetweenUpgrades"			"8"
 		"AbilityCooldown"				"140"
 		"AbilityValues"
 		{
