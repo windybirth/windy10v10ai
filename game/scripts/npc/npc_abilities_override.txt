@@ -9352,8 +9352,13 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"8"
+				"value"					"8"	// 18
 				"special_bonus_unique_invoker_9"	"-5"
+			}
+			"freeze_damage"
+			{
+				"value"					"16 32 48 64 80 96 112 128"	// x2
+				"levelkey"				"quaslevel"
 			}
 		}
 	}
@@ -9364,7 +9369,22 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"24"
+				"value"					"20"	// 32
+			}
+			"self_slow"
+			{
+				"value"					"-5 0 5 10 15 20 25 30"
+				"levelkey"				"wexlevel"
+			}
+			"health_regen"
+			{
+				"value"					"20 30 40 50 60 70 80 90"	// x2
+				"levelkey"				"quaslevel"
+			}
+			"mana_regen"
+			{
+				"value"					"5 10 15 20 25 30 35 40"	// x2
+				"levelkey"				"wexlevel"
 			}
 		}
 	}
@@ -9375,17 +9395,16 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"26"
-				"special_bonus_unique_invoker_3" "-6"
+				"value"					"20"	// 27
 			}
 			"vision_distance"
 			{
-				"value"		"400"
+				"value"		"400"	// 200
 				"affected_by_aoe_increase"	"1"
 			}
 			"base_damage"
 			{
-				"value"							"120"
+				"value"							"150"	// 50
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -9393,7 +9412,7 @@
 	// 磁暴
 	"invoker_emp"
 	{
-		"AbilityCooldown"				"16"
+		"AbilityCooldown"				"14"	// 27
 		"AbilityValues"
 		{
 			"mana_burned"
@@ -9406,7 +9425,23 @@
 	// 灵动迅捷
 	"invoker_alacrity"
 	{
-		"AbilityCooldown"				"8"
+		"AbilityCooldown"				"8"	// 15
+		"AbilityValues"
+		{
+			"bonus_attack_speed"
+			{
+				"value"					"20 44 68 92 116 140 164 188"	// x2
+				"levelkey"				"wexlevel"
+				"special_bonus_unique_invoker_5"	"+60"	// x2
+			}
+			"bonus_damage"
+			{
+				"value"					"20 44 68 92 116 140 164 188"	// x2
+				"levelkey"				"exortlevel"
+				"special_bonus_unique_invoker_5"	"+60"	// x2
+				"CalculateSpellDamageTooltip"	"0"
+			}
+		}
 	}
 	// 混沌陨石
 	"invoker_chaos_meteor"
@@ -9415,31 +9450,24 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"					"25"
+				"value"					"25"	// 50
 			}
 		}
 	}
 	// 阳炎冲击
 	"invoker_sun_strike"
 	{
-		"AbilityCooldown"				"10"
-		"AbilityManaCost"				"250"
+		"AbilityCooldown"				"10"	// 23
 		"AbilityValues"
 		{
-			"delay"						"1.7"
 			"area_of_effect"
 			{
-					"value"			"200"
+					"value"			"200"	// 175
 					"affected_by_aoe_increase"	"1"
-			}
-			"damage"
-			{
-				"value"					"180 240 300 360 420 480 540 600"
-				"levelkey"				"exortlevel"
 			}
 			"cataclysm_cooldown"
 			{
-				"value"					"70"
+				"value"					"60"	// 100
 				"RequiresScepter"		"1"
 			}
 		}
@@ -9447,12 +9475,21 @@
 	// 冰墙
 	"invoker_ice_wall"
 	{
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"10"	// 23
+		"AbilityValues"
+		{
+			"damage_per_second"
+			{
+				"value"				"12 24 36 48 60 72 84 96"	// x2
+				"levelkey"			"exortlevel"
+				"special_bonus_unique_invoker_ice_wall_dps" "+100"	// x2
+			}
+		}
 	}
 	// 超震声波
 	"invoker_deafening_blast"
 	{
-		"AbilityCooldown"				"20"
+		"AbilityCooldown"				"18"	// 36
 		"AbilityValues"
 		{
 			"damage"
@@ -9465,13 +9502,10 @@
 	// 元素祈唤
 	"invoker_invoke"
 	{
-		"AbilityCooldown"				"3"
-		"AbilityManaCost"				"0"
-		"AbilityCastAnimation"			"ACT_INVALID"
+		"AbilityCooldown"				"3"	// 7
 		"AbilityValues"
 		{
-			"max_invoked_spells"			"2"
-			"cooldown_reduction_per_orb"	"1"
+			"cooldown_reduction_per_orb"	"0.2"
 		}
 	}
     //=================================================================================================================
