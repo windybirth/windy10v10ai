@@ -1296,60 +1296,38 @@
 	// 沟壑
 	"earthshaker_fissure"
 	{
-		"AbilityCastPoint"				"0.69 0.59 0.49 0.39"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15"
-		"AbilityManaCost"				"120 140 150 170 180"
-		"AbilitySpecial"
+		"AbilityCastPoint"				"0.39"	// 0.69
+		"AbilityManaCost"				"120 130 140 150 160"
+		"AbilityValues"
 		{
-			"02"
+			"fissure_duration"			"6.5"
+			"stun_duration"				"0.8 1.0 1.2 1.4 1.6"
+			"fissure_damage"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"fissure_duration"			"6.5"
-			}
-			"04"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"stun_duration"				"1.1 1.2 1.3 1.4 1.5"
-			}
-			"05"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"fissure_damage"			"110 210 260 360 410"
-				"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_4"
-			}
-		}
-	}
-	"special_bonus_unique_earthshaker_4"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"150"
-				"ad_linked_abilities"			"earthshaker_fissure"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"				"120 200 280 360 440"			// 110 160 210 260
+				"special_bonus_unique_earthshaker_4"		"+160"	// 90
 			}
 		}
 	}
 	// 图腾
 	"earthshaker_enchant_totem"
 	{
-		"AbilityCastPoint"              "0.3"
-		"AbilityCooldown"				"4.0"
 		"MaxLevel" "5"
+		"AbilityCastPoint"				"0.3"	// 0.5
+		"AbilityManaCost"				"45 50 55 60 65"
 		"AbilityValues"
 		{
 			"totem_damage_percentage"
 			{
 				"value"		"200 300 400 500 600"
 				"CalculateSpellDamageTooltip"	"0"
-				"special_bonus_unique_earthshaker_totem_damage"	"+250"
+				"special_bonus_unique_earthshaker_totem_damage"	"+150"
 			}
-			"scepter_height"			"6000"
-			"scepter_height_arcbuffer"	"100"
-			"scepter_acceleration_z"	"16000"
-			"scepter_acceleration_horizontal"	"12000"
+			// A杖条约2倍速度
+			"scepter_height"			"1900"
+			"scepter_acceleration_z"	"8000"
+			"scepter_acceleration_horizontal"	"6000"
 			"scepter_leap_duration"		"0.4"
 			"scepter_cleave_pct"
 			{
@@ -1357,40 +1335,34 @@
 				"RequiresScepter"		"1"
 			}
 			"bonus_attack_range"		"200"
+
+			"projectile_body_damage_creep"
+			{
+				"special_bonus_facet_earthshaker_slugger"		"=50 =80 =110 =140 =170"
+			}
+			"projectile_body_damage_hero"
+			{
+				"special_bonus_facet_earthshaker_slugger"		"=150 =250 =350 =450 =550"
+			}
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 
 	// 余震
 	"earthshaker_aftershock"
 	{
-		"MaxLevel" "5"
-		"AbilityDuration"				"1.1 1.2 1.3 1.4 1.5"
+		"MaxLevel" "6"
+		"AbilityDuration"				"0.6 0.8 1.0 1.2 1.4 1.6"
 		"AbilityValues"
 		{
 				"aftershock_range"
 				{
-					"value"		"420"
-					"affected_by_aoe_increase"	"1"
-					"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_5"
+					"value"		"400"	// 350
 				}
 				"aftershock_damage"
 				{
-					"value"		"70 100 130 160 190"
-					"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_6"
+					"value"		"70 140 200 260 320 380"	// x2
+					"special_bonus_unique_earthshaker_6"		"+200"	// 50
 				}
-		}
-	}
-	"special_bonus_unique_earthshaker_6"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"200"
-				"ad_linked_abilities"			"earthshaker_aftershock"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	// 回音击
@@ -1404,21 +1376,14 @@
 				"echo_slam_echo_damage"
 				{
 					"value"				"130 170 210 250"
-					"LinkedSpecialBonus"		"special_bonus_unique_earthshaker_2"
+				"special_bonus_unique_earthshaker_2" "+100"	// 50
 				}
-				"echo_slam_initial_damage"		"200 280 360 440"
-		}
-	}
-	"special_bonus_unique_earthshaker_2"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
-				"ad_linked_abilities"			"earthshaker_echo_slam"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
+				"echo_slam_initial_damage"		"200 280 360 440"	// x2
+				"AbilityCooldown"
+				{
+					"value"										"120.0 110.0 100.0 90.0"
+					"special_bonus_unique_earthshaker_echo_cd"	"-50%"
+				}
 		}
 	}
 	//=================================================================================================================
