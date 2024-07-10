@@ -1107,10 +1107,8 @@
 		{
 			"bonus_gold"
 			{
-				"value"				"50 100 150 200 250"
-				"LinkedSpecialBonus"	"special_bonus_unique_doom_3"
+				"value"				"40 80 120 160 200"
 			}
-			"armor"					"2 4 6 8 10"
 			"creep_level"			"6"
 		}
 	}
@@ -1118,6 +1116,7 @@
 	"doom_bringer_scorched_earth"
 	{
 		"MaxLevel" "5"
+		"AbilityCooldown"				"41 39 37 35 33"
 		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
@@ -1138,59 +1137,17 @@
 	"doom_bringer_infernal_blade"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"15 12 9 6 3"
-		"AbilitySpecial"
+		"AbilityCooldown"				"15 13 10 7 4"
+		"AbilityValues"
 		{
-			"01"
+			"burn_damage"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"burn_damage"			"40 50 60 70 80"
+				"value" "40 50 60 70 80"
 			}
-			"02"
+			"burn_damage_pct"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_damage_pct"		"2"
-				"LinkedSpecialBonus"	"special_bonus_unique_doom_1"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"burn_duration"			"3.0"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"ministun_duration"		"1.0"
-			}
-			"05"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"shard_ministun_duration"		"1.5"
-				"RequiresShard"					"1"
-			}
-			"06"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"shard_bonus_stun_duration"		"2.0"
-				"RequiresShard"					"1"
-			}
-			"07"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"shard_bonus_damage"			"200"
-				"RequiresShard"					"1"
-			}
-		}
-	}
-	"special_bonus_unique_doom_1"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"2"
-				"ad_linked_abilities"			"doom_bringer_infernal_blade"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value" "2"
+				"special_bonus_unique_doom_1" "+2"
 			}
 		}
 	}
@@ -1204,17 +1161,24 @@
 			"duration"
 			{
 				"value"								"12 14 16 18"
-				"special_bonus_unique_doom_7"		"+3"
 			}
 			"damage"
 			{
 				"value"								"30 50 70 90"
-				"special_bonus_unique_doom_5"		"+30"
 			}
 			"AbilityCooldown"
 			{
 				"value"								"120"
 			}
+		}
+	}
+	// 恶魔的交易
+	"doom_bringer_devils_bargain"
+	{
+		"AbilityValues"
+		{
+			"buyback_penalty"	"0"		// 15
+			"item_sellback_percent"	"65"	// 90
 		}
 	}
 	//=================================================================================================================
