@@ -386,11 +386,6 @@
 		"Ability5"		"abyssal_underlord_dark_rift"
 	}
 
-	"npc_dota_hero_life_stealer"
-    {
-        "Ability17"		"special_bonus_attack_damage_150"
-    }
-
 	"npc_dota_hero_brewmaster"
 	{
 		"Ability4"		"brewmaster_drunken_haze"
