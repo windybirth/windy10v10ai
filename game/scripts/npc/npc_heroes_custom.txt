@@ -1385,6 +1385,7 @@
 	}
 	"npc_dota_hero_lina"
 	{
+		"Ability10"		"special_bonus_unique_lina_dragon_slave_damage"
 		"Bot"
 		{
 			"Build"
@@ -1415,7 +1416,7 @@
 				"24"		""
 				"25"		"special_bonus_unique_lina_crit_debuff"
 				"26"		""
-				"27"		"special_bonus_attack_damage_25"
+				"27"		"special_bonus_unique_lina_dragon_slave_damage"
 				"28"		"special_bonus_unique_lina_4"
 				"29"		"special_bonus_unique_lina_2"
 				"30"		"special_bonus_unique_lina_7"

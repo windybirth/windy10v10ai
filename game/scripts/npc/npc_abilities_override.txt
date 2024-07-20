@@ -6455,6 +6455,24 @@
 	//=================================================================================================================
 	// Ability: Nyx Assassin 司夜刺客/小强
 	//=================================================================================================================
+	// 穿刺
+	"nyx_assassin_impale"
+	{
+		"MaxLevel" "5"
+		"AbilityCooldown"				"18 17 16 15 14"
+		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityValues"
+		{
+				"duration"
+				{
+					"value"				"1.1 1.4 1.7 2.0 2.3"
+				}
+				"impale_damage"
+				{
+					"value"			"100 160 220 280 340"
+				}
+		}
+	}
 	// 法力燃烧
 	"nyx_assassin_mana_burn"
 	{
@@ -6472,26 +6490,6 @@
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
-	}
-	// 穿刺
-	"nyx_assassin_impale"
-	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"18 17 16 15 14"
-		"AbilityManaCost"				"100 120 140 160 180"
-		"AbilityValues"
-		{
-				"duration"
-				{
-					"value"				"1.1 1.4 1.7 2.0 2.3"
-					"LinkedSpecialBonus"	"special_bonus_unique_nyx_4"
-				}
-				"impale_damage"
-				{
-					"value"			"100 160 220 280 340"
-					"LinkedSpecialBonus"	"special_bonus_unique_nyx_2"
-				}
-		}
 	}
 	// 神智爆裂
 	"nyx_assassin_jolt"
@@ -9986,11 +9984,13 @@
 			"dragon_slave_damage"
 			{
 				"value"							"150 225 300 400 525"
+				"special_bonus_unique_lina_dragon_slave_damage"		"+100"
 			}
 			"dragon_slave_burn_damage_tooltip"
 			{
 				"value"							"0"
 				"special_bonus_facet_lina_dot"	"=150 =225 =300 =400 =525"
+				"special_bonus_unique_lina_dragon_slave_damage"		"+100"
 			}
 			"AbilityCooldown"
 			{
@@ -9998,6 +9998,14 @@
 				"special_bonus_unique_lina_1"		"-3.5"
 			}
 		}
+	}
+	"special_bonus_unique_lina_dragon_slave_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
 	}
 	// 光击阵
 	"lina_light_strike_array"
@@ -10037,6 +10045,15 @@
             }
         }
     }
+	// 腾焰斗篷
+	"lina_flame_cloak"
+	{
+		"AbilityValues"
+		{
+			"magic_resistance"					"50"	// 35
+			"spell_amp"							"50"	// 35
+		}
+	}
 	// 神灭斩
 	"lina_laguna_blade"
 	{
@@ -10046,12 +10063,12 @@
 		{
 			"damage"
 			{
-				"value"							"500 700 900 1100"
+				"value"							"600 900 1200 1500"		// 500 700 900
 			}
 			"burn_damage_tooltip"
 			{
 				"value"							"0"
-				"special_bonus_facet_lina_dot"	"=500 =700 =900 =1100"
+				"special_bonus_facet_lina_dot"	"=600 =900 =1200 =1500"	// =500 =700 =900
 			}
 			"AbilityCooldown"
 			{
