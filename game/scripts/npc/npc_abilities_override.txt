@@ -10577,7 +10577,7 @@
 	"puck_illusory_orb"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityManaCost"				"90 100 110 120 130"
 		"AbilityValues"
 		{
 			"damage"
@@ -10587,7 +10587,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"								"11 10 9 8 7" // 11 10 9 8
+				"value"								"11 10 9 8 7"
 			}
 		}
 	}
@@ -10649,8 +10649,8 @@
 		{
 				"coil_initial_damage"
 				{
-					"value"					"175 250 325 400" // 175 250 325
-					"special_bonus_unique_puck_coil_damage"			"+200" // 150
+					"value"					"350 500 650 800"				// x2
+					"special_bonus_unique_puck_coil_damage"			"+200"	// 150
 				}
 				"coil_stun_duration"
 				{
@@ -10658,8 +10658,8 @@
 				}
 				"coil_break_damage"
 				{
-					"value"					"200 300 400 500"
-					"special_bonus_unique_puck_coil_damage"			"+200"
+					"value"					"200 400 600 800"				// 200 300 400
+					"special_bonus_unique_puck_coil_damage"			"+200"	// 175
 				}
 		}
 	}
