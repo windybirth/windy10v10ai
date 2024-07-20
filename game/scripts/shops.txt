@@ -355,7 +355,7 @@
 		"item"		"item_broadsword"
 		"item"		"item_blink"
 	}
-	// 开局商店
+	// 策略时间 常用物品商店
 	"pregame"
 	{
 		"item"		"item_clarity"						// 净化药水
