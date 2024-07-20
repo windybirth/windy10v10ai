@@ -939,32 +939,25 @@
 	"chaos_knight_chaos_bolt"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilityManaCost"				"100 105 110 115 120"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
+			"stun_min"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_min"				"1 1.2 1.4 1.6 1.8"
-				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_3"
+				"value"					"1.25 1.5 1.75 2 2.25"
 			}
-			"03"
+			"stun_max"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_max"				"1.75 2.25 2.75 3.25 3.75"
-				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_3"
+				"value"					"1.75 2.25 2.75 3.25 3.75"
 			}
-			"04"
+
+			"AbilityCastRange"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_min"			"90 110 130 150 170"
+				"value"							"500"
+				"special_bonus_shard"			"+400"
 			}
-			"05"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"damage_max"			"180 220 260 300 340"
-			}
+			"damage_min"				"90 120 150 180 210"
+			"damage_max"				"150 230 310 390 470"
 		}
 	}
 	// 实相裂隙
@@ -972,25 +965,14 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"18 14 10 6 4"
-		"AbilityManaCost"				"50"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"AbilityCastRange"				"600 650 700 750 800"
+			"pull_distance"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"cast_range"				"550 600 650 700 750"
+				"value"										"300 350 400 450 500"
 			}
-			"02"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"pull_distance"				"250 300 350 400 450"
-				"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_2"
-			}
-			"03"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"armor_reduction"			"4 5 6 7 8"
-			}
+			"armor_reduction"			"4 6 8 10 12"	// 4 5 6 7
 		}
 	}
 	// 混沌一击
@@ -1003,7 +985,6 @@
 				"lifesteal"
 				{
 					"value"					"20 30 40 50 60"
-					"LinkedSpecialBonus"		"special_bonus_unique_chaos_knight_6"
 				}
 		}
 	}

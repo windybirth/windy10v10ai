@@ -830,9 +830,7 @@
 	// 混沌骑士
 	"npc_dota_hero_chaos_knight"
 	{
-		"Ability6"	"imba_chaos_knight_phantasm"
-		"Ability13"		"special_bonus_lifesteal_15"
-		"Ability17"		"special_bonus_cleave_60"
+		"Ability6"		"imba_chaos_knight_phantasm"
 		"Bot"
 		{
 			"Build"

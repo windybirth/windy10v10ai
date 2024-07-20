@@ -545,9 +545,11 @@
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"Health Regen: "
 
 		// 混沌骑士
+		"DOTA_Tooltip_ability_chaos_knight_chaos_bolt_shard_description"		"Causes Chaos Bolt cast range to be increased to %AbilityCastRange%."
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm"										"Army of Chaos"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons Chaos Knights from other dimensions to this world and fight with Chaos Knights here for %duration% seconds. Whenever Chaos Knight attacks, other Chaos Knights will also carry out additional attacks on the target, and other Chaos Knights' attacks have a short cooldown."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons Chaos Knights from other dimensions to this world and fight with Chaos Knights here. Whenever Chaos Knight attacks, other Chaos Knights will also carry out additional attacks on the target, and other Chaos Knights' attacks have a short cooldown."
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_Lore"									"With the Chaos Knight's rich combat experience in various worlds, his illusions are enough to suppress anyone who dares to oppose him."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_duration"								"Duration:"
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_count"							"Additional Attacks:"
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_cooldown"						"Attack Cooldown:"
 		// "DOTA_Tooltip_ability_imba_chaos_knight_phantasm_scepter_description"					"Army of Chaos can be cast on an allied hero, granting the target hero the effect of Army of Chaos."
