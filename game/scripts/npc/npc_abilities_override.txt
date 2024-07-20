@@ -2275,13 +2275,11 @@
 				"damage"
 				{
 					"value"		"100 175 250 325 400"
-					"LinkedSpecialBonus"	"special_bonus_unique_mars_spear_bonus_damage"
 				}
 				"spear_range"		"900 1000 1100 1200 1300"
 				"stun_duration"
 				{
 					"value"		"1.3 1.6 1.9 2.2 2.5"
-					"LinkedSpecialBonus"	"special_bonus_unique_mars_spear_stun_duration"
 				}
 		}
 	}
@@ -2293,15 +2291,12 @@
 		{
 			"crit_mult"
 			{
-				"value"								"150 190 230 270 310"
-				"special_bonus_unique_mars_gods_rebuke_extra_crit"		"+65"
-				"DamageTypeTooltip"			"DAMAGE_TYPE_PHYSICAL"
+				"value"								"150 200 250 300 350"
 			}
-			"bonus_damage_vs_heroes"	"20 25 30 35 40"
+			"bonus_damage_vs_heroes"	"20 30 40 50 60"	// x2
 			"AbilityCooldown"
 			{
 				"value"					"16 14 12 10 8"
-				"special_bonus_unique_mars_rebuke_cooldown"				"-3"
 			}
 		}
 	}
@@ -2314,12 +2309,10 @@
 			"physical_damage_reduction"
 			{
 				"value"		"30 40 50 60 70"
-				"special_bonus_unique_mars_bulwark_damage_reduction"		"+12"
 			}
 			"physical_damage_reduction_side"
 			{
 				"value"												"15 20 25 30 35"
-				"special_bonus_unique_mars_bulwark_damage_reduction"		"+6"
 			}
 		}
 	}
