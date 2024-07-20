@@ -2293,9 +2293,9 @@
 	{
 		"ID"						"3027"
 		"BaseClass"					"item_lua"
-		"ScriptFile"                    		"items/item_tome_of_agility"
-		"AbilityTextureName"		    		"tome_of_agility"
-		"ItemCost"					"19999"
+		"ScriptFile"				"items/item_tome_of_agility"
+		"AbilityTextureName"		"tome_of_agility"
+		"ItemCost"					"12000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"agility tome;agi"
 		"ItemShopTags"					"consumable"
@@ -2311,7 +2311,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"50"
+				"bonus"				"50"
 			}
 		}
 	}
@@ -2324,9 +2324,9 @@
 	{
 		"ID"						"3028"
 		"BaseClass"					"item_lua"
-		"ScriptFile"                    		"items/item_tome_of_intelligence"
-		"AbilityTextureName"		   		"tome_of_intelligence"
-		"ItemCost"					"19999"
+		"ScriptFile"				"items/item_tome_of_intelligence"
+		"AbilityTextureName"		"tome_of_intelligence"
+		"ItemCost"					"10000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"intelligence tome;int"
 		"ItemShopTags"					"consumable"
@@ -2342,7 +2342,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"50"
+				"bonus"				"50"
 			}
 		}
 	}
@@ -2355,9 +2355,9 @@
 	{
 		"ID"						"3029"
 		"BaseClass"					"item_lua"
-		"ScriptFile"                    		"items/item_tome_of_strength"
-		"AbilityTextureName"		    		"tome_of_strength"
-		"ItemCost"					"19999"
+		"ScriptFile"				"items/item_tome_of_strength"
+		"AbilityTextureName"		"tome_of_strength"
+		"ItemCost"					"12000"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
 		"ItemAliases"					"strength tome;str"
 		"ItemShopTags"					"consumable"
@@ -2373,7 +2373,7 @@
 			"01"
 			{
 				"var_type"			"FIELD_INTEGER"
-				"bonus"         		"50"
+				"bonus"				"50"
 			}
 		}
 	}
@@ -4824,7 +4824,7 @@
 		"AbilityTextureName"			"item_recipe_tome_of_luoshu"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"6003"
+		"ItemCost"						"26000"
 		"ItemShopTags"					""
 
 		// Recipe
