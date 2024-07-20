@@ -4861,9 +4861,10 @@
 		{
 			"bonus_all_stats"			"50"
 			"status_resistance"			"30"
-			"spell_amp"					"30"
-			"bonus_base_damage_percent"	"50"
 			"bonus_cast_range"			"200"
+			// tooltip values, actual values in modifier_item_tome_of_luoshu_stats
+			"spell_amp"					"50"
+			"bonus_base_damage_percent"	"80"
 		}
 	}
 
