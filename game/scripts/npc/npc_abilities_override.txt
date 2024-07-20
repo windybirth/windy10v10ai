@@ -1772,8 +1772,6 @@
 	"kunkka_torrent"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"16 14 12 10 8"
-		"AbilityManaCost"				"90 100 110 120 130"
 		"AbilityValues"
 		{
 			"slow_duration"				"1 2 3 4 5"
@@ -1792,16 +1790,27 @@
 	// 水刀
 	"kunkka_tidebringer"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "6"
 		"AbilityValues"
 		{
-			"cleave_ending_width"			"500 550 600 650 700"
-			"cleave_distance"			"650 800 950 1100 1250"
-			"damage_bonus"				"30 60 90 120 150"
+			"cleave_ending_width"
+			{
+				"value"		"450 500 550 600 650 700"
+				"affected_by_aoe_increase"	"1"
+			}
+			"cleave_distance"
+			{
+				"value"			"500 650 800 950 1100 1250"
+				"affected_by_aoe_increase"	"1"
+			}
+			"damage_bonus"
+			{
+				"value"			"10 30 60 90 120 150"
+				"special_bonus_unique_kunkka_2"		"+60"
+			}
 			"AbilityCooldown"
 			{
 				"value"					"12.0 10.0 8.0 6.0 4.0"
-				"special_bonus_unique_kunkka_5"			"-2"
 			}
 		}
 	}
@@ -1810,7 +1819,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"550 700 850 1000 1150"
-		"AbilityCooldown"				"24 20 16 12 8"
+		"AbilityCooldown"				"28 24 20 16 12"
 	}
 	// 幽灵船
 	"kunkka_ghostship"
@@ -1823,7 +1832,6 @@
 			"AbilityCooldown"
 			{
 				"value"					"80 70 60 50"
-				"special_bonus_unique_kunkka_ghostship_cooldown"	"-10"
 			}
 		}
 	}
