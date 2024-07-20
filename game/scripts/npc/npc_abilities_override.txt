@@ -3297,55 +3297,55 @@
 	//=================================================================================================================
 	// Ability: Slardar 斯拉达/大鱼人
 	//=================================================================================================================
+	// 汪洋前哨 先天技能
+	"slardar_seaborn_sentinel"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"puddle_regen"
+			{
+				"value"						"2 4 6 8 10"
+				"special_bonus_scepter"		"+22"
+			}
+			"puddle_armor"
+			{
+				"value"						"2 4 6 8 10"	// x2
+				"special_bonus_scepter"		"+11"
+			}
+			"river_damage"					"8 16 24 32 40"
+		}
+	}
 	// 守卫冲刺
 	"slardar_sprint"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"24 22 20 18 16"
 		"AbilityValues"
 		{
-				"bonus_speed"					"25 30 35 40 45"
-				"puddle_regen"
-				{
-					"value"						"2 4 6 8 10"
-					"special_bonus_scepter"		"+22"
-				}
-				"puddle_armor"
-				{
-					"value"						"2 4 6 8 10"
-					"special_bonus_scepter"		"+11"
-				}
+				"bonus_speed"					"10 20 30 40 50"
 		}
 	}
 	// 鱼人碎击
 	"slardar_slithereen_crush"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 				"crush_extra_slow"
 				{
 					"value"	"-20 -25 -30 -35 -40"
-					"LinkedSpecialBonus"	"special_bonus_unique_slardar_8"
 					"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
 				}
-				"crush_attack_slow_tooltip"		"-40 -50 -60 -70 -80"
+				"crush_attack_slow_tooltip"		"-40 -50 -60 -70 -80"	// x2
 				"crush_extra_slow_duration"		"3 4 5 6 7"
 				"stun_duration"
 				{
-					"value"															"1.25"
-					"special_bonus_unique_slardar_slithereen_crush_stun"			"+0.25"
-				}
-				"puddle_duration"
-				{
-					"value"					"3 4 5 6 7"
-					"special_bonus_scepter"	"+19"
+					"value"															"1.25"	// 0.8
+					"special_bonus_unique_slardar_slithereen_crush_stun"			"+0.25"	// 0.2
 				}
 				"crush_damage"
 				{
 					"value"					"75 150 225 300 375"
-					"LinkedSpecialBonus"	"special_bonus_unique_slardar"
 				}
 		}
 	}
@@ -3358,16 +3358,14 @@
 			"bonus_damage"
 			{
 				"value"		"50 100 150 200 250"
-				"special_bonus_unique_slardar_2"	"+100"
+				"special_bonus_unique_slardar_2"	"+100"	// 40
 			}
-			"river_damage"			"8 16 24 32 40"
 		}
 	}
-	// 点灯
+	// 侵蚀雾霭 点灯
 	"slardar_amplify_damage"
 	{
 		"MaxLevel" "4"
-		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityValues"
 		{
 			"armor_reduction"
@@ -3375,17 +3373,9 @@
 				"value"				"-10 -15 -20 -25"
 				"special_bonus_unique_slardar_5"	"-5"
 			}
-			"duration"
+			"puddle_radius"	// 水迹范围
 			{
-				"value"			"20"
-			}
-			"puddle_radius"
-			{
-				"value"			"200"
-			}
-			"puddle_duration"
-			{
-				"value"			"10"
+				"value"			"200"	// 100
 			}
 		}
 	}
