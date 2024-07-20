@@ -10015,6 +10015,10 @@
 		"AbilityManaCost"				"100 115 130 145 160"
 		"AbilityValues"
 		{
+				"light_strike_array_aoe"
+				{
+					"value" "300"	// 250
+				}
 				"light_strike_array_stun_duration"	"1.3 1.6 1.9 2.2 2.5"
 				"light_strike_array_damage"
 				{
@@ -10029,22 +10033,28 @@
 	}
 	// 炽魂
 	"lina_fiery_soul"
-    {
-        "MaxLevel"  "6"
-        "AbilityValues"
-        {
-            "fiery_soul_attack_speed_bonus"
-            {
-                "value"								"4 8 16 24 32 40"
-                "special_bonus_unique_lina_2"		"+10"
-            }
-            "fiery_soul_move_speed_bonus"
-            {
-                "value"							"1 1.5 2 2.5 3 3.5"
-                "special_bonus_unique_lina_2"	"+1"
-            }
-        }
-    }
+	{
+		"MaxLevel"  "6"
+		"AbilityValues"
+		{
+			"fiery_soul_attack_speed_bonus"
+			{
+				"value"								"4 8 16 24 32 40"
+				"special_bonus_unique_lina_2"		"+10"
+			}
+			"fiery_soul_move_speed_bonus"
+			{
+				"value"							"1 1.5 2 2.5 3 3.5"
+				"special_bonus_unique_lina_2"	"+1"
+			}
+			// 暴击
+			"target_crit_multiplier"
+			{
+				"value"												"0"
+				"special_bonus_unique_lina_crit_debuff"				"+175"
+			}
+		}
+	}
 	// 腾焰斗篷
 	"lina_flame_cloak"
 	{
@@ -10080,6 +10090,15 @@
 				"value"								"0"
 				"special_bonus_facet_lina_supercharge"			"+10"	// 5
 				"RequiresFacet"					"lina_supercharge"
+			}
+			// 护盾
+			"barrier_pct"
+			{
+				"special_bonus_unique_lina_7"		"200"	// 125
+			}
+			"barrier_duration"
+			{
+				"special_bonus_unique_lina_7"		"20"	// 15
 			}
 		}
 	}
