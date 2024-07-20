@@ -2046,12 +2046,12 @@
 				"8"		"sandking_sand_storm"
 				"9"		"sandking_burrowstrike"
 				"10"		"special_bonus_unique_sand_king_burrowstrike_stun"
-				"11"		"sandking_caustic_finale"
+				"11"		"sandking_scorpion_strike"
 				"12"		"sandking_epicenter"
 				"13"		"sandking_sand_storm"
 				"14"		"sandking_sand_storm"
-				"15"		"special_bonus_unique_sand_king_8"
-				"16"		"sandking_caustic_finale"
+				"15"		"special_bonus_unique_sand_king_scorpion_strike_damage"
+				"16"		"sandking_scorpion_strike"
 				"17"		""
 				"18"		"sandking_epicenter"
 				"19"		""
@@ -2067,9 +2067,9 @@
 				"29"		"special_bonus_unique_sand_king_7"
 				"30"		"special_bonus_unique_sand_king"
 				"31"		"sandking_epicenter"
-				"32"		"sandking_caustic_finale"
-				"33"		"sandking_caustic_finale"
-				"34"		"sandking_caustic_finale"
+				"32"		"sandking_scorpion_strike"
+				"33"		"sandking_scorpion_strike"
+				"34"		"sandking_scorpion_strike"
 			}
 		}
 	}
