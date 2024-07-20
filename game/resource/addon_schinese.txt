@@ -1038,7 +1038,7 @@
 		"DOTA_Tooltip_modifier_int_tome_Description"					"智力增加 <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"洛书"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>使用: 洛书祝福</h1> 永久增加全属性 %bonus_all_stats% 点，%status_resistance%%%状态抗性，%spell_amp%%%技能增强，%bonus_base_damage_percent%%%基础攻击力，%bonus_cast_range%施法距离。\n只可使用一次\n可以分享给队友"
+		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>使用: 洛书祝福</h1> 永久增加 %bonus_all_stats% 点全属性，<br>%status_resistance%%%状态抗性，<br>%spell_amp%%%技能增强，<br>%bonus_base_damage_percent%%%基础攻击力，<br>%bonus_cast_range%施法距离。\n只可使用一次\n可以分享给队友"
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"Is it enlightenment that you aspire to...?"
 
 		"DOTA_Tooltip_modifier_luoshu_tome"								"洛书看好你！"
