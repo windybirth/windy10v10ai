@@ -6497,14 +6497,17 @@
 		"LinkedAbility"					"nyx_assassin_mana_burn"
 		"AbilityDraftPreAbility"		"nyx_assassin_mana_burn"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"12 10 8 6 4"
-		"AbilityManaCost"				"100 120 140 160 180"
+		"AbilityManaCost"				"80 100 120 140 160"
 		"AbilityValues"
 		{
-			"float_multiplier"
+			"AbilityCooldown"
 			{
-				"value"		"1.5 2 2.5 3 3.5"
-				"special_bonus_unique_nyx_5"			"+0.5"
+				"value"			"11 10 9 8 7"
+			}
+
+			"max_mana_as_damage_pct"
+			{
+				"value"		"20 25 30 35 40"
 			}
 		}
 	}
@@ -6527,18 +6530,25 @@
 	"nyx_assassin_vendetta"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 70 60 50"
-		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
-			"movement_speed"		"16 18 20 22"
+			"AbilityCooldown"
+			{
+				"value"		"80 70 60 50"
+			}
+			"AbilityManaCost"
+			{
+				"value"				"180 240 300 360"
+			}
+			"movement_speed"
+			{
+				"value"			"16 18 20 22"
+			}
 			"bonus_damage"
 			{
-				"value"					"300 450 600 750"
+				"value"					"300 500 700 900"	// 300 400 500
 				"CalculateSpellDamageTooltip"	"1"
 			}
-			"health_regen_rate_scepter"		"3"
-			"mana_regen_rate_scepter"		"3"
 		}
 	}
 	// 钻地
@@ -6550,19 +6560,28 @@
 			"health_regen_rate"		"1"
 			"mana_regen_rate"		"1"
 			"damage_reduction"			"40"
-			"impale_bonus_cast_range"			"525"
-			"jolt_bonus_cast_range"			"400"
-			"impale_cooldown_reduction"			"7.0"
-			"carapace_radius"
+			"cast_range"			"600"			// 500
+			"cooldown_reduction"			"40"	// 25
+		}
+	}
+	// 夜之感知 先天技能
+	"nyx_assassin_nyxth_sense"
+	{
+		"AbilityValues"
+		{
+			"radius"
 			{
-				"value"			"300"
-				"affected_by_aoe_increase"	"1"
+				"value"		"600"	// 400
 			}
 		}
 	}
-	"nyx_assassin_unburrow"
+	// 法力燃烧 天命1
+	"nyx_assassin_innate_mana_burn"
 	{
-		"AbilityCooldown"				"5.0"
+		"AbilityValues"
+		{
+			"mana_pct"		"15 20 25 30 35"
+		}
 	}
 	//=================================================================================================================
 	// Ability: Pangolier 石鳞剑士/滚滚
