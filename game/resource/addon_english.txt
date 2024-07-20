@@ -882,7 +882,7 @@
 
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"Tome of Luoshu"
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently increases <br>%bonus_all_stats% all stats, <br>%status_resistance%%% status resistance, <br> %spell_amp%%% spell amplify, <br>%bonus_base_damage_percent%%% base damage, <br>%bonus_cast_range% cast range.\n Can only use once.\n Shareable with teammate."
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"Is it enlightenment that you aspire to...?"
+		"DOTA_Tooltip_ability_item_tome_of_luoshu_cast_error"			"Luoshu can only be used once."
 
 		"DOTA_Tooltip_modifier_luoshu_tome"								"Luoshu's Tomes Consumed"
 		"DOTA_Tooltip_modifier_luoshu_tome_Description"					""

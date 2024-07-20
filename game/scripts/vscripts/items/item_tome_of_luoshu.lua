@@ -19,6 +19,16 @@ if IsServer() then
 	end
 end
 
+function item_tome_of_luoshu:CastFilterResult()
+	local caster = self:GetCaster()
+	if caster:HasModifier("modifier_luoshu_tome") then
+		return UF_FAIL_CUSTOM
+	end
+end
+
+function item_tome_of_luoshu:GetCustomCastError()
+	return "#DOTA_Tooltip_ability_item_tome_of_luoshu_cast_error"
+end
 
 if modifier_luoshu_tome == nil then modifier_luoshu_tome = class({}) end
 
