@@ -73,6 +73,7 @@ function modifier_item_ultimate_scepter_2_consumed:OnCreated()
 		self.bonus_health = self:GetAbility():GetSpecialValueFor("bonus_health")
 		self.bonus_mana = self:GetAbility():GetSpecialValueFor("bonus_mana")
 		self.spell_amp = self:GetAbility():GetSpecialValueFor("spell_amp")
+		self.all_stats = self:GetAbility():GetSpecialValueFor("bonus_all_stats")
 	end
 end
 
@@ -81,6 +82,9 @@ function modifier_item_ultimate_scepter_2_consumed:DeclareFunctions()
 		MODIFIER_PROPERTY_HEALTH_BONUS,
 		MODIFIER_PROPERTY_MANA_BONUS,
 		MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE,
+		MODIFIER_PROPERTY_STATS_STRENGTH_BONUS,
+		MODIFIER_PROPERTY_STATS_AGILITY_BONUS,
+		MODIFIER_PROPERTY_STATS_INTELLECT_BONUS
 	}
 end
 
@@ -94,6 +98,18 @@ end
 
 function modifier_item_ultimate_scepter_2_consumed:GetModifierSpellAmplify_Percentage()
 	return self.spell_amp
+end
+
+function modifier_item_ultimate_scepter_2_consumed:GetModifierBonusStats_Strength()
+	return self.all_stats
+end
+
+function modifier_item_ultimate_scepter_2_consumed:GetModifierBonusStats_Agility()
+	return self.all_stats
+end
+
+function modifier_item_ultimate_scepter_2_consumed:GetModifierBonusStats_Intellect()
+	return self.all_stats
 end
 
 function modifier_item_ultimate_scepter_2_consumed:AllowIllusionDuplicate()
