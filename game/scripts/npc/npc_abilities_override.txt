@@ -10734,10 +10734,10 @@
 	// 暗影突袭
 	"queenofpain_shadow_strike"
 	{
-		"LinkedAbility"                 "dark_seer_vacuum"
-		"AbilityDraftPreAbility"        "dark_seer_vacuum"
-		"MaxLevel" "5"
-		"AbilityCastRange"				"500 550 600 650 700" // FIXME 暂时加强
+		"LinkedAbility"					"dark_seer_vacuum"
+		"AbilityDraftPreAbility"		"dark_seer_vacuum"
+		"MaxLevel"						"5"
+		"AbilityCastRange"				"500 550 600 650 700"
 		"AbilityCooldown"				"16.0 13.0 10.0 7.0 4.0"
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
@@ -10749,15 +10749,14 @@
 			}
 			"duration_damage"		"20 40 60 80 100"
 			"movement_slow"			"-20 -35 -50 -65 -80"
-			"duration_heal"		"10 20 30 40 50"
 		}
 	}
 	// 真空（来自黑贤）
 	"dark_seer_vacuum"
 	{
-		"LinkedAbility"                 "queenofpain_shadow_strike"
-		"AbilityDraftPreAbility"        "queenofpain_shadow_strike"
-		"MaxLevel"                      "5"
+		"LinkedAbility"					"queenofpain_shadow_strike"
+		"AbilityDraftPreAbility"		"queenofpain_shadow_strike"
+		"MaxLevel"						"5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 暂时无视bkb
 		"AbilityCastRange"				"500 550 600 650 700" // 与镖同步
 		"AbilityCooldown"				"30"
@@ -10768,14 +10767,10 @@
 				"radius"
 				{
 					"value"		"325 400 475 550 625"
-					"LinkedSpecialBonus"	"special_bonus_unique_dark_seer_2"
-					"affected_by_aoe_increase"	"1"
 				}
 				"duration"				"0.3 0.4 0.5 0.6 0.7"
 				"damage"				"70 130 190 250 310"
-				"radius_tree"				"150"
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 	// 闪烁
 	"queenofpain_blink"
@@ -10785,7 +10780,6 @@
 		"AbilityCooldown"				"12.0 10.0 8.0 6.0 4.0"
 		"AbilityValues"
 		{
-				"min_blink_range"		"200"
 				"shard_damage"
 				{
 					"RequiresShard"				"1"
@@ -10811,14 +10805,11 @@
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
-			"area_of_effect"									"550"
-			"projectile_speed"									"900"
 			"damage"
 			{
-				"value"											"175 250 325 400 575"// +100
-				"special_bonus_unique_queen_of_pain_2" 			"+175"
+				"value"											"100 200 300 400 500"
+				"special_bonus_unique_queen_of_pain_2" 			"+150"
 			}
-
 		}
 	}
 	// 超声冲击波
@@ -10832,6 +10823,11 @@
 				{
 					"value"											"350 450 550 650"
 					"special_bonus_unique_queen_of_pain_7"			"+250"
+				}
+				"AbilityCooldown"
+				{
+					"value"											"110 95 80 65"
+					"special_bonus_unique_queen_of_pain_3"			"-45"
 				}
 		}
 	}

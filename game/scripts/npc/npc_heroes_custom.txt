@@ -1939,7 +1939,7 @@
 	}
 	"npc_dota_hero_queenofpain"
 	{
-		"Ability4"      "dark_seer_vacuum"
+		"Ability5"		"dark_seer_vacuum"
 	}
 	"npc_dota_hero_razor"
 	{
