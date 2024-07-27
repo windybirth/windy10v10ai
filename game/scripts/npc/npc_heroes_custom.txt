@@ -1195,7 +1195,7 @@
 	}
 	"npc_dota_hero_gyrocopter"
 	{
-		"Ability4"              "phantom_lancer_phantom_edge"
+		"Ability5"		"phantom_lancer_phantom_edge"
 	}
 	"npc_dota_hero_huskar"
 	{
