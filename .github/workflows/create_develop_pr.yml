@@ -1,5 +1,5 @@
 # create pr when windybirth push to feature branch
-name: Auto Create Develop PR
+name: Create Develop PR
 on:
   push:
 
