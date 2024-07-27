@@ -3,8 +3,8 @@
 	"Language"		"English"
 	"Tokens"
 	{
-		"addon_game_name"		"Dota 10v10 AI Wars"
-		"DOTA_GameMode_15"		"Dota 10v10 AI Wars"
+		"addon_game_name"		"Dota 10v10 Custom AI by Windy"
+		"DOTA_GameMode_15"		"Dota 10v10 Custom AI by Windy"
 		"DOTA_SHARD"			"Battle Points"
 
 		// /////////////////////////////////////////////////////////////////////////////
