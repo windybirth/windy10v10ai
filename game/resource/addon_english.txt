@@ -63,7 +63,6 @@
 		"player_gold_xp_multiplier_5"               "5"
 
 		"radiant_player_number_1"		"1  (Easy)"
-		"radiant_player_number_5"		"5  (Medium)"
 		"radiant_player_number_10"		"10 (Hard)"
 
 		"respawn_time_percentage_slow"        "Slow"
@@ -125,7 +124,7 @@
 		// "data_panel_member_point_rule_url"		"https://afdian.com/p/8d1e8ac8682711ed984b52540025c377"
 
 		"reset_property_use_season_point"		"Reset Attribute Points for {seasonPoint} Battle Points"
-		"reset_property_use_member_point"		"Reset Attribute Points for {memberPoint} Member Points"
+		"reset_property_use_member_point"		"Reset Attribute Points for 1000 Member Points"
 
 		"data_panel_player_property_label"		"Spend Attribute Points to upgrade your hero. Upgrades are permanent and persist between games."
 		"data_panel_player_property_label_2"		"Points cannot be spent on local host. Please play on a dedicated server to spend and benefit from upgrades."
@@ -295,9 +294,9 @@
 
 		// 茶神
 		"npc_dota_hero_techies"					"Hechahecha"
-		
+
 		// MARCI
-		
+
 		"DOTA_Tooltip_special_bonus_unique_marci_guardian_lifesteal"				"+{s:value} Sidekick/Bodyguard Lifesteal"
 		"DOTA_Tooltip_special_bonus_unique_marci_guardian_damage"					"+{s:value} Sidekick/Bodyguard Damage"
 
@@ -549,15 +548,17 @@
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"		"Increases the target's movement speed and health regeneration, and grants flying movement, allowing them to move over any terrain and obstacle."
         "DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"				"'Forward without fear, my friends!'"
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"			"DURATION:"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"%MOVEMENT SPEED:"
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"HEALTH REGENERATION:"
 		"DOTA_Tooltip_modifier_omninight_angelic_flight"					"Angelic Flight"
-		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT% movement speed."
+		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% movement speed."
 
 		// 混沌骑士
+		"DOTA_Tooltip_ability_chaos_knight_chaos_bolt_shard_description"		"Causes Chaos Bolt cast range to be increased to %AbilityCastRange%."
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm"										"Army of Chaos"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons other Chaos Knights from other dimensions to Chaos Knight's side and fight with alongside him as a part of his being for %duration% seconds. Whenever Chaos Knight attacks, the other Chaos Knights will also deliver their own attacks on the target. The additional Chaos Knights' attacks have a short cooldown before they can strike again."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons other Chaos Knights from other dimensions to Chaos Knight's side and fight with alongside him as a part of his being. Whenever Chaos Knight attacks, the other Chaos Knights will also deliver their own attacks on the target. The additional Chaos Knights' attacks have a short cooldown before they can strike again."
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_Lore"									"With the Chaos Knight's rich combat experience in various worlds, his very being brings enough strength to suppress anyone who dares to oppose him. And any copies of him."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_duration"								"DURATION:"
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_count"							"EXTRA ATTACKS:"
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_cooldown"						"EXTRA ATTACKS COOLDOWN:"
 		// "DOTA_Tooltip_ability_imba_chaos_knight_phantasm_scepter_description"					"Army of Chaos can be cast on an allied hero, granting the them the effect of Army of Chaos."
@@ -624,7 +625,7 @@
         "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} Strike Air Damage"
         "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}s Strike Air Cooldown"
         "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"				"Mana Burst also Dispels Debuffs on Self"
-	"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1_description"			"Casting Mana Burst will also apply a basic dispel to Saber, removing various negative debuffs."
+		"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1_description"			"Casting Mana Burst will also apply a basic dispel to Saber, removing various negative debuffs."
         "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"					"-{s:bonus_AbilityCooldown}s Excalibur Cooldown"
 
 		//沉渊之剑
@@ -828,6 +829,7 @@
         "DOTA_Tooltip_ability_lina_fiery_soul_Description"		"Grants bonus attack speed, movement speed, and spell damage each time Lina hits an enemy with a spell. Stacks with itself. Lasts %fiery_soul_stack_duration% seconds."
         "DOTA_Tooltip_ability_lina_fiery_soul_shard_description"	"Increases the Spell Damage granted by Fiery Soul per stack by +%shard_bonus_spell_damage%."
         "DOTA_Tooltip_ability_lina_fiery_soul_bonus_spell_damage"			"SPELL DAMAGE INCREASE:"
+		"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
 
         // 幽鬼 spe
         "DOTA_Tooltip_ability_spectre_desolate_Description"		"Deals bonus pure damage whenever Spectre attacks an enemy."
@@ -850,6 +852,9 @@
         // 巫妖
         "DOTA_Tooltip_ability_special_bonus_unique_lich_401"  "+{s:bonus_jumps} Chain Frost Bounces"
 
+		// Alchemist 炼金术士
+		"DOTA_Tooltip_ability_alchemist_chemical_rage_bonus_health"				"HEALTH BONUS:"
+
 		// /////////////////////////////////////////////////////////////////////////////
 		//
 		// 					              Items
@@ -868,20 +873,12 @@
 		"DOTA_Tooltip_Ability_item_tome_of_strength_Description"		"<h1>Use: Bulk</h1> Permanently increases your strength by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_strength_Lore"				"Is it strength that you desire...?"
 
-		"DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery"					"Tome of Strength(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery_Description"		"<h1>Use: Bulk</h1> Permanently increases your strength by %bonus%.\nShareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery_Lore"				"Is it strength that you desire...?"
-
 		"DOTA_Tooltip_modifier_str_tome"								"Strength Tomes Consumed"
 		"DOTA_Tooltip_modifier_str_tome_Description"					"Strength increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_agility"						"Tome of Agility"
 		"DOTA_Tooltip_Ability_item_tome_of_agility_Description"			"<h1>Use: Lighten</h1> Permanently increases your agility by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_agility_Lore"				"Is it swiftness that you seek...?"
-
-		"DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery"						"Tome of Agility(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery_Description"			"<h1>Use: Lighten</h1> Permanently increases your agility by %bonus%.\n Shareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery_Lore"				"Is it swiftness that you seek...?"
 
 		"DOTA_Tooltip_modifier_agi_tome"								"Agility Tomes Consumed"
 		"DOTA_Tooltip_modifier_agi_tome_Description"					"Agility increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
@@ -890,34 +887,30 @@
 		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Description"	"<h1>Use: Learn</h1> Permanently increases your intelligence by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Lore"			"Is it enlightenment that you aspire to...?"
 
-		"DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery"				"Tome of Intelligence(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery_Description"	"<h1>Use: Learn</h1> Permanently increases your intelligence by %bonus%.\n Shareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery_Lore"			"Is it enlightenment that you aspire to...?"
-
 		"DOTA_Tooltip_modifier_int_tome"								"Intelligence Tomes Consumed"
 		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"Tome of Luoshu"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently increases all attributes by %bonus_all_stats%, as well as provides %bonus_base_damage_percent%%% Base Attack Damage, %attack_speed_perc%%% Base Attack Speed Percentage, %bonus_movespeed%%% Movement Speed, %status_resistance%%% Status Resistance, %slow_resistance%%% Slow Resistance, %spell_amp%%% Spell Amplification, %bonus_cast_range% Cast Range, %bonus_aoe% AoE Bonus, %cast_speed%%% Cast Speed, and %manacost_reduction%%% lowered Mana Costs.\nA hero can only use one.\nShareable with teammates."
+		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently increases <br>%bonus_all_stats% All Attributes, <br>%status_resistance%%% Status Resistance, <br> %spell_amp%%% Spell Amplification, <br>%bonus_base_damage_percent%%% Base Attack Damage, <br>%bonus_cast_range% Cast Range.\n A hero can only use one.\n Shareable with teammate."
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"What could it be that you would like...? A little bit of everything...?"
+		"DOTA_Tooltip_ability_item_tome_of_luoshu_cast_error"			"Luoshu can only be used once."
 
 		"DOTA_Tooltip_modifier_luoshu_tome"								"Luoshu's Tome"
 		"DOTA_Tooltip_modifier_luoshu_tome_Description"					"Gained a lot of bonuses from Luoshu's Tome."
 
         // item_moon_shard_datadriven
 		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed"						"Moon Shard"
-		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed_Description"		"Permanently granted %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed and %dMODIFIER_PROPERTY_BONUS_DAY_VISION% vision range."
+		"DOTA_Tooltip_modifier_item_moon_shard_datadriven_consumed_Description"		"Permanently granted %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed, %dMODIFIER_PROPERTY_BONUS_DAY_VISION% day vision and %dMODIFIER_PROPERTY_BONUS_NIGHT_VISION% night vision."
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven"								"Moon Shard"
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Description"				"Use: Consume the Moon Shard to permanently gain %consumed_bonus_attack_speed% attack speed, %consumed_bonus_day_vision% day vision, and %consumed_bonus_night_vision% night vision. Can be consumed multiple times, and stacks with itself.\n<h1>Passive: Shade Sight</h1> Grants %bonus_night_vision% bonus night vision."
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven_bonus_attack_speed"		"+$attack"
-		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Note0"						""
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Lore"						"Said to be a tear from the lunar goddess Selemene."
 
         // item_ultimate_scepter_2
 		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed"						"Aghanim's Regalia"
-		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"Permanently granted all benefits from Aghanim's Regalia: Ultimate Upgrade. Also gaining %dMODIFIER_PROPERTY_HEALTH_BONUS% bonus health, %dMODIFIER_PROPERTY_MANA_BONUS% bonus mana, and %dMODIFIER_SPELL_AMPLIFY%%% spell damage."
+		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed_Description"		"Permanently granted all benefits from Aghanim's Regalia: Ultimate Upgrade. Also gaining bonus health, bonus mana, and spell damage."
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2"									"Aghanim's Regalia"
-		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"Use: Consume the Aghanim's Regalia to permanently gain your Ultimate Upgrade, +%bonus_all_stats% all attributes, +%bonus_health% health, +%bonus_mana% mana, +%spell_amp%%% spell damage.\nPassive: Ultimate Upgrade - Upgrades the ultimate, and some abilities, of certain heroes. This item can be used on allied heroes."
+		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Description"					"Use: Consume the Aghanim's Regalia to permanently gain your Ultimate Upgrade, +%bonus_health% health, +%bonus_mana% mana, +%spell_amp%%% spell damage.\nPassive: Ultimate Upgrade - Upgrades the ultimate, and some abilities, of certain heroes. This item can be used on allied heroes."
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_Lore"							"The regalia of a wizard with demigod-like powers."
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_all_stats"				"+$all"
 		"DOTA_Tooltip_ability_item_ultimate_scepter_2_bonus_health"					"+$health"
@@ -933,9 +926,9 @@
 
         // wings_of_haste
 		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed"							"Wings of Haste"
-		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"Permanently grants %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT% bonus movement speed, %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% mana regeneration."
+		"DOTA_Tooltip_modifier_item_wings_of_haste_consumed_Description"			"Permanently grants bonus movement speed, attack speed, health regeneration, mana regeneration."
 		"DOTA_Tooltip_ability_item_wings_of_haste"										"Wings of Haste"
-		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"Use: Consume the Wings of Haste to permanently gain %bonus_all_stats% all attributes, %bonus_movement_speed% movement speed, %bonus_attack_speed% attack speed, %bonus_health_regen% health regen, %bonus_mana_regen% mana regen."
+		"DOTA_Tooltip_ability_item_wings_of_haste_Description"						"Use: Consume the Wings of Haste to permanently gain %bonus_movement_speed% movement speed, %bonus_attack_speed% attack speed, %bonus_health_regen% health regen, %bonus_mana_regen% mana regen."
 		"DOTA_Tooltip_ability_item_wings_of_haste_Lore"								"Wings that grant swift retribution in battle."
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_movement_speed"				"+$move_speed"
 		"DOTA_Tooltip_ability_item_wings_of_haste_bonus_attack_speed"			"+$attack"

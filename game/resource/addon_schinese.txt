@@ -3,8 +3,8 @@
 	"Language"		"English"
 	"Tokens"
 	{
-		"addon_game_name"		"Dota 10v10 AI Wars"
-		"DOTA_GameMode_15"		"Dota 10v10 AI Wars"
+		"addon_game_name"		"Dota 10v10 Custom AI by Windy"
+		"DOTA_GameMode_15"		"Dota 10v10 Custom AI by Windy"
 		"DOTA_SHARD"			"勇士积分"
 
 		// /////////////////////////////////////////////////////////////////////////////
@@ -241,7 +241,7 @@
 		"DOTA_Tooltip_ability_tower_armor_aura"							"高地防御力光环"
 		"DOTA_Tooltip_ability_tower_armor_aura_Description"				"增加附近友军%bonus_armor%的防御力。"
 		"DOTA_Tooltip_ability_tower_magical_armor_aura"					"高地魔抗光环"
-		"DOTA_Tooltip_ability_tower_magical_armor_aura_Description"		"增加附近友军%bonus_magical_armor%的魔法抗性。"
+		"DOTA_Tooltip_ability_tower_magical_armor_aura_Description"		"增加附近友军%bonus_magical_armor%%%的魔法抗性。"
 
 		"DOTA_Tooltip_ability_tower_split_shot"							"防御塔分裂箭"
 		"DOTA_Tooltip_ability_tower_split_shot_Description"				"当高地被破之后自动习得此技能。"
@@ -462,12 +462,14 @@
 
         // 全能骑士
         "DOTA_Tooltip_ability_omniknight_repel"			"咸鱼恩赐"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight"			"奶飞天"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"			"全能骑士召唤出咸鱼之王的替身使者，提升目标的移动速度和生命恢复，并且使目标飞行。"
-        "DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"			"你被奶了，你飞天了，快去送。"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"							"持续时间："
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"						"移动速度："
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"							"生命恢复："
+		"DOTA_Tooltip_ability_omniknight_angelic_flight"					"奶飞天"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"		"全能骑士召唤出咸鱼之王的替身使者，提升目标的移动速度和生命恢复，并且使目标飞行。"
+        "DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"				"你被奶了，你飞天了，快去送。"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"			"持续时间："
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"%移动速度："
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"生命恢复："
+		"DOTA_Tooltip_modifier_omninight_angelic_flight"					"奶飞天"
+		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"获得飞行移动状态，%dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复，%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% 移动速度。"
 
 		// 电炎绝手/老奶奶
 		"DOTA_Tooltip_ability_snapfire_firesnap_cookie_target_heal"	"治疗："
@@ -830,8 +832,9 @@
 
         "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} 风王铁锤伤害"
         "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}秒 风王铁锤冷却"
-        "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"			"魔力放出驱散自身负面效果"
-        "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"					"-{s:bonus_AbilityCooldown}秒 誓约胜利之剑冷却"
+        "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"					"魔力放出驱散自身负面效果"
+		"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1_description"		"魔力放出会对阿尔托莉雅自身进行一次基础驱散，移除各种负面效果。"
+        "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"						"-{s:bonus_AbilityCooldown}秒 誓约胜利之剑冷却"
 
 		//沉渊之剑
 		"npc_dota_hero_visage"									"沉渊之剑"
@@ -1050,8 +1053,7 @@
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven"								"真·银月之晶"
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Description"				"使用: 消耗真·银月之晶以永久获得 %consumed_bonus_attack_speed% 攻击速度, %consumed_bonus_day_vision% 白天视野 和 %consumed_bonus_night_vision% 夜间视野，可以重复使用。\n被动: 夜视 - 获得 %bonus_night_vision% 夜间视野。"
 		"DOTA_Tooltip_ability_item_moon_shard_datadriven_bonus_attack_speed"		"+$attack"
-		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Note0"						"The bonus night vision works during Night Stalker's Darkness ability."
-		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Lore"						"Said to be a tear from the lunar goddess Selemene."
+		"DOTA_Tooltip_ability_item_moon_shard_datadriven_Lore"						"据说这是月亮女神塞莉墨涅的眼泪。"
 
         // item_ultimate_scepter_2
 		"DOTA_Tooltip_modifier_item_ultimate_scepter_2_consumed"						"真·阿哈利姆神杖"
