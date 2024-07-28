@@ -1346,7 +1346,6 @@
 		"DOTA_Tooltip_ability_item_wasp_despotic_bonus_agile"		"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_despotic_crit_chance"		"%CRITICAL CHANCE:"
 		"DOTA_Tooltip_ability_item_wasp_despotic_crit_multiplier"	"%CRITICAL DAMAGE:"
-		"DOTA_Tooltip_Ability_item_recipe_wasp_despotic"				"Wasp Despotic Recipe"
 		"DOTA_Tooltip_modifier_item_despotic_active"			"Sting Like a Bee"
 		"DOTA_Tooltip_modifier_item_despotic_active_Description"	"Critical chance increased, but critical damage decreased."
 
@@ -1358,8 +1357,6 @@
 		"DOTA_Tooltip_ability_item_wasp_callous_bonus_damage"		"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_callous_dodge_chance"		"%+$evasion"
 		"DOTA_Tooltip_ability_item_wasp_callous_attack_speed"		"+$attack"
-		//"DOTA_Tooltip_ability_item_wasp_callous_attack_perc"		"%+Base Attack Speed Percentage" --SWAP IN AFTER WASP BASP REWORK!
-		"DOTA_Tooltip_Ability_item_recipe_wasp_callous"				"Wasp Callous Recipe"
 		"DOTA_Tooltip_modifier_item_callous_active"			"Float Like a Butterfly"
 		"DOTA_Tooltip_modifier_item_callous_active_Description"		"Evasion and movement speed increased."
 
@@ -1371,8 +1368,6 @@
 		"DOTA_Tooltip_ability_item_wasp_golden_bonus_damage"				"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_golden_dodge_chance"				"%+$evasion"
 		"DOTA_Tooltip_ability_item_wasp_golden_attack_speed"				"+$attack"
-		//"DOTA_Tooltip_ability_item_wasp_golden_attack_perc"				"%+Base Attack Speed Percentage" --SWAP IN AFTER WASP BASP REWORK!
-		"DOTA_Tooltip_Ability_item_recipe_wasp_golden"				 	"Golden Wasp Recipe"
 		"DOTA_Tooltip_modifier_item_soul_active"					"Float Like a Butterfly, Sting Like a Bee"
 		"DOTA_Tooltip_modifier_item_soul_active_Description"				"Evasion, movement speed, and critical chance increased, but critical damage decreased."
 
@@ -1478,9 +1473,6 @@
 		"DOTA_Tooltip_ability_item_armlet_pro_max_bonus_magical_armor"					"%+$spell_resist"
 		"DOTA_Tooltip_ability_item_armlet_pro_max_bonus_health_regen"					"+$hp_regen"
 
-		"DOTA_Tooltip_modifier_item_armlet_unholy_strength"				"Unholy Strength"
-		"DOTA_Tooltip_modifier_item_armlet_unholy_strength_Description"	"Damage increased by %dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE%.\nStrength increased by %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS%.\nArmor increased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%.\nSlow Resistance increased by %dMODIFIER_PROPERTY_SLOW_RESISTANCE_STACKING%%%.\nLosing %dMODIFIER_PROPERTY_TOOLTIP% health per second."
-
 		// 圣女白莲
 		"DOTA_Tooltip_Ability_item_saint_orb"							"Saint White Lotus"
 		"DOTA_Tooltip_ability_item_saint_orb_Description"				"<h1>Active:<font color='#FFFF00'>White Lotus</font></h1>Gives a shield to the target, reflecting all targeted spells for the duration. They will still be affected by the spell. The first targeted spell will also be blocked in addition to being reflected, and upon blocking the spell, the target will heal for %heal%% of their max HP.<br><br>Cast Range: %abilitycastrange% <br><br>Dispel Type: Basic Dispel\n<h1>Passive:<font color='#FFFF00'>Holy Healing:</font></h1>Amplifies heals you provide by %heal_bonus%%."
@@ -1507,11 +1499,10 @@
 	    "DOTA_Tooltip_ability_item_hand_of_group_attack_speed"			                "+$attack"
 	    "DOTA_Tooltip_ability_item_hand_of_group_Lore" 									"A wise choice and scientific investment."
 	    "DOTA_Tooltip_ability_item_hand_of_group_Note0"  								"The gold and experience obtained will respect the Gold/XP multiplier set in the game rules."
-	    "DOTA_Tooltip_ability_item_hand_of_midas_Note2"  								"The gold and experience obtained will respect the Gold/XP multiplier set in the game rules."
 
         // item_bloodstone_v2 血精神石
         "DOTA_Tooltip_ability_item_bloodstone"							"Godness Bloodstone"
-        // "DOTA_Tooltip_ability_item_bloodstone_v2"						"Mini Bloodstone"
+        "DOTA_Tooltip_ability_item_bloodstone_v2"						"Mini Bloodstone"
 		// "DOTA_Tooltip_ability_item_bloodstone_v2_Description"						"<h1>Active: Bloodpact</h1> Increases Godness Bloodstone's Spell Lifesteal by %lifesteal_multiplier%x and also converts the same percentage of damage dealt to mana. Lasts %buff_duration% seconds."
 		"DOTA_Tooltip_ability_item_bloodstone_v2_Lore"								"This magical stone make caster absorb blood..."
 		"DOTA_Tooltip_ability_item_bloodstone_v2_bonus_aoe"							"+$aoe_bonus"
@@ -1706,14 +1697,16 @@
 		// 神器2.0
 		// item_light_part 圣光组件
 		"DOTA_Tooltip_Ability_item_light_part"				"Light Part"
-		"DOTA_Tooltip_ability_item_light_part_Description"		"Can be used to transform items into light-themed upgrades.\nDrops randomly when killing Roshan and neutral creeps.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_ability_item_light_part_Description"		"Can be used to transform items into light-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_Ability_item_light_part_Lore"				"Drops randomly when killing Roshan and neutral creeps."
 
 		// item_dark_part 暗影组件
 		"DOTA_Tooltip_Ability_item_dark_part"				"Dark Part"
-		"DOTA_Tooltip_ability_item_dark_part_Description"		"Can be used to transform items into light-themed upgrades.\nDrops randomly when killing Roshan and neutral creeps.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_ability_item_dark_part_Description"		"Can be used to transform items into light-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_Ability_item_dark_part_Lore"				"Drops randomly when killing Roshan and neutral creeps."
 
 		// item_exchange 光暗装备转换器
-		"DOTA_Tooltip_Ability_item_exchange"				"Light/Dark Equipment Converter"
+		"DOTA_Tooltip_Ability_item_exchange"				"Light/Dark Neutral Converter"
 		"DOTA_Tooltip_ability_item_exchange_Description"	"Item converter for light and dark equipment, allowing them to be equipped in the neutral equipment slot."
 
 		// item_specialists_array_light 圣光·行家阵列
@@ -2135,13 +2128,11 @@
 		"DOTA_Tooltip_Ability_item_apex_ai"				"<font color='#00FF00'>Light</font> <font color='#8A2BE2'>Dark</font> Apex"
 		"DOTA_Tooltip_Ability_item_apex_ai_Lore"		"Three orbs of remarkable power bound within a single scepter."
 		"DOTA_Tooltip_ability_item_apex_ai_bonus_all_stats"						"+$all"
-		"DOTA_Tooltip_Ability_item_apex_ai_Note0"				""
 
 		// item_apex_ai_1 光暗·极（中立）
 		"DOTA_Tooltip_Ability_item_apex_ai_1"				"<font color='#00FF00'>Light</font> <font color='#8A2BE2'>Dark</font> Apex (Neutral)"
 		"DOTA_Tooltip_Ability_item_apex_ai_1_Lore"		"Three orbs of remarkable power bound within a single scepter."
 		"DOTA_Tooltip_ability_item_apex_ai_1_bonus_all_stats"						"+$all"
-		"DOTA_Tooltip_Ability_item_apex_ai_1_Note0"				""
 
 		// item_gossamer_cape_light 圣光·蛛丝斗篷
 		"DOTA_Tooltip_Ability_item_gossamer_cape_light"				"<font color='#FFFF00'>Light</font> Gossamer Cape"
