@@ -993,7 +993,7 @@
 		}
 	}
 	//=================================================================================================================
-	// Ability: Dawnbreaker 破晓星辰/黄大锤
+	// Ability: Dawnbreaker 破晓辰星/黄大锤
 	//=================================================================================================================
 	// 星破天惊
 	"dawnbreaker_fire_wreath"
@@ -1005,17 +1005,15 @@
 			"AbilityCooldown"
 			{
 				"value"					"15 14 13 12 11"
-				"special_bonus_unique_dawnbreaker_fire_wreath_cooldown"			"-6"
 			}
 			"swipe_damage"
 			{
-				"value"											"70 85 100 115 130"
+				"value"											"50 70 90 110 130"	// 25 40 55 70
 				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"		"+30"
-
 			}
 			"smash_damage"
 			{
-				"value"				"70 85 100 115 130"
+				"value"				"50 70 90 110 130"	// 25 40 55 70
 				"special_bonus_unique_dawnbreaker_fire_wreath_swipe"			"+30"
 			}
 			"smash_stun_duration"			"1 1.1 1.2 1.3 1.4"
@@ -1026,14 +1024,13 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 15 14 13 12"
-		"AbilityManaCost"				"130 140 150 160 170"
+		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
-			"hammer_damage"			"110 140 170 200 230"
+			"hammer_damage"			"100 160 220 280 340"	// x2
 			"move_slow"
 			{
-				"value"							"32 36 40 44 48"
-				"special_bonus_unique_dawnbreaker_celestial_hammer_slow"		"+14"
+				"value"							"24 28 32 36 40"
 			}
 			"burn_damage"						"40 50 60 70 80"
 		}
@@ -1047,14 +1044,11 @@
 			"attack_count"
 			{
 				"value"		"2"
-				"LinkedSpecialBonus"		"special_bonus_unique_dawnbreaker_luminosity_attack_count"
-				"LinkedSpecialBonusOperation"	"SPECIAL_BONUS_SUBTRACT"
 			}
-			"heal_pct"					"30 40 50 60 70"
+			"heal_pct"					"35 40 45 50 55"
 			"bonus_damage"
 			{
 				"value"		"150 175 200 225 250"
-				"LinkedSpecialBonus"		"special_bonus_unique_dawnbreaker_luminosity_crit"
 			}
 		}
 	}
@@ -1062,22 +1056,27 @@
 	"dawnbreaker_solar_guardian"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"90 80 70 60"
 		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"				"90 80 70 60"
+			}
 			"base_damage"
 			{
-				"value"			"75 100 125 150"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"60 100 140 180"	// x2
 			}
 			"base_heal"
 			{
-				"value"				"120 160 200 240"
-				"special_bonus_scepter"	"+15 20 25 30 35"
+				"value"				"90 140 190 240"	// x2
+				"special_bonus_scepter"	"+30 40 50 60"	// x2
 			}
-			"land_damage"			"160 190 220 250"
-			"land_stun_duration"			"1.6 1.8 2 2.2"
+			"land_damage"
+			{
+				"value"			"130 190 250 310"	// 130 160 190
+			}
+			"land_stun_duration"			"1.4 1.6 1.8 2"
 		}
 	}
 	//=================================================================================================================
