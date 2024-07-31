@@ -10450,14 +10450,13 @@
 	"oracle_fortunes_end"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 9 8 7 6"
+		"AbilityCooldown"				"14 12 10 8 6"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 			"damage"
 			{
 				"value"					"100 160 220 280 340"
-				"special_bonus_unique_oracle_fortunes_end_damage"		"+100"
 			}
 		}
 	}
@@ -10468,12 +10467,11 @@
 		"AbilityCastRange"				"500 600 700 800 900"
 		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityManaCost"				"80 90 100 110 120"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"duration"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"duration"				"3.5 4.0 4.5 5.0 5.5"
+				"value" "3.5 4.0 4.5 5.0 5.5"
 			}
 		}
 	}
@@ -10485,7 +10483,7 @@
 		{
 				"damage"				"90 180 270 360 450"
 				"heal_per_second"		"15 25 35 45 55"
-				"total_heal_tooltip"	"135 225 315 405 495"
+				"total_heal_tooltip"	"150 250 350 450 550"
 		}
 	}
 	// 虚妄之诺
@@ -10506,17 +10504,15 @@
 			"AbilityCooldown"
 			{
 				"value"								"90 80 70 60"
-				"special_bonus_unique_oracle_6"		"-20"
 			}
 			"bonus_armor"
 			{
 				"value"								"0"
-				"special_bonus_unique_oracle_9"		"+50"
+				"special_bonus_unique_oracle_9"		"+30"
 			}
 			"heal_amp_pct"
 			{
 				"value"							"100 125 150 175"
-				"special_bonus_shard"			"+25"
 			}
 		}
 	}
@@ -10526,7 +10522,7 @@
 		"MaxLevel" "4"
 		"LinkedAbility"                 "oracle_false_promise"
 		"AbilityDraftPreAbility"        "oracle_false_promise"
-		"AbilityCooldown"				"70 60 50 40"// 150 130 110 同步cd与完全体虚妄相同
+		"AbilityCooldown"				"90 80 70 60"// 150 130 110 同步cd与完全体虚妄相同
 		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
@@ -10541,8 +10537,7 @@
 			}
 			"does_purge"
 			{
-				"value"				"0"
-				"special_bonus_unique_chen_12"		"+1"
+				"value"				"1"
 			}
 		}
 	}
