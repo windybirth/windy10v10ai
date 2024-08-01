@@ -531,7 +531,7 @@
 		"DOTA_Tooltip_modifier_chibi_monster"				"Chibi Miku!!!"
 		"DOTA_Tooltip_modifier_chibi_monster_description"	"Transformed into a chibi version of yourself! Gaining bonus health, agility, and attack damage. Some of your abilities have been improved."
 		"DOTA_Tooltip_ability_special_bonus_unique_miku_101" "-{s:bonus_AbilityCooldown}s Popipo Cooldown"
-		"DOTA_Tooltip_ability_special_bonus_unique_miku_201" "+{s:value}% Pantsu Shot Critical Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_miku_201" "+{s:bonus_crit_bonus}% Pantsu Shot Critical Damage"
         "DOTA_Tooltip_ability_special_bonus_unique_miku_301" "-{s:bonus_AbilityCooldown}s Liu-kick Cooldown"
         "DOTA_Tooltip_ability_special_bonus_unique_miku_302" "+{s:bonus_AbilityCastRange} Liu-kick Cast Range"
 
