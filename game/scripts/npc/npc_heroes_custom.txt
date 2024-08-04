@@ -1474,26 +1474,31 @@
 	"npc_dota_hero_luna"
 	{
 		"Ability4"		"luna_lunar_grace"
+		"Ability5"		"luna_lunar_blessing"
+		"AttackRate"    "1.4"
+		"AttributeStrengthGain"		"2.6"
+		"AttributeAgilityGain"		"4.1"
+		"AttributeIntellienceGain"	"2.1"
 		"Bot"
 		{
 			"Build"
 			{
 				"1"		"luna_lucent_beam"
-				"2"		"luna_lunar_blessing"
+				"2"		"luna_lunar_orbit"
 				"3"		"luna_lucent_beam"
 				"4"		"luna_moon_glaive"
 				"5"		"luna_lucent_beam"
 				"6"		"luna_eclipse"
 				"7"		"luna_lucent_beam"
-				"8"		"luna_lunar_blessing"
+				"8"		"luna_lunar_orbit"
 				"9"		"luna_lucent_beam"
 				"10"		"special_bonus_unique_luna_4"
 				"11"		"luna_moon_glaive"
 				"12"		"luna_eclipse"
 				"13"		"luna_moon_glaive"
-				"14"		"luna_lunar_blessing"
+				"14"		"luna_lunar_orbit"
 				"15"		"special_bonus_unique_luna_2"
-				"16"		"luna_lunar_blessing"
+				"16"		"luna_lunar_orbit"
 				"17"		""
 				"18"		"luna_eclipse"
 				"19"		""
@@ -1510,14 +1515,43 @@
 				"30"		"special_bonus_unique_luna_3"
 				"31"		"luna_eclipse"
 				"32"		"luna_moon_glaive"
-				"33"		"luna_lunar_blessing"
+				"33"		"luna_lunar_orbit"
 				"34"		"luna_moon_glaive"
 			}
 		}
 	}
 	"npc_dota_hero_marci"
 	{
-		"Ability4"          "broodmother_insatiable_hunger"
+		"AttackRate"    "1.4"
+		"AttributeStrengthGain"		"3.7"
+		"AttributeAgilityGain"		"2.5"
+		"AttributeIntellienceGain"	"1.9"
+		"Ability3"	    "marci_guardian"
+		"Ability4"          "marci_bodyguard"
+		"Ability5"	    "marci_feint_custom"
+		"Facets"
+          {
+            "marci_sidekick" 
+            {
+                "Icon"              "twin_hearts"
+                "Color"             "Yellow"
+                "GradientID"        "3"
+            }           
+            "marci_bodyguard" 
+            {
+                "Icon"              "shield"
+                "Color"             "Blue"
+                "GradientID"        "1"
+            }
+
+	  }
+	}
+	"npc_dota_hero_mirana"
+	{
+		"AttackRate"    "1.5"
+		"AttributeStrengthGain"		"2.2"
+		"AttributeAgilityGain"		"3.4"
+		"AttributeIntellienceGain"	"2.1
 	}
 	"npc_dota_hero_medusa"
 	{
@@ -1695,8 +1729,8 @@
 	}
 	"npc_dota_hero_ogre_magi"
 	{
-		"AttackRate"                "1.4"
-		"AttributeStrengthGain"		"5.2"	// 4.2
+		"AttackRate"                "1.6"
+		"AttributeStrengthGain"		"4.7"	// 4.2
 		"AttributeAgilityGain"		"2.0"	// 1.5
 		"Bot"
 		{
@@ -1808,7 +1842,8 @@
 	}
 	"npc_dota_hero_oracle"
 	{
-		"Ability9"		"chen_hand_of_god"
+		"Ability5"		"chen_hand_of_god"
+		"Ability9"		"oracle_prognosticate"
 		"Bot"
 		{
 			"Build"
@@ -2489,7 +2524,31 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
-		"MovementSpeed"	"320"	// 290
+		"MovementSpeed"	"300"	// 290
+		"AttributeStrengthGain"		"2.5"
+		"AttributeAgilityGain"		"2.1"
+		"AttributeIntellienceGain"	"3.1"
+		"Facets"
+        {
+            "windrunner_tailwind" 
+            {
+                "Icon"              "speed"
+                "Color"             "Yellow"
+                "GradientID"        "2"
+                "Deprecated"        "true"
+            }
+            "windrunner_whirlwind" 
+            {
+                "Icon"              "multi_arrow"
+                "Color"             "Green"
+                "GradientID"        "0"
+                "AbilityIconReplacements"
+                {
+                    "windrunner_focusfire"  "windrunner_whirlwind"
+                    "windrunner_focusfire_cancel"   "windrunner_whirlwind_stop"
+                }
+            }
+        }
 		"Bot"
 		{
 			"Build"
