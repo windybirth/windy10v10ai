@@ -605,6 +605,7 @@
 	{
 		"Ability4"		"brewmaster_cinder_brew"
 		"Ability5"		"brewmaster_drunken_brawler"
+		"Ability7"		"antimage_persectur"
 	}
 	"npc_dota_hero_axe"
 	{
