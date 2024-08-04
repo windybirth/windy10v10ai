@@ -703,12 +703,11 @@
 	"brewmaster_fire_permanent_immolation"
 	{
 		"MaxLevel"						"1"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"damage"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"damage"					"50"	// 25 50 75
+				"value" "50"	// 25 50 75
 			}
 		}
 	}
@@ -1150,43 +1149,65 @@
 		"AbilityManaCost"				"90 95 100 105 110"
 		"AbilityValues"
 		{
-			"damage"							"80 160 240 320 400"
+			"damage"
+			{
+				"value"			"80 160 240 320 400"
+			}
 		}
 	}
-	// duang
+	// 神龙摆尾 duang
 	"dragon_knight_dragon_tail"
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 14 12 10 8"
-		"AbilityDamage"					"70 100 130 160 190"
 		"AbilityManaCost"				"70 80 90 100 110"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"stun_duration"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"stun_duration"			"1.8 2.0 2.2 2.4 2.6"
-				"LinkedSpecialBonus"		"special_bonus_unique_dragon_knight_2"
+				"value"				"1.8 2.0 2.2 2.4 2.6"
 			}
+			"damage"					"60 90 120 150 180"
 		}
 	}
-	// 龙血
+	// 飞龙之怒
 	"dragon_knight_dragon_blood"
 	{
 		"MaxLevel" "5"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			// GREEN DRAGON
+			"corrosive_breath_damage"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"bonus_health_regen"			"6 9 12 15 18"
-				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
+				"value"							"5 10 15 20 25"
+				"RequiresFacet"				"dragon_knight_corrosive_dragon"
 			}
-			"02"
+			"corrosive_breath_armor_reduction"
 			{
-				"var_type"						"FIELD_INTEGER"
-				"bonus_armor"					"6 9 12 15 18"
-				"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight"
+				"value"							"0 1 2 3 4"
+				"RequiresFacet"				"dragon_knight_corrosive_dragon"
+			}
+			// RED DRAGON
+			"cleave_damage"
+			{
+				"value"							"30 40 50 60 70"
+				"RequiresFacet"				"dragon_knight_fire_dragon"
+			}
+			// BLUE DRAGON
+			"frost_bonus_movement_speed"
+			{
+				"value"				"-14 -21 -28 -35 -42"
+				"RequiresFacet"	"dragon_knight_frost_dragon"
+			}
+			"frost_bonus_attack_speed"
+			{
+				"value"				"-14 -21 -28 -35 -42"
+				"RequiresFacet"	"dragon_knight_frost_dragon"
+			}
+			"frost_healing_reduction"
+			{
+				"value"				"14 21 28 35 42"
+				"RequiresFacet"	"dragon_knight_frost_dragon"
 			}
 		}
 	}
@@ -1196,20 +1217,8 @@
 		"AbilityManaCost"				"50 100 150"
 		"AbilityValues"
 		{
-				"bonus_attack_damage"		"60"
-				"corrosive_breath_damage"	"20 30 40 50"
-				"frost_bonus_movement_speed"
-				{
-					"value"		"-40 -50 -60 -70"
-					"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
-				}
-				"frost_bonus_attack_speed"
-				{
-					"value"				"-40 -50 -60 -70"
-					"LinkedSpecialBonus"			"special_bonus_unique_dragon_knight_5"
-				}
+				"bonus_attack_damage"		"60 120 180 240"	// 20 60 100 140
 				"magic_resistance"			"10 15 20 25"
-				"model_scale"				"10 20 30 40"
 		}
 	}
 	//=================================================================================================================
