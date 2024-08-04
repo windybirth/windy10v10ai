@@ -125,7 +125,7 @@
 		// "data_panel_member_point_rule_url"		"https://afdian.com/p/8d1e8ac8682711ed984b52540025c377"
 
 		"reset_property_use_season_point"		"Reset Attribute Points for {seasonPoint} Battle Points"
-		"reset_property_use_member_point"		"Reset Attribute Points for {memberPoint} Member Points"
+		"reset_property_use_member_point"		"Reset Attribute Points for 1000 Member Points"
 
 		"data_panel_player_property_label"		"Spend Attribute Points to upgrade your hero. Upgrades are permanent and persist between games."
 		"data_panel_player_property_label_2"		"Points cannot be spent on local host. Please play on a dedicated server to spend and benefit from upgrades."
@@ -139,7 +139,7 @@
 		"data_panel_player_property_evasion_constant"			"Evasion (%)"
 		"data_panel_player_property_magical_resistance_bonus"	"Magic Resistance (%)"
 		"data_panel_player_property_incoming_damage_percentage"	"Incoming Damage Reduction (%)"
-		"data_panel_player_property_attack_range_bonus"			"Attack Range (<font color='#7d7d7d'>Ranged Only</font>)"
+		"data_panel_player_property_attack_range_bonus"			"Attack Range (Ranged Only)"
 		"data_panel_player_property_physical_armor_bonus"		"Physical Armor"
 		"data_panel_player_property_preattack_bonus_damage"		"Attack Damage"
 		"data_panel_player_property_attackspeed_bonus_constant"	"Attack Speed"
@@ -151,7 +151,7 @@
 		"data_panel_player_property_lifesteal"					"Lifesteal (%)"
 		"data_panel_player_property_spell_lifesteal"			"Spell Lifesteal (%)"
 		"data_panel_player_property_movespeed_bonus_constant"	"Movement Speed"
-		"data_panel_player_property_ignore_movespeed_limit"		"Unlock Movement Speed Limit (<font color='#7d7d7d'>Max of 2000</font>)"
+		"data_panel_player_property_ignore_movespeed_limit"		"Increase Movement Speed Limit (2000)"
 		"data_panel_player_property_cannot_miss"				"True Strike"
 		"data_panel_player_property_skill_points_bonus"			"Bonus Skill Points"
 
@@ -330,7 +330,14 @@
 		// MARCI
 		
 		"DOTA_Tooltip_special_bonus_unique_marci_guardian_lifesteal"				"+{s:value} Sidekick/Bodyguard Lifesteal"
-		"DOTA_Tooltip_special_bonus_unique_marci_guardian_damage"					"+{s:value} Sidekick/Bodyguard Damage"
+		"DOTA_Tooltip_special_bonus_unique_marci_guardian_damage"				"+{s:value} Sidekick/Bodyguard Damage"
+
+		"DOTA_Tooltip_ability_marci_feint_custom"						"Silent and Stout Hearted"
+		"DOTA_Tooltip_ability_marci_feint_custom_description"					"A mute, but determined fighter, Marci's stout heart keeps her steady in the face of any fear effect, while her muteness alleviates the needs of verbal casts, meaning silences and mutes do not affect her. Her use of hand-to-hand combat also means disarms have no effect on her."
+		"DOTA_Tooltip_ability_marci_feint_custom_facet_marci_bodyguard"				"Marci gains a %chance%%% chance to counterattack an enemy that attacks her directly in a %max_range% radius, dealing %attack_damage_to_pct_damage%%% of her attack damage. This attack has True Strike and can proc attack modifiers."
+		"DOTA_Tooltip_ability_marci_feint_custom_facet_marci_bodyguard_scepter_description"	"If Marci evades an attack against her, she will always counterattack the attacker. Doubles the damage Marci's counterattacks deal to attackers that attack her."
+		"DOTA_Tooltip_ability_marci_feint_custom_Note0"						"Hexes and taunts will still function as normal against Marci, preventing all other actions regardless."
+		"DOTA_Tooltip_ability_marci_feint_custom_Note1"						"Marci can still be afflicted with silence, mute, and disarm debuffs, but they simply will have no effect on her."
 
 		// 电炎绝手/老奶奶
 		"DOTA_Tooltip_ability_snapfire_firesnap_cookie_target_heal"	"COOKIE HEAL:"
@@ -563,7 +570,7 @@
 		"DOTA_Tooltip_modifier_chibi_monster"				"Chibi Miku!!!"
 		"DOTA_Tooltip_modifier_chibi_monster_description"	"Transformed into a chibi version of yourself! Gaining bonus health, agility, and attack damage. Some of your abilities have been improved."
 		"DOTA_Tooltip_ability_special_bonus_unique_miku_101" "-{s:bonus_AbilityCooldown}s Popipo Cooldown"
-		"DOTA_Tooltip_ability_special_bonus_unique_miku_201" "+{s:value}% Pantsu Shot Critical Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_miku_201" "+{s:bonus_crit_bonus}% Pantsu Shot Critical Damage"
         "DOTA_Tooltip_ability_special_bonus_unique_miku_301" "-{s:bonus_AbilityCooldown}s Liu-kick Cooldown"
         "DOTA_Tooltip_ability_special_bonus_unique_miku_302" "+{s:bonus_AbilityCastRange} Liu-kick Cast Range"
 
@@ -580,10 +587,12 @@
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"		"Increases the target's movement speed and health regeneration, and grants flying movement, allowing them to move over any terrain and obstacle."
         "DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"				"'Forward without fear, my friends!'"
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"			"DURATION:"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"%MOVEMENT SPEED:"
 		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"HEALTH REGENERATION:"
 		"DOTA_Tooltip_modifier_omninight_angelic_flight"					"Angelic Flight"
-		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT% movement speed."
+		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% movement speed."
+
+		"DOTA_Tooltip_ability_chaos_knight_chaos_bolt_shard_description" 	"Increases the cast range to %AbilityCastRange%."
 
 		// 混沌骑士
 		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm"										"Army of Chaos"
@@ -899,20 +908,12 @@
 		"DOTA_Tooltip_Ability_item_tome_of_strength_Description"		"<h1>Use: Bulk</h1> Permanently increases your strength by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_strength_Lore"				"Is it strength that you desire...?"
 
-		"DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery"					"Tome of Strength(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery_Description"		"<h1>Use: Bulk</h1> Permanently increases your strength by %bonus%.\nShareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_strength_for_lottery_Lore"				"Is it strength that you desire...?"
-
 		"DOTA_Tooltip_modifier_str_tome"								"Strength Tomes Consumed"
 		"DOTA_Tooltip_modifier_str_tome_Description"					"Strength increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_agility"						"Tome of Agility"
 		"DOTA_Tooltip_Ability_item_tome_of_agility_Description"			"<h1>Use: Lighten</h1> Permanently increases your agility by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_agility_Lore"				"Is it swiftness that you seek...?"
-
-		"DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery"						"Tome of Agility(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery_Description"			"<h1>Use: Lighten</h1> Permanently increases your agility by %bonus%.\n Shareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_agility_for_lottery_Lore"				"Is it swiftness that you seek...?"
 
 		"DOTA_Tooltip_modifier_agi_tome"								"Agility Tomes Consumed"
 		"DOTA_Tooltip_modifier_agi_tome_Description"					"Agility increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
@@ -921,10 +922,6 @@
 		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Description"	"<h1>Use: Learn</h1> Permanently increases your intelligence by %bonus%.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_intelligence_Lore"			"Is it enlightenment that you aspire to...?"
 
-		"DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery"				"Tome of Intelligence(50% OFF)"
-        "DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery_Description"	"<h1>Use: Learn</h1> Permanently increases your intelligence by %bonus%.\n Shareable with teammates."
-        "DOTA_Tooltip_Ability_item_tome_of_intelligence_for_lottery_Lore"			"Is it enlightenment that you aspire to...?"
-
 		"DOTA_Tooltip_modifier_int_tome"								"Intelligence Tomes Consumed"
 		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
@@ -932,7 +929,7 @@
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently increases all attributes by %bonus_all_stats%, as well as provides %bonus_base_damage_percent%%% Base Attack Damage, %attack_speed_perc%%% Base Attack Speed Percentage, %bonus_movespeed%%% Movement Speed, %status_resistance%%% Status Resistance, %slow_resistance%%% Slow Resistance, %spell_amp%%% Spell Amplification, %bonus_cast_range% Cast Range, %bonus_aoe% AoE Bonus, %cast_speed%%% Cast Speed, and %manacost_reduction%%% lowered Mana Costs.\nA hero can only use one.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"What could it be that you would like...? A little bit of everything...?"
 
-		"DOTA_Tooltip_modifier_luoshu_tome"								"Luoshu's Tome"
+		"DOTA_Tooltip_modifier_luoshu_tome"								"Tome of Luoshu"
 		"DOTA_Tooltip_modifier_luoshu_tome_Description"					"Gained a lot of bonuses from Luoshu's Tome."
 
         // item_moon_shard_datadriven
