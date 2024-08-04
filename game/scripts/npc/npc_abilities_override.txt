@@ -681,15 +681,13 @@
 		"MaxLevel"						"1"
 		"AbilityCastRange"				"1000" // 500
 
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"02"
+			"radius"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"radius"					"750" // 600
+				"value" "750" // 600
 			}
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
 	// 风猫吹风
 	"brewmaster_storm_cyclone"
