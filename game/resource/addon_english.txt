@@ -889,6 +889,14 @@
 
         // 巫妖
         "DOTA_Tooltip_ability_special_bonus_unique_lich_401"  "+{s:bonus_jumps} Chain Frost Bounces"
+	
+        "DOTA_Tooltip_ability_lich_frost_aura_Description"  			"Lich's attacks chill the bones of his enemies, slowing their movement speed. His presence in battle freezes the attacks of his allies, granting them the same slow effect on their own attacks."
+	"DOTA_Tooltip_ability_lich_frost_aura_movespeed_slow"			"%MOVEMENT SPEED SLOW:"
+	"DOTA_Tooltip_ability_lich_frost_aura_Note0"				"Slow does not stack with itself."
+	"DOTA_Tooltip_ability_lich_frost_aura_Note1"				"Only applies to attacks by Lich and other friendly heroes."
+
+	"DOTA_Tooltip_modifier_lich_frost_aura_slow"				"Frost Aura Slow"
+	"DOTA_Tooltip_modifier_lich_frost_aura_slow_description"		"Movement speed slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
 
 		// /////////////////////////////////////////////////////////////////////////////
 		//
