@@ -554,11 +554,11 @@
 	{
 		"AbilityValues"
 		{
-				"bonus_primary_stat"		"12"    //8
-				"bonus_secondary_stat"			"3" //2
-				"bonus_spell_amp"		"15"        //6
-				"bonus_magic_resistance"	"16"    //8
-				"bonus_attack_speed"	"30"        //10
+				"bonus_primary_stat"		"16"	//10
+				"bonus_secondary_stat"		"6"		//4
+				"bonus_spell_amp"			"16"	//8
+				"bonus_magic_resistance"	"16"	//10
+				"bonus_attack_speed"		"30"	//15
 		}
 	}
 	"item_imp_claw" //魔童之爪 暴击爪
@@ -724,20 +724,17 @@
 	}
 	"item_ogre_seal_totem" //食人魔海豹图腾
 	{
-		"AbilityCooldown"				"20.0" //40
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityCooldown"				"25.0"		//35
 		"AbilityValues"
 		{
-			"bonus_strength"			"40"       //10
-            "radius"
+			"bonus_strength"			"35"		//12
+			"radius"
 			{
-				"value"				"450"          //275
-				"affected_by_aoe_increase"	"1"
+				"value"				"400"			//275
 			}
-            "flop_damage"               "350"      //150
-	        "slow_duration"             "3.0"      //1.5
-	        "slow"           			"-100"     //-100
-	        "max_bounces"				"4"        //2
+			"flop_damage"				"350"		//250
+			"slow_duration"				"2.5"		//1.5
+			"max_bounces"				"4"			//2
 		}
 	}
 	"item_doubloon" //双面币
