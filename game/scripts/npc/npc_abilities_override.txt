@@ -2133,7 +2133,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"BaseClass"             		"ability_lua"
 		"ScriptFile"             		"heroes/hero_marci/feint"
-		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"AbilityBehavior"              		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
 		"AbilityDamage"					"DAMAGE_TYPE_PHYSICAL"
 		"AbilityCooldown"				"0.2"
 		"AbilityManaCost"				"0"
@@ -9923,8 +9923,6 @@
 		"MaxLevel" "5"
 		"AbilityDamage"					"80 120 160 200 240"
 		"AbilityManaCost"				"110 120 130 140 150"
-		"LinkedAbility"					"lich_frost_aura"
-		"AbilityDraftPreAbility"		"lich_frost_aura"
 		"AbilityValues"
 		{
 			"slow_attack_speed_primary"		"-30 -40 -50 -60 -70"
@@ -9939,9 +9937,9 @@
 	"lich_frost_aura"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"1200"
-		"LinkedAbility"					"lich_frost_nova"
-		"AbilityDraftPreAbility"		"lich_frost_nova"
+		"AbilityCastRange"		"1200"
+		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"DependentonAbility"		"lich_frost_blast"
 		"AbilityValues"
 		{
 			"movespeed_slow"	"7 14 21 28 35"
