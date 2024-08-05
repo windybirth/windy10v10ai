@@ -8841,8 +8841,6 @@
 		"AbilityCooldown"				"9 8 7 6 5"
 		"AbilityDamage"					"85 160 235 310 385"
 		"AbilityManaCost"				"80 90 100 110 120"
-		"LinkedAbility"					"death_prophet_witchcraft"
-		"AbilityDraftPreAbility"		"death_prophet_witchcraft"
 	}
 	// 吸魂巫术
 	"death_prophet_spirit_siphon"
@@ -8854,61 +8852,61 @@
 		{
 			"damage"
 			{
-				"value"				"25 50 75 100 125"
+				"value"				"25 50 75 100 125 150"
 				"special_bonus_unique_death_prophet_3"	"+75"
 			}
 			"damage_pct"				"1 2 3 4 5" // FIXME 暂时加强百分比吸魂
 		}
 	}
+	"death_prophet_silence"
+	"AbilityDuration"               "3.5 4.0 4.5 5.0 5.5"
+	"AbilityCooldown"               "15 14 13 12 11"
+	"AbilityManaCost"		"80 90 100 110 120"
+	"AbilityValues"
+        {
+            "radius"                    
+            {
+                "value" "450"
+                "special_bonus_unique_death_prophet_silence_aoe"        "+75" 
+                "affected_by_aoe_increase"  "1"
+            }
+            "projectile_speed"                  "1200"
+            "movement_slow"
+            {
+                "value"                         "0"
+                "special_bonus_facet_death_prophet_suppress"        "15 20 25 30 35"
+            }
+            "damage_per_second"
+            {
+                "value"                     "0"
+                //"special_bonus_facet_death_prophet_suppress"  "+30"
+            }
+            "tick_interval"
+            {
+                "value"                     "0"
+                //"special_bonus_facet_death_prophet_suppress"  "+0.5"
+            }
+        }
 	// 巫术精研
 	"death_prophet_witchcraft"
 	{
-		"MaxLevel" "5"
-		"LinkedAbility"					"death_prophet_carrion_swarm"
-		"AbilityDraftPreAbility"		"death_prophet_carrion_swarm"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"	"5 10 15 20 25"
-			}
-			"02"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"carrion_swarm_mana_cost_adjust"	"-10 -15 -20 -25 -30"
-			}
-			"03"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"carrion_swarm_cooldown_adjust"		"-1.0"
-			}
-			"04"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"silence_mana_cost_adjust"			"-10 -20 -30 -40 -50"
-			}
-			"05"
-			{
-				"var_type"							"FIELD_FLOAT"
-				"silence_cooldown_adjust"			"-1.0 -2.0 -3.0 -4.0 -5.0"
-			}
-			"06"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"exorcism_1_extra_spirits"			"0"
-			}
-			"07"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"exorcism_2_extra_spirits"			"0"
-			}
-			"08"
-			{
-				"var_type"							"FIELD_INTEGER"
-				"exorcism_3_extra_spirits"			"0"
-			}
-		}
+		"MaxLevel"                      "1"
+       		"Innate"                        "1"
+        	"IsBreakable"                   "1"
+		"AbilityValues"
+        {
+            "movement_speed_pct_per_level"      "0.2"
+            "cooldown_reduction_pct_per_level"  "0.5"
+
+            "movement_speed_tooltip"
+            {
+                "dynamic_value"                 "true"
+            }
+            "cooldown_reduction_tooltip"
+            {
+                "dynamic_value"                 "true"
+            }
+        }
 	}
 	// 驱使恶灵
 	"death_prophet_exorcism"
