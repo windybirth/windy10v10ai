@@ -922,6 +922,7 @@
 	{
 		"Ability4"		"dazzle_weave"
 		"Ability5"      "dazzle_good_juju"	// 需要额外加点
+		"Ability7"	"dazzle_innate_weave"
 		"Bot"
 		{
 			"Build"
