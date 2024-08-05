@@ -11314,8 +11314,6 @@
 	"silencer_last_word"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 18 14 10 8"
-		"AbilityManaCost"				"100 105 110 115 120"
 		"AbilityValues"
 		{
 				"damage_per_silence"
