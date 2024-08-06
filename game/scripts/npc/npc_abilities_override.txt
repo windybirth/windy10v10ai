@@ -9946,7 +9946,7 @@
 		"MaxLevel" "5"
 		"AbilityCastRange"		"1200"
 		"AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
-		"DependentonAbility"		"lich_frost_blast"
+		"DependentonAbility"		"lich_frost_nova"
 		"AbilityValues"
 		{
 			"movespeed_slow"	"7 14 21 28 35"
