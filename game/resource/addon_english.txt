@@ -1020,19 +1020,19 @@
 		"DOTA_Tooltip_ability_item_aether_lens_2_cast_range_bonus"                "+$cast_range"
 
         // item_vladmir_2
-		"DOTA_Tooltip_ability_item_vladmir_2"                               "Assault Vladimir"
-		"DOTA_Tooltip_ability_item_vladmir_2_Description"							"<h1>Passive: Assault Vladmir's Aura</h1>Grants %vampiric_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, %aura_attack_speed% attack speed, and %aura_positive_armor% armor to nearby allies and structures.<br> Structures only gain the attack speed and armor.<br>Decreases nearby enemy unit and structure armor by %aura_negative_armor%.<br><br>Radius: %aura_radius%"
-		"DOTA_Tooltip_ability_item_vladmir_2_Lore"								"Forged in the depths of the nether reaches, this hellish mail provides an army with increased armor and attack speed."
+		"DOTA_Tooltip_ability_item_vladmir_2"                               "Vladmir's Assault Cuirass"
+		"DOTA_Tooltip_ability_item_vladmir_2_Description"							"<h1>Passive: Vladmir's Assault Aura</h1>Grants %vampiric_aura%%% lifesteal, %damage_aura%%% bonus damage, %mana_regen_aura% mana regeneration, %aura_attack_speed% attack speed, and %aura_positive_armor% armor to nearby allies and structures.<br>Allied structures only gain the attack speed and armor.<br>Decreases nearby enemy unit and structure armor by %aura_negative_armor%.<br><br>Radius: %aura_radius%"
+		"DOTA_Tooltip_ability_item_vladmir_2_Lore"								"Forged in the depths of the nether reaches, this hellish mail is imbued with the malice of a fallen vampire."
 		"DOTA_Tooltip_ability_item_vladmir_2_bonus_attack_speed"					"+$attack"
 		"DOTA_Tooltip_ability_item_vladmir_2_bonus_armor"							"+$armor"
 
-		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"Assault Vladimir's Aura"
-		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"Gaining 25%% lifesteal, %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% damage, and %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% mana regeneration, %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% armor, and %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed."
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"Vladmir's Assault Aura"
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"Gaining 25%% lifesteal, %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%% damage, %fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT% mana regeneration, %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% armor, and %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed."
 
-		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"Assault Vladimir's Aura"
+		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"Vladmir's Assault Aura"
 		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura_Description"	"Armor enhanced by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS% and %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed."
 
-		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura"				"Assault Vladimir's Aura"
+		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura"				"Vladmir's Assault Aura"
 		"DOTA_Tooltip_modifier_item_vladmir_2_enemy_aura_Description"	"Armor decreased by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%"
 
         // item_sphere_2 真林肯
@@ -1379,13 +1379,13 @@
 		"DOTA_Tooltip_ability_item_blue_fantasy_bonus_damage"						"+$damage"
 		"DOTA_Tooltip_ability_item_blue_fantasy_bonus_armor"						"+$armor"
 		"DOTA_Tooltip_ability_item_blue_fantasy_bonus_regen"						"+$hp_regen"
-		"DOTA_Tooltip_ability_item_blue_fantasy_Lore" 								"The voice of Hades, the one who hears it will be dead soon."
+		"DOTA_Tooltip_ability_item_blue_fantasy_Lore" 								"The voice of Hades, the one who hears it will soon meet their end."
 		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff"  							"Song of Destruction"
-		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff_Description"  				"Items muted, passives disabled, and being constantly dispelled of buffs. Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%. Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%. Taking 4%% of maximum HP per second."
+		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff_Description"  				"Items muted, passives disabled, and being constantly dispelled of buffs. Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%. Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%. Losing 4%% of maximum HP per second."
 
 		// item_wasp_despotic 大核荣耀
 		"DOTA_Tooltip_ability_item_wasp_despotic"					"Wasp Despotic"
-		"DOTA_Tooltip_ability_item_wasp_despotic_Lore"				"The product of the ancient moon soul, it represents callousness."
+		"DOTA_Tooltip_ability_item_wasp_despotic_Lore"				"The product of the ancient moon soul, it represents despotism."
 		"DOTA_Tooltip_ability_item_wasp_despotic_Description"		"<h1>Active: Sting Like a Bee</h1>Critical Chance increases to %active_crit_chance%%% for %active_boost_duration% seconds, but Critical Damage decreases to %active_crit_multiplier%%%.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage."
 		"DOTA_Tooltip_ability_item_wasp_despotic_bonus_damage"		"+$damage"
 		"DOTA_Tooltip_ability_item_wasp_despotic_bonus_agile"		"+$agi"
@@ -1408,7 +1408,7 @@
 
         // item_wasp_golden
 		"DOTA_Tooltip_ability_item_wasp_golden"							"Golden Wasp"
-		"DOTA_Tooltip_ability_item_wasp_golden_Lore"						"A faint whisper dances in your ear, 'Do you want absolute power?'"
+		"DOTA_Tooltip_ability_item_wasp_golden_Lore"						"A faint whisper dances around your ears, 'Do you want absolute power?'"
 		"DOTA_Tooltip_ability_item_wasp_golden_Description"				"<h1>Active: Float like a Butterfly, Sting Like a Bee</h1>Critical Chance and Evasion increases to %active_crit_chance%%%, but Critical Damage decreases to %active_crit_multiplier%%%. Movement speed is increased by %move_speed%%%. Lasts for %active_boost_duration% seconds.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage."
 		"DOTA_Tooltip_ability_item_wasp_golden_bonus_agile"				"+$agi"
 		"DOTA_Tooltip_ability_item_wasp_golden_bonus_damage"				"+$damage"
@@ -1437,7 +1437,7 @@
 		"DOTA_Tooltip_ability_item_jump_jump_jump"						"*Jump! Jump! Jump!*"
 		"DOTA_Tooltip_ability_item_jump_jump_jump_Description"			"<h1>Active: Megablink</h1>Combines the effects of Fallen Sky and all three Blink Dagger upgrades.<br><br>Transforms into a meteor, which lands at the target point, stunning enemies in %meteor_land_radius% radius for %meteor_stun_duration% seconds.<br>Affected enemies take %base_damage% + %str_damage%%% of the caster's strength as magical damage on impact, then burn for a further %meteor_burn_dps% damage per second for %meteor_burn_duration% seconds.<br>This deals less damage to buildings.<br><br>After all this calamity happens, the caster receives the benefits of Swift and Arcane Blinks. Enemies suffer the effect of Overwhelming Blink after the stun duration ends."
 		"DOTA_Tooltip_Ability_item_jump_jump_jump_bonus_all_stats"		"+$all"
-		"DOTA_Tooltip_ability_item_jump_jump_jump_Lore"					"You say Flash？No No No I am a Dotaer not LOLer. It is Blink man."
+		"DOTA_Tooltip_ability_item_jump_jump_jump_Lore"					"You say Flash？No No No. I am a Dotaer, not a LOLer! It is Blink, man!"
 		"DOTA_Tooltip_modifier_item_jump_jump_jump_meteor_burn"			"Meteor Burn"
 		"DOTA_Tooltip_modifier_item_jump_jump_jump_meteor_burn_description"	"Taking damage over time."
 
@@ -1606,13 +1606,15 @@
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_health_regen"		"+$hp_regen"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_mana_regen"		"+$mana_regen"
-		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"Have you played the limited-time enhanced Tidebringer?"
+		"DOTA_Tooltip_ability_item_bfury_ultra_Note0"				"Cleave damage goes through spell immunity."
+		"DOTA_Tooltip_ability_item_bfury_ultra_Note1"				"If multiple sources of Cleave are present, each Cleave's damage is applied separately."
+		"DOTA_Tooltip_Ability_item_bfury_ultra_Note2"				"Have you played the limited-time enhanced Tidebringer?"
 
 
 		// item_bloodthorn_ultra 变态辣
 		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>Bloodthorn Ultra</font>"
-		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Description"                      "<h1>Active: Soul Rend</h1>Silences the target for %silence_duration% seconds. After the silence ends, %silence_damage_percent%%% of the damage taken during the silence will be dealt as additional magic damage.<br><br>All attacks against the target deal an additional %proc_damage% damage and have True Strike.<br><br>Cast Range: %abilitycastrange%\n\n<h1>Passive: Pierce</h1>Each attack has a %proc_chance%%% chance to ignore evasion and deal %proc_damage% additional magic damage."
-		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "Spicy to death"
+		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Description"                      "<h1>Active: Soul Tear</h1>Silences the target for %silence_duration% seconds. After the silence ends, %silence_damage_percent%%% of the damage taken during the silence will be dealt as additional magic damage.<br><br>All attacks against the target deal an additional %proc_damage% damage and have True Strike.<br><br>Cast Range: %abilitycastrange%\n\n<h1>Passive: Pierce</h1>Each attack has a %proc_chance%%% chance to ignore evasion and deal %proc_damage% additional magic damage."
+		"DOTA_Tooltip_ability_item_bloodthorn_ultra_Lore"                             "So Spiiicey Ninja Kiwi!"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_intellect"                  "+$int"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_attack_speed"               "+$attack"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_damage"                     "+$damage"
@@ -1622,9 +1624,9 @@
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_mana_regen_multiplier"			"%+Mana Regeneration Amplification"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_bonus_health_regen"							"+$hp_regen"
 		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_bonuses"				"<b><font color='#7d7d7d'>Upgrade</font></b>: +30% Bloodthorn Critical Strike"
-		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_description"			"Soul Rend 10 enemy heroes."
+		"DOTA_Tooltip_ability_item_bloodthorn_ultra_upgrade_description"			"Soul Tear 10 enemy heroes."
 		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff"                       "Bloodthorn"
-		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "Silenced and takes 120%% additional damage, which is dealt as magic damage when the effect ends.\nAlso takes additional damage from all attacks and attacks cannot miss."
+		"DOTA_Tooltip_modifier_bloodthorn_ultra_debuff_Description"           "Silenced and taking 120%% additional damage, which is dealt as magic damage when the effect ends.\nAlso takes additional damage from all attacks and attacks cannot miss."
 
 		// item_devastator_2 Sacred Parasma 神圣斧
 		"DOTA_Tooltip_Ability_item_devastator_2"							"Sacred Parasma"
