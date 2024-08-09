@@ -753,12 +753,16 @@
 		// Abilities
 		"Ability2"					"tower_headshot"			// none
 		"Ability4"					"tower_ursa_fury_swipes"
+		"Ability5"					"tower_antimage_mana_break"
+		"Ability6"					"tower_troll_warlord_fervor"
+		"Ability7"					"tower_attack_speed_aura"
+		"Ability8"					"tower_armor_aura"
+		"Ability9"					"tower_magical_armor_aura"
+		"Ability10"					"tower_hp_aura"
 
 		"AttackDamageMin"			"390"		// 290
 		"AttackDamageMax"			"410"		// 310
 		"AttackRate"				"0.03"		// 0.15
-		"AttackAcquisitionRange"	"1400"		// 1200
-		"AttackRange"				"1400"		// 1200
-		"ProjectileSpeed"			"1800"		// 1400
+		"ProjectileSpeed"			"2500"		// 1400
 	}
 }
