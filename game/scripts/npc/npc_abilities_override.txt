@@ -8594,6 +8594,18 @@
 	// Ability: Dark Willow 邪影芳灵/小仙女
 	//=================================================================================================================
 	// 荆棘迷宫
+	//=================================================================================================================
+	// Ability: Dark Willow 邪影芳灵/小仙女
+	//=================================================================================================================
+	// 荆棘迷宫
+	 "dark_willow_pixie_dust"
+   	 {
+        "AbilityValues"
+        	{
+            	"hp_regen"  "200"
+            	"mana_regen_amp"    "150"
+        	}
+    }
 	"dark_willow_bramble_maze"
 	{
 		"MaxLevel" "5"
@@ -8602,6 +8614,16 @@
 		{
 				"latch_duration"		"1.0 1.5 2.0 2.5 3.0"
 				"damage_per_tick"		"50 55 60 65 70"
+				"placement_count"
+				{
+					"value"			"8"
+					"special_bonus_facet_dark_willow_thorny_thicket"	"+4"
+				}
+				"spell_amp"
+				{
+					"value"			"0"
+					"special_bonus_facet_dark_willow_thorny_thicket"	"+25"
+				}
 		}
 	}
 	// 作祟
@@ -8632,22 +8654,45 @@
 	"dark_willow_shadow_realm"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"20 19 18 17 16"
 		"AbilityManaCost"				"70 80 90 100 110"
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"						"FIELD_FLOAT"
-				"duration"						"4.5"
-				"LinkedSpecialBonus"			"special_bonus_unique_dark_willow_1"
-			}
-			"02"
-			{
-				"var_type"						"FIELD_INTEGER"
-				"damage"						"120 200 280 360 440"
-			}
-		}
+		"AbilityValues"
+        {
+            "AbilityCooldown"
+            {
+                "value"                 "20 18 16 14 12"
+                "special_bonus_unique_dark_willow_5"        "-2"
+            }
+            
+            "duration"
+            {
+                "value"                     "5"
+                "special_bonus_unique_dark_willow_1"            "+1.5"
+            }
+            "fade_time"                		"0.3 0.25 0.2 0.15 0.1"           
+            "damage"                        "100 200 300 400 500"
+            "attack_range_bonus"            "600"
+            "max_damage_duration"
+            {
+                "value"                         "3.0"
+                "CalculateSpellDamageTooltip"   "0"
+                "DamageTypeTooltip"             "DAMAGE_TYPE_NONE"
+            }
+            "aura_radius"
+            {
+                "value"                 "0"
+                "special_bonus_facet_dark_willow_throwing_shade"            "=1000"
+                "affected_by_aoe_increase"  "1"
+            }
+            "aura_linger"
+            {
+                "value"                 "0"
+                "special_bonus_facet_dark_willow_throwing_shade"            "=1"
+            }
+            "aura_damage_pct"
+            {
+                "value"                 "0"
+                "special_bonus_facet_dark_willow_throwing_shade"            "=50"
+            }
 	}
 	// 诅咒王冠
 	"dark_willow_cursed_crown"
@@ -8659,8 +8704,8 @@
 		{
 				"stun_duration"
 				{
-					"value"			"1.2 1.6 2.0 2.4 2.8"
-					"LinkedSpecialBonus"			"special_bonus_unique_dark_willow_6"
+					"value"			"1.5 2.0 2.5 3 3.5"
+					"special_bonus_unique_dark_willow_6" "+0.75"
 				}
 		}
 	}
