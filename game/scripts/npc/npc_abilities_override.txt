@@ -2546,18 +2546,16 @@
 			"hp_cost_perc"			"8"
 			"dash_length"
 			{
-				"value"	"1100 1200 1400 1600 1800"
-				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_4"
+				"value"	"1100 1200 1300 1400 1500"
 			}
 			"damage_per_second"
 			{
-				"value"				"30 70 110 150 190"
+				"value"				"40 80 120 160 200"			// x2
 				"special_bonus_unique_phoenix_dive_damage"		"+40"
 			}
 			"slow_movement_speed_pct"
 			{
-				"value"		"23 26 29 32 35"
-				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_6"
+				"value"		"10 15 20 25 30"
 			}
 		}
 	}
@@ -2572,8 +2570,7 @@
 			"attackspeed_slow"	"-100 -200 -300 -350 -400"
 			"damage_per_second"
 			{
-				"value"		"40 80 120 160 200"
-				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
+				"value"		"40 80 120 160 200"	// x2
 			}
 		}
 	}
@@ -2584,17 +2581,10 @@
 		"AbilityValues"
 		{
 			"hp_cost_perc"		"10"
-			"spirit_speed"		"1000 1200 1400 1600 2000"
-			"radius"
-			{
-				"value"	"300"
-				"affected_by_aoe_increase"	"1"
-			}
 			"attackspeed_slow"	"-100 -200 -300 -350 -400"
 			"damage_per_second"
 			{
-				"value"			"40 80 120 160 200"
-				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_3"
+				"value"		"40 80 120 160 200"	// x2
 			}
 		}
 	}
@@ -2610,13 +2600,12 @@
 			"hp_perc_damage"
 			{
 				"value"			"2.5 2.75 3.0 3.25 3.5"
-				"LinkedSpecialBonus"	"special_bonus_unique_phoenix_5"
 			}
 			"base_heal"			"20 30 40 50 60"
-			"hp_perc_heal"			"2.0 2.5 3.0 3.5 4.0"
+			"hp_perc_heal"			"1.0 1.5 2.0 2.5 3.0"
 			"radius"
 			{
-				"value"	"200"
+				"value"	"160"
 				"affected_by_aoe_increase"	"1"
 			}
 			"forward_move_speed"	"350"
@@ -2628,18 +2617,6 @@
 			"blind_per_second"	"30"
 		}
 	}
-	"special_bonus_unique_phoenix_5"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_FLOAT"
-				"value"				"1.0"
-				"ad_linked_abilities"			"phoenix_sun_ray"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
-	}
 	// 超新星
 	"phoenix_supernova"
 	{
@@ -2648,35 +2625,22 @@
 		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
-				"damage_per_sec"	"60 90 120 150"
+				"damage_per_sec"	"60 120 180 240"
 				"stun_duration"
 				{
-					"value"			"2.0 2.5 3.0 3.5"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_2"
+					"value"			"1.6 2 2.4 2.8"
 				}
 				"max_hero_attacks"
 				{
-					"value"			"12 18 24 30"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
+					"value"			"12 16 20 24"		// x2
+				"special_bonus_unique_phoenix_1" "+8"	// 2
 				}
 				"max_hero_attacks_scepter"
 				{
-					"value"	"14 20 26 32"
-					"LinkedSpecialBonus"	"special_bonus_unique_phoenix_1"
+					"value"	"14 20 26 32"				// x2
 					"RequiresScepter"	"1"
+				"special_bonus_unique_phoenix_1" "+8"	// 2
 				}
-		}
-	}
-	"special_bonus_unique_phoenix_1"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"8"
-				"ad_linked_abilities"			"phoenix_supernova"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
 		}
 	}
 	//=================================================================================================================
