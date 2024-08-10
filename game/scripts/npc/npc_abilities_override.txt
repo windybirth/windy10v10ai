@@ -1514,30 +1514,27 @@
 	// 放魂
 	"elder_titan_ancestral_spirit"
 	{
-		"MaxLevel" "6"
-		"AbilityCooldown"				"25 23 21 19 17 15"
-		"AbilityManaCost"				"70 80 90 100 110 120"
+		"MaxLevel" "5"
+		"AbilityCooldown"				"23 21 19 17 15"
+		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
 			"move_pct_heroes"
 			{
-				"value"		"4 5 6 7 8 9"
-				"special_bonus_unique_elder_titan_bonus_spirit_speed"	"+2"
+				"value"		"5 6 7 8 9"
 			}
 			"damage_creeps"
 			{
-				"value"	"3 5 10 15 20 25"
-				"CalculateSpellDamageTooltip"				"0"
-				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				"value"	"5 10 15 20 25"
 			}
 			"damage_heroes"
 			{
-				"value"		"10 20 35 50 70 90"
+				"value"		"17 38 59 80 101"
 				"special_bonus_unique_elder_titan"	"+25"
 				"CalculateSpellDamageTooltip"	"0"
 				"DamageTypeTooltip"				"DAMAGE_TYPE_NONE"
 			}
-			"armor_heroes"					"1 2 3 4 5 6"
+			"armor_heroes"					"2 3 4 5 6"
 			"scepter_magic_immune_per_hero"
 			{
 				"value"				"1.35"
@@ -1580,18 +1577,6 @@
 	"elder_titan_earth_splitter"
 	{
 		"AbilityCooldown"				"90"
-	}
-	"special_bonus_unique_elder_titan_3"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"30"
-				"ad_linked_abilities"			"elder_titan_earth_splitter"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
-		}
 	}
 	//=================================================================================================================
 	// Ability: Huskar 哈斯卡/神灵
