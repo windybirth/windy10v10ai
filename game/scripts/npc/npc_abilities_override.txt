@@ -4113,7 +4113,7 @@
 	// 抽力量
 	"undying_decay"
 	{
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 可能会超模，实战再看
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"8 7 6 5 4"
 		"AbilityManaCost"				"100 110 120 130 140"
@@ -4122,12 +4122,12 @@
 			"decay_damage"
 			{
 				"value"		"40 80 120 160 200"
-				"special_bonus_unique_undying_8" "+100"
+				"special_bonus_unique_undying_8" "+100"	// 50
 			}
 			"str_steal"
 			{
 				"value"		"4"
-				"special_bonus_scepter" "+8"// 4
+				"special_bonus_scepter" "+8"			// 4
 			}
 		}
 	}
@@ -4170,17 +4170,6 @@
 			"health_threshold_pct_tooltip"	"60"	// 40
 		}
 	}
-	"undying_tombstone_zombie_aura"
-	{
-		"AbilitySpecial"
-		{
-			"03"
-			{
-				"var_type"				"FIELD_FLOAT"
-				"zombie_interval"		"80000"
-			}
-		}
-	}
 	// 尸王大
 	"undying_flesh_golem"
 	{
@@ -4204,7 +4193,7 @@
 			"spawn_zombie_on_attack"
 			{
 				"value"						"0"
-				"special_bonus_facet_undying_rotting_mitts"	"+0"	// 1
+				"special_bonus_facet_undying_rotting_mitts"	"+0"	// 僵尸卡顿，不再产生僵尸
 			}
 		}
 	}
