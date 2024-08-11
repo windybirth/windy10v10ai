@@ -4217,14 +4217,15 @@
 					"special_bonus_unique_wisp_3"	"+6"
 				}
 				"tether_heal_amp"			"60 80 100 120 140"
+				"tether_mana_amp"			"60 80 100 120 140"
 				"slow"
 				{
-					"value"			"15 25 35 45 55"
-					"special_bonus_unique_wisp_11"			"+15"
+					"value"			"10 20 30 40 50"
 				}
-				"damage"			"10 20 30 40 50"
+				"damage"			"30 50 70 90 110"	// x2
 		}
 	}
+	// 幽魂
 	"wisp_spirits"
 	{
 		"MaxLevel" "5"
@@ -4237,43 +4238,33 @@
 				"special_bonus_unique_wisp"		"+110"
 			}
 			"revolution_time"			"10.0 10.0 10.0 10.0 10.0"
-			"min_range"					"200"
 			"max_range"
 			{
 					"value"		"850"
 					"affected_by_aoe_increase"	"1"
 			}
-			"hero_hit_radius"			"110"
 			"explode_radius"
 			{
-				"value"		"500"
+				"value"		"560"
 				"affected_by_aoe_increase"	"1"
 			}
-			"hit_radius"
-			{
-				"value"		"150 150 150 150"
-				"affected_by_aoe_increase"	"1"
-			}
-			"spirit_movement_rate"		"250 350 450 550 650"
-			"spirit_duration"			"19.0 19.0 19.0 19.0"
-			"spirit_amount"			"5"
 			"scepter_slow_pct"
 			{
 				"value"			"0"
-				"special_bonus_scepter"			"+100"
+				"special_bonus_scepter"			"+100"	// 15
 			}
 			"scepter_slow_duration"
 			{
 				"value"			"0"
-				"special_bonus_scepter"			"+1.0"
+				"special_bonus_scepter"			"+1.0"	// 0.3
 			}
 			"AbilityManaCost"
 			{
-				"value"							"100 110 120 130"
+				"value"							"100 110 120 130 140"
 			}
 			"AbilityCooldown"
 			{
-				"value"				"26.0 24.0 22.0 20.0"
+				"value"				"26.0 24.0 22.0 20.0 18.0"
 				"special_bonus_scepter"			"-50%"
 			}
 		}
@@ -4288,24 +4279,44 @@
 		{
 				"bonus_attack_speed"		"90 110 130 150 170"
 				"bonus_spell_amp"		"12 14 16 18 20"
+
+				"bonus_attack_speed"
+				{
+					"value"		"30"
+					"special_bonus_facet_wisp_kritzkrieg" "70 120 170 220 270"	// x2
+				}
+				"bonus_spell_amp"
+				{
+					"value"				"8"
+					"special_bonus_facet_wisp_kritzkrieg" "16 20 24 28 32"		// x2
+				}
+				"bonus_armor"
+				{
+					"value"				"8"
+					"special_bonus_facet_wisp_medigun" "8 14 20 26 32"			// x2
+				}
+				"bonus_mres"
+				{
+					"value"				"4"
+					"special_bonus_facet_wisp_medigun" "12 18 24 30 36"
+				}
+				// 最大生命值恢复
 				"hp_regen"
 				{
-					"value"			"0.7 0.8 0.9 1.0 1.1"
-					"special_bonus_unique_wisp_10"	"+0.2"
+					"value"			"0.6 0.7 0.8 0.9 1.0"
 				}
 		}
 	}
-	// 飞
+	// 降临 飞
 	"wisp_relocate"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 70 60 50"
-		"AbilitySpecial"
+		"AbilityCooldown"				"90 80 70 60"
+		"AbilityValues"
 		{
-			"01"
+			"cast_delay"
 			{
-				"var_type"					"FIELD_FLOAT"
-				"cast_delay"				"2.5 2.0 1.5 1.0"
+				"value" "3.0 2.5 2.0 1.5"
 			}
 		}
 	}
