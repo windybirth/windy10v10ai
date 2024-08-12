@@ -1285,7 +1285,7 @@
 	// 余震
 	"earthshaker_aftershock"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "5"
 		"AbilityDuration"				"0.8 1.0 1.2 1.4 1.6"
 		"AbilityValues"
 		{
@@ -1296,7 +1296,7 @@
 				"aftershock_damage"
 				{
 					"value"		"140 200 260 320 380"	// x2
-					"special_bonus_unique_earthshaker_6"		"+200"	// 50
+					"special_bonus_unique_earthshaker_6"		"+120"	// 50
 				}
 		}
 	}
