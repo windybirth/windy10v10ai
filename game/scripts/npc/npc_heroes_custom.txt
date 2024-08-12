@@ -1519,36 +1519,7 @@
 	}
 	"npc_dota_hero_marci"
 	{
-		"AttackRate"    "1.4"
-		"AttributeStrengthGain"		"3.7"
-		"AttributeAgilityGain"		"2.5"
-		"AttributeIntellienceGain"	"1.9"
-		"Ability3"	    "marci_guardian"
-		"Ability4"          "marci_bodyguard"
-		"Ability5"	    "marci_feint_custom"
-		"Facets"
-          {
-            "marci_sidekick" 
-            {
-                "Icon"              "twin_hearts"
-                "Color"             "Yellow"
-                "GradientID"        "3"
-            }           
-            "marci_bodyguard" 
-            {
-                "Icon"              "armor"
-                "Color"             "Blue"
-                "GradientID"        "1"
-            }
-
-	  }
-	}
-	"npc_dota_hero_mirana"
-	{
-		"AttackRate"    "1.5"
-		"AttributeStrengthGain"		"2.2"
-		"AttributeAgilityGain"		"3.4"
-		"AttributeIntellienceGain"	"2.1"
+		"Ability4"          "broodmother_insatiable_hunger"
 	}
 	"npc_dota_hero_medusa"
 	{
@@ -2524,21 +2495,21 @@
 		"AttributeIntellienceGain"	"3.1"
 		"Facets"
         	{
-		    "windrunner_focusfire" 
+		    "windrunner_focusfire"
             		{
                 		"Icon"              "focus_fire"
                 		"Color"             "Yellow"
                 		"GradientID"        "2"
 				"Deprecated"	    "true"
             		}
-	            "windrunner_tailwind" 
+	            "windrunner_tailwind"
             		{
                 		"Icon"              "speed"
 		                "Color"             "Yellow"
 		                "GradientID"        "2"
 		                "Deprecated"        "false"
             		}
-           	    "windrunner_whirlwind" 
+           	    "windrunner_whirlwind"
             		{
                 		"Icon"              "multi_arrow"
                			"Color"             "Green"

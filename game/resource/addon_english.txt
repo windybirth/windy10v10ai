@@ -63,7 +63,6 @@
 		"player_gold_xp_multiplier_5"               "5"
 
 		"radiant_player_number_1"		"1  (Easy)"
-		"radiant_player_number_5"		"5  (Medium)"
 		"radiant_player_number_10"		"10 (Hard)"
 
 		"respawn_time_percentage_slow"        "Slow"
@@ -326,9 +325,9 @@
 
 		// 茶神
 		"npc_dota_hero_techies"					"Hechahecha"
-		
+
 		// MARCI
-		
+
 		"DOTA_Tooltip_special_bonus_unique_marci_guardian_lifesteal"				"+{s:value} Sidekick/Bodyguard Lifesteal"
 		"DOTA_Tooltip_special_bonus_unique_marci_guardian_damage"				"+{s:value} Sidekick/Bodyguard Damage"
 
@@ -889,7 +888,7 @@
 
         // 巫妖
         "DOTA_Tooltip_ability_special_bonus_unique_lich_401"  "+{s:bonus_jumps} Chain Frost Bounces"
-	
+
         "DOTA_Tooltip_ability_lich_frost_aura_Description"  			"Lich's attacks chill the bones of his enemies, slowing their movement speed. His presence in battle freezes the attacks of his allies, granting them the same slow effect on their own attacks."
 	"DOTA_Tooltip_ability_lich_frost_aura_movespeed_slow"			"%MOVEMENT SPEED SLOW:"
 	"DOTA_Tooltip_ability_lich_frost_aura_Note0"				"Slow does not stack with itself."
@@ -1558,7 +1557,7 @@
 
 	   // Holy Locket
 	   "DOTA_Tooltip_ability_item_holy_locket_Description"             "<h1>Active: Energy Charge</h1>Target an allied unit to instantly restore %restore_per_charge% health and mana per charge stored. <br><br>Automatically gains a charge every %AbilityChargeRestoreTime% seconds and whenever a visible enemy within %charge_radius% range uses an ability.\n\n<h1>Passive: Holy Blessing</h1>Amplifies heals you provide by %heal_increase%%%. <br><br><font color='#FF0000'>IMPORTANT! Purchasing Holy Locket during the hero picking or strategy phase will crash the server. Please wait until you load into the game.</font>"
-        
+
 
         // item_bloodstone_v2 血精神石
         "DOTA_Tooltip_ability_item_bloodstone"							"Godness Bloodstone"
