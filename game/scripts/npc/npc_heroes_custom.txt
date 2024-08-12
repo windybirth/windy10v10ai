@@ -601,7 +601,7 @@
 			}
 		}
 	}
-    "npc_dota_hero_antimage"
+	"npc_dota_hero_antimage"
 	{
 		"Ability4"		"brewmaster_cinder_brew"
 		"Ability5"		"brewmaster_drunken_brawler"
@@ -920,7 +920,7 @@
 	}
 	"npc_dota_hero_dazzle"
 	{
-		"Ability4"		"dazzle_weave"
+		// "Ability4"		"dazzle_weave"
 		"Ability5"		"dazzle_good_juju"	// 需要额外加点
 		"Ability7"		"dazzle_innate_weave"
 		"Bot"
@@ -1523,7 +1523,7 @@
 		{
 			"Build"
 			{
-                "1"			"medusa_mystic_snake"
+				"1"			"medusa_mystic_snake"
 				"2"			"medusa_split_shot"
 				"3"			"medusa_mystic_snake"
 				"4"			"medusa_split_shot"
@@ -1561,8 +1561,8 @@
 		}
 	}
 	// 初音未来
-    "npc_dota_hero_meepo"
-    {
+	"npc_dota_hero_meepo"
+	{
 		"Bot"
 		{
 			"Build"
@@ -1693,7 +1693,7 @@
 	}
 	"npc_dota_hero_ogre_magi"
 	{
-		"AttackRate"                "1.6"
+		"AttackRate"				"1.6"
 		"AttributeStrengthGain"		"4.7"	// 4.2
 		"AttributeAgilityGain"		"2.0"	// 1.5
 		"Bot"
@@ -2487,38 +2487,6 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
-		"MovementSpeed"	"300"	// 290
-		"AttributeStrengthGain"		"2.5"
-		"AttributeAgilityGain"		"2.1"
-		"AttributeIntellienceGain"	"3.1"
-		"Facets"
-        	{
-		    "windrunner_focusfire"
-            		{
-                		"Icon"              "focus_fire"
-                		"Color"             "Yellow"
-                		"GradientID"        "2"
-				"Deprecated"	    "true"
-            		}
-	            "windrunner_tailwind"
-            		{
-                		"Icon"              "speed"
-		                "Color"             "Yellow"
-		                "GradientID"        "2"
-		                "Deprecated"        "false"
-            		}
-           	    "windrunner_whirlwind"
-            		{
-                		"Icon"              "multi_arrow"
-               			"Color"             "Green"
-                		"GradientID"        "0"
-              			"AbilityIconReplacements"
-               			 {
-                    			"windrunner_focusfire"  "windrunner_whirlwind"
-                    			"windrunner_focusfire_cancel"   "windrunner_whirlwind_stop"
-                		}
-            		}
-        	}
 		"Bot"
 		{
 			"Build"
