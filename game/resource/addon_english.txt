@@ -934,7 +934,8 @@
 		"DOTA_Tooltip_modifier_int_tome_Description"					"Intelligence increased by <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"Tome of Luoshu"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently increases all attributes by %bonus_all_stats%, as well as provides %bonus_base_damage_percent%%% Base Attack Damage, %attack_speed_perc%%% Base Attack Speed Percentage, %bonus_movespeed%%% Movement Speed, %status_resistance%%% Status Resistance, %slow_resistance%%% Slow Resistance, %spell_amp%%% Spell Amplification, %bonus_cast_range% Cast Range, %bonus_aoe% AoE Bonus, %cast_speed%%% Cast Speed, and %manacost_reduction%%% lowered Mana Costs.\nA hero can only use one.\nShareable with teammates."
+		//"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently grants: <br>+%bonus_all_stats% all attributes<br>+%bonus_base_damage_percent%%% Base Attack Damage<br>+%attack_speed_perc%%% Base Attack Speed Percentage<br>+%bonus_movespeed%%% Movement Speed<br>%status_resistance%%% Status Resistance<br>+%slow_resistance%%% Slow Resistance<br>+%spell_amp%%% Spell Amplification<br>+%bonus_cast_range% Cast Range<br>%bonus_aoe% AoE Bonus<br>+%cast_speed%%% Cast Speed<br>+%manacost_reduction%%% Mana Cost Reduction.\nA hero can only use one.\nShareable with teammates."
+		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>Use: Luoshu</h1> Permanently grants: <br>+%bonus_all_stats% all attributes<br>+%bonus_base_damage_percent%%% Base Attack Damage<br>%status_resistance%%% Status Resistance<br>+%spell_amp%%% Spell Amplification<br>+%bonus_cast_range% Cast Range<br>\nA hero can only use one.\nShareable with teammates."
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Lore"					"What could it be that you would like...? A little bit of everything...?"
 
 		"DOTA_Tooltip_modifier_luoshu_tome"								"Tome of Luoshu"
