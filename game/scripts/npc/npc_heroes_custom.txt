@@ -1986,6 +1986,7 @@
 	}
 	"npc_dota_hero_riki"
 	{
+		"Ability9"		"riki_permanent_invisibility"
 		"Bot"
 		{
 			"Build"
@@ -2297,7 +2298,8 @@
 	}
 	"npc_dota_hero_spirit_breaker"
 	{
-	    "Ability5"		"spirit_breaker_empowering_haste"
+		"Ability3"		"spirit_breaker_empowering_haste"
+		"Ability9"		"spirit_breaker_greater_bash"	// 巨力重击 被动不需要快捷键
 	}
 	"npc_dota_hero_sven"
 	{
