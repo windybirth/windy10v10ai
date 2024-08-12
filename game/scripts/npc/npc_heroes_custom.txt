@@ -1541,7 +1541,7 @@
             }           
             "marci_bodyguard" 
             {
-                "Icon"              "shield"
+                "Icon"              "armor"
                 "Color"             "Blue"
                 "GradientID"        "1"
             }
