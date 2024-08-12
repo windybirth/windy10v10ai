@@ -278,7 +278,7 @@
 	// 衰退光环
 	"abyssal_underlord_atrophy_aura"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"damage_reduction_pct"
@@ -290,7 +290,7 @@
 			}
 			"bonus_damage_from_creep"
 			{
-				"value"							"3 5 7 9 11"
+				"value"							"2 4 6 8 10"
 			}
 			"bonus_damage_from_hero"
 			{
@@ -302,7 +302,7 @@
 			}
 		}
 	}
-	// 开门
+	// 恶魔之扉
 	"abyssal_underlord_dark_portal"
 	{
 		"AbilityValues"
@@ -316,14 +316,14 @@
 	}
 	// 黑暗之门
 	"abyssal_underlord_dark_rift"
-    {
-        "AbilityCooldown"				"60"
-        "AbilityValues"
-        {
-            "radius"						"300"
-            "teleport_delay"				"3.0 2.5 2.0"
-        }
-    }
+	{
+		"AbilityCooldown"				"60"
+		"AbilityValues"
+		{
+			"radius"						"300"
+			"teleport_delay"				"3.0 2.5 2.0"
+		}
+	}
 	//=================================================================================================================
 	// Ability: Axe 斧王
 	//=================================================================================================================
@@ -617,13 +617,13 @@
 	// 野性之心
 	"beastmaster_inner_beast"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"bonus_attack_speed"
 			{
-				"value"									"20 30 40 50 60"
-				"special_bonus_unique_beastmaster_4"		"+30"
+				"value"									"15 30 45 60 75"
+				"special_bonus_unique_beastmaster_4"		"+25"
 			}
 			"attack_speed_per_unit"
 			{
