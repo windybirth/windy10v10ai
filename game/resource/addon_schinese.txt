@@ -277,6 +277,11 @@
 		"DOTA_Tooltip_ability_tower_headshot_proc_chance"		"几率："
 		"DOTA_Tooltip_ability_tower_headshot_knockback_distance"	"击退距离："
 		"DOTA_Tooltip_ability_tower_headshot_slow_duration"		"减速持续时间："
+
+		"DOTA_Tooltip_ability_fountain_hp_aura"								"泉水生命光环"
+		"DOTA_Tooltip_ability_fountain_hp_aura_Description"					"提高周围单位的生命值上限。"
+		"DOTA_Tooltip_ability_fountain_hp_aura_bonus_hp"					"%额外生命值加成："
+		"DOTA_Tooltip_ability_fountain_hp_aura_radius"						"作用范围："
 		///////////////////////////////////////////////////
 		//
 		//			itembuilds
