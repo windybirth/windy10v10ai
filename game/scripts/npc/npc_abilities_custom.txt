@@ -163,7 +163,51 @@
 			}
 		}
 	}
+	//=================================================================================================================
+	// Ability: Silent and Stout Hearted (NEW MARCI INNATE)
+	//=================================================================================================================
+	"marci_feint_custom"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"             		"ability_lua"
+		"ScriptFile"             		"heroes/hero_marci/feint"
+		"AbilityBehavior"              		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_INNATE_UI | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS"
+		"AbilityDamage"					"DAMAGE_TYPE_PHYSICAL"
+		"AbilityCooldown"				"0.2"
+		"AbilityManaCost"				"0"
+		"Innate"						"1"
+		"MaxLevel"						"1"
+		"RequiredLevel"					"1"
 
+		"AbilityValues"
+		{
+ 				"chance"
+				{
+					"value"	"0"
+					"special_bonus_facet_marci_bodyguard"	"=25"
+				}
+ 				"attack_damage_pct_to_damage"
+				{
+					"value"	"0"
+					"CalculateSpellDamageTooltip"		"0"
+					"special_bonus_facet_marci_bodyguard"	"=75"
+					"special_bonus_scepter"	"x2"
+				}
+ 				"evasion_chance_multiplier"
+				{
+					"value"	"0"
+					"special_bonus_facet_marci_bodyguard" "=1"
+					"special_bonus_scepter"	"x4"
+				}
+ 				"max_range"
+				{
+					"value"	"0"
+					"special_bonus_facet_marci_bodyguard"	"=500"
+					"affected_by_aoe_increase" "1"
+				}
+		}
+	}
 	//=================================================================================================================
 	// Ability: Creep Buff
 	//=================================================================================================================
