@@ -2195,22 +2195,22 @@
 				"value"				"20 40 60 80 100"	// 6 12 24 48
 				"special_bonus_unique_marci_guardian_damage"			"+50"
 			}
-		}
-		"max_partner_distance"              
-            {
-                "value"     "4000"
+			"max_partner_distance"              
+           		{
+	                	"value"     "4000"
 				"special_bonus_facet_marci_sidekick" "=99999999"
-                "affected_by_aoe_increase" 
+                		"affected_by_aoe_increase" 
 				{
 					"value"		"1"
 					"special_bonus_facet_marci_sidekick" "=0"
 				}
-            }
-            "max_partner_penalty"
-			{
-			"value"			"50"
-			"special_bonus_facet_marci_sidekick "=100"
+            		}
+            		"max_partner_penalty"
+				{
+				"value"			"50"
+				"special_bonus_facet_marci_sidekick "=100"
 			}
+		}
 	}
 	"marci_bodyguard"
     {
