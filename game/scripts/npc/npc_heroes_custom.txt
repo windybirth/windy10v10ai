@@ -1517,10 +1517,6 @@
 			}
 		}
 	}
-	"npc_dota_hero_marci"
-	{
-		"Ability4"          "broodmother_insatiable_hunger"
-	}
 	"npc_dota_hero_medusa"
 	{
 		"Bot"
