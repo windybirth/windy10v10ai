@@ -1071,7 +1071,7 @@
 		"DOTA_Tooltip_modifier_int_tome_Description"					"智力增加 <font color='#49bf57'>%dMODIFIER_PROPERTY_TOOLTIP%</font>."
 
 		"DOTA_Tooltip_Ability_item_tome_of_luoshu"						"洛书"
-		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>使用: 洛书祝福</h1> 永久增加 <br>%bonus_all_stats% 点全属性，<br>%status_resistance%%% 状态抗性，<br>%spell_amp%%% 技能增强，<br>%bonus_base_damage_percent%%% 基础攻击力，<br>%bonus_cast_range% 施法距离。\n只可使用一次\n可以分享给队友"
+		"DOTA_Tooltip_Ability_item_tome_of_luoshu_Description"			"<h1>使用: 洛书祝福</h1> 永久获得 <br>+%bonus_all_stats% 点全属性<br>+%status_resistance%%% 状态抗性<br>+%spell_amp%%% 技能增强<br>+%bonus_base_damage_percent%%% 基础攻击力<br>+%bonus_cast_range% 施法距离。\n只可使用一次\n可以分享给队友"
 		"DOTA_Tooltip_ability_item_tome_of_luoshu_cast_error"			"洛书只能使用一次"
 
 		"DOTA_Tooltip_modifier_luoshu_tome"								"洛书看好你！"
@@ -1163,7 +1163,7 @@
 		"DOTA_Tooltip_ability_item_vladmir_2_bonus_armor"							"+$armor"
 
 		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura"				"强袭祭品"
-		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得20%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
+		"DOTA_Tooltip_modifier_item_vladmir_2_general_aura_Description"	"获得25%%吸血效果，%dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%攻击力加成，%fMODIFIER_PROPERTY_MANA_REGEN_CONSTANT%点/秒魔法恢复，%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
 
 		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura"				"强袭祭品"
 		"DOTA_Tooltip_modifier_item_vladmir_2_building_aura_Description"	"获得%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点护甲，%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%点攻击速度。"
@@ -1199,9 +1199,10 @@
 		"DOTA_Tooltip_ability_item_undying_heart_Lore"									"保存完好的心脏，来自早已绝种的怪兽，能提升携带者的耐久力。"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_strength"						"+$str"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_health"							"+$health"
-		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"						"%+最大生命恢复（无法叠加）"
+		"DOTA_Tooltip_ability_item_undying_heart_health_regen_pct"						"%+最大生命恢复"
 		"DOTA_Tooltip_ability_item_undying_heart_bonus_evasion"							"%+$evasion"
 		"DOTA_Tooltip_ability_item_undying_heart_status_resistance"						"%+状态抗性"
+		"DOTA_Tooltip_ability_item_undying_heart_note0"									"多个不朽之心的最大生命恢复效果不叠加。"
 		"DOTA_Tooltip_modifier_item_undying_heart_buff"									"Buff：巨龙复苏"
 
         // item_force_staff_2 推推2
@@ -1239,7 +1240,7 @@
 		"DOTA_Tooltip_modifier_insight_armor_aura_Description"					"获得 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复，和 %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% 伤害减免。"
 
 		"DOTA_Tooltip_modifier_insight_armor_aura_buff"							"<font color='#f15b47'>高阶洞察盔甲光环</font>"
-		"DOTA_Tooltip_modifier_insight_armor_aura_buff_Description"				"获得 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复，和 %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% 伤害减免。"
+		"DOTA_Tooltip_modifier_insight_armor_aura_buff_Description"				"获得 %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% 生命恢复，%dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% 魔法抗性, 和 %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% 伤害减免。"
 
         // item_arcane_octarine_core 奥术之心
 		"DOTA_Tooltip_Ability_item_arcane_octarine_core"			"奥术之心"
@@ -1510,7 +1511,7 @@
 		"DOTA_Tooltip_ability_item_blue_fantasy_bonus_regen"						"+生命恢复"
 		"DOTA_Tooltip_ability_item_blue_fantasy_Lore" 								"黄泉之音，闻者命不久矣"
 		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff"  							"残响震荡"
-		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff_Description"  				"装备被禁用，被动技能被禁用，持续驱散增益效果。移动速度降低%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
+		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff_Description"  				"装备被禁用，被动技能被禁用，持续驱散增益效果。移动速度降低%dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%，攻击速度降低%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。每秒受到自身4%%的最大生命值的魔法伤害。"
 
 		// item_wasp_despotic 大核荣耀
 		"DOTA_Tooltip_ability_item_wasp_despotic"					"大核荣耀暴虐"
@@ -1723,7 +1724,8 @@
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_damage"			"+$damage"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_health_regen"		"+$hp_regen"
 		"DOTA_Tooltip_ability_item_bfury_ultra_bonus_mana_regen"		"+$mana_regen"
-		"DOTA_Tooltip_Ability_item_bfury_ultra_Note0"					"你玩过曾经的限时强化版水刀吗？"
+		"DOTA_Tooltip_ability_item_bfury_ultra_Note0"					"分裂伤害无视减益免疫。"
+		"DOTA_Tooltip_ability_item_bfury_ultra_Note1"					"如果存在多个分裂效果，每个分裂的伤害都会单独计算。"
 
 		// item_bloodthorn_ultra 变态辣
 		"DOTA_Tooltip_Ability_item_bloodthorn_ultra"				"<font color='#e03e2e'>变态辣</font>"
