@@ -7249,13 +7249,16 @@
 	// 倒影
 	"terrorblade_reflection"
 	{
-		"AbilityManaCost"				"55 70 85 100"
 		"AbilityValues"
 		{
+				"AbilityManaCost"
+				{
+					"value"		"70 80 90 100"	// x2
+				}
 				"AbilityCooldown"
 				{
-					"value"		"45"
-					"special_bonus_unique_terrorblade_2" "-5"
+					"value"		"44"
+					"special_bonus_unique_terrorblade_2" "-4"
 				}
 				"illusion_duration"
 				{
@@ -7268,13 +7271,11 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"30"
-		"AbilityManaCost"				"60 80 100 120 140"
 		"AbilityValues"
 		{
 			"illusion_duration"
 			{
 				"value"			"50.0"
-				"special_bonus_unique_terrorblade_5"	"+10"
 			}
 			"illusion_outgoing_damage"
 			{
@@ -7287,6 +7288,10 @@
 				"value"				"40 50 60 70 80"
 				"special_bonus_unique_terrorblade_4"	"+20"
 			}
+			"AbilityManaCost"
+			{
+				"value"				"55 65 75 85 95"
+			}
 		}
 	}
 	// 魔化
@@ -7298,36 +7303,34 @@
 			"duration"
 			{
 				"value"				"35 40 45 50 55"
-				"special_bonus_unique_terrorblade_3"	"+20"
 			}
-			"bonus_range"			"340 360 380 400 420"
-			"tooltip_attack_range"			"490 510 530 550 570"
+			"bonus_range"			"300 350 400 450 500"
+			"tooltip_attack_range"			"450 500 550 600 650"
 			"bonus_damage"			"30 50 70 90 110"
 		}
 	}
-	// 断魂
+	// 魂断
 	"terrorblade_sunder"
 	{
 		"MaxLevel" "4"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"AbilityCooldown"				"80.0 60.0 40.0 20.0"
+		"AbilityCooldown"				"60.0 50.0 40.0 30.0"
 		"AbilityManaCost"				"100 75 50 25"
 		"AbilityCastRange"				"600 800 1000 1200"	// 475
-		"AbilityCastPoint"				"0.35 0.25 0.15 0.0"
 		"AbilityValues"
 		{
-				"hit_point_minimum_pct"		"20 15 10 5" // FIXME 调低配合暗臂章的 35 30 25
+				"hit_point_minimum_pct"		"30 25 20 15"
 		}
 	}
+	// 魂断冷却
 	"special_bonus_unique_terrorblade"
 	{
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"value"
 			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"15"
-				"ad_linked_abilities"			"terrorblade_sunder"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value" "20"
+				"ad_linked_abilities" "terrorblade_sunder"
 			}
 		}
 	}
