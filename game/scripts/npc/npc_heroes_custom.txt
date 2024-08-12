@@ -1553,7 +1553,7 @@
 		"AttackRate"    "1.5"
 		"AttributeStrengthGain"		"2.2"
 		"AttributeAgilityGain"		"3.4"
-		"AttributeIntellienceGain"	"2.1
+		"AttributeIntellienceGain"	"2.1"
 	}
 	"npc_dota_hero_medusa"
 	{
