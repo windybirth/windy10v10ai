@@ -794,16 +794,15 @@
 				"value"		"300"
 			}
 			"activation_cooldown"					"16"		// 24
-			"activation_manacost"					"250"		// 100
-			"activation_delay"						"0.2"		// 0.5
-			"activation_num_quill_sprays"			"8"			// 6
-			"activation_spray_interval"				"0.3"		// 0.4
+			"activation_manacost"					"150"		// 100
+			"activation_num_quill_sprays"			"6"			// 5
 		}
 	}
 	// 战意
 	"bristleback_warpath"
 	{
-		"MaxLevel" "5"
+		"MaxLevel" "4"
+		"AbilityManaCost"				"55 65 75 85"
 		"AbilityValues"
 		{
 			"damage_per_stack"
@@ -817,9 +816,14 @@
 				"value"					"0"
 				"special_bonus_facet_bristleback_berserk"	"=10 =15 =20 =25"
 			}
-			"move_speed_per_stack"		"0 2 3 4 5"
+			"move_speed_per_stack"		"2 3 4 5"
 			"stack_duration"				"16.0 18.0 20.0 22.0"
 			"max_stacks"					"8 10 12 14"
+			"active_duration"
+			{
+				"value"				"0"
+				"special_bonus_facet_bristleback_seeing_red"				"4 5 6 7"
+			}
 		}
 	}
 	//=================================================================================================================
