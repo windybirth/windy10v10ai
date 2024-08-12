@@ -155,7 +155,7 @@
 		"data_panel_player_property_skill_points_bonus"			"Bonus Skill Points"
 
 		"data_panel_player_property_tooltip"					"Hero will gain these effects progressively at levels 2, 4, 6, 8, 10, 12, 14, and 16."
-		"data_panel_player_property_skill_points_bonus_tooltip"			"Hero will gain these effects progressively at levels 4, 8, 12, and 16."
+		"data_panel_player_property_skill_points_bonus_tooltip"	"Hero will gain these effects progressively at levels 4, 8, 12, and 16."
 		"data_panel_player_property_except_tooltip"				"Hero will gain these effects immediately at level 1."
 
 		"data_panel_player_property_value"				"Value"
@@ -220,34 +220,34 @@
 		"DOTA_Tooltip_modifier_global_tower_power_400"					"Building Damage"
 		"DOTA_Tooltip_modifier_global_tower_power_400_Description"		"This building's attack damage is increased by %dMODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE%%%."
 
-		"DOTA_Tooltip_modifier_tower_endure"						"Building Durability"
-		"DOTA_Tooltip_modifier_tower_endure_Description"			"This building's max health is %dMODIFIER_PROPERTY_TOOLTIP%%% of its normal value."
+		"DOTA_Tooltip_modifier_tower_endure"							"Building Durability"
+		"DOTA_Tooltip_modifier_tower_endure_Description"				"This building's max health is %dMODIFIER_PROPERTY_TOOLTIP%%% of its normal value."
 
 		"DOTA_Tooltip_modifier_global_melee_resistance"					"Melee Hero Bonuses"
 		"DOTA_Tooltip_modifier_global_melee_resistance_Description"		"Melee heroes have %dMODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS%%% extra magic resistance, %dMODIFIER_PROPERTY_SLOW_RESISTANCE_STACKING%%% slow resistance, and %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% status resistance."
 
-		"DOTA_Tooltip_ability_creep_buff"						"Creep Buff"
+		"DOTA_Tooltip_ability_creep_buff"								"Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_bonus_damage"					"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_damage_reduction"				"+%Damage Reduction:"
 
-		"DOTA_Tooltip_ability_creep_buff_upgraded"					"Super Creep Buff"
-		"DOTA_Tooltip_ability_creep_buff_upgraded_bonus_damage"				"+$damage"
-		"DOTA_Tooltip_ability_creep_buff_upgraded_bonus_armor"				"+$armor"
-		"DOTA_Tooltip_ability_creep_buff_upgraded_damage_reduction"			"+%Damage Reduction:"
+		"DOTA_Tooltip_ability_creep_buff_upgraded"						"Super Creep Buff"
+		"DOTA_Tooltip_ability_creep_buff_upgraded_bonus_damage"			"+$damage"
+		"DOTA_Tooltip_ability_creep_buff_upgraded_bonus_armor"			"+$armor"
+		"DOTA_Tooltip_ability_creep_buff_upgraded_damage_reduction"		"+%Damage Reduction:"
 
-		"DOTA_Tooltip_ability_creep_buff_mega"						"Mega Creep Buff"
+		"DOTA_Tooltip_ability_creep_buff_mega"							"Mega Creep Buff"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_damage"				"+$damage"
 		"DOTA_Tooltip_ability_creep_buff_mega_bonus_armor"				"+$armor"
-		"DOTA_Tooltip_ability_creep_buff_mega_damage_reduction"				"+%Damage Reduction:"
+		"DOTA_Tooltip_ability_creep_buff_mega_damage_reduction"			"+%Damage Reduction:"
 
 		"DOTA_Tooltip_ability_creep_siege_incoming_basic_damage_penalty"	"%NON-HERO BONUS ATTACK DAMAGE:"
 
-		"DOTA_Tooltip_ability_tower_armor_aura"						"High Ground Armor Aura"
+		"DOTA_Tooltip_ability_tower_armor_aura"							"High Ground Armor Aura"
 		"DOTA_Tooltip_ability_tower_armor_aura_Description"				"Adds %bonus_armor% armor to all nearby allied heroes."
 		"DOTA_Tooltip_ability_tower_magical_armor_aura"					"High Ground Magical Resistance aura"
-		"DOTA_Tooltip_ability_tower_magical_armor_aura_Description"			"Adds %bonus_magical_armor%%% magical resistance to all nearby allied heroes."
+		"DOTA_Tooltip_ability_tower_magical_armor_aura_Description"		"Adds %bonus_magical_armor%%% magical resistance to all nearby allied heroes."
 
-		"DOTA_Tooltip_ability_tower_split_shot"						"Building Split Shot"
+		"DOTA_Tooltip_ability_tower_split_shot"							"Building Split Shot"
 		"DOTA_Tooltip_ability_tower_split_shot_Description"				"This building can hit multiple targets with each attack. Stacks with the Glyph of Fortification multishot."
 		"DOTA_Tooltip_ability_tower_split_shot_arrow_count"				"EXTRA TARGETS:"
 
