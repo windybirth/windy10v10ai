@@ -605,7 +605,7 @@
 	{
 		"Ability4"		"brewmaster_cinder_brew"
 		"Ability5"		"brewmaster_drunken_brawler"
-		"Ability7"		"antimage_persectur"
+		"Ability9"		"antimage_persectur"	// 绝人之路 先天技能
 	}
 	"npc_dota_hero_axe"
 	{
@@ -921,8 +921,8 @@
 	"npc_dota_hero_dazzle"
 	{
 		"Ability4"		"dazzle_weave"
-		"Ability5"      "dazzle_good_juju"	// 需要额外加点
-		"Ability7"	"dazzle_innate_weave"
+		"Ability5"		"dazzle_good_juju"	// 需要额外加点
+		"Ability7"		"dazzle_innate_weave"
 		"Bot"
 		{
 			"Build"

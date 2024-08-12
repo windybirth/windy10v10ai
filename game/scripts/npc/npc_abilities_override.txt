@@ -2177,102 +2177,69 @@
 	"marci_companion_run"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"85"
+		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
 				{
-					"value"		"14 13 12 11 10"
-					"special_bonus_unique_marci_lunge_cooldown"	"-3"
+					"value"		"20 18 16 14 12"
 				}
-				"max_jump_distance"     
-                {
-                    "value"                                     "450 550 650 750 850"
-                    "special_bonus_unique_marci_lunge_range"    "+150"
-                }
-                "AbilityCastRange"
-                {
-                    "value"                                     "450 550 650 750 850"
-                    "special_bonus_unique_marci_lunge_range"    "+150"
-                }
+				"max_jump_distance"
+				{
+					"value"										"450 550 650 750 850"
+				}
+				"AbilityCastRange"
+				{
+					"value"										"450 550 650 750 850"
+				}
 				"impact_damage"
 				{
 					"value"				"80 160 240 320 400"
-					"LinkedSpecialBonus"	"special_bonus_unique_marci_lunge_damage"
 				}
 				"debuff_duration"
 				{
-					"value"			"1.25 1.5 1.75 2.0 2.25"
-					"special_bonus_unique_marci_grapple_stun_duration"	"+0.75"
+					"value"			"0.8 1.1 1.4 1.7 2.0"
 				}
-				"ally_movespeed_pct"	"30 35 40 45 50"
+				"ally_movespeed_pct"
+				{
+					"value"				"25 30 35 40 45"
+				}
 		}
 	}
 	// 健体术
 	"marci_guardian"
 	{
 		"MaxLevel" "5"
-		"LinkedAbility"					"marci_bodyguard"
-		"AbilityCooldown"				"15"
 		"AbilityManaCost"				"45 40 35 30 25"
 		"AbilityValues"
 		{
 			"lifesteal_pct"
 			{
-				"value"			"20 30 40 50 60"
-				"special_bonus_unique_marci_guardian_lifesteal"	"+15"
+				"value"			"12 18 24 30 36"
 			}
 			"bonus_damage"
 			{
-				"value"				"20 40 60 80 100"
-				"special_bonus_unique_marci_guardian_damage"			"+50"
-			}
-			"max_partner_distance"              
-           		{
-	                	"value"     "4000"
-				"special_bonus_facet_marci_sidekick" "=99999"
-                		"affected_by_aoe_increase" "1"
-            		}
-            		"max_partner_penalty"
-			{
-				"value"			"50"
-				"special_bonus_facet_marci_sidekick" "=100"
+				"value"				"12 18 24 30 36"
 			}
 		}
 	}
+	// 护卫术
 	"marci_bodyguard"
-    	{
-	"MaxLevel" "5"
-	"LinkedAbility"			"marci_guardian"
-        "AbilityCooldown"               "20"
-        "AbilityManaCost"               "50"
-        "AbilityValues"
-           {
-           	"bodyguard_duration"                           		"6.0 6.5 7.0 7.5 8.0"
-           	"lifesteal_pct"
-            	{
-               	 	"value"                                         "20 30 40 50 60"
-                	"special_bonus_unique_marci_guardian_lifesteal" "+15"
-            	}
-            	"bonus_damage"      
-            	{
-                	"value"                                         "20 40 60 80 100"
-                	"special_bonus_unique_marci_guardian_damage"    "+50"
-            	}
-            	"bodyguard_attack_range_buffer"
-            	{
-                	"value"                                         "250"
-               		"special_bonus_facet_marci_bodyguard"		"+250"
-                	"affected_by_aoe_increase"			"1"
-            	}
-            	"bonus_armor"                                      	"4 8 12 16 20"
-            	"counter_cooldown"
+	{
+		"MaxLevel" "5"
+		"AbilityValues"
 		{
-			"value"						"0.4 0.35 0.3 0.25 0.2"
-			"special_bonus_facet_marci_bodyguard"		"=0"
+			"lifesteal_pct"
+			{
+				"value"											"12 18 24 30 36"
+			}
+			"bonus_damage"
+			{
+				"value"											"12 18 24 30 36"
+			}
+			"bonus_armor"										"4 8 12 16 20"
 		}
-           }
-    	}
+	}
 	// 怒拳破
 	"marci_unleash"
 	{
@@ -2281,16 +2248,13 @@
 		"AbilityManaCost"				"100 125 150 175"
 		"AbilityValues"
 		{
-				"charges_per_flurry"	"6"	//5
-				"flurry_bonus_attack_speed"	"800 1200 1600 2000"
-				"time_between_flurries"	"1.25 1.0 0.75 0.5"	// 1.5
-				"pulse_damage"			"125 250 375 500"
-				"pulse_attack_slow_pct"	"150.0 300.0 475.0 600.0"
-				"scepter_cooldown_reduction"
+				"flurry_bonus_attack_speed"	"700 975 1325 1600"
+				"time_between_flurries"	"1.3"	// 1.5
+				"pulse_damage"
 				{
-					"value"					"15.0"
-					"RequiresScepter"		"1"
+					"value"			"50 100 150 200"
 				}
+				"pulse_attack_slow_pct"	"60.0 80.0 100.0 120.0"
 		}
 	}
 	//=================================================================================================================
@@ -5658,71 +5622,64 @@
 			"damage_buff_per_beam"
 			{
 				"value"						"0"
-				"special_bonus_facet_luna_moonstorm"		"+8 12 16 20 24"
+				"special_bonus_facet_luna_moonstorm"			"+5 8 11 14 17"
 			}
-			"damage_buff_from_eclipse_pct"
-           		{
-	                	"special_bonus_facet_luna_moonstorm"		"=100"
-           		}
 		}
 	}
 	// 月刃
 	"luna_moon_glaive"
 	{
 		"MaxLevel" "5"
-		"LinkedAbility"				"luna_lunar_grace"
+		"LinkedAbility"					"luna_lunar_grace"
 		"AbilityDraftPreAbility"		"luna_lunar_grace"
 		"AbilityValues"
 		{
 			"bounces"							"3 4 5 6 7"
 			"damage_reduction_percent"
 			{
-				"value"							"40 35 30 25 20"
-				"special_bonus_unique_luna_7"	"-10"
+				"value"							"50 45 40 35 30"
 			}
 		}
 	}
+	// 环月
 	"luna_lunar_orbit"
 	{
-	 "AbilityValues"
-          {
-            "rotating_glaives_duration"
-            {
-                "value"                             "6 7 8 9 10"
-            }
-            "rotating_glaives"
-            {
-                "value"                             "6"
-            }
-            "rotating_glaives_collision_damage"
-            {
-                "value"                             "25 30 35 40 45"
-                "special_bonus_shard"               "+15"
-            }
-            "AbilityCooldown"
-            {
-                "value"         "40 35 30 25 20"
-            }
-
-            "AbilityManaCost"
-            {
-                "value"         "80 75 70 65 60 55"
-            }
-
-            "rotating_glaives_damage_reduction"
-            {
-                "value"                                 "0"
-                "special_bonus_facet_luna_moonshield"   "20 25 30 35 40"
-            }
-          }
+		"MaxLevel" "5"
+		"AbilityValues"
+		{
+			"rotating_glaives_duration"
+			{
+				"value"								"5 6 7 8 9"
+			}
+			"rotating_glaives"
+			{
+				"value"								"6"
+			}
+			"rotating_glaives_collision_damage"
+			{
+				"value"								"20 25 30 35 40"
+			}
+			"AbilityCooldown"
+			{
+				"value"			"40 35 30 25 20"
+			}
+			"AbilityManaCost"
+			{
+				"value"			"65 70 75 80 85"
+			}
+			"rotating_glaives_damage_reduction"
+			{
+				"value"									"0"
+				"special_bonus_facet_luna_moonshield"	"10 15 20 25 30"
+			}
+		}
 	}
-	// 月之祝福
 	// 月之祝福（旧版 加攻击速度）
 	"luna_lunar_grace"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"			"30 25 20 15 10"
-		"LinkedAbility"				"luna_moon_glaive"
+		"AbilityCooldown"				"30 25 20 15 10"
+		"LinkedAbility"					"luna_moon_glaive"
 		"AbilityDraftPreAbility"		"luna_moon_glaive"
 		"AbilityValues"
 		{
@@ -5821,7 +5778,20 @@
 			"snake_mana_steal"					"14 15 16 17 18"
 		}
 	}
-	
+
+	// 罗网箭阵
+	"medusa_gorgon_grasp"
+	{
+		"MaxLevel" "5"
+		"AbilityManaCost"				"40 60 80 100 120"
+		"AbilityCooldown"				"30 27 24 21 18"
+		"AbilityValues"
+		{
+			"duration"					"0.8 1.2 1.6 2.0 2.4"
+			"damage"					"30 70 110 150 190"
+		}
+	}
+
 	// 石化凝视
 	"medusa_stone_gaze"
 	{
@@ -5830,7 +5800,7 @@
 		{
 			"duration"
 			{
-				"value"							"4.25 4.5 4.75 5"
+				"value"							"5 5.5 6 6.5"
 				"special_bonus_unique_medusa"	"+1.5"
 			}
 			"bonus_physical_damage"
@@ -5838,39 +5808,9 @@
 				"value"							"40 45 50 55"
 				"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
 			}
-			"stone_duration"					"1.75 2 2.25 2.5"
+			"stone_duration"					"2 2.2 2.4 2.6"
 		}
 	}
-	"medusa_gorgon_grasp"
-	{
-		"AbilityManaCost"               "40 60 80 100 120"
-        	"AbilityCooldown"               "30 27 24 21 18"
-		"AbilityValues"
-          {
-            "radius"
-            {
-                "value"                 "150"
-                "affected_by_aoe_increase"  "1"
-            }
-
-            "radius_grow"               "50"
-
-            "delay"                     "1"
-            "volley_interval"           ".25"
-            "volley_spread_pct"         "170"
-            "volley_count"              
-            {
-                "value"                 "3"
-                "special_bonus_special_bonus_unique_medusa_gorgons_grasp_volleys"           "1"
-            }
-
-            "duration"                  "0.8 1.2 1.6 2.0 2.4"
-            "damage"                    "30 70 110 150 190"
-            "damage_pers"               "100 125 150 175 200"
-            "damage_interval"           ".2"
-          }
-	}
-			
 	//=================================================================================================================
 	// Ability: Meepo 米波/地卜师
 	//=================================================================================================================
@@ -5878,14 +5818,15 @@
 	//=================================================================================================================
 	// Ability: Mirana 米拉娜/白虎POM
 	//=================================================================================================================
-	// 射箭
+	// 赛莉蒙妮的信徒 先天技能
 	"mirana_selemenes_faithful"
-    	{
-      	  "AbilityValues"
-    	    {
-       	     "bonus_lotus"   "50"
-      	    }
-   	 }
+	{
+		"AbilityValues"
+		{
+			"bonus_lotus"	"50"	// 20
+		}
+	}
+	// 射箭
 	"mirana_arrow"
 	{
 		"MaxLevel" "5"
@@ -5901,29 +5842,29 @@
 	"mirana_invis"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"110.0 100.0 90.0 80.0"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"			"110.0 100.0 90.0 80.0"
+			}
 				"fade_delay"			"2.5 2.0 1.5 1.0"
 				"bonus_movement_speed"		"9 12 15 18"
 		}
 	}
+	// 太阳金辉
 	"mirana_solar_flare"
-    {
-       	"MaxLevel" "4"
-        "AbilityValues"
-        {
-            "AbilityCooldown"               
-            {
-                "value"         "140.0 120.0 100.0 80.0"
-                "special_bonus_unique_mirana_4"         "-20"               
-            }
-            "increase_rate"                     "12 24 36 48"
-            "ally_pct"                          "75"
-            "duration"                          "18 20 22 24"
-            "max_damage_time"                   "8 7 6 5"
-        }
-    }
+	{
+		"MaxLevel" "4"
+		"AbilityValues"
+		{
+			"AbilityCooldown"
+			{
+				"value"			"110.0 100.0 90.0 80.0"
+			}
+			"increase_rate"						"10 15 20 25"
+		}
+	}
 	// 跳跃
 	"mirana_leap"
 	{
@@ -7495,33 +7436,25 @@
 	{
 		"MaxLevel" "5"
 		"AbilityValues"
-      	  {
-            "bonus_move_speed"
-            {
-                "value"     "15 25 35 45 55"
-                "special_bonus_unique_troll_warlord_2"      "+25"
+		{
+			"bonus_move_speed"
+			{
+				"value"		"15 25 35 45 55"
 
-            }
-            "bonus_armor"
-            {
-                "var_type"              "FIELD_INTEGER"
-                "value"         "4 5 6 7 8"
-                "special_bonus_unique_troll_warlord"        "+8"
-            }
-            "ensnare_chance"        "18 21 24 27 30"
-            "ensnare_duration"      "0.8 1.2 1.6 2.0 2.4"
-            "maim_chance"           "20"
-            "maim_duration"         "0.8 1.2 1.6 2.0 2.4"
-            "maim_slow"             "8 16 24 32 40"    
-            "maim_attack_slow"              "8 16 24 32 40"    //note:currently unused in code, just tooltips.
-            "maim_damage"       
-            {
-                "value"                 "10 20 30 40 50"
-                "CalculateSpellDamageTooltip"   "0"
-
-            }
-        }
-        "AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_1"
+			}
+			"bonus_armor"
+			{
+				"value"			"2 3 4 5 6"
+			}
+			"ensnare_duration"		"0.8 1.2 1.6 2.0 2.4"
+			"maim_duration"			"0.8 1.2 1.6 2.0 2.4"
+			"maim_slow"				"8 16 24 32 40"
+			"maim_attack_slow"				"8 16 24 32 40"	//note:currently unused in code, just tooltips.
+			"maim_damage"
+			{
+				"value"					"5 10 15 20 25"
+			}
+		}
     }
 	// 旋风飞斧远程
 	"troll_warlord_whirling_axes_ranged"
@@ -8111,7 +8044,7 @@
 	"weaver_geminate_attack"
 	{
 		"MaxLevel" "6"
-		"AbilityCooldown"				"6.0 5.0 4.0 3.0 2.0" // 第一级是先天
+		"AbilityCooldown"				"6.0 5.0 4.0 3.0 2.0"
 		"AbilityValues"
 		{
 			"extra_attack"
@@ -8593,18 +8526,6 @@
 	// Ability: Dark Willow 邪影芳灵/小仙女
 	//=================================================================================================================
 	// 荆棘迷宫
-	//=================================================================================================================
-	// Ability: Dark Willow 邪影芳灵/小仙女
-	//=================================================================================================================
-	// 荆棘迷宫
-	 "dark_willow_pixie_dust"
-   	 {
-        "AbilityValues"
-        	{
-            	"hp_regen"  "200"
-            	"mana_regen_amp"    "150"
-        	}
-    }
 	"dark_willow_bramble_maze"
 	{
 		"MaxLevel" "5"
@@ -8655,43 +8576,13 @@
 		"MaxLevel" "5"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
-        {
-            "AbilityCooldown"
-            {
-                "value"                 "20 18 16 14 12"
-                "special_bonus_unique_dark_willow_5"        "-2"
-            }
-            
-            "duration"
-            {
-                "value"                     "5"
-                "special_bonus_unique_dark_willow_1"            "+1.5"
-            }
-            "fade_time"                		"0.3 0.25 0.2 0.15 0.1"           
-            "damage"                        "100 200 300 400 500"
-            "attack_range_bonus"            "600"
-            "max_damage_duration"
-            {
-                "value"                         "3.0"
-                "CalculateSpellDamageTooltip"   "0"
-                "DamageTypeTooltip"             "DAMAGE_TYPE_NONE"
-            }
-            "aura_radius"
-            {
-                "value"                 "0"
-                "special_bonus_facet_dark_willow_throwing_shade"            "=1000"
-                "affected_by_aoe_increase"  "1"
-            }
-            "aura_linger"
-            {
-                "value"                 "0"
-                "special_bonus_facet_dark_willow_throwing_shade"            "=1"
-            }
-            "aura_damage_pct"
-            {
-                "value"                 "0"
-                "special_bonus_facet_dark_willow_throwing_shade"            "=50"
-            }
+		{
+			"AbilityCooldown"
+			{
+				"value"					"24 22 20 18 16"
+			}
+			"damage"						"120 200 280 360 440"
+		}
 	}
 	// 诅咒王冠
 	"dark_willow_cursed_crown"
