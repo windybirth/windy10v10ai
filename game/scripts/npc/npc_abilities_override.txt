@@ -5654,10 +5654,6 @@
 	"medusa_cold_blooded"
 	{
 		"AbilityCooldown"				"8"	// 12
-		"AbilityValues"
-		{
-			"damage"		"200"
-		}
 	}
 	// 分裂箭
 	"medusa_split_shot"
@@ -5729,8 +5725,7 @@
 			}
 			"bonus_physical_damage"
 			{
-				"value"							"40 45 50 55"
-				"DamageTypeTooltip"				"DAMAGE_TYPE_PHYSICAL"
+				"value"							"35 45 55 65"
 			}
 			"stone_duration"					"2 2.2 2.4 2.6"
 		}
