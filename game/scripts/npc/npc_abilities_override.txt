@@ -245,12 +245,10 @@
 				"AbilityCooldown"
 				{
 					"value"	"16 15 14 13 12"
-					"special_bonus_unique_underlord_5"	"-3"
 				}
 				"wave_damage"
 				{
 					"value"					"30 50 70 90 110"
-					"CalculateSpellDamageTooltip"	"1"
 				}
 				"burn_damage"
 				{
@@ -271,7 +269,7 @@
 			"ensnare_duration"
 			{
 				"value"	"1.5 1.6 1.7 1.8 1.9"
-				"special_bonus_unique_underlord" "+0.65"
+				"special_bonus_unique_underlord" "+0.65"	// 0.5
 			}
 		}
 	}
@@ -284,9 +282,6 @@
 			"damage_reduction_pct"
 			{
 				"value"		"6 14 22 30 38"
-				"special_bonus_unique_underlord_3"	"+10"
-				"CalculateSpellDamageTooltip"		"0"
-				"DamageTypeTooltip"					"DAMAGE_TYPE_NONE"
 			}
 			"bonus_damage_from_creep"
 			{
@@ -322,6 +317,23 @@
 		{
 			"radius"						"300"
 			"teleport_delay"				"3.0 2.5 2.0"
+		}
+	}
+	// 侵略大军 先天技能
+	"abyssal_underlord_raid_boss"
+	{
+		"MaxLevel"						"5"
+
+		"AbilityValues"
+		{
+			"damage_reduction"
+			{
+				"value"		"4 6 8 10 12"
+			}
+			"bonus_ms"
+			{
+				"value"			"5 10 15 20 25"
+			}
 		}
 	}
 	//=================================================================================================================
@@ -7963,7 +7975,7 @@
 	// 连击（先天可升级）
 	"weaver_geminate_attack"
 	{
-		"MaxLevel" "6"
+		"MaxLevel" "5"
 		"AbilityCooldown"				"6.0 5.0 4.0 3.0 2.0"
 		"AbilityValues"
 		{
@@ -8454,16 +8466,6 @@
 		{
 				"latch_duration"		"1.0 1.5 2.0 2.5 3.0"
 				"damage_per_tick"		"50 55 60 65 70"
-				"placement_count"
-				{
-					"value"			"8"
-					"special_bonus_facet_dark_willow_thorny_thicket"	"+4"
-				}
-				"spell_amp"
-				{
-					"value"			"0"
-					"special_bonus_facet_dark_willow_thorny_thicket"	"+25"
-				}
 		}
 	}
 	// 作祟
@@ -8476,17 +8478,20 @@
 			"attack_damage"
 			{
 				"value"						"70 120 170 220"
-				"LinkedSpecialBonus"		"special_bonus_unique_dark_willow_4"
 			}
-			"attack_targets"			"1 2 3 4"
 		}
 	}
 	// 恐吓
 	"dark_willow_terrorize"
 	{
 		"MaxLevel" "4"
+		"AbilityCooldown"				"90 80 70 60"
 		"AbilityValues"
 		{
+				"destination_radius"
+				{
+					"value"		"400 450 500 550"
+				}
 				"destination_status_duration"	"2.8 3.0 3.2 3.4"
 		}
 	}
@@ -8514,8 +8519,7 @@
 		{
 				"stun_duration"
 				{
-					"value"			"1.5 2.0 2.5 3 3.5"
-					"special_bonus_unique_dark_willow_6" "+0.75"
+					"value"			"1.2 1.6 2.0 2.4 2.8"
 				}
 		}
 	}
@@ -8527,8 +8531,6 @@
 	// {
 	// 	"MaxLevel" "4"
 	// 	"AbilityManaCost"				"100 150 200 250"
-	// 	"LinkedAbility"					"dazzle_poison_touch"
-	// 	"AbilityDraftPreAbility"		"dazzle_poison_touch"
 	// 	"AbilityValues"
 	// 	{
 	// 		"armor_per_second"
@@ -8544,23 +8546,24 @@
 		"AbilityCastRange"				"500 600 700 800 900"
 		"AbilityCooldown"				"26 23 20 17 14"
 		"AbilityManaCost"				"125 130 135 140 145"
-		"LinkedAbility"					"dazzle_weave"
-		"AbilityDraftPreAbility"		"dazzle_weave"
 		"AbilityValues"
 		{
 			"targets"					"2 4 6 8 10"
 			"damage"
 			{
 				"value"			"16 28 40 52 64"
-				"special_bonus_unique_dazzle_3"	"+60"
 			}
 			"slow"
 			{
 				"value"							"-16 -18 -20 -22 -24"
-				"special_bonus_unique_dazzle_1"	"-38"
 			}
 			"duration"		"5 6 7 8 9"
 			"bonus_slow"			"-2 -2.5 -3 -3.5 -4.0"
+			"split_damage"
+			{
+				"value"				"0"
+				"special_bonus_facet_dazzle_poison_bloom"			"=30 =60 =90 =120 =150"
+			}
 		}
 	}
 	// 薄葬
@@ -8591,27 +8594,14 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"12 11 10 9 8"
-		"AbilityManaCost"				"75"
 		"AbilityValues"
 		{
 			"max_targets"			"5 6 7 8 9"
 			"tooltip_max_targets_inc_dazzle"	"6 7 8 9 10"
 			"damage"
 			{
-				"value"					"75 95 115 135 155"
-				"LinkedSpecialBonus"	"special_bonus_unique_dazzle_2"
-			}
-		}
-	}
-	"special_bonus_unique_dazzle_2"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"100"
-				"ad_linked_abilities"			"dazzle_shadow_wave"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
+				"value"					"85 105 125 145 165"
+				"special_bonus_unique_dazzle_2" "+85"	// 45
 			}
 		}
 	}
@@ -8641,13 +8631,6 @@
 		"AbilityValues"
 		{
 				"cooldown_reduction"		"1.25 1.5 1.75 2.0"
-				"item_cooldown_reduction"
-				{
-					"value"		"50"
-					"RequiresScepter"	"1"
-				}
-				"scepter_mana_cost"			"250"
-				"scepter_cooldown"			"180"
 		}
 	}
 	//=================================================================================================================
@@ -8656,11 +8639,37 @@
 	// 地穴虫群
 	"death_prophet_carrion_swarm"
 	{
-	    "AbilityCastRange"				"810"
 		"MaxLevel" "5"
-		"AbilityCooldown"				"9 8 7 6 5"
-		"AbilityDamage"					"85 160 235 310 385"
 		"AbilityManaCost"				"80 90 100 110 120"
+		"AbilityValues"
+		{
+			"damage"
+			{
+				"value"													"85 165 245 325 405"
+				"special_bonus_unique_death_prophet_crypt_swarm_damage"	"+50"
+			}
+			"AbilityCooldown"
+			{
+				"value"									"9 8 7 6 5"
+				"special_bonus_unique_death_prophet_2"	"-2"
+			}
+		}
+	}
+	// 沉默魔法
+	"death_prophet_silence"
+	{
+		"MaxLevel" "5"
+		"AbilityCooldown"				"15 14 13 12 11"
+		"AbilityDuration"				"3.5 4.0 4.5 5.0 5.5"
+		"AbilityManaCost"				"80 90 100 110 120"
+		"AbilityValues"
+		{
+			"movement_slow"
+			{
+				"value"							"0"
+				"special_bonus_facet_death_prophet_suppress"		"15 20 25 30 35"
+			}
+		}
 	}
 	// 吸魂巫术
 	"death_prophet_spirit_siphon"
@@ -8672,12 +8681,12 @@
 		{
 			"damage"
 			{
-				"value"				"25 50 75 100 125 150"
+				"value"				"25 50 75 100 125"
 				"special_bonus_unique_death_prophet_3"	"+75"
 			}
-			"damage_pct"				"1 2 3 4 5" // FIXME 暂时加强百分比吸魂
 		}
 	}
+	// 巫术精研 先天技能
 	// 驱使恶灵
 	"death_prophet_exorcism"
 	{
@@ -8686,29 +8695,37 @@
 		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
+			// 减少恶灵数量 增加伤害 缓解卡顿
 			"spirits"
 			{
 				"value"					"4"
-				"LinkedSpecialBonus"	"special_bonus_unique_death_prophet"
+				"special_bonus_unique_death_prophet"	"+4"
 			}
 			"min_damage"			"100 200 300 400"
 			"max_damage"			"100 200 300 400"
 			"average_damage"		"100 200 300 400"
+			"hero_spirit_min_damage"
+			{
+				"value"										"0"
+				"special_bonus_facet_death_prophet_ghosts"	"=200 =400 =600 =800"
+			}
+			"hero_spirit_max_damage"
+			{
+				"value"										"0"
+				"special_bonus_facet_death_prophet_ghosts"	"=200 =400 =600 =800"
+			}
 
-				"movement_base"					"12 16 20 24"
-				"movement_bonus"				"4 8 12 16"
+			"movement_bonus"				"4 8 12 16"
 		}
 	}
-	"special_bonus_unique_death_prophet"
+	// 哀悼仪式 天命
+	"death_prophet_mourning_ritual"
 	{
-		"AbilitySpecial"
+		"MaxLevel"						"5"
+
+		"AbilityValues"
 		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"4"
-				"ad_linked_abilities"			"death_prophet_exorcism"				// this is the ability this bonus affects.  This line is required for Ability Draft to correctly choose talents.
-			}
+			"delay_pct"					"20 30 40 50 60"
 		}
 	}
 	//=================================================================================================================
@@ -9858,7 +9875,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"BaseClass"							"special_bonus_base"
+		"BaseClass"						"special_bonus_base"
 	}
 	// 光击阵
 	"lina_light_strike_array"
@@ -9887,24 +9904,22 @@
 	// 炽魂
 	"lina_fiery_soul"
 	{
-		"MaxLevel"  "6"
+		"MaxLevel" "5"
 		"AbilityValues"
 		{
 			"fiery_soul_attack_speed_bonus"
 			{
 				"value"								"8 16 24 32 40"
-				"special_bonus_unique_lina_2"		"+10"
 			}
 			"fiery_soul_move_speed_bonus"
 			{
 				"value"							"1.5 2 2.5 3 3.5"
-				"special_bonus_unique_lina_2"	"+1"
 			}
 			// 暴击
 			"target_crit_multiplier"
 			{
 				"value"												"0"
-				"special_bonus_unique_lina_crit_debuff"				"+175"
+				"special_bonus_unique_lina_crit_debuff"				"+175"	// 150
 			}
 		}
 	}
@@ -9953,6 +9968,16 @@
 			{
 				"special_bonus_unique_lina_7"		"20"	// 15
 			}
+		}
+	}
+	// 燎火 先天技能
+	"lina_combustion"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"damage"					"10 30 50 70 90"
+			"damage_illusions"			"10 15 20 25 30"
 		}
 	}
 	//=================================================================================================================
@@ -11050,7 +11075,6 @@
 			"damage"
 			{
 				"value"							"16 24 32 40 48"
-				"special_bonus_unique_silencer"		"+12"
 			}
 			"AbilityCooldown"
 			{
@@ -11063,7 +11087,7 @@
 	"silencer_glaives_of_wisdom"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"15 20 25 30 35"
+		"AbilityManaCost"				"14 16 18 20 22"
 		"AbilityValues"
 		{
 			"intellect_damage_pct"
@@ -11090,13 +11114,11 @@
 		{
 				"damage_per_silence"
 				{
-					"value"			"30 45 60 75 90"	// 20 30 40 50 60
-					"special_bonus_unique_silencer_4"					"+30"
+					"value"			"30 45 60 75 90"	// 30 40 50 60
 				}
 				"slow_per_silence"
 				{
 					"value"				"6 9 12 15 18"
-					"special_bonus_unique_silencer_4"					"+6"
 				}
 		}
 	}
@@ -11125,14 +11147,14 @@
 			}
 		}
 	}
-	// 智力外流
+	// 智力外流 先天技能
 	"silencer_brain_drain"
 	{
 		"AbilityValues"
 		{
 			"permanent_int_steal_amount"
 			{
-				"value"						"2"
+				"value"						"1"
 				"special_bonus_shard"		"+1"
 			}
 		}
@@ -11821,14 +11843,9 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"60 50 40 30"
-		"AbilityDuration"				"20.0"
+		"AbilityManaCost"				"75 100 125 150"
 		"AbilityValues"
 		{
-			"AbilityDuration"
-			{
-				"value"		"20.0 20.0 20.0"
-				"special_bonus_facet_windrunner_whirlwind"	"=10.0" // 命石2
-			}
 			"bonus_attack_speed"
 			{
 				"value"		"350 425 500 575"
@@ -11841,18 +11858,7 @@
 			"focusfire_damage_reduction"
 			{
 				"value"						"-30"
-				"special_bonus_facet_windrunner_whirlwind" "=-45"
-				"special_bonus_unique_windranger_8"		"+30" // 12
-			}
-			"AbilityCooldown"
-			{
-				"value" "60 50 40 30"
-				"special_bonus_facet_windrunner_whirlwind" "=75 =70 =65 =60"
-			}
-			"AbilityManaCost"
-			{
-				"value"		"50 75 100 125"
-				"special_bonus_facet_windrunner_whirlwind"	"100 200 300 400"
+				"special_bonus_unique_windranger_8"		"+20" // 12
 			}
 			"duration_increase_per_kill"
 			{
@@ -11867,16 +11873,8 @@
 	{
 		"AbilityValues"
 		{
-			"min_movespeed"
-			{
-				"value"	"300"	// 600
-				"special_bonus_facet_windrunner_tailwind" "=330"
-			}
-			"max_movespeed"
-			{
-				"value"	"1000"	// 600
-				"special_bonus_facet_windrunner_tailwind" "=1250"
-			}
+			"min_movespeed"		"320"	// 240
+			"max_movespeed"		"1200"	// 600
 		}
 	}
 	//=================================================================================================================

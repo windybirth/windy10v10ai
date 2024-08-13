@@ -970,7 +970,6 @@
 	}
 	"npc_dota_hero_death_prophet"
 	{
-		"Ability4"		"death_prophet_witchcraft"
 		"Bot"
 		{
 			"Build"
