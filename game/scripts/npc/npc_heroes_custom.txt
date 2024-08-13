@@ -603,9 +603,8 @@
 	}
 	"npc_dota_hero_antimage"
 	{
-		"Ability4"		"brewmaster_cinder_brew"
-		"Ability5"		"brewmaster_drunken_brawler"
-		"Ability9"		"antimage_persectur"	// 绝人之路 先天技能
+		// "Ability4"		"brewmaster_cinder_brew"
+		// "Ability5"		"brewmaster_drunken_brawler"
 	}
 	"npc_dota_hero_axe"
 	{
@@ -921,13 +920,12 @@
 	"npc_dota_hero_dazzle"
 	{
 		// "Ability4"		"dazzle_weave"
-		"Ability5"		"dazzle_good_juju"	// 需要额外加点
-		"Ability7"		"dazzle_innate_weave"
+		"Ability5"		"dazzle_good_juju"
 		"Bot"
 		{
 			"Build"
 			{
-                "1"		"dazzle_poison_touch"
+				"1"		"dazzle_poison_touch"
 				"2"		"dazzle_shallow_grave"
 				"3"		"dazzle_poison_touch"
 				"4"		"dazzle_shadow_wave"
@@ -1802,7 +1800,7 @@
 	"npc_dota_hero_oracle"
 	{
 		"Ability5"		"chen_hand_of_god"
-		"Ability9"		"oracle_prognosticate"
+		"Ability9"		"oracle_prognosticate"	// 预言 先天技能
 		"Bot"
 		{
 			"Build"
@@ -2111,7 +2109,6 @@
 	}
 	"npc_dota_hero_silencer"
 	{
-		"AttributeStrengthGain"		"2.000000"		// 2.4
 		"AttributeAgilityGain"		"2.000000"		// 2.4
 		"AttributeIntelligenceGain"		"2.500000"	// 2.9
 		"Bot"
