@@ -3350,7 +3350,8 @@
 		{
 				"damage"
 				{
-					"value"		"100 160 220 280 340"
+					"value"		"100 180 260 340 420"			// 100 160 220 280
+					"special_bonus_unique_snapfire_7" "+120"	// 70
 				}
 		}
 	}
@@ -3364,12 +3365,10 @@
 				"AbilityCooldown"
 				{
 					"value"		"19 18 17 16 15"
-					"special_bonus_unique_snapfire_3"	"-3"
 				}
 				"impact_damage"
 				{
-					"value"					"70 140 210 280 380"
-					"CalculateSpellDamageTooltip"	"1"
+					"value"					"70 145 220 295 370"
 				}
 				"impact_stun_duration"
 				{
@@ -3378,15 +3377,13 @@
 				"target_heal"
 				{
 					"value"			"300"
-					"special_bonus_shard"	"+600"	// 200
+					"special_bonus_shard"	"+800"	// 200
 				}
 		}
 	}
 	// 霹雳铁手
 	"snapfire_lil_shredder"
 	{
-		"LinkedAbility"					"chen_penitence"
-		"AbilityDraftPreAbility"		"chen_penitence"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"24 21 18 15 12"
 		"AbilityManaCost"				"70 80 90 100 110"
@@ -3399,8 +3396,6 @@
 	// 赎罪（来自陈）
 	"chen_penitence"
 	{
-		"LinkedAbility"					"snapfire_lil_shredder"
-		"AbilityDraftPreAbility"		"snapfire_lil_shredder"
 		"MaxLevel"						"5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCastRange"				"800"
@@ -3436,16 +3431,12 @@
 			"damage_per_impact"
 			{
 				"value"		"180 270 360 450"
-				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"		"+80"
-			}
-			"impact_radius"
-			{
-				"value" "350"// 275
-				"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"		"+120"	// 60
 			}
 			"burn_damage"
 			{
-				"value"					"60 80 100 120"
+				"value"					"60 100 140 180"	// 60 80 100
+				"special_bonus_unique_snapfire_5"	"+60"
 			}
 			"move_slow_pct"
 			{
@@ -3476,7 +3467,7 @@
 			"stun_duration"			"1.2 1.5 1.8 2.1 2.4"
 			"AbilityCooldown"
 			{
-				"value"			"22 20 18 16 14"
+				"value"			"22 19 16 13 10"
 			}
 		}
 	}
@@ -3535,14 +3526,13 @@
 	"spirit_breaker_nether_strike"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"70 60 50 40"
+		"AbilityCooldown"				"60 50 40 30"
 		"AbilityManaCost"				"125 150 175 200"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"					"150 250 350 450"
-				"CalculateSpellDamageTooltip"	"1"
+				"value"					"150 300 450 600"	// 150 250 350
 			}
 		}
 	}
@@ -6513,13 +6503,11 @@
 				"AbilityCooldown"
 				{
 					"value"				"20 18 16 14 12"
-					"special_bonus_unique_pangolier_4"	"-2.5"
 				}
 				"dash_range"			"400 500 600 700 800"
 				"damage"
 				{
 					"value"		"30 60 90 120 150"
-					"CalculateSpellDamageTooltip"	"0"
 				}
 				"attack_damage"
 				{
@@ -6538,10 +6526,8 @@
 			"damage"
 			{
 				"value"					"70 140 210 280 350"
-				"CalculateSpellDamageTooltip"	"1"
 				"special_bonus_unique_pangolier_shield_crash_radius"		"+150"
 			}
-			"base_shield"	"0"
 			"hero_shield"
 			{
 				"value"	"100 200 300 400 500"	// x2
@@ -6549,7 +6535,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"					"20 18 16 14 12"
+				"value"					"18 16 14 12 10"
 			}
 		}
 	}
@@ -6564,8 +6550,8 @@
 			"attack_slow"			"40 80 120 160 200"
 			"armor"
 			{
-				"value"					"3 5 7 9 11"
-				"special_bonus_unique_pangolier_luckyshot_armor"			"+4"
+				"value"					"3 6 9 12 15"	// 3 5 7 9
+				"special_bonus_unique_pangolier_luckyshot_armor"			"+5"	// 4
 			}
 		}
 	}
@@ -6574,7 +6560,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityManaCost"				"100 150 200 250"
-		"AbilityDamage"					"160 240 320 400"
+		"AbilityDamage"					"150 300 450 600"	// x2
 		"AbilityValues"
 		{
 				"AbilityCooldown"
@@ -10218,12 +10204,10 @@
 			"AbilityCooldown"
 			{
 				"value"										"11 10 9 8 7"
-				"special_bonus_unique_ogre_magi_5"			"-1"
 			}
 			"fireblast_damage"
 			{
 				"value"		"70 130 190 250 310"
-				"special_bonus_unique_ogre_magi_2"	"+240"
 			}
 		}
 	}
@@ -10232,8 +10216,8 @@
 	{
 		"AbilityValues"
 		{
-			"scepter_mana"		"25"
-			"base_damage"			"450"
+			"scepter_mana"		"15"	// 35
+			"base_damage"			"450"	// 150
 		}
 	}
 	// 引燃
@@ -10244,13 +10228,13 @@
 		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
-				"duration"			"5 6 7 8 9"
-				"burn_damage"
-				{
-					"value"				"20 30 40 50 60"
-					"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi_4"
-				}
-				"slow_movement_speed_pct"		"-20 -23 -26 -29 -32"
+			"duration"			"5 6 7 8 9"
+			"burn_damage"
+			{
+				"value"				"20 30 40 50 60"
+				"special_bonus_unique_ogre_magi_4" "+25"	// 15
+			}
+			"slow_movement_speed_pct"		"-20 -23 -26 -29 -32"
 		}
 	}
 	// 嗜血术
@@ -10259,42 +10243,18 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityManaCost"				"40 50 60 70 80"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"bonus_movement_speed"		"7 10 13 16 19"	// 7 9 11 13
+			"bonus_attack_speed"
 			{
-				"var_type"			"FIELD_FLOAT"
-				"modelscale"		"30"
+				"value"					"30 45 60 75 90"
+				"special_bonus_unique_ogre_magi" "+50"
 			}
-			"02"
+			"self_bonus"
 			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_movement_speed"		"7 9 11 13 15"
-			}
-			"03"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"bonus_attack_speed"	"30 45 60 75 90"
-				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
-			}
-			"04"
-			{
-				"var_type"				"FIELD_INTEGER"
-				"self_bonus"	"60 80 100 120 140"
-				"LinkedSpecialBonus"	"special_bonus_unique_ogre_magi"
-			}
-		}
-	}
-	// 嗜血术天赋攻速
-	"special_bonus_unique_ogre_magi"
-	{
-		"AbilitySpecial"
-		{
-			"01"
-			{
-				"var_type"					"FIELD_INTEGER"
-				"value"				"50"
-				"ad_linked_abilities"			"ogre_magi_bloodlust"
+				"value"					"40 60 80 100 120"
+				"special_bonus_unique_ogre_magi" "+50"
 			}
 		}
 	}
@@ -10302,22 +10262,30 @@
 	"ogre_magi_multicast"
 	{
 		"MaxLevel" "4"
-		"AbilitySpecial"
+		"AbilityValues"
 		{
-			"01"
+			"multicast_2_times"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_2_times"		"70 75 80 85"
+				"value"		"75 80 85 90"
+				// Have the bonus listed here so the value shows as modified, actual modification is done by strenght_mult
+				"special_bonus_facet_ogre_magi_fat_chance" "+0"
+				"dynamic_value"		"true"
 			}
-			"02"
+
+			"multicast_3_times"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_3_times"		"15 25 35 45"
+				"value"		"15 30 45 60"
+				// Have the bonus listed here so the value shows as modified, actual modification is done by strenght_mult
+				"special_bonus_facet_ogre_magi_fat_chance" "+0"
+				"dynamic_value"		"true"
 			}
-			"03"
+
+			"multicast_4_times"
 			{
-				"var_type"				"FIELD_FLOAT"
-				"multicast_4_times"		"5 10 15 20"
+				"value"		"5 10 15 20"
+				// Have the bonus listed here so the value shows as modified, actual modification is done by strenght_mult
+				"special_bonus_facet_ogre_magi_fat_chance" "+0"
+				"dynamic_value"		"true"
 			}
 		}
 	}
