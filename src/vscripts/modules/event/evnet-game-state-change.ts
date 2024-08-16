@@ -48,7 +48,7 @@ export class EventGameStateChange {
 
   private addModifierToTowers(building: CDOTA_BaseNPC) {
     // 防御塔攻击
-    let towerPower = GameRules.GameConfig.towerPower;
+    let towerPower = GameRules.Option.towerPower;
 
     // 1塔最高200%攻击
     const towerName = building.GetName();
@@ -60,7 +60,7 @@ export class EventGameStateChange {
     ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_power_${towerPower}`);
 
     // 防御塔回血
-    const towerHeal = GameRules.GameConfig.towerHeal;
+    const towerHeal = GameRules.Option.towerHeal;
     ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_heal_${towerHeal}`);
   }
 }
