@@ -90,7 +90,6 @@
 					<Panel id="TowerPowerPanel"	class="GameOptionsSubPanel">
 						<Label id="RadiantTowerPowerTitle" class="GameOptionsLabel" text="#tower_power" />
 						<DropDown id="tower_power_dropdown" class="GameOptionsDropdown" oninputsubmit="OnDropDownChanged('tower_power_dropdown')">
-							<Label text="50%" id="50"/>
 							<Label text="100%" id="100"/>
 							<Label text="150%" id="150"/>
 							<Label text="200%" id="200"/>
