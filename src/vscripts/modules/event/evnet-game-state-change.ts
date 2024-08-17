@@ -59,6 +59,10 @@ export class EventGameStateChange {
     }
     ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_power_${towerPower}`);
 
+    // 防御塔耐久
+    const towerEndure = GameRules.Option.towerEndure;
+    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_endure_${towerEndure}`);
+
     // 防御塔回血
     const towerHeal = GameRules.Option.towerHeal;
     ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_heal_${towerHeal}`);

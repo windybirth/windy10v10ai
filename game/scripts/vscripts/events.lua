@@ -578,7 +578,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
         playerGoldXpMultiplier = tostring(self.fPlayerGoldXpMultiplier),
         botGoldXpMultiplier = tostring(self.fBotGoldXpMultiplier),
         towerPower = self.iTowerPower .. "%",
-        towerEndure = AIGameMode:StackToPercentage(self.iTowerEndure)
+        towerEndure = self.iTowerEndure .. "%",
     }
     -- send to api server
     data.gameOption = {
@@ -928,33 +928,4 @@ function AIGameMode:IsInvalidGame()
         return true
     end
     return false
-end
-
-function AIGameMode:StackToPercentage(iStackCount)
-    if iStackCount == 1 then
-        return "50%"
-    elseif iStackCount == 2 then
-        return "75%"
-    elseif iStackCount == 3 then
-        return "100%"
-    elseif iStackCount == 4 then
-        return "125%"
-    elseif iStackCount == 5 then
-        return "150%"
-    elseif iStackCount == 6 then
-        return "175%"
-    elseif iStackCount == 7 then
-        return "200%"
-    elseif iStackCount == 8 then
-        return "250%"
-    elseif iStackCount == 9 then
-        return "300%"
-    elseif iStackCount == 10 then
-        return "400%"
-    elseif iStackCount == 11 then
-        -- for test
-        return "500%"
-    else
-        return "100%"
-    end
 end
