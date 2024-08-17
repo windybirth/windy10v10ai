@@ -975,7 +975,7 @@
 		"AbilityValues"
 		{
 			"base_damage_outgoing_percentage"		"0 50 100 150 200 300"
-			"health_regen_constant"					"0 5 10 15 20 25"
+			"health_regen_constant"					"0 5 10 15 20 30"
 		}
 		"Modifiers"
 		{
