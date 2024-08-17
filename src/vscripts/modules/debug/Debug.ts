@@ -1,4 +1,3 @@
-import { ActionItem } from "../../ai/action/action-item";
 import { ModifierHelper } from "../../helper/modifier-helper";
 import { PlayerHelper } from "../../helper/player-helper";
 import { reloadable } from "../../utils/tstl-utils";
@@ -49,17 +48,11 @@ export class Debug {
       hero.GetItemInSlot(15)?.EndCooldown();
     }
 
-    if (cmd.startsWith("-getUseableItemByName")) {
+    if (cmd.startsWith("-test")) {
       const hero = PlayerResource.GetSelectedHeroEntity(keys.playerid);
       if (!hero) return;
-      const itemName = args[0];
-      const item = ActionItem.FindItemInInventoryUseable(hero, itemName);
-      if (!item) {
-        this.log(`没有找到物品: ${itemName}`);
-        return;
-      } else {
-        this.log(`找到物品: ${itemName}`);
-      }
+      this.log(`test command: ${cmd}`);
+      ModifierHelper.appleTowerModifier(hero, `modifier_tower_power`, 3);
     }
 
     // 常用命令

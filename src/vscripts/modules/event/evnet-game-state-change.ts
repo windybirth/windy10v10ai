@@ -57,14 +57,39 @@ export class EventGameStateChange {
         towerPower = 200;
       }
     }
-    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_power_${towerPower}`);
+    ModifierHelper.appleTowerModifier(
+      building,
+      `modifier_tower_power`,
+      this.getTowerLevel(towerPower),
+    );
 
     // 防御塔耐久
     const towerEndure = GameRules.Option.towerEndure;
-    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_endure_${towerEndure}`);
+
+    const newHealth = Math.floor((towerEndure / 100) * building.GetMaxHealth());
+    building.SetMaxHealth(newHealth);
+    building.SetBaseMaxHealth(newHealth);
+    building.SetHealth(newHealth);
 
     // 防御塔回血
     const towerHeal = GameRules.Option.towerHeal;
     ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_heal_${towerHeal}`);
+  }
+
+  private getTowerLevel(percent: number): number {
+    if (percent <= 100) {
+      return 1;
+    } else if (percent <= 150) {
+      return 2;
+    } else if (percent <= 200) {
+      return 3;
+    } else if (percent <= 250) {
+      return 4;
+    } else if (percent <= 300) {
+      return 5;
+    } else if (percent <= 400) {
+      return 6;
+    }
+    return 1;
   }
 }
