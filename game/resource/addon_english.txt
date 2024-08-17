@@ -33,7 +33,7 @@
 		"show_game_options"  "Show Game Options"
 		"respawn_time_percentage"	"Respawn Time"
 		"max_level"	"Max Level"
-		"tower_power"	"Tower Damage"
+		"tower_power"	"Tower Power"
 		"starting_gold_player"	"Player Starting Gold"
 		"starting_gold_bot"	"Bot Starting Gold"
 		"same_hero_selection"  "Allow Same Hero Selection"

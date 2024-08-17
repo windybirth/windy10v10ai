@@ -957,57 +957,11 @@
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"20"
 				}
 			}
-			// 防御塔生命恢复
-			"modifier_global_tower_heal_0"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"0"
-				}
-			}
-			"modifier_global_tower_heal_5"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"5"
-				}
-			}
-			"modifier_global_tower_heal_10"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"10"
-				}
-			}
-			"modifier_global_tower_heal_20"
-			{
-				"Passive"				"1"
-				"IsHidden"				"1"
-				"RemoveOnDeath"			"0"
-				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"20"
-				}
-			}
 		}
 	}
 
 	"item_tower_modifiers"
 	{
-
 		"ID"							"3002"
 		// General
 		//-------------------------------------------------------------------------------------------------------------

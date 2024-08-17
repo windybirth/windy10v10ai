@@ -112,8 +112,6 @@ function AIGameMode:PreGameOptions()
     self.iMaxLevel = self.iMaxLevel or MAX_LEVEL
 
     self.iTowerPower = self.iTowerPower or 3
-    self.iTowerEndure = self.iTowerEndure or 3
-    self.iTowerHeal = self.iTowerHeal or 0
 
     self.iStartingGoldPlayer = self.iStartingGoldPlayer or 600
     self.iStartingGoldBot = self.iStartingGoldBot or 600

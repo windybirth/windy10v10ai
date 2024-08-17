@@ -63,17 +63,11 @@ export class EventGameStateChange {
       this.getTowerLevel(towerPower),
     );
 
-    // 防御塔耐久
-    const towerEndure = GameRules.Option.towerEndure;
-
-    const newHealth = Math.floor((towerEndure / 100) * building.GetMaxHealth());
+    // 防御塔血量
+    const newHealth = Math.floor((towerPower / 100) * building.GetMaxHealth());
     building.SetMaxHealth(newHealth);
     building.SetBaseMaxHealth(newHealth);
     building.SetHealth(newHealth);
-
-    // 防御塔回血
-    const towerHeal = GameRules.Option.towerHeal;
-    ModifierHelper.applyGlobalModifier(building, `modifier_global_tower_heal_${towerHeal}`);
   }
 
   private getTowerLevel(percent: number): number {

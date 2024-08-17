@@ -10,12 +10,8 @@ export class Option {
   //    respawn_time_percentage         	= "120" (string)
   //    max_level                       	= "30" (string)
   //    tower_power                     	= "50" (string)
-  //    tower_endure                    	= "1" (string)
-  //    tower_heal                      	= "0" (string)
 
   towerPower = 100;
-  towerEndure = 100;
-  towerHeal = 0;
 
   constructor() {}
 }
