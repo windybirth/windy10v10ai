@@ -616,7 +616,6 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
 
                     if teamKills > 0 then
                         local battleParticipation = math.floor(battleParticipationBase * ((kills + assists) / teamKills))
-                        print("battleParticipation", battleParticipation)
                         playerInfo.points = playerInfo.points + battleParticipation
                     end
 
