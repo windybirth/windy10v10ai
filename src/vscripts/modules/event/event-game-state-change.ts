@@ -11,6 +11,8 @@ export class EventGameStateChange {
       this.OnGameInProgress();
     } else if (state === GameState.HERO_SELECTION) {
       this.OnHeroSelection();
+    } else if (state === GameState.STRATEGY_TIME) {
+      this.OnStrategyTime();
     } else if (state === GameState.PRE_GAME) {
       this.OnPreGame();
     }
@@ -18,8 +20,19 @@ export class EventGameStateChange {
 
   private OnGameInProgress(): void {}
 
+  /**
+   * 选择英雄时间
+   */
   private OnHeroSelection(): void {}
 
+  /**
+   * 策略时间
+   */
+  private OnStrategyTime(): void {}
+
+  /**
+   * 地图载入后，游戏开始前
+   */
   private OnPreGame(): void {
     // 初始化游戏
     print(`[EventGameStateChange] OnPreGame`);

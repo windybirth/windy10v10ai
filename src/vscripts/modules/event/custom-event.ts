@@ -18,5 +18,9 @@ export class CustomEvent {
     }
 
     GameRules.Option.towerPower = Number(args.game_options.tower_power);
+
+    // FIXME 移动到更合适的位置
+    GameRules.Option.gameDifficulty =
+      CustomNetTables.GetTableValue("game_difficulty", "all").difficulty ?? 0;
   }
 }

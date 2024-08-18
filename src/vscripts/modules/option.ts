@@ -12,6 +12,7 @@ export class Option {
   //    tower_power                     	= "50" (string)
 
   towerPower = 100;
+  gameDifficulty = 0;
 
   constructor() {}
 }
