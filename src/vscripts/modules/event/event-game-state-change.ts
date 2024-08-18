@@ -1,5 +1,5 @@
-import { HeroPick } from "../../ai/hero-pick";
 import { ModifierHelper } from "../../helper/modifier-helper";
+import { HeroPick } from "../hero/hero-pick";
 
 export class EventGameStateChange {
   constructor() {
@@ -30,6 +30,7 @@ export class EventGameStateChange {
    * 策略时间
    */
   private OnStrategyTime(): void {
+    HeroPick.PickHumanHeroes();
     HeroPick.PickBotHeroes();
   }
 
