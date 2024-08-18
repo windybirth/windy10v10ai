@@ -1,3 +1,4 @@
+import { HeroPick } from "../../ai/hero-pick";
 import { ModifierHelper } from "../../helper/modifier-helper";
 
 export class EventGameStateChange {
@@ -28,7 +29,9 @@ export class EventGameStateChange {
   /**
    * 策略时间
    */
-  private OnStrategyTime(): void {}
+  private OnStrategyTime(): void {
+    HeroPick.PickBotHeroes();
+  }
 
   /**
    * 地图载入后，游戏开始前
