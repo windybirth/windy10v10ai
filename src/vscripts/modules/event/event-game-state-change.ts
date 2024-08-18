@@ -1,3 +1,4 @@
+import { Player } from "../../api/player";
 import { ModifierHelper } from "../../helper/modifier-helper";
 import { HeroPick } from "../hero/hero-pick";
 
@@ -8,7 +9,9 @@ export class EventGameStateChange {
 
   OnGameStateChanged(): void {
     const state = GameRules.State_Get();
-    if (state === GameState.GAME_IN_PROGRESS) {
+    if (state === GameState.CUSTOM_GAME_SETUP) {
+      Player.Init();
+    } else if (state === GameState.GAME_IN_PROGRESS) {
       this.OnGameInProgress();
     } else if (state === GameState.HERO_SELECTION) {
       this.OnHeroSelection();

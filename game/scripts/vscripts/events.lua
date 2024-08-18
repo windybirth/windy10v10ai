@@ -48,9 +48,6 @@ function AIGameMode:OnGameStateChanged(keys)
     local state = GameRules:State_Get()
 
     if state == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-        if IsServer() then
-            PlayerController:Init()
-        end
     elseif state == DOTA_GAMERULES_STATE_HERO_SELECTION then
         if IsServer() then
             self:InitPlayerGold()
