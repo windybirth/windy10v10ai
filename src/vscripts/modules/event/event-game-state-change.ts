@@ -10,7 +10,9 @@ export class EventGameStateChange {
   OnGameStateChanged(): void {
     const state = GameRules.State_Get();
     if (state === GameState.CUSTOM_GAME_SETUP) {
-      Player.Init();
+      Timers.CreateTimer(1, () => {
+        Player.LoadPlayerInfo();
+      });
     } else if (state === GameState.GAME_IN_PROGRESS) {
       this.OnGameInProgress();
     } else if (state === GameState.HERO_SELECTION) {

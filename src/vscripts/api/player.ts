@@ -65,7 +65,7 @@ export class Player {
     return Player.playerCount;
   }
 
-  public static Init() {
+  public static LoadPlayerInfo() {
     CustomNetTables.SetTableValue("loading_status", "loading_status", {
       status: 1,
     });
