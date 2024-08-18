@@ -1,10 +1,9 @@
 export class PlayerHelper {
   static IsHumanPlayer(npc: CDOTA_BaseNPC | undefined): boolean {
     if (npc && npc.IsRealHero()) {
-      // is human player
       const playerId = npc.GetPlayerOwnerID();
       if (playerId >= 0) {
-        this.IsHumanPlayerByPlayerId(playerId);
+        return this.IsHumanPlayerByPlayerId(playerId);
       }
     }
     return false;

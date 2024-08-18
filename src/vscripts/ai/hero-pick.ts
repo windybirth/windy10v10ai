@@ -18,6 +18,17 @@ export class HeroPick {
     print(`radiantBotNumber: ${radiantBotNumber}`);
     print(`direBotNumberNumber: ${direBotNumberNumber}`);
 
+    // 移除玩家已经选择的英雄
+    PlayerHelper.ForEachPlayer((playerId) => {
+      if (PlayerHelper.IsHumanPlayerByPlayerId(playerId)) {
+        const heroName = PlayerResource.GetSelectedHeroName(playerId);
+        const index = nameList.indexOf(heroName);
+        if (index >= 0) {
+          nameList.splice(index, 1);
+        }
+      }
+    });
+
     for (let i = 0; i < direBotNumberNumber; i++) {
       const name = HeroPick.GetHeroName(nameList);
       Tutorial.AddBot(name, "", "unfair", false);
@@ -41,6 +52,11 @@ export class HeroPick {
   }
 
   static GetHeroName(nameList: string[]): string {
+    if (nameList.length === 0) {
+      // 如果没有英雄了，就随机一个，不过这个应该不会发生
+      print("[ERROR] nameList is empty");
+      return "npc_dota_hero_nevermore";
+    }
     const i = math.random(0, nameList.length - 1);
     const name = nameList[i];
     nameList.splice(i, 1);
