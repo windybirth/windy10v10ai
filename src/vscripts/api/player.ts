@@ -89,9 +89,6 @@ export class Player {
       retryTimes: 6,
     };
 
-    // Controller初期化
-    new PropertyController();
-
     ApiClient.sendWithRetry(apiParameter);
   }
 
