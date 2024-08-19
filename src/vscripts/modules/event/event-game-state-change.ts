@@ -1,4 +1,6 @@
+import { Player } from "../../api/player";
 import { ModifierHelper } from "../../helper/modifier-helper";
+import { HeroPick } from "../hero/hero-pick";
 
 export class EventGameStateChange {
   constructor() {
@@ -7,10 +9,16 @@ export class EventGameStateChange {
 
   OnGameStateChanged(): void {
     const state = GameRules.State_Get();
-    if (state === GameState.GAME_IN_PROGRESS) {
+    if (state === GameState.CUSTOM_GAME_SETUP) {
+      Timers.CreateTimer(1, () => {
+        Player.LoadPlayerInfo();
+      });
+    } else if (state === GameState.GAME_IN_PROGRESS) {
       this.OnGameInProgress();
     } else if (state === GameState.HERO_SELECTION) {
       this.OnHeroSelection();
+    } else if (state === GameState.STRATEGY_TIME) {
+      this.OnStrategyTime();
     } else if (state === GameState.PRE_GAME) {
       this.OnPreGame();
     }
@@ -18,8 +26,22 @@ export class EventGameStateChange {
 
   private OnGameInProgress(): void {}
 
+  /**
+   * 选择英雄时间
+   */
   private OnHeroSelection(): void {}
 
+  /**
+   * 策略时间
+   */
+  private OnStrategyTime(): void {
+    HeroPick.PickHumanHeroes();
+    HeroPick.PickBotHeroes();
+  }
+
+  /**
+   * 地图载入后，游戏开始前
+   */
   private OnPreGame(): void {
     // 初始化游戏
     print(`[EventGameStateChange] OnPreGame`);
