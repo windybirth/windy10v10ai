@@ -8936,7 +8936,7 @@
 		"AbilityManaCost"				"70 90 110 130 150"
 		"AbilityValues"
 		{
-			"duration"						"3 4 5 6 7"
+			"duration"						"2.5 3 3.5 4 4.5"
 			"sprout_damage"
 			{
 				"value"		"70 140 210 280 350"
@@ -8944,7 +8944,7 @@
 			"sprout_heal_per_second"
 			{
 				"value"						"0"
-				"special_bonus_facet_furion_soothing_saplings"	"=10 =20 =30 =40 =50"
+				"special_bonus_facet_furion_soothing_saplings"	"=20 =40 =60 =80 =100"	// x2
 			}
 		}
 	}
@@ -8962,8 +8962,8 @@
 			}
 			"barrier"
 			{
-				"value"					"50 100 150 200 250"
-				"special_bonus_unique_furion_teleportation_barrier"				"+100"
+				"value"					"200 300 400 500 600"	// x2
+				"special_bonus_unique_furion_teleportation_barrier"				"+200"
 			}
 		}
 	}
@@ -8972,7 +8972,7 @@
 	{
 		"AbilityManaCost"				"100 140 180 220"
 		"AbilityValues"
-        {
+		{
 			"max_treants"
 			{
 				"value"							"2"
@@ -8982,25 +8982,22 @@
 			"treant_health"
 			{
 				"value"								"750 1000 1250 1500"
-				"special_bonus_facet_furion_ironwood_treant"	"=1500 =2000 =2500 =3000"
-				"special_bonus_unique_furion"			"x2.5"
+				"special_bonus_facet_furion_ironwood_treant"				"+100%"
 			}
 			"treant_damage_min"
 			{
 				"value"					"50 100 150 200"
 				"special_bonus_facet_furion_ironwood_treant"				"+100%"
-				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_damage_max"
 			{
 				"value"					"50 100 150 200"
 				"special_bonus_facet_furion_ironwood_treant"				"+100%"
-				"special_bonus_unique_furion"			"x2.5"
 			}
 			"treant_movespeed"
 			{
 				"value"						"300 320 340 360"
-				"special_bonus_unique_furion_2"				"+60"
+				"special_bonus_facet_furion_ironwood_treant"						"+50"
 			}
 			"AbilityCooldown"
 			{
@@ -9013,14 +9010,12 @@
 	"furion_wrath_of_nature"
 	{
 		"MaxLevel" "4"
-		"AbilityManaCost"				"175 225 275 325"
+		"AbilityManaCost"				"130 190 250 310"
 		"AbilityValues"
 		{
-
 			"damage"
 			{
-				"value"				"105 145 185 225"
-				"special_bonus_unique_furion_5"			"+30"
+				"value"				"120 155 190 225"
 			}
 		}
 	}
