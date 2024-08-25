@@ -440,7 +440,7 @@
 		"DOTA_Tooltip_modifier_sword_master_arbiter_silence_and_mute"							"Supreme Swordsmanship: The Formless is the Best Form"
 		"DOTA_Tooltip_modifier_sword_master_arbiter_silence_and_mute_Description"				"Muted and silenced."
 		"DOTA_Tooltip_modifier_sword_master_arbiter_resistance"									"Supreme Swordsmanship: In Solitude I Seek for Defeat"
-		"DOTA_Tooltip_modifier_sword_master_arbiter_resistance_Description"						"Gaines %dMODIFIER_PROPERTY_STATUS_RESISTANCE%%% status resistance and %MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% damage reduction."
+		"DOTA_Tooltip_modifier_sword_master_arbiter_resistance_Description"						"Gaining %dMODIFIER_PROPERTY_STATUS_RESISTANCE%%% status resistance and %MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% incoming damage reduction."
 		"DOTA_Tooltip_modifier_sword_master_chop_attack_bonus"									"Kill: Bonus Attack Damage"
 		"DOTA_Tooltip_modifier_sword_master_chop_attack_bonus_Description"						"Gained %dMODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE% bonus attack damage."
 		"DOTA_Tooltip_modifier_sword_master_sweep_count"										"Sweep"
@@ -608,7 +608,7 @@
 		"npc_dota_hero_broodmother_npedesc1"		"Are you my Master?"
 
 		"DOTA_Tooltip_Ability_artoria_strike_air"				"<font color='#FFE56E'>Strike Air</font>"
-		"DOTA_Tooltip_ability_artoria_strike_air_description"	"Saber unleashes a destructive gale from her sword, dealing <font color='#05CAFF'>magical damage</font>, <font color='#FF3399'>stun</font> of all enemies in the path.<br/>Saber gains <font color='#ffd700'>Debuff Immunity</font> in few seconds."
+		"DOTA_Tooltip_ability_artoria_strike_air_description"	"Saber unleashes a destructive gale from her sword, dealing <font color='#05CAFF'>magical damage</font>, <font color='#FF3399'>stun</font> of all enemies in the path.<br/>Saber gains <font color='#ffd700'>Debuff Immunity</font> for a short time on cast."
 		"DOTA_Tooltip_ability_artoria_strike_air_Lore"		"The air so condensed that it twists the look of sword. What if what packs it is released?"
 		"DOTA_Tooltip_ability_artoria_strike_air_cast_range"		"RANGE:"
 		"DOTA_Tooltip_ability_artoria_strike_air_damage"	" DAMAGE:"
@@ -619,12 +619,12 @@
 		"DOTA_Tooltip_ability_artoria_strike_air_shard_description"		"Strike Air inflicts a normal attack to the enemy, and now also pierces Debuff Immunity."
 
 		"DOTA_Tooltip_Ability_artoria_instinct"					"<font color='#FFE56E'>Instinct</font>"
-		"DOTA_Tooltip_ability_artoria_instinct_Description"		"Saber's gifted instinct gives her extra <font color='#FF3399'>magic resistance</font> and <font color='#C24401'>status resistance</font>."
+		"DOTA_Tooltip_ability_artoria_instinct_Description"		"Saber's gifted instinct gives her extra <font color='#FF3399'>magic resistance</font> and <font color='#C24401'>status resistance</font>. Every %AbilityCooldown% seconds, Saber will block and reflect a targeted spell back to its caster."
 		"DOTA_Tooltip_ability_artoria_instinct_magic_res"		"%MAGIC RESISTANCE:"
 		"DOTA_Tooltip_ability_artoria_instinct_status_res"		"%STATUS RESISTANCE:"
 
 		"DOTA_Tooltip_Ability_artoria_mana_burst"					"<font color='#FFE56E'>Mana Burst</font>"
-		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"Strikes Nearby enemies with a single powerful blow, dealing <font color='#05CAFF'>magical damage</font> and <font color='#FF3399'>slow</font>. Purges all positive buffs on any enemies in range.\nPassively increase Saber's spell amplification."
+		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"Saber strikes all nearby enemies with a single powerful blow, dealing <font color='#05CAFF'>magical damage</font> and <font color='#FF3399'>slowing</font> them. Dispel all positive buffs on any enemies in range.\nPassively increases Saber's spell damage amplification."
 		"DOTA_Tooltip_ability_artoria_mana_burst_Lore"		""
 		"DOTA_Tooltip_ability_artoria_mana_burst_amp_pct"		"%SPELL DAMAGE AMP:"
 		"DOTA_Tooltip_ability_artoria_mana_burst_damage"		"DAMAGE:"
@@ -633,7 +633,7 @@
 		"DOTA_Tooltip_ability_artoria_mana_burst_duration"		"SLOW DURATION:"
 
 		"DOTA_Tooltip_Ability_artoria_excalibur"				"<font color='#FFE56E'>Excalibur</font>"
-		"DOTA_Tooltip_ability_artoria_excalibur_description"	"Saber supercharges Excalibur with her prana and swings it to unleash a wave of light, dealing <font color='#05CAFF'>magical damage</font> to every enemy in the path of light.\n\n<font color='#FF3399'>Upgradable with the Excalibur item.</font>"
+		"DOTA_Tooltip_ability_artoria_excalibur_description"	"Saber supercharges Excalibur with her prana and swings it to unleash a wave of light, dealing <font color='#05CAFF'>magical damage</font> to every enemy in its wake.\n\n<font color='#FF3399'>Upgradable with the Excalibur item.</font>"
 		"DOTA_Tooltip_ability_artoria_excalibur_Lore"	"The lone King's ideal shines the brightest in the starry night."
 		"DOTA_Tooltip_ability_artoria_excalibur_cast_delay"		"CAST DELAY:"
 		"DOTA_Tooltip_ability_artoria_excalibur_range"		"RANGE:"
@@ -644,7 +644,7 @@
 		"DOTA_Tooltip_ability_artoria_excalibur_slow_amount"		"%SLOW:"
 
 		"DOTA_Tooltip_Ability_artoria_ultimate_excalibur"				"<font color='#FFE56E'>Hidden Treasure: Excalibur - The Sword of Promised Victory</font>"
-		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_Description"	"Saber unleashes the true radiance of Excalibur forward, engulfing everything in the path in ardent light to deal <font color='#05CAFF'>insane magical damage</font>."
+		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_Description"	"Saber unleashes the true radiance of Excalibur forward, engulfing everything in its path in ardent light, dealing <font color='#05CAFF'><b><i>INSANE</b></i> magical damage</font>!"
 		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_Lore"	"The lone King's ideal shines the brightest in the starry night."
 		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_cast_delay"	"CAST DELAY:"
 		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_range"		"RANGE:"
@@ -736,9 +736,9 @@
 		"DOTA_Tooltip_ability_goku_kaioken_super_saiyan_tick" 				"ACTIVE ATTACK INTERVAL:"
 		"DOTA_Tooltip_ability_goku_kaioken_super_saiyan_radius" 			"ACTIVE RANGE:"
 		"DOTA_Tooltip_Ability_goku_super_saiyan" 							"Super Saiyan"
-		"DOTA_Tooltip_ability_goku_super_saiyan_description" 				"<h1>Passive:</h1> The power of the Super Saiyan is hidden in Goku's body, making Goku passively gain full attribute bonus.\n<h1>Active:</h1> Goku enters the Super Saiyan mode, restores a certain percentage of his max health and mana every second, obtains extra status resistance, and enhances all his skills."
+		"DOTA_Tooltip_ability_goku_super_saiyan_description" 				"<h1>Passive:</h1> The power of the Super Saiyan is hidden in Goku's body, passiveky granting Goku all attributes.\n<h1>Active:</h1> Goku enters the Super Saiyan mode, restores a certain percentage of his max health and mana every second, obtains extra status resistance, and enhances all his skills."
 		"DOTA_Tooltip_ability_goku_super_saiyan_Lore" 						"It is said that there will be a super soldier every 1000 years."
-		"DOTA_Tooltip_Ability_goku_super_saiyan_bonus_attribute" 			"FULL ATTRIBTUE BONUS:"
+		"DOTA_Tooltip_Ability_goku_super_saiyan_bonus_attribute" 			"ALL ATTRIBTUE BONUS:"
 		"DOTA_Tooltip_Ability_goku_super_saiyan_bonus_status_resistance" 	"%STATUS RESISTANCE:"
 		"DOTA_Tooltip_Ability_goku_super_saiyan_regen" 						"%MAX HEALTH/MANA REGEN:"
 		"DOTA_Tooltip_Ability_goku_super_saiyan_duration" 					"DURATION:"
@@ -749,7 +749,7 @@
 		"DOTA_Tooltip_ability_goku_spirit_bomb_visionRange_max" 			"MAX VISION RANGE:"
 		"DOTA_Tooltip_ability_goku_spirit_bomb_damage_max" 					"MAX DAMAGE:"
 		"DOTA_Tooltip_ability_goku_spirit_bomb_radius_max" 					"MAX RADIUS:"
-		"DOTA_Tooltip_ability_goku_spirit_bomb_speed" 						"BALL FLIGHT SPEED:"
+		"DOTA_Tooltip_ability_goku_spirit_bomb_speed" 						"BULLET FLIGHT SPEED:"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_1" 					"+{s:bonus_damage_per_second} Kame Hame HAAAAA DPS"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_2" 					"+{s:bonus_duration} Second High Speed Mobile Duration"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_3" 					"+{s:bonus_stun_duration}s Jiewang Boxing Stun Time"
@@ -849,10 +849,11 @@
         "DOTA_Tooltip_ability_ability_thdots_yukari04_scepter_Description"	"Add a new skill:「Deep Danmaku Barrier -Transient Dreams-」"
 	    // 修补匠 刷新
 	    "DOTA_Tooltip_ability_tinker_rearm_lua"												"Rearm"
-		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitydraft_note"							"For abilities with charges, a single charge of the ability will be added everytime Rearm is cast."
 		"DOTA_Tooltip_ability_tinker_rearm_lua_Description"									"CHANNELED - Resets the cooldown on most of Tinker's items and abilities."
 		"DOTA_Tooltip_ability_tinker_rearm_lua_Lore"										"A new battery here, another set of rockets there, Boush continually improves on existing technology."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_Note0"										"Rearm works on all items except Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, (including their upgrade like Black King Bar Upgrade, Aeon Pendant, Linken's Sphere Upgrade, Armor of Insight, Hand of Team, etc.) and any neutral items (including their upgrades).<br>Rearm don't work on other heroes' ultimates."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Note0"										"Rearm works on all items except Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, (including their upgraded variants such as Black King Bar Upgrade, Aeon Pendant, Linken's Sphere Upgrade, Armor of Insight, Hand of Team, Refresher Core, etc.) and any neutral items (including their upgrades)."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Note1"										"Rearm will not work on other heroes' ultimates if stolen by Rubick."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Note2"										"For abilities with charges, a single charge of the ability will be added every time Rearm is cast."
 		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitychanneltime"								"TIME TO REARM:"
 
         // 电棍 razor
@@ -862,8 +863,8 @@
 
         // 火女 lina
         "DOTA_Tooltip_ability_lina_fiery_soul_Description"		"Grants bonus attack speed, movement speed, and spell damage each time Lina hits an enemy with a spell. Stacks with itself. Lasts %fiery_soul_stack_duration% seconds."
-        "DOTA_Tooltip_ability_lina_fiery_soul_shard_description"	"Increases the Spell Damage granted by Fiery Soul per stack by +%shard_bonus_spell_damage%."
-        "DOTA_Tooltip_ability_lina_fiery_soul_bonus_spell_damage"			"SPELL DAMAGE INCREASE:"
+        "DOTA_Tooltip_ability_lina_fiery_soul_shard_description"	"Fiery Soul grants all of Lina's spells %shard_bonus_spell_damage% extra damage per stack."
+        "DOTA_Tooltip_ability_lina_fiery_soul_bonus_spell_damage"			"SPELL DAMAGE PER STACK:"
 		"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
 
         // 幽鬼 spe
