@@ -917,6 +917,15 @@
 			}
 		}
 	}
+	"npc_dota_hero_dark_willow"
+	{
+	"AttributeBaseStrength"     "22"
+        "AttributeStrengthGain"     "2.1"
+        "AttributeBaseIntelligence" "23"
+        "AttributeIntelligenceGain" "2.6"
+        "AttributeBaseAgility"      "21"
+        "AttributeAgilityGain"      "2.3"
+	}
 	"npc_dota_hero_dazzle"
 	{
 		// "Ability4"		"dazzle_weave"
@@ -1467,8 +1476,10 @@
 	}
 	"npc_dota_hero_luna"
 	{
+		
 		"Ability4"		"luna_lunar_grace"
-		"Ability9"		"luna_lunar_blessing"	// 月之祝福 先天技能
+		"Ability6"		"luna_eclipse"
+		"Ability7"		"luna_lunar_blessing"	// 月之祝福 先天技能
 		"Bot"
 		{
 			"Build"
@@ -1476,19 +1487,19 @@
 				"1"		"luna_lucent_beam"
 				"2"		"luna_lunar_orbit"
 				"3"		"luna_lucent_beam"
-				"4"		"luna_moon_glaive"
+				"4"		"luna_lunar_orbit"
 				"5"		"luna_lucent_beam"
 				"6"		"luna_eclipse"
 				"7"		"luna_lucent_beam"
-				"8"		"luna_lunar_orbit"
+				"8"		"luna_moon_glaive"
 				"9"		"luna_lucent_beam"
 				"10"		"special_bonus_unique_luna_4"
 				"11"		"luna_moon_glaive"
 				"12"		"luna_eclipse"
 				"13"		"luna_moon_glaive"
-				"14"		"luna_lunar_orbit"
+				"14"		"luna_moon_glaive"
 				"15"		"special_bonus_unique_luna_2"
-				"16"		"luna_lunar_orbit"
+				"16"		"luna_moon_glaive"
 				"17"		""
 				"18"		"luna_eclipse"
 				"19"		""
@@ -1504,11 +1515,59 @@
 				"29"		"special_bonus_unique_luna_8"
 				"30"		"special_bonus_unique_luna_3"
 				"31"		"luna_eclipse"
-				"32"		"luna_moon_glaive"
+				"32"		"luna_lunar_orbit"
 				"33"		"luna_lunar_orbit"
-				"34"		"luna_moon_glaive"
+				"34"		"luna_lunar_orbit"
 			}
 		}
+		"AttackRate"        	    "1.5"
+		"AttackRange"		    "425"
+		"AttributeBaseStrength"     "24"
+        	"AttributeStrengthGain"     "2.5"
+        	"AttributeBaseAgility"      "30"
+        	"AttributeAgilityGain"      "3.8"
+        	"AttributeBaseIntelligence" "24"
+		"AttributeIntelligenceGain" "2.2"
+		"MovementSpeed"		    "335"
+	}
+	"npc_dota_hero_marci"
+	{
+	"Ability3"	"marci_guardian"
+	"Ability4"	"marci_bodyguard"
+        "Ability5"      "marci_special_delivery"
+	"ArmorPhysical"             "4"
+	"AttackRate"                "1.4"
+	"AttributeBaseStrength"     "30"
+        "AttributeStrengthGain"     "3.6"
+        "AttributeBaseAgility"      "24"
+        "AttributeAgilityGain"      "2.5"
+        "AttributeBaseIntelligence" "21"
+        "AttributeIntelligenceGain" "1.7"
+	"MovementSpeed"		    "325"
+	"StatusHealthRegen"         "4.0"
+	"Facets"
+	{
+		"marci_sidekick"
+		{
+			"Deprecated"	"true"
+		}
+		"marci_bodyguard"
+		{
+			"Deprecated"	"true"
+		}
+  		"marci_unyielding_loyalty" 
+  		{
+    			"Icon"                "twin_hearts"
+    			"Color"               "Yellow"
+    			"GradientID"          "1"
+		}            
+  		"marci_unswerving_zeal" 
+  		{
+    			"Icon"                "armor"
+    			"Color"               "Blue"
+    			"GradientID"          "1"
+  		}
+	}
 	}
 	"npc_dota_hero_medusa"
 	{
@@ -1516,15 +1575,15 @@
 		{
 			"Build"
 			{
-				"1"			"medusa_mystic_snake"
-				"2"			"medusa_split_shot"
-				"3"			"medusa_mystic_snake"
-				"4"			"medusa_split_shot"
-				"5"			"medusa_mystic_snake"
-				"6"			"medusa_stone_gaze"
-				"7"			"medusa_mystic_snake"
-				"8"			"medusa_split_shot"
-				"9"			"medusa_mystic_snake"
+				"1"		"medusa_mystic_snake"
+				"2"		"medusa_split_shot"
+				"3"		"medusa_mystic_snake"
+				"4"		"medusa_split_shot"
+				"5"		"medusa_mystic_snake"
+				"6"		"medusa_stone_gaze"
+				"7"		"medusa_mystic_snake"
+				"8"		"medusa_split_shot"
+				"9"		"medusa_mystic_snake"
 				"10"		"special_bonus_unique_medusa_snake_damage"
 				"11"		"medusa_split_shot"
 				"12"		"medusa_stone_gaze"
@@ -1546,7 +1605,7 @@
 				"28"		"special_bonus_unique_medusa_2"
 				"29"		"special_bonus_unique_medusa"
 				"30"		"special_bonus_unique_medusa_4"
-                "31"		"medusa_stone_gaze"
+                		"31"		"medusa_stone_gaze"
 				"32"		"medusa_gorgon_graso"
 				"33"		"medusa_gorgon_grasp"
 				"34"		"medusa_gorgon_grasp"
@@ -1597,7 +1656,18 @@
 			}
 		}
 	}
-
+	"npc_dota_hero_mirana"
+	{
+	"AttackRate"        "1.500000"
+	"AttackRange"		"650"
+	"AttributeBaseStrength"     "22"
+        "AttributeStrengthGain"     "2.3"
+        "AttributeBaseIntelligence" "24"
+        "AttributeIntelligenceGain" "1.9"
+        "AttributeBaseAgility"      "27"
+        "AttributeAgilityGain"      "3.2"
+	"MovementSpeed"     "300"
+	}
 	"npc_dota_hero_nevermore"
 	{
 		"Bot"
@@ -2479,6 +2549,7 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
+		
 		"Bot"
 		{
 			"Build"
@@ -2519,6 +2590,12 @@
 				"34"		"windrunner_shackleshot"
 			}
 		}
+		"AttributeBaseStrength"     "23"
+      		"AttributeStrengthGain"     "2.2"
+        	"AttributeBaseIntelligence" "18"
+        	"AttributeIntelligenceGain" "2.0"
+        	"AttributeBaseAgility"      "25"
+        	"AttributeAgilityGain"      "2.6"
 	}
 	"npc_dota_hero_warlock"
 	{
