@@ -2038,7 +2038,6 @@
 			"bonus_damage"
 			{
 				"value"			"10 20 30 40 50"
-				"special_bonus_unique_lycan_4"	"+25"
 			}
 			"bonus_hp_regen"
 			{
@@ -2053,7 +2052,7 @@
 		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
-			"speed"				"850"
+			"speed"				"800"
 			"crit_multiplier"		"160 200 240 280"
 			"health_bonus"		"500 700 900 1100" // x2
 		}
@@ -2065,13 +2064,11 @@
 		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
-			"lifesteal_percent"		"60" // 40
 			"lifesteal_range"
 			{
 				"value"		"1800" // 1200
 				"affected_by_aoe_increase"	"1"
 			}
-			"attack_range"		"250" // 150
 		}
 	}
 	//=================================================================================================================
@@ -2358,19 +2355,10 @@
 			{
 				"value"				"4.5 5 5.5 6.0 6.5"
 			}
-			"mana_pers_night"
-			{
-				"value"			"0"
-				"special_bonus_scepter"	"3"	// 6
-			}
-			"radius"
-			{
-				"value"		"450" // x1.5
-			}
 			"dps"
 			{
 				"value"			"50 60 70 80 90" // x2
-				"special_bonus_unique_night_stalker_crippling_fear_damage" 	"+40" // x2
+				"special_bonus_unique_night_stalker_crippling_fear_damage" 	"+30" // x1.5
 			}
 		}
 	}
@@ -2382,7 +2370,7 @@
 		{
 			"bonus_movement_speed_pct_night"
 			{
-				"value"			"35 40 45 50 55"
+				"value"			"22 28 34 40 46"
 			}
 			"bonus_attack_speed_night"
 			{
@@ -2396,7 +2384,7 @@
 			}
 			"shard_cooldown"
 			{
-				"value"				"15" // 30
+				"value"				"20" // 35
 				"RequiresShard"		"1"
 			}
 			"shard_cast_range"
@@ -2410,13 +2398,13 @@
 	"night_stalker_darkness"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"130 120 110 100"
-		"AbilityManaCost"				"175 225 275 325"
+		"AbilityCooldown"				"120 110 100 90"
+		"AbilityManaCost"				"125 175 225 275"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
-				"value"			"100 150 200 250"
+				"value"			"50 100 150 200"
 				"special_bonus_unique_night_stalker_3"	"+50"
 			}
 		}
@@ -2426,7 +2414,7 @@
 	{
 		"AbilityValues"
 		{
-			"hp_regen_during_night_pct"				"80" // 40
+			"hp_regen_during_night_pct"				"60" // 40
 		}
 	}
 	//=================================================================================================================
@@ -4547,7 +4535,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"			"90 80 70 60"
+				"value"			"100 90 80 70"
 			}
 			"bounty"				"180 240 300 360"
 		}
@@ -8190,12 +8178,11 @@
 		{
 			"damage"
 			{
-				"value"	"10 20 30 40 50"	// x2
-				"special_bonus_unique_batrider_4"	"+30"
+				"value"	"5 10 15 20 25"
 			}
 			"movement_speed_pct" "-1.5 -3 -4.5 -6 -7.5"
 			"turn_rate_pct"			"-30 -40 -50 -60 -70"
-			"application_damage"	"10 20 30 40 50"
+			"application_damage"	"10 20 30 40 50"	// x2
 		}
 	}
 	// 离子烫（来自黑贤）无敌的叠油离子烫我滴朋友
