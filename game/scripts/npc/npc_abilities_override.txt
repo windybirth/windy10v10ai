@@ -1976,13 +1976,6 @@
 	{
 		"MaxLevel" "3"
 		"RequiredLevel"					"15"
-		"AbilityValues"
-		{
-			"bonus_health"
-			{
-				"value"								"800 1600 2400"	// x2
-			}
-		}
 	}
 	//=================================================================================================================
 	// Ability: Lycan 狼人
@@ -2838,20 +2831,14 @@
 	"rattletrap_battery_assault"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 21 20 19 18"
+		"AbilityCooldown"				"24 22 20 18 16"
 		"AbilityValues"
 		{
-			"interval"
-			{
-				"value"								"0.7 0.65 0.6 0.55"
-				"special_bonus_unique_clockwerk"		"-0.25"
-			}
 			"damage"
 			{
-				"value"									"50 100 150 200 250"
-				"special_bonus_unique_clockwerk_3"		"+40"
+				"value"									"50 100 150 200 250"	// x2
+				"special_bonus_unique_clockwerk_3"		"+50"
 			}
-			"creep_damage_multiplier"					"2"
 		}
 	}
 	// 能量齿轮
@@ -2863,26 +2850,21 @@
 			"duration"			"5.0 6.0 7.0 8.0 9.0"
 			"damage"
 			{
-				"value"			"50 125 200 275 350"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"100 250 400 550 700"	// x2
 			}
 			"mana_burn"
 			{
-				"value"				"50 80 110 140 170"
-			}
-			"magic_barrier"
-			{
-				"value"				"100 200 300 400 500"
+				"value"				"100 160 220 280 340"	// x2
 			}
 			"attacks_to_destroy"
 			{
 				"value"					"4"
-				"special_bonus_unique_clockwerk_5"		"+2"
+				"special_bonus_unique_clockwerk_5"		"+4"
 			}
-			"bonus_armor"		"5"
-			"leash"
+			"bonus_armor"		"10"
+			"AbilityCooldown"
 			{
-				"value"			"0"
+				"value"			"21 19 17 15 13"
 			}
 		}
 	}
@@ -2890,14 +2872,13 @@
 	"rattletrap_rocket_flare"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"30 45 50 60 65"
+		"AbilityManaCost"				"35 40 45 50 55"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"			"80 160 200 280 320"
-				"special_bonus_unique_clockwerk_flare_damage"	"+75"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"160 240 320 400 480"	// x2
+				"special_bonus_unique_clockwerk_flare_damage"	"+150"
 			}
 			"AbilityCooldown"
 			{
@@ -2915,9 +2896,9 @@
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
-				"duration"			"1.2 1.4 1.6 1.8"
+				"duration"			"1.5 2.0 2.5 3.0"	// 1.2 1.4 1.6
 				"speed"				"4000 5000 6000 7000"
-				"damage"			"100 200 200 400"
+				"damage"			"150 350 550 750"	// x2
 		}
 	}
 	//=================================================================================================================
@@ -8955,11 +8936,11 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"625 700 775 850 925"
-		"AbilityCooldown"				"12 11 10 9 8"
+		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityManaCost"				"70 90 110 130 150"
 		"AbilityValues"
 		{
-			"duration"						"2.5 3 3.5 4 4.5"
+			"duration"						"2.0 2.5 3 3.5 4"
 			"sprout_damage"
 			{
 				"value"		"70 140 210 280 350"
@@ -9043,7 +9024,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"						"90"
+				"value"						"110"
 				"special_bonus_scepter"		"-10"
 			}
 		}
