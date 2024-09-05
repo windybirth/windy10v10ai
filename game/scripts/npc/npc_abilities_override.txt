@@ -12111,67 +12111,28 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 14 12 10 8"
-		"AbilityManaCost"				"140 160 180 200 220"
+		"AbilityManaCost"				"100 120 140 160 180"
 		"AbilityValues"
 		{
-			"AbilityCastRange"
-			{
-				"value"						"1000"
-				"special_bonus_unique_muerta_dead_shot_range"	"+350"
-			}
 			"damage"
 			{
-				"value"						"100 150 200 250 300"
-				"special_bonus_unique_muerta_dead_shot_damage"	"+80"
+				"value"						"100 175 250 325 400"
 			}
-			"speed"							"2000"
-			"radius"
-			{
-				"value"			"100"
-				"affected_by_aoe_increase"	"1"
-			}
-			"ricochet_radius_start"			"115"
-			"ricochet_radius_end"			"115"
-			"ricochet_distance_multiplier"	"1.5"
-			"ricochet_fear_duration"		"0.5 0.6 0.7 0.8 0.9"
-			"impact_slow_percent"			"-100"
-			"impact_slow_duration"			"0.3"
+			"ricochet_fear_duration"		"0.8 0.95 1.1 1.25 1.4"
 		}
 	}
 	// 唤魂
 	"muerta_the_calling"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"150 175 200 225 250"
+		"AbilityManaCost"				"140 155 170 185 200"
 		"AbilityValues"
 		{
-			"damage"						"45 90 135 180"
+			"damage"						"45 90 135 180 225"
 			"duration"						"4 5 6 7 8"
-			"hit_radius"
-			{
-				"value"		"120"
-				"affected_by_aoe_increase"	"1"
-			}
-			"dead_zone_distance"
-			{
-				"value"		"340"
-				"affected_by_aoe_increase"	"1"
-			}
-			"num_revenants"
-			{
-				"value"						"4"
-				"special_bonus_unique_muerta_the_calling_num_revenants"	"+2"
-			}
-			"speed_initial"					"0.2"
-			"speed_max"						"1.0"
-			"acceleration"			"0.75"
-			"rotation_initial"		"0"
-			"debug_draw"					"0"
-			"aura_movespeed_slow"			"-10 -15 -20 -25 -30"
-			"aura_attackspeed_slow"			"-20 -30 -40 -50 -60"
-			"silence_duration"				"1.0 1.5 2 2.5 3"
-			"rotation_direction"			"-1"
-			"show_warning"					"1"
+			"aura_movespeed_slow"			"-15 -20 -25 -30 -35"
+			"aura_attackspeed_slow"			"-30 -40 -50 -60 -70"
+			"silence_duration"				"1.5 2 2.5 3 3.5"
 		}
 	}
 	// 神枪在手
@@ -12182,8 +12143,7 @@
 		{
 			"double_shot_chance"
 			{
-				"value"					"10 20 30 40 50"
-				"special_bonus_unique_muerta_gunslinger_double_shot_chance"	"+20"
+				"value"					"26 34 42 50 58"
 			}
 		}
 	}
@@ -12191,36 +12151,28 @@
 	"muerta_pierce_the_veil"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"65 60 55 50"
+		"AbilityCooldown"				"60 55 50 45"
 		"AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 			"duration"					"4 5 6 7"
-			"transform_duration"		"0.35"
-			"base_damage_pct"			"80"
-			"modelscale"				"0"
-			"bonus_damage"				"50 75 100 125"
-			"spell_lifesteal"
-			{
-				"value"				"20"
-				"RequiresShard"		"1"
-			}
-			"spell_amp_steal"
-			{
-				"value"				"2"
-				"RequiresShard"		"1"
-			}
-			"spell_amp_steal_range"
-			{
-				"value"				"350"
-				"RequiresShard"		"1"
-			}
+			"bonus_damage"				"70 100 130 160"
 		}
 	}
 	// 临别一枪
 	"muerta_parting_shot"
 	{
 		"AbilityCooldown"				"180"
+	}
+	// 祭台
+	"muerta_ofrenda"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"attackspeed_bonus"							"15 30 45 60 75"	// 15 25 35 45
+			"effect_radius"								"400 450 500 550 600"
+		}
 	}
 	//=================================================================================================================
 	// Ringmaster: 百戏大王
