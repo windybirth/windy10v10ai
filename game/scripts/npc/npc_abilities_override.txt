@@ -4463,29 +4463,25 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"duration"
-				{
-					"value"			"6.0"
-					"special_bonus_unique_arc_warden_4"	"+2"
-				}
 				"damage_per_second"
 				{
 					"value"		"15 30 45 60 75"
-					"LinkedSpecialBonus"		"special_bonus_unique_arc_warden_2"
+					"RequiresFacet"				"arc_warden_order"
+				}
+				"move_speed_slow_pct"
+				{
+					"value" 					"15 22 30 39 47"
+					"RequiresFacet"				"arc_warden_order"
 				}
 				"tempest_damage_per_second"
 				{
 					"value"		"20 45 70 95 120"
-					"special_bonus_unique_arc_warden_2"		"+40"
+					"RequiresFacet"				"arc_warden_disorder"
 				}
-				"search_radius"					"225"
-				"think_interval"				"0.5"
-				"move_speed_slow_pct"				"20 30 40 50 60"
 				"tempest_move_speed_slow_pct"		"6 10 14 18 22"
-				"abilitycastrange"
+				"AbilityCastRange"
 				{
-					"value"				"600 700 800 900 1000"
-					"special_bonus_unique_arc_warden_5"	"+150"
+					"value"				"500 600 700 800 900"
 				}
 		}
 	}
@@ -4496,14 +4492,33 @@
 		"AbilityManaCost"				"50 70 90 110 130"
 		"AbilityValues"
 		{
-			"duration"					"3.5 4.5 5.5 6.5 7.5"
+			"duration"
+			{
+				"value"						"4 5 6 7 8"
+				"RequiresFacet"				"arc_warden_order"
+			}
 			"tempest_duration"			"5 6 7 8 9"
 			"attack_speed_bonus"
 			{
-				"value" 				"20 40 60 80 100"
+				"value" 				"30 60 90 120 150"
+				"special_bonus_unique_arc_warden_3" 		"+40"
+				"RequiresFacet"				"arc_warden_order"
+			}
+			"attack_damage_bonus"
+			{
+				"value"								"20 40 60 80 100"
+				"special_bonus_unique_arc_warden_3" 		"+40"
+				"RequiresFacet"			"arc_warden_disorder"
+			}
+			"attack_magic_damage"
+			{
+				"value"								"20 40 60 80 100"
 				"special_bonus_unique_arc_warden_3" 		"+40"
 			}
-			"evasion_chance"			"90"
+			"AbilityCooldown"
+			{
+				"value"						"23 20 19 18 17"
+			}
 		}
 	}
 	// 闪光幽魂 鸟
@@ -4516,29 +4531,36 @@
 			"spark_damage_base"
 			{
 				"value"									"100 180 260 340 420"
-				"special_bonus_unique_arc_warden"		"+35%"
+				"RequiresFacet"			"arc_warden_order"
+			}
+			"ministun_duration"
+			{
+				"value"									"0.6 0.8 1.0 1.2 1.4"
+				"RequiresFacet"							"arc_warden_order"
 			}
 			"spark_damage_tempest"
 			{
 
-				"value"									"75 135 195 255 315"
-				"special_bonus_unique_arc_warden"		"+35%"
+				"value"									"75 140 205 270 335"
+				"RequiresFacet"							"arc_warden_disorder"
 			}
-			"ministun_duration"							"0.4 0.5 0.6 0.7 0.8"
-			"ministun_duration_tempest"					"0.6 0.8 1.0 1.2 1.4"
+			"ministun_duration_tempest"
+			{
+
+				"value"									"0.4 0.5 0.6 0.7 0.8"
+				"RequiresFacet"							"arc_warden_disorder"
+			}
 		}
 	}
 	// 风暴双雄
 	"arc_warden_tempest_double"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"40 35 30 25"
 		"AbilityValues"
 		{
-			"duration"
+			"AbilityCooldown"
 			{
-				"value"				"30"
-				"special_bonus_unique_arc_warden_6"		"+15"
+				"value"			"90 80 70 60"
 			}
 			"bounty"				"180 240 300 360"
 		}
