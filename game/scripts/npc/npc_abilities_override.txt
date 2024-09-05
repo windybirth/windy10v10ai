@@ -4579,6 +4579,7 @@
 				"damage"
 				{
 					"value"			"115 190 265 340 415"
+					"special_bonus_unique_bloodseeker_2"	"+185"	// 135
 				}
 		}
 	}
@@ -4605,7 +4606,6 @@
 	"bloodseeker_rupture"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
@@ -4614,10 +4614,22 @@
 			{
 				"value"	"35 45 55 65"
 			}
+			"hp_pct"
+			{
+				"value"	"10"
+				"CalculateSpellDamageTooltip"	"0"
+				"special_bonus_unique_bloodseeker_7"		"+10"	// 8
+				"DamageTypeTooltip"				"DAMAGE_TYPE_PURE"
+			}
 			"AbilityCharges"
 			{
 				"value"	"0"
 				"special_bonus_unique_bloodseeker_rupture_charges"	"+0"
+			}
+			"AbilityCooldown"
+			{
+				"value"			"60 55 50 45"	// 75 70 65
+				"special_bonus_unique_bloodseeker_rupture_charges"	"=0.25"
 			}
 		}
 	}
