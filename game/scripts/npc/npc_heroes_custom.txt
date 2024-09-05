@@ -694,7 +694,8 @@
 	}
 	"npc_dota_hero_batrider"
 	{
-		"Ability5"      "dark_seer_ion_shell"
+		"Ability5"		"dark_seer_ion_shell"
+		"Ability9"		"batrider_smoldering_resin"	// 闷烧树脂 先天技能
 	}
 	"npc_dota_hero_bounty_hunter"
 	{

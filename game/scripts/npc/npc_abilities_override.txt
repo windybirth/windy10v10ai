@@ -8179,49 +8179,38 @@
 	// 叠油
 	"batrider_sticky_napalm"
 	{
-		"LinkedAbility"                 "dark_seer_ion_shell"
-		"AbilityDraftPreAbility"        "dark_seer_ion_shell"
+		"LinkedAbility"					"dark_seer_ion_shell"
+		"AbilityDraftPreAbility"		"dark_seer_ion_shell"
 		"MaxLevel" "5"
-		"AbilityCastRange"				"550 600 650 700 750"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"	"10 15 20 25 30"
-				"special_bonus_unique_batrider_4"	"+10"
-				"CalculateSpellDamageTooltip"		"1"
+				"value"	"10 20 30 40 50"	// x2
+				"special_bonus_unique_batrider_4"	"+30"
 			}
 			"movement_speed_pct" "-1.5 -3 -4.5 -6 -7.5"
 			"turn_rate_pct"			"-30 -40 -50 -60 -70"
-			"application_damage"	"10 15 20 25 30"
-			"shard_napalm_on_attack_chance_pct"
-			{
-				"value"			"100"
-				"RequiresShard"			"1"
-			}
+			"application_damage"	"10 20 30 40 50"
 		}
 	}
 	// 离子烫（来自黑贤）无敌的叠油离子烫我滴朋友
 	"dark_seer_ion_shell"
 	{
-		"LinkedAbility"                 "batrider_sticky_napalm"
-		"AbilityDraftPreAbility"        "batrider_sticky_napalm"
-		"MaxLevel"                      "5"
+		"LinkedAbility"					"batrider_sticky_napalm"
+		"AbilityDraftPreAbility"		"batrider_sticky_napalm"
+		"MaxLevel"						"5"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 			"damage_per_second"
 			{
 				"value"										"30 50 70 90 110"
-				"special_bonus_unique_dark_seer"			"+50"
 			}
 			"duration"
 			{
 				"value"										"21 24 27 30 33"
-				"special_bonus_unique_dark_seer_15"						"+15"
 			}
-
-			"tick_interval"									"0.15"	// 0.2
 		}
 	}
 	// 燃烧弹
@@ -8236,26 +8225,28 @@
 			"damage_impact"
 			{
 				"value"			"50 75 100 125 150"
-				"CalculateSpellDamageTooltip" "1"
 			}
 			"damage_per_second"
 			{
 				"value"			"20 30 40 50 60"
-				"CalculateSpellDamageTooltip" "1"
 			}
+			"damage_duration"
+			{
+				"value"		"2 3 4 5 6"
+			}
+			"slow"	"15 20 25 30 35"
 		}
 	}
 	// 火焰飞行
 	"batrider_firefly"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"44 40 36 32 28"
+		"AbilityCooldown"				"46 42 38 34 30"
 		"AbilityValues"
 		{
 			"damage_per_second"
 			{
 				"value"			"50 75 100 125 150"
-				"CalculateSpellDamageTooltip" "1"
 			}
 		}
 	}
@@ -8266,18 +8257,27 @@
 		"AbilityManaCost"				"150 175 200 225"
 		"AbilityValues"
 		{
-			"duration"				"2.75 3.25 3.75 4.25" // +0.5
+			"duration"				"2.25 2.75 3.25 3.75"
 			"damage"
 			{
-				"value"			"100 200 300 400"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"200 350 500 650"
 			}
 			"AbilityCooldown"
 			{
 				"value"				"60"
-				"special_bonus_unique_batrider_6"			"-20"
+				"special_bonus_unique_batrider_6"			"-15"
 			}
 
+		}
+	}
+	// 火上浇油 命石1
+	"batrider_stoked"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"movement_speed_pct"		"4 6 8 10 12"
+			"spell_amplification"		"2 4 6 8 10"
 		}
 	}
 	//=================================================================================================================
