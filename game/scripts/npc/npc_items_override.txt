@@ -1533,6 +1533,10 @@
 	{
 		"AbilitySharedCooldown"			"lotus_orb"
 	}
+	"item_shivas_guard_2"
+	{
+		"AbilitySharedCooldown"			"shivas_guard"
+	}
 
 	"item_smoke_of_deceit"
 	{
