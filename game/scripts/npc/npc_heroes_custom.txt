@@ -1935,12 +1935,9 @@
 	}
 	"npc_dota_hero_razor"
 	{
-	    "Ability11"		"special_bonus_unique_razor_101"
-        "Ability13"		"special_bonus_spell_amplify_12"
-        "Ability14"		"special_bonus_unique_razor_401"
-        "Ability15"		"special_bonus_unique_razor_static_link_aspd"
-        "Ability16"		"special_bonus_unique_razor_402"
-        "Ability17"		"special_bonus_unique_razor_plasmafield_second_ring"
+		"Ability11"		"special_bonus_unique_razor_101"
+		"Ability13"		"special_bonus_unique_razor_402"
+		// "Ability16"		"special_bonus_unique_razor_401"
 		"Bot"
 		{
 			"Build"

@@ -1882,19 +1882,19 @@
 	}
 	// 强攻提供{s:value}秒 减益免疫
 	"special_bonus_unique_legion_commander_8"
-    {
+	{
         "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
         "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "BaseClass"						"special_bonus_base"
+		"BaseClass"						"special_bonus_base"
         "ad_linked_abilities"			"legion_commander_press_the_attack"
         "AbilityValues"
-        {
+    	{
 			"value"
 			{
 				"value" "2.0"	// 1.5
 			}
-        }
-    }
+    	}
+	}
 	// 决斗
 	"legion_commander_duel"
 	{
@@ -6700,11 +6700,11 @@
 	//=================================================================================================================
 	// Ability: Razor 剃刀/电棍/雷泽
 	//=================================================================================================================
-	// 呼啦圈
+	// 等离子场 呼啦圈
 	"razor_plasma_field"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilityValues"
 		{
 			"damage_min"
@@ -6719,25 +6719,19 @@
 			}
 			"radius"
 			{
-				"value"				"700 800 800 900 1000"
-				"special_bonus_unique_razor_101"    "+200"
+				"value"			"700"
+				"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_razor_101"	 "+300"
 			}
-			"speed"						"1000"
 			"slow_min"				"20 25 30 35 40"
-			"slow_max"				"60 75 90 105 120"
-			"slow_duration"				"2"
-			"second_ring_delay"
-			{
-				"value"						"0"
-				"special_bonus_unique_razor_plasmafield_second_ring"				"+0.8"
-			}
+			"slow_max"				"60 70 80 90 100"
 		}
 	}
 	"special_bonus_unique_razor_101"
 	{
-	    "BaseClass"					"special_bonus_undefined"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}
 	// 静电连接
 	"razor_static_link"
@@ -6747,38 +6741,29 @@
 		"AbilityManaCost"				"65 75 85 100 120"
 		"AbilityValues"
 		{
-			"drain_length"
-			{
-				"value"			"4 5 6 7 8"
-				"special_bonus_unique_razor_3"	"+6"
-			}
 			"drain_duration"		"12 14 16 18 20"
 			"drain_rate"
 			{
-				"value"			"11 15 19 23 27"
+				"value"			"10 15 20 25 30"
 				"special_bonus_unique_razor"	"+10"
 			}
 		}
 	}
 	// 风暴涌动
-	"razor_unstable_current"
+	"razor_storm_surge"
 	{
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"self_movement_speed_pct"
-			{
-				"value"			"8 12 16 20 24"
-			}
 			"strike_damage"
 			{
-				"value"													"40 80 120 160 200"
-				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25%"
+				"value"													"50 90 130 170 210"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+50%"
 			}
 			"strike_move_slow_pct"
 			{
 				"value"				"25 30 35 40 45"
-				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+50"
 			}
 		}
 	}
@@ -6786,39 +6771,38 @@
 	"razor_eye_of_the_storm"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 75 70 65"
+		"AbilityCooldown"				"90 80 70 60"
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
 				"duration"
 				{
 					"value"			"30.0"
-					"special_bonus_unique_razor_401"    "+20"
+					"special_bonus_unique_razor_401"	"+20"
 				}
 				"strike_interval"
 				{
 					"value"		"0.7 0.6 0.5 0.4"
-					"LinkedSpecialBonus"	"special_bonus_unique_razor_2"
 				}
 				"damage"
 				{
-					"value"			"30.0 35.0 40.0 45.0"
-					"special_bonus_unique_razor_402"    "+60"
+					"value"			"60 75 90 105"
+					"special_bonus_unique_razor_402"	"+15"
 				}
 		}
 	}
 	"special_bonus_unique_razor_401"
-    {
-        "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    }
-    "special_bonus_unique_razor_402"
-    {
-        "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    }
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	}
+	"special_bonus_unique_razor_402"
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	}
 	//=================================================================================================================
 	// Ability: Riki 力丸/隐刺/SA
 	//=================================================================================================================
@@ -7162,7 +7146,7 @@
 	}
 	// 如影随形 鬼影重重单体
     "spectre_haunt_single"
-    {
+	{
 		"MaxLevel"						"4"
 		"AbilityCooldown"				"60 50 40 30"
         "AbilityManaCost"				"150 250 350 450"
@@ -7172,7 +7156,7 @@
 				"illusion_damage_outgoing"	"-60 -40 -20 0"
 				"tooltip_outgoing"	"60 80 100 120"
 		}
-    }
+	}
 	//=================================================================================================================
 	// Ability: Templar Assassin 圣堂刺客/TA
 	//=================================================================================================================
@@ -7698,8 +7682,8 @@
 	}
 	"special_bonus_unique_venomancer_201"
 	{
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	    "BaseClass"					"special_bonus_undefined"
 	}
 	// 剧毒蛇棒
@@ -10047,7 +10031,7 @@
 					"RequiresScepter"			"1"
 				}
 		}
-    }
+	}
 	// 下地狱再上来（先天）
 	"lion_to_hell_and_back"
 	{
