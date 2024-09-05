@@ -2650,20 +2650,20 @@
 		}
 	}
 	//=================================================================================================================
-	// Ability: Primal Beast 原始兽
+	// Ability: Primal Beast 原始兽 獸
 	//=================================================================================================================
 	// 突
 	"primal_beast_onslaught"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 20 18 16"
-		"AbilityManaCost"				"120 130 140 150 160"
+		"AbilityCooldown"				"24 22 20 18 16"
+		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 			"knockback_damage"
 			{
 				"value"					"75 170 265 360 455"
-				"special_bonus_unique_primal_beast_onslaught_damage"	"+125"
+				"special_bonus_unique_primal_beast_onslaught_damage"	"+145"	// 90
 			}
 			"stun_duration"				"0.8 1.0 1.2 1.4 1.6"
 		}
@@ -2674,11 +2674,13 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"base_damage"				"15 30 45 60 75"
+			"base_damage"
+			{
+				"value"							"30 45 60 75 90"	// +15
+			}
 			"AbilityCooldown"
 			{
 				"value"				"28 26 24 22 20"
-				"special_bonus_unique_primal_beast_trample_cooldown"	"-5"
 			}
 		}
 	}
@@ -2690,10 +2692,14 @@
 		{
 			"bonus_damage"				"5 10 15 20 25"
 			"bonus_damage_per_stack"	"10 20 30 40 50"
+			"stack_limit"
+			{
+				"value"						"10"	// 5
+			}
+			"move_slow_per_stack"		"5 6 7 8 9"
 			"roared_bonus_armor"
 			{
 				"value"					"2 3 4 5 6"
-				"special_bonus_unique_primal_beast_uproar_armor"	"+4"
 			}
 		}
 	}
@@ -2707,7 +2713,7 @@
 		{
 			"damage"
 			{
-				"value"						"150 210 270 330"
+				"value"						"150 210 270 330"	// 125 175 225
 			}
 			"bonus_damage_per_hit"				"20 40 60 80"
 		}
