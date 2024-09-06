@@ -8827,23 +8827,21 @@
 	"enigma_malefice"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"100 120 140 160 180"
-		"AbilityCooldown"				"18 16 14 12 10"
+		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityValues"
 		{
 			"stun_duration"
 			{
 				"value" 							"0.3 0.5 0.7 0.9 1.1"
-				"special_bonus_shard"		"+0.30"
 			}
 			"damage"
 			{
 				"value"								"55 70 85 100 115"
-				"special_bonus_unique_enigma_5"		"+35"
 			}
 		}
 	}
-	// 恶魔召唤
+	// 恶魔召唤 等级不变
 	"enigma_demonic_conversion"
 	{
 		"AbilityCooldown"				"60 57 54 51"
@@ -8853,15 +8851,13 @@
 			"spawn_count"
 			{
 				"value"			"2"
-				"special_bonus_unique_enigma"	"+1"
+				"special_bonus_unique_enigma"	"+2"
 			}
 			"eidelon_max_health"
 			{
 				"value"			"300 500 700 900"
-				"special_bonus_unique_enigma_7"	"+300"
 			}
 			"eidelon_base_damage"		"30 42 54 66"
-			"eidolon_damage_spread"			"4"
 			"eidolon_attack_range"		"500 550 600 650"
 		}
 	}
@@ -8870,7 +8866,7 @@
 	{
 		"AbilityValues"
 		{
-				"damage_threshold"				"700"	// 350
+				"damage_threshold"				"900"	// 350
 		}
 	}
 	// 午夜凋零
@@ -8878,36 +8874,54 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"45 40 35 30 25"
-		"AbilityManaCost"				"50 80 110 140 170"
+		"AbilityManaCost"				"65 90 115 140 165"
 		"AbilityValues"
 		{
 				"damage_percent"			"4 5 6 7 8"
 				"duration"
 				{
 					"value"			"10"
-					"special_bonus_unique_enigma_8"	"+5"
 				}
-				"base_damage"				"5 10 15 20 25"
+				"base_damage"				"10 20 30 40 50"	// x2
 		}
 	}
 	// 黑洞
 	"enigma_black_hole"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"130"
+		"AbilityCooldown"				"120"
 		"AbilityManaCost"				"300 400 500 600"
 		"AbilityValues"
 		{
 			"damage"
 			{
 				"value"		"100 150 200 250"
-				"special_bonus_unique_enigma_6"	"+50"
 			}
 			"scepter_pct_damage"
 			{
-				"value"					"3"
+				"value"					"3.5"
 				"RequiresScepter"		"1"
 			}
+		}
+	}
+	// 重力井 先天技能
+	"enigma_gravity_well"
+	{
+		"MaxLevel"						"5"
+
+		"AbilityValues"
+		{
+			"damage_reduction"	"9 11 13 15 17"
+		}
+	}
+	// 事件视界
+	"enigma_event_horizon"
+	{
+		"MaxLevel"						"5"
+
+		"AbilityValues"
+		{
+			"damage_reduction"	"9 11 13 15 17"
 		}
 	}
 	//=================================================================================================================
@@ -9006,7 +9020,7 @@
 			}
 			"AbilityCooldown"
 			{
-				"value"						"110"
+				"value"						"120"
 				"special_bonus_scepter"		"-10"
 			}
 		}
