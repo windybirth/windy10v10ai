@@ -7996,48 +7996,53 @@
 	// ---- Intelligence Heroes 智力英雄 ----
 	// -------------------------------------
 	//=================================================================================================================
-	// Ability: Ancient Apparition 远古冰魂/AA
+	// Ability: Ancient Apparition 远古冰魄 远古冰魂/AA
 	//=================================================================================================================
 	// 寒霜之足
 	"ancient_apparition_cold_feet"
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"700 800 900 1000 1100"
-		"AbilityCooldown"				"12 11 10 9 8"
+		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilityManaCost"				"110 115 120 125 130"
 		"AbilityValues"
 		{
-			"damage"
+			"frost_stacks"
 			{
-				"value"		"30 50 70 90 110"
-				"special_bonus_unique_ancient_apparition_8"	"+40"
+				"value"		"2 4 6 8 10"
 			}
-			"stun_duration"			"1.6 2.0 2.4 2.8 3.2"
+			"break_distance"
+			{
+				"value"		"725 750 775 800 825"
+			}
+			"stun_duration"			"1.9 2.2 2.5 2.8 3.1"
 		}
 	}
 	// 冰霜漩涡
 	"ancient_apparition_ice_vortex"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"40 60 80 100 120"
+		"AbilityDuration"				"6 8 10 12 14"
+		"AbilityManaCost"				"40 50 60 70 80"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
 				"value"					"8 7 6 5 4"
-				"special_bonus_unique_ancient_apparition_3"			"-1"
 			}
 			"drag_speed"	"40 50 60 70 80"
 			"movement_speed_pct"
 			{
 				"value"	"-16 -19 -22 -25 -28"
-				"special_bonus_unique_ancient_apparition_4"	"-5"
 			}
 			"spell_resist_pct"
 			{
 				"value"		"-16 -19 -22 -25 -28"
-				"special_bonus_unique_ancient_apparition_4"	"-5"
-				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"frost_stacks"	"1 2 3 4 5"
+			"vortex_duration"
+			{
+				"value"					"6 8 10 12 14"
 			}
 		}
 	}
@@ -8049,18 +8054,18 @@
 		{
 			"damage"
 			{
-				"value"				"40 80 120 160 200"
-				"special_bonus_unique_ancient_apparition_2"		"+80"
+				"value"				"40 80 120 160 200"	// 加强伤害，减少距离
 			}
+			"slow_duration"		"0.7 0.8 0.9 1 1.1"
 			"attack_range_bonus"
 			{
-				"value"				"60 90 120 150 180"
+				"value"				"60 90 120 150 180"	// 加强伤害，减少距离
 				"special_bonus_unique_ancient_apparition_7"		"+120"
 			}
 			"AbilityManaCost"
 			{
-				"value"										"30 40 50 60 70"
-				"special_bonus_scepter"						"-20%"
+				"value"										"45 50 55 60 65"
+				"special_bonus_scepter"						"-35%"	// 保持蓝耗
 			}
 			"AbilityCooldown"
 			{
@@ -8074,15 +8079,24 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"55 50 45 40"
-		"AbilityManaCost"				"175 250 325 400"
+		"AbilityManaCost"				"175 200 225 250"
 		"AbilityDamage"					"250 325 400 475"
 		"AbilityValues"
 		{
 			"dot_damage"			"20.0 30.0 40.0 50.0"
+			"frostbite_duration"
+			{
+				"value"		"10 11 12 13"
+			}
 			"kill_pct"
 			{
 				"value"				"10 11 12 13"
 				"special_bonus_unique_ancient_apparition_5"	"+3"
+			}
+			"cold_feet_aoe"
+			{
+				"special_bonus_facet_ancient_apparition_exposure"	"200 350 500 650"
+				"affected_by_aoe_increase"			"1"
 			}
 		}
 	}
