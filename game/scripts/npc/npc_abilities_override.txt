@@ -2079,13 +2079,15 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"13 12 11 10 9"
-		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
 			"shock_damage"
 			{
-				"value"			"75 150 225 300 375"
-				"special_bonus_unique_magnus"	"+125"
+				"value"			"90 160 230 300 370"
+			}
+			"basic_slow_duration"
+			{
+				"value"					"0.7 0.8 0.9 1.0 1.1"
 			}
 		}
 	}
@@ -2096,54 +2098,79 @@
 		"AbilityManaCost"				"45 55 65 75 85"
 		"AbilityValues"
 		{
+			"empower_duration"
+			{
+				"value"		"30 33 36 39 42"
+			}
 			"bonus_damage_pct"
 			{
-				"value"							"12 20 28 36 44"
-				"special_bonus_unique_magnus_2"	"+10"
+				"value"							"16 24 32 40 48"
 			}
 			"cleave_damage_pct"
 			{
-				"value"						"10 20 30 40 50"
-				"special_bonus_unique_magnus_2"	"+10"
+				"value"						"16 24 32 40 48"
 			}
-			"self_multiplier"		"100"
+			"self_multiplier"		"80"	// 50
 		}
 	}
 	// 巨角冲撞
 	"magnataur_skewer"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityValues"
 		{
+				"AbilityCooldown"
+				{
+					"value"					"22 20 18 16 14"
+				}
 				"range"
 				{
 					"value"			"900 975 1050 1125 1200"
-					"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
 				}
 				"slow_pct"
 				{
 					"value"			"20 30 40 50 60"
 				}
-				"skewer_damage"			"70 140 210 280 350"
-				"tool_attack_slow"				"10 20 30 40 50"
-				"damage_distance_pct"			"6 9 12 15 18"
+				"skewer_damage"			"80 160 240 320 400"
+				"tree_hit_damage"
+				{
+					"value"			"15 20 25 30 35"
+				}
+				"cliff_hit_damage"
+				{
+					"value"			"50 75 100 125 150"
+				}
 		}
 	}
 	// 两极反转
 	"magnataur_reverse_polarity"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80"
-		"AbilityManaCost"				"150 200 250 300"
+		"AbilityManaCost"				"150 225 300 375"
 		"AbilityValues"
 		{
-			"polarity_damage"				"75 150 225 300"
+			"AbilityCooldown"
+			{
+				"value"						"90"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"=60"
+			}
+			"polarity_damage"
+			{
+				"value"							"100 200 300 400"
+			}
 			"hero_stun_duration"
 			{
 				"value"					"2.5 3.0 3.5 4.0"
-				"special_bonus_unique_magnus_5"	"+0.8"
 			}
+		}
+	}
+	// 坚固核心
+	"magnataur_solid_core"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"slow_resistance"			"20 30 40 50 60"
 		}
 	}
 	//=================================================================================================================
