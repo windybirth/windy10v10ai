@@ -4637,34 +4637,36 @@
 	"bounty_hunter_shuriken_toss"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"475 525 575 625 675"
-		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityCastRange"				"425 475 525 575 625"
+		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
-				"value"					"150 200 250 325 400"
-				"special_bonus_unique_bounty_hunter_2"	"+50"
+				"value"					"100 170 240 310 380"
 			}
-			"cast_range"			"475 525 575 625 675"
+			"cast_range"			"425 475 525 575 625"
 		}
 	}
 	// 忍术
 	"bounty_hunter_jinada"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 8 6 4 2"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
 				"value"			"60 100 140 180 220"
-				"special_bonus_unique_bounty_hunter_4"	"+40"
+				"special_bonus_unique_bounty_hunter_4"	"+30"
 			}
 			"gold_steal"
 			{
-				"value"			"6 8 10 12 14"
-				"special_bonus_unique_bounty_hunter"		"+6"
+				"value"			"6 8 10 12 14"	// /2
+				"special_bonus_unique_bounty_hunter"		"+10"	// 50 电脑钱太好偷了，削弱
+			}
+			"AbilityCooldown"
+			{
+				"value"			"10 8 6 4 2"
 			}
 		}
 	}
@@ -4683,7 +4685,6 @@
 				"AbilityCooldown"
 				{
 					"value"		"18 17 16 15 14"
-					"special_bonus_shard" "-5"
 				}
 				"AbilityChargeRestoreTime"
 				{
@@ -4696,21 +4697,29 @@
 	"bounty_hunter_track"
 	{
 		"MaxLevel" "4"
+		"AbilityCooldown"				"6 5 4 3"
 		"AbilityValues"
 		{
-				"target_crit_multiplier"	"170 200 230 260"		// 140 170 200 230
+				"target_damage_amp"	"6 12 18 24"
 				"bonus_gold_self"
 				{
-					"value"		"200 250 300 350"
-					"special_bonus_unique_bounty_hunter_3"	"+90"
+					"value"		"130 225 320 415"
 				}
 				"bonus_gold"
 				{
-					"value"		"100 150 200 250"
-					"special_bonus_unique_bounty_hunter_3"	"+90"
+					"value"		"80 160 240 320"	// x2
 				}
+				"gold_steal"			"0.3 0.4 0.5 0.6"
 				"bonus_move_speed_pct"	"16 20 24 28"
-				"toss_crit_multiplier"	"200 230 260 290"
+		}
+	}
+	// 妙手空空
+	"bounty_hunter_cutpurse"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"gold_steal"					"4 8 12 16 20"
 		}
 	}
 	//=================================================================================================================
@@ -8921,7 +8930,7 @@
 
 		"AbilityValues"
 		{
-			"damage_reduction"	"9 11 13 15 17"
+			"speed_bonus"	"9 11 13 15 17"
 		}
 	}
 	//=================================================================================================================
