@@ -2645,12 +2645,5 @@
 		"DOTA_Tooltip_ability_item_disperser_chaos_bonus_intellect"			"+$int"
 		"DOTA_Tooltip_ability_item_disperser_chaos_bonus_damage"				"+$damage"
 
-		// item_disperser_chaos_1 混沌·散魂剑（中立）
-		"DOTA_Tooltip_ability_item_disperser_chaos_1"				"<font color='#FF4500'>Chaotic Disperser</font> (Neutral)"
-		"DOTA_Tooltip_ability_item_disperser_chaos_1_Description"				"<h1>Active: Suppress</h1> Affects all units in a %radius% AoE around the target. All enemies around the target are slowed for %enemy_effect_duration% seconds.<br><br> All allies around the target receive a basic dispel, increase their movement speed, and are unslowable for %ally_effect_duration% seconds.<br><br>Both movement speed reduction and increase start at %phase_movement_speed%%% and gradually decrease to 0% over the course of the buff duration.<br><br>Range: %abilitycastrange%<br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>\n\n<h1>Passive: Manabreak</h1>Each attack burns %feedback_mana_burn% mana from the target, and deals %damage_per_burn% physical damage per burned mana. <br><br>Burns %feedback_mana_burn_illusion_melee% mana per attack from melee illusions and %feedback_mana_burn_illusion_ranged% mana per attack from ranged illusions."
-		"DOTA_Tooltip_ability_item_disperser_chaos_1_bonus_agility"				"+$agi"
-		"DOTA_Tooltip_ability_item_disperser_chaos_1_bonus_intellect"			"+$int"
-		"DOTA_Tooltip_ability_item_disperser_chaos_1_bonus_damage"				"+$damage"
-
 	}
 }

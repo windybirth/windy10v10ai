@@ -155,7 +155,7 @@
 		"item"		"item_havoc_hammer_dark"
 		"item"		"item_apex_light"
 		"item"		"item_apex_dark"
-		"item"			"item_disperser_chaos"
+		"item"		"item_disperser_chaos"			// 混沌散魂剑
 	}
 	// 神秘商店
 	"secretshop"
