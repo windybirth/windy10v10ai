@@ -3866,12 +3866,11 @@
 				"radius"
 				{
 					"value"			"325 340 355 370 385"
-					"affected_by_aoe_increase"	"1"
 				}
 				"avalanche_damage"
 				{
-					"value"				"160 240 320 400 480"	// 80 160 240 320
-					"special_bonus_unique_tiny"			"+160" // 80 加强法系
+					"value"				"160 240 320 400 480"	// 80 160 240 320 加强法系
+					"special_bonus_unique_tiny"			"+120"	// 70
 				}
 		}
 	}
@@ -3886,29 +3885,27 @@
 		{
 			"toss_damage"
 			{
-				"value"				"160 240 320 400 480"	// 80 160 240 320
-				"CalculateSpellDamageTooltip"	"1"
+				"value"				"160 240 320 400 480"	// 80 160 240 320 加强法系
 			}
 			"radius"
 			{
 				"value"		"275"
 				"special_bonus_facet_tiny_crash_landing"				"=700" // =450 命石1
-				"affected_by_aoe_increase"	"1"
 			}
 			"land_movement_slow"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"30 40 50 60 70" // x2 命石1
 			}
 			"land_attack_slow"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"20 40 60 80 100" // x2 命石1
 			}
 			"bonus_land_damage_pct"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"50 60 70 80 90" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
 			}
 		}
 	}
@@ -3922,13 +3919,12 @@
 			"bonus_damage"
 			{
 				"value"							"10 20 30 40 50"
-				"special_bonus_unique_tiny_7"		"+70"
 			}
 			"bonus_damage_buildings"
 			{
 				"value"							"30 40 50 60 70"
 			}
-			"splash_pct"				"55 70 85 100 115"
+			"splash_pct"				"40 55 70 85 100"
 		}
 	}
 	// 树木连掷
@@ -3949,21 +3945,21 @@
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-			"bonus_armor"				"10 17 24 31"
+				"bonus_armor"				"10 17 24 31"
 				"bonus_damage"
 				{
-					"value"					"120 180 240 300"
+					"value"					"60 120 180 240"
 				}
 				"attack_speed_reduction"
 				{
-					"value"		"-40" // 30
-					"special_bonus_unique_tiny_6" "+20"// 8 完全体数值不变，破坏前期物理小小节奏，变相加强法系
+					"value"		"-40"	// 30
+					"special_bonus_unique_tiny_6" "+20"	// 8 完全体数值不变，破坏前期物理小小节奏，变相加强法系
 				}
 				"toss_bonus_damage"
 				{
-					"value"					"100 250 400 550"
+					"value"					"50 175 300 425"
 				}
-				"move_speed"		"20 40 60 80"	// x2
+				"move_speed"		"10 20 30 40"
 		}
 	}
 	// 崎岖外表（先天随大招升级）
@@ -11877,12 +11873,12 @@
 	"winter_wyvern_arctic_burn"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"38 32 26 20 14"
+		"AbilityCooldown"				"28 26 24 22 20"
 		"AbilityValues"
 		{
 				"duration"				"7 8 9 10 11"
 				"attack_range_bonus"	"275 300 325 350 375"
-				"percent_damage"		"6 7 8 9 10"	// 4 6 8 10 百分比伤害
+				"percent_damage"		"4 6 8 10 12"
 				"move_slow"
 				{
 					"value"			"16 24 32 40 48"
@@ -11901,7 +11897,7 @@
 			"damage"
 			{
 				"value"		"80 160 240 320 400"
-				"special_bonus_unique_winter_wyvern_7" "+100"
+				"special_bonus_unique_winter_wyvern_7" "+150"
 			}
 		}
 	}
@@ -11915,7 +11911,7 @@
 		{
 				"heal_additive"
 				{
-					"value"		"40 45 50 55 60"
+					"value"		"40 50 60 70 80"	// 40 45 50 55
 				"special_bonus_unique_winter_wyvern_5" "+40"	// 25
 				}
 				"heal_percentage"	"2.25 3 3.75 4.5 5.25"
@@ -11926,7 +11922,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"90 85 80 75"
-		"AbilityManaCost"				"200 225 250 275"
+		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
 				"damage_reduction"	"50"	// 100 不会收到敌人伤害 改成伤害减半
@@ -11934,7 +11930,7 @@
 				"max_duration"	"4 5 6 7"
 		}
 	}
-	// 飞龙视野 命石1
+	// 飞龙视野 命石
 	"winter_wyvern_dragon_sight"
 	{
 		"MaxLevel"						"5"
