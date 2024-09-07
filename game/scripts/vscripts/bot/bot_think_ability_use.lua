@@ -258,10 +258,6 @@ function BotAbilityThink:ThinkUseAbility_Kunkka(hHero)
 	if BotAbilityThink:CastAbilityOnEnemyTarget(hHero, hAbility3) then
 		return true
 	end
-	-- kunkka_torrent_storm
-	if BotAbilityThink:CastAbilityOnEnemyPostion(hHero, hAbility4) then
-		return true
-	end
 	if BotAbilityThink:CastAbilityOnEnemyPostion(hHero, hAbility5) then
 		return true
 	end
