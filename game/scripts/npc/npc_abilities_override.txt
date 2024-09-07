@@ -9061,13 +9061,18 @@
 		{
 			"damage"
 			{
-				"value"				"100 140 180 220"
-				"special_bonus_unique_furion_5"			"+20"
+				"value"				"50 70 90 110"	// 伤害折半
+				"special_bonus_unique_furion_5"			"+15"
 			}
 			"AbilityCooldown"
 			{
 				"value"						"120"
 				"special_bonus_scepter"		"-10"
+			}
+			"scepter_max_entangle_duration"
+			{
+				"value"					"5.0"	// 3.0
+				"RequiresScepter"		"1"
 			}
 		}
 	}
