@@ -9676,13 +9676,12 @@
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"80 100 120 140 160"
-		"AbilityDamage"					"120 180 240 300 360"
+		"AbilityDamage"					"115 170 225 280 335"
 		"AbilityValues"
 		{
 				"radius"
 				{
 					"value"	"135 160 185 210 235"
-					"affected_by_aoe_increase"	"1"
 				}
 		}
 	}
@@ -9695,7 +9694,7 @@
 		{
 				"num_explosions"
 				{
-					"value"		"60"	// 40
+					"value"		"50"	// 40
 				"special_bonus_unique_leshrac_1" "+30"	// 20
 				}
 				"damage"
@@ -9740,7 +9739,7 @@
 				"damage"
 				{
 					"value"			"80 135 180 225"
-				"special_bonus_unique_leshrac_3" "+55"	// 30
+				"special_bonus_unique_leshrac_3" "+45"	// 30
 				}
 		}
 	}
