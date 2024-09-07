@@ -6207,6 +6207,7 @@
 		"Maxlevel"						"5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityCooldown"				"10 9 8 7 6"
 		"AbilityValues"
 		{
 			"damage"
@@ -6218,10 +6219,6 @@
 			{
 				"value"						"450" // x1.5
 				"affected_by_aoe_increase"	"1"
-			}
-			"status_resistance"
-			{
-				"value"						"-15 -30 -45 -60 -75" // FIXME 暂时参考光暗强度，实战强了的话再砍
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -9576,7 +9573,7 @@
 			"duration"
 			{
 				"value"				"60.0"
-				"special_bonus_unique_keeper_of_the_light_11"	"+15"
+				"special_bonus_unique_keeper_of_the_light_11"	"+30"
 			}
 			"movement_speed"			"15 20 25 30"
 			"cast_range"			"125 250 375 500"
@@ -11157,7 +11154,8 @@
 		"AbilityCooldown"				"4.0 3.5 3.0 2.5 2.0"
 		"AbilityValues"
 		{
-				"bolt_damage"			"75 100 125 150 175"
+				"bolt_speed"			"700"	// 500
+				"bolt_damage"			"100 125 150 175 200"
 		}
 	}
 	// 震荡光弹
@@ -11182,8 +11180,6 @@
 				"resist_debuff"
 				{
 					"value"		"-20 -25 -30 -35 -40"
-					"special_bonus_unique_skywrath_3"	"-10"
-					"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
 				}
 				"seal_duration"			"3.0 4.0 5.0 6.0 7.0"
 		}
@@ -11197,6 +11193,11 @@
 
 		"AbilityValues"
 		{
+				"radius"
+				{
+					"value"	"200"	// 170
+					"affected_by_aoe_increase"	"1"
+				}
 				"damage"
 				{
 					"value"			"800 1200 1600 2000"
@@ -11215,6 +11216,16 @@
 				"value"		"20 30 40 50 60"
 				"special_bonus_unique_skywrath_arcane_bolt_lifesteal"			"+30"// 15
 			}
+		}
+	}
+	// 天裔之盾
+	"skywrath_mage_shield_of_the_scion"
+	{
+		"AbilityValues"
+		{
+			"damage_barrier_base"		"50"
+			"damage_barrier_per_level"	"2"
+			"barrier_duration"			"15"
 		}
 	}
 	//=================================================================================================================
