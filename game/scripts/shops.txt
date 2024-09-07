@@ -97,8 +97,8 @@
 		"item"	"item_force_field_dark"
 		"item"	"item_ballista_light"
 		"item"	"item_ballista_dark"
-		"item"	"item_armlet_light"
-		"item"	"item_armlet_dark"
+		"item"	"item_armlet_light"						// 圣光臂章
+		"item"	"item_armlet_dark"						// 暗影臂章
 		"item"	"item_guardian_greaves_light"
 		"item"	"item_guardian_greaves_dark"
 	}
