@@ -216,7 +216,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"								"80 70 60 50"
+				"value"								"90 80 70 60"
 			}
 			"hp_threshold"							"600 900 1200 1500"
 			"duration"								"3.5 4.0 4.5 5.0"
