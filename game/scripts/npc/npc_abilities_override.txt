@@ -3652,7 +3652,6 @@
 				"shard_damage"
 				{
 					"value"					"150 225 300 375 450"	// 75 150 225 300 375
-					"CalculateSpellDamageTooltip"	"1"
 				}
 				"shard_duration"			"4 5 6 7 8"
 		}
@@ -3686,7 +3685,6 @@
 				"value"						"20 45 70 95 120"
 				"special_bonus_unique_tusk_3"		"+30" // 25
 			}
-			"slow_duration"				"1.0" // 0.5
 			"radius"
 			{
 				"value"	"450" // 350
@@ -3697,14 +3695,12 @@
 	"tusk_drinking_buddies"
 	{
 		"Maxlevel"						"5"
-		"AbilityCooldown"				"24 21 18 15 12"
+		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityValues"
 		{
-			"buff_duration"				"10.0" // 6
-
 			"attackdamage_bonus"
 			{
-				"value"								"30 60 90 120 150" // 20 45 70 95
+				"value"								"20 45 70 95 120"
 				"special_bonus_unique_tusk_3"		"+30" // 25
 			}
 		}
@@ -3745,9 +3741,18 @@
 		{
 			"value"
 			{
-				"value" "18" // 12
+				"value" "15" // 12
 				"ad_linked_abilities" "tusk_walrus_punch"
 			}
+		}
+	}
+	// 海象飞踢
+	"tusk_walrus_kick"
+	{
+		"AbilityCooldown"				"18"	// 12
+		"AbilityValues"
+		{
+				"push_length"				"1000"	// 1400
 		}
 	}
 	// 寒冰符印
