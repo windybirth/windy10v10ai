@@ -7083,27 +7083,27 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"slow_movement_speed"
-				{
-					"value"		"-16 -20 -24 -30 -36"
-					"special_bonus_facet_sniper_scattershot"	"=-30 =-40 =-50 =-60 =-70"
-					"special_bonus_unique_sniper_5" "-10"
-				}
-				"radius"
-				{
-					"value"		"400 425 450 475 500"
-					"affected_by_aoe_increase"	"1"
-				}
-				"shrapnel_damage"
-				{
-					"value"			"40 55 70 85 100"
-					"special_bonus_facet_sniper_scattershot"	"x4"
-				}
-				"duration"
-				{
-					"value"		"10.0"
-					"special_bonus_facet_sniper_scattershot"	"=3"	// 1
-				}
+			"slow_movement_speed"
+			{
+				"value"		"-16 -20 -24 -30 -36"
+				"special_bonus_facet_sniper_scattershot"	"=-30 =-40 =-50 =-60 =-70"
+				"special_bonus_unique_sniper_5" "-10"
+			}
+			"radius"
+			{
+				"value"		"400 425 450 475 500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"shrapnel_damage"
+			{
+				"value"			"40 55 70 85 100"
+				"special_bonus_facet_sniper_scattershot"	"x4"
+			}
+			"duration"
+			{
+				"value"		"10.0"
+				"special_bonus_facet_sniper_scattershot"	"=3"	// 1
+			}
 		}
 	}
 	// 爆头
@@ -7144,7 +7144,7 @@
 		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"bonus_range"				"80 160 240 320 400"
+			"bonus_range"				"60 160 260 360 460"
 		}
 	}
 	// 暗杀
@@ -7748,24 +7748,19 @@
 	// 毒刺（先天可升级）
 	"venomancer_poison_sting"
 	{
-		"MaxLevel" "6"
+		"MaxLevel"					"5"
 		"AbilityValues"
 		{
-			"duration"				"4"
+			"duration"				"6 9 12 15 18"
 			"damage"
 			{
-			    "value" "15 30 45 60 75 90"
-			    "special_bonus_unique_venomancer_201"		"+30"
+				"value"				"16 32 48 64 80"
+				"special_bonus_unique_venomancer_201"		"+30"
 			}
 			"movement_speed"
 			{
-				"value"			"-10 -14 -18 -22 -26 -30"
+				"value"			"-8 -10 -12 -14 -16"
 				"special_bonus_unique_venomancer_2"		"-10"
-			}
-			"hp_regen_reduction"
-			{
-				"value"				"0"
-				"special_bonus_unique_venomancer_poisonsting_regen_reduction"	"+50"
 			}
 		}
 	}
@@ -7773,7 +7768,7 @@
 	{
 		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"					"special_bonus_undefined"
+		"BaseClass"					"special_bonus_undefined"
 	}
 	// 剧毒蛇棒
 	"venomancer_plague_ward"
@@ -7802,6 +7797,10 @@
 			{
 				"value"							"300 450 600 750 900"
 				"special_bonus_unique_venomancer" "x2.5"
+			}
+			"threshold_max_hp_pct"
+			{
+				"value"							"1 1.5 2 2.5 3"
 			}
 		}
 	}
@@ -10408,7 +10407,7 @@
 	// 气运之末
 	"oracle_fortunes_end"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"						"5"
 		"AbilityCooldown"				"14 12 10 8 6"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
@@ -10448,8 +10447,8 @@
 	// 虚妄之诺
 	"oracle_false_promise"
 	{
-		"LinkedAbility"                 "chen_hand_of_god"
-		"AbilityDraftPreAbility"        "chen_hand_of_god"
+		"LinkedAbility"					"chen_hand_of_god"
+		"AbilityDraftPreAbility"		"chen_hand_of_god"
 		"MaxLevel" "4"
 		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityManaCost"				"100 150 200 250"
@@ -10479,20 +10478,20 @@
 	"chen_hand_of_god"
 	{
 		"MaxLevel" "4"
-		"LinkedAbility"                 "oracle_false_promise"
-		"AbilityDraftPreAbility"        "oracle_false_promise"
-		"AbilityCooldown"				"90 80 70 60"// 150 130 110 同步cd与完全体虚妄相同
+		"LinkedAbility"					"oracle_false_promise"
+		"AbilityDraftPreAbility"		"oracle_false_promise"
+		"AbilityCooldown"				"90 80 70 60"				// 150 130 110 同步cd与完全体虚妄相同
 		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
 			"heal_amount"
 			{
-				"value"							"600 1000 1400 1800"// （x2）
+				"value"							"300 500 700 900"	// +100
 			}
 			"hot_duration"	"8"
 			"heal_per_second"
 			{
-				"value"							"40 60 80 100"// (x2)
+				"value"							"40 60 80 100"			// x2
 			}
 			"does_purge"
 			{
