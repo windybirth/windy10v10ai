@@ -1145,6 +1145,7 @@
 			"damage"
 			{
 				"value"								"30 50 70 90"
+				"special_bonus_facet_doom_bringer_impending_doom"	"=30 =45 =60 =75"
 			}
 			"AbilityCooldown"
 			{
@@ -6664,7 +6665,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityManaCost"				"100 150 200 250"
-		"AbilityDamage"					"150 300 450 600"	// x2
+		"AbilityDamage"					"100 200 300 400"	// 75 150 225
 		"AbilityValues"
 		{
 				"AbilityCooldown"
@@ -8377,48 +8378,50 @@
 	// 冰霜新星
 	"crystal_maiden_crystal_nova"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"
-		"MaxLevel" "5"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"							"5"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
 				"value"										"12 11 10 9 8"
-				"special_bonus_unique_crystal_maiden_5"		"-4"
 			}
 			"AbilityManaCost"				"115 135 155 175 195"
 			"movespeed_slow"				"-20 -30 -40 -50 -60"
 			"attackspeed_slow"				"-30 -45 -60 -75 -90"
 			"nova_damage"
 			{
-				"value"										"110 160 210 260 310"
-				"special_bonus_unique_crystal_maiden_2"		"+300"
+				"value"										"120 180 240 300 360"	// +10
 			}
 		}
 	}
 	// 冰封禁制
 	"crystal_maiden_frostbite"
 	{
-		"LinkedAbility"                 "visage_gravekeepers_cloak"
-		"AbilityDraftPreAbility"        "visage_gravekeepers_cloak"
+		"LinkedAbility"					"visage_gravekeepers_cloak"
+		"AbilityDraftPreAbility"		"visage_gravekeepers_cloak"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
+			"AbilityCastRange"
+			{
+				"value"								"700"
+				"special_bonus_unique_crystal_maiden_frostbite_castrange" 		"+200"
+			}
 			"AbilityCooldown"				"9 8 7 6 5"
 			"AbilityManaCost"				"125 135 145 155 165"
 			"duration"
 			{
 				"value"										"1.5 2 2.5 3 3.5"
-				"special_bonus_unique_crystal_maiden_1"		"+1.0"
 			}
 		}
 	}
 	// 陵卫斗篷（来自死灵龙）
 	"visage_gravekeepers_cloak"
 	{
-		"LinkedAbility"                 "crystal_maiden_frostbite"
-		"AbilityDraftPreAbility"        "crystal_maiden_frostbite"
-		"MaxLevel"                                  "5"
+		"LinkedAbility"					"crystal_maiden_frostbite"
+		"AbilityDraftPreAbility"		"crystal_maiden_frostbite"
+		"MaxLevel"						"5"
 		"AbilityValues"
 		{
 			"max_layers"
@@ -8470,7 +8473,7 @@
 	// 极寒领域
 	"crystal_maiden_freezing_field"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
@@ -8478,8 +8481,8 @@
 			"AbilityManaCost"				"200 400 600 800"
 			"damage"
 			{
-				"value"										"140 260 380 500"// 105 170 250 330（x1.5）
-				"special_bonus_unique_crystal_maiden_3"		"+100"// （x2）
+				"value"										"140 260 380 500"	// 105 170 250 330（x1.5）
+				"special_bonus_unique_crystal_maiden_3"		"+100"				// （x2）
 			}
 			"shard_self_movement_speed_slow_pct"
 			{
@@ -9327,7 +9330,7 @@
 			}
 			"base_damage"
 			{
-				"value"							"150"	// 50
+				"value"							"200"	// 50
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -9374,6 +9377,12 @@
 			"AbilityCooldown"
 			{
 				"value"					"25"	// 50
+			}
+			"land_time"					"1.0"	// 1.3
+			"main_damage"
+			{
+				"value"					"60 90 120 150 180 210 240 270"	// +5
+				"levelkey"				"exortlevel"
 			}
 		}
 	}
@@ -10170,8 +10179,8 @@
 		{
 				"heal"
 				{
-					"value"		"60 90 120 150 180"
-				"special_bonus_unique_necrophos_4" "+60"
+					"value"		"60 90 120 150 180"		// +5
+					"special_bonus_unique_necrophos_4" "+60"	// 50
 				}
 		}
 	}
@@ -10183,7 +10192,7 @@
 		{
 			"aura_damage"
 			{
-				"value"		"1.2 1.5 1.8 2.1 2.4"
+				"value"		"1.2 1.6 2.0 2.4 2.8"
 			}
 		}
 	}
@@ -10228,7 +10237,7 @@
 		"AbilityManaCost"				"250 375 500 625"
 		"AbilityValues"
 		{
-			"damage_per_health"			"0.8 0.85 0.9 0.95"
+			"damage_per_health"			"0.7 0.8 0.9 1.0"
 			"hp_per_kill"				"4 8 12 16"
 			"mana_per_kill"				"2 4 6 8"
 		}
@@ -10246,7 +10255,6 @@
 			"mana_pool_damage_pct"
 			{
 				"value"										"9 10 11 12 13"
-				"special_bonus_unique_outworld_devourer"	"+2"
 			}
 			"mana_cost_percentage"							"30"	// 20
 		}
