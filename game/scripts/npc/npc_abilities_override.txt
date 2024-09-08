@@ -5309,7 +5309,7 @@
 			"bonus_range"			"75 150 225 300 375"
 			"acorn_shot_damage"
 			{
-				"value"		"40 80 120 160 200"
+				"value"		"50 100 150 200 250"	// +10
 			}
 			"base_damage_pct"
 			{
