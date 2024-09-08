@@ -5303,19 +5303,17 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"18 16 14 12 10"
-		"AbilityManaCost"				"75 85 95 105 115"
+		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
 			"bonus_range"			"75 150 225 300 375"
 			"acorn_shot_damage"
 			{
-				"value"		"55 90 125 160 195"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"		"40 80 120 160 200"
 			}
 			"base_damage_pct"
 			{
 				"value"		"100"
-				"CalculateSpellDamageTooltip"	"0"
 			}
 			"bounce_count"
 			{
@@ -5342,12 +5340,15 @@
 		"AbilityManaCost"				"90 100 110 120 130"
 		"AbilityValues"
 		{
+			"trap_radius"
+			{
+				"value"		"280"	// 265
+			}
 			"debuff_duration"		"1.4 1.6 1.8 2.0 2.2"
 			"total_damage"
 			{
 				"value"							"90 180 270 360 450"
-				"CalculateSpellDamageTooltip"	"1"
-				"LinkedSpecialBonus"			"special_bonus_unique_hoodwink_bushwhack_damage"
+				"special_bonus_unique_hoodwink_bushwhack_damage" "+150"	// 60
 			}
 		}
 	}
@@ -5366,12 +5367,12 @@
 			"cast_range"
 			{
 				"value"							"0"
-				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+				"special_bonus_facet_hoodwink_hunter"	"100 150 200 250 300"
 			}
 			"attack_range"
 			{
 				"value"							"0"
-				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+				"special_bonus_facet_hoodwink_hunter"	"100 150 200 250 300"
 			}
 		}
 	}
@@ -5382,10 +5383,14 @@
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
+			"arrow_width"
+			{
+				"value"	"150"	// 125
+			}
 			"max_damage"
 			{
-				"value"				"550 900 1250 1600"
-				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+250"	// 125
+				"value"				"600 1000 1400 1800"	// 550 900 1250
+				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+400"	// 125
 			}
 			"slow_move_pct"				"30 40 50 60"
 		}
@@ -5396,6 +5401,10 @@
  		"MaxLevel"						"5"
  		"AbilityValues"
  		{
+ 			"radius"
+			{
+				"value"		"350"		// 275
+			}
 			"redirect_chance"	"15 20 25 30 35"
  		}
 	}
@@ -9501,7 +9510,11 @@
 			"damage"
 			{
 				"value"								"100 150 200 250"
-				"special_bonus_unique_jakiro_7"		"+30"
+			}
+			"duration"
+			{
+				"value"							"8.0"	// 10
+				"special_bonus_scepter"			"+4.0"
 			}
 			"linger_duration"			"1"	// 2
 		}
@@ -11625,8 +11638,8 @@
 	"warlock_fatal_bonds"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"34 30 26 22 18"
-		"AbilityManaCost"				"110 120 130 140 150"
+		"AbilityCooldown"				"30 28 26 24 22"
+		"AbilityManaCost"				"100 120 140 160 180"
 		"AbilityValues"
 		{
 			"damage_share_percentage"
@@ -11634,6 +11647,7 @@
 				"value"						"8 10 12 14 16"
 				"special_bonus_unique_warlock_5" "+4"
 			}
+			"duration"						"15"	// 18
 		}
 	}
 	// 暗言术
