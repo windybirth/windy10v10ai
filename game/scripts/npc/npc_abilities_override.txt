@@ -1023,7 +1023,7 @@
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
-			"hammer_damage"			"100 160 220 280 340"	// x2
+			"hammer_damage"			"60 100 140 180 220"	// +10
 			"move_slow"
 			{
 				"value"							"24 28 32 36 40"
@@ -1044,7 +1044,7 @@
 			"heal_pct"					"35 40 45 50 55"
 			"bonus_damage"
 			{
-				"value"		"150 175 200 225 250"
+				"value"		"125 150 175 200 225"
 			}
 		}
 	}
@@ -5326,7 +5326,7 @@
 				}
 				"damage"
 				{
-					"value"					"300 500 700 900"	// 250 400 550 700
+					"value"					"300 500 700 900"	// 250 425 600
 				}
 		}
 	}
@@ -7586,12 +7586,10 @@
 				"bonus_reset_time"
 				{
 					"value"						"20"
-					"special_bonus_unique_ursa_4" "+20"
 				}
-				"bonus_reset_time_roshan"		"15"
 				"damage_per_stack"
 				{
-					"value"					"15 25 35 45 55"
+					"value"					"13 21 29 37 45"
 				}
 		}
 	}
@@ -7602,14 +7600,14 @@
 		"AbilityCooldown"				"60 50 40 30"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"					"60 50 40 30"
+				"special_bonus_scepter"	"=30 =26 =22 =18"
+			}
 			"duration"
 			{
-				"value"							"4 4.33 4.67 5"
-			}
-			"cooldown_scepter"
-			{
-				"value"						"30 26 22 18"
-				"RequiresScepter"			"1"
+				"value"							"3.75 4.0 4.25 4.5"	// -0.5
 			}
 			// 命石1 伤害增加
 			"damage_increase"
@@ -7624,12 +7622,13 @@
 			}
 		}
 	}
-	// 命石2 负面效果延长
+	// 熊心勃勃 命石2 负面效果延长
 	"ursa_bear_down"
 	{
+		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"debuff_amp"				"50" // 20
+			"debuff_amp"				"14 16 18 20 22"
 		}
 	}
 	//=================================================================================================================
@@ -10721,7 +10720,6 @@
 		"LinkedAbility"					"queenofpain_shadow_strike"
 		"AbilityDraftPreAbility"		"queenofpain_shadow_strike"
 		"MaxLevel"						"5"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 暂时无视bkb
 		"AbilityCastRange"				"500 550 600 650 700" // 与镖同步
 		"AbilityCooldown"				"30"
 		"AbilityManaCost"				"60 90 120 150 180"
