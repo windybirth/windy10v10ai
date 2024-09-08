@@ -1304,7 +1304,7 @@
 	// 余震
 	"earthshaker_aftershock"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"						"5"
 		"AbilityDuration"				"0.8 1.0 1.2 1.4 1.6"
 		"AbilityValues"
 		{
@@ -1984,8 +1984,20 @@
 	// 感染
 	"life_stealer_infest"
 	{
-		"MaxLevel" "3"
-		"RequiredLevel"					"15"
+		"RequiredLevel"					"18"
+		"AbilityValues"
+		{
+			"bonus_movement_speed"
+			{
+				"value"				 "10 15 20"
+				"special_bonus_unique_lifestealer_infest_target_bonus"			"+10"
+			}
+			"bonus_health"
+			{
+				"value"								"500 1000 1500"
+				"special_bonus_unique_lifestealer_infest_target_bonus"			"+10%"
+			}
+		}
 	}
 	//=================================================================================================================
 	// Ability: Lycan 狼人
@@ -6486,7 +6498,7 @@
 		"MaxLevel" "5"
 		"LinkedAbility"					"nyx_assassin_jolt"
 		"AbilityDraftPreAbility"		"nyx_assassin_jolt"
-		"AbilityCooldown"				"18 15 12 9 6"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"70 90 110 130 150"
 		"AbilityValues"
 		{
@@ -6496,7 +6508,6 @@
 				"special_bonus_unique_nyx_5"			"+0.5"
 			}
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 神智爆裂
 	"nyx_assassin_jolt"
@@ -6554,7 +6565,6 @@
 			"bonus_damage"
 			{
 				"value"					"300 500 700 900"	// 300 400 500
-				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
 	}
@@ -6580,14 +6590,6 @@
 			{
 				"value"		"600"	// 400
 			}
-		}
-	}
-	// 法力燃烧 天命1
-	"nyx_assassin_innate_mana_burn"
-	{
-		"AbilityValues"
-		{
-			"mana_pct"		"15 20 25 30 35"
 		}
 	}
 	//=================================================================================================================
@@ -7173,18 +7175,16 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"20 19 18 17 16"
-		"AbilityManaCost"				"130 140 150 160 170"
+		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
 				"damage"
 				{
-					"value"			"120 180 240 300 360"
-					"special_bonus_unique_spectre_6" "+120" // 80
+					"value"			"80 140 200 260 320"	// +10
 				}
 				"bonus_movespeed"
 				{
 					"value"			"14 16 18 20 22"
-					"special_bonus_unique_spectre_3" "+14" // 12
 				}
 		}
 	}
@@ -7196,13 +7196,11 @@
 		{
 			"bonus_damage"
 			{
-				"value"									"30 45 60 75 90"
-				"special_bonus_unique_spectre_2"		"+15"
+				"value"									"25 40 55 70 85"
 			}
 			"radius"
 			{
 				"value"				"200"
-				"special_bonus_unique_spectre_desolate_radius"			"-100"
 			}
 			"only_creep_allies_damage_pct"
 			{
@@ -7220,7 +7218,7 @@
 			"damage_reflection_pct"
 			{
 				"value"		"8 11 14 17 20"
-				"special_bonus_unique_spectre_5"		"+5"
+				"special_bonus_unique_spectre_5"		"+3"
 			}
 		}
 	}
@@ -7235,11 +7233,11 @@
 		}
 	}
 	// 如影随形 鬼影重重单体
-    "spectre_haunt_single"
+	"spectre_haunt_single"
 	{
 		"MaxLevel"						"4"
 		"AbilityCooldown"				"60 50 40 30"
-        "AbilityManaCost"				"150 250 350 450"
+		"AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 				"duration"					"5.0"
@@ -9147,32 +9145,26 @@
 				"damage"
 				{
 					"value"		"100 180 260 340 420" // 100 160 220 280
-				"special_bonus_unique_grimstroke_2" "+100%"	// 75%
+					"special_bonus_unique_grimstroke_2" "+100%"	// 75%
 				}
 				"bonus_damage_per_target"
 				{
 					"value"	"40 50 60 70 80" // +20
-					"special_bonus_facet_grimstroke_fine_art"	"+0 +5 +10 +15 +20"
-				"special_bonus_unique_grimstroke_2" "+100%"	// 75%
+					"special_bonus_facet_grimstroke_fine_art"	"+0 +10 +20 +30 +40"
+					"special_bonus_unique_grimstroke_2" "+100%"	// 75%
 				}
 				"movement_slow_pct"		"50 60 70 80 90"
 				"AbilityCastRange"
 				{
-					"value"									"1400"
-					"special_bonus_unique_grimstroke_3"		"+100%"
-				}
-				"projectile_speed"
-				{
-					"value"						"2000"
-					"special_bonus_unique_grimstroke_3"		"+100%"
+					"value"									"1800"		// 1400
 				}
 		}
 	}
 	// 幻影之拥
 	"grimstroke_ink_creature"
 	{
-		"LinkedAbility"                 "visage_soul_assumption"
-		"AbilityDraftPreAbility"        "visage_soul_assumption"
+		"LinkedAbility"					"visage_soul_assumption"
+		"AbilityDraftPreAbility"		"visage_soul_assumption"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"26 24 22 20 18"
@@ -9197,10 +9189,10 @@
 	// 灵魂超度（来自维萨吉）
 	"visage_soul_assumption"
 	{
-		"LinkedAbility"                 "grimstroke_ink_creature"
-		"AbilityDraftPreAbility"        "grimstroke_ink_creature"
+		"LinkedAbility"					"grimstroke_ink_creature"
+		"AbilityDraftPreAbility"		"grimstroke_ink_creature"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"MaxLevel"                      "5"
+		"MaxLevel"						"5"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
@@ -9223,6 +9215,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"24 21 18 15 12"
+		"AbilityCastRange"				"500 600 700 800 900"
 		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
@@ -9233,6 +9226,11 @@
 				"max_stun"				"1.3 1.8 2.3 2.8 3.3"
 				"damage_per_tick"		"15 20 25 30 35"	// 5 8 11 14
 				"tick_dps_tooltip"		"75 100 125 150 175"	// damage_per_tick x5
+				"shard_heal_pct"
+				{
+					"value"		"50"	// 30
+					"RequiresShard"					"1"
+				}
 		}
 	}
 	// 暗绘
@@ -9243,11 +9241,11 @@
 		{
 			"images_take_damage_percent"
 			{
-				"value" "50"
+				"value" "150"
 			}
 			"images_take_damage_percent_tooltip"
 			{
-				"value" "150"
+				"value" "250"
 			}
 			"images_movespeed_bonus"
 			{
@@ -9255,10 +9253,10 @@
 			}
 		}
 	}
-	//缚魂
+	// 缚魂
 	"grimstroke_soul_chain"
 	{
-		"MaxLevel"                      "4"
+		"MaxLevel"						"4"
 		"AbilityCooldown"				"60 55 50 45"
 		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityManaCost"				"150 200 250 300"
@@ -10871,9 +10869,8 @@
 		"AbilityValues"
 		{
 			"cast_range"				"60 120 180 240 300"
-			"spell_amp"					"14 18 22 26 30"
+			"spell_amp"					"11 16 21 26 31"
 		}
-
 	}
 	// 技能窃取
 	"rubick_spell_steal"
@@ -11082,11 +11079,7 @@
 			}
 			"bonus_damage"
 			{
-				"special_bonus_unique_shadow_shaman_4" "+100"
-			}
-			"bonus_attack_range"
-			{
-				"special_bonus_unique_shadow_shaman_8" "+200"
+				"special_bonus_unique_shadow_shaman_4" "+50"	// 20
 			}
 			"mega_ward_multiplier_tooltip"
 			{
@@ -11095,7 +11088,7 @@
 			}
 			"mega_ward_health_tooltip"
 			{
-				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=2.25"	// =ward_count*0.75
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=3"	// =ward_count
 			}
 		}
 	}
