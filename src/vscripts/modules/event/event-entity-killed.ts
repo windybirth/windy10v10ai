@@ -115,19 +115,14 @@ export class EventEntityKilled {
   }
 
   private dropParts(creep: CDOTA_BaseNPC): void {
-    const dotaTime = GameRules.GetDOTATime(false, false);
-
-    if (dotaTime < 600) {
-      // 游戏时间小于 10 分钟时，主要掉落圣光组件 合计 0.6%
-      this.dropItem(creep, [this.itemLightPartName], this.dropItemChanceCreepArtifactPart * 0.4);
-      this.dropItem(creep, [this.itemDarkPartName], this.dropItemChanceCreepArtifactPart * 0.2);
-    } else if (dotaTime < 1800) {
-      // 游戏时间小于 30 分钟时，圣光暗影组件各一半 合计 1.0%
-      this.dropItem(creep, this.dropItemListArtifactPart, this.dropItemChanceCreepArtifactPart);
+    // 获取白天夜晚
+    const isDaytime = GameRules.IsDaytime();
+    if (isDaytime) {
+      // 白天掉落圣光组件
+      this.dropItem(creep, [this.itemLightPartName], this.dropItemChanceCreepArtifactPart);
     } else {
-      // 游戏时间大于 30 分钟时，主要落暗影组件 合计 1.2%
-      this.dropItem(creep, [this.itemLightPartName], this.dropItemChanceCreepArtifactPart * 0.4);
-      this.dropItem(creep, [this.itemDarkPartName], this.dropItemChanceCreepArtifactPart * 0.8);
+      // 夜晚掉落暗影组件
+      this.dropItem(creep, [this.itemDarkPartName], this.dropItemChanceCreepArtifactPart);
     }
   }
 
