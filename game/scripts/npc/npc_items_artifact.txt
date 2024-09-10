@@ -661,7 +661,7 @@
 
 		"AbilityValues"
 		{
-			"bonus_damage"		"50"
+			"bonus_damage"		"60"
 		}
 		"Modifiers"
 		{
@@ -703,7 +703,7 @@
 
 		"AbilityValues"
 		{
-			"bonus_spell_amp"		"20"
+			"bonus_spell_amp"		"25"
 		}
 		"Modifiers"
 		{
