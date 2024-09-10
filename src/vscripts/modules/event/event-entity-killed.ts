@@ -14,7 +14,6 @@ export class EventEntityKilled {
   private dropItemListArtifactPart: string[] = ["item_light_part", "item_dark_part"];
 
   private dropItemChanceRoshanArtifactPart = 100;
-  private dropItemChanceCreepArtifactPart = 1.0;
 
   // 龙珠
   private dropItemListDragonBall: string[] = [
@@ -115,14 +114,27 @@ export class EventEntityKilled {
   }
 
   private dropParts(creep: CDOTA_BaseNPC): void {
+    // 组件掉落概率随游戏时长而增加
+    const dotaTime = GameRules.GetDOTATime(false, false);
+    let dropItemChanceCreepArtifactPart = 0;
+    if (dotaTime < 600) {
+      dropItemChanceCreepArtifactPart = 0.5;
+    } else if (dotaTime < 1200) {
+      dropItemChanceCreepArtifactPart = 1;
+    } else if (dotaTime < 1800) {
+      dropItemChanceCreepArtifactPart = 1.5;
+    } else {
+      dropItemChanceCreepArtifactPart = 2;
+    }
+
     // 获取白天夜晚
     const isDaytime = GameRules.IsDaytime();
     if (isDaytime) {
       // 白天掉落圣光组件
-      this.dropItem(creep, [this.itemLightPartName], this.dropItemChanceCreepArtifactPart);
+      this.dropItem(creep, [this.itemLightPartName], dropItemChanceCreepArtifactPart);
     } else {
       // 夜晚掉落暗影组件
-      this.dropItem(creep, [this.itemDarkPartName], this.dropItemChanceCreepArtifactPart);
+      this.dropItem(creep, [this.itemDarkPartName], dropItemChanceCreepArtifactPart);
     }
   }
 
