@@ -2998,7 +2998,8 @@
 		}
 	}
 
-	//光暗骑士剑
+	// 光暗骑士剑
+	// 圣光
 	"item_recipe_paladin_sword_light"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -3025,43 +3026,10 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"60" //16
-			"bonus_spell_lifesteal"	"24"  //8
-			"bonus_amp"			    "24" //14
-			"creep_lifesteal_reduction_pct"	"0" //40
-		}
-	}
-	"item_recipe_paladin_sword_dark"
-	{
-		"BaseClass"                     "item_datadriven"
-		"ID"						    "11014"
-		"ItemCost"                      "0"
-		"ItemShopTags"					""
-		"ItemRecipe"                    "1"
-		"ItemResult"                    "item_paladin_sword_dark"
-		"ItemRequirements"
-		{
-			"01"                        "item_paladin_sword;item_dark_part"
-		}
-	}
-	"item_paladin_sword_dark"
-	{
-		"BaseClass" "item_paladin_sword"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemCost"						"0"
-		"ItemIsNeutralDrop"				"0"
-		"ItemPurchasable"				"1"
-		"ItemSellable"					"0"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-		"AbilityTextureName"			"item_paladin_sword_dark"
-		"Model"							"models/props_gameplay/neutral_box.vmdl"
-		"AbilityValues"
-		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"24" //16
-			"bonus_spell_lifesteal"	"60"  //8
-			"bonus_amp"			    "80" //14
+			"bonus_damage"			"200"	//16
+			"bonus_lifesteal"		"24"	//16
+			"bonus_spell_lifesteal"	"24"	//8
+			"bonus_amp"				"24"	//14
 			"creep_lifesteal_reduction_pct"	"0" //40
 		}
 	}
@@ -3091,10 +3059,45 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"60" //16
-			"bonus_spell_lifesteal"	"24"  //8
-			"bonus_amp"			    "24" //14
+			"bonus_damage"			"200"	//16
+			"bonus_lifesteal"		"24"	//16
+			"bonus_spell_lifesteal"	"24"	//8
+			"bonus_amp"				"24"	//14
+			"creep_lifesteal_reduction_pct"	"0" //40
+		}
+	}
+
+	// 暗影
+	"item_recipe_paladin_sword_dark"
+	{
+		"BaseClass"                     "item_datadriven"
+		"ID"						    "11014"
+		"ItemCost"                      "0"
+		"ItemShopTags"					""
+		"ItemRecipe"                    "1"
+		"ItemResult"                    "item_paladin_sword_dark"
+		"ItemRequirements"
+		{
+			"01"                        "item_paladin_sword;item_dark_part"
+		}
+	}
+	"item_paladin_sword_dark"
+	{
+		"BaseClass" "item_paladin_sword"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemCost"						"0"
+		"ItemIsNeutralDrop"				"0"
+		"ItemPurchasable"				"1"
+		"ItemSellable"					"0"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"AbilityTextureName"			"item_paladin_sword_dark"
+		"Model"							"models/props_gameplay/neutral_box.vmdl"
+		"AbilityValues"
+		{
+			"bonus_damage"			"100"	//16
+			"bonus_lifesteal"		"60"	//16
+			"bonus_spell_lifesteal"	"60"	//8
+			"bonus_amp"				"60"	//14
 			"creep_lifesteal_reduction_pct"	"0" //40
 		}
 	}
@@ -3124,13 +3127,14 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"24" //16
-			"bonus_spell_lifesteal"	"60"  //8
-			"bonus_amp"			    "80" //14
+			"bonus_damage"			"100"	//16
+			"bonus_lifesteal"		"60"	//16
+			"bonus_spell_lifesteal"	"60"	//8
+			"bonus_amp"				"60"	//14
 			"creep_lifesteal_reduction_pct"	"0" //40
 		}
 	}
+	// 光暗
 	"item_recipe_paladin_sword_ai"
 	{
 		"BaseClass"                     "item_datadriven"
@@ -3157,10 +3161,10 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"60" //16
-			"bonus_spell_lifesteal"	"60"  //8
-			"bonus_amp"			    "80" //14
+			"bonus_damage"			"200"	//16
+			"bonus_lifesteal"		"60"	//16
+			"bonus_spell_lifesteal"	"60"	//8
+			"bonus_amp"				"60"	//14
 			"creep_lifesteal_reduction_pct"	"0" //40
 		}
 	}
@@ -3191,10 +3195,10 @@
 		"Model"							"models/props_gameplay/neutral_box.vmdl"
 		"AbilityValues"
 		{
-			"bonus_damage"			"200" //16
-			"bonus_lifesteal"		"60" //16
-			"bonus_spell_lifesteal"	"60"  //8
-			"bonus_amp"			    "80" //14
+			"bonus_damage"			"200"	//16
+			"bonus_lifesteal"		"60"	//16
+			"bonus_spell_lifesteal"	"60"	//8
+			"bonus_amp"				"60"	//14
 			"creep_lifesteal_reduction_pct"	"0" //40
 		}
 	}
@@ -4254,7 +4258,7 @@
 				"value"		"3000"	//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"9"  //6
+			"duration"			"9"	//6
 		}
 	}
 	"item_recipe_seer_stone_dark"
@@ -4273,7 +4277,7 @@
 	"item_seer_stone_dark"
 	{
 		"BaseClass" "item_seer_stone"
-		"AbilityCooldown"				"20"  //60
+		"AbilityCooldown"				"30"  //60
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
 		"FightRecapLevel"				"1"
 		"AbilityCastRange"				"0"
@@ -4291,10 +4295,10 @@
 			"mana_regen"			"20"   //10
 			"radius"
 			{
-				"value"		"1200"          //800
+				"value"		"1000"			//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"9"  //6
+			"duration"			"9"	//6
 		}
 	}
 	"item_recipe_seer_stone_light_1"
@@ -4334,7 +4338,7 @@
 				"value"		"3000"	//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"9"  //6
+			"duration"			"9"	//6
 		}
 	}
 	"item_recipe_seer_stone_dark_1"
@@ -4371,10 +4375,10 @@
 			"mana_regen"			"20"   //10
 			"radius"
 			{
-				"value"		"1200"          //800
+				"value"		"1000"			//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"9"  //6
+			"duration"			"9"	//6
 		}
 	}
 	"item_recipe_seer_stone_ai"
@@ -4414,7 +4418,7 @@
 				"value"		"3000"	//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"10"  //6
+			"duration"			"9"	//6
 		}
 	}
 	"item_recipe_seer_stone_ai_1"
@@ -4455,7 +4459,7 @@
 				"value"		"3000"	//800
 				"affected_by_aoe_increase"	"1"
 			}
-			"duration"			"10"  //6
+			"duration"			"9"	//6
 		}
 	}
 
