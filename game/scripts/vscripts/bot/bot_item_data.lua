@@ -156,11 +156,10 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_ultimate_scepter_2',
 		'item_basher',
-		'item_recipe_abyssal_blade',
-		'item_recipe_abyssal_blade_v2',
 
 		'item_blue_fantasy',
 		'item_monkey_king_bar_2',
+		'item_abyssal_blade_v2',
 		'item_wasp_callous',
 		'item_infernal_desolator',
 		'item_wasp_despotic',
@@ -1375,10 +1374,12 @@ tBotItemData.sellItemCommonList = {
 	'item_ring_of_basilius',     -- 王者之戒
 	'item_quelling_blade',       -- 补刀斧
 	'item_blades_of_attack',     -- 攻击之爪
+	'item_chainmail',            -- 锁子甲
 	'item_ogre_axe',             -- 食人魔之斧
 	'item_blade_of_alacrity',    -- 欢欣之刃
 	'item_staff_of_wizardry',    -- 魔力法杖
 	'item_claymore',             -- 大剑
+	'item_eagle',                -- 鹰歌弓
 
 	-- 消耗品
 	'item_tango_single',
@@ -1397,6 +1398,7 @@ tBotItemData.sellItemCommonList = {
 	'item_bracer',                   -- 护腕
 	'item_null_talisman',            -- 挂件
 	'item_wraith_band',              -- 系带
+	'item_buckler',                  -- 玄冥盾牌
 	'item_orb_of_corrosion',         -- 腐蚀之球
 	'item_pavise',                   -- 长盾
 
@@ -1434,6 +1436,7 @@ tBotItemData.sellItemCommonList = {
 	'item_heavens_halberd', -- 天堂之戟
 
 	-- 卷轴 主要是本地主机
+	'item_recipe_mekansm',       -- 梅肯斯姆
 	'item_recipe_abyssal_blade', -- 深渊卷轴
 	'item_recipe_guardian_greaves', -- 卫士胫甲卷轴
 }
