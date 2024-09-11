@@ -20,8 +20,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_blade_mail_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_ultimate_scepter_2',
 		'item_shivas_guard_2',
 		'item_vladmir_2',
@@ -70,8 +69,7 @@ tBotItemData.purchaseItemList = {
 		'item_blade_mail_2',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_black_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_saint_orb',
@@ -304,8 +302,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_blink',
 		'item_sange_and_yasha',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_black_king_bar_2',
 		-- 'item_vladmir_2',
 		'item_aghanims_shard',
@@ -353,8 +350,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_blade_mail_2',
 		'item_heavens_halberd',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_echo_sabre_2',
 		'item_aghanims_shard',
 		'item_shivas_guard_2',
@@ -727,8 +723,7 @@ tBotItemData.purchaseItemList = {
 		'item_blink',
 		'item_eternal_shroud',
 		'item_aether_lens_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_ultimate_scepter_2',
 		'item_saint_orb',
 		'item_black_king_bar_2',
@@ -828,8 +823,7 @@ tBotItemData.purchaseItemList = {
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_black_king_bar_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_undying_heart',
 		'item_sheepstick',
 		'item_refresher',
@@ -924,8 +918,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_heavens_halberd',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_sange_and_yasha',
 		'item_adi_king_plus',
 		'item_blue_fantasy',
@@ -973,8 +966,7 @@ tBotItemData.purchaseItemList = {
 		'item_vanguard', -- 先锋盾
 		'item_falcon_blade', -- 猎鹰战刃
 		'item_blink',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_wings_of_haste',
 		'item_echo_sabre',
 		'item_aghanims_shard',
@@ -1438,6 +1430,8 @@ tBotItemData.sellItemCommonList = {
 	'item_hand_of_group', -- 团队之手
 	'item_phylactery',    -- 灵匣
 	'item_greater_crit',  -- 大炮
+	'item_sange_and_yasha', -- 散夜对剑
+	'item_heavens_halberd', -- 天堂之戟
 
 	-- 卷轴 主要是本地主机
 	'item_recipe_abyssal_blade', -- 深渊卷轴
