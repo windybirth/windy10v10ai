@@ -1379,6 +1379,8 @@ tBotItemData.sellItemCommonList = {
 	'item_blade_of_alacrity',    -- 欢欣之刃
 	'item_staff_of_wizardry',    -- 魔力法杖
 	'item_claymore',             -- 大剑
+	'item_mithril_hammer',       -- 秘银锤
+	'item_tiara_of_selemene',    -- 赛莉蒙妮之冠
 	'item_eagle',                -- 鹰歌弓
 
 	-- 消耗品
@@ -1409,6 +1411,7 @@ tBotItemData.sellItemCommonList = {
 	'item_oblivion_staff',           -- 空明杖
 
 	-- 中级道具
+	'item_ancient_janggo', -- 韧鼓
 	'item_veil_of_discord', -- 纷争
 	'item_cyclone',      -- 吹风
 	'item_falcon_blade', -- 猎鹰战刃
@@ -1436,6 +1439,8 @@ tBotItemData.sellItemCommonList = {
 	'item_heavens_halberd', -- 天堂之戟
 
 	-- 卷轴 主要是本地主机
+	'item_recipe_black_king_bar', -- BKB
+	'item_recipe_sheepstick',    -- 邪恶镰刀
 	'item_recipe_mekansm',       -- 梅肯斯姆
 	'item_recipe_abyssal_blade', -- 深渊卷轴
 	'item_recipe_guardian_greaves', -- 卫士胫甲卷轴
