@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+
 export declare interface AIGameMode {
   InitGameMode(): void;
 }
