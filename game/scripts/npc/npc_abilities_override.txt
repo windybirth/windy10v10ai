@@ -2421,6 +2421,7 @@
 			"bonus_movement_speed_pct_night"
 			{
 				"value"			"22 28 34 40 46"
+				"special_bonus_unique_night_stalker_301"	"+20"
 			}
 			"bonus_attack_speed_night"
 			{
@@ -2444,18 +2445,25 @@
 			}
 		}
 	}
+	// 暗夜猎影 移动速度
+	"special_bonus_unique_night_stalker_301"
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
 	// 黑暗飞升
 	"night_stalker_darkness"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"120 110 100 90"
+		"AbilityCooldown"				"140 130 120 110"
 		"AbilityManaCost"				"125 175 225 275"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
 				"value"			"50 100 150 200"
-				"special_bonus_unique_night_stalker_3"	"+50"
+				"special_bonus_unique_night_stalker_3"	"+50"	// 25
 			}
 		}
 	}
