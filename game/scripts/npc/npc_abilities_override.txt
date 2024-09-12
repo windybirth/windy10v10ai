@@ -216,7 +216,7 @@
 		{
 			"AbilityCooldown"
 			{
-				"value"								"80 70 60 50"
+				"value"								"90 80 70 60"
 			}
 			"hp_threshold"							"600 900 1200 1500"
 			"duration"								"3.5 4.0 4.5 5.0"
@@ -298,12 +298,12 @@
 			"cleave_distance_base"
             		{
                 		"value"                 "0"
-                		"special_bonus_facet_abyssal_underlord_demons_reach"    "+200"              
+                		"special_bonus_facet_abyssal_underlord_demons_reach"    "+200"
                     		"affected_by_aoe_increase"  "1"
             		}
 			"cleave_distance_per_stack"
             		{
-                		"special_bonus_facet_abyssal_underlord_demons_reach"    "+1"                
+                		"special_bonus_facet_abyssal_underlord_demons_reach"    "+1"
             		}
 		}
 	}
@@ -427,17 +427,6 @@
 	//=================================================================================================================
 	// Ability: Alchemist 炼金术士
 	//=================================================================================================================
-	// 狂暴药剂（魔晶技能）
-	"alchemist_berserk_potion"
-	{
-		"AbilityCooldown"				"25"
-		"AbilityValues"
-		{
-			"attack_speed"		"80"
-			"hp_regen"		"80"
-			"move_speed"			"60"
-		}
-	}
 	// 酸雾
 	"alchemist_acid_spray"
 	{
@@ -488,13 +477,12 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"min_stun"					"1.25"	// 0.25
-			"max_stun"					"1.7 2.2 2.7 3.2 3.7"
-			"min_damage"				"100"
+			"min_stun"					"1"	// 0.25
+			"max_stun"					"1.75 2.25 2.75 3.25 3.75"
+			"min_damage"				"50"
 			"max_damage"
 			{
-				"value"					"200 250 300 350 400"
-				"special_bonus_unique_alchemist_2"		"+400"
+				"value"					"150 220 290 360 430"
 			}
 			"midair_explosion_radius"
 			{
@@ -503,29 +491,48 @@
 			}
 		}
 	}
+	// 腐蚀兵械
+	"alchemist_corrosive_weaponry"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+				"max_stacks"	"2 4 6 8 10"
+				"debuff_duration"		"4.0"
+				"slow_per_stack"		"4 5 6 7 8"
+				"attack_damage_per_stack"		"3 4 5 6 7"
+		}
+	}
+	// 狂暴药剂（魔晶技能）
+	"alchemist_berserk_potion"
+	{
+		"AbilityValues"
+		{
+			"attack_speed"		"80"
+			"hp_regen"		"80"
+			"move_speed"			"40"
+		}
+	}
 	// 化学狂暴
 	"alchemist_chemical_rage"
 	{
-		"MaxLevel" "4"
-		"AbilityCooldown"				"50.0"
-		"AbilityManaCost"				"50 75 100 125"
+		"MaxLevel"						"4"
+		"AbilityManaCost"				"50 100 150 200"
 		"AbilityValues"
 		{
 			"base_attack_time"
 			{
-				"value"		"1.2 1.1 1.0 0.9"
+				"value"		"1.3 1.2 1.1 1.0"
 			}
 			"bonus_health"			"500 1000 1500 2000"	// 额外添加
 			"bonus_health_regen"
 			{
 				"value"	"60 90 120 150"
-				"special_bonus_unique_alchemist_4"		"+50"
 			}
-			"bonus_mana_regen"		"10"
+			"bonus_mana_regen"		"5"
 			"bonus_movespeed"
 			{
 				"value"		"30 45 60 75"
-				"special_bonus_unique_alchemist_6"			"+50"
 			}
 		}
 	}
@@ -537,7 +544,7 @@
 			"starting_gold_bonus"	// 天命1
 			{
 				"value"				"0"
-				"special_bonus_facet_alchemist_seed_money"	"=1500"	// 250
+				"special_bonus_facet_alchemist_seed_money"	"=1000"	// 250
 			}
 		}
 	}
@@ -1028,7 +1035,7 @@
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
-			"hammer_damage"			"100 160 220 280 340"	// x2
+			"hammer_damage"			"60 100 140 180 220"	// +10
 			"move_slow"
 			{
 				"value"							"24 28 32 36 40"
@@ -1049,7 +1056,7 @@
 			"heal_pct"					"35 40 45 50 55"
 			"bonus_damage"
 			{
-				"value"		"150 175 200 225 250"
+				"value"		"125 150 175 200 225"
 			}
 		}
 	}
@@ -1150,6 +1157,7 @@
 			"damage"
 			{
 				"value"								"30 50 70 90"
+				"special_bonus_facet_doom_bringer_impending_doom"	"=30 =45 =60 =75"
 			}
 			"AbilityCooldown"
 			{
@@ -1309,7 +1317,7 @@
 	// 余震
 	"earthshaker_aftershock"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"						"5"
 		"AbilityDuration"				"0.8 1.0 1.2 1.4 1.6"
 		"AbilityValues"
 		{
@@ -1787,15 +1795,15 @@
 			}
 		}
 	}
-	// 洪流浪潮
+	// 洪流浪潮（已移除）
 	"kunkka_torrent_storm"
 	{
 		"AbilityCooldown"				"60"
 	}
-	// 水刀
+	// 潮汐使者 水刀
 	"kunkka_tidebringer"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"						"5"
 		"AbilityValues"
 		{
 			"cleave_ending_width"
@@ -1816,6 +1824,11 @@
 			"AbilityCooldown"
 			{
 				"value"					"12.0 10.0 8.0 6.0 4.0"
+			}
+			"cooldown_reduction_per_hero_hit"
+			{
+				"value"												"0.0"
+				"special_bonus_facet_kunkka_high_tide"		"+0.4"		// 0.8
 			}
 		}
 	}
@@ -1883,30 +1896,30 @@
 	"legion_commander_moment_of_courage"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"1.6 1.3 1.0 0.7 0.4"
+		"AbilityCooldown"				"1.9 1.6 1.3 1.0 0.7"
 		"AbilityValues"
 		{
 			"hp_leech_percent"
 			{
-				"value"		"60 70 80 90 100"
+				"value"		"55 65 75 85 95"
 			}
 		}
 	}
 	// 强攻提供{s:value}秒 减益免疫
 	"special_bonus_unique_legion_commander_8"
-    {
-        "AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "BaseClass"						"special_bonus_base"
-        "ad_linked_abilities"			"legion_commander_press_the_attack"
-        "AbilityValues"
-        {
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		"ad_linked_abilities"			"legion_commander_press_the_attack"
+		"AbilityValues"
+		{
 			"value"
 			{
 				"value" "2.0"	// 1.5
 			}
-        }
-    }
+		}
+	}
 	// 决斗
 	"legion_commander_duel"
 	{
@@ -1916,12 +1929,10 @@
 			"duration"
 			{
 				"value"				"3.75 4.5 5.25 6.0"
-				"special_bonus_scepter"		"+2.25"
 			}
 			"reward_damage"
 			{
 				"value"			"10 20 30 40"
-				"special_bonus_shard"	"+8"
 			}
 			"assist_reward_damage"
 			{
@@ -1986,13 +1997,18 @@
 	// 感染
 	"life_stealer_infest"
 	{
-		"MaxLevel" "3"
-		"RequiredLevel"					"15"
+		"RequiredLevel"					"18"
 		"AbilityValues"
 		{
+			"bonus_movement_speed"
+			{
+				"value"				 "10 15 20"
+				"special_bonus_unique_lifestealer_infest_target_bonus"			"+10"
+			}
 			"bonus_health"
 			{
-				"value"								"800 1600 2400"	// x2
+				"value"								"500 1000 1500"
+				"special_bonus_unique_lifestealer_infest_target_bonus"			"+10%"
 			}
 		}
 	}
@@ -2057,7 +2073,6 @@
 			"bonus_damage"
 			{
 				"value"			"10 20 30 40 50"
-				"special_bonus_unique_lycan_4"	"+25"
 			}
 			"bonus_hp_regen"
 			{
@@ -2072,7 +2087,7 @@
 		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
-			"speed"				"850"
+			"speed"				"800"
 			"crit_multiplier"		"160 200 240 280"
 			"health_bonus"		"500 700 900 1100" // x2
 		}
@@ -2084,13 +2099,11 @@
 		"AbilityCooldown"				"90"
 		"AbilityValues"
 		{
-			"lifesteal_percent"		"60" // 40
 			"lifesteal_range"
 			{
 				"value"		"1800" // 1200
 				"affected_by_aoe_increase"	"1"
 			}
-			"attack_range"		"250" // 150
 		}
 	}
 	//=================================================================================================================
@@ -2101,13 +2114,15 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"13 12 11 10 9"
-		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
 			"shock_damage"
 			{
-				"value"			"75 150 225 300 375"
-				"special_bonus_unique_magnus"	"+125"
+				"value"			"90 160 230 300 370"
+			}
+			"basic_slow_duration"
+			{
+				"value"					"0.7 0.8 0.9 1.0 1.1"
 			}
 		}
 	}
@@ -2118,54 +2133,79 @@
 		"AbilityManaCost"				"45 55 65 75 85"
 		"AbilityValues"
 		{
+			"empower_duration"
+			{
+				"value"		"30 33 36 39 42"
+			}
 			"bonus_damage_pct"
 			{
-				"value"							"12 20 28 36 44"
-				"special_bonus_unique_magnus_2"	"+10"
+				"value"							"16 24 32 40 48"
 			}
 			"cleave_damage_pct"
 			{
-				"value"						"10 20 30 40 50"
-				"special_bonus_unique_magnus_2"	"+10"
+				"value"						"16 24 32 40 48"
 			}
-			"self_multiplier"		"100"
+			"self_multiplier"		"80"	// 50
 		}
 	}
 	// 巨角冲撞
 	"magnataur_skewer"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityValues"
 		{
+				"AbilityCooldown"
+				{
+					"value"					"22 20 18 16 14"
+				}
 				"range"
 				{
 					"value"			"900 975 1050 1125 1200"
-					"LinkedSpecialBonus"	"special_bonus_unique_magnus_3"
 				}
 				"slow_pct"
 				{
 					"value"			"20 30 40 50 60"
 				}
-				"skewer_damage"			"70 140 210 280 350"
-				"tool_attack_slow"				"10 20 30 40 50"
-				"damage_distance_pct"			"6 9 12 15 18"
+				"skewer_damage"			"80 160 240 320 400"
+				"tree_hit_damage"
+				{
+					"value"			"15 20 25 30 35"
+				}
+				"cliff_hit_damage"
+				{
+					"value"			"50 75 100 125 150"
+				}
 		}
 	}
 	// 两极反转
 	"magnataur_reverse_polarity"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80"
-		"AbilityManaCost"				"150 200 250 300"
+		"AbilityManaCost"				"150 225 300 375"
 		"AbilityValues"
 		{
-			"polarity_damage"				"75 150 225 300"
+			"AbilityCooldown"
+			{
+				"value"						"90"
+				"special_bonus_facet_magnataur_reverse_reverse_polarity"		"=60"
+			}
+			"polarity_damage"
+			{
+				"value"							"100 200 300 400"
+			}
 			"hero_stun_duration"
 			{
 				"value"					"2.5 3.0 3.5 4.0"
-				"special_bonus_unique_magnus_5"	"+0.8"
 			}
+		}
+	}
+	// 坚固核心
+	"magnataur_solid_core"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"slow_resistance"			"20 30 40 50 60"
 		}
 	}
 	//=================================================================================================================
@@ -2178,9 +2218,9 @@
 		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityValues"
 		{
-				"throw_distance_behind" 
+				"throw_distance_behind"
                 {
-                    "value"     "250 300 350 400 450"                   
+                    "value"     "250 300 350 400 450"
                 }
 				"debuff_duration"   "3.0 3.75 4.5 5.25 6.0"
 				"impact_damage"
@@ -2243,7 +2283,7 @@
 				"value"				"20 40 60 80 100"
 				"special_bonus_unique_marci_guardian_damage"			"+50"
 			}
-			"max_partner_distance"              
+			"max_partner_distance"
             {
             	"value"     "2500"
 				"special_bonus_facet_marci_unyielding_loyalty"	"=99999"
@@ -2284,7 +2324,7 @@
 				"special_bonus_facet_marci_unswerving_zeal"	"x2"
             }
 			"bonus_armor"
-			{			
+			{
 				"value"						"4 8 12 16 20"
 				"special_bonus_facet_marci_unswerving_zeal"	"x1.5"
 			}
@@ -2303,7 +2343,7 @@
 		"AbilityManaCost"				"75 100 125 150"
 		"AbilityValues"
 		{
-				"duration"              "20"
+				"charges_per_flurry"	"6 8 10 12"	//5
 				"flurry_bonus_attack_speed"	"700 975 1325 1600"
 				"time_between_flurries"	"1.5 1.25 1.0 0.75"	// 1.5
 				"pulse_damage"
@@ -2312,13 +2352,13 @@
 				}
 				"pulse_attack_slow_pct"	"60.0 80.0 100.0 120.0"
 				"recovery_fixed_attack_rate"    "1.5 1.25 1.0 0.75"
-				"bonus_movespeed"       
+				"bonus_movespeed"
                 {
                 	"value"     "25"
                 	"special_bonus_unique_marci_unleash_speed"  "+15"
                 }
 				"scepter_cooldown_reduction"
-                {       
+                {
                 	"value"                 "15.0"
                 }
 				"pulse_silence_duration"
@@ -2437,19 +2477,10 @@
 			{
 				"value"				"4.5 5 5.5 6.0 6.5"
 			}
-			"mana_pers_night"
-			{
-				"value"			"0"
-				"special_bonus_scepter"	"3"	// 6
-			}
-			"radius"
-			{
-				"value"		"450" // x1.5
-			}
 			"dps"
 			{
 				"value"			"50 60 70 80 90" // x2
-				"special_bonus_unique_night_stalker_crippling_fear_damage" 	"+40" // x2
+				"special_bonus_unique_night_stalker_crippling_fear_damage" 	"+30" // x1.5
 			}
 		}
 	}
@@ -2461,7 +2492,8 @@
 		{
 			"bonus_movement_speed_pct_night"
 			{
-				"value"			"35 40 45 50 55"
+				"value"			"22 28 34 40 46"
+				"special_bonus_unique_night_stalker_301"	"+20"
 			}
 			"bonus_attack_speed_night"
 			{
@@ -2475,7 +2507,7 @@
 			}
 			"shard_cooldown"
 			{
-				"value"				"15" // 30
+				"value"				"20" // 35
 				"RequiresShard"		"1"
 			}
 			"shard_cast_range"
@@ -2485,18 +2517,25 @@
 			}
 		}
 	}
+	// 暗夜猎影 移动速度
+	"special_bonus_unique_night_stalker_301"
+	{
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+	}
 	// 黑暗飞升
 	"night_stalker_darkness"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"130 120 110 100"
-		"AbilityManaCost"				"175 225 275 325"
+		"AbilityCooldown"				"140 130 120 110"
+		"AbilityManaCost"				"125 175 225 275"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
-				"value"			"100 150 200 250"
-				"special_bonus_unique_night_stalker_3"	"+50"
+				"value"			"50 100 150 200"
+				"special_bonus_unique_night_stalker_3"	"+50"	// 25
 			}
 		}
 	}
@@ -2505,7 +2544,7 @@
 	{
 		"AbilityValues"
 		{
-			"hp_regen_during_night_pct"				"80" // 40
+			"hp_regen_during_night_pct"				"60" // 40
 		}
 	}
 	//=================================================================================================================
@@ -2722,20 +2761,20 @@
 		}
 	}
 	//=================================================================================================================
-	// Ability: Primal Beast 原始兽
+	// Ability: Primal Beast 原始兽 獸
 	//=================================================================================================================
 	// 突
 	"primal_beast_onslaught"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 20 18 16"
-		"AbilityManaCost"				"120 130 140 150 160"
+		"AbilityCooldown"				"24 22 20 18 16"
+		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 			"knockback_damage"
 			{
 				"value"					"75 170 265 360 455"
-				"special_bonus_unique_primal_beast_onslaught_damage"	"+125"
+				"special_bonus_unique_primal_beast_onslaught_damage"	"+145"	// 90
 			}
 			"stun_duration"				"0.8 1.0 1.2 1.4 1.6"
 		}
@@ -2746,11 +2785,13 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"base_damage"				"15 30 45 60 75"
+			"base_damage"
+			{
+				"value"							"30 45 60 75 90"	// +15
+			}
 			"AbilityCooldown"
 			{
 				"value"				"28 26 24 22 20"
-				"special_bonus_unique_primal_beast_trample_cooldown"	"-5"
 			}
 		}
 	}
@@ -2762,10 +2803,14 @@
 		{
 			"bonus_damage"				"5 10 15 20 25"
 			"bonus_damage_per_stack"	"10 20 30 40 50"
+			"stack_limit"
+			{
+				"value"						"10"	// 5
+			}
+			"move_slow_per_stack"		"5 6 7 8 9"
 			"roared_bonus_armor"
 			{
 				"value"					"2 3 4 5 6"
-				"special_bonus_unique_primal_beast_uproar_armor"	"+4"
 			}
 		}
 	}
@@ -2779,7 +2824,7 @@
 		{
 			"damage"
 			{
-				"value"						"150 210 270 330"
+				"value"						"150 210 270 330"	// 125 175 225
 			}
 			"bonus_damage_per_hit"				"20 40 60 80"
 		}
@@ -2796,7 +2841,6 @@
 			"flesh_heap_strength_buff_amount"
 			{
 				"value"	"1.4 1.6 1.8 2.0 2.2"
-				"special_bonus_unique_pudge_1"	"x1.5"
 			}
 		}
 	}
@@ -2841,7 +2885,6 @@
 			"AbilityCooldown"
 			{
 				"value"								"18 16 14 12 10"
-				"special_bonus_unique_pudge_5"		"-3"
 			}
 
 			"distance_to_damage"
@@ -2904,20 +2947,14 @@
 	"rattletrap_battery_assault"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"22 21 20 19 18"
+		"AbilityCooldown"				"24 22 20 18 16"
 		"AbilityValues"
 		{
-			"interval"
-			{
-				"value"								"0.7 0.65 0.6 0.55"
-				"special_bonus_unique_clockwerk"		"-0.25"
-			}
 			"damage"
 			{
-				"value"									"50 100 150 200 250"
-				"special_bonus_unique_clockwerk_3"		"+40"
+				"value"									"50 100 150 200 250"	// x2
+				"special_bonus_unique_clockwerk_3"		"+50"
 			}
-			"creep_damage_multiplier"					"2"
 		}
 	}
 	// 能量齿轮
@@ -2929,26 +2966,21 @@
 			"duration"			"5.0 6.0 7.0 8.0 9.0"
 			"damage"
 			{
-				"value"			"50 125 200 275 350"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"100 250 400 550 700"	// x2
 			}
 			"mana_burn"
 			{
-				"value"				"50 80 110 140 170"
-			}
-			"magic_barrier"
-			{
-				"value"				"100 200 300 400 500"
+				"value"				"100 160 220 280 340"	// x2
 			}
 			"attacks_to_destroy"
 			{
 				"value"					"4"
-				"special_bonus_unique_clockwerk_5"		"+2"
+				"special_bonus_unique_clockwerk_5"		"+4"
 			}
-			"bonus_armor"		"5"
-			"leash"
+			"bonus_armor"		"10"
+			"AbilityCooldown"
 			{
-				"value"			"0"
+				"value"			"21 19 17 15 13"
 			}
 		}
 	}
@@ -2956,14 +2988,13 @@
 	"rattletrap_rocket_flare"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"30 45 50 60 65"
+		"AbilityManaCost"				"35 40 45 50 55"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"			"80 160 200 280 320"
-				"special_bonus_unique_clockwerk_flare_damage"	"+75"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"160 240 320 400 480"	// x2
+				"special_bonus_unique_clockwerk_flare_damage"	"+150"
 			}
 			"AbilityCooldown"
 			{
@@ -2981,9 +3012,9 @@
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
-				"duration"			"1.2 1.4 1.6 1.8"
+				"duration"			"1.5 2.0 2.5 3.0"	// 1.2 1.4 1.6
 				"speed"				"4000 5000 6000 7000"
-				"damage"			"100 200 200 400"
+				"damage"			"150 350 550 750"	// x2
 		}
 	}
 	//=================================================================================================================
@@ -3018,7 +3049,7 @@
 		{
 			"sand_storm_radius"
 			{
-				"value"		"300 350 400 450 500"
+				"value"		"450 500 550 600 650"
 				"special_bonus_facet_sand_king_sandshroud"			"=575 =650 =725 =800 =875"
 			}
 			"sand_storm_damage"
@@ -3035,14 +3066,15 @@
 		"AbilityValues"
 		{
 				"caustic_finale_damage_base"		"60 80 100 120 140"	// 20 40 60 80
-				"caustic_finale_damage_pct"		"10 14 18 22 26"		// 6 9 12 15
+				"caustic_finale_damage_pct"		"6 10 14 18 22"		// 6 9 12 15
 		}
 	}
 	// 尾刺
 	"sandking_scorpion_strike"
 	{
 		"MaxLevel"						"5"
-		"AbilityCooldown"				"14.0 11.0 8.0 5.0"
+		"AbilityManaCost"				"35 40 45 50 55"
+		"AbilityCooldown"				"14.0 12.0 10.0 8.0 6.0"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -3055,7 +3087,7 @@
 			"attack_damage"
 			{
 				"value"																"40 80 120 160 200"
-				"special_bonus_unique_sand_king_scorpion_strike_damage"			"+50"
+				"special_bonus_unique_sand_king_scorpion_strike_damage"			"+50"	// 40
 			}
 			"debuff_duration"				"4 5 6 7 8"
 			"strike_slow"
@@ -3229,10 +3261,9 @@
 		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"mana_restore"					"3 4 5 6 7"
+			"mana_restore"					"4 5 6 7 8"
 		}
 	}
-
 
 	//=================================================================================================================
 	// Ability: Skeleton King 冥魂大帝/骷髅王
@@ -3241,30 +3272,29 @@
 	"skeleton_king_hellfire_blast"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"17 14 11 8 5"
-		"AbilityDamage"					"60 90 120 150 180"
+		"AbilityCooldown"				"16 14 12 10 8"
 		"AbilityManaCost"				"95 110 125 140 155"
 		"AbilityValues"
 		{
 			"blast_stun_duration"
 			{
 				"value"					"1.0 1.2 1.4 1.6 1.8"
-				"special_bonus_unique_wraith_king_11" "+1"
+			}
+			"damage"
+			{
+				"value"		"75 90 105 120 135"
 			}
 			"blast_dot_damage"
 			{
-				"value"					"40 60 80 100 120"
-				"special_bonus_unique_wraith_king_3"	"+20%"
+				"value"					"20 40 60 80 100"
 			}
-
-
 		}
 	}
 	// 本命一击
 	"skeleton_king_mortal_strike"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"5.5 5 4.5 4 3.5"
+		"AbilityCooldown"				"6.0 5.5 5 4.5 4"
 		"AbilityValues"
 		{
 			"crit_mult"					"150 200 250 300 350"
@@ -3311,12 +3341,20 @@
 		{
 			"vampiric_aura"
 			{
-				"value"									"20 30 40 50 60"
+				"value"									"26 34 42 50 58"
 			}
 			"duration"
 			{
 				"value"							"3.0"
 				"special_bonus_scepter"			"+1"
+			}
+			"scepter_attack_speed"
+			{
+				"value"							"30 45 60 75 90"
+			}
+			"scepter_move_speed_pct"
+			{
+				"value"							"10 15 20 25 30"
 			}
 			"scepter_aura_radius"
 			{
@@ -3353,7 +3391,11 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"bonus_speed"					"10 20 30 40 50"
+			"AbilityCooldown"
+			{
+				"value"									"25 23 21 19 17"
+			}
+			"bonus_speed"					"10 20 30 40 50"
 		}
 	}
 	// 鱼人碎击
@@ -3371,8 +3413,7 @@
 				"crush_extra_slow_duration"		"3 4 5 6 7"
 				"stun_duration"
 				{
-					"value"															"1.25"	// 0.8
-					"special_bonus_unique_slardar_slithereen_crush_stun"			"+0.25"	// 0.2
+					"value"															"1.2"	// 0.8
 				}
 				"crush_damage"
 				{
@@ -3389,7 +3430,7 @@
 			"bonus_damage"
 			{
 				"value"		"50 100 150 200 250"
-				"special_bonus_unique_slardar_2"	"+100"	// 40
+				"special_bonus_unique_slardar_2"	"+50"	// 40
 			}
 		}
 	}
@@ -3625,7 +3666,7 @@
 	"sven_storm_bolt"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"18 16 14 12 10"
+		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityDamage"					"80 160 240 320 400"
 		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
@@ -3633,7 +3674,6 @@
 				"bolt_stun_duration"
 				{
 					"value"		"1.0 1.2 1.4 1.6 1.8"
-					"special_bonus_unique_sven_4" "+1.2"
 				}
 		}
 	}
@@ -3645,8 +3685,7 @@
 		{
 			"great_cleave_damage"
 			{
-				"value"				"40 60 80 100 120"
-				"special_bonus_unique_sven_8" "+30"
+				"value"				"40 55 70 85 100"
 			}
 		}
 	}
@@ -3654,7 +3693,7 @@
 	"sven_warcry"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"35 30 25 20 15"
+		"AbilityCooldown"				"40 35 30 25 20"
 		"AbilityManaCost"				"40 45 50 55 60"
 		"AbilityValues"
 		{
@@ -3673,12 +3712,6 @@
 				"special_bonus_facet_sven_heavy_plate"		"=200 =400 =600 =800 =1000"
 				"RequiresFacet"					"sven_heavy_plate"
 			}
-			"barrier_per_strength"
-			{
-				"value"				"0"
-				"special_bonus_facet_sven_heavy_plate"		"=1 =1.5 =2 =2.5 =3"
-				"RequiresFacet"					"sven_heavy_plate"
-			}
 		}
 	}
 	// 神之力量
@@ -3692,7 +3725,6 @@
 			"gods_strength_damage"
 			{
 				"value"		"100 130 160 190"
-				"special_bonus_unique_sven_2"		"+50"
 			}
 		}
 	}
@@ -3718,7 +3750,6 @@
 				"shard_damage"
 				{
 					"value"					"150 225 300 375 450"	// 75 150 225 300 375
-					"CalculateSpellDamageTooltip"	"1"
 				}
 				"shard_duration"			"4 5 6 7 8"
 		}
@@ -3752,7 +3783,6 @@
 				"value"						"20 45 70 95 120"
 				"special_bonus_unique_tusk_3"		"+30" // 25
 			}
-			"slow_duration"				"1.0" // 0.5
 			"radius"
 			{
 				"value"	"450" // 350
@@ -3763,14 +3793,12 @@
 	"tusk_drinking_buddies"
 	{
 		"Maxlevel"						"5"
-		"AbilityCooldown"				"24 21 18 15 12"
+		"AbilityCooldown"				"22 20 18 16 14"
 		"AbilityValues"
 		{
-			"buff_duration"				"10.0" // 6
-
 			"attackdamage_bonus"
 			{
-				"value"								"30 60 90 120 150" // 20 45 70 95
+				"value"								"20 45 70 95 120"
 				"special_bonus_unique_tusk_3"		"+30" // 25
 			}
 		}
@@ -3811,9 +3839,18 @@
 		{
 			"value"
 			{
-				"value" "18" // 12
+				"value" "15" // 12
 				"ad_linked_abilities" "tusk_walrus_punch"
 			}
+		}
+	}
+	// 海象飞踢
+	"tusk_walrus_kick"
+	{
+		"AbilityCooldown"				"18"	// 12
+		"AbilityValues"
+		{
+				"push_length"				"1000"	// 1400
 		}
 	}
 	// 寒冰符印
@@ -3857,7 +3894,6 @@
 				"gush_damage"
 				{
 					"value"		"110 160 210 260 310"
-				"special_bonus_unique_tidehunter_2" "+200"	// 100
 				}
 				"negative_armor"
 				{
@@ -3873,7 +3909,7 @@
 		{
 			"damage_reduction"
 			{
-				"value"				"30 70 110 150 190"	// x2
+				"value"				"15 35 55 75 95"
 			}
 			"bonus_reduction_per_kill"
 			{
@@ -3886,7 +3922,7 @@
 	"tidehunter_anchor_smash"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"7.0 6.0 5.0 4.0 3.0"
+		"AbilityCooldown"				"8.0 7.0 6.0 5.0 4.0"
 		"AbilityManaCost"				"40 50 60 70 80"
 		"AbilityValues"
 		{
@@ -3900,6 +3936,7 @@
 				"value"										"-30 -40 -50 -60 -70"
 				"special_bonus_unique_tidehunter_3"			"-20"
 			}
+			"reduction_duration"							"4"		// 6
 		}
 	}
 	// 毁灭
@@ -3918,6 +3955,17 @@
 			}
 		}
 	}
+	// 海妖外壳
+	"tidehunter_blubber"
+	{
+		"AbilityValues"
+		{
+			"damage_cleanse"
+			{
+				"value"		"800"	// 500
+			}
+		}
+	}
 	//=================================================================================================================
 	// Ability: Tiny 小小
 	//=================================================================================================================
@@ -3932,12 +3980,11 @@
 				"radius"
 				{
 					"value"			"325 340 355 370 385"
-					"affected_by_aoe_increase"	"1"
 				}
 				"avalanche_damage"
 				{
-					"value"				"160 240 320 400 480"	// 80 160 240 320
-					"special_bonus_unique_tiny"			"+160" // 80 加强法系
+					"value"				"160 240 320 400 480"	// 80 160 240 320 加强法系
+					"special_bonus_unique_tiny"			"+120"	// 70
 				}
 		}
 	}
@@ -3952,29 +3999,27 @@
 		{
 			"toss_damage"
 			{
-				"value"				"160 240 320 400 480"	// 80 160 240 320
-				"CalculateSpellDamageTooltip"	"1"
+				"value"				"160 240 320 400 480"	// 80 160 240 320 加强法系
 			}
 			"radius"
 			{
 				"value"		"275"
 				"special_bonus_facet_tiny_crash_landing"				"=700" // =450 命石1
-				"affected_by_aoe_increase"	"1"
 			}
 			"land_movement_slow"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"30 40 50 60 70" // x2 命石1
 			}
 			"land_attack_slow"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"20 40 60 80 100" // x2 命石1
 			}
 			"bonus_land_damage_pct"
 			{
 				"value"						"0"
-				"special_bonus_facet_tiny_crash_landing"				"50 60 70 80 90" // x2 命石1
+				"special_bonus_facet_tiny_crash_landing"				"40 50 60 70 80" // x2 命石1
 			}
 		}
 	}
@@ -3988,13 +4033,12 @@
 			"bonus_damage"
 			{
 				"value"							"10 20 30 40 50"
-				"special_bonus_unique_tiny_7"		"+70"
 			}
 			"bonus_damage_buildings"
 			{
 				"value"							"30 40 50 60 70"
 			}
-			"splash_pct"				"55 70 85 100 115"
+			"splash_pct"				"40 55 70 85 100"
 		}
 	}
 	// 树木连掷
@@ -4015,21 +4059,21 @@
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-			"bonus_armor"				"10 17 24 31"
+				"bonus_armor"				"10 17 24 31"
 				"bonus_damage"
 				{
-					"value"					"120 180 240 300"
+					"value"					"60 120 180 240"
 				}
 				"attack_speed_reduction"
 				{
-					"value"		"-40" // 30
-					"special_bonus_unique_tiny_6" "+20"// 8 完全体数值不变，破坏前期物理小小节奏，变相加强法系
+					"value"		"-40"	// 30
+					"special_bonus_unique_tiny_6" "+20"	// 8 完全体数值不变，破坏前期物理小小节奏，变相加强法系
 				}
 				"toss_bonus_damage"
 				{
-					"value"					"100 250 400 550"
+					"value"					"50 175 300 425"
 				}
-				"move_speed"		"20 40 60 80"	// x2
+				"move_speed"		"10 20 30 40"
 		}
 	}
 	// 崎岖外表（先天随大招升级）
@@ -4535,29 +4579,25 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"duration"
-				{
-					"value"			"6.0"
-					"special_bonus_unique_arc_warden_4"	"+2"
-				}
 				"damage_per_second"
 				{
 					"value"		"15 30 45 60 75"
-					"LinkedSpecialBonus"		"special_bonus_unique_arc_warden_2"
+					"RequiresFacet"				"arc_warden_order"
+				}
+				"move_speed_slow_pct"
+				{
+					"value" 					"15 22 30 39 47"
+					"RequiresFacet"				"arc_warden_order"
 				}
 				"tempest_damage_per_second"
 				{
 					"value"		"20 45 70 95 120"
-					"special_bonus_unique_arc_warden_2"		"+40"
+					"RequiresFacet"				"arc_warden_disorder"
 				}
-				"search_radius"					"225"
-				"think_interval"				"0.5"
-				"move_speed_slow_pct"				"20 30 40 50 60"
 				"tempest_move_speed_slow_pct"		"6 10 14 18 22"
-				"abilitycastrange"
+				"AbilityCastRange"
 				{
-					"value"				"600 700 800 900 1000"
-					"special_bonus_unique_arc_warden_5"	"+150"
+					"value"				"500 600 700 800 900"
 				}
 		}
 	}
@@ -4568,14 +4608,33 @@
 		"AbilityManaCost"				"50 70 90 110 130"
 		"AbilityValues"
 		{
-			"duration"					"3.5 4.5 5.5 6.5 7.5"
+			"duration"
+			{
+				"value"						"4 5 6 7 8"
+				"RequiresFacet"				"arc_warden_order"
+			}
 			"tempest_duration"			"5 6 7 8 9"
 			"attack_speed_bonus"
 			{
-				"value" 				"20 40 60 80 100"
+				"value" 				"30 60 90 120 150"
+				"special_bonus_unique_arc_warden_3" 		"+40"
+				"RequiresFacet"				"arc_warden_order"
+			}
+			"attack_damage_bonus"
+			{
+				"value"								"20 40 60 80 100"
+				"special_bonus_unique_arc_warden_3" 		"+40"
+				"RequiresFacet"			"arc_warden_disorder"
+			}
+			"attack_magic_damage"
+			{
+				"value"								"20 40 60 80 100"
 				"special_bonus_unique_arc_warden_3" 		"+40"
 			}
-			"evasion_chance"			"90"
+			"AbilityCooldown"
+			{
+				"value"						"23 20 19 18 17"
+			}
 		}
 	}
 	// 闪光幽魂 鸟
@@ -4588,29 +4647,36 @@
 			"spark_damage_base"
 			{
 				"value"									"100 180 260 340 420"
-				"special_bonus_unique_arc_warden"		"+35%"
+				"RequiresFacet"			"arc_warden_order"
+			}
+			"ministun_duration"
+			{
+				"value"									"0.6 0.8 1.0 1.2 1.4"
+				"RequiresFacet"							"arc_warden_order"
 			}
 			"spark_damage_tempest"
 			{
 
-				"value"									"75 135 195 255 315"
-				"special_bonus_unique_arc_warden"		"+35%"
+				"value"									"75 140 205 270 335"
+				"RequiresFacet"							"arc_warden_disorder"
 			}
-			"ministun_duration"							"0.4 0.5 0.6 0.7 0.8"
-			"ministun_duration_tempest"					"0.6 0.8 1.0 1.2 1.4"
+			"ministun_duration_tempest"
+			{
+
+				"value"									"0.4 0.5 0.6 0.7 0.8"
+				"RequiresFacet"							"arc_warden_disorder"
+			}
 		}
 	}
 	// 风暴双雄
 	"arc_warden_tempest_double"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"40 35 30 25"
 		"AbilityValues"
 		{
-			"duration"
+			"AbilityCooldown"
 			{
-				"value"				"30"
-				"special_bonus_unique_arc_warden_6"		"+15"
+				"value"			"100 90 80 70"
 			}
 			"bounty"				"180 240 300 360"
 		}
@@ -4629,12 +4695,10 @@
 				"attack_speed"
 				{
 					"value"		"60 90 120 150 180"
-					"special_bonus_unique_bloodseeker_5" "+25"
 				}
 				"spell_amp"
 				{
 					"value"		"15 20 25 30 35"
-					"special_bonus_unique_bloodseeker_6"	"+10"
 				}
 		}
 	}
@@ -4648,13 +4712,12 @@
 				"AbilityCooldown"
 				{
 					"value"			"15 14 13 12 11"
-					"special_bonus_unique_bloodseeker"	"-2.5"
 				}
 				"silence_duration"			"3 4 5 6 7"
 				"damage"
 				{
-					"value"			"110 180 250 320 390"
-					"special_bonus_unique_bloodseeker_2"	"+120"
+					"value"			"115 190 265 340 415"
+					"special_bonus_unique_bloodseeker_2"	"+185"	// 135
 				}
 		}
 	}
@@ -4666,8 +4729,12 @@
 		{
 			"bonus_movement_speed"
 			{
-				"value"	"16 24 32 40 48"
-				"special_bonus_unique_bloodseeker_4"	"+18"
+				"value"									"10 20 30 40 50"
+			}
+			"active_movement_speed"
+			{
+				"value"									"0"
+				"special_bonus_facet_bloodseeker_bloodrush"				"4 8 12 16 20"
 			}
 			"hero_kill_heal"		"10 15 20 25 30"
 			"creep_kill_heal"		"8 12 16 20 24"
@@ -4677,20 +4744,30 @@
 	"bloodseeker_rupture"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"60"
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
-			"duration"					"10 11 12 13"
+			"duration"					"9 10 11 12"
 			"movement_damage_pct"
 			{
 				"value"	"35 45 55 65"
+			}
+			"hp_pct"
+			{
+				"value"	"10"
 				"CalculateSpellDamageTooltip"	"0"
+				"special_bonus_unique_bloodseeker_7"		"+10"	// 8
+				"DamageTypeTooltip"				"DAMAGE_TYPE_PURE"
 			}
 			"AbilityCharges"
 			{
 				"value"	"0"
 				"special_bonus_unique_bloodseeker_rupture_charges"	"+0"
+			}
+			"AbilityCooldown"
+			{
+				"value"			"60 55 50 45"	// 75 70 65
+				"special_bonus_unique_bloodseeker_rupture_charges"	"=0.25"
 			}
 		}
 	}
@@ -4701,34 +4778,36 @@
 	"bounty_hunter_shuriken_toss"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"475 525 575 625 675"
-		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityCastRange"				"425 475 525 575 625"
+		"AbilityManaCost"				"60 70 80 90 100"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
-				"value"					"150 200 250 325 400"
-				"special_bonus_unique_bounty_hunter_2"	"+50"
+				"value"					"100 170 240 310 380"
 			}
-			"cast_range"			"475 525 575 625 675"
+			"cast_range"			"425 475 525 575 625"
 		}
 	}
 	// 忍术
 	"bounty_hunter_jinada"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 8 6 4 2"
 		"AbilityValues"
 		{
 			"bonus_damage"
 			{
 				"value"			"60 100 140 180 220"
-				"special_bonus_unique_bounty_hunter_4"	"+40"
+				"special_bonus_unique_bounty_hunter_4"	"+30"
 			}
 			"gold_steal"
 			{
-				"value"			"6 8 10 12 14"
-				"special_bonus_unique_bounty_hunter"		"+6"
+				"value"			"6 8 10 12 14"	// /2
+				"special_bonus_unique_bounty_hunter"		"+10"	// 50 电脑钱太好偷了，削弱
+			}
+			"AbilityCooldown"
+			{
+				"value"			"10 8 6 4 2"
 			}
 		}
 	}
@@ -4747,7 +4826,6 @@
 				"AbilityCooldown"
 				{
 					"value"		"18 17 16 15 14"
-					"special_bonus_shard" "-5"
 				}
 				"AbilityChargeRestoreTime"
 				{
@@ -4760,21 +4838,29 @@
 	"bounty_hunter_track"
 	{
 		"MaxLevel" "4"
+		"AbilityCooldown"				"6 5 4 3"
 		"AbilityValues"
 		{
-				"target_crit_multiplier"	"170 200 230 260"		// 140 170 200 230
+				"target_damage_amp"	"6 12 18 24"
 				"bonus_gold_self"
 				{
-					"value"		"200 250 300 350"
-					"special_bonus_unique_bounty_hunter_3"	"+90"
+					"value"		"130 225 320 415"
 				}
 				"bonus_gold"
 				{
-					"value"		"100 150 200 250"
-					"special_bonus_unique_bounty_hunter_3"	"+90"
+					"value"		"80 160 240 320"	// x2
 				}
+				"gold_steal"			"0.3 0.4 0.5 0.6"
 				"bonus_move_speed_pct"	"16 20 24 28"
-				"toss_crit_multiplier"	"200 230 260 290"
+		}
+	}
+	// 妙手空空
+	"bounty_hunter_cutpurse"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"gold_steal"					"4 8 12 16 20"
 		}
 	}
 	//=================================================================================================================
@@ -4984,7 +5070,7 @@
 				}
 				"damage_per_second"
 				{
-					"value"				"50 70 90 110 130"
+					"value"				"50 80 110 140 170"	// +10
 				}
 				"unit_count"
 				{
@@ -5001,11 +5087,19 @@
 			"radius"
 			{
 				"value"			"250 350 450 550 650"
-				"affected_by_aoe_increase"	"1"
 			}
 			"bonus_hero_damage"
 			{
 				"value"		"40 80 120 160 200"
+			}
+			"AbilityCooldown"
+			{
+				"value"									"11 10 9 8 7"
+				"special_bonus_unique_ember_spirit_4"	"=0"
+			}
+			"AbilityChargeRestoreTime"
+			{
+				"value"									"11 10 9 8 7"
 			}
 		}
 	}
@@ -5019,12 +5113,12 @@
 				"duration"						"12 14 16 18 20"
 				"damage_per_second"
 				{
-					"value"			"20 30 40 50 60"
+					"value"			"15 30 45 60 75"	// +5
 				}
 				"absorb_amount"
 				{
-					"value"					"240 270 420 570 720"
-					"special_bonus_unique_ember_spirit_1"			"+400"	// 200
+					"value"						"120 270 420 570 720"	// x2
+					"special_bonus_unique_ember_spirit_1"			"+400"	// 165
 				}
 		}
 	}
@@ -5036,13 +5130,12 @@
 		{
 				"AbilityChargeRestoreTime"
 				{
-					"value"			"28.0"
+					"value"			"30.0"
 					"special_bonus_unique_ember_spirit_5"	"-8"
 				}
 				"damage"
 				{
 					"value"			"100 200 300 400"
-					"CalculateSpellDamageTooltip" "1"
 				}
 		}
 	}
@@ -5051,6 +5144,19 @@
 		"AbilityValues"
 		{
 				"damage"				"100 200 300 400"
+		}
+	}
+	// 献祭心
+	"ember_spirit_immolation"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+				"damage"
+				{
+					"value"			"10 20 30 40 50"
+					"special_bonus_shard"			"+10"
+				}
 		}
 	}
 	//=================================================================================================================
@@ -5158,7 +5264,7 @@
 			{
 				"value"		"1800"	// 900
 				"affected_by_aoe_increase"	"1"
-				"special_bonus_unique_faceless_void_2" "+160"
+				"special_bonus_unique_faceless_void_2" "+400"
 			}
 			"duration"
 			{
@@ -5313,7 +5419,7 @@
 				}
 				"damage"
 				{
-					"value"					"300 500 700 900"	// 250 400 550 700
+					"value"					"300 500 700 900"	// 250 425 600
 				}
 		}
 	}
@@ -5325,19 +5431,17 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"18 16 14 12 10"
-		"AbilityManaCost"				"75 85 95 105 115"
+		"AbilityManaCost"				"80 90 100 110 120"
 		"AbilityValues"
 		{
 			"bonus_range"			"75 150 225 300 375"
 			"acorn_shot_damage"
 			{
-				"value"		"55 90 125 160 195"
-				"CalculateSpellDamageTooltip"	"0"
+				"value"		"50 100 150 200 250"	// +10
 			}
 			"base_damage_pct"
 			{
 				"value"		"100"
-				"CalculateSpellDamageTooltip"	"0"
 			}
 			"bounce_count"
 			{
@@ -5364,12 +5468,15 @@
 		"AbilityManaCost"				"90 100 110 120 130"
 		"AbilityValues"
 		{
+			"trap_radius"
+			{
+				"value"		"280"	// 265
+			}
 			"debuff_duration"		"1.4 1.6 1.8 2.0 2.2"
 			"total_damage"
 			{
 				"value"							"90 180 270 360 450"
-				"CalculateSpellDamageTooltip"	"1"
-				"LinkedSpecialBonus"			"special_bonus_unique_hoodwink_bushwhack_damage"
+				"special_bonus_unique_hoodwink_bushwhack_damage" "+150"	// 60
 			}
 		}
 	}
@@ -5388,12 +5495,12 @@
 			"cast_range"
 			{
 				"value"							"0"
-				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+				"special_bonus_facet_hoodwink_hunter"	"100 150 200 250 300"
 			}
 			"attack_range"
 			{
 				"value"							"0"
-				"special_bonus_facet_hoodwink_hunter"	"50 100 150 200 250"
+				"special_bonus_facet_hoodwink_hunter"	"100 150 200 250 300"
 			}
 		}
 	}
@@ -5404,10 +5511,14 @@
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
+			"arrow_width"
+			{
+				"value"	"150"	// 125
+			}
 			"max_damage"
 			{
-				"value"				"550 900 1250 1600"
-				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+250"	// 125
+				"value"				"600 1000 1400 1800"	// 550 900 1250
+				"special_bonus_unique_hoodwink_sharpshooter_damage"		"+400"	// 125
 			}
 			"slow_move_pct"				"30 40 50 60"
 		}
@@ -5418,6 +5529,10 @@
  		"MaxLevel"						"5"
  		"AbilityValues"
  		{
+ 			"radius"
+			{
+				"value"		"350"		// 275
+			}
 			"redirect_chance"	"15 20 25 30 35"
  		}
 	}
@@ -5639,7 +5754,7 @@
                 	{
                     		"value"         "25" //20
                 	}
-			"bonus_damage_per_level"            
+			"bonus_damage_per_level"
                 	{
                    		"value"                         "2"
                     		"special_bonus_unique_luna_3"   "x2"
@@ -5682,20 +5797,6 @@
 				"value"									"0"
 				"special_bonus_facet_luna_moonshield"	"10 15 20 25 30"
 			}
-		}
-	}
-	// 月之祝福（旧版 加攻击速度）
-	"luna_lunar_grace"
-	{
-		"MaxLevel" "5"
-		"AbilityCooldown"				"30 25 20 15 10"
-		"LinkedAbility"					"luna_moon_glaive"
-		"AbilityDraftPreAbility"			"luna_moon_glaive"
-		"AbilityValues"
-		{
-			"attack_speed"				"30 45 60 75 90"
-			"night_multiplier"			"2.0"
-			"duration"				"5.0"
 		}
 	}
 	// 月蚀
@@ -5909,51 +6010,63 @@
 	"monkey_king_boundless_strike"
 	{
 		"MaxLevel" "5"
+		"AbilityManaCost"				"85 90 95 100 105"
 		"AbilityValues"
 		{
 			"stun_duration"
 			{
 				"value"										"0.7 0.9 1.1 1.3 1.5"
-				"special_bonus_unique_monkey_king_9"		"+0.4"
 			}
 			"strike_crit_mult"
 			{
-				"value"						"135 165 195 225 255"
-				"DamageTypeTooltip"			"DAMAGE_TYPE_PHYSICAL"
+				"value"						"120 140 160 180 200"
 			}
+			"strike_flat_damage"	"20 40 60 80 100"
 			"AbilityCooldown"
 			{
-				"value"					"28 26 24 22 20"
+				"value"					"27 24 21 18 15"
 			}
 		}
 	}
-	// 七十二变
-	"monkey_king_mischief"
+	// 金箍棒法
+	"monkey_king_jingu_mastery"
 	{
+		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"movespeed"					"450"
+				"counter_duration"			"7 8 9 10 11"
+				"required_hits"
+				{
+					"value"			"3"
+				}
+				"bonus_damage"
+				{
+					"value"						"60 120 180 240 300"
+				}
+				"lifesteal"					"20 40 60 80 100"
 		}
 	}
 	// 猴子猴孙
 	"monkey_king_wukongs_command"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"120"
-		"AbilityDuration"				"8.0"
+		"AbilityCooldown"				"150"
 		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
 				"bonus_armor"
 				{
-					"value"			"19 24 29 34"
-					"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_4"
+					"value"			"15 20 25 30"
 				}
 				"attack_speed"						"1.15 1.1 1.05 1.0"
-				"duration"							"8.0"
+				"duration"
+				{
+					"value"								"8"
+					"special_bonus_facet_monkey_king_wukongs_faithful"	"+2.0"
+				}
 				"cooldown_scepter"
 				{
-					"value"		"90 80 70 60"
+					"value"		"120"
 					"RequiresScepter"	"1"
 				}
 				"scepter_spawn_interval"
@@ -5963,25 +6076,16 @@
 				}
 		}
 	}
-	// 金箍棒法
-	"monkey_king_jingu_mastery"
+	// 七十二变
+	"monkey_king_mischief"
 	{
-		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"counter_duration"			"7 9 11 13 15"
-				"required_hits"
-				{
-					"value"			"3"
-					"special_bonus_unique_monkey_king_11"	"-1"
-				}
-				"bonus_damage"
-				{
-					"value"						"60 120 180 240 300"
-					"LinkedSpecialBonus"		"special_bonus_unique_monkey_king_2"
-					"CalculateSpellDamageTooltip"	"0"
-				}
-				"lifesteal"					"30 60 90 120 150"
+			"movespeed"					"50"
+			"invul_duration"
+			{
+				"value"										"0.5"
+			}
 		}
 	}
 	//=================================================================================================================
@@ -6002,7 +6106,6 @@
 			"AbilityCooldown"
 			{
 				"value"														"20 18 16 14 12"
-				"special_bonus_unique_morphling_waveform_cooldown"			"-40%"
 			}
 		}
 	}
@@ -6011,17 +6114,16 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"600 700 800 900 1000"
-		"AbilityManaCost"				"40 50 60 70 80"
+		"AbilityManaCost"				"40 60 80 100 120"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
 				{
-					"value"									"16 14 12 10 8"
+					"value"									"18 16 14 12 10"
 				}
 				"damage_base"
 				{
 					"value"					"55 65 75 85 95"
-					"CalculateSpellDamageTooltip"	"1"
 				}
 				"damage_min"
 				{
@@ -6030,8 +6132,7 @@
 				}
 				"damage_max"
 				{
-					"value"				"1.0 2.0 3.0 4.0 5.0" // 1.0 1.5 2.0 2.5
-					"CalculateSpellDamageTooltip"	"0"
+					"value"				"1.0 1.5 2.0 2.5 3.0"
 				}
 		}
 	}
@@ -6040,22 +6141,20 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"600 700 800 900 1000"
-		"AbilityManaCost"				"50 60 70 80 90"
+		"AbilityManaCost"				"40 60 80 100 120"
 		"AbilityValues"
 		{
 				"AbilityCooldown"
 				{
-					"value"									"16 14 12 10 8"
+					"value"									"18 16 14 12 10"
 				}
 				"stun_min"
 				{
 					"value" "1.0" // 0.5
-					"special_bonus_unique_morphling_10" "+1.0"
 				}
 				"stun_max"
 				{
 					"value"	"1.5 2.0 2.5 3.0 3.5" // 1.2 1.6 2.0 2.4
-					"special_bonus_unique_morphling_10"	"+1.0"
 				}
 		}
 	}
@@ -6070,8 +6169,6 @@
 			"mana_cost"
 			{
 				"value"						"5 10 15 20 25"
-				"special_bonus_unique_morphling_morph_no_manacost"		"-100%"
-				"special_bonus_shard"		"-50%"
 			}
 		}
 	}
@@ -6086,8 +6183,6 @@
 			"mana_cost"
 			{
 				"value"						"5 10 15 20 25"
-				"special_bonus_unique_morphling_morph_no_manacost"		"-100%"
-				"special_bonus_shard"		"-50%"
 			}
 		}
 	}
@@ -6108,7 +6203,7 @@
 		"AbilityCooldown"				"120 100 80 60"
 		"AbilityValues"
 		{
-            "scepter_stat_steal"
+			"scepter_stat_steal"
 			{
 				"value"						"40" // 20
 				"RequiresScepter"			"1"
@@ -6261,6 +6356,7 @@
 		"Maxlevel"						"5"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityManaCost"				"70 80 90 100 110"
+		"AbilityCooldown"				"10 9 8 7 6"
 		"AbilityValues"
 		{
 			"damage"
@@ -6272,10 +6368,6 @@
 			{
 				"value"						"450" // x1.5
 				"affected_by_aoe_increase"	"1"
-			}
-			"status_resistance"
-			{
-				"value"						"-15 -30 -45 -60 -75" // FIXME 暂时参考光暗强度，实战强了的话再砍
 			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_3"
@@ -6332,8 +6424,16 @@
 				"stack_bonus_damage"
 				{
 					"value"				"35 50 65 80 95"
-					"CalculateSpellDamageTooltip"	"0"
-					"special_bonus_unique_nevermore_7"	"+50" // 30
+				}
+				"movement_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
+				}
+				"attack_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
 				}
 		}
 	}
@@ -6351,8 +6451,16 @@
 				"stack_bonus_damage"
 				{
 					"value"				"35 50 65 80 95"
-					"CalculateSpellDamageTooltip"	"0"
-					"special_bonus_unique_nevermore_7"	"+50" // 30
+				}
+				"movement_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
+				}
+				"attack_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
 				}
 		}
 	}
@@ -6370,8 +6478,16 @@
 				"stack_bonus_damage"
 				{
 					"value"				"35 50 65 80 95"
-					"CalculateSpellDamageTooltip"	"0"
-					"special_bonus_unique_nevermore_7"	"+50" // 30
+				}
+				"movement_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
+				}
+				"attack_speed_debuff"
+				{
+					"value"											"0 0 0 0 0"
+					"special_bonus_facet_nevermore_shadowmire"		"=5 =6 =7 =8 =9"
 				}
 		}
 	}
@@ -6402,15 +6518,11 @@
 			{
 				"value"		"-4 -6 -8 -10 -12"
 			}
+			// 天命 经久不衰
 			"bonus_armor_per_stack"
 			{
 				"value"						"0"
 				"special_bonus_facet_nevermore_lasting_presence"	"+1" // 2
-			}
-			"kill_buff_duration"
-			{
-				"value"						"0"
-				"special_bonus_facet_nevermore_lasting_presence"	"+120" // 60
 			}
 		}
 	}
@@ -6434,7 +6546,7 @@
 				"value"													"0"
 				"special_bonus_unique_nevermore_frenzy_castspeed"		"=160" // =140
 			}
-			"soul_cost"				"2"
+			"soul_cost"				"3"		// 5
 		}
 	}
 	// 魂之挽歌
@@ -6481,7 +6593,7 @@
 		"MaxLevel" "5"
 		"LinkedAbility"					"nyx_assassin_jolt"
 		"AbilityDraftPreAbility"		"nyx_assassin_jolt"
-		"AbilityCooldown"				"18 15 12 9 6"
+		"AbilityCooldown"				"18 16 14 12 10"
 		"AbilityManaCost"				"70 90 110 130 150"
 		"AbilityValues"
 		{
@@ -6491,7 +6603,6 @@
 				"special_bonus_unique_nyx_5"			"+0.5"
 			}
 		}
-		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
 	}
 	// 神智爆裂
 	"nyx_assassin_jolt"
@@ -6549,7 +6660,6 @@
 			"bonus_damage"
 			{
 				"value"					"300 500 700 900"	// 300 400 500
-				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
 	}
@@ -6575,14 +6685,6 @@
 			{
 				"value"		"600"	// 400
 			}
-		}
-	}
-	// 法力燃烧 天命1
-	"nyx_assassin_innate_mana_burn"
-	{
-		"AbilityValues"
-		{
-			"mana_pct"		"15 20 25 30 35"
 		}
 	}
 	//=================================================================================================================
@@ -6657,7 +6759,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityManaCost"				"100 150 200 250"
-		"AbilityDamage"					"150 300 450 600"	// x2
+		"AbilityDamage"					"100 200 300 400"	// 75 150 225
 		"AbilityValues"
 		{
 				"AbilityCooldown"
@@ -6785,11 +6887,11 @@
 	//=================================================================================================================
 	// Ability: Razor 剃刀/电棍/雷泽
 	//=================================================================================================================
-	// 呼啦圈
+	// 等离子场 呼啦圈
 	"razor_plasma_field"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10"
+		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilityValues"
 		{
 			"damage_min"
@@ -6804,25 +6906,19 @@
 			}
 			"radius"
 			{
-				"value"				"700 800 800 900 1000"
-				"special_bonus_unique_razor_101"    "+200"
+				"value"			"700"
+				"affected_by_aoe_increase"	"1"
+				"special_bonus_unique_razor_101"	 "+300"
 			}
-			"speed"						"1000"
 			"slow_min"				"20 25 30 35 40"
-			"slow_max"				"60 75 90 105 120"
-			"slow_duration"				"2"
-			"second_ring_delay"
-			{
-				"value"						"0"
-				"special_bonus_unique_razor_plasmafield_second_ring"				"+0.8"
-			}
+			"slow_max"				"60 70 80 90 100"
 		}
 	}
 	"special_bonus_unique_razor_101"
 	{
-	    "BaseClass"					"special_bonus_undefined"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 	}
 	// 静电连接
 	"razor_static_link"
@@ -6832,38 +6928,29 @@
 		"AbilityManaCost"				"65 75 85 100 120"
 		"AbilityValues"
 		{
-			"drain_length"
-			{
-				"value"			"4 5 6 7 8"
-				"special_bonus_unique_razor_3"	"+6"
-			}
 			"drain_duration"		"12 14 16 18 20"
 			"drain_rate"
 			{
-				"value"			"11 15 19 23 27"
+				"value"			"10 15 20 25 30"
 				"special_bonus_unique_razor"	"+10"
 			}
 		}
 	}
 	// 风暴涌动
-	"razor_unstable_current"
+	"razor_storm_surge"
 	{
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-			"self_movement_speed_pct"
-			{
-				"value"			"8 12 16 20 24"
-			}
 			"strike_damage"
 			{
-				"value"													"40 80 120 160 200"
-				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25%"
+				"value"													"50 90 130 170 210"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+50%"
 			}
 			"strike_move_slow_pct"
 			{
 				"value"				"25 30 35 40 45"
-				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+25"
+				"special_bonus_unique_razor_storm_surge_damage_and_slow"			"+50"
 			}
 		}
 	}
@@ -6871,39 +6958,38 @@
 	"razor_eye_of_the_storm"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"80 75 70 65"
+		"AbilityCooldown"				"90 80 70 60"
 		"AbilityManaCost"				"100 150 200 250"
 		"AbilityValues"
 		{
 				"duration"
 				{
 					"value"			"30.0"
-					"special_bonus_unique_razor_401"    "+20"
+					"special_bonus_unique_razor_401"	"+20"
 				}
 				"strike_interval"
 				{
 					"value"		"0.7 0.6 0.5 0.4"
-					"LinkedSpecialBonus"	"special_bonus_unique_razor_2"
 				}
 				"damage"
 				{
-					"value"			"30.0 35.0 40.0 45.0"
-					"special_bonus_unique_razor_402"    "+60"
+					"value"			"60 75 90 105"
+					"special_bonus_unique_razor_402"	"+15"
 				}
 		}
 	}
 	"special_bonus_unique_razor_401"
-    {
-        "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    }
-    "special_bonus_unique_razor_402"
-    {
-        "BaseClass"					"special_bonus_undefined"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-    }
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	}
+	"special_bonus_unique_razor_402"
+	{
+		"BaseClass"					"special_bonus_undefined"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+	}
 	//=================================================================================================================
 	// Ability: Riki 力丸/隐刺/SA
 	//=================================================================================================================
@@ -7007,20 +7093,20 @@
 	// 魔晶大
 	"slark_depth_shroud"
 	{
-		"AbilityCooldown"				"40"	// 75
+		"AbilityCooldown"				"45"	// 75
 	}
 	// 黑暗契约
 	"slark_dark_pact"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"10 9 8 7 6"
+		"AbilityCooldown"				"9 8 7 6 5"
 		"AbilityValues"
 		{
 				"total_damage"
 				{
 					"value"			"75 150 225 300 375"
 				}
-				"self_damage_pct"			"25"	// 30
+				"self_damage_pct"			"20"	// 30
 		}
 	}
 	// 突袭 跳
@@ -7094,27 +7180,27 @@
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
-				"slow_movement_speed"
-				{
-					"value"		"-16 -20 -24 -30 -36"
-					"special_bonus_facet_sniper_scattershot"	"=-30 =-40 =-50 =-60 =-70"
-					"special_bonus_unique_sniper_5" "-10"
-				}
-				"radius"
-				{
-					"value"		"400 425 450 475 500"
-					"affected_by_aoe_increase"	"1"
-				}
-				"shrapnel_damage"
-				{
-					"value"			"40 55 70 85 100"
-					"special_bonus_facet_sniper_scattershot"	"x4"
-				}
-				"duration"
-				{
-					"value"		"10.0"
-					"special_bonus_facet_sniper_scattershot"	"=3"	// 1
-				}
+			"slow_movement_speed"
+			{
+				"value"		"-16 -20 -24 -30 -36"
+				"special_bonus_facet_sniper_scattershot"	"=-30 =-40 =-50 =-60 =-70"
+				"special_bonus_unique_sniper_5" "-10"
+			}
+			"radius"
+			{
+				"value"		"400 425 450 475 500"
+				"affected_by_aoe_increase"	"1"
+			}
+			"shrapnel_damage"
+			{
+				"value"			"40 55 70 85 100"
+				"special_bonus_facet_sniper_scattershot"	"x4"
+			}
+			"duration"
+			{
+				"value"		"10.0"
+				"special_bonus_facet_sniper_scattershot"	"=3"	// 1
+			}
 		}
 	}
 	// 爆头
@@ -7155,7 +7241,7 @@
 		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"bonus_range"				"80 160 240 320 400"
+			"bonus_range"				"60 160 260 360 460"
 		}
 	}
 	// 暗杀
@@ -7184,18 +7270,16 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"20 19 18 17 16"
-		"AbilityManaCost"				"130 140 150 160 170"
+		"AbilityManaCost"				"110 120 130 140 150"
 		"AbilityValues"
 		{
 				"damage"
 				{
-					"value"			"120 180 240 300 360"
-					"special_bonus_unique_spectre_6" "+120" // 80
+					"value"			"80 140 200 260 320"	// +10
 				}
 				"bonus_movespeed"
 				{
 					"value"			"14 16 18 20 22"
-					"special_bonus_unique_spectre_3" "+14" // 12
 				}
 		}
 	}
@@ -7207,13 +7291,11 @@
 		{
 			"bonus_damage"
 			{
-				"value"									"30 45 60 75 90"
-				"special_bonus_unique_spectre_2"		"+15"
+				"value"									"25 40 55 70 85"
 			}
 			"radius"
 			{
 				"value"				"200"
-				"special_bonus_unique_spectre_desolate_radius"			"-100"
 			}
 			"only_creep_allies_damage_pct"
 			{
@@ -7231,7 +7313,7 @@
 			"damage_reflection_pct"
 			{
 				"value"		"8 11 14 17 20"
-				"special_bonus_unique_spectre_5"		"+5"
+				"special_bonus_unique_spectre_5"		"+3"
 			}
 		}
 	}
@@ -7246,18 +7328,18 @@
 		}
 	}
 	// 如影随形 鬼影重重单体
-    "spectre_haunt_single"
-    {
+	"spectre_haunt_single"
+	{
 		"MaxLevel"						"4"
 		"AbilityCooldown"				"60 50 40 30"
-        "AbilityManaCost"				"150 250 350 450"
+		"AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 				"duration"					"5.0"
 				"illusion_damage_outgoing"	"-60 -40 -20 0"
 				"tooltip_outgoing"	"60 80 100 120"
 		}
-    }
+	}
 	//=================================================================================================================
 	// Ability: Templar Assassin 圣堂刺客/TA
 	//=================================================================================================================
@@ -7597,12 +7679,10 @@
 				"bonus_reset_time"
 				{
 					"value"						"20"
-					"special_bonus_unique_ursa_4" "+20"
 				}
-				"bonus_reset_time_roshan"		"15"
 				"damage_per_stack"
 				{
-					"value"					"15 25 35 45 55"
+					"value"					"13 21 29 37 45"
 				}
 		}
 	}
@@ -7613,14 +7693,14 @@
 		"AbilityCooldown"				"60 50 40 30"
 		"AbilityValues"
 		{
+			"AbilityCooldown"
+			{
+				"value"					"60 50 40 30"
+				"special_bonus_scepter"	"=30 =26 =22 =18"
+			}
 			"duration"
 			{
-				"value"							"4 4.33 4.67 5"
-			}
-			"cooldown_scepter"
-			{
-				"value"						"30 26 22 18"
-				"RequiresScepter"			"1"
+				"value"							"3.75 4.0 4.25 4.5"	// -0.5
 			}
 			// 命石1 伤害增加
 			"damage_increase"
@@ -7635,12 +7715,13 @@
 			}
 		}
 	}
-	// 命石2 负面效果延长
+	// 熊心勃勃 命石2 负面效果延长
 	"ursa_bear_down"
 	{
+		"MaxLevel"						"5"
 		"AbilityValues"
 		{
-			"debuff_amp"				"50" // 20
+			"debuff_amp"				"14 16 18 20 22"
 		}
 	}
 	//=================================================================================================================
@@ -7760,32 +7841,27 @@
 	// 毒刺（先天可升级）
 	"venomancer_poison_sting"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"					"5"
 		"AbilityValues"
 		{
-			"duration"				"4"
+			"duration"				"6 9 12 15 18"
 			"damage"
 			{
-			    "value" "30 45 60 75 90"
-			    "special_bonus_unique_venomancer_201"		"+30"
+				"value"				"16 32 48 64 80"
+				"special_bonus_unique_venomancer_201"		"+30"
 			}
 			"movement_speed"
 			{
-				"value"			"-14 -18 -22 -26 -30"
+				"value"			"-8 -10 -12 -14 -16"
 				"special_bonus_unique_venomancer_2"		"-10"
-			}
-			"hp_regen_reduction"
-			{
-				"value"				"0"
-				"special_bonus_unique_venomancer_poisonsting_regen_reduction"	"+50"
 			}
 		}
 	}
 	"special_bonus_unique_venomancer_201"
 	{
-        "AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
-        "AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-	    "BaseClass"					"special_bonus_undefined"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"					"special_bonus_undefined"
 	}
 	// 剧毒蛇棒
 	"venomancer_plague_ward"
@@ -7814,6 +7890,10 @@
 			{
 				"value"							"300 450 600 750 900"
 				"special_bonus_unique_venomancer" "x2.5"
+			}
+			"threshold_max_hp_pct"
+			{
+				"value"							"1 1.5 2 2.5 3"
 			}
 		}
 	}
@@ -7917,7 +7997,6 @@
 			"bonus_attack_speed"
 			{
 				"value"								"8 16 24 32 40"
-				"special_bonus_unique_viper_6"		"+20"
 			}
 			"bonus_magic_resistance"
 			{
@@ -7926,7 +8005,6 @@
 			"damage"
 			{
 				"value"					"8 16 24 32 40"
-				"special_bonus_unique_viper_1"	"+20"
 			}
 		}
 	}
@@ -7988,7 +8066,7 @@
 			"armor_reduction"
 			{
 				"value"		"1 1 1.5 1.5 2"
-				"special_bonus_unique_weaver_3"	"+0.5"
+				"special_bonus_unique_weaver_3"	"+1.0"	// 0.5
 			}
 			"destroy_attacks"
 			{
@@ -8055,11 +8133,12 @@
 			"extra_attack"
 			{
 				"value" "1"
-				"special_bonus_unique_weaver_5" "+2" // 1
+				"special_bonus_unique_weaver_5" "+1" // 1 增加次数会导致无线连击
 			}
 			"bonus_damage"
 			{
 				"value" "20 35 50 65 80"
+				"special_bonus_unique_weaver_2" "+120"	// 70
 			}
 			"shard_beetle_search_range"
 			{
@@ -8091,48 +8170,53 @@
 	// ---- Intelligence Heroes 智力英雄 ----
 	// -------------------------------------
 	//=================================================================================================================
-	// Ability: Ancient Apparition 远古冰魂/AA
+	// Ability: Ancient Apparition 远古冰魄 远古冰魂/AA
 	//=================================================================================================================
 	// 寒霜之足
 	"ancient_apparition_cold_feet"
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"700 800 900 1000 1100"
-		"AbilityCooldown"				"12 11 10 9 8"
+		"AbilityCooldown"				"13 12 11 10 9"
 		"AbilityManaCost"				"110 115 120 125 130"
 		"AbilityValues"
 		{
-			"damage"
+			"frost_stacks"
 			{
-				"value"		"30 50 70 90 110"
-				"special_bonus_unique_ancient_apparition_8"	"+40"
+				"value"		"2 4 6 8 10"
 			}
-			"stun_duration"			"1.6 2.0 2.4 2.8 3.2"
+			"break_distance"
+			{
+				"value"		"725 750 775 800 825"
+			}
+			"stun_duration"			"1.9 2.2 2.5 2.8 3.1"
 		}
 	}
 	// 冰霜漩涡
 	"ancient_apparition_ice_vortex"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"40 60 80 100 120"
+		"AbilityDuration"				"6 8 10 12 14"
+		"AbilityManaCost"				"40 50 60 70 80"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
 				"value"					"8 7 6 5 4"
-				"special_bonus_unique_ancient_apparition_3"			"-1"
 			}
 			"drag_speed"	"40 50 60 70 80"
 			"movement_speed_pct"
 			{
 				"value"	"-16 -19 -22 -25 -28"
-				"special_bonus_unique_ancient_apparition_4"	"-5"
 			}
 			"spell_resist_pct"
 			{
 				"value"		"-16 -19 -22 -25 -28"
-				"special_bonus_unique_ancient_apparition_4"	"-5"
-				"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
+			}
+			"frost_stacks"	"1 2 3 4 5"
+			"vortex_duration"
+			{
+				"value"					"6 8 10 12 14"
 			}
 		}
 	}
@@ -8144,18 +8228,18 @@
 		{
 			"damage"
 			{
-				"value"				"40 80 120 160 200"
-				"special_bonus_unique_ancient_apparition_2"		"+80"
+				"value"				"40 80 120 160 200"	// 加强伤害，减少距离
 			}
+			"slow_duration"		"0.7 0.8 0.9 1 1.1"
 			"attack_range_bonus"
 			{
-				"value"				"60 90 120 150 180"
+				"value"				"60 90 120 150 180"	// 加强伤害，减少距离
 				"special_bonus_unique_ancient_apparition_7"		"+120"
 			}
 			"AbilityManaCost"
 			{
-				"value"										"30 40 50 60 70"
-				"special_bonus_scepter"						"-20%"
+				"value"										"45 50 55 60 65"
+				"special_bonus_scepter"						"-35%"	// 保持蓝耗
 			}
 			"AbilityCooldown"
 			{
@@ -8169,15 +8253,24 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"55 50 45 40"
-		"AbilityManaCost"				"175 250 325 400"
+		"AbilityManaCost"				"175 200 225 250"
 		"AbilityDamage"					"250 325 400 475"
 		"AbilityValues"
 		{
 			"dot_damage"			"20.0 30.0 40.0 50.0"
+			"frostbite_duration"
+			{
+				"value"		"10 11 12 13"
+			}
 			"kill_pct"
 			{
 				"value"				"10 11 12 13"
 				"special_bonus_unique_ancient_apparition_5"	"+3"
+			}
+			"cold_feet_aoe"
+			{
+				"special_bonus_facet_ancient_apparition_exposure"	"200 350 500 650"
+				"affected_by_aoe_increase"			"1"
 			}
 		}
 	}
@@ -8188,8 +8281,9 @@
 	"bane_enfeeble"
 	{
 		"MaxLevel" "5"
+		"AbilityCastRange"				"800 900 1000 1100 1200"
 		"AbilityCooldown"				"24 20 16 12 8"
-		"AbilityManaCost"				"120 135 150 165 180"
+		"AbilityManaCost"				"120 130 140 150 160"
 
 		"AbilityValues"
 		{
@@ -8197,8 +8291,6 @@
 			"enfeeble_tick_damage"
 			{
 				"value"			"12 18 24 30 36"
-				"special_bonus_unique_bane_10"				"+13"
-				"CalculateSpellDamageTooltip" "1"
 			}
 		}
 	}
@@ -8206,23 +8298,16 @@
 	"bane_brain_sap"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"120 140 160 180 200"
+		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
 			"brain_sap_damage"
 			{
-				"value"									"75 150 225 300 375"
-				"special_bonus_unique_bane_2"			"+250"
+				"value"									"90 160 230 300 370"
 			}
 			"AbilityCooldown"
 			{
 				"value"	"15 14 13 12 11"
-				"special_bonus_unique_bane_8"			"-3"
-				"special_bonus_shard"				"-3"
-			}
-			"shard_secondary_target_heal_pct"
-			{
-				"special_bonus_shard"				"+35"
 			}
 		}
 	}
@@ -8230,14 +8315,19 @@
 	"bane_nightmare"
 	{
 		"MaxLevel" "5"
-		"AbilityCastRange"				"650"
+		"AbilityCastRange"				"550 600 650 700 750"
+		"AbilityDuration"				"3.5 4.5 5.5 6.5 7.5"
+		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
-			"duration"					"3.5 4.5 5.5 6.5 7.5"
 			"AbilityCooldown"
 			{
 				"value"	"22 20 18 16 14"
-				"special_bonus_unique_bane_5" "-3"
+			}
+			"bonus_attack_speed"
+			{
+				"value"						"0"
+				"special_bonus_facet_bane_dream_stalker"	"40 50 60 70 80"
 			}
 		}
 	}
@@ -8251,12 +8341,10 @@
 			"AbilityChannelTime"
 			{
 				"value"					"4.75 5.25 5.75 6.25"
-				"special_bonus_unique_bane_3"		"+3"
 			}
 			"fiend_grip_damage"
 			{
 				"value"			"70 110 150 190"
-				"CalculateSpellDamageTooltip" "1"
 			}
 			"AbilityCooldown"
 			{
@@ -8275,49 +8363,37 @@
 	// 叠油
 	"batrider_sticky_napalm"
 	{
-		"LinkedAbility"                 "dark_seer_ion_shell"
-		"AbilityDraftPreAbility"        "dark_seer_ion_shell"
+		"LinkedAbility"					"dark_seer_ion_shell"
+		"AbilityDraftPreAbility"		"dark_seer_ion_shell"
 		"MaxLevel" "5"
-		"AbilityCastRange"				"550 600 650 700 750"
 		"AbilityValues"
 		{
 			"damage"
 			{
-				"value"	"10 15 20 25 30"
-				"special_bonus_unique_batrider_4"	"+10"
-				"CalculateSpellDamageTooltip"		"1"
+				"value"	"5 10 15 20 25"
 			}
 			"movement_speed_pct" "-1.5 -3 -4.5 -6 -7.5"
 			"turn_rate_pct"			"-30 -40 -50 -60 -70"
-			"application_damage"	"10 15 20 25 30"
-			"shard_napalm_on_attack_chance_pct"
-			{
-				"value"			"100"
-				"RequiresShard"			"1"
-			}
+			"application_damage"	"10 20 30 40 50"	// x2
 		}
 	}
 	// 离子烫（来自黑贤）无敌的叠油离子烫我滴朋友
 	"dark_seer_ion_shell"
 	{
-		"LinkedAbility"                 "batrider_sticky_napalm"
-		"AbilityDraftPreAbility"        "batrider_sticky_napalm"
-		"MaxLevel"                      "5"
+		"LinkedAbility"					"batrider_sticky_napalm"
+		"AbilityDraftPreAbility"		"batrider_sticky_napalm"
+		"MaxLevel"						"5"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
 		{
 			"damage_per_second"
 			{
 				"value"										"30 50 70 90 110"
-				"special_bonus_unique_dark_seer"			"+50"
 			}
 			"duration"
 			{
 				"value"										"21 24 27 30 33"
-				"special_bonus_unique_dark_seer_15"						"+15"
 			}
-
-			"tick_interval"									"0.15"	// 0.2
 		}
 	}
 	// 燃烧弹
@@ -8332,26 +8408,28 @@
 			"damage_impact"
 			{
 				"value"			"50 75 100 125 150"
-				"CalculateSpellDamageTooltip" "1"
 			}
 			"damage_per_second"
 			{
 				"value"			"20 30 40 50 60"
-				"CalculateSpellDamageTooltip" "1"
 			}
+			"damage_duration"
+			{
+				"value"		"2 3 4 5 6"
+			}
+			"slow"	"15 20 25 30 35"
 		}
 	}
 	// 火焰飞行
 	"batrider_firefly"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"44 40 36 32 28"
+		"AbilityCooldown"				"46 42 38 34 30"
 		"AbilityValues"
 		{
 			"damage_per_second"
 			{
 				"value"			"50 75 100 125 150"
-				"CalculateSpellDamageTooltip" "1"
 			}
 		}
 	}
@@ -8362,18 +8440,27 @@
 		"AbilityManaCost"				"150 175 200 225"
 		"AbilityValues"
 		{
-			"duration"				"2.75 3.25 3.75 4.25" // +0.5
+			"duration"				"2.25 2.75 3.25 3.75"
 			"damage"
 			{
-				"value"			"100 200 300 400"
-				"CalculateSpellDamageTooltip" "1"
+				"value"			"200 350 500 650"
 			}
 			"AbilityCooldown"
 			{
 				"value"				"60"
-				"special_bonus_unique_batrider_6"			"-20"
+				"special_bonus_unique_batrider_6"			"-15"
 			}
 
+		}
+	}
+	// 火上浇油 命石1
+	"batrider_stoked"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"movement_speed_pct"		"4 6 8 10 12"
+			"spell_amplification"		"2 4 6 8 10"
 		}
 	}
 	//=================================================================================================================
@@ -8386,48 +8473,50 @@
 	// 冰霜新星
 	"crystal_maiden_crystal_nova"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"
-		"MaxLevel" "5"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"							"5"
 		"AbilityValues"
 		{
 			"AbilityCooldown"
 			{
 				"value"										"12 11 10 9 8"
-				"special_bonus_unique_crystal_maiden_5"		"-4"
 			}
 			"AbilityManaCost"				"115 135 155 175 195"
 			"movespeed_slow"				"-20 -30 -40 -50 -60"
 			"attackspeed_slow"				"-30 -45 -60 -75 -90"
 			"nova_damage"
 			{
-				"value"										"110 160 210 260 310"
-				"special_bonus_unique_crystal_maiden_2"		"+300"
+				"value"										"120 180 240 300 360"	// +10
 			}
 		}
 	}
 	// 冰封禁制
 	"crystal_maiden_frostbite"
 	{
-		"LinkedAbility"                 "visage_gravekeepers_cloak"
-		"AbilityDraftPreAbility"        "visage_gravekeepers_cloak"
+		"LinkedAbility"					"visage_gravekeepers_cloak"
+		"AbilityDraftPreAbility"		"visage_gravekeepers_cloak"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
+			"AbilityCastRange"
+			{
+				"value"								"700"
+				"special_bonus_unique_crystal_maiden_frostbite_castrange" 		"+200"
+			}
 			"AbilityCooldown"				"9 8 7 6 5"
 			"AbilityManaCost"				"125 135 145 155 165"
 			"duration"
 			{
 				"value"										"1.5 2 2.5 3 3.5"
-				"special_bonus_unique_crystal_maiden_1"		"+1.0"
 			}
 		}
 	}
 	// 陵卫斗篷（来自死灵龙）
 	"visage_gravekeepers_cloak"
 	{
-		"LinkedAbility"                 "crystal_maiden_frostbite"
-		"AbilityDraftPreAbility"        "crystal_maiden_frostbite"
-		"MaxLevel"                                  "5"
+		"LinkedAbility"					"crystal_maiden_frostbite"
+		"AbilityDraftPreAbility"		"crystal_maiden_frostbite"
+		"MaxLevel"						"5"
 		"AbilityValues"
 		{
 			"max_layers"
@@ -8479,7 +8568,7 @@
 	// 极寒领域
 	"crystal_maiden_freezing_field"
 	{
-		"SpellImmunityType"		            "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellImmunityType"					"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
@@ -8487,8 +8576,8 @@
 			"AbilityManaCost"				"200 400 600 800"
 			"damage"
 			{
-				"value"										"140 260 380 500"// 105 170 250 330（x1.5）
-				"special_bonus_unique_crystal_maiden_3"		"+100"// （x2）
+				"value"										"140 260 380 500"	// 105 170 250 330（x1.5）
+				"special_bonus_unique_crystal_maiden_3"		"+100"				// （x2）
 			}
 			"shard_self_movement_speed_slow_pct"
 			{
@@ -8910,23 +8999,21 @@
 	"enigma_malefice"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"100 120 140 160 180"
-		"AbilityCooldown"				"18 16 14 12 10"
+		"AbilityManaCost"				"100 110 120 130 140"
+		"AbilityCooldown"				"20 18 16 14 12"
 		"AbilityValues"
 		{
 			"stun_duration"
 			{
 				"value" 							"0.3 0.5 0.7 0.9 1.1"
-				"special_bonus_shard"		"+0.30"
 			}
 			"damage"
 			{
 				"value"								"55 70 85 100 115"
-				"special_bonus_unique_enigma_5"		"+35"
 			}
 		}
 	}
-	// 恶魔召唤
+	// 恶魔召唤 等级不变
 	"enigma_demonic_conversion"
 	{
 		"AbilityCooldown"				"60 57 54 51"
@@ -8936,15 +9023,13 @@
 			"spawn_count"
 			{
 				"value"			"2"
-				"special_bonus_unique_enigma"	"+1"
+				"special_bonus_unique_enigma"	"+2"
 			}
 			"eidelon_max_health"
 			{
 				"value"			"300 500 700 900"
-				"special_bonus_unique_enigma_7"	"+300"
 			}
 			"eidelon_base_damage"		"30 42 54 66"
-			"eidolon_damage_spread"			"4"
 			"eidolon_attack_range"		"500 550 600 650"
 		}
 	}
@@ -8953,7 +9038,7 @@
 	{
 		"AbilityValues"
 		{
-				"damage_threshold"				"700"	// 350
+				"damage_threshold"				"900"	// 350
 		}
 	}
 	// 午夜凋零
@@ -8961,36 +9046,54 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"45 40 35 30 25"
-		"AbilityManaCost"				"50 80 110 140 170"
+		"AbilityManaCost"				"65 90 115 140 165"
 		"AbilityValues"
 		{
 				"damage_percent"			"4 5 6 7 8"
 				"duration"
 				{
 					"value"			"10"
-					"special_bonus_unique_enigma_8"	"+5"
 				}
-				"base_damage"				"5 10 15 20 25"
+				"base_damage"				"10 20 30 40 50"	// x2
 		}
 	}
 	// 黑洞
 	"enigma_black_hole"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"130"
+		"AbilityCooldown"				"120"
 		"AbilityManaCost"				"300 400 500 600"
 		"AbilityValues"
 		{
 			"damage"
 			{
 				"value"		"100 150 200 250"
-				"special_bonus_unique_enigma_6"	"+50"
 			}
 			"scepter_pct_damage"
 			{
-				"value"					"3"
+				"value"					"3.5"
 				"RequiresScepter"		"1"
 			}
+		}
+	}
+	// 重力井 先天技能
+	"enigma_gravity_well"
+	{
+		"MaxLevel"						"5"
+
+		"AbilityValues"
+		{
+			"damage_reduction"	"9 11 13 15 17"
+		}
+	}
+	// 事件视界
+	"enigma_event_horizon"
+	{
+		"MaxLevel"						"5"
+
+		"AbilityValues"
+		{
+			"speed_bonus"	"9 11 13 15 17"
 		}
 	}
 	//=================================================================================================================
@@ -9001,11 +9104,11 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCastRange"				"625 700 775 850 925"
-		"AbilityCooldown"				"12 11 10 9 8"
+		"AbilityCooldown"				"14 13 12 11 10"
 		"AbilityManaCost"				"70 90 110 130 150"
 		"AbilityValues"
 		{
-			"duration"						"2.5 3 3.5 4 4.5"
+			"duration"						"2.0 2.5 3 3.5 4"
 			"sprout_damage"
 			{
 				"value"		"70 140 210 280 350"
@@ -9031,7 +9134,7 @@
 			}
 			"barrier"
 			{
-				"value"					"200 300 400 500 600"
+				"value"					"200 300 400 500 600"	// x2
 				"special_bonus_unique_furion_teleportation_barrier"				"+400"
 			}
 		}
@@ -9089,7 +9192,18 @@
 
 			"damage"
 			{
-				"value"				"125 175 225 275"
+				"value"				"50 70 90 110"	// 伤害折半
+				"special_bonus_unique_furion_5"			"+15"
+			}
+			"AbilityCooldown"
+			{
+				"value"						"120"
+				"special_bonus_scepter"		"-10"
+			}
+			"scepter_max_entangle_duration"
+			{
+				"value"					"5.0"	// 3.0
+				"RequiresScepter"		"1"
 			}
 		}
 	}
@@ -9107,32 +9221,26 @@
 				"damage"
 				{
 					"value"		"100 180 260 340 420" // 100 160 220 280
-				"special_bonus_unique_grimstroke_2" "+100%"	// 75%
+					"special_bonus_unique_grimstroke_2" "+100%"	// 75%
 				}
 				"bonus_damage_per_target"
 				{
 					"value"	"40 50 60 70 80" // +20
-					"special_bonus_facet_grimstroke_fine_art"	"+0 +5 +10 +15 +20"
-				"special_bonus_unique_grimstroke_2" "+100%"	// 75%
+					"special_bonus_facet_grimstroke_fine_art"	"+0 +10 +20 +30 +40"
+					"special_bonus_unique_grimstroke_2" "+100%"	// 75%
 				}
 				"movement_slow_pct"		"50 60 70 80 90"
 				"AbilityCastRange"
 				{
-					"value"									"1400"
-					"special_bonus_unique_grimstroke_3"		"+100%"
-				}
-				"projectile_speed"
-				{
-					"value"						"2000"
-					"special_bonus_unique_grimstroke_3"		"+100%"
+					"value"									"1800"		// 1400
 				}
 		}
 	}
 	// 幻影之拥
 	"grimstroke_ink_creature"
 	{
-		"LinkedAbility"                 "visage_soul_assumption"
-		"AbilityDraftPreAbility"        "visage_soul_assumption"
+		"LinkedAbility"					"visage_soul_assumption"
+		"AbilityDraftPreAbility"		"visage_soul_assumption"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityCooldown"				"26 24 22 20 18"
@@ -9157,10 +9265,10 @@
 	// 灵魂超度（来自维萨吉）
 	"visage_soul_assumption"
 	{
-		"LinkedAbility"                 "grimstroke_ink_creature"
-		"AbilityDraftPreAbility"        "grimstroke_ink_creature"
+		"LinkedAbility"					"grimstroke_ink_creature"
+		"AbilityDraftPreAbility"		"grimstroke_ink_creature"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
-		"MaxLevel"                      "5"
+		"MaxLevel"						"5"
 		"AbilityManaCost"				"70 80 90 100 110"
 		"AbilityValues"
 		{
@@ -9183,6 +9291,7 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"24 21 18 15 12"
+		"AbilityCastRange"				"500 600 700 800 900"
 		"AbilityManaCost"				"120 130 140 150 160"
 		"AbilityValues"
 		{
@@ -9193,6 +9302,11 @@
 				"max_stun"				"1.3 1.8 2.3 2.8 3.3"
 				"damage_per_tick"		"15 20 25 30 35"	// 5 8 11 14
 				"tick_dps_tooltip"		"75 100 125 150 175"	// damage_per_tick x5
+				"shard_heal_pct"
+				{
+					"value"		"50"	// 30
+					"RequiresShard"					"1"
+				}
 		}
 	}
 	// 暗绘
@@ -9203,11 +9317,11 @@
 		{
 			"images_take_damage_percent"
 			{
-				"value" "50"
+				"value" "150"
 			}
 			"images_take_damage_percent_tooltip"
 			{
-				"value" "150"
+				"value" "250"
 			}
 			"images_movespeed_bonus"
 			{
@@ -9215,10 +9329,10 @@
 			}
 		}
 	}
-	//缚魂
+	// 缚魂
 	"grimstroke_soul_chain"
 	{
-		"MaxLevel"                      "4"
+		"MaxLevel"						"4"
 		"AbilityCooldown"				"60 55 50 45"
 		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityManaCost"				"150 200 250 300"
@@ -9289,7 +9403,7 @@
 			}
 			"base_damage"
 			{
-				"value"							"150"	// 50
+				"value"							"200"	// 50
 				"CalculateSpellDamageTooltip"	"1"
 			}
 		}
@@ -9336,6 +9450,12 @@
 			"AbilityCooldown"
 			{
 				"value"					"25"	// 50
+			}
+			"land_time"					"1.0"	// 1.3
+			"main_damage"
+			{
+				"value"					"60 90 120 150 180 210 240 270"	// +5
+				"levelkey"				"exortlevel"
 			}
 		}
 	}
@@ -9503,7 +9623,11 @@
 			"damage"
 			{
 				"value"								"100 150 200 250"
-				"special_bonus_unique_jakiro_7"		"+30"
+			}
+			"duration"
+			{
+				"value"							"8.0"	// 10
+				"special_bonus_scepter"			"+4.0"
 			}
 			"linger_duration"			"1"	// 2
 		}
@@ -9593,7 +9717,7 @@
 			"duration"
 			{
 				"value"				"60.0"
-				"special_bonus_unique_keeper_of_the_light_11"	"+15"
+				"special_bonus_unique_keeper_of_the_light_11"	"+30"
 			}
 			"movement_speed"			"15 20 25 30"
 			"cast_range"			"125 250 375 500"
@@ -9677,13 +9801,12 @@
 	{
 		"MaxLevel" "5"
 		"AbilityManaCost"				"80 100 120 140 160"
-		"AbilityDamage"					"120 180 240 300 360"
+		"AbilityDamage"					"115 170 225 280 335"
 		"AbilityValues"
 		{
 				"radius"
 				{
 					"value"	"135 160 185 210 235"
-					"affected_by_aoe_increase"	"1"
 				}
 		}
 	}
@@ -9696,7 +9819,7 @@
 		{
 				"num_explosions"
 				{
-					"value"		"60"	// 40
+					"value"		"50"	// 40
 				"special_bonus_unique_leshrac_1" "+30"	// 20
 				}
 				"damage"
@@ -9741,7 +9864,7 @@
 				"damage"
 				{
 					"value"			"80 135 180 225"
-				"special_bonus_unique_leshrac_3" "+55"	// 30
+				"special_bonus_unique_leshrac_3" "+45"	// 30
 				}
 		}
 	}
@@ -10004,7 +10127,7 @@
 				"special_bonus_facet_lina_supercharge"			"+10"	// 5
 				"RequiresFacet"					"lina_supercharge"
 			}
-			"supercharge_stacks"    
+			"supercharge_stacks"
             {
                 "value"                     "0"
                 "special_bonus_facet_lina_supercharge"  "=15"
@@ -10109,7 +10232,7 @@
 					"RequiresScepter"			"1"
 				}
 		}
-    }
+	}
 	// 下地狱再上来（先天）
 	"lion_to_hell_and_back"
 	{
@@ -10134,8 +10257,8 @@
 		{
 				"heal"
 				{
-					"value"		"60 90 120 150 180"
-				"special_bonus_unique_necrophos_4" "+60"
+					"value"		"60 90 120 150 180"		// +5
+					"special_bonus_unique_necrophos_4" "+60"	// 50
 				}
 		}
 	}
@@ -10147,12 +10270,8 @@
 		{
 			"aura_damage"
 			{
-				"value"		"1.2 1.5 1.8 2.1 2.4"
+				"value"		"1.2 1.6 2.0 2.4 2.8"
 			}
-			"heal_regen_to_damage"
-            		{
-                		"special_bonus_scepter" "+20"
-            		}
 		}
 	}
 	// 施虐之心
@@ -10196,7 +10315,7 @@
 		"AbilityManaCost"				"250 375 500 625"
 		"AbilityValues"
 		{
-			"damage_per_health"			"0.8 0.85 0.9 0.95"
+			"damage_per_health"			"0.7 0.8 0.9 1.0"
 			"hp_per_kill"				"4 8 12 16"
 			"mana_per_kill"				"2 4 6 8"
 		}
@@ -10214,7 +10333,6 @@
 			"mana_pool_damage_pct"
 			{
 				"value"										"9 10 11 12 13"
-				"special_bonus_unique_outworld_devourer"	"+2"
 			}
 			"mana_cost_percentage"							"30"	// 20
 		}
@@ -10373,7 +10491,7 @@
 	// 气运之末
 	"oracle_fortunes_end"
 	{
-		"MaxLevel" "5"
+		"MaxLevel"						"5"
 		"AbilityCooldown"				"14 12 10 8 6"
 		"AbilityManaCost"				"100 110 120 130 140"
 		"AbilityValues"
@@ -10413,8 +10531,8 @@
 	// 虚妄之诺
 	"oracle_false_promise"
 	{
-		"LinkedAbility"                 "chen_hand_of_god"
-		"AbilityDraftPreAbility"        "chen_hand_of_god"
+		"LinkedAbility"					"chen_hand_of_god"
+		"AbilityDraftPreAbility"		"chen_hand_of_god"
 		"MaxLevel" "4"
 		"AbilityCastRange"				"700 800 900 1000"
 		"AbilityManaCost"				"100 150 200 250"
@@ -10444,20 +10562,20 @@
 	"chen_hand_of_god"
 	{
 		"MaxLevel" "4"
-		"LinkedAbility"                 "oracle_false_promise"
-		"AbilityDraftPreAbility"        "oracle_false_promise"
-		"AbilityCooldown"				"90 80 70 60"// 150 130 110 同步cd与完全体虚妄相同
+		"LinkedAbility"					"oracle_false_promise"
+		"AbilityDraftPreAbility"		"oracle_false_promise"
+		"AbilityCooldown"				"90 80 70 60"				// 150 130 110 同步cd与完全体虚妄相同
 		"AbilityManaCost"				"200 300 400 500"
 		"AbilityValues"
 		{
 			"heal_amount"
 			{
-				"value"							"600 1000 1400 1800"// （x2）
+				"value"							"300 500 700 900"	// +100
 			}
 			"hot_duration"	"8"
 			"heal_per_second"
 			{
-				"value"							"40 60 80 100"// (x2)
+				"value"							"40 60 80 100"			// x2
 			}
 			"does_purge"
 			{
@@ -10652,7 +10770,7 @@
 			"tower_scale"
 			{
 				"value"			"0"
-				"special_bonus_facet_pugna_rewards_of_ruin"		"15"	// 1.5
+				"special_bonus_facet_pugna_rewards_of_ruin"		"12"	// 1.25
 			}
 		}
 	}
@@ -10685,7 +10803,6 @@
 		"LinkedAbility"					"queenofpain_shadow_strike"
 		"AbilityDraftPreAbility"		"queenofpain_shadow_strike"
 		"MaxLevel"						"5"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"// FIXME 暂时无视bkb
 		"AbilityCastRange"				"500 550 600 650 700" // 与镖同步
 		"AbilityCooldown"				"30"
 		"AbilityManaCost"				"60 90 120 150 180"
@@ -10838,9 +10955,8 @@
 		"AbilityValues"
 		{
 			"cast_range"				"60 120 180 240 300"
-			"spell_amp"					"14 18 22 26 30"
+			"spell_amp"					"11 16 21 26 31"
 		}
-
 	}
 	// 技能窃取
 	"rubick_spell_steal"
@@ -11077,11 +11193,7 @@
 			}
 			"bonus_damage"
 			{
-				"special_bonus_unique_shadow_shaman_4" "+100"
-			}
-			"bonus_attack_range"
-			{
-				"special_bonus_unique_shadow_shaman_8" "+200"
+				"special_bonus_unique_shadow_shaman_4" "+50"	// 20
 			}
 			"mega_ward_multiplier_tooltip"
 			{
@@ -11090,7 +11202,7 @@
 			}
 			"mega_ward_health_tooltip"
 			{
-				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=2.25"	// =ward_count*0.75
+				"special_bonus_facet_shadow_shaman_massive_serpent_ward"	"=3"	// =ward_count
 			}
 		}
 	}
@@ -11211,7 +11323,8 @@
 		"AbilityCooldown"				"4.0 3.5 3.0 2.5 2.0"
 		"AbilityValues"
 		{
-				"bolt_damage"			"75 100 125 150 175"
+				"bolt_speed"			"700"	// 500
+				"bolt_damage"			"100 125 150 175 200"
 		}
 	}
 	// 震荡光弹
@@ -11236,8 +11349,6 @@
 				"resist_debuff"
 				{
 					"value"		"-20 -25 -30 -35 -40"
-					"special_bonus_unique_skywrath_3"	"-10"
-					"DamageTypeTooltip"		"DAMAGE_TYPE_MAGICAL"
 				}
 				"seal_duration"			"3.0 4.0 5.0 6.0 7.0"
 		}
@@ -11251,6 +11362,11 @@
 
 		"AbilityValues"
 		{
+				"radius"
+				{
+					"value"	"200"	// 170
+					"affected_by_aoe_increase"	"1"
+				}
 				"damage"
 				{
 					"value"			"800 1200 1600 2000"
@@ -11269,6 +11385,16 @@
 				"value"		"20 30 40 50 60"
 				"special_bonus_unique_skywrath_arcane_bolt_lifesteal"			"+30"// 15
 			}
+		}
+	}
+	// 天裔之盾
+	"skywrath_mage_shield_of_the_scion"
+	{
+		"AbilityValues"
+		{
+			"damage_barrier_base"		"50"
+			"damage_barrier_per_level"	"2"
+			"barrier_duration"			"15"
 		}
 	}
 	//=================================================================================================================
@@ -11541,7 +11667,7 @@
 			"heal_per_second"
 			{
 				"value"									"0"
-				"special_bonus_facet_tinker_repair_bots"	"+30 +40 +50 +60 +70"	// x2
+				"special_bonus_facet_tinker_repair_bots"	"+30 +50 +70 +90 +110"	// x2
 			}
 		}
 	}
@@ -11606,7 +11732,7 @@
 		"MaxLevel" "4"
 		"AbilityValues"
 		{
-				"radius"				
+				"radius"
 				{
 						"value"		"200"
 				}
@@ -11639,7 +11765,7 @@
 				}
 				"buff_duration"			"10.0"
 				"base_absorb_amount"	"160 240 320 400 480"
-				"absorb_per_hero_hit"   
+				"absorb_per_hero_hit"
                 {
                     "value"                                             "75 125 175 225 275"
                     "special_bonus_facet_void_spirit_sanctuary"        	"+25 +75 +125 +175 +225"
@@ -11653,8 +11779,8 @@
 	"warlock_fatal_bonds"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"34 30 26 22 18"
-		"AbilityManaCost"				"110 120 130 140 150"
+		"AbilityCooldown"				"30 28 26 24 22"
+		"AbilityManaCost"				"100 120 140 160 180"
 		"AbilityValues"
 		{
 			"damage_share_percentage"
@@ -11662,6 +11788,7 @@
 				"value"						"8 10 12 14 16"
 				"special_bonus_unique_warlock_5" "+4"
 			}
+			"duration"						"15"	// 18
 		}
 	}
 	// 暗言术
@@ -11870,6 +11997,7 @@
 		"MaxLevel" "5"
 		"AbilityCooldown"				"15"
 		"AbilityDuration"				"3 4 5 6 7"
+		"AbilityManaCost"				"50 75 100 125 150"
 		"AbilityValues"
 		{
 			"duration"					"3 4 5 6 7"
@@ -11880,7 +12008,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"60 50 40 30"
-		"AbilityManaCost"				"75 100 125 150"
+		"AbilityManaCost"				"75 150 225 300"
 		"AbilityValues"
 		{
 			"bonus_attack_speed"
@@ -11895,13 +12023,13 @@
 			"focusfire_damage_reduction"
 			{
 				"value"						"-30"
-				"special_bonus_unique_windranger_8"		"+20" // 12
+				"special_bonus_unique_windranger_8"		"+15" // 10
 			}
-			"duration_increase_per_kill"
+			"cooldown_reduction_per_kill"
 			{
 				"value"		"0"
-				"special_bonus_unique_windranger_2"		"+3" // 25天赋击杀延续命石2大招时间
-				"RequiresFacet"		"windrunner_whirlwind"
+				"special_bonus_unique_windranger_2"		"+10"
+				"RequiresFacet"		"windrunner_focusfire"
 			}
 		}
 	}
@@ -11921,12 +12049,12 @@
 	"winter_wyvern_arctic_burn"
 	{
 		"MaxLevel" "5"
-		"AbilityCooldown"				"38 32 26 20 14"
+		"AbilityCooldown"				"28 26 24 22 20"
 		"AbilityValues"
 		{
 				"duration"				"7 8 9 10 11"
 				"attack_range_bonus"	"275 300 325 350 375"
-				"percent_damage"		"6 7 8 9 10"	// 4 6 8 10 百分比伤害
+				"percent_damage"		"4 6 8 10 12"
 				"move_slow"
 				{
 					"value"			"16 24 32 40 48"
@@ -11945,7 +12073,7 @@
 			"damage"
 			{
 				"value"		"80 160 240 320 400"
-				"special_bonus_unique_winter_wyvern_7" "+100"
+				"special_bonus_unique_winter_wyvern_7" "+150"
 			}
 		}
 	}
@@ -11959,7 +12087,7 @@
 		{
 				"heal_additive"
 				{
-					"value"		"40 45 50 55 60"
+					"value"		"40 50 60 70 80"	// 40 45 50 55
 				"special_bonus_unique_winter_wyvern_5" "+40"	// 25
 				}
 				"heal_percentage"	"2.25 3 3.75 4.5 5.25"
@@ -11970,7 +12098,7 @@
 	{
 		"MaxLevel" "4"
 		"AbilityCooldown"				"90 85 80 75"
-		"AbilityManaCost"				"200 225 250 275"
+		"AbilityManaCost"				"150 200 250 300"
 		"AbilityValues"
 		{
 				"damage_reduction"	"50"	// 100 不会收到敌人伤害 改成伤害减半
@@ -11978,7 +12106,7 @@
 				"max_duration"	"4 5 6 7"
 		}
 	}
-	// 飞龙视野 命石1
+	// 飞龙视野 命石
 	"winter_wyvern_dragon_sight"
 	{
 		"MaxLevel"						"5"
@@ -12194,67 +12322,28 @@
 	{
 		"MaxLevel" "5"
 		"AbilityCooldown"				"16 14 12 10 8"
-		"AbilityManaCost"				"140 160 180 200 220"
+		"AbilityManaCost"				"100 120 140 160 180"
 		"AbilityValues"
 		{
-			"AbilityCastRange"
-			{
-				"value"						"1000"
-				"special_bonus_unique_muerta_dead_shot_range"	"+350"
-			}
 			"damage"
 			{
-				"value"						"100 150 200 250 300"
-				"special_bonus_unique_muerta_dead_shot_damage"	"+80"
+				"value"						"100 175 250 325 400"
 			}
-			"speed"							"2000"
-			"radius"
-			{
-				"value"			"100"
-				"affected_by_aoe_increase"	"1"
-			}
-			"ricochet_radius_start"			"115"
-			"ricochet_radius_end"			"115"
-			"ricochet_distance_multiplier"	"1.5"
-			"ricochet_fear_duration"		"0.5 0.6 0.7 0.8 0.9"
-			"impact_slow_percent"			"-100"
-			"impact_slow_duration"			"0.3"
+			"ricochet_fear_duration"		"0.8 0.95 1.1 1.25 1.4"
 		}
 	}
 	// 唤魂
 	"muerta_the_calling"
 	{
 		"MaxLevel" "5"
-		"AbilityManaCost"				"150 175 200 225 250"
+		"AbilityManaCost"				"140 155 170 185 200"
 		"AbilityValues"
 		{
-			"damage"						"45 90 135 180"
+			"damage"						"45 90 135 180 225"
 			"duration"						"4 5 6 7 8"
-			"hit_radius"
-			{
-				"value"		"120"
-				"affected_by_aoe_increase"	"1"
-			}
-			"dead_zone_distance"
-			{
-				"value"		"340"
-				"affected_by_aoe_increase"	"1"
-			}
-			"num_revenants"
-			{
-				"value"						"4"
-				"special_bonus_unique_muerta_the_calling_num_revenants"	"+2"
-			}
-			"speed_initial"					"0.2"
-			"speed_max"						"1.0"
-			"acceleration"			"0.75"
-			"rotation_initial"		"0"
-			"debug_draw"					"0"
-			"aura_movespeed_slow"			"-10 -15 -20 -25 -30"
-			"aura_attackspeed_slow"			"-20 -30 -40 -50 -60"
-			"silence_duration"				"1.0 1.5 2 2.5 3"
-			"rotation_direction"			"-1"
-			"show_warning"					"1"
+			"aura_movespeed_slow"			"-15 -20 -25 -30 -35"
+			"aura_attackspeed_slow"			"-30 -40 -50 -60 -70"
+			"silence_duration"				"1.5 2 2.5 3 3.5"
 		}
 	}
 	// 神枪在手
@@ -12265,8 +12354,7 @@
 		{
 			"double_shot_chance"
 			{
-				"value"					"10 20 30 40 50"
-				"special_bonus_unique_muerta_gunslinger_double_shot_chance"	"+20"
+				"value"					"26 34 42 50 58"
 			}
 		}
 	}
@@ -12274,36 +12362,28 @@
 	"muerta_pierce_the_veil"
 	{
 		"MaxLevel" "4"
-		"AbilityCooldown"				"65 60 55 50"
+		"AbilityCooldown"				"60 55 50 45"
 		"AbilityManaCost"				"150 250 350 450"
 		"AbilityValues"
 		{
 			"duration"					"4 5 6 7"
-			"transform_duration"		"0.35"
-			"base_damage_pct"			"80"
-			"modelscale"				"0"
-			"bonus_damage"				"50 75 100 125"
-			"spell_lifesteal"
-			{
-				"value"				"20"
-				"RequiresShard"		"1"
-			}
-			"spell_amp_steal"
-			{
-				"value"				"2"
-				"RequiresShard"		"1"
-			}
-			"spell_amp_steal_range"
-			{
-				"value"				"350"
-				"RequiresShard"		"1"
-			}
+			"bonus_damage"				"70 100 130 160"
 		}
 	}
 	// 临别一枪
 	"muerta_parting_shot"
 	{
 		"AbilityCooldown"				"180"
+	}
+	// 祭台
+	"muerta_ofrenda"
+	{
+		"MaxLevel"						"5"
+		"AbilityValues"
+		{
+			"attackspeed_bonus"							"15 30 45 60 75"	// 15 25 35 45
+			"effect_radius"								"400 450 500 550 600"
+		}
 	}
 	//=================================================================================================================
 	// Ringmaster: 百戏大王

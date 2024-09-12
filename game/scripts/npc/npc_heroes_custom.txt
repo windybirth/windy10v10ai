@@ -413,11 +413,6 @@
 		"AttackRate"    "1.7"
 	}
 
-	"npc_dota_hero_crystal_maiden"
-	{
-		"Ability5"      "visage_silent_as_the_grave"
-		"Ability8"      "visage_gravekeepers_cloak"
-	}
 
 	"npc_dota_hero_tinker"
 	{
@@ -482,6 +477,7 @@
 	{
 		"VisionDaytimeRange"		"1200"// 800
 		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，现在上限是全图
+		"Ability17"		"special_bonus_unique_night_stalker_301"	// // 暗夜猎影 移动速度 替代大招减CD
 	}
 
 	"npc_dota_hero_keeper_of_the_light"
@@ -505,8 +501,9 @@
 
 	"npc_dota_hero_monkey_king"
 	{
+		// 禁用猴子猴孙，存在卡顿，开局多次抽奖的问题
 		"Ability6"		"spectre_ursa_enrage"
-		"Ability17"     "special_bonus_unique_spectre_401"
+		"Ability17"		"special_bonus_unique_spectre_401"
 	}
 
 	// 幽鬼
@@ -694,7 +691,8 @@
 	}
 	"npc_dota_hero_batrider"
 	{
-		"Ability5"      "dark_seer_ion_shell"
+		"Ability5"		"dark_seer_ion_shell"
+		"Ability9"		"batrider_smoldering_resin"	// 闷烧树脂 先天技能
 	}
 	"npc_dota_hero_bounty_hunter"
 	{
@@ -876,6 +874,8 @@
 	// 水晶室女 冰女
 	"npc_dota_hero_crystal_maiden"
 	{
+		"Ability5"      "visage_silent_as_the_grave"
+		"Ability8"      "visage_gravekeepers_cloak"
 		"Bot"
 		{
 			"Build"
@@ -906,7 +906,7 @@
 				"24"		""
 				"25"		"special_bonus_unique_crystal_maiden_1"
 				"26"		""
-				"27"		"special_bonus_hp_250"
+				"27"		"special_bonus_hp_200"
 				"28"		"special_bonus_unique_crystal_maiden_5"
 				"29"		"special_bonus_attack_speed_225"
 				"30"		"special_bonus_unique_crystal_maiden_2"
@@ -1476,10 +1476,6 @@
 	}
 	"npc_dota_hero_luna"
 	{
-		
-		"Ability4"		"luna_lunar_grace"
-		"Ability6"		"luna_eclipse"
-		"Ability7"		"luna_lunar_blessing"	// 月之祝福 先天技能
 		"Bot"
 		{
 			"Build"
@@ -1555,13 +1551,13 @@
 		{
 			"Deprecated"	"true"
 		}
-  		"marci_unyielding_loyalty" 
+  		"marci_unyielding_loyalty"
   		{
     			"Icon"                "twin_hearts"
     			"Color"               "Yellow"
     			"GradientID"          "1"
-		}            
-  		"marci_unswerving_zeal" 
+		}
+  		"marci_unswerving_zeal"
   		{
     			"Icon"                "armor"
     			"Color"               "Blue"
@@ -2004,12 +2000,9 @@
 	}
 	"npc_dota_hero_razor"
 	{
-	    "Ability11"		"special_bonus_unique_razor_101"
-        "Ability13"		"special_bonus_spell_amplify_12"
-        "Ability14"		"special_bonus_unique_razor_401"
-        "Ability15"		"special_bonus_unique_razor_static_link_aspd"
-        "Ability16"		"special_bonus_unique_razor_402"
-        "Ability17"		"special_bonus_unique_razor_plasmafield_second_ring"
+		"Ability11"		"special_bonus_unique_razor_101"
+		"Ability13"		"special_bonus_unique_razor_402"
+		// "Ability16"		"special_bonus_unique_razor_401"
 		"Bot"
 		{
 			"Build"
@@ -2549,7 +2542,7 @@
 	}
 	"npc_dota_hero_windrunner"
 	{
-		
+
 		"Bot"
 		{
 			"Build"
