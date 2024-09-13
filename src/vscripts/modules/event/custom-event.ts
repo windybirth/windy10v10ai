@@ -38,6 +38,6 @@ export class CustomEvent {
 
     // FIXME 移动到更合适的位置
     GameRules.Option.gameDifficulty =
-      CustomNetTables.GetTableValue("game_difficulty", "all").difficulty ?? 0;
+      CustomNetTables.GetTableValue("game_difficulty", "all")?.difficulty ?? 0;
   }
 }
