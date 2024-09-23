@@ -2883,7 +2883,7 @@
 			"dodge_chance"				"15 20 25"
 
 			// red
-			"crit_chance"				"20"
+			"crit_chance"				"25"
 			"crit_multiplier"			"150 200 250"
 			"attack_speed"				"20 30 40"
 			"movespeed"					"10 15 20"
