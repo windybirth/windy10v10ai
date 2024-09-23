@@ -2876,16 +2876,16 @@
 			"split_duration"			"0.6"
 
 			"bonus_move_speed"			"5 7 9"
-			"bonus_status_resist"		"5 10 15"
-			"magic_resist"				"5 10 15"
+			"bonus_status_resist"		"10 15 20"
+			"magic_resist"				"10 15 20"
 
 			"armor"						"4 6 8"
 			"dodge_chance"				"15 20 25"
 
 			// red
 			"crit_chance"				"20"
-			"crit_multiplier"			"120 140 160"
-			"attack_speed"				"10 15 20"
+			"crit_multiplier"			"150 200 250"
+			"attack_speed"				"20 30 40"
 			"movespeed"					"10 15 20"
 			"slow_duration"				"2"
 		}

@@ -880,6 +880,7 @@
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua"								"Primal Split"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Lore"							"It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor."
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Description"					"Brewmaster is now awesome, gaining the effects of four different fighting styles."
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_shard_Description"			"Increases Primal Split duration."
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_duration"						"DURATION:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_move_speed"				"%Movement Speed Bonus:"
 		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_status_resist"			"%Status Resistance Bonus:"
