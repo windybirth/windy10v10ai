@@ -1902,12 +1902,12 @@
 			"max_height"	"600"
 		}
 	}
-
+	// 「深弹幕结界 -梦幻泡影-」
 	"ability_thdots_yukari04"
 	{
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"yukari_04"
-		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
@@ -1933,7 +1933,7 @@
 			"DeleteOnHit"	"false"
 			"RunScript"
 			{
-				"ScriptFile"	"scripts/vscripts/heroes/hero_yukari/yukari04.lua"
+				"ScriptFile"	"heroes/hero_yukari/yukari04"
 				"Function"	"Yukari04_OnProjectileHitUnit"
 				"Caster"	"CASTER"
 				"Target"	"TARGET"
@@ -1944,7 +1944,7 @@
 		{
 			"RunScript"
 			{
-				"ScriptFile"	"scripts/vscripts/heroes/hero_yukari/yukari04.lua"
+				"ScriptFile"	"heroes/hero_yukari/yukari04"
 				"Function"	"Yukari04_OnSpellStart"
 				"Target"	"POINT"
 				"MinRadius"	"%min_radius"
