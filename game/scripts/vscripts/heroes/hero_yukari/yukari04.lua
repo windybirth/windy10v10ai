@@ -206,7 +206,7 @@ function Yukari04_OnSpellStart(keys)
 					---end
 					return nil
 				end
-			end, 0)
+			end, 0.1)
 	else
 		caster:SetContextThink(
 			"yukari04_end_channel",
@@ -218,7 +218,7 @@ function Yukari04_OnSpellStart(keys)
 				ability:RefundManaCost()
 				ability:EndCooldown()
 				return nil
-			end, 0)
+			end, 0.1)
 	end
 	local exradius = keys.BarrageRadius
 	caster:SetContextThink(
