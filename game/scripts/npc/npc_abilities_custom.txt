@@ -1769,7 +1769,7 @@
 		"AbilityCastPoint"	"0.1"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
 		"AnimationPlaybackRate"	"1.5"
-		"AbilityCooldown"	"8"
+		"AbilityCooldown"	"9"
 		"AbilityManaCost"	"80 100 120 160 180"
 		"AbilityCastRange"	"%cast_range"
 		"precache"
@@ -1835,7 +1835,7 @@
 		// Ability Resource
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"20 19 18 17 16"
-		"AbilityManaCost"	"100 120 140 180 200"
+		"AbilityManaCost"	"100 120 140 160 180"
 		"AbilityCastRange"	"1200"
 		// Damage
 		// -------------------------------------------------------------------------------------------------------------
@@ -1890,7 +1890,7 @@
 		"AbilityCooldown"	"36 32 28 24 20"
 		// Cost
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityManaCost"	"120 140 160 180 200"
+		"AbilityManaCost"	"100 120 140 160 180"
 
 		"AbilityValues"
 		{
