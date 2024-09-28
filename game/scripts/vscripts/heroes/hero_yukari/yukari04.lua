@@ -273,9 +273,3 @@ function Yukari04_OnProjectileHitUnit(keys)
 		UnitDamageTarget(damage_table)
 	end
 end
-
-ability_yukari_01 = {}
-
-function ability_yukari_01:GetCastRange()
-	return self:GetSpecialValueFor("cast_range")
-end
