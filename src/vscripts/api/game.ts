@@ -1,4 +1,4 @@
-import { ApiClient, HttpMethod } from "./api_client";
+import { ApiClient, HttpMethod } from "./api-client";
 
 class Player {
   teamId!: number;
