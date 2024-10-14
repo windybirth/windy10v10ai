@@ -17,16 +17,16 @@ function item_blue_fantasy:OnSpellStart()
         Ability = self,
         EffectName = "particles/items4_fx/nullifier_proj.vpcf",
         iMoveSpeed = self:GetSpecialValueFor("projectile_speed"),
-        vSourceLoc = caster:GetAbsOrigin(),    -- Optional (HOW)
-        bDrawsOnMinimap = false,               -- Optional
-        bDodgeable = false,                    -- Optional
-        bIsAttack = false,                     -- Optional
-        bVisibleToEnemies = true,              -- Optional
-        bReplaceExisting = false,              -- Optional
+        vSourceLoc = caster:GetAbsOrigin(),          -- Optional (HOW)
+        bDrawsOnMinimap = false,                     -- Optional
+        bDodgeable = false,                          -- Optional
+        bIsAttack = false,                           -- Optional
+        bVisibleToEnemies = true,                    -- Optional
+        bReplaceExisting = false,                    -- Optional
         flExpireTime = GameRules:GetGameTime() + 20, -- Optional but recommended
-        bProvidesVision = true,                -- Optional
-        iVisionRadius = 400,                   -- Optional
-        iVisionTeamNumber = caster:GetTeamNumber() -- Optional
+        bProvidesVision = true,                      -- Optional
+        iVisionRadius = 400,                         -- Optional
+        iVisionTeamNumber = caster:GetTeamNumber()   -- Optional
     })
 end
 
@@ -64,8 +64,10 @@ end
 
 function modifier_item_blue_fantasy:RemoveOnDeath() return false end
 
-function modifier_item_blue_fantasy:GetAttributes() return MODIFIER_ATTRIBUTE_PERMANENT + MODIFIER_ATTRIBUTE_MULTIPLE +
-    MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE end
+function modifier_item_blue_fantasy:GetAttributes()
+    return MODIFIER_ATTRIBUTE_PERMANENT + MODIFIER_ATTRIBUTE_MULTIPLE +
+        MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE
+end
 
 function modifier_item_blue_fantasy:DeclareFunctions()
     return
@@ -176,7 +178,7 @@ function modifier_item_blue_fantasy_debuff:CheckState()
     {
         [MODIFIER_STATE_MUTED] = true,             --闭锁
         [MODIFIER_STATE_PASSIVES_DISABLED] = true, --被动失效
-        -- [MODIFIER_STATE_EVADE_DISABLED] = true,                 --闪避失效
+        [MODIFIER_STATE_EVADE_DISABLED] = true     --闪避失效
     }
 end
 
@@ -184,21 +186,28 @@ function modifier_item_blue_fantasy_debuff:DeclareFunctions()
     return
     {
         MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE, --移速百分比
-        MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT  --攻速点数
+        MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT, --攻速速度
+
+        MODIFIER_PROPERTY_HEAL_AMPLIFY_PERCENTAGE_TARGET,
+        MODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE,
+        MODIFIER_PROPERTY_LIFESTEAL_AMPLIFY_PERCENTAGE,
+        MODIFIER_PROPERTY_SPELL_LIFESTEAL_AMPLIFY_PERCENTAGE
     }
 end
 
 function modifier_item_blue_fantasy_debuff:OnCreated()
     self.slow_pct = self:GetAbility():GetSpecialValueFor("slow_pct")
-    self.attsp = self:GetAbility():GetSpecialValueFor("attsp")
+    self.attack_slow = self:GetAbility():GetSpecialValueFor("attack_slow")
     self.max_hp_dmg_pct = self:GetAbility():GetSpecialValueFor("max_hp_dmg_pct") * 0.01
+    self.hp_regen_reduction = self:GetAbility():GetSpecialValueFor("hp_regen_reduction")
     if not IsServer() then
         return
     end
     self.damageTable = {
         attacker = self:GetCaster(),
         victim = self:GetParent(),
-        damage_type = DAMAGE_TYPE_MAGICAL,
+        damage_type = DAMAGE_TYPE_PURE,                         -- 存粹伤害
+        damage_flags = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION, -- 不受技能增强影响
         ability = self:GetAbility(),
     }
     self:GetParent():EmitSound("DOTA_Item.Nullifier.Slow")
@@ -213,7 +222,7 @@ function modifier_item_blue_fantasy_debuff:OnIntervalThink()
         return
     end
 
-    self:GetParent():Purge(true, false, false, false, false)                      --驱散正面buff
+    self:GetParent():Purge(true, false, false, false, false)                        --驱散正面buff
     self.damageTable.damage = self:GetParent():GetMaxHealth() * self.max_hp_dmg_pct --一秒造成一次最大生命百分比伤害
     ApplyDamage(self.damageTable)
 end
@@ -223,5 +232,21 @@ function modifier_item_blue_fantasy_debuff:GetModifierMoveSpeedBonus_Percentage(
 end
 
 function modifier_item_blue_fantasy_debuff:GetModifierAttackSpeedBonus_Constant()
-    return self.attsp
+    return self.attack_slow
+end
+
+function modifier_item_blue_fantasy_debuff:GetModifierHealAmplify_PercentageTarget()
+    return self.hp_regen_reduction
+end
+
+function modifier_item_blue_fantasy_debuff:GetModifierHPRegenAmplify_Percentage()
+    return self.hp_regen_reduction
+end
+
+function modifier_item_blue_fantasy_debuff:GetModifierLifestealRegenAmplify_Percentage()
+    return self.hp_regen_reduction
+end
+
+function modifier_item_blue_fantasy_debuff:GetModifierSpellLifestealRegenAmplify_Percentage()
+    return self.hp_regen_reduction
 end
