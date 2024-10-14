@@ -3010,7 +3010,7 @@
 				"slow_pct"				"-60"
 				"attack_slow"			"-200"
 				"max_hp_dmg_pct"		"4"
-				"hp_regen_reduction"	"80"
+				"hp_regen_reduction"	"-80"
 		}
 	}
 
