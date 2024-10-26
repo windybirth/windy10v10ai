@@ -5546,6 +5546,31 @@
 			}
 		}
 	}
+	// 极度饥渴（暂时替代召熊）
+	"broodmother_insatiable_hunger"
+	{
+		"MaxLevel" "5"
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"45 40 35 30 20"
+		"AbilityValues"
+		{
+			"bonus_damage"
+			{
+				"value"					"40 50 60 70 80"
+				"CalculateSpellDamageTooltip"	"0"
+			}
+			"lifesteal_pct"
+			{
+				"value"				"40 60 80 100 120"
+			}
+			"creep_lifesteal_reduction_pct"		"40"
+			"duration"
+			{
+				"value"		"8 10 12 14 16"
+				"special_bonus_shard"	"+2"
+			}
+		}
+	}
 	// 灵魂链接
 	"lone_druid_spirit_link"
 	{
@@ -5569,6 +5594,7 @@
 	// 吼
 	"lone_druid_savage_roar"
 	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"MaxLevel" "5"
 		"AbilityValues"
 		{
@@ -5577,6 +5603,12 @@
 				{
 					"value"				"36 32 28 24 20"
 					"special_bonus_unique_lone_druid_4"			"-7"
+				}
+				"shard_radius"
+				{
+					"value"					"1050"
+					"RequiresShard"				"1"
+					"affected_by_aoe_increase"	"1"
 				}
 		}
 	}
@@ -5588,15 +5620,15 @@
 		{
 			"bonus_armor"
 			{
-				"value"				"8 12 16 20"	// 8 10 12
+				"value"				"16 24 32 40"	// 8 10 12
 			}
 			"bonus_hp"
 			{
-				"value"					"1000 2000 3000 4000" // 500 1000 1500
+				"value"					"2000 3000 4000 5000" // 500 1000 1500
 			}
 		}
 	}
-	// 小熊被动
+	// 粉碎击
 	"lone_druid_spirit_bear_demolish"
 	{
 		"AbilityValues"
@@ -5620,9 +5652,14 @@
 	{
 		"AbilityValues"
 		{
-			"item_slots"				"4"
-			"bonus_stat_percent"		"50 60 70 80 90"
+			"item_slots"				"6"
+			"bonus_stat_percent"		"60 70 80 90 100"
 		}
+	}
+	// 缠绕之爪
+	"lone_druid_entangling_claws"
+	{
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 	}
 	//=================================================================================================================
 	// Ability: Luna 露娜/月骑
