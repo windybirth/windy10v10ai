@@ -22,7 +22,7 @@ function modifier_beta:DeclareFunctions()
         MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT,
         MODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE,
         MODIFIER_PROPERTY_IGNORE_MOVESPEED_LIMIT,
-        MODIFIER_PROPERTY_MOVESPEED_LIMIT,
+        -- MODIFIER_PROPERTY_MOVESPEED_LIMIT,
     }
 end
 
@@ -46,9 +46,9 @@ function modifier_beta:GetModifierTotalPercentageManaRegen()
     return self.ipctmanaregen
 end
 
-function modifier_beta:GetModifierMoveSpeed_Limit()
-    return 5000
-end
+-- function modifier_beta:GetModifierMoveSpeed_Limit()
+--     return 5000
+-- end
 
 function modifier_beta:GetModifierIgnoreMovespeedLimit()
     return 1
