@@ -9,7 +9,13 @@ First off, thanks for taking the time to contribute!
 Create a [issue](https://github.com/windybirth/windy10v10ai/issues) to report bugs or suggest enhancements.
 Use [bug report template](https://github.com/windybirth/windy10v10ai/issues/new/choose).
 
+## Conmuication
+
+- [Discord](https://discord.com/invite/MfawtDpxks)
+
 ## Developing
+
+- Ask windy give your access.
 
 ### Create a branch
 
@@ -21,15 +27,7 @@ Choose the issue you want to work on and create a branch linked to the issue.
 
 ### Pull Requests
 
-Use [github actions](https://github.com/windybirth/windy10v10ai/actions/workflows/create_pr.yml) to create a pull request to develop.
-
-Run Workflow with your branch.
-
-![image](https://github.com/windybirth/windy10v10ai/assets/3445793/e7abb29a-ebfe-48dc-b5b7-ba9faf71e7ba)
-
-## Conmuication
-
-- [Discord](https://discord.com/invite/MfawtDpxks)
+Create a pull request from your branch to develop.
 
 # 参与开发 Windy10v10AI
 
@@ -42,8 +40,14 @@ Run Workflow with your branch.
 创建一个[Issue](https://github.com/windybirth/windy10v10ai/issues)来报告BUG或提出建议。
 使用[BUG报告模板](https://github.com/windybirth/windy10v10ai/issues/new/choose)。
 
+## 沟通
+
+- [QQ](https://qm.qq.com/cgi-bin/qm/qr?k=6yNcbJ0GOuPECq1dmIvsmdj8y7dZBiHs)
+
 ## 开发
 
+- 喊windy给你相关权限
+  
 ### 创建一个分支
 
 选择你想要处理的issue并创建一个与问题相关的分支。
@@ -54,12 +58,5 @@ Run Workflow with your branch.
 
 ### Pull Requests
 
-使用[github actions](https://github.com/windybirth/windy10v10ai/actions/workflows/create_pr.yml)创建一个 pull request 到 develop 分支。
+创建一个 pull request 从你开发的分支到 develop 分支。
 
-运行 Workflow 并选择你的分支。
-
-![image](https://github.com/windybirth/windy10v10ai/assets/3445793/e7abb29a-ebfe-48dc-b5b7-ba9faf71e7ba)
-
-## 沟通
-
-- [QQ](https://qm.qq.com/cgi-bin/qm/qr?k=6yNcbJ0GOuPECq1dmIvsmdj8y7dZBiHs)

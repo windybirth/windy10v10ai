@@ -5,10 +5,6 @@ require('event/chat')
 require('event/kill')
 require('event/bot_herolist')
 
--- local tSkillCustomNameList = { }
-
--- local tAPLevelList = { 17, 19, 21, 22, 23, 24, 26 }
-
 
 function AIGameMode:ArrayShuffle(array)
     local size = #array
@@ -32,67 +28,18 @@ function AIGameMode:GetFreeHeroName(isRadiant)
     return "npc_dota_hero_luna" -- Should never get here
 end
 
-function AIGameMode:InitHeroSelection()
+function AIGameMode:InitPlayerGold()
     if self.PreGameOptionsSet then
-        print("[AIGameMode] InitSettings")
-        -- 初始化玩家列表和初期金钱
-        self.tHumanPlayerList = {}
-        -- 是否选择了物品
-        self.tIfItemChosen = {}
-        self.tIfItemChooseInited = {}
+        print("[AIGameMode] InitPlayerGold")
         for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-            if PlayerResource:GetConnectionState(i) ~= DOTA_CONNECTION_STATE_UNKNOWN then
-                -- set human player list
-                self.tHumanPlayerList[i] = true
-                self.tIfItemChosen[i] = false
-                self.tIfItemChooseInited[i] = false
-                -- set start gold
+            if IsHumanPlayer(i) then
                 PlayerResource:SetGold(i, (self.iStartingGoldPlayer - 600), true)
-            end
-        end
-
-        -- 添加bot和初期金钱
-        local iPlayerNumRadiant = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_GOODGUYS)
-        local iPlayerNumDire = PlayerResource:GetPlayerCountForTeam(DOTA_TEAM_BADGUYS)
-        math.randomseed(math.floor(Time() * 1000000))
-        -- 随机英雄列表
-        print("[AIGameMode] Random hero list")
-        self:ArrayShuffle(tBotNameList)
-
-        if self.iGameDifficulty == 6 then
-            print("[AIGameMode] Use all star hero list start")
-            local iRandomTeam = math.random(1, 21)
-            print("[AIGameMode] Random team: " .. tostring(iRandomTeam))
-            for _, v in ipairs(tBotAllStarRandom["team" .. tostring(iRandomTeam)]) do
-                table.insert(tBotAllStar, v)
-            end
-            self:ArrayShuffle(tBotAllStar)
-        end
-
-        local sDifficulty = "unfair"
-        if self.iDesiredDire > iPlayerNumDire then
-            for i = 1, self.iDesiredDire - iPlayerNumDire do
-                Tutorial:AddBot(self:GetFreeHeroName(false), "", sDifficulty, false)
-            end
-        end
-        if self.iDesiredRadiant > iPlayerNumRadiant then
-            for i = 1, self.iDesiredRadiant - iPlayerNumRadiant do
-                Tutorial:AddBot(self:GetFreeHeroName(true), "", sDifficulty, true)
-            end
-        end
-        GameRules:GetGameModeEntity():SetBotThinkingEnabled(true)
-        Tutorial:StartTutorialMode()
-        for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-            if PlayerResource:IsValidPlayer(i) then
-                if not self.tHumanPlayerList[i] then
-                    PlayerResource:SetGold(i, (self.iStartingGoldBot - 600), true)
-                end
             end
         end
     else
         Timers:CreateTimer(0.5, function()
-            print("[AIGameMode] Try InitSettings in 0.5s")
-            AIGameMode:InitHeroSelection()
+            print("[AIGameMode] Try InitPlayerGold in 0.5s")
+            AIGameMode:InitPlayerGold()
         end)
     end
 end
@@ -101,36 +48,22 @@ function AIGameMode:OnGameStateChanged(keys)
     local state = GameRules:State_Get()
 
     if state == DOTA_GAMERULES_STATE_CUSTOM_GAME_SETUP then
-        if IsServer() then
-            PlayerController:Init()
-        end
     elseif state == DOTA_GAMERULES_STATE_HERO_SELECTION then
         if IsServer() then
-            self:InitHeroSelection()
+            self:InitPlayerGold()
         end
     elseif state == DOTA_GAMERULES_STATE_STRATEGY_TIME then
         if not self.PreGameOptionsSet then
             print("[AIGameMode] Setting pre-game options STRATEGY_TIME")
             self:PreGameOptions()
         end
-        for i = 0, (DOTA_MAX_TEAM_PLAYERS - 1) do
-            if PlayerResource:IsValidPlayer(i) then
-                if PlayerResource:GetPlayer(i) and not PlayerResource:HasSelectedHero(i) then
-                    PlayerResource:GetPlayer(i):MakeRandomHeroSelection()
-                end
-            end
-        end
-
-        Timers:CreateTimer(1, function()
-            self:EndScreenStats(1, false)
-        end)
     elseif state == DOTA_GAMERULES_STATE_PRE_GAME then
+        self:EndScreenStats(1, false)
         -- modifier towers
         local tTowers = Entities:FindAllByClassname("npc_dota_tower")
         local iTowerLevel = math.max(self.iGameDifficulty, 1)
         for k, v in pairs(tTowers) do
             local towerName = v:GetName()
-            v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
 
             -- add tower ability
             if string.find(towerName, "tower3") or string.find(towerName, "tower4") then
@@ -142,18 +75,8 @@ function AIGameMode:OnGameStateChanged(keys)
                 end
             end
         end
-        local barracks = Entities:FindAllByClassname("npc_dota_barracks")
-        for k, v in pairs(barracks) do
-            v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-        end
-        local healer = Entities:FindAllByClassname("npc_dota_healer")
-        for k, v in pairs(healer) do
-            v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-        end
         local fort = Entities:FindAllByClassname("npc_dota_fort")
         for k, v in pairs(fort) do
-            v:AddNewModifier(v, nil, "modifier_tower_endure", {}):SetStackCount(self.iTowerEndure)
-
             -- add tower ability
             v:AddAbility("tower_ursa_fury_swipes"):SetLevel(iTowerLevel)
             v:AddAbility("tower_shredder_reactive_armor"):SetLevel(iTowerLevel)
@@ -426,20 +349,15 @@ function AIGameMode:OnNPCSpawned(keys)
 
 
     if hEntity:IsRealHero() and not hEntity.bInitialized then
-        if sName == "npc_dota_hero_sniper" and not self.bSniperScepterThinkerApplierSet then
-            require('heroes/hero_sniper/sniper_init')
-            SniperInit(hEntity, self)
-        end
-
         -- choose item 玩家抽选物品
-        if self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] and not self.tIfItemChosen[hEntity:GetPlayerOwnerID()] and
-            not self.tIfItemChooseInited[hEntity:GetPlayerOwnerID()] then
+        -- 并且不是德鲁伊的胸
+        if IsHumanPlayer(hEntity:GetPlayerOwnerID()) and hEntity:GetName() ~= "npc_dota_lone_druid_bear"
+        then
             self:SpecialItemAdd(hEntity)
-            self.tIfItemChooseInited[hEntity:GetPlayerOwnerID()] = true
         end
 
         -- Bots modifier 机器人AI脚本
-        if not self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] then
+        if not IsHumanPlayer(hEntity:GetPlayerOwnerID()) then
             -- FIXME 用ts脚本替换
             if not hEntity:HasModifier("modifier_bot_think_strategy") then
                 hEntity:AddNewModifier(hEntity, nil, "modifier_bot_think_strategy", {})
@@ -456,7 +374,7 @@ function AIGameMode:OnNPCSpawned(keys)
         end
 
         -- Player Buff
-        if self.tHumanPlayerList[hEntity:GetPlayerOwnerID()] then
+        if IsHumanPlayer(hEntity:GetPlayerOwnerID()) then
             EnablePlayerModifier(hEntity)
         end
 
@@ -465,7 +383,7 @@ function AIGameMode:OnNPCSpawned(keys)
 end
 
 function AIGameMode:OnPlayerLevelUp(keys)
-    local iEntIndex = PlayerResource:GetPlayer(keys.player - 1):GetAssignedHero():entindex()
+    local iEntIndex = PlayerResource:GetPlayer(keys.PlayerID):GetAssignedHero():entindex()
     local iLevel = keys.level
     -- Set DeathXP 击杀经验
     Timers:CreateTimer(0.5, function()
@@ -479,26 +397,6 @@ function AIGameMode:OnPlayerLevelUp(keys)
             hEntity:SetCustomDeathXP(3000 + hEntity:GetCurrentXP() * 0.03)
         end
     end)
-
-    -- Set Ability Points
-    -- local hero = EntIndexToHScript(keys.player):GetAssignedHero()
-    -- local level = keys.level
-
-    -- for i, v in ipairs(tSkillCustomNameList) do
-    --     if v == hero:GetName() then
-    --         for _, lv in ipairs(tAPLevelList) do
-    --             if lv == level then
-    --                 print("-----------------debug-----------------", hero:GetName() .. "level:" .. level .. " Add AP")
-    --                 -- Save current unspend AP
-    --                 local unspendAP = hero:GetAbilityPoints()
-    --                 hero:SetAbilityPoints(1 + unspendAP)
-    --                 break
-    --             end
-    --         end
-
-    --         break
-    --     end
-    -- end
 end
 
 function AIGameMode:OnItemPickedUp(event)
@@ -601,7 +499,6 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
         playerGoldXpMultiplier = tostring(self.fPlayerGoldXpMultiplier),
         botGoldXpMultiplier = tostring(self.fBotGoldXpMultiplier),
         towerPower = self.iTowerPower .. "%",
-        towerEndure = AIGameMode:StackToPercentage(self.iTowerEndure)
     }
     -- send to api server
     data.gameOption = {
@@ -609,7 +506,6 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
         playerGoldXpMultiplier = self.fPlayerGoldXpMultiplier,
         botGoldXpMultiplier = self.fBotGoldXpMultiplier,
         towerPower = self.iTowerPower,
-        towerEndure = self.iTowerEndure,
     }
 
     local basePoint = 0
@@ -684,7 +580,7 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
                     points = 0,
                     str = hero:GetStrength() or 0,
                     agi = hero:GetAgility() or 0,
-                    int = hero:GetIntellect() or 0,
+                    int = hero:GetIntellect(false) or 0,
                     items = {},
                     isDisconnect = false,
                 }
@@ -717,7 +613,6 @@ function AIGameMode:EndScreenStats(winnerTeamId, bTrueEnd)
 
                     if teamKills > 0 then
                         local battleParticipation = math.floor(battleParticipationBase * ((kills + assists) / teamKills))
-                        print("battleParticipation", battleParticipation)
                         playerInfo.points = playerInfo.points + battleParticipation
                     end
 
@@ -951,33 +846,4 @@ function AIGameMode:IsInvalidGame()
         return true
     end
     return false
-end
-
-function AIGameMode:StackToPercentage(iStackCount)
-    if iStackCount == 1 then
-        return "50%"
-    elseif iStackCount == 2 then
-        return "75%"
-    elseif iStackCount == 3 then
-        return "100%"
-    elseif iStackCount == 4 then
-        return "125%"
-    elseif iStackCount == 5 then
-        return "150%"
-    elseif iStackCount == 6 then
-        return "175%"
-    elseif iStackCount == 7 then
-        return "200%"
-    elseif iStackCount == 8 then
-        return "250%"
-    elseif iStackCount == 9 then
-        return "300%"
-    elseif iStackCount == 10 then
-        return "400%"
-    elseif iStackCount == 11 then
-        -- for test
-        return "500%"
-    else
-        return "100%"
-    end
 end

@@ -40,8 +40,8 @@ If you would like to contribute to Windy10v10AI, please see our [contributing gu
 ## Install 安装
 
 1. Install Dota2 and [Dota 2 Workshop Tools](https://developer.valvesoftware.com/wiki/Dota_2_Workshop_Tools/Installing_and_Launching_Tools).
-2. Install [node.js](https://nodejs.org/). `v20.10.0`
-3. Run `npm install` in root directory. Content and game folder will be linked to dota2 dota_addons directory.
+2. Install [node.js](https://nodejs.org/). `v20`
+3. Clone this repository to local. Run `npm install` in the repository root directory. Content and game folder will be linked to dota2 dota_addons directory.
 
 # Develop 开发
 
@@ -63,6 +63,8 @@ dota_launch_custom_game windy10v10ai dota
 dota_custom_ui_debug_panel 7
 # reload lua
 script_reload
+# Speeds the game up to that number 加速游戏到指定倍速
+host_timescale <float>
 ```
 
 ### How to compile item png to vtex_c 如何编译物品图标为vtex_c
@@ -128,3 +130,13 @@ Panorama UI with webpack, TypeScript and React.
   <br>
 - **[game/*]:** 会和 `dota 2 beta/game/dota_addons/your_addon_name` 同步更新
 - **[content/*]:** 会和 `dota 2 beta/content/dota_addons/your_addon_name` 同步更新
+
+# 维护指南
+
+## Console报错
+
+console中有如下报错时，技能特效会消失，需要删除对应的文件，然后重新启动Dota2即可。
+
+```
+Failed loading resource "particles/units/heroes/hero_skywrath_mage/skywrath_mage_mystic_flare_ambient.vpcf_c" (ERROR_BADREQUEST: Code error - bad request)
+```

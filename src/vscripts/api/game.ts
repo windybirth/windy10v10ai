@@ -1,4 +1,4 @@
-import { ApiClient, HttpMethod } from "./api_client";
+import { ApiClient, HttpMethod } from "./api-client";
 
 class Player {
   teamId!: number;
@@ -15,6 +15,7 @@ class GameInfo {
   matchId!: string;
   gameOption!: object;
   version!: string;
+  gameTimeMsec!: number;
   constructor() {
     print("[Game] constructor in TS");
     this.players = [];
@@ -31,17 +32,10 @@ class EndGameInfo {
 }
 
 export class Game {
-  private static VERSION = "v3.23";
+  private static VERSION = "v3.37";
   constructor() {}
 
   public SendEndGameInfo(endData: EndGameInfo) {
-    if (
-      GetDedicatedServerKeyV2(ApiClient.SERVER_KEY) === ApiClient.LOCAL_APIKEY &&
-      !IsInToolsMode()
-    ) {
-      return;
-    }
-
     CustomNetTables.SetTableValue("ending_status", "ending_status", {
       status: 1,
     });
@@ -51,6 +45,7 @@ export class Game {
     gameInfo.matchId = GameRules.Script_GetMatchID().toString();
     gameInfo.version = Game.VERSION;
     gameInfo.gameOption = endData.gameOption;
+    gameInfo.gameTimeMsec = Math.round(GameRules.GetGameTime() * 1000);
 
     DeepPrintTable(endData);
 

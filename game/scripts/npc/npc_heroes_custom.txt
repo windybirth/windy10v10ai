@@ -74,7 +74,7 @@
 		"Ability2"				"jack_murderer_of_the_misty_night"
 		"Ability3"				"jack_surgery"
 		"Ability4"				"jack_the_mist"
-		"Ability5"				"generic_hidden"
+		"Ability5"				"brewmaster_primal_split_lua"
 		"Ability6"				"jack_maria_the_ripper"
 
 		"Ability10"				"special_bonus_attack_damage_10"
@@ -132,13 +132,13 @@
 		"ItemSlots"
   		{ }
 
-		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
-		"AttributeBaseStrength"		"35"
-		"AttributeStrengthGain"		"3.00000"
-		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"2.100000"
-		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"1.500000"
+		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
+		"AttributeBaseStrength"		"30"
+		"AttributeStrengthGain"		"2.80000"
+		"AttributeBaseAgility"		"22"
+		"AttributeAgilityGain"		"2.200000"
+		"AttributeBaseIntelligence"		"22"
+		"AttributeIntelligenceGain"		"1.900000"
 		"BaseAttackSpeed"			"100"
 		"AttackAnimationPoint"		"0.300000"
 		"MovementSpeed"				"300"
@@ -386,17 +386,6 @@
 		"Ability5"		"abyssal_underlord_dark_rift"
 	}
 
-	"npc_dota_hero_life_stealer"
-    {
-        "Ability17"		"special_bonus_attack_damage_150"
-    }
-
-	"npc_dota_hero_faceless_void"
-	{
-		"Ability5"		"faceless_void_chronosphere_final" // 神技
-		"Ability7"		"faceless_void_backtrack"
-	}
-
 	"npc_dota_hero_brewmaster"
 	{
 		"Ability4"		"brewmaster_drunken_haze"
@@ -416,9 +405,7 @@
 
 	"npc_dota_hero_hoodwink"
 	{
-		"AttackRate"    "1.7"
-		"Ability16"					"special_bonus_unique_hoodwink_sharpshooter_damage"
-		"Ability14"					"special_bonus_unique_hoodwink_acorn_shot_charges"
+		"AttackRate"		"1.7"	// 2.0
 	}
 
 	"npc_dota_hero_obsidian_destroyer"
@@ -426,11 +413,6 @@
 		"AttackRate"    "1.7"
 	}
 
-	"npc_dota_hero_crystal_maiden"
-	{
-		"Ability5"      "visage_silent_as_the_grave"
-		"Ability8"      "visage_gravekeepers_cloak"
-	}
 
 	"npc_dota_hero_tinker"
 	{
@@ -440,35 +422,35 @@
             "Build"
             {
                 "1"		"tinker_laser"
-                "2"		"tinker_heat_seeking_missile"
+                "2"		"tinker_march_of_the_machines"
                 "3"		"tinker_laser"
-                "4"		"tinker_heat_seeking_missile"
+                "4"		"tinker_march_of_the_machines"
                 "5"		"tinker_laser"
                 "6"		"tinker_rearm_lua"
                 "7"		"tinker_laser"
-                "8"		"tinker_heat_seeking_missile"
+                "8"		"tinker_march_of_the_machines"
                 "9"		"tinker_laser"
                 "10"		"special_bonus_mana_reduction_8"
-                "11"		"tinker_heat_seeking_missile"
+                "11"		"tinker_march_of_the_machines"
                 "12"		"tinker_rearm_lua"
-                "13"		"tinker_heat_seeking_missile"
+                "13"		"tinker_march_of_the_machines"
                 "14"		"tinker_defense_matrix"
-                "15"		"special_bonus_unique_tinker_6"
+                "15"		"special_bonus_unique_tinker"
                 "16"		"tinker_defense_matrix"
                 "17"		""
                 "18"		"tinker_rearm_lua"
                 "19"		""
-                "20"		"special_bonus_unique_tinker_defense_matrix_cdr"
+                "20"		"special_bonus_unique_tinker_5"
                 "21"		""
                 "22"		""
                 "23"		""
                 "24"		""
-                "25"		"special_bonus_unique_tinker_3"
+                "25"		"special_bonus_unique_tinker_4"
                 "26"		""
-                "27"		"special_bonus_unique_tinker_4"
+                "27"		"special_bonus_unique_tinker_march_duration"
                 "28"		"special_bonus_unique_tinker_7"
-                "29"		"special_bonus_unique_tinker_5"
-                "30"		"special_bonus_unique_tinker"
+                "29"		"special_bonus_unique_tinker_defense_matrix_status_resistance"
+                "30"		"special_bonus_unique_tinker_rearm_magic_resistance"
                 "31"		"tinker_defense_matrix"
                 "32"		"tinker_defense_matrix"
                 "33"		"tinker_defense_matrix"
@@ -482,25 +464,26 @@
 	}
 	"npc_dota_hero_pangolier"
 	{
-		"DisableWearables"	        "1"
-		"Ability8"					"pangolier_heartpiercer"
+		"DisableWearables"			"1"
 	}
 
 	"npc_dota_hero_naga_siren"
 	{
-		"Ability5"		"naga_siren_crit"
+		"Ability17"		"special_bonus_unique_naga_siren"
+		"Ability15"		"special_bonus_unique_naga_siren_net_breaks"
 	}
 
 	"npc_dota_hero_night_stalker"
 	{
 		"VisionDaytimeRange"		"1200"// 800
-		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，上限4000
+		"VisionNighttimeRange"		"2400"// 1800 电灯泡就要有电灯泡的样子，现在上限是全图
+		"Ability17"		"special_bonus_unique_night_stalker_301"	// // 暗夜猎影 移动速度 替代大招减CD
 	}
 
 	"npc_dota_hero_keeper_of_the_light"
 	{
-		"Ability6"		"keeper_of_the_light_mana_leak"
-		"Ability19"		"keeper_of_the_light_spirit_form"
+		"Ability6"		"keeper_of_the_light_mana_leak"		// 追加技能 法力流失
+		"Ability19"		"keeper_of_the_light_spirit_form"	// 移动 灵魂形态 不需要快捷键
 	}
 
 	"npc_dota_hero_rubick"
@@ -508,48 +491,24 @@
 		"Ability20"		"rubick_null_field"
 	}
 
-	"npc_dota_hero_slark"
-    {
-		"Ability5"		"troll_warlord_berserkers_rage"
-        "Ability10"		"special_bonus_unique_slark_2"
-        "Ability11"		"special_bonus_unique_slark"
-        "Ability12"		"special_bonus_lifesteal_15"
-        "Ability13"		"special_bonus_unique_slark_8"
-        "Ability14"		"special_bonus_unique_slark_4"
-        "Ability15"		"special_bonus_magic_resistance_20"
-        "Ability16"		"special_bonus_unique_slark_301"
-        "Ability17"		"special_bonus_unique_slark_5"
-    }
-
-	"npc_dota_hero_legion_commander"
-    {
-        "Ability10"		"special_bonus_unique_legion_commander_2"
-        "Ability11"		"special_bonus_unique_legion_commander_pta_movespeed"
-        "Ability12"		"special_bonus_unique_legion_commander_6"
-        "Ability17"		"special_bonus_unique_legion_commander_4"
-        "Ability14"		"special_bonus_unique_legion_commander_5"
-        "Ability15"		"special_bonus_unique_legion_commander_3"
-        "Ability16"		"special_bonus_unique_legion_commander"
-        "Ability13"		"special_bonus_unique_legion_commander_8"
-    }
 
 	"npc_dota_hero_nyx_assassin"
 	{
-		"Ability5"      "nyx_assassin_mana_burn"
+		"Ability5"		"nyx_assassin_mana_burn"
+		"Ability20"		"nyx_assassin_nyxth_sense"
 	}
 
 
 	"npc_dota_hero_monkey_king"
 	{
+		// 禁用猴子猴孙，存在卡顿，开局多次抽奖的问题
 		"Ability6"		"spectre_ursa_enrage"
-		"Ability17"     "special_bonus_unique_spectre_401"
+		"Ability17"		"special_bonus_unique_spectre_401"
 	}
 
 	// 幽鬼
     "npc_dota_hero_spectre"
     {
-		// spectre_haunt_single 只有3级
-		"Ability16"		"special_bonus_cooldown_reduction_20"
         "Bot"
         {
             "Build"
@@ -583,7 +542,7 @@
                 "27"		"special_bonus_unique_spectre_desolate_radius"
                 "28"		"special_bonus_unique_spectre_2"
                 "29"		"special_bonus_hp_350"
-                "30"		"special_bonus_cooldown_reduction_20"
+                "30"		"special_bonus_unique_spectre_4"
                 "31"		"spectre_haunt_single"
                 "32"		"spectre_haunt_single"
                 "33"		"spectre_haunt_single"
@@ -639,14 +598,13 @@
 			}
 		}
 	}
-    "npc_dota_hero_antimage"
+	"npc_dota_hero_antimage"
 	{
-		"Ability4"		"brewmaster_cinder_brew"
-		"Ability5"		"brewmaster_drunken_brawler"
+		// "Ability4"		"brewmaster_cinder_brew"
+		// "Ability5"		"brewmaster_drunken_brawler"
 	}
 	"npc_dota_hero_axe"
 	{
-		"Ability4"			"axe_culling_blade_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -733,15 +691,8 @@
 	}
 	"npc_dota_hero_batrider"
 	{
-		"Ability5"      "dark_seer_ion_shell"
-		"Ability10"		"special_bonus_unique_batrider_7"
-		"Ability17"		"special_bonus_unique_batrider_3"
-		"Ability12"		"special_bonus_movement_speed_20"
-		"Ability11"		"special_bonus_unique_batrider_6"
-		"Ability14"		"special_bonus_unique_batrider_1"
-		"Ability13"		"special_bonus_unique_batrider_5"
-		"Ability16"		"special_bonus_unique_batrider_4"
-		"Ability15"		"special_bonus_unique_batrider_2"
+		"Ability5"		"dark_seer_ion_shell"
+		"Ability9"		"batrider_smoldering_resin"	// 闷烧树脂 先天技能
 	}
 	"npc_dota_hero_bounty_hunter"
 	{
@@ -878,9 +829,7 @@
 	// 混沌骑士
 	"npc_dota_hero_chaos_knight"
 	{
-		"Ability6"	"imba_chaos_knight_phantasm"
-		"Ability13"		"special_bonus_lifesteal_15"
-		"Ability17"		"special_bonus_cleave_60"
+		"Ability6"		"imba_chaos_knight_phantasm"
 		"Bot"
 		{
 			"Build"
@@ -925,6 +874,8 @@
 	// 水晶室女 冰女
 	"npc_dota_hero_crystal_maiden"
 	{
+		"Ability5"      "visage_silent_as_the_grave"
+		"Ability8"      "visage_gravekeepers_cloak"
 		"Bot"
 		{
 			"Build"
@@ -955,7 +906,7 @@
 				"24"		""
 				"25"		"special_bonus_unique_crystal_maiden_1"
 				"26"		""
-				"27"		"special_bonus_hp_250"
+				"27"		"special_bonus_hp_200"
 				"28"		"special_bonus_unique_crystal_maiden_5"
 				"29"		"special_bonus_attack_speed_225"
 				"30"		"special_bonus_unique_crystal_maiden_2"
@@ -968,13 +919,13 @@
 	}
 	"npc_dota_hero_dazzle"
 	{
-		"Ability4"		"dazzle_weave"
-		"Ability5"      "dazzle_good_juju"	// 需要额外加点
+		// "Ability4"		"dazzle_weave"
+		"Ability5"		"dazzle_good_juju"
 		"Bot"
 		{
 			"Build"
 			{
-                "1"		"dazzle_poison_touch"
+				"1"		"dazzle_poison_touch"
 				"2"		"dazzle_shallow_grave"
 				"3"		"dazzle_poison_touch"
 				"4"		"dazzle_shadow_wave"
@@ -1017,7 +968,6 @@
 	}
 	"npc_dota_hero_death_prophet"
 	{
-		"Ability4"		"death_prophet_witchcraft"
 		"Bot"
 		{
 			"Build"
@@ -1101,10 +1051,6 @@
 				"34"		"dragon_knight_dragon_blood"
 			}
 		}
-	}
-	"npc_dota_hero_doom_bringer"
-	{
-		"ability7"			"doom_bringer_doom_final" // 神技
 	}
 	"npc_dota_hero_drow_ranger"
 	{
@@ -1193,11 +1139,6 @@
 			}
 		}
 	}
-	"npc_dota_hero_earth_spirit"
-	{
-		"Ability16"		"special_bonus_unique_earth_spirit_5"
-		"Ability15"		"special_bonus_unique_earth_spirit_2"
-	}
 	"npc_dota_hero_furion"
 	{
 		"Bot"
@@ -1243,16 +1184,16 @@
 	}
 	"npc_dota_hero_grimstroke"
 	{
-		"Ability7"				"grimstroke_dark_artistry"
-		"Ability1"              "visage_soul_assumption"
+		"Ability5"				"visage_soul_assumption"
+		"Ability8"				"grimstroke_return"
 	}
 	"npc_dota_hero_gyrocopter"
 	{
-		"Ability4"              "phantom_lancer_phantom_edge"
+		"Ability5"		"phantom_lancer_phantom_edge"
 	}
 	"npc_dota_hero_huskar"
 	{
-		"Ability4"		"huskar_inner_vitality"
+		"Ability5"		"huskar_inner_vitality"
 		"Ability10"		"special_bonus_unique_huskar_3"
 		"Ability17"		"special_bonus_unique_huskar_4"
 		"Ability12"		"special_bonus_unique_huskar_2"
@@ -1308,20 +1249,6 @@
 	"npc_dota_hero_juggernaut"
 	{
 		"DisableWearables" 			"1"
-		"Ability1"		"juggernaut_blade_fury"
-		"Ability2"		"juggernaut_healing_ward"
-		"Ability3"		"juggernaut_blade_dance"
-		"Ability4"		"juggernaut_swift_slash"
-		"Ability5"		"generic_hidden"
-		"Ability6"		"juggernaut_omni_slash"
-		"Ability10"		"special_bonus_unique_juggernaut_2"
-		"Ability11"		"special_bonus_unique_juggernaut"
-		"Ability12"		"special_bonus_unique_juggernaut_5"
-		"Ability13"		"special_bonus_unique_juggernaut_4"
-		"Ability14"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
-		"Ability15"		"special_bonus_unique_juggernaut_3"
-		"Ability16"		"special_bonus_unique_juggernaut_omnislash_duration"
-		"Ability17"		"special_bonus_cleave_40"
 		"Bot"
 		{
 			"Build"
@@ -1335,17 +1262,17 @@
 				"7"		"juggernaut_blade_dance"
 				"8"		"juggernaut_healing_ward"
 				"9"		"juggernaut_blade_dance"
-				"10"		"special_bonus_unique_juggernaut_2"
+				"10"		"special_bonus_unique_juggernaut_4"
 				"11"		"juggernaut_healing_ward"
 				"12"		"juggernaut_omni_slash"
 				"13"		"juggernaut_healing_ward"
 				"14"		"juggernaut_healing_ward"
-				"15"		"special_bonus_unique_juggernaut_4"
+				"15"		"special_bonus_unique_juggernaut_blade_fury_movespeed"
 				"16"		"juggernaut_blade_fury"
 				"17"		""
 				"18"		"juggernaut_omni_slash"
 				"19"		""
-				"20"		"special_bonus_unique_juggernaut_3"
+				"20"		"special_bonus_unique_juggernaut_blade_fury_cooldown"
 				"21"		""
 				"22"		""
 				"23"		""
@@ -1355,7 +1282,7 @@
 				"27"		"special_bonus_unique_juggernaut"
 				"28"		"special_bonus_unique_juggernaut_5"
 				"29"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
-				"30"		"special_bonus_cleave_40"
+				"30"		"special_bonus_unique_juggernaut_2"
 				"31"		"juggernaut_omni_slash"
 				"32"		"juggernaut_blade_fury"
 				"33"		"juggernaut_blade_fury"
@@ -1453,15 +1380,7 @@
 	}
 	"npc_dota_hero_lina"
 	{
-		"Ability5"		"lina_laguna_blade_final" // 神技
-	    "Ability10"		"special_bonus_unique_lina_3"
-        "Ability11"		"special_bonus_unique_lina_1"
-        "Ability12"		"special_bonus_unique_lina_2"
-        "Ability13"		"special_bonus_unique_lina_dragon_slave_crits"
-        "Ability14"		"special_bonus_spell_amplify_12"
-        "Ability15"		"special_bonus_unique_lina_supercharge_stacks"
-        "Ability16"		"special_bonus_unique_lina_6"
-        "Ability17"		"special_bonus_unique_lina_7"
+		"Ability10"		"special_bonus_unique_lina_dragon_slave_damage"
 		"Bot"
 		{
 			"Build"
@@ -1475,27 +1394,27 @@
 				"7"		"lina_dragon_slave"
 				"8"		"lina_light_strike_array"
 				"9"		"lina_dragon_slave"
-				"10"		"special_bonus_unique_lina_3"
+				"10"		"special_bonus_unique_lina_1"
 				"11"		"lina_light_strike_array"
 				"12"		"lina_laguna_blade"
 				"13"		"lina_light_strike_array"
 				"14"		"lina_light_strike_array"
-				"15"		"special_bonus_unique_lina_dragon_slave_crits"
+				"15"		"special_bonus_unique_lina_3"
 				"16"		"lina_fiery_soul"
 				"17"		""
 				"18"		"lina_laguna_blade"
 				"19"		""
-				"20"		"special_bonus_unique_lina_supercharge_stacks"
+				"20"		"special_bonus_unique_lina_6"
 				"21"		""
 				"22"		""
 				"23"		""
 				"24"		""
-				"25"		"special_bonus_unique_lina_7"
+				"25"		"special_bonus_unique_lina_crit_debuff"
 				"26"		""
-				"27"		"special_bonus_unique_lina_1"
-				"28"		"special_bonus_unique_lina_2"
-				"29"		"special_bonus_spell_amplify_12"
-				"30"		"special_bonus_unique_lina_6"
+				"27"		"special_bonus_unique_lina_dragon_slave_damage"
+				"28"		"special_bonus_unique_lina_4"
+				"29"		"special_bonus_unique_lina_2"
+				"30"		"special_bonus_unique_lina_7"
 				"31"		"lina_laguna_blade"
 				"32"		"lina_fiery_soul"
 				"33"		"lina_fiery_soul"
@@ -1505,14 +1424,6 @@
 	}
 	"npc_dota_hero_lion"
 	{
-		"Ability10"		"special_bonus_unique_lion_6"
-		"Ability15"		"special_bonus_unique_lion_3"
-		"Ability12"		"special_bonus_unique_lion_5"
-		"Ability13"		"special_bonus_unique_lion_11"
-		"Ability17"		"special_bonus_unique_lion_8"
-		"Ability11"		"special_bonus_unique_lion_10"
-		"Ability16"		"special_bonus_unique_lion_manadrain_damage"
-		"Ability14"		"special_bonus_unique_lion_4"
 		"Bot"
 		{
 			"Build"
@@ -1546,7 +1457,7 @@
 				"27"		"special_bonus_unique_lion_6"
 				"28"		"special_bonus_unique_lion_11"
 				"29"		"special_bonus_unique_lion_8"
-				"30"		"special_bonus_unique_lion_manadrain_damage"
+				"30"		"special_bonus_unique_lion_2"
 				"31"		"lion_finger_of_death"
 				"32"		"lion_voodoo"
 				"33"		"lion_mana_drain"
@@ -1556,27 +1467,26 @@
 	}
 	"npc_dota_hero_luna"
 	{
-		"Ability4"		"luna_lunar_grace"
 		"Bot"
 		{
 			"Build"
 			{
 				"1"		"luna_lucent_beam"
-				"2"		"luna_lunar_blessing"
+				"2"		"luna_lunar_orbit"
 				"3"		"luna_lucent_beam"
 				"4"		"luna_moon_glaive"
 				"5"		"luna_lucent_beam"
 				"6"		"luna_eclipse"
 				"7"		"luna_lucent_beam"
-				"8"		"luna_lunar_blessing"
+				"8"		"luna_lunar_orbit"
 				"9"		"luna_lucent_beam"
 				"10"		"special_bonus_unique_luna_4"
 				"11"		"luna_moon_glaive"
 				"12"		"luna_eclipse"
 				"13"		"luna_moon_glaive"
-				"14"		"luna_lunar_blessing"
+				"14"		"luna_lunar_orbit"
 				"15"		"special_bonus_unique_luna_2"
-				"16"		"luna_lunar_blessing"
+				"16"		"luna_lunar_orbit"
 				"17"		""
 				"18"		"luna_eclipse"
 				"19"		""
@@ -1593,18 +1503,10 @@
 				"30"		"special_bonus_unique_luna_3"
 				"31"		"luna_eclipse"
 				"32"		"luna_moon_glaive"
-				"33"		"luna_lunar_blessing"
+				"33"		"luna_lunar_orbit"
 				"34"		"luna_moon_glaive"
 			}
 		}
-	}
-	"npc_dota_hero_magnataur"
-	{
-		"Ability5"			"magnataur_reverse_polarity_final" // 神技
-	}
-	"npc_dota_hero_marci"
-	{
-		"Ability4"          "broodmother_insatiable_hunger"
 	}
 	"npc_dota_hero_medusa"
 	{
@@ -1612,22 +1514,22 @@
 		{
 			"Build"
 			{
-                "1"			"medusa_mystic_snake"
+				"1"			"medusa_mystic_snake"
 				"2"			"medusa_split_shot"
 				"3"			"medusa_mystic_snake"
-				"4"			"medusa_mana_shield"
+				"4"			"medusa_split_shot"
 				"5"			"medusa_mystic_snake"
 				"6"			"medusa_stone_gaze"
 				"7"			"medusa_mystic_snake"
 				"8"			"medusa_split_shot"
 				"9"			"medusa_mystic_snake"
-				"10"		"special_bonus_unique_medusa_7"
+				"10"		"special_bonus_unique_medusa_snake_damage"
 				"11"		"medusa_split_shot"
 				"12"		"medusa_stone_gaze"
 				"13"		"medusa_split_shot"
-				"14"		"medusa_mana_shield"
+				"14"		"medusa_gorgon_grasp"
 				"15"		"special_bonus_unique_medusa_5"
-				"16"		"medusa_split_shot"
+				"16"		"medusa_gorgon_grasp"
 				"17"		""
 				"18"		"medusa_stone_gaze"
 				"19"		""
@@ -1643,15 +1545,15 @@
 				"29"		"special_bonus_unique_medusa"
 				"30"		"special_bonus_unique_medusa_4"
                 "31"		"medusa_stone_gaze"
-				"32"		"medusa_mana_shield"
-				"33"		"medusa_mana_shield"
-				"34"		"medusa_mana_shield"
+				"32"		"medusa_gorgon_graso"
+				"33"		"medusa_gorgon_grasp"
+				"34"		"medusa_gorgon_grasp"
 			}
 		}
 	}
 	// 初音未来
-    "npc_dota_hero_meepo"
-    {
+	"npc_dota_hero_meepo"
+	{
 		"Bot"
 		{
 			"Build"
@@ -1701,15 +1603,15 @@
 			"Build"
 			{
 				"1"		"nevermore_shadowraze1"
-				"2"		"nevermore_necromastery"
+				"2"		"nevermore_frenzy"
 				"3"		"nevermore_shadowraze1"
 				"4"		"nevermore_dark_lord"
 				"5"		"nevermore_shadowraze1"
-				"6"		"nevermore_necromastery"
+				"6"		"nevermore_frenzy"
 				"7"		"nevermore_shadowraze1"
-				"8"		"nevermore_necromastery"
+				"8"		"nevermore_frenzy"
 				"9"		"nevermore_shadowraze1"
-				"10"		"special_bonus_attack_speed_25"
+				"10"		"special_bonus_unique_nevermore_7"
 				"11"		"nevermore_requiem"
 				"12"		"nevermore_requiem"
 				"13"		"nevermore_dark_lord"
@@ -1719,31 +1621,26 @@
 				"17"		""
 				"18"		"nevermore_requiem"
 				"19"		""
-				"20"		"special_bonus_unique_nevermore_1"
+				"20"		"special_bonus_unique_nevermore_6"
 				"21"		""
 				"22"		""
 				"23"		""
 				"24"		""
 				"25"		"special_bonus_unique_nevermore_raze_procsattacks"
 				"26"		""
-				"27"		"special_bonus_unique_nevermore_7"
+				"27"		"special_bonus_unique_nevermore_4"
 				"28"		"special_bonus_unique_nevermore_3"
-				"29"		"special_bonus_unique_nevermore_6"
-				"30"		"special_bonus_unique_nevermore_shadowraze_cooldown"
+				"29"		"special_bonus_unique_nevermore_1"
+				"30"		"special_bonus_unique_nevermore_frenzy_castspeed"
 				"31"		"nevermore_requiem"
 				"32"		"nevermore_dark_lord"
-				"33"		"nevermore_necromastery"
-				"34"		"nevermore_necromastery"
+				"33"		"nevermore_frenzy"
+				"34"		"nevermore_frenzy"
 			}
 		}
 	}
-	"npc_dota_hero_morphling"
-	{
-		"Ability17" "special_bonus_unique_morphling_6"
-	}
 	"npc_dota_hero_necrolyte"
 	{
-		"Ability5"		"necrolyte_reapers_scythe_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1752,7 +1649,7 @@
 				"2"		"necrolyte_death_pulse"
 				"3"		"necrolyte_heartstopper_aura"
 				"4"		"necrolyte_death_pulse"
-				"5"		"necrolyte_sadist"
+				"5"		"necrolyte_ghost_shroud"
 				"6"		"necrolyte_reapers_scythe"
 				"7"		"necrolyte_heartstopper_aura"
 				"8"		"necrolyte_death_pulse"
@@ -1763,7 +1660,7 @@
 				"13"		"necrolyte_heartstopper_aura"
 				"14"		"necrolyte_death_pulse"
 				"15"		"special_bonus_unique_necrophos_3"
-				"16"		"necrolyte_sadist"
+				"16"		"necrolyte_ghost_shroud"
 				"17"		""
 				"18"		"necrolyte_reapers_scythe"
 				"19"		""
@@ -1779,16 +1676,16 @@
 				"29"		"special_bonus_unique_necrophos_5"
 				"30"		"special_bonus_unique_necrophos"
 				"31"		"necrolyte_reapers_scythe"
-				"32"		"necrolyte_sadist"
-				"33"		"necrolyte_sadist"
-				"34"		"necrolyte_sadist"
+				"32"		"necrolyte_ghost_shroud"
+				"33"		"necrolyte_ghost_shroud"
+				"34"		"necrolyte_ghost_shroud"
 			}
 		}
 	}
 	"npc_dota_hero_ogre_magi"
 	{
-		"AttackRate"                "1.4"
-		"AttributeStrengthGain"		"5.2"	// 4.2
+		"AttackRate"				"1.6"
+		"AttributeStrengthGain"		"4.7"	// 4.2
 		"AttributeAgilityGain"		"2.0"	// 1.5
 		"Bot"
 		{
@@ -1850,14 +1747,13 @@
 
 	"npc_dota_hero_clinkz"
 	{
-		"Ability4"		"generic_hidden"
+		"Ability5"		"generic_hidden" // Remove 烈焰之军
 		"Ability12"		"special_bonus_attack_range_100"
 	}
 	"npc_dota_hero_omniknight"
 	{
 		//"Ability5"		"omniknight_repel" 加强新版二技能的同时暂时移除老版二技能
-		"Ability4"		"omniknight_angelic_flight"
-		"Ability5"		"omniknight_degen_aura"
+		"Ability5"		"omniknight_angelic_flight"
 		"Bot"
 		{
 			"Build"
@@ -1901,8 +1797,8 @@
 	}
 	"npc_dota_hero_oracle"
 	{
-		"Ability5"      "chen_hand_of_god"
-		"Ability12"     "special_bonus_unique_chen_12"
+		"Ability5"		"chen_hand_of_god"
+		"Ability9"		"oracle_prognosticate"	// 预言 先天技能
 		"Bot"
 		{
 			"Build"
@@ -1946,7 +1842,6 @@
 	}
 	"npc_dota_hero_phantom_assassin"
 	{
-		"Ability5"		"chaos_knight_chaos_strike_final" // 神技
 		"Bot"
 		{
 			"Build"
@@ -1985,12 +1880,6 @@
 				"32"		"phantom_assassin_stifling_dagger"
 				"33"		"phantom_assassin_blur"
 				"34"		"phantom_assassin_blur"
-				"35"		""
-				"36"		""
-				"37"		""
-				"38"		""
-				"39"		""
-				"40"		"chaos_knight_chaos_strike_final"
 			}
 		}
 	}
@@ -2012,8 +1901,8 @@
 				"10"		"special_bonus_unique_pudge_4"
 				"11"		"pudge_rot"
 				"12"		"pudge_dismember"
-				"13"		"pudge_flesh_heap"
-				"14"		"pudge_meat_hook"
+				"13"		"pudge_meat_hook"
+				"14"		"pudge_flesh_heap"
 				"15"		"special_bonus_unique_pudge_7"
 				"16"		"pudge_flesh_heap"
 				"17"		""
@@ -2039,16 +1928,13 @@
 	}
 	"npc_dota_hero_queenofpain"
 	{
-		"Ability4"      "dark_seer_vacuum"
+		"Ability5"		"dark_seer_vacuum"
 	}
 	"npc_dota_hero_razor"
 	{
-	    "Ability11"		"special_bonus_unique_razor_101"
-        "Ability13"		"special_bonus_spell_amplify_12"
-        "Ability14"		"special_bonus_unique_razor_401"
-        "Ability15"		"special_bonus_unique_razor_static_link_aspd"
-        "Ability16"		"special_bonus_unique_razor_402"
-        "Ability17"		"special_bonus_unique_razor_plasmafield_second_ring"
+		"Ability11"		"special_bonus_unique_razor_101"
+		"Ability13"		"special_bonus_unique_razor_402"
+		// "Ability16"		"special_bonus_unique_razor_401"
 		"Bot"
 		{
 			"Build"
@@ -2088,7 +1974,7 @@
 	}
 	"npc_dota_hero_riki"
 	{
-		"Ability5"		"riki_permanent_invisibility"
+		"Ability9"		"riki_permanent_invisibility"
 		"Bot"
 		{
 			"Build"
@@ -2146,12 +2032,12 @@
 				"8"		"sandking_sand_storm"
 				"9"		"sandking_burrowstrike"
 				"10"		"special_bonus_unique_sand_king_burrowstrike_stun"
-				"11"		"sandking_caustic_finale"
+				"11"		"sandking_scorpion_strike"
 				"12"		"sandking_epicenter"
 				"13"		"sandking_sand_storm"
 				"14"		"sandking_sand_storm"
-				"15"		"special_bonus_unique_sand_king_8"
-				"16"		"sandking_caustic_finale"
+				"15"		"special_bonus_unique_sand_king_scorpion_strike_damage"
+				"16"		"sandking_scorpion_strike"
 				"17"		""
 				"18"		"sandking_epicenter"
 				"19"		""
@@ -2167,9 +2053,9 @@
 				"29"		"special_bonus_unique_sand_king_7"
 				"30"		"special_bonus_unique_sand_king"
 				"31"		"sandking_epicenter"
-				"32"		"sandking_caustic_finale"
-				"33"		"sandking_caustic_finale"
-				"34"		"sandking_caustic_finale"
+				"32"		"sandking_scorpion_strike"
+				"33"		"sandking_scorpion_strike"
+				"34"		"sandking_scorpion_strike"
 			}
 		}
 	}
@@ -2185,25 +2071,25 @@
 				"3"		"shadow_shaman_shackles"
 				"4"		"shadow_shaman_ether_shock"
 				"5"		"shadow_shaman_shackles"
-				"6"		"shadow_shaman_mass_serpent_ward"
+				"6"		"shadow_shaman_ether_shock"
 				"7"		"shadow_shaman_shackles"
-				"8"		"shadow_shaman_ether_shock"
+				"8"		"shadow_shaman_mass_serpent_ward"
 				"9"		"shadow_shaman_ether_shock"
 				"10"		"special_bonus_unique_shadow_shaman_6"
 				"11"		"shadow_shaman_ether_shock"
-				"12"		"shadow_shaman_mass_serpent_ward"
+				"12"		"shadow_shaman_voodoo"
 				"13"		"shadow_shaman_ether_shock"
 				"14"		"shadow_shaman_voodoo"
 				"15"		"special_bonus_unique_shadow_shaman_8"
-				"16"		"shadow_shaman_voodoo"
+				"16"		"shadow_shaman_mass_serpent_ward"
 				"17"		""
-				"18"		"shadow_shaman_mass_serpent_ward"
+				"18"		""
 				"19"		""
 				"20"		"special_bonus_unique_shadow_shaman_7"
 				"21"		""
 				"22"		""
 				"23"		""
-				"24"		""
+				"24"		"shadow_shaman_mass_serpent_ward"
 				"25"		"special_bonus_unique_shadow_shaman_4"
 				"26"		""
 				"27"		"special_bonus_unique_shadow_shaman_hex_damage_amp"
@@ -2216,22 +2102,8 @@
 			}
 		}
 	}
-	"npc_dota_hero_shredder"
-	{
-		"Ability16"		"special_bonus_unique_timbersaw_5"
-		"Ability14"		"special_bonus_magic_resistance_20"
-		"Ability12"		"special_bonus_unique_timbersaw"
-	}
-	"npc_dota_hero_storm_spirit"
-	{
-		"Ability4"		"batrider_flaming_lasso"// FIXME 蝙蝠大，当个乐子看看玩家反映
-		"Ability17"		"special_bonus_unique_batrider_6"// FIXME 蝙蝠大的天赋，当个乐子看看玩家反映
-	}
 	"npc_dota_hero_silencer"
 	{
-		"override_hero"		"npc_dota_hero_silencer"
-		"AttackRange"		"600"					// 600
-		"AttributeStrengthGain"		"2.000000"		// 2.4
 		"AttributeAgilityGain"		"2.000000"		// 2.4
 		"AttributeIntelligenceGain"		"2.500000"	// 2.9
 		"Bot"
@@ -2278,14 +2150,12 @@
 	"npc_dota_hero_skeleton_king"
 	{
 		// skeleton_king_reincarnation 只有3级
-		"Ability4"		"dazzle_shallow_grave"
-		"Ability5"		"earthshaker_aftershock"
 		"Bot"
 		{
 			"Build"
 			{
 				"1"		"skeleton_king_hellfire_blast"
-				"2"		"skeleton_king_vampiric_aura"
+				"2"		""//TODO 命石技能
 				"3"		"skeleton_king_hellfire_blast"
 				"4"		"skeleton_king_mortal_strike"
 				"5"		"skeleton_king_hellfire_blast"
@@ -2299,7 +2169,7 @@
 				"13"		"skeleton_king_mortal_strike"
 				"14"		"skeleton_king_hellfire_blast"
 				"15"		"special_bonus_unique_wraith_king_11"
-				"16"		"skeleton_king_vampiric_aura"
+				"16"		""
 				"17"		""
 				"18"		"skeleton_king_reincarnation"
 				"19"		""
@@ -2309,21 +2179,19 @@
 				"23"		""
 				"24"		""
 				"25"		"special_bonus_unique_wraith_king_4"
-				"26"		""
-				"27"		"special_bonus_unique_wraith_king_vampiric_skeleton_duration"
+				"26"		"skeleton_king_reincarnation"
+				"27"		"special_bonus_attack_speed_70"
 				"28"		"special_bonus_unique_wraith_king_6"
 				"29"		"special_bonus_unique_wraith_king_5"
 				"30"		"special_bonus_unique_wraith_king_10"
-				"31"		"skeleton_king_vampiric_aura"
-				"32"		"skeleton_king_vampiric_aura"
-				"33"		"skeleton_king_vampiric_aura"
+				"31"		""
+				"32"		""
+				"33"		""
 			}
 		}
 	}
 	"npc_dota_hero_skywrath_mage"
 	{
-		"AttributeBaseIntelligence"		"28"		// 25
-		"AttributeIntelligenceGain"		"3.800000"	// 4.1
 		"Bot"
 		{
 			"Build"
@@ -2367,20 +2235,13 @@
 	}
 	"npc_dota_hero_snapfire"
 	{
-		"Ability7"				"snapfire_mortimer_kisses"
-		"Ability6"              "chen_penitence"
-		"Ability10"				"special_bonus_unique_snapfire_7"
-		"Ability17"				"special_bonus_unique_snapfire_5"
-		"Ability16"				"special_bonus_unique_snapfire_2"
-		"Ability13"				"special_bonus_unique_snapfire_3"
-		"Ability14"				"special_bonus_unique_snapfire_8"
-		"Ability15"				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
-		"Ability12"				"special_bonus_unique_snapfire_6"
-		"Ability11"				"special_bonus_unique_snapfire_1"
+		// "Ability7"				"snapfire_mortimer_kisses"
+		// "Ability6"				"chen_penitence"	// 设置此技能会导致先天技能失效
 	}
 	"npc_dota_hero_sniper"
 	{
-		"Ability5"		"sniper_assassinate_upgrade"
+		// "Ability5"		"sniper_assassinate_upgrade"
+		// "Ability7"		"sniper_keen_scope"
 		"Bot"
 		{
 			"Build"
@@ -2399,7 +2260,7 @@
 				"12"		"sniper_assassinate"
 				"13"		"sniper_headshot"
 				"14"		"sniper_headshot"
-				"15"		"special_bonus_unique_sniper_5"
+				"15"		"special_bonus_unique_sniper_4"
 				"16"		"sniper_take_aim"
 				"17"		""
 				"18"		"sniper_assassinate"
@@ -2411,9 +2272,9 @@
 				"24"		""
 				"25"		"special_bonus_attack_range_100"
 				"26"		""
-				"27"		"special_bonus_unique_sniper_4"
+				"27"		"special_bonus_unique_sniper_5"
 				"28"		"special_bonus_attack_speed_30"
-				"29"		"special_bonus_unique_sniper_1"
+				"29"		"special_bonus_unique_sniper_take_aim_armor"
 				"30"		"special_bonus_unique_sniper_2"
 				"31"		"sniper_assassinate"
 				"32"		"sniper_take_aim"
@@ -2424,17 +2285,11 @@
 	}
 	"npc_dota_hero_spirit_breaker"
 	{
-	    "Ability5"		"spirit_breaker_empowering_haste"
-	}
-	"npc_dota_hero_storm_spirit"
-	{
-		"AttackRate"		"1.0"
-		"Ability4"			"batrider_flaming_lasso"
-		"Ability17"			"special_bonus_unique_batrider_6"
+		"Ability3"		"spirit_breaker_empowering_haste"
+		"Ability9"		"spirit_breaker_greater_bash"	// 巨力重击 被动不需要快捷键
 	}
 	"npc_dota_hero_sven"
 	{
-		"AttackRate"		"1.700000"
 		"Bot"
 		{
 			"Build"
@@ -2478,7 +2333,6 @@
 	}
 	"npc_dota_hero_tiny"
 	{
-		"Ability5"					"tiny_craggy_exterior"
 		"Bot"
 		{
 			"Build"
@@ -2523,9 +2377,9 @@
 	// 大树
 	"npc_dota_hero_treant"
 	{
-		"Ability4"		"brewmaster_storm_dispel_magic"
-		"Ability7"		"brewmaster_fire_phase"
-		"Ability8"		"brewmaster_fire_permanent_immolation"
+		"Ability4"		"brewmaster_storm_dispel_magic"	// 替代 树眼
+		"Ability8"		"brewmaster_fire_phase"
+		"Ability9"		"brewmaster_fire_permanent_immolation"
 	}
 	"npc_dota_hero_undying"
 	{
@@ -2574,10 +2428,6 @@
 				"34"		"vengefulspirit_wave_of_terror"
 			}
 		}
-	}
-	"npc_dota_hero_void_spirit"
-	{
-		"Ability4"		"void_spirit_astral_step_final" // 神技
 	}
 	"npc_dota_hero_viper"
 	{
@@ -2667,6 +2517,7 @@
 	}
 	"npc_dota_hero_warlock"
 	{
+		"Ability4"		"generic_hidden"	// 移除 邪术召唤
 		"Bot"
 		{
 			"Build"
@@ -2708,11 +2559,7 @@
 			}
 		}
 	}
-	"npc_dota_hero_weaver"
-	{
-		"AttackRate"     "1.6"
-		"MovementSpeed"  "290"
-	}
+
 	"npc_dota_hero_witch_doctor"
 	{
 		"Bot"

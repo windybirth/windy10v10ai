@@ -4,6 +4,7 @@ developerSteamAccountID[136407523] = "windy"
 developerSteamAccountID[1194383041] = "咸鱼"
 developerSteamAccountID[916506173] = "Arararara"
 developerSteamAccountID[353885092] = "76岁靠谱成年男性"
+developerSteamAccountID[385130282] = "mimihua"
 
 
 local function removeAllPlayerModifiers()
@@ -46,17 +47,6 @@ function AIGameMode:OnPlayerChat(event)
 
     -- 开发测试代码
     if developerSteamAccountID[steamAccountID] then
-        -- if AIGameMode.DebugMode and developerSteamAccountID[steamAccountID] then
-        if sChatMsg:find('^-pos$') then
-            -- get position
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            -- print position
-            local pos = hHero:GetAbsOrigin()
-            Printf("开发者:" .. developerSteamAccountID[steamAccountID] ..
-                " 的位置是:" .. pos.x .. "," .. pos.y .. "," .. pos.z)
-            return
-        end
-
         if sChatMsg:find('^-modifier$') then
             -- get position
             local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
@@ -65,23 +55,6 @@ function AIGameMode:OnPlayerChat(event)
             for _, modifier in pairs(modifiers) do
                 Printf("Get here modifiers: " .. modifier:GetName())
             end
-            return
-        end
-
-        if sChatMsg:find('^-kill$') then
-            local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
-            hHero:ForceKill(true)
-            return
-        end
-
-        if sChatMsg:find('^-kill hero$') then
-            local tAllHeroes = FindUnitsInRadius(DOTA_TEAM_NOTEAM,
-                Vector(0, 0, 0), nil, 99999,
-                DOTA_UNIT_TARGET_TEAM_BOTH,
-                DOTA_UNIT_TARGET_HERO,
-                DOTA_UNIT_TARGET_FLAG_NONE,
-                FIND_ANY_ORDER, false)
-            for _, hero in pairs(tAllHeroes) do hero:ForceKill(true) end
             return
         end
 
@@ -108,8 +81,8 @@ function AIGameMode:OnPlayerChat(event)
             return
         end
         if sChatMsg:find('^-lottery$') then
-            AIGameMode.tIfItemChosen[iPlayerID] = false
-            AIGameMode.tIfItemChooseInited[iPlayerID] = false
+            -- AIGameMode.tIfItemChosen[iPlayerID] = false
+            -- AIGameMode.tIfItemChooseInited[iPlayerID] = false
             local hHero = PlayerResource:GetSelectedHeroEntity(iPlayerID)
             AIGameMode:SpecialItemAdd(hHero)
             return

@@ -6,13 +6,80 @@ export class EventEntityKilled {
     ListenToGameEvent("entity_killed", (keys) => this.OnEntityKilled(keys), this);
   }
 
+  OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
+    const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
+    const attacker = EntIndexToHScript(keys.entindex_attacker) as CDOTA_BaseNPC | undefined;
+    if (!killedUnit) {
+      return;
+    }
+
+    if (killedUnit.IsRealHero() && !killedUnit.IsReincarnating()) {
+      this.onHeroKilled(killedUnit as CDOTA_BaseNPC_Hero, attacker);
+    } else if (killedUnit.IsCreep()) {
+      this.onCreepKilled(killedUnit, attacker);
+    }
+  }
+
+  //--------------------------------------------------------------------------------------------------------
+  // 英雄击杀
+  //--------------------------------------------------------------------------------------------------------
+
+  private onHeroKilled(hero: CDOTA_BaseNPC_Hero, _attacker: CDOTA_BaseNPC | undefined): void {
+    this.setRespawnTime(hero);
+  }
+
+  private readonly dotaRespawnTime = [
+    4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 23, 25, 26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+    40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63,
+    64,
+  ];
+
+  private readonly respawnTimeDefault = 60;
+  private readonly respawnTimeMin = 2;
+  private readonly respawnTimeMax = 100;
+
+  private setRespawnTime(hero: CDOTA_BaseNPC_Hero): void {
+    hero.SetTimeUntilRespawn(this.respawnTimeDefault);
+
+    const level = hero.GetLevel();
+    const respawnTimeRate = GameRules.Option.respawnTimePercentage / 100;
+
+    let respawnTime = 0;
+    const levelIndex = level - 1;
+    if (levelIndex < this.dotaRespawnTime.length) {
+      respawnTime = Math.ceil(this.dotaRespawnTime[levelIndex] * respawnTimeRate);
+    } else {
+      respawnTime = Math.ceil((level / 4 + 52) * respawnTimeRate);
+    }
+
+    // NEC大招 每一级增加6秒
+    const necrolyteReapersScythe = hero.FindModifierByName("modifier_necrolyte_reapers_scythe");
+    if (necrolyteReapersScythe) {
+      respawnTime += (necrolyteReapersScythe.GetAbility()?.GetLevel() ?? 0) * 6;
+    }
+
+    // 会员减少5s复活时间
+    if (Player.IsMemberStatic(PlayerResource.GetSteamAccountID(hero.GetPlayerOwnerID()))) {
+      respawnTime -= 5;
+    }
+
+    // 复活时间限制
+    respawnTime = Math.max(this.respawnTimeMin, Math.min(this.respawnTimeMax, respawnTime));
+
+    print(`[EventEntityKilled] ${hero.GetName()} respawnTime is ${respawnTime}`);
+    hero.SetTimeUntilRespawn(respawnTime);
+  }
+
+  //--------------------------------------------------------------------------------------------------------
+  // 单位击杀
+  //--------------------------------------------------------------------------------------------------------
   private readonly removeGoldBagDelay = 20;
 
   // 神器碎片
-  private dropItemListArtifactPart: string[] = ["item_light_part", "item_dark_part"];
+  private itemLightPartName = "item_light_part";
+  private itemDarkPartName = "item_dark_part";
 
   private dropItemChanceRoshanArtifactPart = 100;
-  private dropItemChanceCreepArtifactPart = 3.0;
 
   // 龙珠
   private dropItemListDragonBall: string[] = [
@@ -26,32 +93,11 @@ export class EventEntityKilled {
   ];
 
   private dropItemChanceRoshan = 100;
-  private dropItemChanceAncient = 2.0;
-  private dropItemChanceNeutral = 0.5;
+  private dropItemChanceAncient = 4.0;
+  private dropItemChanceNeutral = 1.0;
 
-  OnEntityKilled(keys: GameEventProvidedProperties & EntityKilledEvent): void {
-    const killedUnit = EntIndexToHScript(keys.entindex_killed) as CDOTA_BaseNPC | undefined;
-    if (!killedUnit) {
-      return;
-    }
-
-    if (killedUnit.IsRealHero()) {
-      this.OnHeroKilled(killedUnit as CDOTA_BaseNPC_Hero);
-    } else if (killedUnit.IsCreep()) {
-      this.OnCreepKilled(killedUnit, keys);
-    }
-  }
-
-  private OnHeroKilled(_hero: CDOTA_BaseNPC_Hero): void {
-    // FIXME 重写lua的OnHeroKilled
-  }
-
-  private OnCreepKilled(
-    creep: CDOTA_BaseNPC,
-    keys: GameEventProvidedProperties & EntityKilledEvent,
-  ): void {
+  private onCreepKilled(creep: CDOTA_BaseNPC, attacker: CDOTA_BaseNPC | undefined): void {
     const creepName = creep.GetName();
-    const attacker = EntIndexToHScript(keys.entindex_attacker) as CDOTA_BaseNPC | undefined;
 
     if (creepName === "npc_dota_roshan") {
       // 击杀肉山
@@ -67,11 +113,14 @@ export class EventEntityKilled {
         const dropCount = RandomInt(4, maxDropCount);
         print(`[EventEntityKilled] OnCreepKilled dropCount is ${dropCount}`);
         for (let i = 0; i < dropCount; i++) {
-          this.dropItem(
-            creep,
-            this.dropItemListArtifactPart,
-            this.dropItemChanceRoshanArtifactPart,
-          );
+          const isDaytime = GameRules.IsDaytime();
+          if (isDaytime) {
+            // 白天掉落圣光组件
+            this.dropItem(creep, [this.itemLightPartName], this.dropItemChanceRoshanArtifactPart);
+          } else {
+            // 夜晚掉落暗影组件
+            this.dropItem(creep, [this.itemDarkPartName], this.dropItemChanceRoshanArtifactPart);
+          }
         }
       } else {
         print(`[EventEntityKilled] OnCreepKilled attacker is not human player, skip drop item`);
@@ -88,6 +137,7 @@ export class EventEntityKilled {
         }
       });
     } else if (creep.IsAncient()) {
+      // 击杀远古
       if (PlayerHelper.IsHumanPlayer(attacker)) {
         this.dropItemListDragonBall = this.dropItem(
           creep,
@@ -95,9 +145,10 @@ export class EventEntityKilled {
           this.dropItemChanceAncient,
         );
 
-        this.dropItem(creep, this.dropItemListArtifactPart, this.dropItemChanceCreepArtifactPart);
+        this.dropParts(creep);
       }
     } else if (creep.IsNeutralUnitType()) {
+      // 击杀中立单位
       if (PlayerHelper.IsHumanPlayer(attacker)) {
         this.dropItemListDragonBall = this.dropItem(
           creep,
@@ -105,11 +156,39 @@ export class EventEntityKilled {
           this.dropItemChanceNeutral,
         );
 
-        this.dropItem(creep, this.dropItemListArtifactPart, this.dropItemChanceCreepArtifactPart);
+        this.dropParts(creep);
       }
     }
   }
 
+  private dropParts(creep: CDOTA_BaseNPC): void {
+    // 组件掉落概率随游戏时长而增加
+    const dotaTime = GameRules.GetDOTATime(false, false);
+    let dropItemChanceCreepArtifactPart = 0;
+    if (dotaTime < 600) {
+      dropItemChanceCreepArtifactPart = 0.5;
+    } else if (dotaTime < 1200) {
+      dropItemChanceCreepArtifactPart = 1;
+    } else if (dotaTime < 1800) {
+      dropItemChanceCreepArtifactPart = 1.5;
+    } else {
+      dropItemChanceCreepArtifactPart = 2;
+    }
+
+    // 获取白天夜晚
+    const isDaytime = GameRules.IsDaytime();
+    if (isDaytime) {
+      // 白天掉落圣光组件
+      this.dropItem(creep, [this.itemLightPartName], dropItemChanceCreepArtifactPart);
+    } else {
+      // 夜晚掉落暗影组件
+      this.dropItem(creep, [this.itemDarkPartName], dropItemChanceCreepArtifactPart);
+    }
+  }
+
+  /**
+   * 从指定list中随机掉落一件物品
+   */
   private dropItem(creep: CDOTA_BaseNPC, dropItemList: string[], dropChance = 100): string[] {
     if (dropItemList.length === 0) {
       print(`[EventEntityKilled] OnCreepKilled dropItemList is empty`);

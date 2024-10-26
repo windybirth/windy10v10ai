@@ -1,6 +1,6 @@
 import { PlayerHelper } from "../helper/player-helper";
 import { PropertyController } from "../modules/property/property_controller";
-import { ApiClient, HttpMethod } from "./api_client";
+import { ApiClient, HttpMethod } from "./api-client";
 
 export class MemberDto {
   steamId!: number;
@@ -65,7 +65,7 @@ export class Player {
     return Player.playerCount;
   }
 
-  public Init() {
+  public static LoadPlayerInfo() {
     CustomNetTables.SetTableValue("loading_status", "loading_status", {
       status: 1,
     });
@@ -89,13 +89,10 @@ export class Player {
       retryTimes: 6,
     };
 
-    // Controller初期化
-    new PropertyController();
-
     ApiClient.sendWithRetry(apiParameter);
   }
 
-  private InitSuccess(data: string) {
+  private static InitSuccess(data: string) {
     print(`[Player] Init callback data ${data}`);
     const gameStart = json.decode(data)[0] as GameStart;
     DeepPrintTable(gameStart);
@@ -118,7 +115,7 @@ export class Player {
     });
   }
 
-  private InitFailure(_: string) {
+  private static InitFailure(_: string) {
     if (IsInToolsMode()) {
       Player.saveMemberToNetTable();
     }
@@ -219,13 +216,6 @@ export class Player {
   }
 
   public onPlayerPropertyLevelup(event: { PlayerID: PlayerID; name: string; level: string }) {
-    if (
-      GetDedicatedServerKeyV2(ApiClient.SERVER_KEY) === ApiClient.LOCAL_APIKEY &&
-      !IsInToolsMode()
-    ) {
-      return;
-    }
-
     const steamId = PlayerResource.GetSteamAccountID(event.PlayerID);
 
     const apiParameter = {
@@ -258,13 +248,6 @@ export class Player {
 
   // 初始化属性，洗点
   public onPlayerPropertyReset(event: { PlayerID: PlayerID; useMemberPoint: number }) {
-    if (
-      GetDedicatedServerKeyV2(ApiClient.SERVER_KEY) === ApiClient.LOCAL_APIKEY &&
-      !IsInToolsMode()
-    ) {
-      return;
-    }
-
     const steamId = PlayerResource.GetSteamAccountID(event.PlayerID);
 
     const apiParameter = {

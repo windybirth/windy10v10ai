@@ -20,8 +20,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_blade_mail_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_ultimate_scepter_2',
 		'item_shivas_guard_2',
 		'item_vladmir_2',
@@ -37,7 +36,6 @@ tBotItemData.purchaseItemList = {
 		'item_rod_of_atos',
 		'item_recipe_gungir',
 		'item_butterfly',
-		'item_ultimate_scepter',
 		'item_octarine_core',
 		'item_aether_lens_2',
 		'item_recipe_wasp_callous',
@@ -71,8 +69,7 @@ tBotItemData.purchaseItemList = {
 		'item_blade_mail_2',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_black_king_bar_2',
 		'item_ultimate_scepter_2',
 		'item_saint_orb',
@@ -159,11 +156,10 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_ultimate_scepter_2',
 		'item_basher',
-		'item_recipe_abyssal_blade',
-		'item_recipe_abyssal_blade_v2',
 
 		'item_blue_fantasy',
 		'item_monkey_king_bar_2',
+		'item_abyssal_blade_v2',
 		'item_wasp_callous',
 		'item_infernal_desolator',
 		'item_wasp_despotic',
@@ -305,8 +301,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_blink',
 		'item_sange_and_yasha',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_black_king_bar_2',
 		-- 'item_vladmir_2',
 		'item_aghanims_shard',
@@ -354,8 +349,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_blade_mail_2',
 		'item_heavens_halberd',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_echo_sabre_2',
 		'item_aghanims_shard',
 		'item_shivas_guard_2',
@@ -377,8 +371,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_aether_lens_2',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_dagon_5',
@@ -453,8 +446,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_aether_lens_2',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_sheepstick',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
@@ -476,8 +468,7 @@ tBotItemData.purchaseItemList = {
 		'item_hand_of_group', -- 团队之手
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_aether_lens_2',
 		'item_octarine_core',
 		'item_sacred_trident',
@@ -504,8 +495,7 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_aether_lens_2', -- 以太之镜2
 		'item_phylactery', -- 灵匣
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_dagon_5',
@@ -550,11 +540,10 @@ tBotItemData.purchaseItemList = {
 		'item_power_treads',
 		'item_mask_of_madness',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
 		'item_wings_of_haste',
 		'item_hurricane_pike_2',
 		'item_wasp_callous',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_skadi_2',
 		'item_black_king_bar_2',
 		'item_mind_breaker_ai',
@@ -569,13 +558,10 @@ tBotItemData.purchaseItemList = {
 		'item_wraith_band',
 		'item_power_treads',
 		'item_orb_of_corrosion',
-		'item_falcon_blade',
 		'item_aghanims_shard',
-		'item_bfury',
-		'item_echo_sabre',
 		'item_wings_of_haste',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_echo_sabre_2',
+		'item_ultimate_scepter_2',
 		'item_yasha_and_kaya',
 		'item_black_king_bar_2',
 		'item_infernal_desolator',
@@ -618,8 +604,7 @@ tBotItemData.purchaseItemList = {
 		'item_glimmer_cape',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_sheepstick',
 		'item_octarine_core',
 		'item_aether_lens_2',
@@ -646,8 +631,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_blink',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_aether_lens_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
@@ -671,8 +655,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_aeon_pendant',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_aether_lens_2',
 		'item_recipe_arcane_octarine_core',
@@ -739,8 +722,7 @@ tBotItemData.purchaseItemList = {
 		'item_blink',
 		'item_eternal_shroud',
 		'item_aether_lens_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_ultimate_scepter_2',
 		'item_saint_orb',
 		'item_black_king_bar_2',
@@ -810,8 +792,7 @@ tBotItemData.purchaseItemList = {
 		'item_aghanims_shard',
 		'item_wings_of_haste',
 		'item_blink',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_aeon_pendant',
 		'item_aether_lens_2',
 		'item_octarine_core',
@@ -838,13 +819,11 @@ tBotItemData.purchaseItemList = {
 		'item_shivas_guard_2',
 		'item_wings_of_haste',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
 		'item_black_king_bar_2',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_undying_heart',
 		'item_sheepstick',
 		'item_refresher',
@@ -889,8 +868,8 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_sange_and_yasha',
-		'item_hurricane_pike_2',
 		'item_ultimate_scepter_2',
+		'item_hurricane_pike_2',
 		'item_infernal_desolator',
 		'item_black_king_bar_2',
 		'item_angels_demise',
@@ -912,8 +891,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_echo_sabre',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_sange_and_yasha',
 		'item_black_king_bar_2',
 		'item_monkey_king_bar_2',
@@ -940,8 +918,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_heavens_halberd',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_sange_and_yasha',
 		'item_adi_king_plus',
 		'item_blue_fantasy',
@@ -970,9 +947,8 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_sheepstick',
 		'item_arcane_blink',
-		'item_ultimate_scepter',
+		'item_ultimate_scepter_2',
 		'item_necronomicon_staff',
-		'item_recipe_ultimate_scepter_2',
 		'item_hallowed_scepter',
 		'item_angels_demise', -- 绝刃
 		'item_octarine_core',
@@ -990,13 +966,11 @@ tBotItemData.purchaseItemList = {
 		'item_vanguard', -- 先锋盾
 		'item_falcon_blade', -- 猎鹰战刃
 		'item_blink',
-		'item_reaver',
-		'item_recipe_overwhelming_blink',
+		'item_overwhelming_blink',
 		'item_wings_of_haste',
 		'item_echo_sabre',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_black_king_bar_2',
 		'item_vladmir_2',
 		'item_moon_shard_datadriven',
@@ -1058,8 +1032,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_orb_of_the_brine',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_sheepstick',
 		'item_arcane_octarine_core',
 		'item_dagon_5',
@@ -1100,8 +1073,7 @@ tBotItemData.purchaseItemList = {
 		'item_wings_of_haste',
 		'item_aghanims_shard',
 		'item_aether_lens_2',
-		'item_ultimate_scepter',
-		'item_recipe_ultimate_scepter_2',
+		'item_ultimate_scepter_2',
 		'item_orb_of_the_brine',
 		'item_sheepstick',
 		'item_octarine_core',
@@ -1121,12 +1093,11 @@ tBotItemData.purchaseItemList = {
 		'item_glimmer_cape',
 		'item_arcane_boots',
 		'item_aghanims_shard',
-		'item_ultimate_scepter',
 		'item_aether_lens_2',
 		'item_wings_of_haste',
+		'item_ultimate_scepter_2',
 		'item_octarine_core',
 		'item_recipe_arcane_octarine_core',
-		'item_recipe_ultimate_scepter_2',
 		'item_angels_demise',
 		'item_refresher',
 		'item_hallowed_scepter',
@@ -1386,7 +1357,34 @@ tBotItemData.sellItemList = {
 }
 
 tBotItemData.sellItemCommonList = {
-	-- Consume
+
+	-- 基础配件
+	'item_orb_of_venom',         -- 淬毒之珠
+	'item_slippers',             -- 敏捷便靴
+	'item_mantle',               -- 智力斗篷
+	'item_gauntlets',            -- 力量手套
+	'item_circlet',              -- 圆环
+	'item_ring_of_protection',   -- 守护指环
+	'item_sobi_mask',            --贤者面罩
+	'item_branches',             -- 铁树枝干
+	'item_magic_stick',          -- 魔棒
+	'item_recipe_magic_wand',    -- 魔棒卷轴
+	'item_magic_wand',           -- 魔杖
+	'item_wind_lace',            -- 风灵之纹
+	'item_recipe_ring_of_basilius', -- 王者之戒卷轴
+	'item_ring_of_basilius',     -- 王者之戒
+	'item_quelling_blade',       -- 补刀斧
+	'item_blades_of_attack',     -- 攻击之爪
+	'item_chainmail',            -- 锁子甲
+	'item_ogre_axe',             -- 食人魔之斧
+	'item_blade_of_alacrity',    -- 欢欣之刃
+	'item_staff_of_wizardry',    -- 魔力法杖
+	'item_claymore',             -- 大剑
+	'item_mithril_hammer',       -- 秘银锤
+	'item_tiara_of_selemene',    -- 赛莉蒙妮之冠
+	'item_eagle',                -- 鹰歌弓
+
+	-- 消耗品
 	'item_tango_single',
 	'item_tango',
 	'item_blood_grenade', -- 血腥榴弹
@@ -1396,82 +1394,57 @@ tBotItemData.sellItemCommonList = {
 	'item_flask',
 	'item_bottle',
 
-	-- basic
-	'item_orb_of_venom', -- 淬毒之珠
-	'item_slippers',  -- 敏捷便靴
-	'item_mantle',    -- 智力斗篷
-	'item_gauntlets', -- 力量手套
-	'item_circlet',   -- 圆环
-	'item_branches',
-	'item_magic_stick',
-	'item_recipe_magic_wand',
-	'item_magic_wand',
-	'item_wind_lace', -- 风灵之纹
+	-- 初级道具
+	'item_quelling_blade_2_datadriven', -- 毒瘤之刃
+	'item_boots',                    -- 草鞋
+	'item_crown',                    -- 王冠
+	'item_bracer',                   -- 护腕
+	'item_null_talisman',            -- 挂件
+	'item_wraith_band',              -- 系带
+	'item_buckler',                  -- 玄冥盾牌
+	'item_orb_of_corrosion',         -- 腐蚀之球
+	'item_pavise',                   -- 长盾
 
-	-- 补刀斧
-	'item_quelling_blade',
-	-- 毒瘤之刃
-	'item_quelling_blade_2_datadriven',
-	'item_circlet',
-	'item_mantle',
-	'item_sobi_mask',
-	'item_ring_of_protection',
-	'item_recipe_ring_of_basilius',
-	'item_ring_of_basilius',
+	'item_phase_boots',              -- 相位
+	'item_power_treads',             -- 动力鞋
+	'item_arcane_boots',             -- 秘法
+	'item_tranquil_boots',           -- 绿鞋
+	'item_oblivion_staff',           -- 空明杖
+
+	-- 中级道具
+	'item_ancient_janggo', -- 韧鼓
+	'item_veil_of_discord', -- 纷争
+	'item_cyclone',      -- 吹风
+	'item_falcon_blade', -- 猎鹰战刃
+	'item_echo_sabre',   -- 回音刃
+	'item_force_staff',  -- 推推棒
+	'item_glimmer_cape', -- 微光
+	'item_echo_sabre_2', -- 音速战刃
+	'item_holy_locket',  -- 圣洁吊坠
+	'item_blink',        -- 跳刀
+	'item_solar_crest',  -- 炎阳纹章
 
 
-	'item_boots',         -- 草鞋
+	-- 高级道具
+	'item_ultimate_scepter', -- A杖
+	'item_desolator',     -- 黯灭
+	'item_black_king_bar', -- BKB
+	'item_pipe',          -- 笛子
+	'item_heart',         -- 龙心
+	'item_bfury',         -- 狂战斧
+	'item_sheepstick',    -- 羊刀
+	'item_hand_of_group', -- 团队之手
+	'item_phylactery',    -- 灵匣
+	'item_greater_crit',  -- 大炮
+	'item_sange_and_yasha', -- 散夜对剑
+	'item_heavens_halberd', -- 天堂之戟
 
-	'item_crown',         -- 王冠
-	'item_bracer',        -- 护腕
-	'item_null_talisman', -- 挂件
-	'item_wraith_band',   -- 系带
-	'item_orb_of_corrosion', -- 腐蚀之球
-
-	-- 相位
-	'item_phase_boots',
-	-- 动力鞋
-	'item_power_treads',
-	-- 秘法
-	'item_arcane_boots',
-	-- 绿鞋
-	'item_tranquil_boots',
-	-- 空明杖
-	'item_oblivion_staff',
-	-- 纷争
-	'item_veil_of_discord',
-	-- 吹风
-	'item_cyclone',
-
-	-- 推推棒
-	'item_force_staff',
-	-- 微光
-	'item_glimmer_cape',
-	-- 回音刃
-	'item_echo_sabre_2',
-
-	-- 圣洁吊坠
-	'item_holy_locket',
-	-- 跳刀
-	'item_blink',
-	-- 黯灭
-	'item_desolator',
-	-- BKB
-	'item_black_king_bar',
-	-- 笛子
-	'item_pipe',
-	-- 龙心
-	'item_heart',
-	-- 狂战斧
-	'item_bfury',
-	-- 羊刀
-	'item_sheepstick',
-	-- 团队之手
-	'item_hand_of_group',
-	-- 灵匣
-	'item_phylactery',
-	-- 大炮
-	'item_greater_crit',
+	-- 卷轴 主要是本地主机
+	'item_recipe_black_king_bar', -- BKB
+	'item_recipe_sheepstick',    -- 邪恶镰刀
+	'item_recipe_mekansm',       -- 梅肯斯姆
+	'item_recipe_abyssal_blade', -- 深渊卷轴
+	'item_recipe_guardian_greaves', -- 卫士胫甲卷轴
 }
 
 -- Consume items
@@ -1703,7 +1676,7 @@ tBotItemData.addNeutralItemList = {
 		'item_apex_dark_1',
 	},
 	npc_dota_hero_drow_ranger = {
-		'item_ballista_dark_1',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_earthshaker = {
 		'item_timeless_relic_ai_1',
@@ -1727,10 +1700,10 @@ tBotItemData.addNeutralItemList = {
 		'item_timeless_relic_ai_1',
 	},
 	npc_dota_hero_luna = {
-		'item_ballista_dark_1',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_medusa = {
-		'item_ballista_dark_1',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_meepo = {
 		'item_apex_ai_1',
@@ -1772,7 +1745,7 @@ tBotItemData.addNeutralItemList = {
 		'item_seer_stone_ai_1',
 	},
 	npc_dota_hero_sniper = {
-		'item_ballista_dark_1',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_sven = {
 		'item_pirate_hat_custom',
@@ -1790,7 +1763,7 @@ tBotItemData.addNeutralItemList = {
 		'item_desolator_2',
 	},
 	npc_dota_hero_viper = {
-		'item_ballista_dark_1',
+		'item_ballista_ai_1',
 	},
 	npc_dota_hero_warlock = {
 		'item_demonicon',
