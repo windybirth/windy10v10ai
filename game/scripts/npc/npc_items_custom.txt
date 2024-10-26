@@ -5046,6 +5046,53 @@
 		}
 	}
 
+	// ai独立解放剑
+	"item_rapier_ultra_bot_1"
+	{
+		"BaseClass"						"item_datadriven"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"							"19596"
+		"AbilityTextureName"			"item_rapier_ultra"
+		"ItemCost"						"8282"
+
+		"ItemPurchasable"				"0"
+		"ItemDroppable"					"1"
+		"ItemKillable"					"0"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"				"1"
+
+		"AbilityValues"
+		{
+			"bonus_damage"			"1000"
+			"bonus_spell_amp"		"100"
+			"bonus_damage_percent"	"100"
+
+			"ruin_chance_tooltip"	"0"
+		}
+		"Modifiers"
+		{
+			"modifier_item_rapier_ultra_stats"
+			{
+				"Passive"				"1"
+				"IsHidden"				"1"
+				"RemoveOnDeath"			"0"
+
+				"Attributes"		"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"		"%bonus_damage"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%bonus_spell_amp"
+					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"		"%bonus_damage_percent"
+				}
+
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS" "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+	}
+
 	//=================================================================================================================
     // 神器救世狂战 bfury ultra
     //=================================================================================================================

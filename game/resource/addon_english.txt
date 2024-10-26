@@ -1585,6 +1585,14 @@
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_bonus_spell_amp"           "%+$spell_amp"
 		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_Note0"					"You're silly, my cursed rapier is permanent."
 
+		// item_rapier_ultra_bot_1 解放的诅咒圣剑
+		"DOTA_Tooltip_ability_item_rapier_ultra_bot_1"                        "<font color='#e03e2e'>Liberated Rapier</font>"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_1_Description"            "<h1>Passive: <font color='#a74abd'>Eternal</font></h1>Protected by Mars. Grants <font color='#f15b47'>%bonus_damage_percent%%%</font> bonus base attack damage. Cannot be sold or destroyed.\n<h1>Passive: True Strike</h1>Attacks will not miss due to evasion or other effects.\n<h1>Passive: <font color='#e03e2e'>Price of Power (Liberated)</font></h1>Great power always comes with a price. <br><font color='#e03e2e'>But there is no price after liberation.</font>"
+		"DOTA_Tooltip_ability_item_rapier_ultra_bot_1_Lore"					"The liberated cursed rapier can never be destroyed."
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_1_bonus_damage"			"+$damage"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_1_bonus_spell_amp"           "%+$spell_amp"
+		"DOTA_Tooltip_Ability_item_rapier_ultra_bot_1_Note0"					"You're silly, my cursed rapier is permanent."
+
 		// item_bfury_ultra 救世狂战
 		"DOTA_Tooltip_ability_item_bfury_ultra"                         "<font color='#e03e2e'>Worldbreaker</font>"
 		"DOTA_Tooltip_Ability_item_bfury_ultra_Description"             "<h1>Passive: Quell</h1>Increases attack damage against non-hero units by %quelling_bonus% for melee heroes, and %quelling_bonus_ranged% for ranged.\n<h1>Passive: Worldsplitter</h1>Deals %cleave_damage_percent%%% of attack damage as physical damage in a cone up to %cleave_distance% range. Deals %cleave_damage_percent_creep%%% physical damage against non-hero units. (Melee Only)"
