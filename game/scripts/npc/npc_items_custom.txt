@@ -5388,39 +5388,6 @@
 	}
 
 	//=================================================================================================================
-	// 神器散夜
-	//=================================================================================================================
-	"item_recipe_sange_and_yasha_1"
-	{
-		"BaseClass"						"item_recipe_sange_and_yasha"
-		"ItemRecipe"					"1"
-		"ItemResult"					"item_sange_and_yasha_1"
-		"ItemRequirements"
-		{
-			"01"						"item_sange_and_yasha;item_sange_and_yasha;item_ultimate_orb"
-		}
-	}
-
-	"item_sange_and_yasha_1"
-	{
-		"BaseClass"						"item_sange_and_yasha"
-		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
-		"SuggestLategame"				"1"
-		"AbilityValues"
-		{
-				"bonus_strength"		"50"
-				"bonus_agility"			"50"
-				"status_resistance"				"62.5" // 特色 x2.5
-				"bonus_attack_speed"	"60" // 不值钱 x3
-				"movement_speed_percent_bonus"	"30" // 特色 x2.5
-				"hp_regen_amp"			"50" // x2
-				"slow_resistance"		"50" // x2
-		}
-	}
-
-	//=================================================================================================================
 	// 神器散慧
 	//=================================================================================================================
 	"item_recipe_kaya_and_sange_1"
@@ -5445,12 +5412,45 @@
 		{
 				"bonus_strength"		"50"
 				"bonus_intellect"			"50"
-				"slow_resistance"			"75" // 特色 x3
-				"mana_regen_multiplier"		"200" // 大特色 x4
-				"spell_amp"			"30" // x2.5
-				"hp_regen_amp"			"75" // 特色 x3
-				"spell_lifesteal_amp"	"75" // 特色 x3
-				"manacost_reduction"	"75" // 特色 x3
+				"slow_resistance"			"60"
+				"mana_regen_multiplier"		"150"
+				"spell_amp"				"30" // 12
+				"hp_regen_amp"			"60" // 25
+				"spell_lifesteal_amp"	"60" // 25
+				"manacost_reduction"	"60" // 25
+		}
+	}
+
+	//=================================================================================================================
+	// 神器散夜
+	//=================================================================================================================
+	"item_recipe_sange_and_yasha_1"
+	{
+		"BaseClass"						"item_recipe_sange_and_yasha"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_sange_and_yasha_1"
+		"ItemRequirements"
+		{
+			"01"						"item_sange_and_yasha;item_sange_and_yasha;item_ultimate_orb"
+		}
+	}
+
+	"item_sange_and_yasha_1"
+	{
+		"BaseClass"						"item_sange_and_yasha"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ItemDisassembleRule"			"DOTA_ITEM_DISASSEMBLE_ALWAYS"
+		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"SuggestLategame"				"1"
+		"AbilityValues"
+		{
+				"bonus_strength"		"50"
+				"bonus_agility"			"50"
+				"status_resistance"		"60" // 25
+				"bonus_attack_speed"	"60" // 20
+				"movement_speed_percent_bonus"	"30" // 12
+				"hp_regen_amp"			"60" // 25
+				"slow_resistance"		"60" // 25
 		}
 	}
 
@@ -5478,14 +5478,13 @@
 		"AbilityValues"
 		{
 				"bonus_agility"			"50"
-				"bonus_intellect"			"50"
-				"bonus_attack_speed"	"60" // 不值钱 x3
-				"mana_regen_multiplier"		"100" // x2
-				"movement_speed_percent_bonus"	"24" // x2
-				"spell_amp"			"24" // x2
-				"spell_lifesteal_amp"	"100" // 特色 x4
-				"cast_speed_pct"		"100" // 特色 x4
-
+				"bonus_intellect"		"50"
+				"bonus_attack_speed"	"60" // 20
+				"mana_regen_multiplier"	"100" // 50
+				"movement_speed_percent_bonus"	"30" // 12
+				"spell_amp"				"30" // 12
+				"spell_lifesteal_amp"	"60" // 25
+				"cast_speed_pct"		"60" // 25
 		}
 	}
 }

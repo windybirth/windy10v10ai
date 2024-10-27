@@ -609,11 +609,11 @@
 		"Ability2"		"brewmaster_drunken_brawler"
 		"Ability8"		"brewmaster_primal_split_lua"
 		"Ability14"		"special_bonus_unique_terrorblade_metamorphosis_cooldown"
-		"Ability16"		"special_bonus_all_stats_10"
 		"Ability12"		"special_bonus_unique_terrorblade"
-		"AttributeStrengthGain"		"4.0" // 2
-		"AttributeIntelligenceGain"	"3.20000" // 1.6
-		"AttributeAgilityGain"		"10.000000" // 4
+		"Ability16"		"special_bonus_all_stats_20"
+		"AttributeStrengthGain"		"3.0" // 2
+		"AttributeIntelligenceGain"	"2.40000" // 1.6
+		"AttributeAgilityGain"		"7.000000" // 4
 	}
 	"npc_dota_hero_axe"
 	{
