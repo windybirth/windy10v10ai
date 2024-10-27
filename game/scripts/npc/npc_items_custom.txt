@@ -6003,12 +6003,12 @@
 		{
 				"bonus_strength"		"50"
 				"bonus_intellect"			"50"
-				"slow_resistance"			"60"
-				"mana_regen_multiplier"		"150"
+				"slow_resistance"			"80"
+				"mana_regen_multiplier"		"300"
 				"spell_amp"				"30" // 12
-				"hp_regen_amp"			"60" // 25
-				"spell_lifesteal_amp"	"60" // 25
-				"manacost_reduction"	"60" // 25
+				"hp_regen_amp"			"100" // 25
+				"spell_lifesteal_amp"	"100" // 25
+				"manacost_reduction"	"80" // 25
 		}
 	}
 
@@ -6073,9 +6073,9 @@
 				"bonus_attack_speed"	"60" // 20
 				"mana_regen_multiplier"	"100" // 50
 				"movement_speed_percent_bonus"	"30" // 12
-				"spell_amp"				"30" // 12
+				"spell_amp"				"50" // 12
 				"spell_lifesteal_amp"	"60" // 25
-				"cast_speed_pct"		"60" // 25
+				"cast_speed_pct"		"100" // 25
 		}
 	}
 }
