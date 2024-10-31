@@ -29,10 +29,10 @@ function artoria_ultimate_excalibur:OnSpellStart()
 	end
 
 	local chargeFxIndex = ParticleManager:CreateParticle(
-	"particles/custom/artoria/artoria_ultimate_excalibur_charge.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+		"particles/custom/artoria/artoria_ultimate_excalibur_charge.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
 
 	local range = self:GetSpecialValueFor("range") -
-	self:GetSpecialValueFor("width")                                               -- We need this to take end radius of projectile into account
+		self:GetSpecialValueFor("width") -- We need this to take end radius of projectile into account
 
 	local excal =
 	{
@@ -53,10 +53,6 @@ function artoria_ultimate_excalibur:OnSpellStart()
 		bDeleteOnHit = false,
 		vVelocity = caster:GetForwardVector() * self:GetSpecialValueFor("speed")
 	}
-
-	-- Charge particles
-	local excalibur_Charge = ParticleManager:CreateParticle("particles/custom/saber/max_excalibur/charge.vpcf",
-		PATTACH_ABSORIGIN_FOLLOW, caster)
 
 	Timers:CreateTimer(2.50, function()
 		if not caster:IsAlive() then
