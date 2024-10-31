@@ -1236,7 +1236,7 @@
 		{
 			"particle"				"particles/units/heroes/hero_skywrath_mage/skywrath_mage_concussive_shot_cast.vpcf"
 			"particle"				"particles/units/heroes/hero_wisp/wisp_overcharge.vpcf"
-			"parictle"				"particles/custom/saber_excalibur_max_rock_emitter.vpcf"
+			"particle"				"particles/custom/saber_excalibur_max_rock_emitter.vpcf"
 			"particle"				"particles/custom/screen_yellow_splash.vpcf"
 			"particle"				"particles/custom/saber/max_excalibur/charge.vpcf"
 			"particle"				"particles/custom/saber/max_excalibur/shockwave_2_versiona.vpcf"
