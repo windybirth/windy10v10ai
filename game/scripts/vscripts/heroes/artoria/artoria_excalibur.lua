@@ -108,7 +108,7 @@ function artoria_excalibur:FireSingleMaxParticle()
 	end
 	)
 
-	local excalFxIndex = ParticleManager:CreateParticle("particles/custom/saber/max_excalibur/shockwave.vpcf",
+	local excalFxIndex = ParticleManager:CreateParticle("particles/custom/saber/excalibur/shockwave.vpcf",
 		PATTACH_CUSTOMORIGIN_FOLLOW, dummy)
 
 	Timers:CreateTimer(1.20, function()
