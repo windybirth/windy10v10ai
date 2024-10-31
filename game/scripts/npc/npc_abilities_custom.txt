@@ -1147,7 +1147,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_3_END"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES" //胜率太低，暂时改成无视魔免
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityTextureName"			"custom/artoria/artoria_excalibur"
 
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -1197,11 +1197,6 @@
 				"value"				"-60"
 				"RequiresScepter"	"1"
 			}
-			"damage_scepter"
-			{
-				"value"					"800 1000 1200"
-				"RequiresScepter"		"1"
-			}
 		}
 	}
 	"artoria_ultimate_excalibur"
@@ -1217,7 +1212,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
 		"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_3_END"
-		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES" // 胜率太低，暂时改成无视魔免
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityTextureName"			"custom/artoria/artoria_ultimate_excalibur"
 
 		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
@@ -1225,11 +1220,11 @@
 		"HasScepterUpgrade"				"1"
 
 		// Ability Stats		//------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"6000"
+		"AbilityCastRange"				"4000"
 		"AbilityCastPoint"				"0.6"
 		"AbilityChannelTime"			"3.0"
 		"AbilityCooldown"				"75.0"
-		"AbilityManaCost"				"1200"
+		"AbilityManaCost"				"900"
 
 		// Precache		//------------------------------------------------------------------------------------------------------------
 		"precache"
@@ -1264,11 +1259,6 @@
 			"slow_amount"
 			{
 				"value"				"-60"
-				"RequiresScepter"	"1"
-			}
-			"damage_scepter"
-			{
-				"value"				"1800"
 				"RequiresScepter"	"1"
 			}
 		}

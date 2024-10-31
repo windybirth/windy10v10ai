@@ -9,6 +9,14 @@ LinkLuaModifier("modifier_artoria_ultimate_excalibur", "heroes/artoria/modifiers
 LinkLuaModifier("modifier_artoria_excalibur_debuff", "heroes/artoria/modifiers/modifier_artoria_excalibur_debuff",
 	LUA_MODIFIER_MOTION_NONE)
 
+function artoria_ultimate_excalibur:GetAbilityDamageType()
+	if self:GetCaster():HasScepter() then
+		return DAMAGE_TYPE_PURE
+	else
+		return DAMAGE_TYPE_MAGICAL
+	end
+end
+
 function artoria_ultimate_excalibur:GetCooldown()
 	return self:GetSpecialValueFor("AbilityCooldown")
 end
@@ -134,8 +142,7 @@ function artoria_ultimate_excalibur:OnProjectileHit_ExtraData(hTarget, vLocation
 	local target = hTarget
 	local damage = self:GetSpecialValueFor("damage") * self.interval
 
-	if caster:HasModifier("modifier_item_ultimate_scepter") then
-		damage = self:GetSpecialValueFor("damage_scepter") * self.interval
+	if caster:HasScepter() then
 		target:AddNewModifier(caster, self, "modifier_artoria_excalibur_debuff", { duration = self.interval })
 	end
 
@@ -143,7 +150,7 @@ function artoria_ultimate_excalibur:OnProjectileHit_ExtraData(hTarget, vLocation
 		attacker = caster,
 		victim = target,
 		damage = damage,
-		damage_type = DAMAGE_TYPE_MAGICAL,
+		damage_type = self:GetAbilityDamageType(),
 		damage_flags = 0,
 		ability = self
 	}
