@@ -595,7 +595,7 @@
 		"DOTA_Tooltip_ability_artoria_strike_air_shard_description"		"Strike Air inflicts a basic attack to the enemy rather than flat magical damage, and now also pierces Debuff Immunity."
 
 		"DOTA_Tooltip_Ability_artoria_instinct"					"<font color='#FFE56E'>Instinct</font>"
-		"DOTA_Tooltip_ability_artoria_instinct_Description"		"Saber's gifted instinct grants her the ability to <font color='#00e600'>block and reflect<font> most spells targeted against her periodically with a cooldown. She also passively gains extra <font color='#FF3399'>magic resistance</font> and <font color='#C24401'>status resistance</font>."
+		"DOTA_Tooltip_ability_artoria_instinct_Description"		"Saber's gifted instinct grants her the ability to <font color='#00e600'>block and reflect</font> most spells targeted against her periodically with a cooldown. She also passively gains extra <font color='#FF3399'>magic resistance</font> and <font color='#C24401'>status resistance</font>."
 		"DOTA_Tooltip_ability_artoria_instinct_magic_res"		"%MAGIC RESISTANCE:"
 		"DOTA_Tooltip_ability_artoria_instinct_status_res"		"%STATUS RESISTANCE:"
 
@@ -637,7 +637,7 @@
         "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}s Strike Air Cooldown"
         "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"				"Mana Burst also Dispels Saber"
         "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"					"-{s:bonus_AbilityCooldown}s Excalibur Cooldown"
-	DOTA_Tooltip_ability_special_bonus_unique_excalibur_1_Description"			"Also applies to Hidden Treasure: Excalibur - The Sword of Promised Victory"
+	"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1_Description"			"Also applies to Hidden Treasure: Excalibur - The Sword of Promised Victory"
 
 		//沉渊之剑
 		"npc_dota_hero_visage" 									"Abyss Sword"
@@ -730,10 +730,10 @@
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_2" 					"+{s:bonus_duration} Second High Speed Mobile Duration"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_3" 					"+{s:bonus_stun_duration}s Jiewang Boxing Stun"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4" 					"Kame Hame Ha!!! Dispels Enemies"
-		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4_description" 		"Kame Hame Ha will continuously dispel enemies it hits. Dispel Type:<span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_4_description" 		"Kame Hame Ha!!! will continuously dispel enemies it hits. Dispel Type:<span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_5" 					"+{s:bonus_length} Kame Hame Ha!!! Length"
 		"DOTA_Tooltip_Ability_special_bonus_unique_goku_6" 					"+{s:bonus_channel} Kame Hame Ha!!! Duration"
-		"DOTA_Tooltip_Ability_special_bonus_unique_goku_7" 					"+{s:bonus_duration} Super Saiyan Duration"
+		"DOTA_Tooltip_Ability_special_bonus_unique_goku_7" 					"+{s:bonus_duration} Super Saiyan Active Duration"
 
 		//Abyss sword
 		"DOTA_Tooltip_modifier_abyss_sword_hidden_sharp" 	 "Hidden Sharp"
@@ -754,7 +754,7 @@
 		"DOTA_Tooltip_modifier_goku_kaioken_Description" 	 "Receiving %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT% attack speed. Attacks have a chance to stun the target and summon an illusion of yourself to attack the target again."
 		"DOTA_Tooltip_modifier_goku_super_saiyan_passive" 	 "Super Saiyan: Potential"
 		"DOTA_Tooltip_modifier_goku_super_saiyan_passive_Description" 	 "Gaining %dMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% all stats."
-		"DOTA_Tooltip_modifier_goku_super_saiyan" 	 "Super Saiyan: Activate"
+		"DOTA_Tooltip_modifier_goku_super_saiyan" 	 "Super Saiyan: Active"
 		"DOTA_Tooltip_modifier_goku_super_saiyan_Description" 	 "Grants %dMODIFIER_PROPERTY_STATUS_RESISTANCE%%% Status Resistance, and regenerating %dMODIFIER_PROPERTY_MANA_REGEN_TOTAL_PERCENTAGE%%% max mana and %dMODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE%%% max health. All of your basic abilities are far stronger."
 
 		// Yukari
