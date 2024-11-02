@@ -780,7 +780,6 @@
         "DOTA_Tooltip_ability_yukari_mass_tp_scepter_Description" "Adds a new ability: Moon Portal, which instantly puts all enemies around Yukari into a portal, damaging them."
         "DOTA_Tooltip_ability_yukari_moon_portal" "Evil Spirits Yukari Yakumo's Spiriting Away"
         "DOTA_Tooltip_ability_yukari_moon_portal_Description" "Imprisons a unit in the gap, banishing them, rending them invulnerable, untargetable, and unable to act. When the unit is banished, the spell may be used again to select the location upon where they will emerge from when the imprisonment ends. If no location was chosen, the target will appear where it originally was banished from. When the spell is cast on Yukari herself, she can cast her other spells while banished and choose the landing location anywhere on map. Otherwise, the landing location is limited by the cast range of the spell and Yukari will be leashed while the unit is banished, preventing her from using other blinks or teleports."
-	// "DOTA_Tooltip_ability_yukari_moon_portal_cast_range"	"CAST RANGE:"
         "DOTA_Tooltip_ability_yukari_moon_portal_damage" "DAMAGE:"
         "DOTA_Tooltip_ability_yukari_moon_portal_lift_duration" "BANISH DURATION:"
         "DOTA_Tooltip_ability_yukari_tentacles" "Tentacle Portal"
@@ -789,8 +788,6 @@
         "DOTA_Tooltip_ability_yukari_tentacles_intelligence_per_second"	"BONUS DAMAGE PER INT:"
         "DOTA_Tooltip_ability_yukari_tentacles_duration" "DURATION:"
         "DOTA_Tooltip_ability_yukari_tentacles_root"	"%MOVEMENT SPEED SLOW:"
-        // "DOTA_Tooltip_ability_yukari_tentacles_tick_rate"	"DAMAGE FREQUENCY:"
-        // "DOTA_Tooltip_ability_yukari_tentacles_AbilityCastRange"	"RANGE:"
 
         "DOTA_Tooltip_ability_yukari_morph"							"Moon Phase"
         "DOTA_Tooltip_ability_yukari_morph_Description" 			"Uses her hidden potential to unleash true power."
@@ -808,14 +805,12 @@
         "DOTA_Tooltip_ability_yukari_twin_trains_Description" "Generates one portal, and releases it again within 4 seconds to generate a second portal. Each entrance spawns a train which speeds towards the other. The trains deals massive damage and stun enemies in their path. When the trains collide, they will create a massive explosion that deals additional damage and stuns enemies caught in their wake."
         "DOTA_Tooltip_ability_yukari_twin_trains_AbilityDamage" "DAMAGE:"
         "DOTA_Tooltip_ability_yukari_twin_trains_Lore" "What can be better that one train? TWO trains!"
-        "DOTA_Tooltip_ability_yukari_twin_trains_AbilityCastRange"	"RANGE:"
         "DOTA_Tooltip_ability_ability_yukari_01"	"Aerial Bait Hyperactive High Speed Flying Object"
         "DOTA_Tooltip_ability_ability_yukari_01_Description"	"Fires an array of damaging projectiles in a spread towards the designated direction. Enemies hit take damage, as well as extra damage based on Yukari's intelligence, and are stunned. The same enemy can be hit multiple times, however subsequent hits deal significantly reduced damage to the same target."
         "DOTA_Tooltip_ability_ability_yukari_01_damage"	"DAMAGE:"
 		"DOTA_Tooltip_ability_ability_yukari_01_stun_duration"	"STUN DURATION:"
         "DOTA_Tooltip_ability_ability_yukari_01_damage_add"	"BONUS DAMAGE PER INT:"
         "DOTA_Tooltip_ability_ability_yukari_01_factor"		"REPEAT HIT FACTOR:"
-        "DOTA_Tooltip_ability_ability_yukari_01_range"	"RANGE:"
         "DOTA_Tooltip_ability_ability_yukari_01_speed"  "SPEED:"
         "DOTA_Tooltip_ability_ability_thdots_yukari04"	"Deep Danmaku Barrier -Transient Dreams-"
         "DOTA_Tooltip_ability_ability_thdots_yukari04_Description"	"A large teleportation enchantment is channeled at any targeted location across the map. Yukari will be teleported to the target location after channeling. The longer the channeling time, the greater the damage upon arrival. The maximum channel time is 4 seconds, and the radius of the enchantment is 750. No matter how long the channel is and even if interrupted, as soon as the channel ends, Yukari will be teleported to the target location. \nWhile channeling, several magical barrages are scattered at the target location, damaging surrounding enemy units. The teleportation generates spatial shock, inflicting up to %int_bonus% * Yukari's intelligence as magical damage to all enemy units within %wanbaochui_radius% radius and stunning them for %stun_duration% seconds."
@@ -838,10 +833,7 @@
         "DOTA_Tooltip_ability_special_bonus_unique_razor_402"   "+{s:bonus_damage} Eye of the Storm Damage"
 
         // 火女 lina
-        // "DOTA_Tooltip_ability_lina_fiery_soul_Description"		Grants bonus attack and movement speed each time Lina hits an enemy with a spell. Stacks with itself. Lasts %fiery_soul_stack_duration% seconds."
-        // "DOTA_Tooltip_ability_lina_fiery_soul_shard_description"	"Fiery Soul now grants %shard_bonus_spell_damage% per stack."
-        // "DOTA_Tooltip_ability_lina_fiery_soul_bonus_spell_damage"			"SPELL DAMAGE INCREASE:"
-	"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
 
         // 幽鬼 spe
         "DOTA_Tooltip_ability_spectre_desolate_Description"		"Deals bonus pure damage whenever Spectre attacks an enemy."
