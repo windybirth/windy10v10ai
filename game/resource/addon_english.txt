@@ -1767,15 +1767,17 @@
 
 		// 神器2.0
 		// item_light_part 圣光组件
-		"DOTA_Tooltip_Ability_item_light_part"				"<font color='#FFFF00'>Light</font> Part"
-		"DOTA_Tooltip_ability_item_light_part_Description"		"Can be used to transform items into light-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items.\nLight Parts have a chance to be dropped by neutral creeps during the day. Ancient creeps are more likely to drop them. Drop chance from all neutral creeps increases every 10 minutes in-game. Roshan will always drop multiple Light Parts if yout team kills him during the day."
-		// "DOTA_Tooltip_Ability_item_light_part_Lore"				"Drops randomly when killing Roshan and neutral creeps."
+		"DOTA_Tooltip_Ability_item_light_part"					"<font color='#FFFF00'>Light</font> Part"
+		"DOTA_Tooltip_ability_item_light_part_Description"		"Can be used to transform items into light-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_Ability_item_light_part_Note0"			"Ancient creeps are more likely to drop them. Drop chance from all neutral creeps in the game increases over time. Roshan will drop more Parts when you have more teammate."
+		"DOTA_Tooltip_Ability_item_light_part_Lore"				"Drops randomly when killing Roshan and neutral creeps during the day."
 		"DOTA_Tooltip_Ability_item_light_part_bonus_damage"		"+$damage"
 
 		// item_dark_part 暗影组件
-		"DOTA_Tooltip_Ability_item_dark_part"				"<font color='#8A2BE2'>Dark</font> Part"
-		"DOTA_Tooltip_ability_item_dark_part_Description"		"Can be used to transform items into dark-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items.\nDark Parts have a chance to be dropped by neutral creeps during the night. Ancient creeps are more likely to drop them. Drop chance from all creeps increases every 10 minutes in-game. Roshan will always drop multiple Dark Parts if your team kills him during the day."
-		"DOTA_Tooltip_Ability_item_dark_part_Lore"				"Drops randomly when killing Roshan and neutral creeps."
+		"DOTA_Tooltip_Ability_item_dark_part"					"<font color='#8A2BE2'>Dark</font> Part"
+		"DOTA_Tooltip_ability_item_dark_part_Description"		"Can be used to transform items into dark-themed upgrades.\nUpgraded items must be used in the main inventory, even if they were once neutral items."
+		"DOTA_Tooltip_ability_item_dark_part_Note0"				"Ancient creeps are more likely to drop them. Drop chance from all neutral creeps in the game increases over time. Roshan will drop more Parts when you have more teammate."
+		"DOTA_Tooltip_Ability_item_dark_part_Lore"				"Drops randomly when killing Roshan and neutral creeps during the night."
 		"DOTA_Tooltip_Ability_item_dark_part_bonus_spell_amp"	"%+$spell_amp"
 
 		// item_exchange 光暗装备转换器
