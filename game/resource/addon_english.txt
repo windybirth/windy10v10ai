@@ -599,7 +599,7 @@
 		"DOTA_Tooltip_ability_artoria_instinct_status_res"		"%STATUS RESISTANCE:"
 
 		"DOTA_Tooltip_Ability_artoria_mana_burst"					"<font color='#FFE56E'>Mana Burst</font>"
-		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"Saber strikes nearby enemies with a single powerful blow, dealing <font color='#05CAFF'>magical damage</font> and <font color='#FF3399'>slowing</font> them, while <font color='#dbaeea'>dispeling</font> all buffs on any enemies in range.\nPassively increase Saber's spell amplification.\nDispel Type:<span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
+		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"Saber strikes nearby enemies with a single powerful blow, dealing <font color='#05CAFF'>magical damage</font> and <font color='#FF3399'>slowing</font> them.\nPassively increase Saber's spell amplification.\nDispel Type:<span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
 		"DOTA_Tooltip_ability_artoria_mana_burst_Lore"		""
 		"DOTA_Tooltip_ability_artoria_mana_burst_amp_pct"		"%SPELL DAMAGE AMP:"
 		"DOTA_Tooltip_ability_artoria_mana_burst_damage"		"DAMAGE:"
@@ -628,11 +628,11 @@
 		"DOTA_Tooltip_ability_artoria_excalibur_scepter_description"			"Excalibur deals <font color='#FFE56E'>pure damage</font>, and add a slowing effect."
 		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_scepter_description"			"Excalibur - The Sword of Promised Victory deals <font color='#FFE56E'>pure damage</font>, and adds a slowing effect."
 
-        "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} Strike Air Damage"
-        "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}s Strike Air Cooldown"
-        "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"				"Mana Burst also Dispels Saber"
-        "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"					"-{s:bonus_AbilityCooldown}s Excalibur Cooldown"
-	"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1_Description"			"Also applies to Hidden Treasure: Excalibur - The Sword of Promised Victory"
+		"DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} Strike Air Damage"
+		"DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}s Strike Air Cooldown"
+		"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"					"Mana Burst also Dispels Saber"
+		"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"						"-{s:bonus_AbilityCooldown}s Excalibur Cooldown"
+		"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1_Description"			"Also applies to Hidden Treasure: Excalibur - The Sword of Promised Victory"
 
 		//沉渊之剑
 		"npc_dota_hero_visage" 									"Abyss Sword"

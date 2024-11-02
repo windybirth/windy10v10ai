@@ -805,7 +805,7 @@
 		"DOTA_Tooltip_ability_artoria_instinct_status_res"		"%状态抗性： "
 
 		"DOTA_Tooltip_Ability_artoria_mana_burst"					"<font color='#FFE56E'>魔力放出</font>"
-		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"用一次强力攻击打击附近的敌人，造成<font color='#05CAFF'>魔法伤害</font>并<font color='#FF3399'>减速</font>敌人，驱散敌人身上所有BUFF。\n被动提升自身魔法伤害。"
+		"DOTA_Tooltip_ability_artoria_mana_burst_description"		"用一次强力攻击打击附近的敌人，造成<font color='#05CAFF'>魔法伤害</font>并<font color='#FF3399'>减速</font>敌人。\n被动提升自身魔法伤害。"
 		"DOTA_Tooltip_ability_artoria_mana_burst_Lore"		""
 		"DOTA_Tooltip_ability_artoria_mana_burst_amp_pct"		"%技能增强:"
 		"DOTA_Tooltip_ability_artoria_mana_burst_damage"		"伤害："
@@ -834,11 +834,11 @@
 		"DOTA_Tooltip_ability_artoria_excalibur_scepter_description"			"誓约胜利之剑并变为<font color='#FFE56E'>纯粹伤害</font>，并附带减速效果。"
 		"DOTA_Tooltip_ability_artoria_ultimate_excalibur_scepter_description"			"誓约胜利之剑-宣誓胜利并变为<font color='#FFE56E'>纯粹伤害</font>，并附带减速效果。"
 
-        "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} 风王铁锤伤害"
-        "DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}秒 风王铁锤冷却"
-        "DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"					"魔力放出驱散自身负面效果"
-		"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1_description"		"魔力放出会对阿尔托莉雅自身进行一次基础驱散，移除各种负面效果。"
-        "DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"						"-{s:bonus_AbilityCooldown}秒 誓约胜利之剑冷却"
+		"DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_1"			"+{s:bonus_damage} 风王铁锤伤害"
+		"DOTA_Tooltip_ability_special_bonus_unique_artoria_strike_air_2"			"-{s:bonus_AbilityCooldown}秒 风王铁锤冷却"
+		"DOTA_Tooltip_ability_special_bonus_artoria_mana_burst_1"					"魔力放出驱散自身负面效果"
+		"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1"						"-{s:bonus_AbilityCooldown}秒 誓约胜利之剑冷却"
+		"DOTA_Tooltip_ability_special_bonus_unique_excalibur_1_Description"			"也适用于 隐藏宝具：誓约胜利之剑-宣誓胜利"
 
 		//沉渊之剑
 		"npc_dota_hero_visage"									"沉渊之剑"
