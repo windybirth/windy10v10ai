@@ -1,6 +1,6 @@
 "lang"
 {
-	"Language"		"English"
+	"Language"		"english"
 	"Tokens"
 	{
 		"addon_game_name"		"Dota 10v10 AI Custom by Windy"
@@ -37,7 +37,6 @@
 		"starting_gold_player"	"Player Starting Gold"
 		"starting_gold_bot"	"Bot Starting Gold"
 		"same_hero_selection"  "Allow Same Hero Selection"
-		// "fast_courier"  "Fast and Invulnerable Courier"
 		"radiant_bot_same_multi"  "Radiant Bots Share Gold/XP Mult with Players"
 		"hide_chat_team"  "Hide Chat and Team"
 		"show_chat_team"  "Show Chat and Team"
@@ -117,10 +116,6 @@
 		"data_panel_member_level_tooltip"		"Members get 100 membership points for playing every day.<br>Member Points are gained separetely from Battle Points, but are functionally identical, and grant the same Attribute Points for use in the <font color='#E8C07D'>Player Attributes</font> panel.<br>Points required for subsequent levels increase by <font color='#E8C07D'>50</font> points."
 		"data_panel_level_progress"		"Level Progress"
 
-		// "data_panel_link_charge"		"Charge Member Point"
-		// "data_panel_link_rule"			"Point Rule"
-		// "data_panel_member_point_rule_url"		"https://afdian.com/p/8d1e8ac8682711ed984b52540025c377"
-
 		"reset_property_use_season_point"		"Reset Attribute Points for {seasonPoint} Battle Points"
 		"reset_property_use_member_point"		"Reset Attribute Points for 1000 Member Points"
 
@@ -180,7 +175,6 @@
 		"player_member_button_expire"		"Thank you for your membership!<br/>Your membership has expired as of {expireDate}. Click this button to renew."
 		"player_member_ship"			"Click to enable your membership."
 		"player_member_ship_url"		"https://afdian.com/order/create?plan_id=6e27c8103bd011ed887852540025c377&product_type=0&remark="
-
 
 		///////////////////////////////////////////////////
 		//
@@ -284,11 +278,153 @@
 
 		///////////////////////////////////////////////////
 		//
-		//            会员BUFF
+		//            会员BUFF MemberShip
 		//
 		///////////////////////////////////////////////////
 		"DOTA_Tooltip_modifier_global_member"					"<font color='#FFCC66'>★ Membership Buff! ★</font>"
 		"DOTA_Tooltip_modifier_global_member_Description"	"As a member, you gain the following bonuses:<br>+%dMODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE% attack damage.<br>+%dMODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE%%% spell damage.<br>+%dMODIFIER_PROPERTY_HEALTH_BONUS% health.<br>+%dMODIFIER_PROPERTY_MANA_BONUS% mana.<br>Respawn time reduced by 5 seconds.<br/>Buyback cooldown reduced to 2 minutes.<br/>"
+		// 定制BUFF donnot translate
+		"DOTA_Tooltip_modifier_player_lumao"					"<font color='#fc8eac'>★ 大师级撸猫玩家 ★</font>"
+		"DOTA_Tooltip_modifier_player_windy"					"<font color='#0AA1DD'>★ Windy ★</font>"
+		"DOTA_Tooltip_modifier_player_xianyu"					"<font color='#FFCC66'>★ 咸鱼之王 ★</font>"
+		"DOTA_Tooltip_modifier_player_xianyu_Description"		"<font color='#FFCC66'> 恭喜你遇到了真正的咸鱼之王。<br/>感谢您对游戏的支持与喜爱。<br/>玩家交流QQ群：836436993。</font>"
+		"DOTA_Tooltip_modifier_player_mimihua"					"<font color='#FFCC66'>★ 一次性消耗品 ★</font>"
+		"DOTA_Tooltip_modifier_player_mimihua_Description"		"<font color='#FFCC66'> 别想了，你得不到的。</font>"
+		"DOTA_Tooltip_modifier_player_bulangya"					"<font color='#5534A5'>★ 迷城骇兔 ★</font>"
+		"DOTA_Tooltip_modifier_player_76"						"<font color='#F66B0E'>★ 克林克兹之馈赠 ★</font>"
+		"DOTA_Tooltip_modifier_player_76_Description"			"<font color='#FFCC66'> 如果你看到这个B玩小骷髅，那你可以躺了，记得给点控制哦~</font>"
+		"DOTA_Tooltip_modifier_player_hunzhuo"					"<font color='#A85CF9'>★ 我的口袋只剩玫瑰一片，此行又山高路远 ★</font>"
+		"DOTA_Tooltip_modifier_player_hunzhuo_Description"		"<font color='#A85CF9'>蹉跎错，消磨过，最是光阴化浮沫。</font>"
+		"DOTA_Tooltip_modifier_player_chashaobao"				"<font color='#E8C07D'>★ 叉烧包之王 ★</font>"
+		"DOTA_Tooltip_modifier_player_menglihua"				"<font color='#A85CF9'>★ 我不做人了！！！！！ ★</font>"
+		"DOTA_Tooltip_modifier_player_menglihua_Description"	"<font color='#A85CF9'>人类是有极限的！所以我不做人了！JOJO！！！</font>"
+		"DOTA_Tooltip_modifier_player_dabuguo"					"<font color='#FFCC66'>★ 天龙人 ★</font>"
+		"DOTA_Tooltip_modifier_player_dabuguo_Description"		"<font color='#FFCC66'>天龙人咸鱼为了廉价的赏金！献祭出了自己的珍宝皮燕子！（请勿模仿不值得啊）</font>"
+		"DOTA_Tooltip_modifier_player_dabuguo_1"				"<font color='#FFCC66'></font>"
+		"DOTA_Tooltip_modifier_player_dabuguo_2"				"<font color='#FFCC66'></font>"
+		"DOTA_Tooltip_modifier_player_dabuguo_3"				"<font color='#FFCC66'></font>"
+		"DOTA_Tooltip_modifier_player_dabuguo_4"				"<font color='#FFCC66'>哥哥你为我花了这么多钱，你女朋友不会生气吧？</font>"
+		"DOTA_Tooltip_modifier_player_shapu"					"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_kfw6"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_dalaogongji"				"<font color='#FFCC66'>★ 大佬，请问攻击是哪个按键呀？ ★</font>"
+		"DOTA_Tooltip_modifier_player_dalaogongji_Description"	"<font color='#FFCC66'> 当你拉氪金大佬入坑游戏时... </font>"
+		"DOTA_Tooltip_modifier_player_jiangcai"					"<font color='#FFCC66'>★ 意面神教葱油拌面分教教主 ★</font>"
+		"DOTA_Tooltip_modifier_player_rwby"						"<font color='#5FD068'>★ Rwby伤害王！ ★</font>"
+		"DOTA_Tooltip_modifier_player_rwby_Description"			"<font color='#5FD068'> 被我指到的人都要好运！ </font>"
+		"DOTA_Tooltip_modifier_player_sun"						"<font color='#FFCC66'>★ 天下第一砍王 ★</font>"
+		"DOTA_Tooltip_modifier_player_cyn1"						"<font color='#FFCC66'>♥ Cherries ♥</font>"
+		"DOTA_Tooltip_modifier_player_cyn2"						"<font color='#FFCC66'>★ Cherries ★</font>"
+		"DOTA_Tooltip_modifier_player_cyn3"						"<font color='#FFCC66'>♥ ★ ♥ ★ ♥ ★ Cherries ★ ♥ ★ ♥ ★ ♥ </font>"
+		"DOTA_Tooltip_modifier_player_adolphzero"				"<font color='#FFCC66'>★ 在下千里马 ★</font>"
+		"DOTA_Tooltip_modifier_player_adolphzero_Description"	"<font color='#FFCC66'> 还好老子跑得快 </font>"
+		"DOTA_Tooltip_modifier_player_j3e9"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin"						"<font color='#FFCC66'>★ 鲨鱼辣椒 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_Description"			"<font color='#FFCC66'> 鲨鱼辣椒不吃辣~ </font>"
+		"DOTA_Tooltip_modifier_player_xin_2"					"<font color='#FFCC66'>★ 蝎子莱莱 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_2_Description"		"<font color='#FFCC66'>★ 尊贵的心悦1会员福利 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_3"					"<font color='#FFCC66'>★ 蜘蛛侦探 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_3_Description"		"<font color='#FFCC66'>★ 尊贵的心悦2会员福利 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_4"					"<font color='#FFCC66'>★ 蟑螂恶霸 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_4_Description"		"<font color='#FFCC66'>★ 尊贵的心悦3会员福利 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_5"					"<font color='#FFCC66'>★ 鲨鱼巨人 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_5_Description"		"<font color='#FFCC66'>★ 双重超级变换形态 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_6"					"<font color='#FFCC66'>★ 蜻蜓队长 ★</font>"
+		"DOTA_Tooltip_modifier_player_xin_6_Description"		"<font color='#FFCC66'>★ 裁判机器人蜻蜓队长前来觐见！ ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian"					"<font color='#FFCC66'>★ 新人光环 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_2"				"<font color='#FFCC66'>★ 狂风向前 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_3"				"<font color='#FFCC66'>★ 你看不见我 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_4"				"<font color='#FFCC66'>★ 全场最帅 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_5"				"<font color='#FFCC66'>★ 不服打我 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_6"				"<font color='#FFCC66'>★ 贪狼 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_7"				"<font color='#FFCC66'>★ 破军 ★</font>"
+		"DOTA_Tooltip_modifier_player_qiannian_8"				"<font color='#FFCC66'>★ 七杀 ★</font>"
+		"DOTA_Tooltip_modifier_player_feiji"					"<font color='#A149FA'>★ 贝伦卡斯泰露的庇佑 ★</font>"
+		"DOTA_Tooltip_modifier_player_feiji_Description"		"<font color='#A149FA'> 古户绘梨花受到了奇迹的魔女贝伦卡斯泰露的庇佑 </font>"
+		"DOTA_Tooltip_modifier_player_pns"						"<font color='#FFCC66'>★ 苟圣 ★</font>"
+		"DOTA_Tooltip_modifier_player_taikong"					"<font color='#FFCC66'>★ 太阳轰炸准备就绪 ★</font>"
+		"DOTA_Tooltip_modifier_player_wonderpis"				"<font color='#FFCC66'>★ 局外人 ★</font>"
+		"DOTA_Tooltip_modifier_player_wonderpis_Description"	"<font color='#FFCC66'> 壮士，请先打我队友！ </font>"
+		"DOTA_Tooltip_modifier_player_xiayibing"				"<font color='#0096FF'>★ 冰神 ★</font>"
+		"DOTA_Tooltip_modifier_player_xiayibing_Description"	"<font color='#0096FF'> 2009级卡尔亡 </font>"
+		"DOTA_Tooltip_modifier_player_abyss"					"<font color='#55D8C1'>★ 万物塑造之主 ★</font>"
+		"DOTA_Tooltip_modifier_player_abyss_Description"		"<font color='#55D8C1'>掌控元素塑造形体的万物之主。<br>当前已塑造形体：<br>SABER、沉渊之剑、超级赛亚人、开膛手杰克</font>"
+		"DOTA_Tooltip_modifier_player_luoshu"					"<font color='#FFCC66'>★ 洛书 ★</font>"
+		"DOTA_Tooltip_modifier_player_luoshu_Description"		"<font color='#FFCC66'> 然而和我洛书有什么关系呢？ </font>"
+		"DOTA_Tooltip_modifier_player_luoshu_2"					"<font color='#FFCC66'>★ 天神下凡 ★</font>"
+		"DOTA_Tooltip_modifier_player_luoshu_2_Description"		"<font color='#FFCC66'> 天神下凡刹那，风云为之色变，大地为之双分。天辉与夜魇因此诞生，也因此永世不得停息，争斗不止。 </font>"
+		"DOTA_Tooltip_modifier_player_m5xw"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_mingri"					"<font color='#FFCC66'>★ 这车能坐吗 ★</font>"
+		"DOTA_Tooltip_modifier_player_liaoran"					"<font color='#FFCC66'>★ 比队友跑的快！ ★</font>"
+		"DOTA_Tooltip_modifier_player_lani"						"<font color='#FFCC66'>★ 褪色者 ★</font>"
+		"DOTA_Tooltip_modifier_player_lani_Description"			"<font color='#FFCC66'> 菈妮唯一的王 </font>"
+		"DOTA_Tooltip_modifier_player_li123"					"<font color='#FFCC66'>★ 力中暴力 ★</font>"
+		"DOTA_Tooltip_modifier_player_yangqi"					"<font color='#FFCC66'>★ 喵车乘客29 ★</font>"
+		"DOTA_Tooltip_modifier_player_kudo"						"<font color='#FFCC66'>★ kudo ★</font>"
+		"DOTA_Tooltip_modifier_player_arrayzoneyour"			"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_nmjb"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_puck1609"					"<font color='#FFCC66'>★ 魔剑莱瓦汀 ★</font>"
+		"DOTA_Tooltip_modifier_player_puck1609_Description"		"<font color='#FFCC66'> Scarlet Laevatain </font>"
+		"DOTA_Tooltip_modifier_player_puck1609_2"				"<font color='#FFCC66'>★ 梦想天生 ★</font>"
+		"DOTA_Tooltip_modifier_player_puck1609_2_Description"	"<font color='#FFCC66'> Gensokyo Miko </font>"
+		"DOTA_Tooltip_modifier_player_puck1609_3"				"<font color='#FFCC66'>★ 无双风神 ★</font>"
+		"DOTA_Tooltip_modifier_player_puck1609_3_Description"	"<font color='#FFCC66'> Windstorm Wing </font>"
+		"DOTA_Tooltip_modifier_player_puck1609_4"				"<font color='#FFCC66'>★ 枫叶白狼 ★</font>"
+		"DOTA_Tooltip_modifier_player_puck1609_4_Description"	"<font color='#FFCC66'> Momiji Shield </font>"
+		"DOTA_Tooltip_modifier_player_dky190"					"<font color='#FFCC66'>★ Tiny ★</font>"
+		"DOTA_Tooltip_modifier_player_dky190_2"					"<font color='#FFCC66'>★ 極速之翼 ★</font>"
+		"DOTA_Tooltip_modifier_player_dky190_2_Description"		"<font color='#FFCC66'> 快的飞起 </font>"
+		"DOTA_Tooltip_modifier_player_dky190_3"					"<font color='#FFCC66'>★ Tiny的魔法书 ★</font>"
+		"DOTA_Tooltip_modifier_player_dky190_4"					"<font color='#FFCC66'>★ Tiny这把想躺赢 ★</font>"
+		"DOTA_Tooltip_modifier_player_dky190_5"					"<font color='#FFCC66'>★ Tiny摆不动了 ★</font>"
+		"DOTA_Tooltip_modifier_player_kele"						"<font color='#FFCC66'>★ 我一定会回来的！！！！ ★</font>"
+		"DOTA_Tooltip_modifier_player_kele_Description"			"<font color='#FFCC66'> 我一定会回来的！！！！ </font>"
+		"DOTA_Tooltip_modifier_player_loset12"					"<font color='#FA9494'>★ 猪 ★</font>"
+		"DOTA_Tooltip_modifier_player_loset12_2"				"<font color='#FA9494'>★ 猪队友 ★</font>"
+		"DOTA_Tooltip_modifier_player_chuyin"					"<font color='#FFCC66'>★ 射爆AI全家 ★</font>"
+		"DOTA_Tooltip_modifier_player_chuyin_2"					"<font color='#FFCC66'>★ 奥法之怒 ★</font>"
+		"DOTA_Tooltip_modifier_player_chuyin_3"					"<font color='#FFCC66'>★ 致命箭雨 ★</font>"
+		"DOTA_Tooltip_modifier_player_chuyin_4"					"<font color='#FFCC66'>★ 雷霆爆发 ★</font>"
+		"DOTA_Tooltip_modifier_player_chuyin_5"					"<font color='#FFCC66'>★ 魔龙 ★</font>"
+		"DOTA_Tooltip_modifier_player_sushi"					"<font color='#FFCC66'>★ 基神的强袭自由 ★</font>"
+		"DOTA_Tooltip_modifier_player_sushi_Description"		"<font color='#FFCC66'> 天苍茫镜花水月之像，今朝我粉墨登场~ </font>"
+		"DOTA_Tooltip_modifier_player_sushi_2"					"<font color='#FFCC66'>★ 基神的强袭自由 ★</font>"
+		"DOTA_Tooltip_modifier_player_sushi_2_Description"		"<font color='#FFCC66'> 爱佑[浮生]，从一而终 </font>"
+		"DOTA_Tooltip_modifier_player_sushi_3"					"<font color='#FFCC66'>★ 基神的强袭自由 ★</font>"
+		"DOTA_Tooltip_modifier_player_sushi_3_Description"		"<font color='#FFCC66'> 千般[鏖灭]，心未成灰 </font>"
+		"DOTA_Tooltip_modifier_player_sushi_4"					"<font color='#FFCC66'>★ 基神的强袭自由 ★</font>"
+		"DOTA_Tooltip_modifier_player_sushi_4_Description"		"<font color='#FFCC66'> 纵承[天慧]，真意难解 </font>"
+		"DOTA_Tooltip_modifier_player_kdvh_1"					"<font color='#FFCC66'>★ 男人的加油站 ★</font>"
+		"DOTA_Tooltip_modifier_player_kdvh_2"					"<font color='#FFCC66'>★ 快男也可以很骄傲 ★</font>"
+		"DOTA_Tooltip_modifier_player_kdvh_3"					"<font color='#FFCC66'>★ 浴血奋战才是真男人 ★</font>"
+		"DOTA_Tooltip_modifier_player_YYL"						"<font color='#FFCC66'>★ 游戏开发者 ★</font>"
+		"DOTA_Tooltip_modifier_player_aoliao"					"<font color='#FFCC66'>★ 奥利奥夹心饼 ★</font>"
+		"DOTA_Tooltip_modifier_player_aoliao_2"					"<font color='#FFCC66'>★ 雷电法王 ★</font>"
+		"DOTA_Tooltip_modifier_player_vjes"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh"					"<font color='#FFCC66'>★ 至圣 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh_1"					"<font color='#FFCC66'>★ 至圣先师 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh_2"					"<font color='#FFCC66'>★ 万世师表 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh_3"					"<font color='#FFCC66'>★ 天不生仲尼 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh_4"					"<font color='#FFCC66'>★ 万古如长夜 ★</font>"
+		"DOTA_Tooltip_modifier_player_laugh_5"					"<font color='#FFCC66'>★ 风驰电掣 ★</font>"
+		"DOTA_Tooltip_modifier_player_asprose"					"<font color='#FFCC66'>★ 超人会发光 ★</font>"
+		"DOTA_Tooltip_modifier_player_xys"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_yuliang"					"<font color='#FFCC66'>★ AE86 ★</font>"
+		"DOTA_Tooltip_modifier_player_yuliang_Description"		"<font color='#FFCC66'> 洗车，今晚上秋名山。 </font>"
+		"DOTA_Tooltip_modifier_player_weilan"					"<font color='#FFCC66'>★ 举杯吧！敬那些想杀死我的人 ★</font>"
+		"DOTA_Tooltip_modifier_player_ekxn"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_uh9g"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_xibaibai"					"<font color='#FFCC66'>★ 能者多牢 ★</font>"
+		"DOTA_Tooltip_modifier_player_dacapo"					"<font color='#FFCC66'>★ Da丨Capo  ★</font>"
+		"DOTA_Tooltip_modifier_player_xingguang"				"<font color='#FFCC66'>★ 星光灿烂 ★</font>"
+		"DOTA_Tooltip_modifier_player_hjauin"					"<font color='#FFCC66'>★ BILIBILI直播间1426674 ★</font>"
+		"DOTA_Tooltip_modifier_player_hjauin_Description"		"<font color='#FFCC66'>https://live.bilibili.com/1426674</font>"
+		"DOTA_Tooltip_modifier_player_eygc"						"<font color='#FFCC66'>★ 专属定制称号 ★</font>"
+		"DOTA_Tooltip_modifier_player_eesama"					"<font color='#FFCC66'>★ EEsama ★</font>"
+		"DOTA_Tooltip_modifier_player_bansheng_1"				"<font color='#FF0000'>★ 红钻贵族 ★</font>"
+		"DOTA_Tooltip_modifier_player_bansheng_2"				"<font color='#00BFFF'>★ 蓝钻贵族 ★</font>"
+		"DOTA_Tooltip_modifier_player_bansheng_3"				"<font color='#FFCC66'>★ 黄钻贵族 ★</font>"
+		"DOTA_Tooltip_modifier_player_pipilu"					"<font color='#FFCC66'>★ 皮皮鲁 ★</font>"
+		"DOTA_Tooltip_modifier_player_pipilu_Description"		"<font color='#FFCC66'>童话大王</font>"
 
 		///////////////////////////////////////////////////
 		//
@@ -310,13 +446,107 @@
 		"DOTA_Tooltip_modifier_sniper_assassinate_target"								"Assassinate"
 		"DOTA_Tooltip_modifier_sniper_assassinate_target_Description"				"Sniper's taking aim at your head!"
 
+		// 混沌骑士
+		"DOTA_Tooltip_ability_chaos_knight_chaos_bolt_shard_description" 						"Increases the cast range to %AbilityCastRange%."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm"										"Army of Chaos"
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons other Chaos Knights from other dimensions to Chaos Knight's side and fight with alongside him as a part of his being. Whenever Chaos Knight attacks, the other Chaos Knights will also deliver their own attacks on the target. The additional Chaos Knights' attacks have a short cooldown before they can strike again."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_Lore"									"With the Chaos Knight's rich combat experience in various worlds, his very being brings enough strength to suppress anyone who dares to oppose him. And any copies of him."
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_count"							"EXTRA ATTACKS:"
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_cooldown"						"EXTRA ATTACKS COOLDOWN:"
+		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_scepter_description"					"Increases the number of extra attacks and reduces the cooldown between the extra attacks."
+
+		"DOTA_Tooltip_modifier_imba_phantasm_buff"												"Army of Chaos"
+		"DOTA_Tooltip_modifier_imba_phantasm_buff_description"									"Multiple shadow clones are imbued within you! They will attack when you do with a cooldown."
+
 		// 茶神
 		"npc_dota_hero_techies"					"hechahecha"
 
 		// 电炎绝手/老奶奶
 		"DOTA_Tooltip_ability_snapfire_firesnap_cookie_target_heal"	"COOKIE HEAL:"
+
+		// 谜团
+		"DOTA_Tooltip_ability_enigma_black_hole_scepter_description"					"Black Hole deals additional damage equivalent to 3%% of the unit's Max Health per second."
+
+		// 全能骑士
+		"DOTA_Tooltip_ability_omniknight_angelic_flight"					"Angelic Flight"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"		"Increases the target's movement speed and health regeneration, and grants flying movement, allowing them to move over any terrain."
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_Note0"			"Angelic Flight does not grant targets the ability to path over some player-made obstacles, such as Kinetic Field/Fence and Arena of Blood."
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"				"'Forward without fear, my friends!'"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"			"DURATION:"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"%MOVEMENT SPEED:"
+		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"HEALTH REGENERATION:"
+		"DOTA_Tooltip_modifier_omninight_angelic_flight"					"Angelic Flight"
+		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% movement speed."
+
+	    // 修补匠 刷新
+	    "DOTA_Tooltip_ability_tinker_rearm_lua"												"Rearm"
+		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitydraft_note"							"For abilities with charges, a single charge of the ability will be added everytime Rearm is cast."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Description"									"CHANNELED - Resets the cooldown on most of Tinker's items and abilities."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Lore"										"A new battery here, another set of rockets there, Boush continually improves on existing technology."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Note0"										"Rearm works on all items except Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, (including upgrades like Black King Bar Upgrade, Aeon Pendant, Linken's Sphere Upgrade, Armor of Insight, Hand of Team, etc.) and any items in the neutral slot, regardless of what they are."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_Note1"										"If Rubick Spell Steals Rearm, he cannot Rearm other heroes' ultimates."
+		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitychanneltime"								"TIME TO REARM:"
+
+        // 电棍 razor
+        "DOTA_Tooltip_ability_special_bonus_unique_razor_101"   "+{s:bonus_radius} Plasma Field Radius"
+        "DOTA_Tooltip_ability_special_bonus_unique_razor_401"   "+{s:bonus_duration}s Eye of the Storm Duration"
+        "DOTA_Tooltip_ability_special_bonus_unique_razor_402"   "+{s:bonus_damage} Eye of the Storm Damage"
+
+        // 火女 lina
+		"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
+
+        // 幽鬼 spe
+        "DOTA_Tooltip_ability_spectre_desolate_Description"		"Deals bonus pure damage whenever Spectre attacks an enemy."
+        "DOTA_Tooltip_ability_spectre_desolate_radius"						""
+        "DOTA_Tooltip_ability_spectre_ursa_enrage"												"Intangible Shadow"
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_Lore"											"At this moment, Spectre jumped out of the Three Realms and was not in the Five Elements."
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_Description"									"Spectre reverses causation, providing herself with Damage Reduction and Status Resistance. Removes any existing debuffs on her.\n\nDISPEL TYPE: Strong Dispel"
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_scepter_description"							"Reduces cooldown and allows Spectre to use Intangible Shadow while disabled."
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_damage_reduction"		                        "%DAMAGE REDUCTION:"
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_status_resistance"		                     "%STATUS RESISTANCE:"
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_duration"					                    "DURATION:"
+        "DOTA_Tooltip_ability_spectre_ursa_enrage_cooldown_scepter"					            "COOLDOWN:"
+        "DOTA_Tooltip_ability_special_bonus_unique_spectre_401"    "+{s:bonus_duration} Intangible Shadow duration"
+        "DOTA_Tooltip_modifier_spectre_ursa_enrage" "Intangible Shadow"
+        "DOTA_Tooltip_modifier_spectre_ursa_enrage_Description"	"Gained %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% incoming Damage Reduction and %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% Status Resistance"
+
+        // 剧毒
+        "DOTA_Tooltip_ability_special_bonus_unique_venomancer_201"  "+{s:bonus_damage} Poison Sting Damage"
+
+        // 巫妖
+        "DOTA_Tooltip_ability_special_bonus_unique_lich_401"  "+{s:bonus_jumps} Chain Frost Bounces"
+
+		// Alchemist 炼金术士
+		"DOTA_Tooltip_ability_alchemist_chemical_rage_bonus_health"				"HEALTH BONUS:"
+
+		// 夜魔
+		"DOTA_Tooltip_ability_special_bonus_unique_night_stalker_301"	"+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Move Speed"
+
+		// 酒仙
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua"								"Primal Split"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Lore"							"It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor."
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Description"					"Brewmaster is now awesome, gaining the effects of four different fighting styles."
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_shard_Description"			"Increases Primal Split duration."
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_duration"						"DURATION:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_move_speed"				"%Movement Speed Bonus:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_status_resist"			"%Status Resistance Bonus:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_magic_resist"					"%Magic Resistance:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_armor"						"<font color=\"#87ceeb\">Armor</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_dodge_chance"					"%<font color=\"#87ceeb\">Evasion</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_crit_chance"					"%<font color=\"#FF0000\">Critical Hit Chance</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_crit_multiplier"				"<font color=\"#FF0000\">Critical Hit Damage</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_attack_speed"					"<font color=\"#FF0000\">Attack Speed</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_movespeed"					"%<font color=\"#662375\">Attack Movespeed Slow</font>:"
+		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_slow_duration"				"<font color=\"#662375\">Slow Duration</font>:"
+
+		"DOTA_Tooltip_modifier_brewmaster_primal_split_lua_duration"					"Primal Split"
+
 		///////////////////////////////////////////////////
-		// 自定义英雄
+		//
+		// 自定义英雄 Custom Heroes
+		//
+		///////////////////////////////////////////////////
 
 		//执剑泰斗
 		"npc_dota_hero_dark_seer"																"Sword Master"
@@ -546,38 +776,6 @@
         "DOTA_Tooltip_ability_special_bonus_unique_miku_302" "+{s:bonus_AbilityCastRange} Liu-kick Cast Range"
 
 		"DOTA_Tooltip_ability_miku_hadouken_shard_description"		"Popipo stuns enemies for %shard_stun% second(s)."
-
-        // 美杜莎
-		"DOTA_Tooltip_ability_medusa_cold_blooded_Description"			        "When Medusa is targeted with a spell, a single-target Mystic Snake is sent back towards the enemy. Cooldown: 10s."
-
-		// 谜团
-		"DOTA_Tooltip_ability_enigma_black_hole_scepter_description"					"Black Hole deals additional damage equivalent to 3%% of the unit's Max Health per second."
-
-        // 全能骑士
-		"DOTA_Tooltip_ability_omniknight_angelic_flight"					"Angelic Flight"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_description"		"Increases the target's movement speed and health regeneration, and grants flying movement, allowing them to move over any terrain."
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_Note0"			"Angelic Flight does not grant targets the ability to path over some player-made obstacles, such as Kinetic Field/Fence and Arena of Blood."
-        "DOTA_Tooltip_ability_omniknight_angelic_flight_Lore"				"'Forward without fear, my friends!'"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_duration"			"DURATION:"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_movement_speed"		"%MOVEMENT SPEED:"
-		"DOTA_Tooltip_ability_omniknight_angelic_flight_hp_regen"			"HEALTH REGENERATION:"
-		"DOTA_Tooltip_modifier_omninight_angelic_flight"					"Angelic Flight"
-		"DOTA_Tooltip_modifier_omninight_angelic_flight_description"		"Gaining flying movement, %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT% health regeneration, and %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% movement speed."
-
-		// 混沌骑士
-		"DOTA_Tooltip_ability_chaos_knight_chaos_bolt_shard_description" 						"Increases the cast range to %AbilityCastRange%."
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm"										"Army of Chaos"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_description"							"Summons other Chaos Knights from other dimensions to Chaos Knight's side and fight with alongside him as a part of his being. Whenever Chaos Knight attacks, the other Chaos Knights will also deliver their own attacks on the target. The additional Chaos Knights' attacks have a short cooldown before they can strike again."
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_Lore"									"With the Chaos Knight's rich combat experience in various worlds, his very being brings enough strength to suppress anyone who dares to oppose him. And any copies of him."
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_duration"								"DURATION:"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_count"							"EXTRA ATTACKS:"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_attack_cooldown"						"EXTRA ATTACKS COOLDOWN:"
-		"DOTA_Tooltip_ability_imba_chaos_knight_phantasm_scepter_description"					"Increases the number of extra attacks and reduces the cooldown between the extra attacks."
-
-		"DOTA_Tooltip_modifier_imba_phantasm_buff"												"Army of Chaos"
-		"DOTA_Tooltip_modifier_imba_phantasm_buff_description"									"Multiple shadow clones are imbued within you! They will attack when you do with a cooldown."
-
-		// "DOTA_Tooltip_ability_imba_chaos_knight_phantasm_scepter_description"				"Increases the number of extra attacks and reduces the cooldown between the extra attacks."
 
 		// Saber
 		"npc_dota_hero_broodmother"						"Artoria Pendragon"
@@ -813,68 +1011,6 @@
         "DOTA_Tooltip_ability_ability_thdots_yukari04_ex_damage"	"BARRAGE DAMAGE PER INTERVAL:"
         "DOTA_Tooltip_ability_ability_thdots_yukari04_barrage_fire_interval"	"INTERVAL:"
         "DOTA_Tooltip_ability_ability_thdots_yukari04_scepter_Description"	"Add a new skill:「Deep Danmaku Barrier -Transient Dreams-」"
-	    // 修补匠 刷新
-	    "DOTA_Tooltip_ability_tinker_rearm_lua"												"Rearm"
-		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitydraft_note"							"For abilities with charges, a single charge of the ability will be added everytime Rearm is cast."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_Description"									"CHANNELED - Resets the cooldown on most of Tinker's items and abilities."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_Lore"										"A new battery here, another set of rockets there, Boush continually improves on existing technology."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_Note0"										"Rearm works on all items except Aeon Disk, Arcane Boots, Black King Bar, Hand of Midas, Helm of the Dominator, Linken's Sphere, Meteor Hammer, Pipe of Insight, Refresher Orb, (including upgrades like Black King Bar Upgrade, Aeon Pendant, Linken's Sphere Upgrade, Armor of Insight, Hand of Team, etc.) and any items in the neutral slot, regardless of what they are."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_Note1"										"If Rubick Spell Steals Rearm, he cannot Rearm other heroes' ultimates."
-		"DOTA_Tooltip_ability_tinker_rearm_lua_abilitychanneltime"								"TIME TO REARM:"
-
-        // 电棍 razor
-        "DOTA_Tooltip_ability_special_bonus_unique_razor_101"   "+{s:bonus_radius} Plasma Field Radius"
-        "DOTA_Tooltip_ability_special_bonus_unique_razor_401"   "+{s:bonus_duration}s Eye of the Storm Duration"
-        "DOTA_Tooltip_ability_special_bonus_unique_razor_402"   "+{s:bonus_damage} Eye of the Storm Damage"
-
-        // 火女 lina
-		"DOTA_Tooltip_ability_special_bonus_unique_lina_dragon_slave_damage"	"+{s:bonus_dragon_slave_damage} Dragon Slave Damage"
-
-        // 幽鬼 spe
-        "DOTA_Tooltip_ability_spectre_desolate_Description"		"Deals bonus pure damage whenever Spectre attacks an enemy."
-        "DOTA_Tooltip_ability_spectre_desolate_radius"						""
-        "DOTA_Tooltip_ability_spectre_ursa_enrage"												"Intangible Shadow"
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_Lore"											"At this moment, Spectre jumped out of the Three Realms and was not in the Five Elements."
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_Description"									"Spectre reverses causation, providing herself with Damage Reduction and Status Resistance. Removes any existing debuffs on her.\n\nDISPEL TYPE: Strong Dispel"
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_scepter_description"							"Reduces cooldown and allows Spectre to use Intangible Shadow while disabled."
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_damage_reduction"		                        "%DAMAGE REDUCTION:"
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_status_resistance"		                     "%STATUS RESISTANCE:"
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_duration"					                    "DURATION:"
-        "DOTA_Tooltip_ability_spectre_ursa_enrage_cooldown_scepter"					            "COOLDOWN:"
-        "DOTA_Tooltip_ability_special_bonus_unique_spectre_401"    "+{s:bonus_duration} Intangible Shadow duration"
-        "DOTA_Tooltip_modifier_spectre_ursa_enrage" "Intangible Shadow"
-        "DOTA_Tooltip_modifier_spectre_ursa_enrage_Description"	"Gained %dMODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE%%% incoming Damage Reduction and %dMODIFIER_PROPERTY_STATUS_RESISTANCE_STACKING%%% Status Resistance"
-
-        // 剧毒
-        "DOTA_Tooltip_ability_special_bonus_unique_venomancer_201"  "+{s:bonus_damage} Poison Sting Damage"
-
-        // 巫妖
-        "DOTA_Tooltip_ability_special_bonus_unique_lich_401"  "+{s:bonus_jumps} Chain Frost Bounces"
-
-		// Alchemist 炼金术士
-		"DOTA_Tooltip_ability_alchemist_chemical_rage_bonus_health"				"HEALTH BONUS:"
-
-		// 夜魔
-		"DOTA_Tooltip_ability_special_bonus_unique_night_stalker_301"	"+{s:bonus_bonus_movement_speed_pct_night}% Hunter In The Night Move Speed"
-
-		// 酒仙
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua"								"Primal Split"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Lore"							"It isn't clear whether Mangix is consciously aware of his potent bond with nature, as it often occurs in the midst of a drunken stupor."
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_Description"					"Brewmaster is now awesome, gaining the effects of four different fighting styles."
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_shard_Description"			"Increases Primal Split duration."
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_duration"						"DURATION:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_move_speed"				"%Movement Speed Bonus:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_bonus_status_resist"			"%Status Resistance Bonus:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_magic_resist"					"%Magic Resistance:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_armor"						"<font color=\"#87ceeb\">Armor</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_dodge_chance"					"%<font color=\"#87ceeb\">Evasion</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_crit_chance"					"%<font color=\"#FF0000\">Critical Hit Chance</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_crit_multiplier"				"<font color=\"#FF0000\">Critical Hit Damage</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_attack_speed"					"<font color=\"#FF0000\">Attack Speed</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_movespeed"					"%<font color=\"#662375\">Attack Movespeed Slow</font>:"
-		"DOTA_Tooltip_ability_brewmaster_primal_split_lua_slow_duration"				"<font color=\"#662375\">Slow Duration</font>:"
-
-		"DOTA_Tooltip_modifier_brewmaster_primal_split_lua_duration"					"Primal Split"
 
 		// /////////////////////////////////////////////////////////////////////////////
 		//
