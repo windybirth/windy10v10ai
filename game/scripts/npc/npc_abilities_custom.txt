@@ -1046,7 +1046,7 @@
 		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
 	}
-
+	// 直感
 	"artoria_instinct"
 	{
 		// General		//------------------------------------------------------------------------------------------------------------
@@ -1062,7 +1062,12 @@
 		"AbilityCastPoint"				"0.0"
 		"AbilityCooldown"				"14.0 12.0 10.0 8.0 6.0"
 		"AbilityManaCost"				"0"
-
+		// Precache		//------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"				"particles/units/heroes/hero_antimage/antimage_spellshield.vpcf"
+			"particle"				"particles/units/heroes/hero_antimage/antimage_spellshield_reflect.vpcf"
+		}
 
 		// Ability Values		//------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
@@ -1071,7 +1076,7 @@
 			"status_res"				"10 15 20 25 30"
 		}
 	}
-
+	// 魔力放出
 	"artoria_mana_burst"
 	{
 		// General		//------------------------------------------------------------------------------------------------------------
