@@ -1009,7 +1009,6 @@
 			"particle"				"particles/units/heroes/hero_invoker/invoker_tornado_trail.vpcf"
 			"particle"				"particles/units/heroes/hero_invoker/invoker_tornado_base.vpcf"
 			"particle"				"particles/custom/artoria/artoria_wind_blow.vpcf"
-			"particle"				"particles/custom/artoria/invisible_air/artoria_strike_air.vpcf"
 			"soundfile"				"soundevents/hero_artoria.vsndevts"
 		}
 
@@ -1155,7 +1154,7 @@
 		"HasScepterUpgrade"				"1"
 
 		// Ability Stats		//------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"2000"
+		"AbilityCastRange"				"%range"
 		"AbilityCastPoint"				"0.6"
 		"AbilityChannelTime"			"2.0"
 		"AbilityCooldown"				"75.0"
@@ -1220,7 +1219,7 @@
 		"HasScepterUpgrade"				"1"
 
 		// Ability Stats		//------------------------------------------------------------------------------------------------------------
-		"AbilityCastRange"				"4000"
+		"AbilityCastRange"				"%range"
 		"AbilityCastPoint"				"0.6"
 		"AbilityChannelTime"			"3.0"
 		"AbilityCooldown"				"75.0"
@@ -1231,8 +1230,6 @@
 		{
 			"particle"				"particles/units/heroes/hero_skywrath_mage/skywrath_mage_concussive_shot_cast.vpcf"
 			"particle"				"particles/units/heroes/hero_wisp/wisp_overcharge.vpcf"
-			"particle"				"particles/custom/saber_excalibur_max_rock_emitter.vpcf"
-			"particle"				"particles/custom/screen_yellow_splash.vpcf"
 			"particle"				"particles/custom/saber/excalibur/hit.vpcf"
 			"particle"				"particles/custom/artoria/artoria_ultimate_excalibur_charge.vpcf"
 			"particle"				"particles/custom/artoria/large_excalibur_ambient.vpcf"
