@@ -1052,7 +1052,8 @@
 		// General		//------------------------------------------------------------------------------------------------------------
 		"BaseClass"						"ability_lua"
 		"ScriptFile"					"heroes/artoria/artoria_instinct"
-		"MaxLevel"						"5"
+		"MaxLevel"						"6"
+		"Innate"						"1"
 		"RequiredLevel"					"1"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"AbilityTextureName"			"custom/artoria/artoria_instinct"
@@ -1060,7 +1061,7 @@
 		"AbilityCastAnimation" 			"ACT_DOTA_CAST_ABILITY_1_END"
 		"AbilityType"					"DOTA_ABILITY_TYPE_BASIC"
 		"AbilityCastPoint"				"0.0"
-		"AbilityCooldown"				"14.0 12.0 10.0 8.0 6.0"
+		"AbilityCooldown"				"14.0 12.0 10.0 8.0 6.0 4.0"
 		"AbilityManaCost"				"0"
 		// Precache		//------------------------------------------------------------------------------------------------------------
 		"precache"

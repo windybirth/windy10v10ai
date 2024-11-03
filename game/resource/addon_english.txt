@@ -593,7 +593,7 @@
 
 		"DOTA_Tooltip_ability_artoria_strike_air_shard_description"		"Strike Air inflicts a basic attack to the enemy rather than flat magical damage, and now also pierces Debuff Immunity."
 
-		"DOTA_Tooltip_Ability_artoria_instinct"					"<font color='#FFE56E'>Instinct</font>"
+		"DOTA_Tooltip_Ability_artoria_instinct"					"Instinct"
 		"DOTA_Tooltip_ability_artoria_instinct_Description"		"Saber's gifted instinct grants her the ability to <font color='#00e600'>block and reflect</font> most spells targeted against her periodically with a cooldown. She also passively gains extra <font color='#FF3399'>magic resistance</font> and <font color='#C24401'>status resistance</font>."
 		"DOTA_Tooltip_ability_artoria_instinct_magic_res"		"%MAGIC RESISTANCE:"
 		"DOTA_Tooltip_ability_artoria_instinct_status_res"		"%STATUS RESISTANCE:"
