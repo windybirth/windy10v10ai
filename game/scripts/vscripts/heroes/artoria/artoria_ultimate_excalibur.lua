@@ -38,6 +38,8 @@ function artoria_ultimate_excalibur:OnSpellStart()
 
 	local chargeFxIndex = ParticleManager:CreateParticle(
 		"particles/custom/artoria/artoria_ultimate_excalibur_charge.vpcf", PATTACH_ABSORIGIN_FOLLOW, caster)
+	local excalibur_Charge = ParticleManager:CreateParticle("particles/custom/saber/max_excalibur/charge.vpcf",
+		PATTACH_ABSORIGIN_FOLLOW, caster)
 
 	local range = self:GetSpecialValueFor("range") -
 		self:GetSpecialValueFor("width") -- We need this to take end radius of projectile into account
@@ -62,14 +64,6 @@ function artoria_ultimate_excalibur:OnSpellStart()
 		vVelocity = caster:GetForwardVector() * self:GetSpecialValueFor("speed")
 	}
 
-	Timers:CreateTimer(2.50, function()
-		if not caster:IsAlive() then
-			ParticleManager:DestroyParticle(chargeFxIndex, false)
-			ParticleManager:ReleaseParticleIndex(chargeFxIndex)
-
-			StopGlobalSound("artoria_excalibur")
-		end
-	end)
 
 	self.timeCounter = 0
 
@@ -79,6 +73,9 @@ function artoria_ultimate_excalibur:OnSpellStart()
 			if self.timeCounter > self.duration then
 				ParticleManager:DestroyParticle(chargeFxIndex, false)
 				ParticleManager:ReleaseParticleIndex(chargeFxIndex)
+				ParticleManager:DestroyParticle(excalibur_Charge, false)
+				ParticleManager:ReleaseParticleIndex(excalibur_Charge)
+				StopGlobalSound("artoria_excalibur")
 				return
 			end
 
@@ -115,7 +112,7 @@ function artoria_ultimate_excalibur:FireSingleMaxParticle()
 	end
 	)
 
-	local excalFxIndex = ParticleManager:CreateParticle("particles/custom/saber/excalibur/shockwave.vpcf",
+	local excalFxIndex = ParticleManager:CreateParticle("particles/custom/saber/max_excalibur/shockwave.vpcf",
 		PATTACH_ABSORIGIN_FOLLOW, dummy)
 	ParticleManager:SetParticleControl(excalFxIndex, 4, Vector(self:GetSpecialValueFor("width"), 0, 0))
 

@@ -1238,6 +1238,10 @@
 			"particle"				"particles/custom/saber/excalibur/hit.vpcf"
 			"particle"				"particles/custom/artoria/artoria_ultimate_excalibur_charge.vpcf"
 			"particle"				"particles/custom/artoria/large_excalibur_ambient.vpcf"
+			"particle"				"particles/custom/saber/max_excalibur/shockwave.vpcf"
+			"particle"				"particles/custom/saber/max_excalibur/charge.vpcf"
+			"particle"				"particles/custom/saber/max_excalibur/shockwave_2_versiona.vpcf"
+			"particle"				"particles/custom/saber/max_excalibur/shockwave_2_versionc.vpcf"
 		}
 
 		// Ability Values		//------------------------------------------------------------------------------------------------------------
