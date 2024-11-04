@@ -425,8 +425,8 @@
 		"DOTA_Tooltip_modifier_player_bansheng_3"				"<font color='#FFCC66'>★ 黄钻贵族 ★</font>"
 		"DOTA_Tooltip_modifier_player_pipilu"					"<font color='#FFCC66'>★ 皮皮鲁 ★</font>"
 		"DOTA_Tooltip_modifier_player_pipilu_Description"		"<font color='#FFCC66'>童话大王</font>"
-		"DOTA_Tooltip_modifier_player_nemesis"					"<font color=#00FF00'>Nemesis 1941</font>"
-		"DOTA_Tooltip_modifier_player_nemesis_Description"					"<font color="#00FF00'>Do I get my own buff yet, Windy?</font>"
+		"DOTA_Tooltip_modifier_player_nemesis"					"<font color='#00FF00'>Nemesis 1941</font>"
+		"DOTA_Tooltip_modifier_player_nemesis_Description"		"<font color='#00FF00'>Not the malevolent kind of Nemesis. Really loves Marci.</font>"
 
 		///////////////////////////////////////////////////
 		//
