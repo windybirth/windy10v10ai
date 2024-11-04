@@ -1502,7 +1502,7 @@
 		"DOTA_Tooltip_modifier_item_blue_fantasy_debuff_Description"  				"Items muted, passives and evasion disabled, all forms of health restoration reduced by %dMODIFIER_PROPERTY_HP_REGEN_AMPLIFY_PERCENTAGE%%%, and being constantly dispelled of buffs. Movement speed reduced by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%. Attack speed reduced by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%. Losing 4%% of maximum health per second."
 
 		// item_wasp_despotic 大核荣耀
-		"DOTA_Tooltip_ability_item_wasp_despotic"					"Wasp Despotic"
+		"DOTA_Tooltip_ability_item_wasp_despotic"					"Despotic Wasp"
 		"DOTA_Tooltip_ability_item_wasp_despotic_Lore"				"The product of the ancient moon soul, it represents despotism."
 		"DOTA_Tooltip_ability_item_wasp_despotic_Description"		"<h1>Active: Critical Ruling</h1>Critical Chance increases to %active_crit_chance%%% for %active_boost_duration% seconds, but Critical Damage decreases to %active_crit_multiplier%%%.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage."
 		"DOTA_Tooltip_ability_item_wasp_despotic_bonus_damage"		"+$damage"
@@ -1511,7 +1511,7 @@
 		"DOTA_Tooltip_modifier_item_despotic_active_Description"	"Critical chance increased, but critical damage decreased."
 
 		// item_wasp_callous
-		"DOTA_Tooltip_ability_item_wasp_callous"						"Wasp Callous"
+		"DOTA_Tooltip_ability_item_wasp_callous"						"Callous Wasp"
 		"DOTA_Tooltip_ability_item_wasp_callous_Lore"				"The product of the ancient moon soul, it represents callousness."
 		"DOTA_Tooltip_ability_item_wasp_callous_Description"			"<h1>Active: Hastened Judgment</h1>Evasion is increased to %active_dodge_chance%%% and Movement Speed is increased by %move_speed%%% for %active_boost_duration% seconds.\n<h1>Passive: Critical Strike</h1>Grants each attack a %crit_chance%%% chance to deal %crit_multiplier%%% damage."
 		"DOTA_Tooltip_ability_item_wasp_callous_bonus_agile"			"+$agi"
