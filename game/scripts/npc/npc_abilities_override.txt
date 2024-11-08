@@ -12372,4 +12372,139 @@
 			"explosion_damage"		"300 450 600 750"
 		}
 	}
+	"kez_switch_weapons"
+    {
+
+        "AbilityValues"
+        {           
+            "katana_base_attack_time"                           "1.7"
+            "sai_base_attack_time"                              "1.5"
+            "cooldown_reduction_per_level"                      "0.2"
+            "scepter_cooldown_timer"                            "5"
+        }
+    }
+	"kez_echo_slash"
+    {
+        
+        "AbilityCooldown"               "20 18 16 14 12"
+        "AbilityManaCost"               "85 100 115 130 145"
+        "AbilityValues"
+        {
+            "katana_echo_damage"                
+            {
+                "value"                                                 "70 80 90 100 110"
+            }
+            "echo_hero_damage"              
+            {
+                "value"                                                 "30 45 60 75 90"
+            }
+        }
+	
+    }
+	"kez_grappling_claw"
+    {
+        "AbilityValues"
+        {
+            "AbilityCooldown"           "15 12 9 6"     
+            "AbilityCastRange"          "700 800 900 1000 1100"  
+            "bonus_flat_lifesteal"          "50 100 150 200 250"  
+        }
+    }
+	"kez_kazurai_katana"
+    {
+        "AbilityValues"
+        {
+            "katana_base_attack_time"                       "1.7"
+            "katana_bleed_duration"                         "5.0 6.0 7.0 8.0 9.0"
+            "katana_bleed_attack_damage_pct"                        
+            {
+                "value"                                                         "7 8 9 10 11"   
+                "special_bonus_unique_kez_kazura_katana_bleed_damage"           "+7.0"
+            }   
+            "heal_reduction_pct"                                                "40 45 50 55 60"
+        }
+	"kez_raptor_dance"
+    {
+        "AbilityManaCost"               "100 125 150 175"
+        "AbilityValues"
+        {
+            "AbilityCooldown"               
+            {
+                "value"     "40 32 24 16"
+            }
+            
+            "strike_interval"                                       "0.25"
+            "strikes"                                               "3 4 5 6"
+            "radius"                        
+            {
+                "value"                                             "500"
+                "special_bonus_unique_kez_raptor_dance_radius"      "+150"
+            }   
+            "base_damage"               
+            {
+                "value"                 "200"
+            }
+            "max_health_damage_pct"     
+            {
+                "value"                 "8"
+            }
+        }
+	"kez_falcon_rush"
+    {
+        "AbilityCooldown"               "20 18 16 14 12"
+        "AbilityManaCost"               "85 90 95 100 105"  
+        "AbilityValues"
+        {
+            "base_attack_rate"          "1.3 1.2 1.1 1.0 0.9"
+            "attack_speed_factor"       "6 7 8 9 10"
+        }
+    }
+	"kez_talon_toss"
+    {
+        "AbilityCooldown"               "12 10 8 6 4"     
+
+
+        // Values
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {   
+            "damage"                    
+            {
+                "value"                 "75 125 175 225 275"
+            }
+            "silence_duration"          "1.75 2.0 2.25 2.5 2.75"
+        }
+	"kez_shodo_sai"
+    {
+        "AbilityManaCost"               "30 20 10 0 0"
+        "AbilityCooldown"               "12 9 6 3 0"
+
+        // Special
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "base_crit_pct"                                     
+            {
+                "value"                                             "140 160 180 200 220"
+                "special_bonus_unique_kez_mark_damage"              "+80"
+            }
+            // Parry below here
+            "parry_bonus_crit"                                      "25 50 75 100 120"
+        }
+	"kez_ravens_veil"
+    {
+        "AbilityManaCost"               "100 125 150 175"
+        
+        // Special  
+        //-------------------------------------------------------------------------------------------------------------
+        "AbilityValues"
+        {
+            "AbilityCooldown"               
+            {
+                "value"     "40 32 24 16"
+            }
+            "buff_duration"                                         "7 8 9 10"
+            "bonus_ms"                                              "15 25 35 45"
+        }
+    }
 }
