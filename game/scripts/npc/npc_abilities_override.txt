@@ -12374,7 +12374,7 @@
 	}
 	"kez_switch_weapons"
     {
-
+	"MaxLevel"	"5"
         "AbilityValues"
         {           
             "katana_base_attack_time"                           "1.7"
@@ -12385,7 +12385,7 @@
     }
 	"kez_echo_slash"
     {
-        
+        "MaxLevel"	"5"
         "AbilityCooldown"               "20 18 16 14 12"
         "AbilityManaCost"               "85 100 115 130 145"
         "AbilityValues"
@@ -12403,6 +12403,7 @@
     }
 	"kez_grappling_claw"
     {
+	"MaxLevel"	"5"
         "AbilityValues"
         {
             "AbilityCooldown"           "15 12 9 6"     
@@ -12412,6 +12413,7 @@
     }
 	"kez_kazurai_katana"
     {
+	"MaxLevel"	"4"
         "AbilityValues"
         {
             "katana_base_attack_time"                       "1.7"
@@ -12425,6 +12427,7 @@
         }
 	"kez_raptor_dance"
     {
+	"MaxLevel"	"5"
         "AbilityManaCost"               "100 125 150 175"
         "AbilityValues"
         {
@@ -12451,6 +12454,7 @@
         }
 	"kez_falcon_rush"
     {
+	"MaxLevel"	"5"
         "AbilityCooldown"               "20 18 16 14 12"
         "AbilityManaCost"               "85 90 95 100 105"  
         "AbilityValues"
@@ -12461,11 +12465,8 @@
     }
 	"kez_talon_toss"
     {
+	"MaxLevel"	"5"
         "AbilityCooldown"               "12 10 8 6 4"     
-
-
-        // Values
-        //-------------------------------------------------------------------------------------------------------------
         "AbilityValues"
         {   
             "damage"                    
@@ -12476,11 +12477,9 @@
         }
 	"kez_shodo_sai"
     {
+	"MaxLevel"	"5"
         "AbilityManaCost"               "30 20 10 0 0"
         "AbilityCooldown"               "12 9 6 3 0"
-
-        // Special
-        //-------------------------------------------------------------------------------------------------------------
         "AbilityValues"
         {
             "base_crit_pct"                                     
@@ -12493,10 +12492,8 @@
         }
 	"kez_ravens_veil"
     {
+	"MaxLevel"	"4"
         "AbilityManaCost"               "100 125 150 175"
-        
-        // Special  
-        //-------------------------------------------------------------------------------------------------------------
         "AbilityValues"
         {
             "AbilityCooldown"               
